@@ -1,4 +1,4 @@
-해당 프로젝트는 OpenUp 2005 Git 활용 및 Redis 를 위한 저장소입니다.
+해당 프로젝트는 OpenUp 2025 Git 활용 및 Redis 를 위한 저장소입니다.
 
  Valkey라는 Redis Fork를 살펴보고 간단한 과제를 진행합니다.
 
