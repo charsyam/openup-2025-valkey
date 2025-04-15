@@ -12,3 +12,4 @@ It supports a wide range of native structures and an extensible plugin system fo
 | ---- | ------ |
 | `강대명` | *charsyam@naver.com* |
 | `한병두` | *quden04@gmail.com* |
+| `김준영` | *junyeonggim5@gmail.com* |
