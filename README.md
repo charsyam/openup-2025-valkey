@@ -14,3 +14,4 @@ It supports a wide range of native structures and an extensible plugin system fo
 | `한병두` | *quden04@gmail.com*      |
 | `김준영` | *junyeonggim5@gmail.com* |
 | `김다은` | *d43un.kim@gmail.com*    |
+| `강태현` | *k_anon3747@naver.com* |
