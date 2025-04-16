@@ -8,9 +8,15 @@ Valkey is a high-performance data structure server that primarily serves key/val
 It supports a wide range of native structures and an extensible plugin system for adding new data structures and access patterns.
 
 # Users
-| 이름 | 이메일 |
-| ---- | ------ |
-| `강대명` | *charsyam@naver.com* |
-| `한병두` | *quden04@gmail.com* |
+| 이름    | 이메일                      |
+|-------|--------------------------|
+| `강대명` | *charsyam@naver.com*     |
+| `한병두` | *quden04@gmail.com*      |
 | `김준영` | *junyeonggim5@gmail.com* |
-| `김종민` | *sambujakkk@naver.com* |
+| `강민혁` | *santa4246@gmail.com*    |
+| `김다은` | *d43un.kim@gmail.com*    |
+| `김연중` | *illulizer@gmail.com*    |
+| `강태현` | *k_anon3747@naver.com*   |
+| `황원용` | *kakaohwy@gmail.com*     |
+| `김의진` | *kmula222@gmail.com*     |
+| `김종민` | *sambujakkk@naver.com*   |
