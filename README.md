@@ -23,4 +23,5 @@ It supports a wide range of native structures and an extensible plugin system fo
 | `박재영` | *poty9798@naver.com*     |
 | `김민규` | *kmk3058@gmail.com*      |
 | `함석호` | *forkyy.dev@gmail.com*   |
+| `서준혁` | *sjhgd107@naver.com*   |
 
