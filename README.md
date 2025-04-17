@@ -25,3 +25,4 @@ It supports a wide range of native structures and an extensible plugin system fo
 | `함석호` | *forkyy.dev@gmail.com*   |
 | `강민우` | *rkdalsdn94@gmail.com*   |
 | `이창엽` | *lcy606@naver.com*       |
+| `신중은` | *wnddms12345@gmail.com*  |
