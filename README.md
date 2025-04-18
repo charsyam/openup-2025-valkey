@@ -27,3 +27,4 @@ It supports a wide range of native structures and an extensible plugin system fo
 | `이창엽` | *lcy606@naver.com*       |
 | `신중은` | *wnddms12345@gmail.com*  |
 | `조세현` | *eugene8500@gmail.com*   |
+| `조서희` | *seohui.duck.jo@gmail.com*   |
