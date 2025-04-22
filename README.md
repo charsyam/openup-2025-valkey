@@ -33,3 +33,4 @@ It supports a wide range of native structures and an extensible plugin system fo
 | `김우석` | *eypk9673@naver.com*   |
 | `이해령` | *haeryeong04@naver.com*  |
 | `황상필` | *peelhw@gmail.com*       |
+| `조효주` | *whgywn369@gmail.com*    |
