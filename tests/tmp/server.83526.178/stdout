@@ -1,0 +1,360 @@
+### Starting server for test corrupt payload: fuzzer findings - stream listpack valgrind issue in tests/integration/corrupt-dump.tcl
+5885:M 03 May 2025 23:06:42.180 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5885:M 03 May 2025 23:06:42.180 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5885, just started
+5885:M 03 May 2025 23:06:42.180 * Configuration loaded
+5885:M 03 May 2025 23:06:42.180 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5885:M 03 May 2025 23:06:42.180 * monotonic clock: POSIX clock_gettime
+5885:M 03 May 2025 23:06:42.180 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21699
+ |###|   .+###############+.   |###|    PID: 5885                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5885:M 03 May 2025 23:06:42.180 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5885:M 03 May 2025 23:06:42.181 * Server initialized
+5885:M 03 May 2025 23:06:42.181 * Ready to accept connections tcp
+5885:M 03 May 2025 23:06:42.181 * Ready to accept connections unix
+5885:M 03 May 2025 23:06:42.328 - Accepted 127.0.0.1:49246
+5885:M 03 May 2025 23:06:42.328 - Client closed connection id=2 addr=127.0.0.1:49246 laddr=127.0.0.1:21699 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+5885:M 03 May 2025 23:06:42.349 - Accepted 127.0.0.1:49248
+
+
+=== VALKEY BUG REPORT START: Cut & paste starting from here ===
+5885:M 03 May 2025 23:06:42.350 # === ASSERTION FAILED ===
+5885:M 03 May 2025 23:06:42.350 # ==> listpack.c:1320 'lpValidateNext(lp, &p, lpbytes)' is not true
+
+------ STACK TRACE ------
+
+Backtrace:
+0   valkey-server                       0x00000001028262c0 lpNext + 312
+1   valkey-server                       0x000000010281e154 streamReplyWithRange + 1396
+2   valkey-server                       0x0000000102824de0 xinfoCommand + 2832
+3   valkey-server                       0x000000010270f640 call + 440
+4   valkey-server                       0x0000000102711428 processCommand + 3204
+5   valkey-server                       0x000000010272b8a4 processInputBuffer + 524
+6   valkey-server                       0x000000010272ac84 readQueryFromClient + 92
+7   valkey-server                       0x0000000102835ef8 connSocketEventHandler + 180
+8   valkey-server                       0x00000001026f6c58 aeProcessEvents + 356
+9   valkey-server                       0x000000010271ff4c main + 27000
+10  dyld                                0x000000018b22eb4c start + 6000
+
+------ STACK TRACE DONE ------
+
+------ INFO OUTPUT ------
+# Server
+redis_version:7.2.4
+server_name:valkey
+valkey_version:255.255.255
+valkey_release_stage:dev
+redis_git_sha1:06ac4d81
+redis_git_dirty:0
+redis_build_id:8f12ef29dc18e557
+server_mode:standalone
+os:Darwin 24.4.0 arm64
+arch_bits:64
+monotonic_clock:POSIX clock_gettime
+multiplexing_api:kqueue
+gcc_version:4.2.1
+process_id:5885
+process_supervised:no
+run_id:acd8e085fdb7f5a0603f8599e10c7eb4eabd8963
+tcp_port:21699
+server_time_usec:1746281202349991
+uptime_in_seconds:0
+uptime_in_days:0
+hz:10
+configured_hz:10
+clients_hz:10
+lru_clock:1450738
+executable:/Users/junyeong/maindir/openup/src/valkey-server
+config_file:/Users/junyeong/maindir/openup/./tests/tmp/valkey.conf.83526.179
+io_threads_active:0
+availability_zone:
+listener0:name=tcp,bind=127.0.0.1,port=21699
+listener1:name=unix,bind=/Users/junyeong/maindir/openup/tests/tmp/server.83526.178/socket
+
+# Clients
+connected_clients:1
+cluster_connections:0
+maxclients:10000
+client_recent_max_input_buffer:0
+client_recent_max_output_buffer:0
+blocked_clients:0
+tracking_clients:0
+pubsub_clients:0
+watching_clients:0
+clients_in_timeout_table:0
+total_watched_keys:0
+total_blocking_keys:0
+total_blocking_keys_on_nokey:0
+paused_reason:none
+paused_actions:none
+paused_timeout_milliseconds:0
+
+# Memory
+used_memory:1266048
+used_memory_human:1.21M
+used_memory_rss:4358144
+used_memory_rss_human:4.16M
+used_memory_peak:1266048
+used_memory_peak_human:1.21M
+used_memory_peak_perc:101.52%
+used_memory_overhead:1105808
+used_memory_startup:1105216
+used_memory_dataset:160240
+used_memory_dataset_perc:99.63%
+allocator_allocated:1105360
+allocator_active:4291584
+allocator_resident:4291584
+allocator_muzzy:0
+total_system_memory:17179869184
+total_system_memory_human:16.00G
+used_memory_lua:32768
+used_memory_vm_eval:32768
+used_memory_lua_human:32.00K
+used_memory_scripts_eval:0
+number_of_cached_scripts:0
+number_of_functions:0
+number_of_libraries:0
+used_memory_vm_functions:33792
+used_memory_vm_total:66560
+used_memory_vm_total_human:65.00K
+used_memory_functions:232
+used_memory_scripts:232
+used_memory_scripts_human:232B
+maxmemory:0
+maxmemory_human:0B
+maxmemory_policy:noeviction
+allocator_frag_ratio:1.00
+allocator_frag_bytes:0
+allocator_rss_ratio:1.00
+allocator_rss_bytes:0
+rss_overhead_ratio:1.02
+rss_overhead_bytes:66560
+mem_fragmentation_ratio:3.94
+mem_fragmentation_bytes:3252784
+mem_not_counted_for_evict:0
+mem_replication_backlog:0
+mem_total_replication_buffers:0
+mem_clients_slaves:0
+mem_clients_normal:0
+mem_cluster_links:0
+mem_aof_buffer:0
+mem_allocator:libc
+mem_overhead_db_hashtable_rehashing:0
+active_defrag_running:0
+lazyfree_pending_objects:0
+lazyfreed_objects:0
+
+# Persistence
+loading:0
+async_loading:0
+current_cow_peak:0
+current_cow_size:0
+current_cow_size_age:0
+current_fork_perc:0.00
+current_save_keys_processed:0
+current_save_keys_total:0
+rdb_changes_since_last_save:1
+rdb_bgsave_in_progress:0
+rdb_last_save_time:1746281202
+rdb_last_bgsave_status:ok
+rdb_last_bgsave_time_sec:-1
+rdb_current_bgsave_time_sec:-1
+rdb_saves:0
+rdb_last_cow_size:0
+rdb_last_load_keys_expired:0
+rdb_last_load_keys_loaded:0
+aof_enabled:0
+aof_rewrite_in_progress:0
+aof_rewrite_scheduled:0
+aof_last_rewrite_time_sec:-1
+aof_current_rewrite_time_sec:-1
+aof_last_bgrewrite_status:ok
+aof_rewrites:0
+aof_rewrites_consecutive_failures:0
+aof_last_write_status:ok
+aof_last_cow_size:0
+module_fork_in_progress:0
+module_fork_last_cow_size:0
+
+# Stats
+total_connections_received:2
+total_commands_processed:5
+instantaneous_ops_per_sec:0
+total_net_input_bytes:428
+total_net_output_bytes:27
+total_net_repl_input_bytes:0
+total_net_repl_output_bytes:0
+instantaneous_input_kbps:0.00
+instantaneous_output_kbps:0.00
+instantaneous_input_repl_kbps:0.00
+instantaneous_output_repl_kbps:0.00
+rejected_connections:0
+sync_full:0
+sync_partial_ok:0
+sync_partial_err:0
+expired_keys:0
+expired_stale_perc:0.00
+expired_time_cap_reached_count:0
+expire_cycle_cpu_milliseconds:0
+evicted_keys:0
+evicted_clients:0
+evicted_scripts:0
+total_eviction_exceeded_time:0
+current_eviction_exceeded_time:0
+keyspace_hits:1
+keyspace_misses:0
+pubsub_channels:0
+pubsub_patterns:0
+pubsubshard_channels:0
+latest_fork_usec:0
+total_forks:0
+migrate_cached_sockets:0
+slave_expires_tracked_keys:0
+active_defrag_hits:0
+active_defrag_misses:0
+active_defrag_key_hits:0
+active_defrag_key_misses:0
+total_active_defrag_time:0
+current_active_defrag_time:0
+tracking_total_keys:0
+tracking_total_items:0
+tracking_total_prefixes:0
+unexpected_error_replies:0
+total_error_replies:0
+dump_payload_sanitizations:0
+total_reads_processed:7
+total_writes_processed:5
+io_threaded_reads_processed:0
+io_threaded_writes_processed:0
+io_threaded_freed_objects:0
+io_threaded_accept_processed:0
+io_threaded_poll_processed:0
+io_threaded_total_prefetch_batches:0
+io_threaded_total_prefetch_entries:0
+client_query_buffer_limit_disconnections:0
+client_output_buffer_limit_disconnections:0
+reply_buffer_shrinks:0
+reply_buffer_expands:0
+eventloop_cycles:10
+eventloop_duration_sum:291
+eventloop_duration_cmd_sum:39
+instantaneous_eventloop_cycles_per_sec:0
+instantaneous_eventloop_duration_usec:0
+acl_access_denied_auth:0
+acl_access_denied_cmd:0
+acl_access_denied_key:0
+acl_access_denied_channel:0
+
+# Replication
+role:master
+connected_slaves:0
+replicas_waiting_psync:0
+master_failover_state:no-failover
+master_replid:e7dd3cd66a2f6e2b1b3f6993a002782c8c49a9e2
+master_replid2:0000000000000000000000000000000000000000
+master_repl_offset:0
+second_repl_offset:-1
+repl_backlog_active:0
+repl_backlog_size:10485760
+repl_backlog_first_byte_offset:0
+repl_backlog_histlen:0
+
+# CPU
+used_cpu_sys:0.002556
+used_cpu_user:0.003275
+used_cpu_sys_children:0.000000
+used_cpu_user_children:0.000000
+
+# Modules
+
+# Commandstats
+cmdstat_debug:calls=1,usec=4,usec_per_call=4.00,rejected_calls=0,failed_calls=0
+cmdstat_ping:calls=1,usec=1,usec_per_call=1.00,rejected_calls=0,failed_calls=0
+cmdstat_select:calls=1,usec=4,usec_per_call=4.00,rejected_calls=0,failed_calls=0
+cmdstat_restore:calls=1,usec=25,usec_per_call=25.00,rejected_calls=0,failed_calls=0
+cmdstat_config|set:calls=1,usec=5,usec_per_call=5.00,rejected_calls=0,failed_calls=0
+
+# Errorstats
+
+# Latencystats
+latency_percentiles_usec_debug:p50=4.015,p99=4.015,p99.9=4.015
+latency_percentiles_usec_ping:p50=1.003,p99=1.003,p99.9=1.003
+latency_percentiles_usec_select:p50=4.015,p99=4.015,p99.9=4.015
+latency_percentiles_usec_restore:p50=25.087,p99=25.087,p99.9=25.087
+latency_percentiles_usec_config|set:p50=5.023,p99=5.023,p99.9=5.023
+
+# Cluster
+cluster_enabled:0
+
+# Keyspace
+db9:keys=1,expires=0,avg_ttl=0
+
+------ CLIENT LIST OUTPUT ------
+id=3 addr=127.0.0.1:49248 laddr=127.0.0.1:21699 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=0 argv-mem=22 multi-mem=0 rbs=16384 rbp=16384 obl=245 oll=2 omem=16960 tot-mem=33910 events=r cmd=xinfo|stream user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=421 tot-net-out=20 tot-cmds=4
+
+------ CURRENT CLIENT INFO ------
+id=3 addr=127.0.0.1:49248 laddr=127.0.0.1:21699 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=0 argv-mem=22 multi-mem=0 rbs=16384 rbp=16384 obl=245 oll=2 omem=16960 tot-mem=33910 events=r cmd=xinfo|stream user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=421 tot-net-out=20 tot-cmds=4
+argc: 4
+argv[0]: "XINFO"
+argv[1]: "STREAM"
+argv[2]: "_stream"
+argv[3]: "FULL"
+
+------ EXECUTING CLIENT INFO ------
+id=3 addr=127.0.0.1:49248 laddr=127.0.0.1:21699 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=0 argv-mem=22 multi-mem=0 rbs=16384 rbp=16384 obl=245 oll=2 omem=16960 tot-mem=33910 events=r cmd=xinfo|stream user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=421 tot-net-out=20 tot-cmds=4
+argc: 4
+argv[0]: "XINFO"
+argv[1]: "STREAM"
+argv[2]: "_stream"
+argv[3]: "FULL"
+
+------ MODULES INFO OUTPUT ------
+
+------ CONFIG DEBUG OUTPUT ------
+lazyfree-lazy-user-del yes
+slave-read-only yes
+activedefrag no
+client-query-buffer-limit 1gb
+proto-max-bulk-len 512mb
+import-mode no
+io-threads 1
+list-compress-depth 0
+lazyfree-lazy-server-del yes
+replica-read-only yes
+dual-channel-replication-enabled no
+debug-context ""
+lazyfree-lazy-expire yes
+lazyfree-lazy-eviction yes
+repl-diskless-load disabled
+repl-diskless-sync yes
+sanitize-dump-payload no
+lazyfree-lazy-user-flush yes
+
+=== VALKEY BUG REPORT END. Make sure to include from START to END. ===
+
+       Please report the crash by opening an issue on github:
+
+           https://github.com/valkey-io/valkey/issues
+
+  If a module was involved, please open in the module's repo instead.
+
+  Suspect RAM error? Use valkey-server --test-memory to verify it.
+
+  Some other issues could be detected by valkey-server --check-system

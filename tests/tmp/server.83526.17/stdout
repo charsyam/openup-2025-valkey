@@ -1,0 +1,80 @@
+### Starting server for test CONFIG REWRITE handles save and shutdown properly in tests/unit/introspection.tcl
+86196:M 03 May 2025 23:04:04.803 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+86196:M 03 May 2025 23:04:04.803 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=86196, just started
+86196:M 03 May 2025 23:04:04.803 * Configuration loaded
+86196:M 03 May 2025 23:04:04.803 * Increased maximum number of open files to 10032 (it was originally set to 256).
+86196:M 03 May 2025 23:04:04.803 * monotonic clock: POSIX clock_gettime
+86196:M 03 May 2025 23:04:04.803 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21619
+ |###|   .+###############+.   |###|    PID: 86196                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+86196:M 03 May 2025 23:04:04.803 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+86196:M 03 May 2025 23:04:04.804 * Server initialized
+86196:M 03 May 2025 23:04:04.804 * Ready to accept connections tcp
+86196:M 03 May 2025 23:04:04.804 * Ready to accept connections unix
+86196:M 03 May 2025 23:04:04.931 - Accepted 127.0.0.1:59356
+86196:M 03 May 2025 23:04:04.931 - Client closed connection id=2 addr=127.0.0.1:59356 laddr=127.0.0.1:21619 fd=13 name=*redacted* age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=*redacted* redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+86196:M 03 May 2025 23:04:04.953 - Accepted 127.0.0.1:59358
+86196:M 03 May 2025 23:04:04.957 * CONFIG REWRITE executed with success.
+86196:M 03 May 2025 23:04:04.957 - Client closed connection id=3 addr=127.0.0.1:59358 laddr=127.0.0.1:21619 fd=13 name=*redacted* age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=config|rewrite user=*redacted* redir=-1 resp=2 lib-name= lib-ver= tot-net-in=128 tot-net-out=59 tot-cmds=4
+### Starting test Check for memory leaks (pid 86196) in tests/unit/introspection.tcl
+86196:signal-handler (1746281045) Received SIGTERM scheduling shutdown...
+86196:M 03 May 2025 23:04:05.935 * User requested shutdown...
+86196:M 03 May 2025 23:04:05.935 * Removing the pid file.
+86196:M 03 May 2025 23:04:05.935 * Removing the unix socket file.
+86196:M 03 May 2025 23:04:05.935 # Valkey is now ready to exit, bye bye...
+### Restarting server for test CONFIG REWRITE handles save and shutdown properly in tests/unit/introspection.tcl
+86347:M 03 May 2025 23:04:05.989 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+86347:M 03 May 2025 23:04:05.989 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=86347, just started
+86347:M 03 May 2025 23:04:05.989 * Configuration loaded
+86347:M 03 May 2025 23:04:05.989 * Increased maximum number of open files to 10032 (it was originally set to 256).
+86347:M 03 May 2025 23:04:05.989 * monotonic clock: POSIX clock_gettime
+86347:M 03 May 2025 23:04:05.990 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21619
+ |###|   .+###############+.   |###|    PID: 86347                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+86347:M 03 May 2025 23:04:05.990 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+86347:M 03 May 2025 23:04:05.990 * Server initialized
+86347:M 03 May 2025 23:04:05.990 * Ready to accept connections tcp
+86347:M 03 May 2025 23:04:05.990 * Ready to accept connections unix
+86347:M 03 May 2025 23:04:06.112 - Accepted 127.0.0.1:59388
+86347:M 03 May 2025 23:04:06.112 - Client closed connection id=2 addr=127.0.0.1:59388 laddr=127.0.0.1:21619 fd=13 name=*redacted* age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=config|get user=*redacted* redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=25 tot-cmds=2
+86347:signal-handler (1746281047) Received SIGTERM scheduling shutdown...
+86347:M 03 May 2025 23:04:07.161 * User requested shutdown...
+86347:M 03 May 2025 23:04:07.161 * Removing the pid file.
+86347:M 03 May 2025 23:04:07.161 * Removing the unix socket file.
+86347:M 03 May 2025 23:04:07.161 # Valkey is now ready to exit, bye bye...

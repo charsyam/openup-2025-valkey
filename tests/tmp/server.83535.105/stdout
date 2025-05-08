@@ -1,0 +1,151 @@
+### Starting server for test 
+3382:M 03 May 2025 23:06:26.829 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+3382:M 03 May 2025 23:06:26.829 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=3382, just started
+3382:M 03 May 2025 23:06:26.829 * Configuration loaded
+3382:M 03 May 2025 23:06:26.830 * Increased maximum number of open files to 10032 (it was originally set to 256).
+3382:M 03 May 2025 23:06:26.830 * monotonic clock: POSIX clock_gettime
+3382:M 03 May 2025 23:06:26.830 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26164
+ |###|   .+###############+.   |###|    PID: 3382                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+3382:M 03 May 2025 23:06:26.830 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+3382:M 03 May 2025 23:06:26.831 * Server initialized
+3382:M 03 May 2025 23:06:26.831 * Ready to accept connections tcp
+3382:M 03 May 2025 23:06:26.831 * Ready to accept connections unix
+3382:M 03 May 2025 23:06:26.845 - Accepted 127.0.0.1:54210
+3382:M 03 May 2025 23:06:26.845 - Client closed connection id=2 addr=127.0.0.1:54210 laddr=127.0.0.1:26164 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+3382:M 03 May 2025 23:06:26.864 - Accepted 127.0.0.1:54244
+### Starting test failover command fails without connected replica in tests/integration/failover.tcl
+### Starting test setup replication for following tests in tests/integration/failover.tcl
+3382:M 03 May 2025 23:06:26.865 - Accepted 127.0.0.1:54245
+3382:M 03 May 2025 23:06:26.865 - Accepted 127.0.0.1:54246
+3382:M 03 May 2025 23:06:26.865 * Replica 127.0.0.1:26163 asks for synchronization
+3382:M 03 May 2025 23:06:26.865 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '52de504b17153e48c1a053ef7f464a61cf652263', my replication IDs are 'eadd2f181021989ab71a83dac7768a08efa638ae' and '0000000000000000000000000000000000000000')
+3382:M 03 May 2025 23:06:26.865 * Replication backlog created, my new replication IDs are '329a089b15a35410591548ae48706e096f23ccd9' and '0000000000000000000000000000000000000000'
+3382:M 03 May 2025 23:06:26.865 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+3382:M 03 May 2025 23:06:26.867 * Background RDB transfer started by pid 3390 to pipe through parent process
+3390:C 03 May 2025 23:06:26.867 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+3382:M 03 May 2025 23:06:26.867 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+3382:M 03 May 2025 23:06:26.868 * Replica 127.0.0.1:26162 asks for synchronization
+3382:M 03 May 2025 23:06:26.871 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '7ea4858b240d80a5bceb4bd46db38778be105da7', my replication IDs are '329a089b15a35410591548ae48706e096f23ccd9' and '0000000000000000000000000000000000000000')
+3382:M 03 May 2025 23:06:26.871 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+3382:M 03 May 2025 23:06:26.871 * Background RDB transfer terminated with success
+3382:M 03 May 2025 23:06:26.871 * Streamed RDB transfer with replica 127.0.0.1:26163 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+3382:M 03 May 2025 23:06:26.871 * Synchronization with replica 127.0.0.1:26163 succeeded
+3382:M 03 May 2025 23:06:26.871 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+3382:M 03 May 2025 23:06:26.873 * Background RDB transfer started by pid 3391 to pipe through parent process
+3391:C 03 May 2025 23:06:26.873 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+3382:M 03 May 2025 23:06:26.873 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+3382:M 03 May 2025 23:06:26.876 * Background RDB transfer terminated with success
+3382:M 03 May 2025 23:06:26.876 * Streamed RDB transfer with replica 127.0.0.1:26162 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+3382:M 03 May 2025 23:06:26.876 * Synchronization with replica 127.0.0.1:26162 succeeded
+### Starting test failover command fails with invalid host in tests/integration/failover.tcl
+### Starting test failover command fails with invalid port in tests/integration/failover.tcl
+### Starting test failover command fails with just force and timeout in tests/integration/failover.tcl
+### Starting test failover command fails when sent to a replica in tests/integration/failover.tcl
+### Starting test failover command fails with force without timeout in tests/integration/failover.tcl
+### Starting test failover command to specific replica works in tests/integration/failover.tcl
+3382:M 03 May 2025 23:06:26.991 - Accepted 127.0.0.1:54329
+3382:M 03 May 2025 23:06:27.111 * FAILOVER requested to 127.0.0.1:26163.
+3382:M 03 May 2025 23:06:27.718 * Failover target 127.0.0.1:26163 is synced, failing over.
+3382:S 03 May 2025 23:06:27.718 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+3382:S 03 May 2025 23:06:27.718 * Connecting to PRIMARY 127.0.0.1:26163
+3382:S 03 May 2025 23:06:27.718 * PRIMARY <-> REPLICA sync started
+3382:S 03 May 2025 23:06:27.718 * Non blocking connect for SYNC fired the event.
+3382:S 03 May 2025 23:06:27.718 * Primary replied to PING, replication can continue...
+3382:S 03 May 2025 23:06:27.718 * Trying a partial resynchronization (request 329a089b15a35410591548ae48706e096f23ccd9:362027).
+3382:S 03 May 2025 23:06:27.718 - Client closed connection id=4 addr=127.0.0.1:54245 laddr=127.0.0.1:26164 fd=13 name= age=1 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=314 tot-net-out=362048 tot-cmds=7
+3382:S 03 May 2025 23:06:27.719 * Connection with replica 127.0.0.1:26163 lost.
+3382:S 03 May 2025 23:06:27.719 * Successful partial resynchronization with primary.
+3382:S 03 May 2025 23:06:27.719 * Primary replication ID changed to f83d9a30e0e224d77af5ab9656b74ab2e2a7e261
+3382:S 03 May 2025 23:06:27.719 * Connection with replica 127.0.0.1:26162 lost.
+3382:S 03 May 2025 23:06:27.719 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+3382:S 03 May 2025 23:06:27.727 - Accepted 127.0.0.1:54875
+3382:S 03 May 2025 23:06:27.727 * Replica 127.0.0.1:26162 asks for synchronization
+3382:S 03 May 2025 23:06:27.727 * Partial resynchronization request from 127.0.0.1:26162 accepted. Sending 0 bytes of backlog starting from offset 362027.
+3382:S 03 May 2025 23:06:27.740 - Reading from client: Connection reset by peer
+3382:S 03 May 2025 23:06:27.844 - Client closed connection id=8 addr=127.0.0.1:54875 laddr=127.0.0.1:26164 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=246 tot-net-out=22 tot-cmds=5
+3382:S 03 May 2025 23:06:27.844 * Connection with replica 127.0.0.1:26162 lost.
+### Starting test failover command to any replica works in tests/integration/failover.tcl
+3382:S 03 May 2025 23:06:28.628 - Client closed connection id=7 addr=127.0.0.1:26163 laddr=127.0.0.1:54874 fd=16 name= age=1 idle=0 flags=M capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=39 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=set user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=53 tot-net-out=39 tot-cmds=2
+3382:S 03 May 2025 23:06:28.628 * Connection with primary lost.
+3382:S 03 May 2025 23:06:28.628 * Caching the disconnected primary state.
+3382:S 03 May 2025 23:06:28.628 * Reconnecting to PRIMARY 127.0.0.1:26163
+3382:S 03 May 2025 23:06:28.628 * PRIMARY <-> REPLICA sync started
+3382:S 03 May 2025 23:06:28.629 * Non blocking connect for SYNC fired the event.
+3382:S 03 May 2025 23:06:28.629 * Connecting to PRIMARY 127.0.0.1:26162
+3382:S 03 May 2025 23:06:28.629 * PRIMARY <-> REPLICA sync started
+3382:S 03 May 2025 23:06:28.629 * REPLICAOF 127.0.0.1:26162 enabled (user request from 'id=3 addr=127.0.0.1:54244 laddr=127.0.0.1:26164 fd=12 name= user=default lib-name= lib-ver=')
+3382:S 03 May 2025 23:06:28.629 * Non blocking connect for SYNC fired the event.
+3382:S 03 May 2025 23:06:28.629 * Primary replied to PING, replication can continue...
+3382:S 03 May 2025 23:06:28.629 * Trying a partial resynchronization (request f83d9a30e0e224d77af5ab9656b74ab2e2a7e261:362080).
+3382:S 03 May 2025 23:06:28.629 * Successful partial resynchronization with primary.
+3382:S 03 May 2025 23:06:28.629 * Primary replication ID changed to 421a1fa9d758d8e38a40005183ebbd6cde02698f
+3382:S 03 May 2025 23:06:28.629 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test failover to a replica with force works in tests/integration/failover.tcl
+3382:S 03 May 2025 23:06:29.020 - Accepted 127.0.0.1:55695
+3382:S 03 May 2025 23:06:29.026 * Failover request received for replid 421a1fa9d758d8e38a40005183ebbd6cde02698f.
+3382:M 03 May 2025 23:06:29.029 * Connection with primary lost.
+3382:M 03 May 2025 23:06:29.029 * Caching the disconnected primary state.
+3382:M 03 May 2025 23:06:29.032 * Discarding previously cached primary state.
+3382:M 03 May 2025 23:06:29.033 * Setting secondary replication ID to 421a1fa9d758d8e38a40005183ebbd6cde02698f, valid up to offset: 362133. New replication ID is 0b3959483d4a2d2d89f5dfbdd6a8b401506ea7ec
+3382:M 03 May 2025 23:06:29.036 * PRIMARY MODE enabled (failover request from 'id=9 addr=127.0.0.1:55695 laddr=127.0.0.1:26164 fd=14 name= user=default lib-name= lib-ver=')
+3382:M 03 May 2025 23:06:29.036 * Replica 127.0.0.1:26162 asks for synchronization
+3382:M 03 May 2025 23:06:29.036 * Partial resynchronization request from 127.0.0.1:26162 accepted. Sending 0 bytes of backlog starting from offset 362133.
+3382:M 03 May 2025 23:06:29.132 - Accepted 127.0.0.1:55871
+3382:M 03 May 2025 23:06:29.141 * Replica 127.0.0.1:26163 asks for synchronization
+3382:M 03 May 2025 23:06:29.142 * Partial resynchronization request from 127.0.0.1:26163 accepted. Sending 0 bytes of backlog starting from offset 362133.
+### Starting test failover with timeout aborts if replica never catches up in tests/integration/failover.tcl
+3382:M 03 May 2025 23:06:29.394 * FAILOVER requested to 127.0.0.1:26163.
+3382:M 03 May 2025 23:06:29.915 * FAILOVER to 127.0.0.1:26163 aborted: Replica never caught up before timeout
+### Starting test failovers can be aborted in tests/integration/failover.tcl
+3382:M 03 May 2025 23:06:30.014 * FAILOVER requested to 127.0.0.1:26163.
+3382:M 03 May 2025 23:06:30.014 * FAILOVER to 127.0.0.1:26163 aborted: Failover manually aborted
+### Starting test failover aborts if target rejects sync request in tests/integration/failover.tcl
+3382:M 03 May 2025 23:06:30.097 - Accepted 127.0.0.1:56568
+3382:M 03 May 2025 23:06:30.098 * FAILOVER requested to 127.0.0.1:26163.
+3382:M 03 May 2025 23:06:30.260 * Failover target 127.0.0.1:26163 is synced, failing over.
+3382:S 03 May 2025 23:06:30.260 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+3382:S 03 May 2025 23:06:30.260 * Connecting to PRIMARY 127.0.0.1:26163
+3382:S 03 May 2025 23:06:30.260 * PRIMARY <-> REPLICA sync started
+3382:S 03 May 2025 23:06:30.260 * Non blocking connect for SYNC fired the event.
+3382:S 03 May 2025 23:06:30.260 * Primary replied to PING, replication can continue...
+3382:S 03 May 2025 23:06:30.261 * Trying a partial resynchronization (request 0b3959483d4a2d2d89f5dfbdd6a8b401506ea7ec:362247).
+3382:S 03 May 2025 23:06:30.261 # Unexpected reply to PSYNC from primary: -NOPERM User default has no permissions to run the 'psync' command
+3382:S 03 May 2025 23:06:30.261 * FAILOVER to 127.0.0.1:26163 aborted: Failover target rejected psync request
+3382:M 03 May 2025 23:06:30.261 * Discarding previously cached primary state.
+3382:M 03 May 2025 23:06:30.261 * Setting secondary replication ID to 0b3959483d4a2d2d89f5dfbdd6a8b401506ea7ec, valid up to offset: 362247. New replication ID is 9ae7835739d01d602dc3ddc1c80965cc65a4e315
+3382:M 03 May 2025 23:06:30.261 * Connection with replica 127.0.0.1:26162 lost.
+3382:M 03 May 2025 23:06:30.261 * Connection with replica 127.0.0.1:26163 lost.
+3382:M 03 May 2025 23:06:30.261 - Accepted 127.0.0.1:56681
+3382:M 03 May 2025 23:06:30.261 - Accepted 127.0.0.1:56682
+3382:M 03 May 2025 23:06:30.261 * Replica 127.0.0.1:26162 asks for synchronization
+3382:M 03 May 2025 23:06:30.261 * Partial resynchronization request from 127.0.0.1:26162 accepted. Sending 0 bytes of backlog starting from offset 362247.
+3382:M 03 May 2025 23:06:30.261 * Replica 127.0.0.1:26163 asks for synchronization
+3382:M 03 May 2025 23:06:30.261 * Partial resynchronization request from 127.0.0.1:26163 accepted. Sending 0 bytes of backlog starting from offset 362247.
+3382:M 03 May 2025 23:06:30.316 - Client closed connection id=11 addr=127.0.0.1:56568 laddr=127.0.0.1:26164 fd=15 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=54 tot-net-out=10 tot-cmds=2
+3382:M 03 May 2025 23:06:30.377 - Client closed connection id=3 addr=127.0.0.1:54244 laddr=127.0.0.1:26164 fd=12 name= age=4 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6656 rbp=6462 obl=0 oll=0 omem=0 tot-mem=24064 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1894 tot-net-out=398293 tot-cmds=92
+3382:M 03 May 2025 23:06:32.761 - DB 9: 5699 keys (0 volatile) in 7168 slots HT.
+3382:signal-handler (1746281194) Received SIGTERM scheduling shutdown...
+3382:M 03 May 2025 23:06:34.353 * User requested shutdown...
+3382:M 03 May 2025 23:06:34.353 * 2 of 2 replicas are in sync when shutting down.
+3382:M 03 May 2025 23:06:34.353 * Removing the pid file.
+3382:M 03 May 2025 23:06:34.353 * Removing the unix socket file.
+3382:M 03 May 2025 23:06:34.353 # Valkey is now ready to exit, bye bye...

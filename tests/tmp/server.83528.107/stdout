@@ -1,0 +1,319 @@
+### Starting server for test 
+7455:M 03 May 2025 23:06:52.434 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+7455:M 03 May 2025 23:06:52.435 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=7455, just started
+7455:M 03 May 2025 23:06:52.435 * Configuration loaded
+7455:M 03 May 2025 23:06:52.435 * Increased maximum number of open files to 10032 (it was originally set to 256).
+7455:M 03 May 2025 23:06:52.435 * monotonic clock: POSIX clock_gettime
+7455:M 03 May 2025 23:06:52.435 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 22663
+ |###|   .+###############+.   |###|    PID: 7455                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+7455:M 03 May 2025 23:06:52.435 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+7455:M 03 May 2025 23:06:52.435 * Server initialized
+7455:M 03 May 2025 23:06:52.435 * Ready to accept connections tcp
+7455:M 03 May 2025 23:06:52.435 * Ready to accept connections unix
+7455:M 03 May 2025 23:06:52.576 - Accepted 127.0.0.1:57046
+7455:M 03 May 2025 23:06:52.576 - Client closed connection id=2 addr=127.0.0.1:57046 laddr=127.0.0.1:22663 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+7455:M 03 May 2025 23:06:52.605 - Accepted 127.0.0.1:57076
+### Starting test PSYNC2 #3899 regression: setup in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:06:52.605 - Accepted 127.0.0.1:57077
+7455:M 03 May 2025 23:06:52.606 - Accepted 127.0.0.1:57078
+7455:M 03 May 2025 23:06:52.606 * Replica 127.0.0.1:22662 asks for synchronization
+7455:M 03 May 2025 23:06:52.606 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '304c6aae25bd7f84c41d691f982aaa75c0d0fa4f', my replication IDs are '345ffa662112f8daea6600db111e46f21a8bce38' and '0000000000000000000000000000000000000000')
+7455:M 03 May 2025 23:06:52.606 * Replication backlog created, my new replication IDs are '07d1b11cbe44c40e317aa8f2281c6dfd2bd4bd86' and '0000000000000000000000000000000000000000'
+7455:M 03 May 2025 23:06:52.606 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+7455:M 03 May 2025 23:06:52.607 * Background RDB transfer started by pid 7474 to pipe through parent process
+7455:M 03 May 2025 23:06:52.607 * Replica 127.0.0.1:22661 asks for synchronization
+7455:M 03 May 2025 23:06:52.607 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '8b820ee70dc0c51ffe1799c6a8999e14420aa15f', my replication IDs are '07d1b11cbe44c40e317aa8f2281c6dfd2bd4bd86' and '0000000000000000000000000000000000000000')
+7455:M 03 May 2025 23:06:52.607 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+7474:C 03 May 2025 23:06:52.607 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+7455:M 03 May 2025 23:06:52.608 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+7455:M 03 May 2025 23:06:52.609 * Background RDB transfer terminated with success
+7455:M 03 May 2025 23:06:52.610 * Streamed RDB transfer with replica 127.0.0.1:22662 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+7455:M 03 May 2025 23:06:52.610 * Synchronization with replica 127.0.0.1:22662 succeeded
+7455:M 03 May 2025 23:06:52.610 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+7455:M 03 May 2025 23:06:52.611 * Background RDB transfer started by pid 7475 to pipe through parent process
+7475:C 03 May 2025 23:06:52.611 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+7455:M 03 May 2025 23:06:52.611 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+7455:M 03 May 2025 23:06:52.613 * Background RDB transfer terminated with success
+7455:M 03 May 2025 23:06:52.613 * Streamed RDB transfer with replica 127.0.0.1:22661 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+7455:M 03 May 2025 23:06:52.613 * Synchronization with replica 127.0.0.1:22661 succeeded
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Client closed connection id=6 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=15 name= age=0 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=config|get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=77 tot-net-out=49 tot-cmds=2
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.267 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.268 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.268 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.268 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.268 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.268 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.268 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.268 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.268 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.268 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+7455:M 03 May 2025 23:06:54.268 - Accepted connection to /Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:06:55.169 - Client closed connection id=4 addr=127.0.0.1:57077 laddr=127.0.0.1:22663 fd=13 name= age=3 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=2 omem=33840 tot-mem=52272 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=349 tot-net-out=4077975 tot-cmds=8
+7455:M 03 May 2025 23:06:55.169 * Connection with replica 127.0.0.1:22662 lost.
+7455:M 03 May 2025 23:06:55.169 - Accepted 127.0.0.1:58676
+7455:M 03 May 2025 23:06:55.170 * Replica 127.0.0.1:22662 asks for synchronization
+7455:M 03 May 2025 23:06:55.170 * Partial resynchronization request from 127.0.0.1:22662 accepted. Sending 6798 bytes of backlog starting from offset 4077954.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:06:56.307 - Client closed connection id=57 addr=127.0.0.1:58676 laddr=127.0.0.1:22663 fd=13 name= age=1 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=287 tot-net-out=5577979 tot-cmds=6
+7455:M 03 May 2025 23:06:56.307 * Connection with replica 127.0.0.1:22662 lost.
+7455:M 03 May 2025 23:06:56.307 - Accepted 127.0.0.1:59394
+7455:M 03 May 2025 23:06:56.307 * Replica 127.0.0.1:22662 asks for synchronization
+7455:M 03 May 2025 23:06:56.307 * Partial resynchronization request from 127.0.0.1:22662 accepted. Sending 2508 bytes of backlog starting from offset 9655911.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:06:56.410 - Error writing to client: Broken pipe
+7455:M 03 May 2025 23:06:56.410 * Connection with replica client id #5 lost.
+7455:M 03 May 2025 23:06:56.410 - Accepted 127.0.0.1:59463
+7455:M 03 May 2025 23:06:56.411 * Replica 127.0.0.1:22661 asks for synchronization
+7455:M 03 May 2025 23:06:56.411 * Partial resynchronization request from 127.0.0.1:22661 accepted. Sending 2475 bytes of backlog starting from offset 10161834.
+7455:M 03 May 2025 23:06:57.470 - DB 0: 1000 keys (0 volatile) in 1792 slots HT.
+7455:M 03 May 2025 23:06:57.470 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:06:58.607 - Error writing to client: Broken pipe
+7455:M 03 May 2025 23:06:58.608 * Connection with replica client id #58 lost.
+7455:M 03 May 2025 23:06:58.609 - Accepted 127.0.0.1:60833
+7455:M 03 May 2025 23:06:58.621 * Replica 127.0.0.1:22662 asks for synchronization
+7455:M 03 May 2025 23:06:58.624 * Partial resynchronization request from 127.0.0.1:22662 accepted. Sending 138435 bytes of backlog starting from offset 23794662.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:06:59.029 - Client closed connection id=60 addr=127.0.0.1:60833 laddr=127.0.0.1:22663 fd=13 name= age=1 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=248 tot-net-out=2367541 tot-cmds=5
+7455:M 03 May 2025 23:06:59.029 * Connection with replica 127.0.0.1:22662 lost.
+7455:M 03 May 2025 23:06:59.029 - Accepted 127.0.0.1:61127
+7455:M 03 May 2025 23:06:59.030 * Replica 127.0.0.1:22662 asks for synchronization
+7455:M 03 May 2025 23:06:59.030 * Partial resynchronization request from 127.0.0.1:22662 accepted. Sending 3696 bytes of backlog starting from offset 26162181.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:06:59.237 - Reading from client: Connection reset by peer
+7455:M 03 May 2025 23:06:59.237 * Connection with replica client id #61 lost.
+7455:M 03 May 2025 23:06:59.237 - Accepted 127.0.0.1:61253
+7455:M 03 May 2025 23:06:59.238 * Replica 127.0.0.1:22662 asks for synchronization
+7455:M 03 May 2025 23:06:59.238 * Partial resynchronization request from 127.0.0.1:22662 accepted. Sending 3828 bytes of backlog starting from offset 27367869.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:06:59.763 - Client closed connection id=62 addr=127.0.0.1:61253 laddr=127.0.0.1:22663 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=289 tot-net-out=1181950 tot-cmds=6
+7455:M 03 May 2025 23:06:59.763 * Connection with replica 127.0.0.1:22662 lost.
+7455:M 03 May 2025 23:06:59.763 - Accepted 127.0.0.1:61544
+7455:M 03 May 2025 23:06:59.763 - Accepted 127.0.0.1:61545
+7455:M 03 May 2025 23:06:59.763 - Client closed connection id=59 addr=127.0.0.1:59463 laddr=127.0.0.1:22663 fd=14 name= age=3 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=371 tot-net-out=18387985 tot-cmds=8
+7455:M 03 May 2025 23:06:59.763 * Connection with replica 127.0.0.1:22661 lost.
+7455:M 03 May 2025 23:06:59.764 * Replica 127.0.0.1:22662 asks for synchronization
+7455:M 03 May 2025 23:06:59.764 * Partial resynchronization request from 127.0.0.1:22662 accepted. Sending 1815 bytes of backlog starting from offset 28549797.
+7455:M 03 May 2025 23:06:59.764 * Replica 127.0.0.1:22661 asks for synchronization
+7455:M 03 May 2025 23:06:59.764 * Partial resynchronization request from 127.0.0.1:22661 accepted. Sending 1815 bytes of backlog starting from offset 28549797.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:00.764 - Reading from client: Connection reset by peer
+7455:M 03 May 2025 23:07:00.765 * Connection with replica client id #63 lost.
+7455:M 03 May 2025 23:07:00.765 - Accepted 127.0.0.1:62134
+7455:M 03 May 2025 23:07:00.783 * Replica 127.0.0.1:22662 asks for synchronization
+7455:M 03 May 2025 23:07:00.783 * Partial resynchronization request from 127.0.0.1:22662 accepted. Sending 3531 bytes of backlog starting from offset 30892632.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:02.574 - DB 0: 1000 keys (0 volatile) in 1792 slots HT.
+7455:M 03 May 2025 23:07:02.574 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+7455:M 03 May 2025 23:07:02.574 - Reading from client: Connection reset by peer
+7455:M 03 May 2025 23:07:02.574 * Connection with replica client id #64 lost.
+7455:M 03 May 2025 23:07:02.574 - Accepted 127.0.0.1:63498
+7455:M 03 May 2025 23:07:02.575 * Replica 127.0.0.1:22661 asks for synchronization
+7455:M 03 May 2025 23:07:02.575 * Partial resynchronization request from 127.0.0.1:22661 accepted. Sending 5294 bytes of backlog starting from offset 38777124.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:02.782 - Client closed connection id=66 addr=127.0.0.1:63498 laddr=127.0.0.1:22663 fd=14 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=248 tot-net-out=914004 tot-cmds=5
+7455:M 03 May 2025 23:07:02.782 * Connection with replica 127.0.0.1:22661 lost.
+7455:M 03 May 2025 23:07:02.782 - Accepted 127.0.0.1:63658
+7455:M 03 May 2025 23:07:02.782 * Replica 127.0.0.1:22661 asks for synchronization
+7455:M 03 May 2025 23:07:02.782 * Partial resynchronization request from 127.0.0.1:22661 accepted. Sending 33 bytes of backlog starting from offset 39691106.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:02.884 - Error writing to client: Broken pipe
+7455:M 03 May 2025 23:07:02.884 * Connection with replica client id #67 lost.
+7455:M 03 May 2025 23:07:02.885 - Accepted 127.0.0.1:63731
+7455:M 03 May 2025 23:07:02.885 * Replica 127.0.0.1:22661 asks for synchronization
+7455:M 03 May 2025 23:07:02.885 * Partial resynchronization request from 127.0.0.1:22661 accepted. Sending 5577 bytes of backlog starting from offset 40257650.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:03.299 - Reading from client: Connection reset by peer
+7455:M 03 May 2025 23:07:03.299 * Connection with replica client id #68 lost.
+7455:M 03 May 2025 23:07:03.299 - Accepted 127.0.0.1:64026
+7455:M 03 May 2025 23:07:03.299 * Replica 127.0.0.1:22661 asks for synchronization
+7455:M 03 May 2025 23:07:03.299 * Partial resynchronization request from 127.0.0.1:22661 accepted. Sending 3300 bytes of backlog starting from offset 42153731.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:03.712 - Client closed connection id=65 addr=127.0.0.1:62134 laddr=127.0.0.1:22663 fd=13 name= age=3 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=371 tot-net-out=12910527 tot-cmds=8
+7455:M 03 May 2025 23:07:03.712 * Connection with replica 127.0.0.1:22662 lost.
+7455:M 03 May 2025 23:07:03.713 - Accepted 127.0.0.1:64286
+7455:M 03 May 2025 23:07:03.714 * Replica 127.0.0.1:22662 asks for synchronization
+7455:M 03 May 2025 23:07:03.714 * Partial resynchronization request from 127.0.0.1:22662 accepted. Sending 1815 bytes of backlog starting from offset 43803137.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:03.925 - Reading from client: Connection reset by peer
+7455:M 03 May 2025 23:07:03.925 * Connection with replica client id #69 lost.
+7455:M 03 May 2025 23:07:03.925 - Accepted 127.0.0.1:64409
+7455:M 03 May 2025 23:07:03.926 * Replica 127.0.0.1:22661 asks for synchronization
+7455:M 03 May 2025 23:07:03.926 * Partial resynchronization request from 127.0.0.1:22661 accepted. Sending 4950 bytes of backlog starting from offset 44790134.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:04.336 - Error writing to client: Broken pipe
+7455:M 03 May 2025 23:07:04.336 * Connection with replica client id #71 lost.
+7455:M 03 May 2025 23:07:04.336 - Accepted 127.0.0.1:64650
+7455:M 03 May 2025 23:07:04.337 * Replica 127.0.0.1:22661 asks for synchronization
+7455:M 03 May 2025 23:07:04.337 * Partial resynchronization request from 127.0.0.1:22661 accepted. Sending 3432 bytes of backlog starting from offset 46781519.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:04.957 - Reading from client: Connection reset by peer
+7455:M 03 May 2025 23:07:04.957 * Connection with replica client id #72 lost.
+7455:M 03 May 2025 23:07:04.957 - Accepted 127.0.0.1:65060
+7455:M 03 May 2025 23:07:04.957 * Replica 127.0.0.1:22661 asks for synchronization
+7455:M 03 May 2025 23:07:04.957 * Partial resynchronization request from 127.0.0.1:22661 accepted. Sending 1650 bytes of backlog starting from offset 49058684.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:06.203 - Client closed connection id=70 addr= laddr=127.0.0.1:22663 fd=13 name= age=3 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=330 tot-net-out=11178178 tot-cmds=7
+7455:M 03 May 2025 23:07:06.204 * Connection with replica client id #70 lost.
+7455:M 03 May 2025 23:07:06.204 - Accepted 127.0.0.1:49444
+7455:M 03 May 2025 23:07:06.205 * Replica 127.0.0.1:22662 asks for synchronization
+7455:M 03 May 2025 23:07:06.205 * Partial resynchronization request from 127.0.0.1:22662 accepted. Sending 792 bytes of backlog starting from offset 54980666.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:07.449 - Client closed connection id=74 addr=127.0.0.1:49444 laddr=127.0.0.1:22663 fd=13 name= age=1 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=330 tot-net-out=4861813 tot-cmds=7
+7455:M 03 May 2025 23:07:07.449 * Connection with replica 127.0.0.1:22662 lost.
+7455:M 03 May 2025 23:07:07.449 - Accepted 127.0.0.1:50318
+7455:M 03 May 2025 23:07:07.450 * Replica 127.0.0.1:22662 asks for synchronization
+7455:M 03 May 2025 23:07:07.450 * Partial resynchronization request from 127.0.0.1:22662 accepted. Sending 4950 bytes of backlog starting from offset 59842457.
+7455:M 03 May 2025 23:07:07.581 - DB 0: 1000 keys (0 volatile) in 1792 slots HT.
+7455:M 03 May 2025 23:07:07.581 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:07.759 - Error writing to client: Broken pipe
+7455:M 03 May 2025 23:07:07.759 * Connection with replica client id #75 lost.
+7455:M 03 May 2025 23:07:07.760 - Accepted 127.0.0.1:50511
+7455:M 03 May 2025 23:07:07.760 * Replica 127.0.0.1:22662 asks for synchronization
+7455:M 03 May 2025 23:07:07.760 * Partial resynchronization request from 127.0.0.1:22662 accepted. Sending 1287 bytes of backlog starting from offset 61575386.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:08.069 - Client closed connection id=73 addr=127.0.0.1:65060 laddr=127.0.0.1:22663 fd=14 name= age=4 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=371 tot-net-out=14802139 tot-cmds=8
+7455:M 03 May 2025 23:07:08.069 * Connection with replica client id #73 lost.
+7455:M 03 May 2025 23:07:08.069 - Accepted 127.0.0.1:50709
+7455:M 03 May 2025 23:07:08.070 * Replica 127.0.0.1:22661 asks for synchronization
+7455:M 03 May 2025 23:07:08.070 * Partial resynchronization request from 127.0.0.1:22661 accepted. Sending 4125 bytes of backlog starting from offset 63860603.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:10.566 - Reading from client: Connection reset by peer
+7455:M 03 May 2025 23:07:10.566 * Connection with replica client id #76 lost.
+7455:M 03 May 2025 23:07:10.566 - Accepted 127.0.0.1:52041
+7455:M 03 May 2025 23:07:10.567 * Replica 127.0.0.1:22662 asks for synchronization
+7455:M 03 May 2025 23:07:10.567 * Partial resynchronization request from 127.0.0.1:22662 accepted. Sending 2442 bytes of backlog starting from offset 73906298.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:11.907 - Client closed connection id=78 addr=127.0.0.1:52041 laddr=127.0.0.1:22663 fd=13 name= age=1 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=289 tot-net-out=2199472 tot-cmds=6
+7455:M 03 May 2025 23:07:11.907 * Connection with replica 127.0.0.1:22662 lost.
+7455:M 03 May 2025 23:07:11.907 - Accepted 127.0.0.1:53086
+7455:M 03 May 2025 23:07:11.907 * Replica 127.0.0.1:22662 asks for synchronization
+7455:M 03 May 2025 23:07:11.907 * Partial resynchronization request from 127.0.0.1:22662 accepted. Sending 0 bytes of backlog starting from offset 76105748.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:12.433 - Client closed connection id=77 addr=127.0.0.1:50709 laddr=127.0.0.1:22663 fd=14 name= age=4 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=453 tot-net-out=13314532 tot-cmds=10
+7455:M 03 May 2025 23:07:12.433 * Connection with replica 127.0.0.1:22661 lost.
+7455:M 03 May 2025 23:07:12.433 - Accepted 127.0.0.1:53342
+7455:M 03 May 2025 23:07:12.444 * Replica 127.0.0.1:22661 asks for synchronization
+7455:M 03 May 2025 23:07:12.444 * Partial resynchronization request from 127.0.0.1:22661 accepted. Sending 4950 bytes of backlog starting from offset 77175113.
+7455:M 03 May 2025 23:07:12.606 - DB 0: 1000 keys (0 volatile) in 1792 slots HT.
+7455:M 03 May 2025 23:07:12.606 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+### Starting test PSYNC2 #3899 regression: verify consistency in tests/integration/psync2-reg.tcl
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=56 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=64 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1645908 tot-net-out=327049 tot-cmds=49876
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=55 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=63 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1644984 tot-net-out=326819 tot-cmds=49848
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=54 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=62 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1645083 tot-net-out=326908 tot-cmds=49851
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=53 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=61 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1644951 tot-net-out=326789 tot-cmds=49847
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=52 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=60 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1645083 tot-net-out=326832 tot-cmds=49851
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=51 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=59 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1643895 tot-net-out=326628 tot-cmds=49815
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=50 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=58 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1647327 tot-net-out=327279 tot-cmds=49919
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=49 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=57 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1647492 tot-net-out=327337 tot-cmds=49924
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=48 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=56 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1645248 tot-net-out=326889 tot-cmds=49856
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=47 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=55 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1645281 tot-net-out=326854 tot-cmds=49857
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=46 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=54 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1645479 tot-net-out=326883 tot-cmds=49863
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=45 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=53 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1648185 tot-net-out=327457 tot-cmds=49945
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=44 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=52 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1644984 tot-net-out=326773 tot-cmds=49848
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=43 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=51 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1645941 tot-net-out=326963 tot-cmds=49877
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=42 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=50 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1647261 tot-net-out=327223 tot-cmds=49917
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=41 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=49 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646997 tot-net-out=327184 tot-cmds=49909
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=40 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=48 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646964 tot-net-out=327161 tot-cmds=49908
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=39 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=47 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1645611 tot-net-out=326941 tot-cmds=49867
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=38 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=46 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646964 tot-net-out=327131 tot-cmds=49908
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=37 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=45 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1645248 tot-net-out=326869 tot-cmds=49856
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=36 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=44 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1645809 tot-net-out=326958 tot-cmds=49873
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=35 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=43 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646799 tot-net-out=327189 tot-cmds=49903
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=34 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=42 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646568 tot-net-out=327152 tot-cmds=49896
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=33 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=41 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1642410 tot-net-out=326330 tot-cmds=49770
+7455:M 03 May 2025 23:07:13.683 - Client closed connection id=32 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=40 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646238 tot-net-out=327085 tot-cmds=49886
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=31 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=39 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646007 tot-net-out=327036 tot-cmds=49879
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=30 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=38 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646865 tot-net-out=327183 tot-cmds=49905
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=29 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=37 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1647393 tot-net-out=327298 tot-cmds=49921
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=28 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=36 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646832 tot-net-out=327151 tot-cmds=49904
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=27 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=35 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646832 tot-net-out=327128 tot-cmds=49904
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=26 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=34 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1647855 tot-net-out=327333 tot-cmds=49935
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=25 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=33 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1644654 tot-net-out=326766 tot-cmds=49838
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=24 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=32 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1643598 tot-net-out=326546 tot-cmds=49806
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=23 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=31 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646271 tot-net-out=327038 tot-cmds=49887
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=22 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=30 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1647360 tot-net-out=327282 tot-cmds=49920
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=21 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=29 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646634 tot-net-out=327135 tot-cmds=49898
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=20 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=28 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1648185 tot-net-out=327427 tot-cmds=49945
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=19 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=27 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1647888 tot-net-out=327420 tot-cmds=49936
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=18 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=26 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646403 tot-net-out=327081 tot-cmds=49891
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=17 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=25 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646898 tot-net-out=327275 tot-cmds=49906
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=16 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=24 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1643961 tot-net-out=326593 tot-cmds=49817
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=15 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=23 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646271 tot-net-out=327084 tot-cmds=49887
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=14 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=22 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646535 tot-net-out=327099 tot-cmds=49895
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=13 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=21 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1645776 tot-net-out=327000 tot-cmds=49872
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=12 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=20 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1645974 tot-net-out=327008 tot-cmds=49878
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=11 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=19 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1646700 tot-net-out=327185 tot-cmds=49900
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=10 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=18 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1645809 tot-net-out=326986 tot-cmds=49873
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=9 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=17 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1645710 tot-net-out=326974 tot-cmds=49870
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=8 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=16 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1647525 tot-net-out=327236 tot-cmds=49925
+7455:M 03 May 2025 23:07:13.684 - Client closed connection id=7 addr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 laddr=/Users/junyeong/maindir/openup/tests/tmp/server.83528.107/socket:0 fd=15 name= age=19 idle=0 flags=U capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1648020 tot-net-out=327467 tot-cmds=49940
+7455:M 03 May 2025 23:07:13.695 - Client closed connection id=3 addr=127.0.0.1:57076 laddr=127.0.0.1:22663 fd=12 name= age=21 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=43 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=140 tot-net-out=58 tot-cmds=4
+7455:signal-handler (1746281236) Received SIGTERM scheduling shutdown...
+7455:M 03 May 2025 23:07:17.048 * User requested shutdown...
+7455:M 03 May 2025 23:07:17.048 * 2 of 2 replicas are in sync when shutting down.
+7455:M 03 May 2025 23:07:17.048 * Removing the pid file.
+7455:M 03 May 2025 23:07:17.049 * Removing the unix socket file.
+7455:M 03 May 2025 23:07:17.049 # Valkey is now ready to exit, bye bye...

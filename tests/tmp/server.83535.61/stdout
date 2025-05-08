@@ -1,0 +1,90 @@
+### Starting server for test 
+96012:M 03 May 2025 23:05:19.616 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+96012:M 03 May 2025 23:05:19.619 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+96012:M 03 May 2025 23:05:19.619 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=96012, just started
+96012:M 03 May 2025 23:05:19.619 * Configuration loaded
+96012:M 03 May 2025 23:05:19.619 * Increased maximum number of open files to 10032 (it was originally set to 256).
+96012:M 03 May 2025 23:05:19.622 * monotonic clock: POSIX clock_gettime
+96012:M 03 May 2025 23:05:19.622 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 26142
+ |###|   .+###############+.   |###|    PID: 96012                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+96012:M 03 May 2025 23:05:19.622 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+96012:M 03 May 2025 23:05:19.622 * No cluster configuration found, I'm b8bdcf243975fa5ad21a9bba3dfb5a382b8fdcd4
+96012:M 03 May 2025 23:05:19.671 * Server initialized
+96012:M 03 May 2025 23:05:19.674 * Ready to accept connections tcp
+96012:M 03 May 2025 23:05:19.680 * Ready to accept connections unix
+96012:M 03 May 2025 23:05:19.775 - Accepted 127.0.0.1:49752
+96012:M 03 May 2025 23:05:19.778 - Client closed connection id=2 addr=127.0.0.1:49752 laddr=127.0.0.1:26142 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+96012:M 03 May 2025 23:05:19.800 - Accepted 127.0.0.1:49774
+96012:M 03 May 2025 23:05:20.450 - Accepting cluster node connection from 127.0.0.1:50305
+96012:M 03 May 2025 23:05:20.451 * IP address for this node updated to 127.0.0.1
+96012:M 03 May 2025 23:05:20.861 - Accepting cluster node connection from 127.0.0.1:50588
+96012:M 03 May 2025 23:05:20.869 * configEpoch collision with node ff4a2c5f305f8e6f644d4776ff7ab578c871ecab (). configEpoch set to 2
+96012:M 03 May 2025 23:05:20.958 # Missing implement of connection type tls
+96012:M 03 May 2025 23:05:21.038 # DEBUG LOG: ========== I am primary 2 ==========
+96012:M 03 May 2025 23:05:21.775 * Cluster state changed: ok
+### Starting test Set cluster human announced nodename and let it propagate in tests/unit/cluster/human-announced-nodename.tcl
+### Starting test Human nodenames are visible in log messages in tests/unit/cluster/human-announced-nodename.tcl
+96012:M 03 May 2025 23:05:25.720 * Node ff4a2c5f305f8e6f644d4776ff7ab578c871ecab (nodename-1) reported node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e (nodename-0) as not reachable.
+96012:M 03 May 2025 23:05:25.729 * Marking node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e (nodename-0) as failing (quorum reached).
+96012:M 03 May 2025 23:05:25.732 # Cluster state changed: fail
+96012:M 03 May 2025 23:05:25.735 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+### Starting test Check for memory leaks (pid 96124) in tests/unit/cluster/human-announced-nodename.tcl
+96012:M 03 May 2025 23:05:27.549 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+### Starting test Check for memory leaks (pid 96069) in tests/unit/cluster/human-announced-nodename.tcl
+96012:M 03 May 2025 23:05:27.650 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:27.751 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:27.853 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:27.953 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:28.054 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:28.155 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:28.256 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:28.357 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:28.458 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:28.558 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:28.659 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:28.760 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:28.861 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:28.962 - Connection with Node ff4a2c5f305f8e6f644d4776ff7ab578c871ecab at 127.0.0.1:36143 failed: Connection refused
+96012:M 03 May 2025 23:05:28.975 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:29.043 - Client closed connection id=3 addr=127.0.0.1:49774 laddr=127.0.0.1:26142 fd=14 name= age=10 idle=7 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|slots user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=476 tot-net-out=3080 tot-cmds=11
+96012:M 03 May 2025 23:05:29.062 - Connection with Node ff4a2c5f305f8e6f644d4776ff7ab578c871ecab at 127.0.0.1:36143 failed: Connection refused
+96012:M 03 May 2025 23:05:29.064 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:29.165 - Connection with Node ff4a2c5f305f8e6f644d4776ff7ab578c871ecab at 127.0.0.1:36143 failed: Connection refused
+96012:M 03 May 2025 23:05:29.165 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:29.267 - Connection with Node ff4a2c5f305f8e6f644d4776ff7ab578c871ecab at 127.0.0.1:36143 failed: Connection refused
+96012:M 03 May 2025 23:05:29.267 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:29.368 - Connection with Node ff4a2c5f305f8e6f644d4776ff7ab578c871ecab at 127.0.0.1:36143 failed: Connection refused
+96012:M 03 May 2025 23:05:29.375 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:29.469 - Connection with Node ff4a2c5f305f8e6f644d4776ff7ab578c871ecab at 127.0.0.1:36143 failed: Connection refused
+96012:M 03 May 2025 23:05:29.469 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:29.570 - Connection with Node ff4a2c5f305f8e6f644d4776ff7ab578c871ecab at 127.0.0.1:36143 failed: Connection refused
+96012:M 03 May 2025 23:05:29.572 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:29.671 - Connection with Node ff4a2c5f305f8e6f644d4776ff7ab578c871ecab at 127.0.0.1:36143 failed: Connection refused
+96012:M 03 May 2025 23:05:29.671 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:M 03 May 2025 23:05:30.798 - Connection with Node ff4a2c5f305f8e6f644d4776ff7ab578c871ecab at 127.0.0.1:36143 failed: Connection refused
+96012:M 03 May 2025 23:05:30.800 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96012:signal-handler (1746281130) Received SIGTERM scheduling shutdown...
+96012:M 03 May 2025 23:05:30.898 * User requested shutdown...
+96012:M 03 May 2025 23:05:30.904 * Removing the pid file.
+96012:M 03 May 2025 23:05:30.904 * Saving the cluster configuration file before exiting.
+96012:M 03 May 2025 23:05:30.909 * Removing the unix socket file.
+96012:M 03 May 2025 23:05:30.909 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,41 @@
+### Starting server for test corrupt payload: quicklist small ziplist prev len in tests/integration/corrupt-dump.tcl
+3542:M 03 May 2025 23:06:27.797 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+3542:M 03 May 2025 23:06:27.797 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=3542, just started
+3542:M 03 May 2025 23:06:27.798 * Configuration loaded
+3542:M 03 May 2025 23:06:27.798 * Increased maximum number of open files to 10032 (it was originally set to 256).
+3542:M 03 May 2025 23:06:27.798 * monotonic clock: POSIX clock_gettime
+3542:M 03 May 2025 23:06:27.798 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21648
+ |###|   .+###############+.   |###|    PID: 3542                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+3542:M 03 May 2025 23:06:27.798 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+3542:M 03 May 2025 23:06:27.798 * Server initialized
+3542:M 03 May 2025 23:06:27.799 * Ready to accept connections tcp
+3542:M 03 May 2025 23:06:27.799 * Ready to accept connections unix
+3542:M 03 May 2025 23:06:27.814 - Accepted 127.0.0.1:54945
+3542:M 03 May 2025 23:06:27.814 - Client closed connection id=2 addr=127.0.0.1:54945 laddr=127.0.0.1:21648 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+3542:M 03 May 2025 23:06:27.827 - Accepted 127.0.0.1:54947
+3542:M 03 May 2025 23:06:27.827 - Internal error in RDB reading offset 0, function at rdb.c:2237 -> Ziplist integrity check failed.
+3542:M 03 May 2025 23:06:27.837 - Client closed connection id=3 addr=127.0.0.1:54947 laddr=127.0.0.1:21648 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=restore user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=157 tot-net-out=32 tot-cmds=3
+3542:signal-handler (1746281187) Received SIGTERM scheduling shutdown...
+3542:M 03 May 2025 23:06:27.900 * User requested shutdown...
+3542:M 03 May 2025 23:06:27.900 * Removing the pid file.
+3542:M 03 May 2025 23:06:27.900 * Removing the unix socket file.
+3542:M 03 May 2025 23:06:27.900 # Valkey is now ready to exit, bye bye...

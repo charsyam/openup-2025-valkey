@@ -1,0 +1,197 @@
+### Starting server for test 
+8819:M 03 May 2025 23:07:12.242 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+8819:M 03 May 2025 23:07:12.242 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+8819:M 03 May 2025 23:07:12.242 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=8819, just started
+8819:M 03 May 2025 23:07:12.242 * Configuration loaded
+8819:M 03 May 2025 23:07:12.242 * Increased maximum number of open files to 10032 (it was originally set to 256).
+8819:M 03 May 2025 23:07:12.242 * monotonic clock: POSIX clock_gettime
+8819:M 03 May 2025 23:07:12.243 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 28663
+ |###|   .+###############+.   |###|    PID: 8819                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+8819:M 03 May 2025 23:07:12.243 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+8819:M 03 May 2025 23:07:12.243 * No cluster configuration found, I'm f6c55c12f81eb5cc3359715370dc7d60c2b01896
+8819:M 03 May 2025 23:07:12.258 * Server initialized
+8819:M 03 May 2025 23:07:12.258 * Ready to accept connections tcp
+8819:M 03 May 2025 23:07:12.258 * Ready to accept connections unix
+8819:M 03 May 2025 23:07:12.379 - Accepted 127.0.0.1:53312
+8819:M 03 May 2025 23:07:12.379 - Client closed connection id=2 addr=127.0.0.1:53312 laddr=127.0.0.1:28663 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+8819:M 03 May 2025 23:07:12.397 - Accepted 127.0.0.1:53313
+8819:M 03 May 2025 23:07:13.101 - Accepting cluster node connection from 127.0.0.1:53654
+8819:M 03 May 2025 23:07:13.101 * IP address for this node updated to 127.0.0.1
+8819:M 03 May 2025 23:07:13.272 * Successfully completed handshake with 6251ad04e0deb927d9c7c6717d2d61068b785ab9 ()
+8819:M 03 May 2025 23:07:13.272 * Successfully completed handshake with 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab ()
+8819:M 03 May 2025 23:07:13.277 - Accepting cluster node connection from 127.0.0.1:53742
+8819:M 03 May 2025 23:07:13.296 - Accepting cluster node connection from 127.0.0.1:53757
+8819:M 03 May 2025 23:07:13.403 # Missing implement of connection type tls
+8819:S 03 May 2025 23:07:13.404 * Connecting to PRIMARY 127.0.0.1:28666
+8819:S 03 May 2025 23:07:13.404 * PRIMARY <-> REPLICA sync started
+8819:S 03 May 2025 23:07:13.404 * Cluster state changed: ok
+8819:S 03 May 2025 23:07:13.404 * Non blocking connect for SYNC fired the event.
+8819:S 03 May 2025 23:07:13.405 * Primary replied to PING, replication can continue...
+8819:S 03 May 2025 23:07:13.405 * Partial resynchronization not possible (no cached primary)
+8819:S 03 May 2025 23:07:13.405 * Full resync from primary: 7d22b7e6b525ddaf08ff1e9f71ea6bd8aa721da6:0
+8819:S 03 May 2025 23:07:13.406 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+8819:S 03 May 2025 23:07:13.408 * PRIMARY <-> REPLICA sync: Flushing old data
+8819:S 03 May 2025 23:07:13.408 * PRIMARY <-> REPLICA sync: Loading DB in memory
+8819:S 03 May 2025 23:07:13.408 * Loading RDB produced by Valkey version 255.255.255
+8819:S 03 May 2025 23:07:13.408 * RDB age 0 seconds
+8819:S 03 May 2025 23:07:13.408 * RDB memory usage when created 2.89 Mb
+8819:S 03 May 2025 23:07:13.408 * Done loading RDB, keys loaded: 0, keys expired: 0.
+8819:S 03 May 2025 23:07:13.408 * PRIMARY <-> REPLICA sync: Finished with success
+8819:S 03 May 2025 23:07:13.408 # DEBUG LOG: ========== I am replica 3 ==========
+### Starting test Primary lost a slot during the client pause command in tests/unit/cluster/slot-ownership.tcl
+8819:S 03 May 2025 23:07:23.168 * Slot 3028 is migrated from node bfec736a72618639bc72b331a768ca3fd43ff8cd () in shard 0abfe6bed0c0b54cd6521a007e12c3b8361c75fb to node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab () in shard 7cef3abbb3395e3e0894e562fccd7bc0d63816c6.
+8819:S 03 May 2025 23:07:23.180 - Node bfec736a72618639bc72b331a768ca3fd43ff8cd has old slots configuration, sending an UPDATE message about 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab
+8819:S 03 May 2025 23:07:23.200 - Node bfec736a72618639bc72b331a768ca3fd43ff8cd has old slots configuration, sending an UPDATE message about 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab
+### Starting test Check for memory leaks (pid 8868) in tests/unit/cluster/slot-ownership.tcl
+8819:S 03 May 2025 23:07:29.982 - Client closed connection id=5 addr=127.0.0.1:28666 laddr=127.0.0.1:53806 fd=21 name= age=16 idle=6 flags=M capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=65530 argv-mem=0 multi-mem=0 rbs=1024 rbp=35 obl=0 oll=0 omem=0 tot-mem=67072 events=r cmd=unlink user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=91 tot-net-out=585 tot-cmds=4
+8819:S 03 May 2025 23:07:29.982 * Connection with primary lost.
+8819:S 03 May 2025 23:07:29.982 * Caching the disconnected primary state.
+8819:S 03 May 2025 23:07:29.982 * Reconnecting to PRIMARY 127.0.0.1:28666
+8819:S 03 May 2025 23:07:29.982 * PRIMARY <-> REPLICA sync started
+8819:S 03 May 2025 23:07:29.982 # Error condition on socket for SYNC: Connection refused
+8819:S 03 May 2025 23:07:30.025 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+### Starting test Check for memory leaks (pid 8849) in tests/unit/cluster/slot-ownership.tcl
+8819:S 03 May 2025 23:07:30.127 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:30.228 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:30.328 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:30.429 * Connecting to PRIMARY 127.0.0.1:28666
+8819:S 03 May 2025 23:07:30.429 * PRIMARY <-> REPLICA sync started
+8819:S 03 May 2025 23:07:30.429 # Error condition on socket for SYNC: Connection refused
+8819:S 03 May 2025 23:07:30.429 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:30.529 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:30.630 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:30.732 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:30.835 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:30.936 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:31.037 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:31.138 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:31.239 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:31.342 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:31.444 * Connecting to PRIMARY 127.0.0.1:28666
+8819:S 03 May 2025 23:07:31.444 * PRIMARY <-> REPLICA sync started
+8819:S 03 May 2025 23:07:31.444 # Error condition on socket for SYNC: Connection refused
+8819:S 03 May 2025 23:07:31.444 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:31.547 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:31.648 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:31.748 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:31.851 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:31.952 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:32.053 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:32.154 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:32.254 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:32.355 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:32.456 * Connecting to PRIMARY 127.0.0.1:28666
+8819:S 03 May 2025 23:07:32.456 * PRIMARY <-> REPLICA sync started
+8819:S 03 May 2025 23:07:32.456 # Error condition on socket for SYNC: Connection refused
+8819:S 03 May 2025 23:07:32.456 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:32.557 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:32.557 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+### Starting test Check for memory leaks (pid 8831) in tests/unit/cluster/slot-ownership.tcl
+8819:S 03 May 2025 23:07:32.658 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:32.658 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:32.758 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:32.758 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:32.860 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:32.860 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:32.960 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:32.960 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:33.061 * NODE bfec736a72618639bc72b331a768ca3fd43ff8cd () possibly failing.
+8819:S 03 May 2025 23:07:33.062 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:33.062 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:33.162 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:33.162 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:33.263 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:33.263 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:33.263 * Node 6251ad04e0deb927d9c7c6717d2d61068b785ab9 () reported node bfec736a72618639bc72b331a768ca3fd43ff8cd () as not reachable.
+8819:S 03 May 2025 23:07:33.364 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:33.364 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:33.465 * Connecting to PRIMARY 127.0.0.1:28666
+8819:S 03 May 2025 23:07:33.465 * PRIMARY <-> REPLICA sync started
+8819:S 03 May 2025 23:07:33.465 # Error condition on socket for SYNC: Connection refused
+8819:S 03 May 2025 23:07:33.465 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:33.465 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:33.566 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:33.566 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:33.668 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:33.668 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:33.769 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:33.769 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:33.870 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:33.870 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:33.972 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:33.972 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:34.073 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:34.073 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:34.175 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:34.175 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:34.275 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:34.275 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:34.376 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:34.376 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:34.477 * Connecting to PRIMARY 127.0.0.1:28666
+8819:S 03 May 2025 23:07:34.477 * PRIMARY <-> REPLICA sync started
+8819:S 03 May 2025 23:07:34.477 # Error condition on socket for SYNC: Connection refused
+8819:S 03 May 2025 23:07:34.477 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:34.477 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:34.578 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:34.578 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:34.679 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:34.679 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:34.780 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:34.780 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:34.880 - Client closed connection id=3 addr=127.0.0.1:53313 laddr=127.0.0.1:28663 fd=14 name= age=22 idle=11 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=287 tot-net-out=3205 tot-cmds=7
+8819:S 03 May 2025 23:07:34.880 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:34.880 - Connection with Node 6251ad04e0deb927d9c7c6717d2d61068b785ab9 at 127.0.0.1:38664 failed: Connection refused
+8819:S 03 May 2025 23:07:34.880 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:34.981 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:34.981 - Connection with Node 6251ad04e0deb927d9c7c6717d2d61068b785ab9 at 127.0.0.1:38664 failed: Connection refused
+8819:S 03 May 2025 23:07:34.981 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:35.082 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:35.083 - Connection with Node 6251ad04e0deb927d9c7c6717d2d61068b785ab9 at 127.0.0.1:38664 failed: Connection refused
+8819:S 03 May 2025 23:07:35.083 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:35.184 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:35.185 - Connection with Node 6251ad04e0deb927d9c7c6717d2d61068b785ab9 at 127.0.0.1:38664 failed: Connection refused
+8819:S 03 May 2025 23:07:35.185 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:35.284 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:35.284 - Connection with Node 6251ad04e0deb927d9c7c6717d2d61068b785ab9 at 127.0.0.1:38664 failed: Connection refused
+8819:S 03 May 2025 23:07:35.284 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:35.384 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:35.385 - Connection with Node 6251ad04e0deb927d9c7c6717d2d61068b785ab9 at 127.0.0.1:38664 failed: Connection refused
+8819:S 03 May 2025 23:07:35.385 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:35.485 * Connecting to PRIMARY 127.0.0.1:28666
+8819:S 03 May 2025 23:07:35.485 * PRIMARY <-> REPLICA sync started
+8819:S 03 May 2025 23:07:35.485 # Error condition on socket for SYNC: Connection refused
+8819:S 03 May 2025 23:07:35.485 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:35.485 - Connection with Node 6251ad04e0deb927d9c7c6717d2d61068b785ab9 at 127.0.0.1:38664 failed: Connection refused
+8819:S 03 May 2025 23:07:35.485 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:S 03 May 2025 23:07:36.794 * NODE 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab () possibly failing.
+8819:S 03 May 2025 23:07:36.794 # Cluster state changed: fail
+8819:S 03 May 2025 23:07:36.794 # Cluster is currently down: I am part of a minority partition.
+8819:S 03 May 2025 23:07:36.794 - Connection with Node 497f34a7c4f9c7ec0a82ee8da6f70f46db5809ab at 127.0.0.1:38665 failed: Connection refused
+8819:S 03 May 2025 23:07:36.794 - Connection with Node 6251ad04e0deb927d9c7c6717d2d61068b785ab9 at 127.0.0.1:38664 failed: Connection refused
+8819:S 03 May 2025 23:07:36.794 - Connection with Node bfec736a72618639bc72b331a768ca3fd43ff8cd at 127.0.0.1:38666 failed: Connection refused
+8819:signal-handler (1746281256) Received SIGTERM scheduling shutdown...
+8819:S 03 May 2025 23:07:36.894 * User requested shutdown...
+8819:S 03 May 2025 23:07:36.895 * Removing the pid file.
+8819:S 03 May 2025 23:07:36.895 * Saving the cluster configuration file before exiting.
+8819:S 03 May 2025 23:07:36.901 * Removing the unix socket file.
+8819:S 03 May 2025 23:07:36.902 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,63 @@
+### Starting server for test diskless replication read pipe cleanup in tests/integration/replication.tcl
+18891:M 03 May 2025 23:10:03.928 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+18891:M 03 May 2025 23:10:03.928 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=18891, just started
+18891:M 03 May 2025 23:10:03.928 * Configuration loaded
+18891:M 03 May 2025 23:10:03.929 * Increased maximum number of open files to 10032 (it was originally set to 256).
+18891:M 03 May 2025 23:10:03.929 * monotonic clock: POSIX clock_gettime
+18891:M 03 May 2025 23:10:03.929 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27696
+ |###|   .+###############+.   |###|    PID: 18891                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+18891:M 03 May 2025 23:10:03.929 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+18891:M 03 May 2025 23:10:03.929 * Server initialized
+18891:M 03 May 2025 23:10:03.929 * Ready to accept connections tcp
+18891:M 03 May 2025 23:10:03.929 * Ready to accept connections unix
+18891:M 03 May 2025 23:10:04.052 - Accepted 127.0.0.1:50412
+18891:M 03 May 2025 23:10:04.052 - Client closed connection id=2 addr=127.0.0.1:50412 laddr=127.0.0.1:27696 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+18891:M 03 May 2025 23:10:04.060 - Accepted 127.0.0.1:50413
+18891:M 03 May 2025 23:10:04.245 - Accepted 127.0.0.1:50416
+18891:M 03 May 2025 23:10:04.245 * Replica 127.0.0.1:27697 asks for synchronization
+18891:M 03 May 2025 23:10:04.245 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '3e4d9f694b256e7dfca4e16dcbfd8a53ce71a7ca', my replication IDs are '05cef773159941ec27d1d9e29953d8e724d1e171' and '0000000000000000000000000000000000000000')
+18891:M 03 May 2025 23:10:04.245 * Replication backlog created, my new replication IDs are '028e08be735955640cf6c54757eb814c715fd73c' and '0000000000000000000000000000000000000000'
+18891:M 03 May 2025 23:10:04.245 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+18891:M 03 May 2025 23:10:04.253 * Background RDB transfer started by pid 18912 to pipe through parent process
+18912:signal-handler (1746281404) Received SIGUSR1 in child, exiting now.
+18891:M 03 May 2025 23:10:04.373 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+18891:M 03 May 2025 23:10:04.434 # Background RDB transfer terminated by signal 30
+18891:M 03 May 2025 23:10:04.434 # SYNC failed. BGSAVE child returned an error
+18891:M 03 May 2025 23:10:04.434 * Connection with replica 127.0.0.1:27697 lost.
+18891:M 03 May 2025 23:10:04.434 - Accepted 127.0.0.1:50417
+18891:M 03 May 2025 23:10:04.434 * Replica 127.0.0.1:27697 asks for synchronization
+18891:M 03 May 2025 23:10:04.434 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '3e4d9f694b256e7dfca4e16dcbfd8a53ce71a7ca', my replication IDs are '028e08be735955640cf6c54757eb814c715fd73c' and '0000000000000000000000000000000000000000')
+18891:M 03 May 2025 23:10:04.434 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+18891:M 03 May 2025 23:10:04.436 * Background RDB transfer started by pid 18926 to pipe through parent process
+18926:C 03 May 2025 23:10:04.436 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+18891:M 03 May 2025 23:10:04.437 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+18891:M 03 May 2025 23:10:04.535 * Background RDB transfer terminated with success
+18891:M 03 May 2025 23:10:04.535 * Streamed RDB transfer with replica 127.0.0.1:27697 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+18891:M 03 May 2025 23:10:04.535 * Synchronization with replica 127.0.0.1:27697 succeeded
+18891:M 03 May 2025 23:10:04.535 - Client closed connection id=5 addr=127.0.0.1:50417 laddr=127.0.0.1:27696 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=276 tot-net-out=22 tot-cmds=6
+18891:M 03 May 2025 23:10:04.535 * Connection with replica 127.0.0.1:27697 lost.
+18891:M 03 May 2025 23:10:04.562 - Client closed connection id=3 addr=127.0.0.1:50413 laddr=127.0.0.1:27696 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=354 tot-net-out=42 tot-cmds=8
+18891:signal-handler (1746281404) Received SIGTERM scheduling shutdown...
+18891:M 03 May 2025 23:10:04.636 * User requested shutdown...
+18891:M 03 May 2025 23:10:04.636 * Removing the pid file.
+18891:M 03 May 2025 23:10:04.636 * Removing the unix socket file.
+18891:M 03 May 2025 23:10:04.636 # Valkey is now ready to exit, bye bye...

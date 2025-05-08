@@ -1,0 +1,190 @@
+### Starting server for test 
+87314:M 03 May 2025 23:04:10.518 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+87314:M 03 May 2025 23:04:10.518 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=87314, just started
+87314:M 03 May 2025 23:04:10.518 * Configuration loaded
+87314:M 03 May 2025 23:04:10.518 * Increased maximum number of open files to 10032 (it was originally set to 256).
+87314:M 03 May 2025 23:04:10.518 * monotonic clock: POSIX clock_gettime
+87314:M 03 May 2025 23:04:10.519 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25122
+ |###|   .+###############+.   |###|    PID: 87314                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+87314:M 03 May 2025 23:04:10.519 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+87314:M 03 May 2025 23:04:10.519 * Server initialized
+87314:M 03 May 2025 23:04:10.519 * Ready to accept connections tcp
+87314:M 03 May 2025 23:04:10.519 * Ready to accept connections unix
+87314:M 03 May 2025 23:04:10.642 - Accepted 127.0.0.1:59535
+87314:M 03 May 2025 23:04:10.642 - Client closed connection id=2 addr=127.0.0.1:59535 laddr=127.0.0.1:25122 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+87314:M 03 May 2025 23:04:10.649 - Accepted 127.0.0.1:59536
+### Starting test SADD, SCARD, SISMEMBER, SMISMEMBER, SMEMBERS basics - listpack in tests/unit/type/set.tcl
+### Starting test SADD, SCARD, SISMEMBER, SMISMEMBER, SMEMBERS basics - hashtable in tests/unit/type/set.tcl
+### Starting test SADD, SCARD, SISMEMBER, SMISMEMBER, SMEMBERS basics - intset in tests/unit/type/set.tcl
+### Starting test SMISMEMBER SMEMBERS SCARD against non set in tests/unit/type/set.tcl
+### Starting test SMISMEMBER SMEMBERS SCARD against non existing key in tests/unit/type/set.tcl
+### Starting test SMISMEMBER requires one or more members in tests/unit/type/set.tcl
+### Starting test SADD against non set in tests/unit/type/set.tcl
+### Starting test SADD a non-integer against a small intset in tests/unit/type/set.tcl
+### Starting test SADD a non-integer against a large intset in tests/unit/type/set.tcl
+### Starting test SADD an integer larger than 64 bits in tests/unit/type/set.tcl
+### Starting test SADD an integer larger than 64 bits to a large intset in tests/unit/type/set.tcl
+### Starting test SADD overflows the maximum allowed integers in an intset - single in tests/unit/type/set.tcl
+### Starting test SADD overflows the maximum allowed elements in a listpack - single in tests/unit/type/set.tcl
+### Starting test SADD overflows the maximum allowed integers in an intset - multiple in tests/unit/type/set.tcl
+### Starting test SADD overflows the maximum allowed elements in a listpack - multiple in tests/unit/type/set.tcl
+### Starting test SADD overflows the maximum allowed integers in an intset - single_multiple in tests/unit/type/set.tcl
+### Starting test SADD overflows the maximum allowed elements in a listpack - single_multiple in tests/unit/type/set.tcl
+### Starting test Variadic SADD in tests/unit/type/set.tcl
+### Starting test Set encoding after DEBUG RELOAD in tests/unit/type/set.tcl
+87314:M 03 May 2025 23:04:10.836 * DB saved on disk
+87314:M 03 May 2025 23:04:10.836 * Loading RDB produced by Valkey version 255.255.255
+87314:M 03 May 2025 23:04:10.836 * RDB age 0 seconds
+87314:M 03 May 2025 23:04:10.836 * RDB memory usage when created 1.40 Mb
+87314:M 03 May 2025 23:04:10.836 * Done loading RDB, keys loaded: 7, keys expired: 0.
+87314:M 03 May 2025 23:04:10.836 * DB reloaded by DEBUG RELOAD
+### Starting test SREM basics - $type in tests/unit/type/set.tcl
+### Starting test SREM basics - $type in tests/unit/type/set.tcl
+### Starting test SREM basics - intset in tests/unit/type/set.tcl
+### Starting test SREM with multiple arguments in tests/unit/type/set.tcl
+### Starting test SREM variadic version with more args needed to destroy the key in tests/unit/type/set.tcl
+### Starting test SINTERCARD with illegal arguments in tests/unit/type/set.tcl
+### Starting test SINTERCARD against non-set should throw error in tests/unit/type/set.tcl
+### Starting test SINTERCARD against non-existing key in tests/unit/type/set.tcl
+### Starting test Generated sets must be encoded correctly - regular in tests/unit/type/set.tcl
+### Starting test SINTER with two sets - regular in tests/unit/type/set.tcl
+### Starting test SINTERCARD with two sets - regular in tests/unit/type/set.tcl
+### Starting test SINTERSTORE with two sets - regular in tests/unit/type/set.tcl
+### Starting test SINTERSTORE with two sets, after a DEBUG RELOAD - regular in tests/unit/type/set.tcl
+87314:M 03 May 2025 23:04:10.870 * DB saved on disk
+87314:M 03 May 2025 23:04:10.870 * Loading RDB produced by Valkey version 255.255.255
+87314:M 03 May 2025 23:04:10.870 * RDB age 0 seconds
+87314:M 03 May 2025 23:04:10.870 * RDB memory usage when created 1.57 Mb
+87314:M 03 May 2025 23:04:10.870 * Done loading RDB, keys loaded: 14, keys expired: 0.
+87314:M 03 May 2025 23:04:10.870 * DB reloaded by DEBUG RELOAD
+### Starting test SUNION with two sets - regular in tests/unit/type/set.tcl
+### Starting test SUNIONSTORE with two sets - regular in tests/unit/type/set.tcl
+### Starting test SINTER against three sets - regular in tests/unit/type/set.tcl
+### Starting test SINTERCARD against three sets - regular in tests/unit/type/set.tcl
+### Starting test SINTERSTORE with three sets - regular in tests/unit/type/set.tcl
+### Starting test SUNION with non existing keys - regular in tests/unit/type/set.tcl
+### Starting test SDIFF with two sets - regular in tests/unit/type/set.tcl
+### Starting test SDIFF with three sets - regular in tests/unit/type/set.tcl
+### Starting test SDIFFSTORE with three sets - regular in tests/unit/type/set.tcl
+### Starting test SINTER/SUNION/SDIFF with three same sets - regular in tests/unit/type/set.tcl
+### Starting test Generated sets must be encoded correctly - intset in tests/unit/type/set.tcl
+### Starting test SINTER with two sets - intset in tests/unit/type/set.tcl
+### Starting test SINTERCARD with two sets - intset in tests/unit/type/set.tcl
+### Starting test SINTERSTORE with two sets - intset in tests/unit/type/set.tcl
+### Starting test SINTERSTORE with two sets, after a DEBUG RELOAD - intset in tests/unit/type/set.tcl
+87314:M 03 May 2025 23:04:10.903 * DB saved on disk
+87314:M 03 May 2025 23:04:10.903 * Loading RDB produced by Valkey version 255.255.255
+87314:M 03 May 2025 23:04:10.903 * RDB age 0 seconds
+87314:M 03 May 2025 23:04:10.903 * RDB memory usage when created 1.65 Mb
+87314:M 03 May 2025 23:04:10.903 * Done loading RDB, keys loaded: 14, keys expired: 0.
+87314:M 03 May 2025 23:04:10.903 * DB reloaded by DEBUG RELOAD
+### Starting test SUNION with two sets - intset in tests/unit/type/set.tcl
+### Starting test SUNIONSTORE with two sets - intset in tests/unit/type/set.tcl
+### Starting test SINTER against three sets - intset in tests/unit/type/set.tcl
+### Starting test SINTERCARD against three sets - intset in tests/unit/type/set.tcl
+### Starting test SINTERSTORE with three sets - intset in tests/unit/type/set.tcl
+### Starting test SUNION with non existing keys - intset in tests/unit/type/set.tcl
+### Starting test SDIFF with two sets - intset in tests/unit/type/set.tcl
+### Starting test SDIFF with three sets - intset in tests/unit/type/set.tcl
+### Starting test SDIFFSTORE with three sets - intset in tests/unit/type/set.tcl
+### Starting test SINTER/SUNION/SDIFF with three same sets - intset in tests/unit/type/set.tcl
+### Starting test SINTERSTORE with two listpack sets where result is intset in tests/unit/type/set.tcl
+### Starting test SINTERSTORE with two hashtable sets where result is intset in tests/unit/type/set.tcl
+### Starting test SUNION hashtable and listpack in tests/unit/type/set.tcl
+### Starting test SDIFF with first set empty in tests/unit/type/set.tcl
+### Starting test SDIFF with same set two times in tests/unit/type/set.tcl
+### Starting test SDIFF fuzzing in tests/unit/type/set.tcl
+### Starting test SDIFF against non-set should throw error in tests/unit/type/set.tcl
+### Starting test SDIFF should handle non existing key as empty in tests/unit/type/set.tcl
+### Starting test SDIFFSTORE against non-set should throw error in tests/unit/type/set.tcl
+### Starting test SDIFFSTORE should handle non existing key as empty in tests/unit/type/set.tcl
+### Starting test SINTER against non-set should throw error in tests/unit/type/set.tcl
+### Starting test SINTER should handle non existing key as empty in tests/unit/type/set.tcl
+### Starting test SINTER with same integer elements but different encoding in tests/unit/type/set.tcl
+### Starting test SINTERSTORE against non-set should throw error in tests/unit/type/set.tcl
+### Starting test SINTERSTORE against non existing keys should delete dstkey in tests/unit/type/set.tcl
+### Starting test SUNION against non-set should throw error in tests/unit/type/set.tcl
+### Starting test SUNION should handle non existing key as empty in tests/unit/type/set.tcl
+### Starting test SUNIONSTORE against non-set should throw error in tests/unit/type/set.tcl
+### Starting test SUNIONSTORE should handle non existing key as empty in tests/unit/type/set.tcl
+### Starting test SUNIONSTORE against non existing keys should delete dstkey in tests/unit/type/set.tcl
+### Starting test SPOP basics - listpack in tests/unit/type/set.tcl
+### Starting test SPOP with <count>=1 - listpack in tests/unit/type/set.tcl
+### Starting test SRANDMEMBER - listpack in tests/unit/type/set.tcl
+### Starting test SPOP basics - intset in tests/unit/type/set.tcl
+### Starting test SPOP with <count>=1 - intset in tests/unit/type/set.tcl
+### Starting test SRANDMEMBER - intset in tests/unit/type/set.tcl
+### Starting test SPOP integer from listpack set in tests/unit/type/set.tcl
+### Starting test SPOP with <count> - listpack in tests/unit/type/set.tcl
+### Starting test SPOP with <count> - intset in tests/unit/type/set.tcl
+### Starting test SPOP with <count> - hashtable in tests/unit/type/set.tcl
+### Starting test SPOP using integers, testing Knuth's and Floyd's algorithm in tests/unit/type/set.tcl
+### Starting test SPOP using integers with Knuth's algorithm in tests/unit/type/set.tcl
+### Starting test SPOP new implementation: code path #1 intset in tests/unit/type/set.tcl
+### Starting test SPOP new implementation: code path #2 intset in tests/unit/type/set.tcl
+### Starting test SPOP new implementation: code path #3 intset in tests/unit/type/set.tcl
+### Starting test SPOP new implementation: code path #1 listpack in tests/unit/type/set.tcl
+### Starting test SPOP new implementation: code path #2 listpack in tests/unit/type/set.tcl
+### Starting test SPOP new implementation: code path #3 listpack in tests/unit/type/set.tcl
+### Starting test SPOP new implementation: code path #1 propagate as DEL or UNLINK in tests/unit/type/set.tcl
+87314:M 03 May 2025 23:04:14.475 - Accepted 127.0.0.1:59607
+87314:M 03 May 2025 23:04:14.475 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+87314:M 03 May 2025 23:04:14.475 * Replication backlog created, my new replication IDs are 'e9aaae58920f5627e70929d0656bf12c6045794f' and '0000000000000000000000000000000000000000'
+87314:M 03 May 2025 23:04:14.475 * Starting BGSAVE for SYNC with target: disk using: normal sync
+87314:M 03 May 2025 23:04:14.476 * Background saving started by pid 87835
+87835:C 03 May 2025 23:04:14.478 * DB saved on disk
+87835:C 03 May 2025 23:04:14.478 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+87314:M 03 May 2025 23:04:14.529 * Background saving terminated with success
+87314:M 03 May 2025 23:04:14.529 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+87314:M 03 May 2025 23:04:14.530 - Client closed connection id=4 addr=127.0.0.1:59607 laddr=127.0.0.1:25122 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=82 tot-cmds=1
+87314:M 03 May 2025 23:04:14.530 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test SRANDMEMBER count of 0 is handled correctly in tests/unit/type/set.tcl
+### Starting test SRANDMEMBER with <count> against non existing key in tests/unit/type/set.tcl
+### Starting test SRANDMEMBER count overflow in tests/unit/type/set.tcl
+### Starting test SRANDMEMBER count of 0 is handled correctly - emptyarray in tests/unit/type/set.tcl
+### Starting test SRANDMEMBER with <count> against non existing key - emptyarray in tests/unit/type/set.tcl
+### Starting test SRANDMEMBER with <count> - listpack in tests/unit/type/set.tcl
+### Starting test SRANDMEMBER with <count> - intset in tests/unit/type/set.tcl
+### Starting test SRANDMEMBER with <count> - hashtable in tests/unit/type/set.tcl
+### Starting test SRANDMEMBER histogram distribution - listpack in tests/unit/type/set.tcl
+### Starting test SRANDMEMBER histogram distribution - intset in tests/unit/type/set.tcl
+### Starting test SRANDMEMBER histogram distribution - hashtable in tests/unit/type/set.tcl
+### Starting test SMOVE basics - from regular set to intset in tests/unit/type/set.tcl
+### Starting test SMOVE basics - from intset to regular set in tests/unit/type/set.tcl
+### Starting test SMOVE non existing key in tests/unit/type/set.tcl
+### Starting test SMOVE non existing src set in tests/unit/type/set.tcl
+### Starting test SMOVE from regular set to non existing destination set in tests/unit/type/set.tcl
+### Starting test SMOVE from intset to non existing destination set in tests/unit/type/set.tcl
+### Starting test SMOVE wrong src key type in tests/unit/type/set.tcl
+### Starting test SMOVE wrong dst key type in tests/unit/type/set.tcl
+### Starting test SMOVE with identical source and destination in tests/unit/type/set.tcl
+### Starting test SMOVE only notify dstset when the addition is successful in tests/unit/type/set.tcl
+87314:M 03 May 2025 23:04:14.891 - Accepted 127.0.0.1:59608
+87314:M 03 May 2025 23:04:14.891 - Client closed connection id=5 addr=127.0.0.1:59608 laddr=127.0.0.1:25122 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=smove user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=75 tot-net-out=9 tot-cmds=2
+### Starting test intsets implementation stress testing in tests/unit/type/set.tcl
+87314:M 03 May 2025 23:04:15.530 - DB 9: 31 keys (0 volatile) in 56 slots HT.
+87314:M 03 May 2025 23:04:16.508 - Client closed connection id=3 addr=127.0.0.1:59536 laddr=127.0.0.1:25122 fd=12 name= age=6 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=27 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=scard user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=3161068 tot-net-out=981652 tot-cmds=59336
+87314:signal-handler (1746281059) Received SIGTERM scheduling shutdown...
+87314:M 03 May 2025 23:04:20.040 * User requested shutdown...
+87314:M 03 May 2025 23:04:20.040 * Removing the pid file.
+87314:M 03 May 2025 23:04:20.040 * Removing the unix socket file.
+87314:M 03 May 2025 23:04:20.040 # Valkey is now ready to exit, bye bye...

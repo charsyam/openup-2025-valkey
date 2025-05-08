@@ -1,0 +1,116 @@
+### Starting server for test 
+12461:M 03 May 2025 23:08:02.791 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+12461:M 03 May 2025 23:08:02.793 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=12461, just started
+12461:M 03 May 2025 23:08:02.796 * Configuration loaded
+12461:M 03 May 2025 23:08:02.797 * Increased maximum number of open files to 10032 (it was originally set to 256).
+12461:M 03 May 2025 23:08:02.801 * monotonic clock: POSIX clock_gettime
+12461:M 03 May 2025 23:08:02.811 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27659
+ |###|   .+###############+.   |###|    PID: 12461                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+12461:M 03 May 2025 23:08:02.817 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+12461:M 03 May 2025 23:08:02.825 * Server initialized
+12461:M 03 May 2025 23:08:02.828 * Ready to accept connections tcp
+12461:M 03 May 2025 23:08:02.836 * Ready to accept connections unix
+12461:M 03 May 2025 23:08:02.970 - Accepted 127.0.0.1:59694
+12461:M 03 May 2025 23:08:02.971 - Client closed connection id=2 addr=127.0.0.1:59694 laddr=127.0.0.1:27659 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+12461:M 03 May 2025 23:08:03.004 - Accepted 127.0.0.1:59695
+### Starting test Connect multiple replicas at the same time (issue #141), master diskless=yes, replica diskless=disabled dual-channel-replication-enabled=yes in tests/integration/replication.tcl
+12461:M 03 May 2025 23:08:03.374 - Accepted 127.0.0.1:59702
+12461:M 03 May 2025 23:08:03.376 - Accepted 127.0.0.1:59703
+12461:M 03 May 2025 23:08:03.377 - Accepted 127.0.0.1:59704
+12461:M 03 May 2025 23:08:03.381 - Accepted 127.0.0.1:59705
+12461:M 03 May 2025 23:08:03.385 - Accepted 127.0.0.1:59706
+12461:M 03 May 2025 23:08:07.860 - DB 9: 196597 keys (0 volatile) in 229376 slots HT.
+12461:M 03 May 2025 23:08:07.860 - DB 11: 2514 keys (0 volatile) in 3584 slots HT.
+12461:M 03 May 2025 23:08:07.860 - DB 12: 2567 keys (0 volatile) in 3584 slots HT.
+12461:M 03 May 2025 23:08:08.000 - Reading from client: Connection reset by peer
+12461:M 03 May 2025 23:08:08.369 - Accepted 127.0.0.1:60017
+12461:M 03 May 2025 23:08:08.370 - Accepted 127.0.0.1:60018
+12461:M 03 May 2025 23:08:08.370 * Replica 127.0.0.1:27660 asks for synchronization
+12461:M 03 May 2025 23:08:08.370 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'fce42d53b8f77238eb650bf49f725576961693aa', my replication IDs are '22b6caa8db61d3d0fe04012ff7c749727f8d3d8e' and '0000000000000000000000000000000000000000')
+12461:M 03 May 2025 23:08:08.370 * Dual channel replication: Replica 127.0.0.1:27660 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+12461:M 03 May 2025 23:08:08.370 - Accepted 127.0.0.1:60019
+12461:M 03 May 2025 23:08:08.371 - Accepted 127.0.0.1:60020
+12461:M 03 May 2025 23:08:08.371 * Replica 127.0.0.1:27661 asks for synchronization
+12461:M 03 May 2025 23:08:08.371 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'c96f0ab618da9b9b598eb80fdf68367d165c4555', my replication IDs are '22b6caa8db61d3d0fe04012ff7c749727f8d3d8e' and '0000000000000000000000000000000000000000')
+12461:M 03 May 2025 23:08:08.371 * Dual channel replication: Replica 127.0.0.1:27661 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+12461:M 03 May 2025 23:08:08.371 * Replica 127.0.0.1:27660 asks for synchronization
+12461:M 03 May 2025 23:08:08.371 * Replication backlog created, my new replication IDs are 'e6892b11c69a6da92d9313e4b40ca864c13dc074' and '0000000000000000000000000000000000000000'
+12461:M 03 May 2025 23:08:08.371 * Delay next BGSAVE for diskless SYNC
+12461:M 03 May 2025 23:08:08.371 - Accepted 127.0.0.1:60021
+12461:M 03 May 2025 23:08:08.372 * Replica 127.0.0.1:27661 asks for synchronization
+12461:M 03 May 2025 23:08:08.372 * Delay next BGSAVE for diskless SYNC
+12461:M 03 May 2025 23:08:08.372 * Replica 127.0.0.1:27662 asks for synchronization
+12461:M 03 May 2025 23:08:08.372 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '17de0bd47616a3e51ba215ead9153ba5dd81b54d', my replication IDs are 'e6892b11c69a6da92d9313e4b40ca864c13dc074' and '0000000000000000000000000000000000000000')
+12461:M 03 May 2025 23:08:08.372 * Dual channel replication: Replica 127.0.0.1:27662 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+12461:M 03 May 2025 23:08:08.372 - Accepted 127.0.0.1:60022
+12461:M 03 May 2025 23:08:08.372 * Replica 127.0.0.1:27662 asks for synchronization
+12461:M 03 May 2025 23:08:08.372 * Delay next BGSAVE for diskless SYNC
+12461:M 03 May 2025 23:08:08.863 * Starting BGSAVE for SYNC with target: replicas sockets using: dual-channel
+12461:M 03 May 2025 23:08:08.864 * Dual channel replication: Sending to replica 127.0.0.1:27660 RDB end offset 1306810 and client-id 12
+12461:M 03 May 2025 23:08:08.864 * Dual channel replication: Sending to replica 127.0.0.1:27661 RDB end offset 1306810 and client-id 13
+12461:M 03 May 2025 23:08:08.864 * Dual channel replication: Sending to replica 127.0.0.1:27662 RDB end offset 1306810 and client-id 14
+12461:M 03 May 2025 23:08:08.866 * Background RDB transfer started by pid 12688 to direct socket to replica
+12461:M 03 May 2025 23:08:08.873 * Replica 127.0.0.1:27661 asks for synchronization
+12461:M 03 May 2025 23:08:08.873 * Partial resynchronization request from 127.0.0.1:27661 accepted. Sending 22206 bytes of backlog starting from offset 1306811.
+12461:M 03 May 2025 23:08:08.873 * Replica 127.0.0.1:27660 asks for synchronization
+12461:M 03 May 2025 23:08:08.873 * Partial resynchronization request from 127.0.0.1:27660 accepted. Sending 22206 bytes of backlog starting from offset 1306811.
+12461:M 03 May 2025 23:08:08.873 * Replica 127.0.0.1:27662 asks for synchronization
+12461:M 03 May 2025 23:08:08.873 * Partial resynchronization request from 127.0.0.1:27662 accepted. Sending 22206 bytes of backlog starting from offset 1306811.
+12688:C 03 May 2025 23:08:08.953 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+12461:M 03 May 2025 23:08:08.966 * Background RDB transfer terminated with success
+12461:M 03 May 2025 23:08:08.968 * Streamed RDB transfer with replica 127.0.0.1:27660 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+12461:M 03 May 2025 23:08:08.968 * RDB transfer completed, rdb only replica (127.0.0.1:27660) should be disconnected asap
+12461:M 03 May 2025 23:08:08.968 * Streamed RDB transfer with replica 127.0.0.1:27661 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+12461:M 03 May 2025 23:08:08.968 * RDB transfer completed, rdb only replica (127.0.0.1:27661) should be disconnected asap
+12461:M 03 May 2025 23:08:08.968 * Streamed RDB transfer with replica 127.0.0.1:27662 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+12461:M 03 May 2025 23:08:08.968 * RDB transfer completed, rdb only replica (127.0.0.1:27662) should be disconnected asap
+12461:M 03 May 2025 23:08:08.968 * Dual channel replication: Replica 127.0.0.1:27660 rdb channel disconnected.
+12461:M 03 May 2025 23:08:08.968 * Dual channel replication: Replica 127.0.0.1:27661 rdb channel disconnected.
+12461:M 03 May 2025 23:08:08.968 * Dual channel replication: Replica 127.0.0.1:27662 rdb channel disconnected.
+12461:M 03 May 2025 23:08:09.229 * Synchronization with replica 127.0.0.1:27661 succeeded
+12461:M 03 May 2025 23:08:09.238 * Synchronization with replica 127.0.0.1:27662 succeeded
+12461:M 03 May 2025 23:08:09.244 * Synchronization with replica 127.0.0.1:27660 succeeded
+12461:M 03 May 2025 23:08:09.330 - Reading from client: Connection reset by peer
+12461:M 03 May 2025 23:08:09.334 - Reading from client: Connection reset by peer
+12461:M 03 May 2025 23:08:09.338 - Reading from client: Connection reset by peer
+12461:M 03 May 2025 23:08:09.343 - Reading from client: Connection reset by peer
+### Starting test Check for memory leaks (pid 12506) in tests/integration/replication.tcl
+12461:M 03 May 2025 23:08:13.821 - DB 9: 245970 keys (0 volatile) in 458752 slots HT.
+12461:M 03 May 2025 23:08:13.821 - DB 11: 3330 keys (0 volatile) in 3584 slots HT.
+12461:M 03 May 2025 23:08:13.821 - DB 12: 3470 keys (0 volatile) in 3584 slots HT.
+12461:M 03 May 2025 23:08:16.119 - Client closed connection id=11 addr=127.0.0.1:60019 laddr=127.0.0.1:27659 fd=19 name= age=8 idle=2 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=596 tot-net-out=962496 tot-cmds=12
+12461:M 03 May 2025 23:08:16.120 * Connection with replica 127.0.0.1:27662 lost.
+### Starting test Check for memory leaks (pid 12498) in tests/integration/replication.tcl
+12461:M 03 May 2025 23:08:18.871 - DB 9: 245970 keys (0 volatile) in 458752 slots HT.
+12461:M 03 May 2025 23:08:18.871 - DB 11: 3330 keys (0 volatile) in 3584 slots HT.
+12461:M 03 May 2025 23:08:18.871 - DB 12: 3470 keys (0 volatile) in 3584 slots HT.
+12461:M 03 May 2025 23:08:18.930 - Client closed connection id=10 addr=127.0.0.1:60018 laddr=127.0.0.1:27659 fd=18 name= age=10 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=716 tot-net-out=962496 tot-cmds=15
+12461:M 03 May 2025 23:08:18.930 * Connection with replica 127.0.0.1:27661 lost.
+### Starting test Check for memory leaks (pid 12490) in tests/integration/replication.tcl
+12461:M 03 May 2025 23:08:21.187 - Client closed connection id=9 addr=127.0.0.1:60017 laddr=127.0.0.1:27659 fd=17 name= age=13 idle=3 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=796 tot-net-out=962496 tot-cmds=17
+12461:M 03 May 2025 23:08:21.187 * Connection with replica 127.0.0.1:27660 lost.
+12461:M 03 May 2025 23:08:21.217 - Client closed connection id=3 addr=127.0.0.1:59695 laddr=127.0.0.1:27659 fd=12 name= age=18 idle=12 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=555 tot-net-out=84983 tot-cmds=21
+12461:signal-handler (1746281303) Received SIGTERM scheduling shutdown...
+12461:M 03 May 2025 23:08:23.135 * User requested shutdown...
+12461:M 03 May 2025 23:08:23.135 * Removing the pid file.
+12461:M 03 May 2025 23:08:23.135 * Removing the unix socket file.
+12461:M 03 May 2025 23:08:23.135 # Valkey is now ready to exit, bye bye...

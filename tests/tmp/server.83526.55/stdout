@@ -1,0 +1,80 @@
+### Starting server for test CONFIG REWRITE handles alias config properly in tests/unit/introspection.tcl
+90066:M 03 May 2025 23:04:31.760 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+90066:M 03 May 2025 23:04:31.760 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=90066, just started
+90066:M 03 May 2025 23:04:31.760 * Configuration loaded
+90066:M 03 May 2025 23:04:31.760 * Increased maximum number of open files to 10032 (it was originally set to 256).
+90066:M 03 May 2025 23:04:31.760 * monotonic clock: POSIX clock_gettime
+90066:M 03 May 2025 23:04:31.760 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21639
+ |###|   .+###############+.   |###|    PID: 90066                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+90066:M 03 May 2025 23:04:31.760 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+90066:M 03 May 2025 23:04:31.762 * Server initialized
+90066:M 03 May 2025 23:04:31.762 * Ready to accept connections tcp
+90066:M 03 May 2025 23:04:31.762 * Ready to accept connections unix
+90066:M 03 May 2025 23:04:31.795 - Accepted 127.0.0.1:60548
+90066:M 03 May 2025 23:04:31.795 - Client closed connection id=2 addr=127.0.0.1:60548 laddr=127.0.0.1:21639 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+90066:M 03 May 2025 23:04:31.827 - Accepted 127.0.0.1:60549
+90066:M 03 May 2025 23:04:31.830 * CONFIG REWRITE executed with success.
+90066:M 03 May 2025 23:04:31.830 - Client closed connection id=3 addr=127.0.0.1:60549 laddr=127.0.0.1:21639 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=config|rewrite user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=231 tot-net-out=102 tot-cmds=5
+### Starting test Check for memory leaks (pid 90066) in tests/unit/introspection.tcl
+90066:signal-handler (1746281072) Received SIGTERM scheduling shutdown...
+90066:M 03 May 2025 23:04:32.980 * User requested shutdown...
+90066:M 03 May 2025 23:04:32.980 * Removing the pid file.
+90066:M 03 May 2025 23:04:32.981 * Removing the unix socket file.
+90066:M 03 May 2025 23:04:32.981 # Valkey is now ready to exit, bye bye...
+### Restarting server for test CONFIG REWRITE handles alias config properly in tests/unit/introspection.tcl
+90282:M 03 May 2025 23:04:33.032 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+90282:M 03 May 2025 23:04:33.032 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=90282, just started
+90282:M 03 May 2025 23:04:33.032 * Configuration loaded
+90282:M 03 May 2025 23:04:33.032 * Increased maximum number of open files to 10032 (it was originally set to 256).
+90282:M 03 May 2025 23:04:33.032 * monotonic clock: POSIX clock_gettime
+90282:M 03 May 2025 23:04:33.032 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21639
+ |###|   .+###############+.   |###|    PID: 90282                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+90282:M 03 May 2025 23:04:33.032 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+90282:M 03 May 2025 23:04:33.033 * Server initialized
+90282:M 03 May 2025 23:04:33.033 * Ready to accept connections tcp
+90282:M 03 May 2025 23:04:33.033 * Ready to accept connections unix
+90282:M 03 May 2025 23:04:33.148 - Accepted 127.0.0.1:60690
+90282:M 03 May 2025 23:04:33.148 - Client closed connection id=2 addr=127.0.0.1:60690 laddr=127.0.0.1:21639 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=config|get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=80 tot-net-out=50 tot-cmds=2
+90282:signal-handler (1746281074) Received SIGTERM scheduling shutdown...
+90282:M 03 May 2025 23:04:34.168 * User requested shutdown...
+90282:M 03 May 2025 23:04:34.171 * Removing the pid file.
+90282:M 03 May 2025 23:04:34.180 * Removing the unix socket file.
+90282:M 03 May 2025 23:04:34.198 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,53 @@
+### Starting server for test 
+88969:M 03 May 2025 23:04:23.688 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+88969:M 03 May 2025 23:04:23.688 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=88969, just started
+88969:M 03 May 2025 23:04:23.688 * Configuration loaded
+88969:M 03 May 2025 23:04:23.688 * Increased maximum number of open files to 10032 (it was originally set to 256).
+88969:M 03 May 2025 23:04:23.688 * monotonic clock: POSIX clock_gettime
+88969:M 03 May 2025 23:04:23.688 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 24617
+ |###|   .+###############+.   |###|    PID: 88969                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+88969:M 03 May 2025 23:04:23.688 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+88969:M 03 May 2025 23:04:23.689 * Server initialized
+88969:M 03 May 2025 23:04:23.689 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+88969:M 03 May 2025 23:04:23.695 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+88969:M 03 May 2025 23:04:23.695 * Ready to accept connections tcp
+88969:M 03 May 2025 23:04:23.695 * Ready to accept connections unix
+88969:M 03 May 2025 23:04:23.834 - Accepted 127.0.0.1:60116
+88969:M 03 May 2025 23:04:23.834 - Client closed connection id=2 addr=127.0.0.1:60116 laddr=127.0.0.1:24617 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+88969:M 03 May 2025 23:04:23.850 - Accepted 127.0.0.1:60118
+### Starting test XADD with MAXLEN > xlen can propagate correctly in tests/unit/type/stream.tcl
+88969:M 03 May 2025 23:04:23.880 * Reading RDB base file on AOF loading...
+88969:M 03 May 2025 23:04:23.881 * Loading RDB produced by Valkey version 255.255.255
+88969:M 03 May 2025 23:04:23.881 * RDB age 0 seconds
+88969:M 03 May 2025 23:04:23.881 * RDB memory usage when created 1.05 Mb
+88969:M 03 May 2025 23:04:23.881 * RDB is base AOF
+88969:M 03 May 2025 23:04:23.881 * Done loading RDB, keys loaded: 0, keys expired: 0.
+88969:M 03 May 2025 23:04:23.881 * DB loaded from base file appendonly.aof.1.base.rdb: 0.000 seconds
+88969:M 03 May 2025 23:04:23.881 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.000 seconds
+88969:M 03 May 2025 23:04:23.881 * Append Only File loaded by DEBUG LOADAOF
+88969:M 03 May 2025 23:04:23.881 - Client closed connection id=3 addr=127.0.0.1:60118 laddr=127.0.0.1:24617 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xlen user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=5534 tot-net-out=2268 tot-cmds=106
+88969:signal-handler (1746281065) Received SIGTERM scheduling shutdown...
+88969:M 03 May 2025 23:04:25.376 * User requested shutdown...
+88969:M 03 May 2025 23:04:25.376 * Calling fsync() on the AOF file.
+88969:M 03 May 2025 23:04:25.379 * Removing the pid file.
+88969:M 03 May 2025 23:04:25.379 * Removing the unix socket file.
+88969:M 03 May 2025 23:04:25.379 # Valkey is now ready to exit, bye bye...

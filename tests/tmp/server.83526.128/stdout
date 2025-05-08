@@ -1,0 +1,40 @@
+### Starting server for test corrupt payload: fuzzer findings - hash crash in tests/integration/corrupt-dump.tcl
+4629:M 03 May 2025 23:06:35.324 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+4629:M 03 May 2025 23:06:35.326 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=4629, just started
+4629:M 03 May 2025 23:06:35.326 * Configuration loaded
+4629:M 03 May 2025 23:06:35.326 * Increased maximum number of open files to 10032 (it was originally set to 256).
+4629:M 03 May 2025 23:06:35.326 * monotonic clock: POSIX clock_gettime
+4629:M 03 May 2025 23:06:35.326 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21674
+ |###|   .+###############+.   |###|    PID: 4629                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+4629:M 03 May 2025 23:06:35.329 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+4629:M 03 May 2025 23:06:35.329 * Server initialized
+4629:M 03 May 2025 23:06:35.329 * Ready to accept connections tcp
+4629:M 03 May 2025 23:06:35.329 * Ready to accept connections unix
+4629:M 03 May 2025 23:06:35.469 - Accepted 127.0.0.1:60704
+4629:M 03 May 2025 23:06:35.469 - Client closed connection id=2 addr=127.0.0.1:60704 laddr=127.0.0.1:21674 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+4629:M 03 May 2025 23:06:35.493 - Accepted 127.0.0.1:60711
+4629:M 03 May 2025 23:06:35.496 - Client closed connection id=3 addr=127.0.0.1:60711 laddr=127.0.0.1:21674 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=hmget user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=323 tot-net-out=33 tot-cmds=6
+4629:signal-handler (1746281195) Received SIGTERM scheduling shutdown...
+4629:M 03 May 2025 23:06:35.531 * User requested shutdown...
+4629:M 03 May 2025 23:06:35.531 * Removing the pid file.
+4629:M 03 May 2025 23:06:35.531 * Removing the unix socket file.
+4629:M 03 May 2025 23:06:35.531 # Valkey is now ready to exit, bye bye...

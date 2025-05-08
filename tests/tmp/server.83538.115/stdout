@@ -1,0 +1,61 @@
+### Starting server for test 
+14441:M 03 May 2025 23:08:37.214 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+14441:M 03 May 2025 23:08:37.214 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=14441, just started
+14441:M 03 May 2025 23:08:37.214 * Configuration loaded
+14441:M 03 May 2025 23:08:37.214 * Increased maximum number of open files to 10032 (it was originally set to 256).
+14441:M 03 May 2025 23:08:37.214 * monotonic clock: POSIX clock_gettime
+14441:M 03 May 2025 23:08:37.215 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27668
+ |###|   .+###############+.   |###|    PID: 14441                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+14441:M 03 May 2025 23:08:37.215 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+14441:M 03 May 2025 23:08:37.215 * Server initialized
+14441:M 03 May 2025 23:08:37.215 * Ready to accept connections tcp
+14441:M 03 May 2025 23:08:37.215 * Ready to accept connections unix
+14441:M 03 May 2025 23:08:37.336 - Accepted 127.0.0.1:63746
+14441:M 03 May 2025 23:08:37.337 - Client closed connection id=2 addr=127.0.0.1:63746 laddr=127.0.0.1:27668 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+14441:M 03 May 2025 23:08:37.345 - Accepted 127.0.0.1:63747
+### Starting test Master stream is correctly processed while the replica has a script in -BUSY state in tests/integration/replication.tcl
+14441:S 03 May 2025 23:08:37.346 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+14441:S 03 May 2025 23:08:37.346 * Connecting to PRIMARY 127.0.0.1:27667
+14441:S 03 May 2025 23:08:37.346 * PRIMARY <-> REPLICA sync started
+14441:S 03 May 2025 23:08:37.346 * REPLICAOF 127.0.0.1:27667 enabled (user request from 'id=3 addr=127.0.0.1:63747 laddr=127.0.0.1:27668 fd=12 name= user=default lib-name= lib-ver=')
+14441:S 03 May 2025 23:08:37.346 * Non blocking connect for SYNC fired the event.
+14441:S 03 May 2025 23:08:37.347 * Primary replied to PING, replication can continue...
+14441:S 03 May 2025 23:08:37.347 * Trying a partial resynchronization (request 29c55371b39e717797c91b640500fcd37c3f3d04:1).
+14441:S 03 May 2025 23:08:37.347 * Full resync from primary: c1f862d3587b893f85536e5c1f9c2e933e8fba40:0
+14441:S 03 May 2025 23:08:37.348 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+14441:S 03 May 2025 23:08:37.352 * Discarding previously cached primary state.
+14441:S 03 May 2025 23:08:37.352 * PRIMARY <-> REPLICA sync: Flushing old data
+14441:S 03 May 2025 23:08:37.352 * PRIMARY <-> REPLICA sync: Loading DB in memory
+14441:S 03 May 2025 23:08:37.352 * Loading RDB produced by Valkey version 255.255.255
+14441:S 03 May 2025 23:08:37.352 * RDB age 0 seconds
+14441:S 03 May 2025 23:08:37.352 * RDB memory usage when created 1.17 Mb
+14441:S 03 May 2025 23:08:37.352 * Done loading RDB, keys loaded: 0, keys expired: 0.
+14441:S 03 May 2025 23:08:37.352 * PRIMARY <-> REPLICA sync: Finished with success
+14441:S 03 May 2025 23:08:42.236 - DB 9: 123736 keys (0 volatile) in 229376 slots HT.
+14441:S 03 May 2025 23:08:42.953 # Slow script detected: still in execution after 500 milliseconds. You can try killing the script using the SCRIPT KILL command. Script name is: afc7601fb372fa055c7801c85f41b55ec6512c21.
+14441:S 03 May 2025 23:08:57.651 - DB 9: 123736 keys (0 volatile) in 229376 slots HT.
+14441:S 03 May 2025 23:08:59.671 - Client closed connection id=3 addr=127.0.0.1:63747 laddr=127.0.0.1:27668 fd=12 name= age=22 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=43 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=229 tot-net-out=183 tot-cmds=7
+14441:signal-handler (1746281341) Received SIGTERM scheduling shutdown...
+14441:S 03 May 2025 23:09:01.115 * User requested shutdown...
+14441:S 03 May 2025 23:09:01.115 * Removing the pid file.
+14441:S 03 May 2025 23:09:01.115 * Removing the unix socket file.
+14441:S 03 May 2025 23:09:01.116 # Valkey is now ready to exit, bye bye...

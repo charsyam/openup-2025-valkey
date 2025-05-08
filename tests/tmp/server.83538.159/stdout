@@ -1,0 +1,51 @@
+### Starting server for test diskless replication child being killed is collected in tests/integration/replication.tcl
+18640:M 03 May 2025 23:09:59.547 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+18640:M 03 May 2025 23:09:59.547 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=18640, just started
+18640:M 03 May 2025 23:09:59.547 * Configuration loaded
+18640:M 03 May 2025 23:09:59.547 * Increased maximum number of open files to 10032 (it was originally set to 256).
+18640:M 03 May 2025 23:09:59.547 * monotonic clock: POSIX clock_gettime
+18640:M 03 May 2025 23:09:59.548 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27690
+ |###|   .+###############+.   |###|    PID: 18640                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+18640:M 03 May 2025 23:09:59.548 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+18640:M 03 May 2025 23:09:59.548 * Server initialized
+18640:M 03 May 2025 23:09:59.548 * Ready to accept connections tcp
+18640:M 03 May 2025 23:09:59.548 * Ready to accept connections unix
+18640:M 03 May 2025 23:09:59.676 - Accepted 127.0.0.1:50393
+18640:M 03 May 2025 23:09:59.676 - Client closed connection id=2 addr=127.0.0.1:50393 laddr=127.0.0.1:27690 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+18640:M 03 May 2025 23:09:59.687 - Accepted 127.0.0.1:50394
+18640:M 03 May 2025 23:09:59.891 - Accepted 127.0.0.1:50397
+18640:M 03 May 2025 23:09:59.891 * Replica 127.0.0.1:27691 asks for synchronization
+18640:M 03 May 2025 23:09:59.891 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '3c76565a204ea4d6d7a04cbd0e08c1a374a13837', my replication IDs are 'd173affe97513c88204d9b3286524e76e55cb1ba' and '0000000000000000000000000000000000000000')
+18640:M 03 May 2025 23:09:59.891 * Replication backlog created, my new replication IDs are '80096a428561f42ca5d4dcf7967d3ab9a81e43fc' and '0000000000000000000000000000000000000000'
+18640:M 03 May 2025 23:09:59.891 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+18640:M 03 May 2025 23:09:59.901 * Background RDB transfer started by pid 18661 to pipe through parent process
+18640:M 03 May 2025 23:10:00.457 # Background RDB transfer terminated by signal 9
+18640:M 03 May 2025 23:10:00.457 # SYNC failed. BGSAVE child returned an error
+18640:M 03 May 2025 23:10:00.457 * Connection with replica 127.0.0.1:27691 lost.
+18640:M 03 May 2025 23:10:00.923 - Accepted 127.0.0.1:50398
+18640:M 03 May 2025 23:10:00.924 - Client closed connection id=5 addr=127.0.0.1:50398 laddr=127.0.0.1:27690 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=0 tot-cmds=0
+18640:M 03 May 2025 23:10:00.950 - Client closed connection id=3 addr=127.0.0.1:50394 laddr=127.0.0.1:27690 fd=12 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=4096 rbp=2048 obl=0 oll=0 omem=0 tot-mem=21504 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=288 tot-net-out=12102 tot-cmds=7
+18640:signal-handler (1746281400) Received SIGTERM scheduling shutdown...
+18640:M 03 May 2025 23:10:00.962 * User requested shutdown...
+18640:M 03 May 2025 23:10:00.962 * Removing the pid file.
+18640:M 03 May 2025 23:10:00.962 * Removing the unix socket file.
+18640:M 03 May 2025 23:10:00.962 # Valkey is now ready to exit, bye bye...

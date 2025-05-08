@@ -1,0 +1,44 @@
+### Starting server for test 
+90915:M 03 May 2025 23:04:38.069 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+90915:M 03 May 2025 23:04:38.071 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=90915, just started
+90915:M 03 May 2025 23:04:38.071 * Configuration loaded
+90915:M 03 May 2025 23:04:38.071 * Increased maximum number of open files to 10032 (it was originally set to 256).
+90915:M 03 May 2025 23:04:38.071 * monotonic clock: POSIX clock_gettime
+90915:M 03 May 2025 23:04:38.072 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 24625
+ |###|   .+###############+.   |###|    PID: 90915                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+90915:M 03 May 2025 23:04:38.072 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+90915:M 03 May 2025 23:04:38.072 * Server initialized
+90915:M 03 May 2025 23:04:38.072 * Ready to accept connections tcp
+90915:M 03 May 2025 23:04:38.072 * Ready to accept connections unix
+90915:M 03 May 2025 23:04:38.207 - Accepted 127.0.0.1:62446
+90915:M 03 May 2025 23:04:38.207 - Client closed connection id=2 addr=127.0.0.1:62446 laddr=127.0.0.1:24625 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+90915:M 03 May 2025 23:04:38.222 - Accepted 127.0.0.1:62448
+### Starting test XADD advances the entries-added counter and sets the recorded-first-entry-id in tests/unit/type/stream.tcl
+### Starting test XDEL/TRIM are reflected by recorded first entry in tests/unit/type/stream.tcl
+### Starting test Maximum XDEL ID behaves correctly in tests/unit/type/stream.tcl
+### Starting test XADD with artial ID with maximal seq in tests/unit/type/stream.tcl
+90915:M 03 May 2025 23:04:38.225 - Client closed connection id=3 addr=127.0.0.1:62448 laddr=127.0.0.1:24625 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xadd user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1249 tot-net-out=3176 tot-cmds=31
+90915:signal-handler (1746281079) Received SIGTERM scheduling shutdown...
+90915:M 03 May 2025 23:04:39.272 * User requested shutdown...
+90915:M 03 May 2025 23:04:39.272 * Removing the pid file.
+90915:M 03 May 2025 23:04:39.272 * Removing the unix socket file.
+90915:M 03 May 2025 23:04:39.272 # Valkey is now ready to exit, bye bye...

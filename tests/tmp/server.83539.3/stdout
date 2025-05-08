@@ -1,0 +1,42 @@
+### Starting server for test 
+83938:M 03 May 2025 23:03:46.193 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+83938:M 03 May 2025 23:03:46.193 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=83938, just started
+83938:M 03 May 2025 23:03:46.193 * Configuration loaded
+83938:M 03 May 2025 23:03:46.193 * Increased maximum number of open files to 10032 (it was originally set to 256).
+83938:M 03 May 2025 23:03:46.193 * monotonic clock: POSIX clock_gettime
+83938:M 03 May 2025 23:03:46.194 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 28112
+ |###|   .+###############+.   |###|    PID: 83938                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+83938:M 03 May 2025 23:03:46.194 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+83938:M 03 May 2025 23:03:46.194 * Server initialized
+83938:M 03 May 2025 23:03:46.194 * Ready to accept connections tcp
+83938:M 03 May 2025 23:03:46.194 * Ready to accept connections unix
+83938:M 03 May 2025 23:03:46.349 - Accepted 127.0.0.1:58802
+83938:M 03 May 2025 23:03:46.349 - Client closed connection id=2 addr=127.0.0.1:58802 laddr=127.0.0.1:28112 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+83938:M 03 May 2025 23:03:46.381 - Accepted 127.0.0.1:58804
+### Starting test Temp rdb will be deleted if we use bg_unlink when shutdown in tests/unit/shutdown.tcl
+83938:M 03 May 2025 23:03:46.385 * Background saving started by pid 83974
+83938:M 03 May 2025 23:03:46.510 * User requested shutdown... (user request from 'id=3 addr=127.0.0.1:58804 laddr=127.0.0.1:28112 fd=12 name= user=default lib-name= lib-ver=')
+83938:M 03 May 2025 23:03:46.510 # There is a child saving an .rdb. Killing it!
+83974:signal-handler (1746281026) Received SIGUSR1 in child, exiting now.
+83938:M 03 May 2025 23:03:46.510 * Removing the pid file.
+83938:M 03 May 2025 23:03:46.510 * Removing the unix socket file.
+83938:M 03 May 2025 23:03:46.510 # Valkey is now ready to exit, bye bye...

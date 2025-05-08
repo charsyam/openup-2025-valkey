@@ -1,0 +1,89 @@
+### Starting server for test 
+83586:M 03 May 2025 23:03:40.915 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+83586:M 03 May 2025 23:03:40.915 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=83586, just started
+83586:M 03 May 2025 23:03:40.915 * Configuration loaded
+83586:M 03 May 2025 23:03:40.915 * Increased maximum number of open files to 10032 (it was originally set to 256).
+83586:M 03 May 2025 23:03:40.915 * monotonic clock: POSIX clock_gettime
+83586:M 03 May 2025 23:03:40.915 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 22611
+ |###|   .+###############+.   |###|    PID: 83586                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+83586:M 03 May 2025 23:03:40.915 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+83586:M 03 May 2025 23:03:40.916 * Server initialized
+83586:M 03 May 2025 23:03:40.916 * Ready to accept connections tcp
+83586:M 03 May 2025 23:03:40.916 * Ready to accept connections unix
+83586:M 03 May 2025 23:03:40.943 - Accepted 127.0.0.1:58708
+83586:M 03 May 2025 23:03:40.944 - Client closed connection id=2 addr=127.0.0.1:58708 laddr=127.0.0.1:22611 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+83586:M 03 May 2025 23:03:40.961 - Accepted 127.0.0.1:58720
+### Starting test The microsecond part of the TIME command will not overflow in tests/unit/introspection-2.tcl
+### Starting test TTL, TYPE and EXISTS do not alter the last access time of a key in tests/unit/introspection-2.tcl
+### Starting test TOUCH alters the last access time of a key in tests/unit/introspection-2.tcl
+83586:M 03 May 2025 23:03:45.966 - DB 9: 2 keys (0 volatile) in 7 slots HT.
+### Starting test TOUCH alters the last access time of a key in no-touch mode in tests/unit/introspection-2.tcl
+### Starting test Operations in no-touch mode do not alter the last access time of a key in tests/unit/introspection-2.tcl
+83586:M 03 May 2025 23:03:51.011 - DB 9: 2 keys (0 volatile) in 7 slots HT.
+### Starting test TOUCH returns the number of existing keys specified in tests/unit/introspection-2.tcl
+### Starting test command stats for GEOADD in tests/unit/introspection-2.tcl
+### Starting test errors stats for GEOADD in tests/unit/introspection-2.tcl
+### Starting test command stats for EXPIRE in tests/unit/introspection-2.tcl
+### Starting test command stats for BRPOP in tests/unit/introspection-2.tcl
+### Starting test command stats for MULTI in tests/unit/introspection-2.tcl
+### Starting test command stats for scripts in tests/unit/introspection-2.tcl
+### Starting test COMMAND COUNT get total number of commands in tests/unit/introspection-2.tcl
+### Starting test COMMAND GETKEYS GET in tests/unit/introspection-2.tcl
+### Starting test COMMAND GETKEYSANDFLAGS in tests/unit/introspection-2.tcl
+### Starting test COMMAND GETKEYS MEMORY USAGE in tests/unit/introspection-2.tcl
+### Starting test COMMAND GETKEYS XGROUP in tests/unit/introspection-2.tcl
+### Starting test COMMAND GETKEYS EVAL with keys in tests/unit/introspection-2.tcl
+### Starting test COMMAND GETKEYS EVAL without keys in tests/unit/introspection-2.tcl
+### Starting test COMMAND GETKEYS LCS in tests/unit/introspection-2.tcl
+### Starting test COMMAND GETKEYS MORE THAN 256 KEYS in tests/unit/introspection-2.tcl
+### Starting test COMMAND LIST syntax error in tests/unit/introspection-2.tcl
+### Starting test COMMAND LIST WITHOUT FILTERBY in tests/unit/introspection-2.tcl
+### Starting test COMMAND LIST FILTERBY ACLCAT against non existing category in tests/unit/introspection-2.tcl
+### Starting test COMMAND LIST FILTERBY ACLCAT - list all commands/subcommands in tests/unit/introspection-2.tcl
+### Starting test COMMAND LIST FILTERBY PATTERN - list all commands/subcommands in tests/unit/introspection-2.tcl
+### Starting test COMMAND LIST FILTERBY MODULE against non existing module in tests/unit/introspection-2.tcl
+### Starting test COMMAND INFO of invalid subcommands in tests/unit/introspection-2.tcl
+### Starting test SET command will not be marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test GET command will not be marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test MSET command will not be marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test BITFIELD command will not be marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test LMOVE command will not be marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test LPOP command will not be marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test BLPOP command will not be marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test PING command will not be marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test MEMORY command will not be marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test MEMORY|USAGE command will not be marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test RENAME command will not be marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test GEORADIUS_RO command will not be marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test ZUNIONSTORE command is marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test XREAD command is marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test EVAL command is marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test SORT command is marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test SORT_RO command is marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test MIGRATE command is marked with movablekeys in tests/unit/introspection-2.tcl
+### Starting test GEORADIUS command is marked with movablekeys in tests/unit/introspection-2.tcl
+83586:M 03 May 2025 23:03:51.093 - Client closed connection id=3 addr=127.0.0.1:58720 laddr=127.0.0.1:22611 fd=12 name= age=11 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=1024 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=command|info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=8081 tot-net-out=27629 tot-cmds=122
+83586:signal-handler (1746281035) Received SIGTERM scheduling shutdown...
+83586:M 03 May 2025 23:03:55.185 * User requested shutdown...
+83586:M 03 May 2025 23:03:55.185 * Removing the pid file.
+83586:M 03 May 2025 23:03:55.185 * Removing the unix socket file.
+83586:M 03 May 2025 23:03:55.185 # Valkey is now ready to exit, bye bye...

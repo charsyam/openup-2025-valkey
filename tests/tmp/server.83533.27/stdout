@@ -1,0 +1,78 @@
+### Starting server for test 
+89052:M 03 May 2025 23:04:24.346 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+89052:M 03 May 2025 23:04:24.346 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+89052:M 03 May 2025 23:04:24.346 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=89052, just started
+89052:M 03 May 2025 23:04:24.346 * Configuration loaded
+89052:M 03 May 2025 23:04:24.346 * Increased maximum number of open files to 10032 (it was originally set to 256).
+89052:M 03 May 2025 23:04:24.346 * monotonic clock: POSIX clock_gettime
+89052:M 03 May 2025 23:04:24.347 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25124
+ |###|   .+###############+.   |###|    PID: 89052                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+89052:M 03 May 2025 23:04:24.347 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+89052:M 03 May 2025 23:04:24.347 * No cluster configuration found, I'm 8bdb3ea5ef26b6fa3b78aa48019f11d262565f49
+89052:M 03 May 2025 23:04:24.351 * Server initialized
+89052:M 03 May 2025 23:04:24.351 * Ready to accept connections tcp
+89052:M 03 May 2025 23:04:24.351 * Ready to accept connections unix
+89052:M 03 May 2025 23:04:24.508 - Accepted 127.0.0.1:60154
+89052:M 03 May 2025 23:04:24.508 - Client closed connection id=2 addr=127.0.0.1:60154 laddr=127.0.0.1:25124 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+89052:M 03 May 2025 23:04:24.519 - Accepted 127.0.0.1:60155
+89052:M 03 May 2025 23:04:24.677 # Missing implement of connection type tls
+89052:M 03 May 2025 23:04:24.743 - Accepting cluster node connection from 127.0.0.1:60158
+89052:M 03 May 2025 23:04:24.743 * IP address for this node updated to 127.0.0.1
+89052:S 03 May 2025 23:04:24.783 * Connecting to PRIMARY 127.0.0.1:25125
+89052:S 03 May 2025 23:04:24.783 * PRIMARY <-> REPLICA sync started
+89052:S 03 May 2025 23:04:24.783 * Cluster state changed: ok
+89052:S 03 May 2025 23:04:24.783 * Non blocking connect for SYNC fired the event.
+89052:S 03 May 2025 23:04:24.784 * Primary replied to PING, replication can continue...
+89052:S 03 May 2025 23:04:24.784 # DEBUG LOG: ========== I am replica 1 ==========
+89052:S 03 May 2025 23:04:24.784 * Partial resynchronization not possible (no cached primary)
+89052:S 03 May 2025 23:04:24.784 * Full resync from primary: cef243902da77c2ff672ba8b465a232d6e76108b:0
+89052:S 03 May 2025 23:04:24.785 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+89052:S 03 May 2025 23:04:24.788 * PRIMARY <-> REPLICA sync: Flushing old data
+89052:S 03 May 2025 23:04:24.788 * PRIMARY <-> REPLICA sync: Loading DB in memory
+89052:S 03 May 2025 23:04:24.788 * Loading RDB produced by Valkey version 255.255.255
+89052:S 03 May 2025 23:04:24.788 * RDB age 0 seconds
+89052:S 03 May 2025 23:04:24.788 * RDB memory usage when created 2.92 Mb
+89052:S 03 May 2025 23:04:24.788 * Done loading RDB, keys loaded: 0, keys expired: 0.
+89052:S 03 May 2025 23:04:24.788 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test Sharded pubsub publish behavior within multi/exec in tests/unit/cluster/sharded-pubsub.tcl
+### Starting test Sharded pubsub within multi/exec with cross slot operation in tests/unit/cluster/sharded-pubsub.tcl
+### Starting test Sharded pubsub publish behavior within multi/exec with read operation on primary in tests/unit/cluster/sharded-pubsub.tcl
+### Starting test Sharded pubsub publish behavior within multi/exec with read operation on replica in tests/unit/cluster/sharded-pubsub.tcl
+### Starting test Sharded pubsub publish behavior within multi/exec with write operation on primary in tests/unit/cluster/sharded-pubsub.tcl
+### Starting test Sharded pubsub publish behavior within multi/exec with write operation on replica in tests/unit/cluster/sharded-pubsub.tcl
+### Starting test Check for memory leaks (pid 89070) in tests/unit/cluster/sharded-pubsub.tcl
+89052:S 03 May 2025 23:04:36.024 - Client closed connection id=7 addr=127.0.0.1:25125 laddr=127.0.0.1:60160 fd=17 name= age=12 idle=2 flags=M capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=35 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=set user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=68 tot-net-out=409 tot-cmds=3
+89052:S 03 May 2025 23:04:36.024 * Connection with primary lost.
+89052:S 03 May 2025 23:04:36.024 * Caching the disconnected primary state.
+89052:S 03 May 2025 23:04:36.024 * Reconnecting to PRIMARY 127.0.0.1:25125
+89052:S 03 May 2025 23:04:36.024 * PRIMARY <-> REPLICA sync started
+89052:S 03 May 2025 23:04:36.024 # Error condition on socket for SYNC: Connection refused
+89052:S 03 May 2025 23:04:36.049 - Client closed connection id=3 addr=127.0.0.1:60155 laddr=127.0.0.1:25124 fd=14 name= age=12 idle=2 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=520 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=exec user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=655 tot-net-out=2453 tot-cmds=18
+89052:S 03 May 2025 23:04:36.064 - Connection with Node 88cabed3cb6e0cb1d4ef474d7c3cefdcfbcd93c8 at 127.0.0.1:35125 failed: Connection refused
+89052:S 03 May 2025 23:04:36.165 - Connection with Node 88cabed3cb6e0cb1d4ef474d7c3cefdcfbcd93c8 at 127.0.0.1:35125 failed: Connection refused
+89052:S 03 May 2025 23:04:37.131 - Connection with Node 88cabed3cb6e0cb1d4ef474d7c3cefdcfbcd93c8 at 127.0.0.1:35125 failed: Connection refused
+89052:signal-handler (1746281077) Received SIGTERM scheduling shutdown...
+89052:S 03 May 2025 23:04:37.231 * User requested shutdown...
+89052:S 03 May 2025 23:04:37.231 * Removing the pid file.
+89052:S 03 May 2025 23:04:37.231 * Saving the cluster configuration file before exiting.
+89052:S 03 May 2025 23:04:37.237 * Removing the unix socket file.
+89052:S 03 May 2025 23:04:37.237 # Valkey is now ready to exit, bye bye...

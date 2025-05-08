@@ -1,0 +1,56 @@
+### Starting server for test 
+89397:M 03 May 2025 23:04:26.868 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+89397:M 03 May 2025 23:04:26.871 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=89397, just started
+89397:M 03 May 2025 23:04:26.878 * Configuration loaded
+89397:M 03 May 2025 23:04:26.882 * Increased maximum number of open files to 10032 (it was originally set to 256).
+89397:M 03 May 2025 23:04:26.884 * monotonic clock: POSIX clock_gettime
+89397:M 03 May 2025 23:04:26.887 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26621
+ |###|   .+###############+.   |###|    PID: 89397                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+89397:M 03 May 2025 23:04:26.896 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+89397:M 03 May 2025 23:04:26.906 * Server initialized
+89397:M 03 May 2025 23:04:26.930 * Creating AOF base file appendonly.aof.1.base.aof on server start
+89397:M 03 May 2025 23:04:26.997 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+89397:M 03 May 2025 23:04:27.007 * Ready to accept connections tcp
+89397:M 03 May 2025 23:04:27.021 * Ready to accept connections unix
+89397:M 03 May 2025 23:04:27.084 - Accepted 127.0.0.1:60323
+89397:M 03 May 2025 23:04:27.085 - Client closed connection id=2 addr=127.0.0.1:60323 laddr=127.0.0.1:26621 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+89397:M 03 May 2025 23:04:27.103 - Accepted 127.0.0.1:60325
+### Starting test Empty stream with no lastid can be rewrite into AOF correctly in tests/unit/type/stream-cgroups.tcl
+89397:M 03 May 2025 23:04:27.179 * Creating AOF incr file appendonly.aof.2.incr.aof on background rewrite
+89397:M 03 May 2025 23:04:27.183 * Background append only file rewriting started by pid 89454
+89454:C 03 May 2025 23:04:27.185 * Successfully created the temporary AOF base file temp-rewriteaof-bg-89454.aof
+89454:C 03 May 2025 23:04:27.188 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+89397:M 03 May 2025 23:04:27.226 * Background AOF rewrite terminated with success
+89397:M 03 May 2025 23:04:27.226 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-89454.aof into appendonly.aof.2.base.aof
+89397:M 03 May 2025 23:04:27.235 * Removing the history file appendonly.aof.1.incr.aof in the background
+89397:M 03 May 2025 23:04:27.235 * Removing the history file appendonly.aof.1.base.aof in the background
+89397:M 03 May 2025 23:04:27.239 * Background AOF rewrite finished successfully
+89397:M 03 May 2025 23:04:27.239 - Background AOF rewrite signal handler took 13022us
+89397:M 03 May 2025 23:04:27.240 * DB loaded from base file appendonly.aof.2.base.aof: 0.000 seconds
+89397:M 03 May 2025 23:04:27.240 * Append Only File loaded by DEBUG LOADAOF
+89397:M 03 May 2025 23:04:27.240 - Client closed connection id=3 addr=127.0.0.1:60325 laddr=127.0.0.1:26621 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6144 rbp=6086 obl=0 oll=0 omem=0 tot-mem=23552 events=r cmd=xinfo|groups user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=346 tot-net-out=13050 tot-cmds=10
+89397:signal-handler (1746281068) Received SIGTERM scheduling shutdown...
+89397:M 03 May 2025 23:04:28.243 * User requested shutdown...
+89397:M 03 May 2025 23:04:28.243 * Calling fsync() on the AOF file.
+89397:M 03 May 2025 23:04:28.244 * Removing the pid file.
+89397:M 03 May 2025 23:04:28.244 * Removing the unix socket file.
+89397:M 03 May 2025 23:04:28.244 # Valkey is now ready to exit, bye bye...

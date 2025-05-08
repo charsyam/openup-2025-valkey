@@ -1,0 +1,66 @@
+### Starting server for test Shutting down master waits for replica then fails in tests/integration/shutdown.tcl
+8643:M 03 May 2025 23:07:08.411 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+8643:M 03 May 2025 23:07:08.411 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=8643, just started
+8643:M 03 May 2025 23:07:08.411 * Configuration loaded
+8643:M 03 May 2025 23:07:08.411 * Increased maximum number of open files to 10032 (it was originally set to 256).
+8643:M 03 May 2025 23:07:08.411 * monotonic clock: POSIX clock_gettime
+8643:M 03 May 2025 23:07:08.411 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26199
+ |###|   .+###############+.   |###|    PID: 8643                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+8643:M 03 May 2025 23:07:08.411 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+8643:M 03 May 2025 23:07:08.412 * Server initialized
+8643:M 03 May 2025 23:07:08.412 * Ready to accept connections tcp
+8643:M 03 May 2025 23:07:08.412 * Ready to accept connections unix
+8643:M 03 May 2025 23:07:08.423 - Accepted 127.0.0.1:50934
+8643:M 03 May 2025 23:07:08.423 - Client closed connection id=2 addr=127.0.0.1:50934 laddr=127.0.0.1:26199 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+8643:M 03 May 2025 23:07:08.455 - Accepted 127.0.0.1:50935
+8643:M 03 May 2025 23:07:08.526 - Accepted 127.0.0.1:50996
+8643:M 03 May 2025 23:07:08.526 * Replica 127.0.0.1:26200 asks for synchronization
+8643:M 03 May 2025 23:07:08.526 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '1a47b1c44ce93b6071558ec2127f25c006942fb7', my replication IDs are 'adec6971fc770c90f9db4c15355335e9527b826e' and '0000000000000000000000000000000000000000')
+8643:M 03 May 2025 23:07:08.526 * Replication backlog created, my new replication IDs are 'e338536bb509da6f3a741eb0b9d2a5b5faf19ea0' and '0000000000000000000000000000000000000000'
+8643:M 03 May 2025 23:07:08.526 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+8643:M 03 May 2025 23:07:08.527 * Background RDB transfer started by pid 8656 to pipe through parent process
+8656:C 03 May 2025 23:07:08.528 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+8643:M 03 May 2025 23:07:08.528 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+8643:M 03 May 2025 23:07:08.533 * Background RDB transfer terminated with success
+8643:M 03 May 2025 23:07:08.533 * Streamed RDB transfer with replica 127.0.0.1:26200 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+8643:M 03 May 2025 23:07:08.533 * Synchronization with replica 127.0.0.1:26200 succeeded
+8643:M 03 May 2025 23:07:08.641 - Accepted 127.0.0.1:51060
+8643:M 03 May 2025 23:07:08.641 - Accepted 127.0.0.1:51061
+8643:M 03 May 2025 23:07:08.641 * User requested shutdown... (user request from 'id=5 addr=127.0.0.1:51060 laddr=127.0.0.1:26199 fd=14 name= user=default lib-name= lib-ver=')
+8643:M 03 May 2025 23:07:08.641 * Waiting for replicas before shutting down.
+8643:M 03 May 2025 23:07:08.642 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+8643:M 03 May 2025 23:07:08.642 * Background append only file rewriting started by pid 8659
+8643:M 03 May 2025 23:07:09.523 * 1 of 1 replicas are in sync when shutting down.
+8643:M 03 May 2025 23:07:09.523 # Writing initial AOF, can't exit.
+8643:M 03 May 2025 23:07:09.523 # Errors trying to shut down the server. Check the logs for more information.
+8643:M 03 May 2025 23:07:09.524 - Client closed connection id=5 addr=127.0.0.1:51060 laddr=127.0.0.1:26199 fd=14 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=8 multi-mem=0 rbs=1024 rbp=45 obl=0 oll=0 omem=0 tot-mem=18448 events=r cmd=shutdown user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=41 tot-net-out=50 tot-cmds=1
+8643:M 03 May 2025 23:07:09.524 - Client closed connection id=6 addr=127.0.0.1:51061 laddr=127.0.0.1:26199 fd=15 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=8 multi-mem=0 rbs=1024 rbp=45 obl=0 oll=0 omem=0 tot-mem=18448 events=r cmd=shutdown user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=41 tot-net-out=50 tot-cmds=1
+8643:M 03 May 2025 23:07:09.548 * User requested shutdown... (user request from 'id=3 addr=127.0.0.1:50935 laddr=127.0.0.1:26199 fd=12 name= user=default lib-name= lib-ver=')
+8643:M 03 May 2025 23:07:09.548 * 1 of 1 replicas are in sync when shutting down.
+8643:M 03 May 2025 23:07:09.548 # Writing initial AOF. Exit anyway.
+8643:M 03 May 2025 23:07:09.548 # There is a child rewriting the AOF. Killing it!
+8643:M 03 May 2025 23:07:09.548 * Killing running AOF rewrite child: 8659
+8659:signal-handler (1746281229) Received SIGUSR1 in child, exiting now.
+8643:M 03 May 2025 23:07:09.548 * Calling fsync() on the AOF file.
+8643:M 03 May 2025 23:07:09.552 * Removing the pid file.
+8643:M 03 May 2025 23:07:09.552 * Removing the unix socket file.
+8643:M 03 May 2025 23:07:09.552 # Valkey is now ready to exit, bye bye...

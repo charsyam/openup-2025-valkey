@@ -1,0 +1,41 @@
+### Starting server for test corrupt payload: fuzzer findings - leak in rdbloading due to dup entry in set in tests/integration/corrupt-dump.tcl
+4771:M 03 May 2025 23:06:36.147 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+4771:M 03 May 2025 23:06:36.147 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=4771, just started
+4771:M 03 May 2025 23:06:36.147 * Configuration loaded
+4771:M 03 May 2025 23:06:36.148 * Increased maximum number of open files to 10032 (it was originally set to 256).
+4771:M 03 May 2025 23:06:36.148 * monotonic clock: POSIX clock_gettime
+4771:M 03 May 2025 23:06:36.148 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21677
+ |###|   .+###############+.   |###|    PID: 4771                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+4771:M 03 May 2025 23:06:36.148 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+4771:M 03 May 2025 23:06:36.149 * Server initialized
+4771:M 03 May 2025 23:06:36.149 * Ready to accept connections tcp
+4771:M 03 May 2025 23:06:36.149 * Ready to accept connections unix
+4771:M 03 May 2025 23:06:36.161 - Accepted 127.0.0.1:61223
+4771:M 03 May 2025 23:06:36.161 - Client closed connection id=2 addr=127.0.0.1:61223 laddr=127.0.0.1:21677 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+4771:M 03 May 2025 23:06:36.185 - Accepted 127.0.0.1:61233
+4771:M 03 May 2025 23:06:36.186 - Internal error in RDB reading offset 0, function at rdb.c:1977 -> Duplicate set members detected
+4771:M 03 May 2025 23:06:36.186 - Client closed connection id=3 addr=127.0.0.1:61233 laddr=127.0.0.1:21677 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=restore user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=222 tot-net-out=37 tot-cmds=4
+4771:signal-handler (1746281196) Received SIGTERM scheduling shutdown...
+4771:M 03 May 2025 23:06:36.251 * User requested shutdown...
+4771:M 03 May 2025 23:06:36.251 * Removing the pid file.
+4771:M 03 May 2025 23:06:36.251 * Removing the unix socket file.
+4771:M 03 May 2025 23:06:36.251 # Valkey is now ready to exit, bye bye...

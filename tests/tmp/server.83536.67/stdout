@@ -1,0 +1,52 @@
+### Starting server for test 
+6085:M 03 May 2025 23:06:43.120 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+6085:M 03 May 2025 23:06:43.120 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+6085:M 03 May 2025 23:06:43.120 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=6085, just started
+6085:M 03 May 2025 23:06:43.120 * Configuration loaded
+6085:M 03 May 2025 23:06:43.120 * Increased maximum number of open files to 10032 (it was originally set to 256).
+6085:M 03 May 2025 23:06:43.120 * monotonic clock: POSIX clock_gettime
+6085:M 03 May 2025 23:06:43.120 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 26644
+ |###|   .+###############+.   |###|    PID: 6085                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+6085:M 03 May 2025 23:06:43.120 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+6085:M 03 May 2025 23:06:43.121 * No cluster configuration found, I'm 154157fb82ddb89b5567d69691843920b939f32c
+6085:M 03 May 2025 23:06:43.128 * Server initialized
+6085:M 03 May 2025 23:06:43.129 * Ready to accept connections tcp
+6085:M 03 May 2025 23:06:43.132 * Ready to accept connections unix
+6085:M 03 May 2025 23:06:43.300 - Accepted 127.0.0.1:50047
+6085:M 03 May 2025 23:06:43.303 - Client closed connection id=2 addr=127.0.0.1:50047 laddr=127.0.0.1:26644 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+6085:M 03 May 2025 23:06:43.353 - Accepted 127.0.0.1:50075
+6085:M 03 May 2025 23:06:43.362 # Missing implement of connection type tls
+6085:M 03 May 2025 23:06:43.372 # DEBUG LOG: ========== I am primary 0 ==========
+6085:M 03 May 2025 23:06:45.175 * Cluster state changed: ok
+### Starting test CLUSTER SLOT-STATS contains default value upon valkey-server startup in tests/unit/cluster/slot-stats.tcl
+### Starting test CLUSTER SLOT-STATS contains correct metrics upon key introduction in tests/unit/cluster/slot-stats.tcl
+6085:M 03 May 2025 23:06:48.205 - DB 0: 1 keys (0 volatile) in 7 slots HT.
+### Starting test CLUSTER SLOT-STATS contains correct metrics upon key mutation in tests/unit/cluster/slot-stats.tcl
+### Starting test CLUSTER SLOT-STATS contains correct metrics upon key deletion in tests/unit/cluster/slot-stats.tcl
+### Starting test CLUSTER SLOT-STATS slot visibility based on slot ownership changes in tests/unit/cluster/slot-stats.tcl
+6085:M 03 May 2025 23:06:56.055 - Client closed connection id=3 addr=127.0.0.1:50075 laddr=127.0.0.1:26644 fd=14 name= age=13 idle=2 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=cluster|slot-stats user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1876 tot-net-out=10561812 tot-cmds=54
+6085:signal-handler (1746281218) Received SIGTERM scheduling shutdown...
+6085:M 03 May 2025 23:06:58.942 * User requested shutdown...
+6085:M 03 May 2025 23:06:58.942 * Removing the pid file.
+6085:M 03 May 2025 23:06:58.942 * Saving the cluster configuration file before exiting.
+6085:M 03 May 2025 23:06:58.949 * Removing the unix socket file.
+6085:M 03 May 2025 23:06:58.949 # Valkey is now ready to exit, bye bye...

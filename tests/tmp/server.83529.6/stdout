@@ -1,0 +1,132 @@
+### Starting server for test 
+84356:M 03 May 2025 23:03:48.409 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+84356:M 03 May 2025 23:03:48.409 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=84356, just started
+84356:M 03 May 2025 23:03:48.409 * Configuration loaded
+84356:M 03 May 2025 23:03:48.410 * Increased maximum number of open files to 10032 (it was originally set to 256).
+84356:M 03 May 2025 23:03:48.410 * monotonic clock: POSIX clock_gettime
+84356:M 03 May 2025 23:03:48.410 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23113
+ |###|   .+###############+.   |###|    PID: 84356                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+84356:M 03 May 2025 23:03:48.410 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+84356:M 03 May 2025 23:03:48.411 * Server initialized
+84356:M 03 May 2025 23:03:48.411 * Ready to accept connections tcp
+84356:M 03 May 2025 23:03:48.411 * Ready to accept connections unix
+84356:M 03 May 2025 23:03:48.553 - Accepted 127.0.0.1:58858
+84356:M 03 May 2025 23:03:48.554 - Client closed connection id=2 addr=127.0.0.1:58858 laddr=127.0.0.1:23113 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+84356:M 03 May 2025 23:03:48.566 - Accepted 127.0.0.1:58860
+### Starting test Coverage: HELP commands in tests/unit/other.tcl
+### Starting test Coverage: MEMORY MALLOC-STATS in tests/unit/other.tcl
+### Starting test Coverage: MEMORY PURGE in tests/unit/other.tcl
+### Starting test Coverage: ECHO in tests/unit/other.tcl
+### Starting test SAVE - make sure there are all the types as values in tests/unit/other.tcl
+84356:M 03 May 2025 23:03:48.572 * DB saved on disk
+### Starting test FUZZ stresser with data model binary in tests/unit/other.tcl
+### Starting test FUZZ stresser with data model alpha in tests/unit/other.tcl
+### Starting test FUZZ stresser with data model compr in tests/unit/other.tcl
+### Starting test FLUSHALL should not reset the dirty counter if we disable save in tests/unit/other.tcl
+### Starting test FLUSHALL should reset the dirty counter to 0 if we enable save in tests/unit/other.tcl
+### Starting test Check for memory leaks (pid 84537) in tests/unit/other.tcl
+84356:M 03 May 2025 23:03:53.454 - DB 9: 5 keys (0 volatile) in 7 slots HT.
+### Starting test BGSAVE in tests/unit/other.tcl
+84356:M 03 May 2025 23:03:53.881 * DB saved on disk
+84356:M 03 May 2025 23:03:53.883 * Background saving started by pid 84691
+84691:C 03 May 2025 23:03:53.886 * DB saved on disk
+84691:C 03 May 2025 23:03:53.886 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+84356:M 03 May 2025 23:03:53.958 * Background saving terminated with success
+84356:M 03 May 2025 23:03:53.993 * DB saved on disk
+84356:M 03 May 2025 23:03:53.993 * Loading RDB produced by Valkey version 255.255.255
+84356:M 03 May 2025 23:03:53.993 * RDB age 0 seconds
+84356:M 03 May 2025 23:03:53.993 * RDB memory usage when created 1.56 Mb
+84356:M 03 May 2025 23:03:53.993 * Done loading RDB, keys loaded: 1, keys expired: 0.
+84356:M 03 May 2025 23:03:53.993 * DB reloaded by DEBUG RELOAD
+### Starting test SELECT an out of range DB in tests/unit/other.tcl
+### Starting test Check consistency of different data types after a reload in tests/unit/other.tcl
+84356:M 03 May 2025 23:03:54.608 * DB saved on disk
+84356:M 03 May 2025 23:03:54.608 * Loading RDB produced by Valkey version 255.255.255
+84356:M 03 May 2025 23:03:54.608 * RDB age 0 seconds
+84356:M 03 May 2025 23:03:54.608 * RDB memory usage when created 2.24 Mb
+84356:M 03 May 2025 23:03:54.608 * Done loading RDB, keys loaded: 585, keys expired: 0.
+84356:M 03 May 2025 23:03:54.608 * DB reloaded by DEBUG RELOAD
+### Starting test Same dataset digest if saving/reloading as AOF? in tests/unit/other.tcl
+84356:M 03 May 2025 23:03:54.669 * Background append only file rewriting started by pid 84786
+84786:C 03 May 2025 23:03:54.670 * Successfully created the temporary AOF base file temp-rewriteaof-bg-84786.aof
+84786:C 03 May 2025 23:03:54.670 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+84356:M 03 May 2025 23:03:54.760 * Background AOF rewrite terminated with success
+84356:M 03 May 2025 23:03:54.760 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-84786.aof into appendonly.aof.1.base.aof
+84356:M 03 May 2025 23:03:54.767 * Background AOF rewrite finished successfully
+84356:M 03 May 2025 23:03:54.767 - Background AOF rewrite signal handler took 6360us
+84356:M 03 May 2025 23:03:54.777 * DB loaded from base file appendonly.aof.1.base.aof: 0.001 seconds
+84356:M 03 May 2025 23:03:54.779 * Append Only File loaded by DEBUG LOADAOF
+### Starting test EXPIRES after a reload (snapshot + append only file rewrite) in tests/unit/other.tcl
+84356:M 03 May 2025 23:03:54.784 * DB saved on disk
+84356:M 03 May 2025 23:03:54.787 * DB saved on disk
+84356:M 03 May 2025 23:03:54.787 * Loading RDB produced by Valkey version 255.255.255
+84356:M 03 May 2025 23:03:54.787 * RDB age 0 seconds
+84356:M 03 May 2025 23:03:54.787 * RDB memory usage when created 2.20 Mb
+84356:M 03 May 2025 23:03:54.787 * Done loading RDB, keys loaded: 1, keys expired: 0.
+84356:M 03 May 2025 23:03:54.787 * DB reloaded by DEBUG RELOAD
+84356:M 03 May 2025 23:03:54.788 * Background append only file rewriting started by pid 84790
+84790:C 03 May 2025 23:03:54.788 * Successfully created the temporary AOF base file temp-rewriteaof-bg-84790.aof
+84790:C 03 May 2025 23:03:54.789 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+84356:M 03 May 2025 23:03:54.867 * Background AOF rewrite terminated with success
+84356:M 03 May 2025 23:03:54.867 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-84790.aof into appendonly.aof.2.base.aof
+84356:M 03 May 2025 23:03:54.872 * Removing the history file appendonly.aof.1.base.aof in the background
+84356:M 03 May 2025 23:03:54.876 * Background AOF rewrite finished successfully
+84356:M 03 May 2025 23:03:54.876 - Background AOF rewrite signal handler took 8752us
+84356:M 03 May 2025 23:03:54.895 * DB loaded from base file appendonly.aof.2.base.aof: 0.000 seconds
+84356:M 03 May 2025 23:03:54.895 * Append Only File loaded by DEBUG LOADAOF
+### Starting test EXPIRES after AOF reload (without rewrite) in tests/unit/other.tcl
+84356:M 03 May 2025 23:03:54.896 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+84356:M 03 May 2025 23:03:54.897 * Background append only file rewriting started by pid 84791
+84791:C 03 May 2025 23:03:54.898 * Successfully created the temporary AOF base file temp-rewriteaof-bg-84791.aof
+84791:C 03 May 2025 23:03:54.898 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+84356:M 03 May 2025 23:03:54.982 * Background AOF rewrite terminated with success
+84356:M 03 May 2025 23:03:54.982 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-84791.aof into appendonly.aof.3.base.aof
+84356:M 03 May 2025 23:03:54.982 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.1.incr.aof
+84356:M 03 May 2025 23:03:54.993 * Removing the history file appendonly.aof.2.base.aof in the background
+84356:M 03 May 2025 23:03:55.000 * Background AOF rewrite finished successfully
+84356:M 03 May 2025 23:03:55.000 - Background AOF rewrite signal handler took 18061us
+84356:M 03 May 2025 23:03:57.022 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.000 seconds
+84356:M 03 May 2025 23:03:57.022 * Append Only File loaded by DEBUG LOADAOF
+### Starting test PIPELINING stresser (also a regression for the old epoll bug) in tests/unit/other.tcl
+84356:M 03 May 2025 23:03:57.027 - Accepted 127.0.0.1:59161
+84356:M 03 May 2025 23:03:57.396 - Client closed connection id=7 addr=127.0.0.1:59161 laddr=127.0.0.1:23113 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=4366680 tot-net-out=2488885 tot-cmds=200001
+### Starting test APPEND basics in tests/unit/other.tcl
+### Starting test APPEND basics, integer encoded values in tests/unit/other.tcl
+### Starting test APPEND fuzzing in tests/unit/other.tcl
+### Starting test FLUSHDB in tests/unit/other.tcl
+### Starting test Perform a final SAVE to leave a clean DB on disk in tests/unit/other.tcl
+84356:M 03 May 2025 23:03:57.607 * DB saved on disk
+### Starting test RESET clears client state in tests/unit/other.tcl
+### Starting test RESET clears MONITOR state in tests/unit/other.tcl
+84356:M 03 May 2025 23:03:57.608 - Accepted 127.0.0.1:59185
+84356:M 03 May 2025 23:03:57.608 - Client closed connection id=8 addr=127.0.0.1:59185 laddr=127.0.0.1:23113 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=reset user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=55 tot-net-out=18 tot-cmds=3
+### Starting test RESET clears and discards MULTI state in tests/unit/other.tcl
+### Starting test RESET clears Pub/Sub state in tests/unit/other.tcl
+### Starting test RESET clears authenticated state in tests/unit/other.tcl
+### Starting test Subcommand syntax error crash (issue #10070) in tests/unit/other.tcl
+### Starting test Extended Redis Compatibility config in tests/unit/other.tcl
+84356:M 03 May 2025 23:03:57.610 - Client closed connection id=3 addr=127.0.0.1:58860 laddr=127.0.0.1:23113 fd=12 name= age=9 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=8192 rbp=6158 obl=0 oll=0 omem=0 tot-mem=25600 events=r cmd=lolwut user=default redir=-1 resp=3 lib-name= lib-ver= tot-net-in=1542121 tot-net-out=1160784 tot-cmds=16128
+84356:signal-handler (1746281039) Received SIGTERM scheduling shutdown...
+84356:M 03 May 2025 23:03:59.396 * User requested shutdown...
+84356:M 03 May 2025 23:03:59.396 * Removing the pid file.
+84356:M 03 May 2025 23:03:59.396 * Removing the unix socket file.
+84356:M 03 May 2025 23:03:59.396 # Valkey is now ready to exit, bye bye...

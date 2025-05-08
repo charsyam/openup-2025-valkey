@@ -1,0 +1,77 @@
+### Starting server for test 
+93391:M 03 May 2025 23:04:54.687 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+93391:M 03 May 2025 23:04:54.687 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+93391:M 03 May 2025 23:04:54.687 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=93391, just started
+93391:M 03 May 2025 23:04:54.687 * Configuration loaded
+93391:M 03 May 2025 23:04:54.687 * Increased maximum number of open files to 10032 (it was originally set to 256).
+93391:M 03 May 2025 23:04:54.687 * monotonic clock: POSIX clock_gettime
+93391:M 03 May 2025 23:04:54.688 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 21149
+ |###|   .+###############+.   |###|    PID: 93391                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+93391:M 03 May 2025 23:04:54.688 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+93391:M 03 May 2025 23:04:54.688 * No cluster configuration found, I'm 3f60f97c0e39a6f8133158c90e73fb0ce2058d27
+93391:M 03 May 2025 23:04:54.694 * Server initialized
+93391:M 03 May 2025 23:04:54.694 * Ready to accept connections tcp
+93391:M 03 May 2025 23:04:54.694 * Ready to accept connections unix
+93391:M 03 May 2025 23:04:54.823 - Accepted 127.0.0.1:52051
+93391:M 03 May 2025 23:04:54.826 - Client closed connection id=2 addr=127.0.0.1:52051 laddr=127.0.0.1:21149 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+93391:M 03 May 2025 23:04:54.879 - Accepted 127.0.0.1:52063
+93391:M 03 May 2025 23:04:55.086 # Missing implement of connection type tls
+93391:M 03 May 2025 23:04:55.158 - Accepting cluster node connection from 127.0.0.1:52110
+93391:M 03 May 2025 23:04:55.158 * IP address for this node updated to 127.0.0.1
+93391:M 03 May 2025 23:04:55.312 * configEpoch collision with node b0fe16682cc439120069db06abddf10292d30d81 (). configEpoch set to 2
+93391:M 03 May 2025 23:04:55.338 - Accepting cluster node connection from 127.0.0.1:52161
+93391:M 03 May 2025 23:04:55.339 - Accepted 127.0.0.1:52163
+93391:M 03 May 2025 23:04:55.339 * Node b0fe16682cc439120069db06abddf10292d30d81 () is no longer primary of shard 89fba45ed1ebe30a2cf045546435c6e0dc292ffc; removed all 0 slot(s) it used to own
+93391:M 03 May 2025 23:04:55.339 * Node b0fe16682cc439120069db06abddf10292d30d81 () is now part of shard df41a835c31f94dbc566ef05d60b99a5a397ed12
+93391:M 03 May 2025 23:04:55.339 * Node b0fe16682cc439120069db06abddf10292d30d81 () is now a replica of node 3f60f97c0e39a6f8133158c90e73fb0ce2058d27 () in shard df41a835c31f94dbc566ef05d60b99a5a397ed12
+93391:M 03 May 2025 23:04:55.340 # DEBUG LOG: ========== I am primary 1 ==========
+93391:M 03 May 2025 23:04:55.340 * Replica 127.0.0.1:21147 asks for synchronization
+93391:M 03 May 2025 23:04:55.340 * Full resync requested by replica 127.0.0.1:21147
+93391:M 03 May 2025 23:04:55.340 * Replication backlog created, my new replication IDs are 'b70c7dc607bc5d4582f5f963b03f46f791b09b87' and '0000000000000000000000000000000000000000'
+93391:M 03 May 2025 23:04:55.340 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+93391:M 03 May 2025 23:04:55.341 * Background RDB transfer started by pid 93575 to pipe through parent process
+93575:C 03 May 2025 23:04:55.342 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+93391:M 03 May 2025 23:04:55.344 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+93391:M 03 May 2025 23:04:55.346 - Accepting cluster node connection from 127.0.0.1:52165
+93391:M 03 May 2025 23:04:55.349 * Node db2abbf7932a361fb5946ce67e67b33e92382bf8 () is no longer primary of shard 644acd84cb2b284a0d9d485abe794c451b4b3cdc; removed all 0 slot(s) it used to own
+93391:M 03 May 2025 23:04:55.349 * Node db2abbf7932a361fb5946ce67e67b33e92382bf8 () is now part of shard a2d856cb2bac578b94c63432efc9eae859aca14f
+93391:M 03 May 2025 23:04:55.349 * Node db2abbf7932a361fb5946ce67e67b33e92382bf8 () is now a replica of node d1ae6520d8b605738cba7612c3d6af3b967b2583 () in shard a2d856cb2bac578b94c63432efc9eae859aca14f
+93391:M 03 May 2025 23:04:55.350 * Background RDB transfer terminated with success
+93391:M 03 May 2025 23:04:55.350 * Streamed RDB transfer with replica 127.0.0.1:21147 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+93391:M 03 May 2025 23:04:55.350 * Synchronization with replica 127.0.0.1:21147 succeeded
+93391:M 03 May 2025 23:04:56.713 * Cluster state changed: ok
+### Starting test Set cluster announced IPv4 to invalid IP in tests/unit/cluster/announce-client-ip.tcl
+### Starting test Set cluster announced IPv4 and check that it propagates in tests/unit/cluster/announce-client-ip.tcl
+### Starting test Clear announced client IPv4 and check that it propagates in tests/unit/cluster/announce-client-ip.tcl
+### Starting test Check for memory leaks (pid 93446) in tests/unit/cluster/announce-client-ip.tcl
+93391:M 03 May 2025 23:05:06.815 - Connection with Node d1ae6520d8b605738cba7612c3d6af3b967b2583 at 127.0.0.1:31150 failed: Connection refused
+93391:M 03 May 2025 23:05:06.860 - Client closed connection id=3 addr=127.0.0.1:52063 laddr=127.0.0.1:21149 fd=14 name= age=12 idle=1 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=557 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|slots user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1037 tot-net-out=13569 tot-cmds=31
+93391:M 03 May 2025 23:05:06.916 - Connection with Node d1ae6520d8b605738cba7612c3d6af3b967b2583 at 127.0.0.1:31150 failed: Connection refused
+93391:M 03 May 2025 23:05:07.017 - Connection with Node d1ae6520d8b605738cba7612c3d6af3b967b2583 at 127.0.0.1:31150 failed: Connection refused
+93391:M 03 May 2025 23:05:07.780 - Connection with Node d1ae6520d8b605738cba7612c3d6af3b967b2583 at 127.0.0.1:31150 failed: Connection refused
+93391:signal-handler (1746281107) Received SIGTERM scheduling shutdown...
+93391:M 03 May 2025 23:05:07.881 * User requested shutdown...
+93391:M 03 May 2025 23:05:07.881 * 1 of 1 replicas are in sync when shutting down.
+93391:M 03 May 2025 23:05:07.882 * Removing the pid file.
+93391:M 03 May 2025 23:05:07.885 * Saving the cluster configuration file before exiting.
+93391:M 03 May 2025 23:05:07.918 * Removing the unix socket file.
+93391:M 03 May 2025 23:05:07.920 # Valkey is now ready to exit, bye bye...

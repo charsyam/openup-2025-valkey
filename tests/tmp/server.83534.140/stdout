@@ -1,0 +1,55 @@
+### Starting server for test 
+11740:M 03 May 2025 23:07:52.193 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+11740:M 03 May 2025 23:07:52.193 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+11740:M 03 May 2025 23:07:52.193 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=11740, just started
+11740:M 03 May 2025 23:07:52.193 * Configuration loaded
+11740:M 03 May 2025 23:07:52.193 * Increased maximum number of open files to 10032 (it was originally set to 256).
+11740:M 03 May 2025 23:07:52.193 * monotonic clock: POSIX clock_gettime
+11740:M 03 May 2025 23:07:52.194 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25678
+ |###|   .+###############+.   |###|    PID: 11740                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+11740:M 03 May 2025 23:07:52.194 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+11740:M 03 May 2025 23:07:52.194 * No cluster configuration found, I'm 071bd8d441f5eb9813ba7f1bc2023b83b408ef47
+11740:M 03 May 2025 23:07:52.202 * Server initialized
+11740:M 03 May 2025 23:07:52.202 * Ready to accept connections tcp
+11740:M 03 May 2025 23:07:52.202 * Ready to accept connections unix
+11740:M 03 May 2025 23:07:52.331 - Accepted 127.0.0.1:59382
+11740:M 03 May 2025 23:07:52.332 - Client closed connection id=2 addr=127.0.0.1:59382 laddr=127.0.0.1:25678 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+11740:M 03 May 2025 23:07:52.350 - Accepted 127.0.0.1:59385
+11740:M 03 May 2025 23:07:52.351 * Cluster meet 127.0.0.1:25677 (user request from 'id=3 addr=127.0.0.1:59385 laddr=127.0.0.1:25678 fd=14 name= user=default lib-name= lib-ver=').
+11740:M 03 May 2025 23:07:52.352 # Missing implement of connection type tls
+11740:M 03 May 2025 23:07:52.463 - Accepting cluster node connection from 127.0.0.1:59394
+11740:M 03 May 2025 23:07:52.463 * IP address for this node updated to 127.0.0.1
+11740:M 03 May 2025 23:07:52.463 * Successfully completed handshake with 0c1805e4ba1f421bf1c32d9068cf7afed2aabfe4 ()
+11740:M 03 May 2025 23:07:52.463 * configEpoch collision with node 0c1805e4ba1f421bf1c32d9068cf7afed2aabfe4 (). configEpoch set to 1
+11740:M 03 May 2025 23:07:52.516 # DEBUG LOG: ========== I am primary 0 ==========
+11740:M 03 May 2025 23:07:54.224 * Cluster state changed: ok
+### Starting test Client blocked on XREADGROUP while stream's slot is migrated in tests/unit/cluster/slot-migration.tcl
+11740:M 03 May 2025 23:07:54.285 - Accepted 127.0.0.1:59453
+11740:M 03 May 2025 23:07:54.286 * Migrating slot 609 to node 0c1805e4ba1f421bf1c32d9068cf7afed2aabfe4 ()
+11740:M 03 May 2025 23:07:54.290 - Client closed connection id=3 addr=127.0.0.1:59385 laddr=127.0.0.1:25678 fd=14 name= age=2 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=1024 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=migrate user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1660 tot-net-out=26039 tot-cmds=52
+11740:M 03 May 2025 23:07:57.275 - Accepting cluster node connection from 127.0.0.1:59475
+11740:signal-handler (1746281277) Received SIGTERM scheduling shutdown...
+11740:M 03 May 2025 23:07:57.376 * User requested shutdown...
+11740:M 03 May 2025 23:07:57.376 * Removing the pid file.
+11740:M 03 May 2025 23:07:57.376 * Saving the cluster configuration file before exiting.
+11740:M 03 May 2025 23:07:57.381 * Removing the unix socket file.
+11740:M 03 May 2025 23:07:57.382 # Valkey is now ready to exit, bye bye...

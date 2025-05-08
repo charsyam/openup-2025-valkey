@@ -1,0 +1,70 @@
+### Starting server for test Kill rdb child process if its dumping RDB is not useful in tests/integration/replication.tcl
+19175:M 03 May 2025 23:10:06.851 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+19175:M 03 May 2025 23:10:06.851 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=19175, just started
+19175:M 03 May 2025 23:10:06.851 * Configuration loaded
+19175:M 03 May 2025 23:10:06.851 * Increased maximum number of open files to 10032 (it was originally set to 256).
+19175:M 03 May 2025 23:10:06.851 * monotonic clock: POSIX clock_gettime
+19175:M 03 May 2025 23:10:06.851 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27703
+ |###|   .+###############+.   |###|    PID: 19175                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+19175:M 03 May 2025 23:10:06.851 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+19175:M 03 May 2025 23:10:06.851 * Server initialized
+19175:M 03 May 2025 23:10:06.851 * Ready to accept connections tcp
+19175:M 03 May 2025 23:10:06.851 * Ready to accept connections unix
+19175:M 03 May 2025 23:10:06.973 - Accepted 127.0.0.1:50435
+19175:M 03 May 2025 23:10:06.974 - Client closed connection id=2 addr=127.0.0.1:50435 laddr=127.0.0.1:27703 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+19175:M 03 May 2025 23:10:06.979 - Accepted 127.0.0.1:50436
+19175:M 03 May 2025 23:10:06.980 - Accepted 127.0.0.1:50437
+19175:M 03 May 2025 23:10:06.980 - Accepted 127.0.0.1:50438
+19175:M 03 May 2025 23:10:06.980 * Replica 127.0.0.1:27701 asks for synchronization
+19175:M 03 May 2025 23:10:06.980 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '467a83a3484abe6c4df342bf30c1d5406f307301', my replication IDs are '37d2bdef7ad759d34a3f25fef89d01085bfdb09b' and '0000000000000000000000000000000000000000')
+19175:M 03 May 2025 23:10:06.980 * Replication backlog created, my new replication IDs are '1b8dd28a2d8ec52ea0f16dae7700346e70758904' and '0000000000000000000000000000000000000000'
+19175:M 03 May 2025 23:10:06.980 * Starting BGSAVE for SYNC with target: disk using: normal sync
+19175:M 03 May 2025 23:10:06.980 * Background saving started by pid 19183
+19175:M 03 May 2025 23:10:06.981 * Replica 127.0.0.1:27702 asks for synchronization
+19175:M 03 May 2025 23:10:06.981 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '349b5a2bf15dd5a1ced9b5c2c3aafb4e2811c069', my replication IDs are '1b8dd28a2d8ec52ea0f16dae7700346e70758904' and '0000000000000000000000000000000000000000')
+19175:M 03 May 2025 23:10:06.981 * Waiting for end of BGSAVE for SYNC
+19175:M 03 May 2025 23:10:06.981 - Client closed connection id=4 addr=127.0.0.1:50437 laddr=127.0.0.1:27703 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=241 tot-net-out=22 tot-cmds=5
+19175:M 03 May 2025 23:10:06.981 * Connection with replica 127.0.0.1:27701 lost.
+19175:M 03 May 2025 23:10:07.084 - Client closed connection id=5 addr=127.0.0.1:50438 laddr=127.0.0.1:27703 fd=14 name= age=1 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=241 tot-net-out=22 tot-cmds=5
+19175:M 03 May 2025 23:10:07.084 * Connection with replica 127.0.0.1:27702 lost.
+19175:M 03 May 2025 23:10:07.084 * Background saving, persistence disabled, last replica dropped, killing fork child.
+19183:signal-handler (1746281407) Received SIGUSR1 in child, exiting now.
+19175:M 03 May 2025 23:10:07.154 # Background saving terminated by signal 30
+19175:M 03 May 2025 23:10:07.166 - Accepted 127.0.0.1:50439
+19175:M 03 May 2025 23:10:07.166 - Accepted 127.0.0.1:50440
+19175:M 03 May 2025 23:10:07.166 * Replica 127.0.0.1:27701 asks for synchronization
+19175:M 03 May 2025 23:10:07.166 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '5f9eca4765f4fbfcd7d52be522459abf28c17dfb', my replication IDs are '1b8dd28a2d8ec52ea0f16dae7700346e70758904' and '0000000000000000000000000000000000000000')
+19175:M 03 May 2025 23:10:07.166 * Starting BGSAVE for SYNC with target: disk using: normal sync
+19175:M 03 May 2025 23:10:07.166 * Background saving started by pid 19184
+19175:M 03 May 2025 23:10:07.166 * Replica 127.0.0.1:27702 asks for synchronization
+19175:M 03 May 2025 23:10:07.166 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '0244de41831beeb851003dae9c45aa4fade4b702', my replication IDs are '1b8dd28a2d8ec52ea0f16dae7700346e70758904' and '0000000000000000000000000000000000000000')
+19175:M 03 May 2025 23:10:07.166 * Waiting for end of BGSAVE for SYNC
+19175:M 03 May 2025 23:10:07.271 - Client closed connection id=6 addr=127.0.0.1:50439 laddr=127.0.0.1:27703 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=241 tot-net-out=22 tot-cmds=5
+19175:M 03 May 2025 23:10:07.271 * Connection with replica 127.0.0.1:27701 lost.
+19175:M 03 May 2025 23:10:07.271 - Client closed connection id=7 addr=127.0.0.1:50440 laddr=127.0.0.1:27703 fd=14 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=241 tot-net-out=22 tot-cmds=5
+19175:M 03 May 2025 23:10:07.271 * Connection with replica 127.0.0.1:27702 lost.
+19175:M 03 May 2025 23:10:07.474 * User requested shutdown... (user request from 'id=3 addr=127.0.0.1:50436 laddr=127.0.0.1:27703 fd=12 name= user=default lib-name= lib-ver=')
+19175:M 03 May 2025 23:10:07.474 # There is a child saving an .rdb. Killing it!
+19184:signal-handler (1746281407) Received SIGUSR1 in child, exiting now.
+19175:M 03 May 2025 23:10:07.474 * Removing the pid file.
+19175:M 03 May 2025 23:10:07.474 * Removing the unix socket file.
+19175:M 03 May 2025 23:10:07.474 # Valkey is now ready to exit, bye bye...

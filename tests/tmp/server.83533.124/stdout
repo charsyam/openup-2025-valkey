@@ -1,0 +1,80 @@
+### Starting server for test 
+4789:M 03 May 2025 23:06:36.249 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+4789:M 03 May 2025 23:06:36.249 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=4789, just started
+4789:M 03 May 2025 23:06:36.249 * Configuration loaded
+4789:M 03 May 2025 23:06:36.250 * Increased maximum number of open files to 10032 (it was originally set to 256).
+4789:M 03 May 2025 23:06:36.250 * monotonic clock: POSIX clock_gettime
+4789:M 03 May 2025 23:06:36.250 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25175
+ |###|   .+###############+.   |###|    PID: 4789                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+4789:M 03 May 2025 23:06:36.250 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+4789:M 03 May 2025 23:06:36.251 * Server initialized
+4789:M 03 May 2025 23:06:36.251 * Ready to accept connections tcp
+4789:M 03 May 2025 23:06:36.251 * Ready to accept connections unix
+4789:M 03 May 2025 23:06:36.503 - Accepted 127.0.0.1:61442
+4789:M 03 May 2025 23:06:36.505 - Client closed connection id=2 addr=127.0.0.1:61442 laddr=127.0.0.1:25175 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+4789:M 03 May 2025 23:06:36.556 - Accepted 127.0.0.1:61488
+### Starting test Slave should be able to synchronize with the master in tests/integration/replication-psync.tcl
+4789:M 03 May 2025 23:06:36.802 - Accepted 127.0.0.1:61635
+4789:M 03 May 2025 23:06:36.803 * Replica 127.0.0.1:25176 asks for synchronization
+4789:M 03 May 2025 23:06:36.803 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '0346bf31115465c0d7b95dcee5996efeb651107d', my replication IDs are '44ccc6b00ff8629e4463ca0afdcfa163164bf2d1' and '0000000000000000000000000000000000000000')
+4789:M 03 May 2025 23:06:36.803 * Replication backlog created, my new replication IDs are '4997d41c7b335098439cca0acd30049d2ca41e1b' and '0000000000000000000000000000000000000000'
+4789:M 03 May 2025 23:06:36.803 * Starting BGSAVE for SYNC with target: disk using: normal sync
+4789:M 03 May 2025 23:06:36.803 * Background saving started by pid 4879
+4879:C 03 May 2025 23:06:36.807 * DB saved on disk
+4879:C 03 May 2025 23:06:36.808 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+4789:M 03 May 2025 23:06:36.809 - Accepted 127.0.0.1:61636
+4789:M 03 May 2025 23:06:36.809 - Accepted 127.0.0.1:61637
+4789:M 03 May 2025 23:06:36.813 - Accepted 127.0.0.1:61638
+4789:M 03 May 2025 23:06:36.858 * Background saving terminated with success
+4789:M 03 May 2025 23:06:36.858 * Synchronization with replica 127.0.0.1:25176 succeeded
+### Starting test Detect write load to master in tests/integration/replication-psync.tcl
+### Starting test Test replication partial resync: ok psync (diskless: no, disabled, dual-channel: no, reconnect: 1) in tests/integration/replication-psync.tcl
+4789:M 03 May 2025 23:06:37.011 - Reading from client: Connection reset by peer
+4789:M 03 May 2025 23:06:37.011 * Connection with replica client id #4 lost.
+4789:M 03 May 2025 23:06:37.011 - Accepted 127.0.0.1:61770
+4789:M 03 May 2025 23:06:37.011 * Replica 127.0.0.1:25176 asks for synchronization
+4789:M 03 May 2025 23:06:37.011 * Partial resynchronization request from 127.0.0.1:25176 accepted. Sending 447 bytes of backlog starting from offset 264684.
+4789:M 03 May 2025 23:06:39.074 - Reading from client: Connection reset by peer
+4789:M 03 May 2025 23:06:39.074 * Connection with replica client id #8 lost.
+4789:M 03 May 2025 23:06:39.074 - Accepted 127.0.0.1:63251
+4789:M 03 May 2025 23:06:39.074 * Replica 127.0.0.1:25176 asks for synchronization
+4789:M 03 May 2025 23:06:39.074 * Partial resynchronization request from 127.0.0.1:25176 accepted. Sending 3456 bytes of backlog starting from offset 2244625.
+4789:M 03 May 2025 23:06:41.152 - Client closed connection id=9 addr=127.0.0.1:63251 laddr=127.0.0.1:25175 fd=13 name= age=2 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=327 tot-net-out=1767879 tot-cmds=7
+4789:M 03 May 2025 23:06:41.152 * Connection with replica 127.0.0.1:25176 lost.
+4789:M 03 May 2025 23:06:41.152 - Accepted 127.0.0.1:64764
+4789:M 03 May 2025 23:06:41.153 * Replica 127.0.0.1:25176 asks for synchronization
+4789:M 03 May 2025 23:06:41.153 * Partial resynchronization request from 127.0.0.1:25176 accepted. Sending 0 bytes of backlog starting from offset 4012482.
+4789:M 03 May 2025 23:06:41.261 - DB 9: 4408 keys (0 volatile) in 7168 slots HT.
+4789:M 03 May 2025 23:06:41.261 - DB 11: 4350 keys (0 volatile) in 7168 slots HT.
+4789:M 03 May 2025 23:06:41.261 - DB 12: 4306 keys (0 volatile) in 7168 slots HT.
+4789:M 03 May 2025 23:06:43.132 - Reading from client: Connection reset by peer
+4789:M 03 May 2025 23:06:43.140 - Client closed connection id=5 addr=127.0.0.1:61636 laddr=127.0.0.1:25175 fd=16 name=LOAD_HANDLER age=7 idle=0 flags=N capa= db=11 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=264 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=type user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=3714196 tot-net-out=540771 tot-cmds=48422
+4789:M 03 May 2025 23:06:43.151 - Client closed connection id=7 addr=127.0.0.1:61638 laddr=127.0.0.1:25175 fd=18 name=LOAD_HANDLER age=7 idle=0 flags=N capa= db=12 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=264 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=type user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=3813938 tot-net-out=557882 tot-cmds=49356
+### Starting test Check for memory leaks (pid 4850) in tests/integration/replication-psync.tcl
+4789:M 03 May 2025 23:06:44.798 - Client closed connection id=10 addr=127.0.0.1:64764 laddr=127.0.0.1:25175 fd=13 name= age=3 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=367 tot-net-out=1736756 tot-cmds=8
+4789:M 03 May 2025 23:06:44.798 * Connection with replica 127.0.0.1:25176 lost.
+4789:M 03 May 2025 23:06:44.893 - Client closed connection id=3 addr=127.0.0.1:61488 laddr=127.0.0.1:25175 fd=12 name= age=8 idle=1 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=4096 rbp=2048 obl=0 oll=0 omem=0 tot-mem=21504 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=425 tot-net-out=12512 tot-cmds=11
+4789:signal-handler (1746281206) Received SIGTERM scheduling shutdown...
+4789:M 03 May 2025 23:06:46.592 * User requested shutdown...
+4789:M 03 May 2025 23:06:46.592 * Removing the pid file.
+4789:M 03 May 2025 23:06:46.592 * Removing the unix socket file.
+4789:M 03 May 2025 23:06:46.592 # Valkey is now ready to exit, bye bye...

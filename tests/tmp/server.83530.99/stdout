@@ -1,0 +1,173 @@
+### Starting server for test 
+6384:M 03 May 2025 23:06:44.398 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+6384:M 03 May 2025 23:06:44.398 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=6384, just started
+6384:M 03 May 2025 23:06:44.398 * Configuration loaded
+6384:M 03 May 2025 23:06:44.399 * Increased maximum number of open files to 10032 (it was originally set to 256).
+6384:M 03 May 2025 23:06:44.399 * monotonic clock: POSIX clock_gettime
+6384:M 03 May 2025 23:06:44.402 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23662
+ |###|   .+###############+.   |###|    PID: 6384                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+6384:M 03 May 2025 23:06:44.402 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+6384:M 03 May 2025 23:06:44.402 * Server initialized
+6384:M 03 May 2025 23:06:44.402 * Ready to accept connections tcp
+6384:M 03 May 2025 23:06:44.402 * Ready to accept connections unix
+6384:M 03 May 2025 23:06:44.430 - Accepted 127.0.0.1:50998
+6384:M 03 May 2025 23:06:44.433 - Client closed connection id=2 addr=127.0.0.1:50998 laddr=127.0.0.1:23662 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+6384:M 03 May 2025 23:06:44.466 - Accepted 127.0.0.1:51008
+### Starting test Toggle dual-channel-replication-enabled: yes start in tests/integration/dual-channel-replication.tcl
+6384:M 03 May 2025 23:06:44.589 - Accepted 127.0.0.1:51127
+6384:M 03 May 2025 23:06:44.589 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:06:44.589 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'a1b0c15f4c1e15313355ac25739dff3d185bf419', my replication IDs are '365ca8fc798c02515ba72b2063f280aa9a20d1ef' and '0000000000000000000000000000000000000000')
+6384:M 03 May 2025 23:06:44.589 * Dual channel replication: Replica 127.0.0.1:23661 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+6384:M 03 May 2025 23:06:44.589 - Accepted 127.0.0.1:51128
+6384:M 03 May 2025 23:06:44.590 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:06:44.590 * Replication backlog created, my new replication IDs are '0299f73ef86caf3b6b127138713ab2b1a9f52352' and '0000000000000000000000000000000000000000'
+6384:M 03 May 2025 23:06:44.590 * Starting BGSAVE for SYNC with target: replicas sockets using: dual-channel
+6384:M 03 May 2025 23:06:44.590 * Dual channel replication: Sending to replica 127.0.0.1:23661 RDB end offset 0 and client-id 5
+6384:M 03 May 2025 23:06:44.591 * Background RDB transfer started by pid 6438 to direct socket to replica
+6384:M 03 May 2025 23:06:44.591 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:06:44.591 * Partial resynchronization request from 127.0.0.1:23661 accepted. Sending 0 bytes of backlog starting from offset 1.
+6438:C 03 May 2025 23:06:44.599 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+6384:M 03 May 2025 23:06:44.610 * Background RDB transfer terminated with success
+6384:M 03 May 2025 23:06:44.610 * Streamed RDB transfer with replica 127.0.0.1:23661 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+6384:M 03 May 2025 23:06:44.610 * RDB transfer completed, rdb only replica (127.0.0.1:23661) should be disconnected asap
+6384:M 03 May 2025 23:06:44.610 * Dual channel replication: Replica 127.0.0.1:23661 rdb channel disconnected.
+6384:M 03 May 2025 23:06:44.631 * Synchronization with replica 127.0.0.1:23661 succeeded
+6384:M 03 May 2025 23:06:44.696 - Client closed connection id=4 addr=127.0.0.1:51127 laddr=127.0.0.1:23662 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=422 tot-net-out=27 tot-cmds=8
+6384:M 03 May 2025 23:06:44.696 * Connection with replica 127.0.0.1:23661 lost.
+6384:M 03 May 2025 23:06:44.787 - Accepted 127.0.0.1:51296
+6384:M 03 May 2025 23:06:44.787 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:06:44.787 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'a1127d698ca4adb48661d39af7723f0489d993fd', my replication IDs are '0299f73ef86caf3b6b127138713ab2b1a9f52352' and '0000000000000000000000000000000000000000')
+6384:M 03 May 2025 23:06:44.787 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+6384:M 03 May 2025 23:06:44.790 * Background RDB transfer started by pid 6499 to pipe through parent process
+6499:C 03 May 2025 23:06:44.799 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+6384:M 03 May 2025 23:06:44.799 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+6384:M 03 May 2025 23:06:44.812 * Background RDB transfer terminated with success
+6384:M 03 May 2025 23:06:44.812 * Streamed RDB transfer with replica 127.0.0.1:23661 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+6384:M 03 May 2025 23:06:44.812 * Synchronization with replica 127.0.0.1:23661 succeeded
+6384:M 03 May 2025 23:06:44.903 - Client closed connection id=6 addr=127.0.0.1:51296 laddr=127.0.0.1:23662 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=282 tot-net-out=22 tot-cmds=6
+6384:M 03 May 2025 23:06:44.903 * Connection with replica 127.0.0.1:23661 lost.
+### Starting test Online toggle dual-channel-replication-enabled on primary, starting with 'yes' in tests/integration/dual-channel-replication.tcl
+6384:M 03 May 2025 23:06:45.019 - Accepted 127.0.0.1:51507
+6384:M 03 May 2025 23:06:45.020 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:06:45.020 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '819539d98851edc2ca5ff308610a44f4885441e0', my replication IDs are '0299f73ef86caf3b6b127138713ab2b1a9f52352' and '0000000000000000000000000000000000000000')
+6384:M 03 May 2025 23:06:45.020 * Dual channel replication: Replica 127.0.0.1:23661 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+6384:M 03 May 2025 23:06:45.020 - Accepted 127.0.0.1:51508
+6384:M 03 May 2025 23:06:45.021 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:06:45.021 * Starting BGSAVE for SYNC with target: replicas sockets using: dual-channel
+6384:M 03 May 2025 23:06:45.021 * Dual channel replication: Sending to replica 127.0.0.1:23661 RDB end offset 20079626 and client-id 8
+6384:M 03 May 2025 23:06:45.024 * Background RDB transfer started by pid 6545 to direct socket to replica
+6384:M 03 May 2025 23:06:45.025 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:06:45.025 * Partial resynchronization request from 127.0.0.1:23661 accepted. Sending 0 bytes of backlog starting from offset 20079627.
+6384:M 03 May 2025 23:06:47.033 - Client closed connection id=8 addr=127.0.0.1:51508 laddr=127.0.0.1:23662 fd=14 name= age=2 idle=2 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=121 tot-net-out=5 tot-cmds=2
+6384:M 03 May 2025 23:06:47.033 * Dual channel replication: Replica 127.0.0.1:23661 rdb channel disconnected.
+6384:M 03 May 2025 23:06:47.033 - Client closed connection id=7 addr=127.0.0.1:51507 laddr=127.0.0.1:23662 fd=13 name= age=2 idle=2 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=402 tot-net-out=27 tot-cmds=7
+6384:M 03 May 2025 23:06:47.033 * Connection with replica 127.0.0.1:23661 lost.
+### Starting test Online toggle dual-channel-replication-enabled on replica, starting with 'yes' in tests/integration/dual-channel-replication.tcl
+6384:M 03 May 2025 23:06:47.124 - Accepted 127.0.0.1:53115
+6384:M 03 May 2025 23:06:47.124 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:06:47.124 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '07088ce4a4a5dde9db53fcfcb518d9b7b46e641e', my replication IDs are '0299f73ef86caf3b6b127138713ab2b1a9f52352' and '0000000000000000000000000000000000000000')
+6384:M 03 May 2025 23:06:47.124 * Dual channel replication: Replica 127.0.0.1:23661 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+6384:M 03 May 2025 23:06:47.125 - Accepted 127.0.0.1:53116
+6384:M 03 May 2025 23:06:47.125 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:06:47.125 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+6384:M 03 May 2025 23:06:49.461 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6384:M 03 May 2025 23:06:54.509 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6384:M 03 May 2025 23:06:59.560 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6384:M 03 May 2025 23:07:04.607 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6384:M 03 May 2025 23:07:09.051 # Background RDB transfer error
+6384:M 03 May 2025 23:07:09.051 * Starting BGSAVE for SYNC with target: replicas sockets using: dual-channel
+6384:M 03 May 2025 23:07:09.051 * Dual channel replication: Sending to replica 127.0.0.1:23661 RDB end offset 30119467 and client-id 10
+6384:M 03 May 2025 23:07:09.053 * Background RDB transfer started by pid 8661 to direct socket to replica
+6384:M 03 May 2025 23:07:09.053 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:07:09.053 * Partial resynchronization request from 127.0.0.1:23661 accepted. Sending 0 bytes of backlog starting from offset 30119468.
+6384:M 03 May 2025 23:07:09.657 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6384:M 03 May 2025 23:07:10.231 - Client closed connection id=10 addr=127.0.0.1:53116 laddr=127.0.0.1:23662 fd=14 name= age=23 idle=23 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=121 tot-net-out=5 tot-cmds=2
+6384:M 03 May 2025 23:07:10.231 * Dual channel replication: Replica 127.0.0.1:23661 rdb channel disconnected.
+6384:M 03 May 2025 23:07:10.231 - Client closed connection id=9 addr=127.0.0.1:53115 laddr=127.0.0.1:23662 fd=13 name= age=23 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=5 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=403 tot-net-out=27 tot-cmds=7
+6384:M 03 May 2025 23:07:10.231 * Connection with replica 127.0.0.1:23661 lost.
+### Starting test Toggle dual-channel-replication-enabled: no start in tests/integration/dual-channel-replication.tcl
+6384:M 03 May 2025 23:07:10.334 - Accepted 127.0.0.1:51930
+6384:M 03 May 2025 23:07:10.335 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:07:10.335 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'dc131889cdb745a3fb399a38e2904d138eab2def', my replication IDs are '0299f73ef86caf3b6b127138713ab2b1a9f52352' and '0000000000000000000000000000000000000000')
+6384:M 03 May 2025 23:07:10.335 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+6384:M 03 May 2025 23:07:14.717 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6384:M 03 May 2025 23:07:19.778 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6384:M 03 May 2025 23:07:24.820 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6384:M 03 May 2025 23:07:29.868 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6384:M 03 May 2025 23:07:33.099 # Background RDB transfer error
+6384:M 03 May 2025 23:07:33.099 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+6384:M 03 May 2025 23:07:33.101 * Background RDB transfer started by pid 10368 to pipe through parent process
+10368:C 03 May 2025 23:07:33.111 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+6384:M 03 May 2025 23:07:33.112 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+6384:M 03 May 2025 23:07:33.141 * Background RDB transfer terminated with success
+6384:M 03 May 2025 23:07:33.141 * Streamed RDB transfer with replica 127.0.0.1:23661 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+6384:M 03 May 2025 23:07:33.141 * Synchronization with replica 127.0.0.1:23661 succeeded
+6384:M 03 May 2025 23:07:33.169 - Client closed connection id=11 addr=127.0.0.1:51930 laddr=127.0.0.1:23662 fd=13 name= age=23 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=289 tot-net-out=22 tot-cmds=6
+6384:M 03 May 2025 23:07:33.169 * Connection with replica 127.0.0.1:23661 lost.
+6384:M 03 May 2025 23:07:33.267 - Accepted 127.0.0.1:56706
+6384:M 03 May 2025 23:07:33.267 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:07:33.267 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '210b9cd6d33b83ee0a08d797048c744c572d2b1c', my replication IDs are '0299f73ef86caf3b6b127138713ab2b1a9f52352' and '0000000000000000000000000000000000000000')
+6384:M 03 May 2025 23:07:33.267 * Dual channel replication: Replica 127.0.0.1:23661 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+6384:M 03 May 2025 23:07:33.267 - Accepted 127.0.0.1:56707
+6384:M 03 May 2025 23:07:33.267 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:07:33.267 * Starting BGSAVE for SYNC with target: replicas sockets using: dual-channel
+6384:M 03 May 2025 23:07:33.267 * Dual channel replication: Sending to replica 127.0.0.1:23661 RDB end offset 50199121 and client-id 13
+6384:M 03 May 2025 23:07:33.270 * Background RDB transfer started by pid 10369 to direct socket to replica
+6384:M 03 May 2025 23:07:33.271 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:07:33.271 * Partial resynchronization request from 127.0.0.1:23661 accepted. Sending 0 bytes of backlog starting from offset 50199122.
+10369:C 03 May 2025 23:07:33.280 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+6384:M 03 May 2025 23:07:33.302 * Background RDB transfer terminated with success
+6384:M 03 May 2025 23:07:33.302 * Streamed RDB transfer with replica 127.0.0.1:23661 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+6384:M 03 May 2025 23:07:33.302 * RDB transfer completed, rdb only replica (127.0.0.1:23661) should be disconnected asap
+6384:M 03 May 2025 23:07:33.302 * Dual channel replication: Replica 127.0.0.1:23661 rdb channel disconnected.
+6384:M 03 May 2025 23:07:33.309 * Synchronization with replica 127.0.0.1:23661 succeeded
+6384:M 03 May 2025 23:07:33.380 - Client closed connection id=12 addr=127.0.0.1:56706 laddr=127.0.0.1:23662 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=444 tot-net-out=27 tot-cmds=8
+6384:M 03 May 2025 23:07:33.380 * Connection with replica 127.0.0.1:23661 lost.
+### Starting test Online toggle dual-channel-replication-enabled on primary, starting with 'no' in tests/integration/dual-channel-replication.tcl
+6384:M 03 May 2025 23:07:33.515 - Accepted 127.0.0.1:56749
+6384:M 03 May 2025 23:07:33.515 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:07:33.515 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'a7b755c705ac9bf27456a2b0780bf197c99aac17', my replication IDs are '0299f73ef86caf3b6b127138713ab2b1a9f52352' and '0000000000000000000000000000000000000000')
+6384:M 03 May 2025 23:07:33.515 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+6384:M 03 May 2025 23:07:33.517 * Background RDB transfer started by pid 10373 to pipe through parent process
+6384:M 03 May 2025 23:07:34.916 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6384:M 03 May 2025 23:07:35.520 - Client closed connection id=14 addr=127.0.0.1:56749 laddr=127.0.0.1:23662 fd=13 name= age=2 idle=2 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=248 tot-net-out=22 tot-cmds=5
+6384:M 03 May 2025 23:07:35.520 * Connection with replica 127.0.0.1:23661 lost.
+6384:M 03 May 2025 23:07:35.520 * Diskless rdb transfer, last replica dropped, killing fork child.
+10373:signal-handler (1746281255) Received SIGUSR1 in child, exiting now.
+### Starting test Online toggle dual-channel-replication-enabled on replica, starting with 'no' in tests/integration/dual-channel-replication.tcl
+6384:M 03 May 2025 23:07:35.622 # Background RDB transfer terminated by signal 30
+6384:M 03 May 2025 23:07:35.673 - Accepted 127.0.0.1:57228
+6384:M 03 May 2025 23:07:35.674 * Replica 127.0.0.1:23661 asks for synchronization
+6384:M 03 May 2025 23:07:35.674 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '3e8f4c6925692b084e5dd5e34dac865fafd77fad', my replication IDs are '0299f73ef86caf3b6b127138713ab2b1a9f52352' and '0000000000000000000000000000000000000000')
+6384:M 03 May 2025 23:07:35.674 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+6384:M 03 May 2025 23:07:35.677 * Background RDB transfer started by pid 10684 to pipe through parent process
+6384:M 03 May 2025 23:07:36.682 - Client closed connection id=15 addr=127.0.0.1:57228 laddr=127.0.0.1:23662 fd=13 name= age=1 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=248 tot-net-out=22 tot-cmds=5
+6384:M 03 May 2025 23:07:36.682 * Connection with replica 127.0.0.1:23661 lost.
+6384:M 03 May 2025 23:07:36.682 * Diskless rdb transfer, last replica dropped, killing fork child.
+10684:signal-handler (1746281256) Received SIGUSR1 in child, exiting now.
+6384:M 03 May 2025 23:07:36.682 - Client closed connection id=3 addr=127.0.0.1:51008 laddr=127.0.0.1:23662 fd=12 name= age=52 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=4096 rbp=4096 obl=0 oll=0 omem=0 tot-mem=21504 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=80325190 tot-net-out=1612164 tot-cmds=8332
+6384:M 03 May 2025 23:07:36.732 # Background RDB transfer terminated by signal 30
+6384:signal-handler (1746281259) Received SIGTERM scheduling shutdown...
+6384:M 03 May 2025 23:07:39.135 * User requested shutdown...
+6384:M 03 May 2025 23:07:39.135 * Removing the pid file.
+6384:M 03 May 2025 23:07:39.135 * Removing the unix socket file.
+6384:M 03 May 2025 23:07:39.135 # Valkey is now ready to exit, bye bye...

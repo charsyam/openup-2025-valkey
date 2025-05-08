@@ -1,0 +1,57 @@
+### Starting server for test 
+91782:M 03 May 2025 23:04:42.892 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+91782:M 03 May 2025 23:04:42.895 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+91782:M 03 May 2025 23:04:42.896 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=91782, just started
+91782:M 03 May 2025 23:04:42.900 * Configuration loaded
+91782:M 03 May 2025 23:04:42.903 * Increased maximum number of open files to 10032 (it was originally set to 256).
+91782:M 03 May 2025 23:04:42.906 * monotonic clock: POSIX clock_gettime
+91782:M 03 May 2025 23:04:42.909 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 26132
+ |###|   .+###############+.   |###|    PID: 91782                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+91782:M 03 May 2025 23:04:42.916 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+91782:M 03 May 2025 23:04:42.931 * No cluster configuration found, I'm 842d431b17a8e6a6b16d99fb5a1c951acb77aced
+91782:M 03 May 2025 23:04:42.946 * Server initialized
+91782:M 03 May 2025 23:04:42.946 * Ready to accept connections tcp
+91782:M 03 May 2025 23:04:42.946 * Ready to accept connections unix
+91782:M 03 May 2025 23:04:43.027 - Accepted 127.0.0.1:63974
+91782:M 03 May 2025 23:04:43.030 - Client closed connection id=2 addr=127.0.0.1:63974 laddr=127.0.0.1:26132 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+91782:M 03 May 2025 23:04:43.038 - Accepted 127.0.0.1:63981
+91782:M 03 May 2025 23:04:43.318 # Missing implement of connection type tls
+91782:M 03 May 2025 23:04:43.363 - Accepting cluster node connection from 127.0.0.1:64060
+91782:M 03 May 2025 23:04:43.363 * IP address for this node updated to 127.0.0.1
+91782:M 03 May 2025 23:04:43.466 * configEpoch collision with node ab2b16f19c65cf7bac3f88e69394acb42b13c7a9 (). configEpoch set to 1
+91782:M 03 May 2025 23:04:43.559 * configEpoch collision with node 9ac8d03801e3bb16490d8613e61da76b7e2ee3e7 (). configEpoch set to 2
+91782:M 03 May 2025 23:04:43.565 - Accepting cluster node connection from 127.0.0.1:64110
+91782:M 03 May 2025 23:04:43.595 # DEBUG LOG: ========== I am primary 1 ==========
+91782:M 03 May 2025 23:04:44.979 * Cluster state changed: ok
+### Starting test Test cluster info stats for publish in tests/unit/cluster/pubsub.tcl
+### Starting test Check for memory leaks (pid 91853) in tests/unit/cluster/pubsub.tcl
+91782:M 03 May 2025 23:04:46.832 - Client closed connection id=3 addr=127.0.0.1:63981 laddr=127.0.0.1:26132 fd=14 name= age=3 idle=1 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=561 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=605 tot-net-out=6178 tot-cmds=19
+91782:M 03 May 2025 23:04:46.899 - Connection with Node ab2b16f19c65cf7bac3f88e69394acb42b13c7a9 at 127.0.0.1:36133 failed: Connection refused
+91782:M 03 May 2025 23:04:46.999 - Connection with Node ab2b16f19c65cf7bac3f88e69394acb42b13c7a9 at 127.0.0.1:36133 failed: Connection refused
+91782:M 03 May 2025 23:04:47.100 - Connection with Node ab2b16f19c65cf7bac3f88e69394acb42b13c7a9 at 127.0.0.1:36133 failed: Connection refused
+91782:M 03 May 2025 23:04:47.814 - Connection with Node ab2b16f19c65cf7bac3f88e69394acb42b13c7a9 at 127.0.0.1:36133 failed: Connection refused
+91782:signal-handler (1746281087) Received SIGTERM scheduling shutdown...
+91782:M 03 May 2025 23:04:47.915 * User requested shutdown...
+91782:M 03 May 2025 23:04:47.915 * Removing the pid file.
+91782:M 03 May 2025 23:04:47.915 * Saving the cluster configuration file before exiting.
+91782:M 03 May 2025 23:04:47.922 * Removing the unix socket file.
+91782:M 03 May 2025 23:04:47.922 # Valkey is now ready to exit, bye bye...

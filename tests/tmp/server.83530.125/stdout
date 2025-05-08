@@ -1,0 +1,93 @@
+### Starting server for test 
+14781:M 03 May 2025 23:08:44.460 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+14781:M 03 May 2025 23:08:44.460 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=14781, just started
+14781:M 03 May 2025 23:08:44.460 * Configuration loaded
+14781:M 03 May 2025 23:08:44.460 * Increased maximum number of open files to 10032 (it was originally set to 256).
+14781:M 03 May 2025 23:08:44.460 * monotonic clock: POSIX clock_gettime
+14781:M 03 May 2025 23:08:44.461 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23675
+ |###|   .+###############+.   |###|    PID: 14781                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+14781:M 03 May 2025 23:08:44.461 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+14781:M 03 May 2025 23:08:44.461 * Server initialized
+14781:M 03 May 2025 23:08:44.461 * Ready to accept connections tcp
+14781:M 03 May 2025 23:08:44.461 * Ready to accept connections unix
+14781:M 03 May 2025 23:08:44.586 - Accepted 127.0.0.1:64274
+14781:M 03 May 2025 23:08:44.586 - Client closed connection id=2 addr=127.0.0.1:64274 laddr=127.0.0.1:23675 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+14781:M 03 May 2025 23:08:44.599 - Accepted 127.0.0.1:64279
+### Starting test Psync established after RDB load - beyond grace period in tests/integration/dual-channel-replication.tcl
+14781:M 03 May 2025 23:08:44.808 - Accepted 127.0.0.1:64304
+14781:M 03 May 2025 23:08:44.809 * Replica 127.0.0.1:23676 asks for synchronization
+14781:M 03 May 2025 23:08:44.809 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'f508a4ac92489668e3df5a39c68bfe60178e70eb', my replication IDs are '05a689167b27734d418e0aa48a7fcf5a401e6fc6' and '0000000000000000000000000000000000000000')
+14781:M 03 May 2025 23:08:44.809 * Dual channel replication: Replica 127.0.0.1:23676 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+14781:M 03 May 2025 23:08:44.810 - Accepted 127.0.0.1:64305
+14781:M 03 May 2025 23:08:44.810 * Replica 127.0.0.1:23676 asks for synchronization
+14781:M 03 May 2025 23:08:44.810 * Replication backlog created, my new replication IDs are '19e72ba3e392251e888845711a0017383594b7ec' and '0000000000000000000000000000000000000000'
+14781:M 03 May 2025 23:08:44.810 * Starting BGSAVE for SYNC with target: replicas sockets using: dual-channel
+14781:M 03 May 2025 23:08:44.810 * Dual channel replication: Sending to replica 127.0.0.1:23676 RDB end offset 0 and client-id 5
+14781:M 03 May 2025 23:08:44.810 . Dual channel replication: Add rdb replica 127.0.0.1:23676 to waiting psync, with cid 5, no repl-backlog to track 
+14781:M 03 May 2025 23:08:44.812 * Background RDB transfer started by pid 14826 to direct socket to replica
+14781:M 03 May 2025 23:08:44.812 * Process is about to stop.
+14826:C 03 May 2025 23:08:44.812 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+14781:M 03 May 2025 23:08:44.861 * Process has been continued.
+14781:M 03 May 2025 23:08:44.862 - Client closed connection id=5 addr=127.0.0.1:64305 laddr=127.0.0.1:23675 fd=14 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=121 tot-net-out=5 tot-cmds=2
+14781:M 03 May 2025 23:08:44.862 - Accepted 127.0.0.1:64306
+14781:M 03 May 2025 23:08:44.863 - Dual channel replication: Postpone RDB client id=5 (127.0.0.1:23676) free for 2 seconds
+14781:M 03 May 2025 23:08:44.866 . Dual channel replication: Attach replica rdb client 5 to repl buf block
+14781:M 03 May 2025 23:08:44.867 * Background RDB transfer terminated with success
+14781:M 03 May 2025 23:08:44.867 * Streamed RDB transfer with replica 127.0.0.1:23676 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+14781:M 03 May 2025 23:08:44.867 * RDB transfer completed, rdb only replica (127.0.0.1:23676) should be disconnected asap
+14781:M 03 May 2025 23:08:47.000 * Dual channel replication: Replica main channel failed to establish PSYNC within the grace period (3 seconds). Freeing RDB client 5.
+14781:M 03 May 2025 23:08:47.000 * Dual channel replication: Replica 127.0.0.1:23676 rdb channel disconnected.
+14781:M 03 May 2025 23:08:47.000 . Dual channel replication: Remove psync waiting replica client id #5 with cid 5 from replicas rax.
+14781:M 03 May 2025 23:08:47.010 * Replica 127.0.0.1:23676 asks for synchronization
+14781:M 03 May 2025 23:08:47.010 * Unable to partial resync with replica 127.0.0.1:23676 for lack of backlog (Replica request was: 1).
+14781:M 03 May 2025 23:08:47.010 * Dual channel replication: Replica 127.0.0.1:23676 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+14781:M 03 May 2025 23:08:47.010 - Client closed connection id=4 addr=127.0.0.1:64304 laddr=127.0.0.1:23675 fd=13 name= age=3 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=388 tot-net-out=27 tot-cmds=7
+14781:M 03 May 2025 23:08:47.010 - Accepted 127.0.0.1:64642
+14781:M 03 May 2025 23:08:47.010 * Replica 127.0.0.1:23676 asks for synchronization
+14781:M 03 May 2025 23:08:47.010 * Full resync requested by replica 127.0.0.1:23676
+14781:M 03 May 2025 23:08:47.010 * Dual channel replication: Replica 127.0.0.1:23676 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+14781:M 03 May 2025 23:08:47.011 - Accepted 127.0.0.1:64643
+14781:M 03 May 2025 23:08:47.011 * Replica 127.0.0.1:23676 asks for synchronization
+14781:M 03 May 2025 23:08:47.011 * Starting BGSAVE for SYNC with target: replicas sockets using: dual-channel
+14781:M 03 May 2025 23:08:47.011 * Dual channel replication: Sending to replica 127.0.0.1:23676 RDB end offset 4004063 and client-id 8
+14781:M 03 May 2025 23:08:47.011 . Dual channel replication: Add rdb replica 127.0.0.1:23676 to waiting psync, with cid 8, tracking repl-backlog tail 
+14781:M 03 May 2025 23:08:47.013 * Background RDB transfer started by pid 15174 to direct socket to replica
+14781:M 03 May 2025 23:08:47.013 * Process is about to stop.
+### Starting test Check for memory leaks (pid 14800) in tests/integration/dual-channel-replication.tcl
+15174:C 03 May 2025 23:08:47.028 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+14781:signal-handler (1746281329) Received SIGTERM scheduling shutdown...
+14781:M 03 May 2025 23:08:49.743 * Process has been continued.
+14781:M 03 May 2025 23:08:49.743 * User requested shutdown...
+14781:M 03 May 2025 23:08:49.743 * Waiting for replicas before shutting down.
+14781:M 03 May 2025 23:08:49.743 * Background RDB transfer terminated with success
+14781:M 03 May 2025 23:08:49.743 * Streamed RDB transfer with replica 127.0.0.1:23676 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+14781:M 03 May 2025 23:08:49.743 * RDB transfer completed, rdb only replica (127.0.0.1:23676) should be disconnected asap
+14781:M 03 May 2025 23:08:49.743 - Dual channel replication: Postpone RDB client id=8 (127.0.0.1:23676) free for 2 seconds
+14781:M 03 May 2025 23:08:49.743 - Reading from client: Connection reset by peer
+14781:M 03 May 2025 23:08:49.743 - Client closed connection id=3 addr=127.0.0.1:64279 laddr=127.0.0.1:23675 fd=12 name= age=5 idle=2 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=926 tot-net-out=956 tot-cmds=20
+14781:M 03 May 2025 23:08:49.743 - Client closed connection id=7 addr=127.0.0.1:64642 laddr=127.0.0.1:23675 fd=13 name= age=2 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=5 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=280 tot-net-out=27 tot-cmds=6
+14781:M 03 May 2025 23:08:50.046 * Dual channel replication: Replica main channel failed to establish PSYNC within the grace period (3 seconds). Freeing RDB client 8.
+14781:M 03 May 2025 23:08:50.046 * Dual channel replication: Replica 127.0.0.1:23676 rdb channel disconnected.
+14781:M 03 May 2025 23:08:50.046 . Dual channel replication: Remove psync waiting replica client id #8 with cid 8 from replicas rax.
+14781:M 03 May 2025 23:08:50.146 * Removing the pid file.
+14781:M 03 May 2025 23:08:50.146 * Removing the unix socket file.
+14781:M 03 May 2025 23:08:50.147 # Valkey is now ready to exit, bye bye...

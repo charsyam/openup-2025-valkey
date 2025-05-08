@@ -1,0 +1,40 @@
+### Starting server for test replication child dies when parent is killed - diskless: yes dual-channel-replication-enabled: yes in tests/integration/replication.tcl
+18684:M 03 May 2025 23:10:01.008 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+18684:M 03 May 2025 23:10:01.008 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=18684, just started
+18684:M 03 May 2025 23:10:01.008 * Configuration loaded
+18684:M 03 May 2025 23:10:01.008 * Increased maximum number of open files to 10032 (it was originally set to 256).
+18684:M 03 May 2025 23:10:01.008 * monotonic clock: POSIX clock_gettime
+18684:M 03 May 2025 23:10:01.009 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27692
+ |###|   .+###############+.   |###|    PID: 18684                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+18684:M 03 May 2025 23:10:01.009 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+18684:M 03 May 2025 23:10:01.009 * Server initialized
+18684:M 03 May 2025 23:10:01.009 * Ready to accept connections tcp
+18684:M 03 May 2025 23:10:01.009 * Ready to accept connections unix
+18684:M 03 May 2025 23:10:01.129 - Accepted 127.0.0.1:50399
+18684:M 03 May 2025 23:10:01.129 - Client closed connection id=2 addr=127.0.0.1:50399 laddr=127.0.0.1:27692 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+18684:M 03 May 2025 23:10:01.138 - Accepted 127.0.0.1:50400
+18684:M 03 May 2025 23:10:01.293 - Accepted 127.0.0.1:50403
+18684:M 03 May 2025 23:10:01.293 * Replica 127.0.0.1:27693 asks for synchronization
+18684:M 03 May 2025 23:10:01.293 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '39e551f5df3cffec053cce20e56b8d5da0c7bce4', my replication IDs are 'f0b81b62a63ca0de6eeaffc32772115fe04ab7b0' and '0000000000000000000000000000000000000000')
+18684:M 03 May 2025 23:10:01.293 * Replication backlog created, my new replication IDs are '07abf32522a659fa1ebcc435ee43a7dec5dda58f' and '0000000000000000000000000000000000000000'
+18684:M 03 May 2025 23:10:01.293 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+18684:M 03 May 2025 23:10:01.293 * Background RDB transfer started by pid 18703 to pipe through parent process

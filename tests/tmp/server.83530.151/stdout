@@ -1,0 +1,51 @@
+### Starting server for test 
+17209:M 03 May 2025 23:09:30.035 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+17209:M 03 May 2025 23:09:30.035 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=17209, just started
+17209:M 03 May 2025 23:09:30.035 * Configuration loaded
+17209:M 03 May 2025 23:09:30.035 * Increased maximum number of open files to 10032 (it was originally set to 256).
+17209:M 03 May 2025 23:09:30.035 * monotonic clock: POSIX clock_gettime
+17209:M 03 May 2025 23:09:30.035 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23688
+ |###|   .+###############+.   |###|    PID: 17209                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+17209:M 03 May 2025 23:09:30.036 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+17209:M 03 May 2025 23:09:30.036 * Server initialized
+17209:M 03 May 2025 23:09:30.036 * Ready to accept connections tcp
+17209:M 03 May 2025 23:09:30.036 * Ready to accept connections unix
+17209:M 03 May 2025 23:09:30.163 - Accepted 127.0.0.1:50189
+17209:M 03 May 2025 23:09:30.163 - Client closed connection id=2 addr=127.0.0.1:50189 laddr=127.0.0.1:23688 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+17209:M 03 May 2025 23:09:30.173 - Accepted 127.0.0.1:50190
+### Starting test Test replica unable to join dual channel replication sync after started in tests/integration/dual-channel-replication.tcl
+17209:S 03 May 2025 23:09:30.280 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+17209:S 03 May 2025 23:09:30.280 * Connecting to PRIMARY 127.0.0.1:23686
+17209:S 03 May 2025 23:09:30.280 * PRIMARY <-> REPLICA sync started
+17209:S 03 May 2025 23:09:30.280 * REPLICAOF 127.0.0.1:23686 enabled (user request from 'id=3 addr=127.0.0.1:50190 laddr=127.0.0.1:23688 fd=12 name= user=default lib-name= lib-ver=')
+17209:S 03 May 2025 23:09:30.280 * Non blocking connect for SYNC fired the event.
+17209:S 03 May 2025 23:09:30.280 * Primary replied to PING, replication can continue...
+17209:S 03 May 2025 23:09:30.281 * Trying a partial resynchronization (request b65882f78e2b80b3b9821dafe482da2149cf50f0:1).
+17209:S 03 May 2025 23:09:30.281 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+17209:S 03 May 2025 23:09:30.281 . Dual channel replication: Received first reply from primary using rdb connection.
+17209:S 03 May 2025 23:09:30.291 - Client closed connection id=3 addr=127.0.0.1:50190 laddr=127.0.0.1:23688 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=5 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=replicaof user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=243 tot-net-out=25 tot-cmds=5
+17209:S 03 May 2025 23:09:31.453 . Dual channel replication: Received empty $ENDOFF response
+17209:signal-handler (1746281371) Received SIGTERM scheduling shutdown...
+17209:S 03 May 2025 23:09:31.554 * User requested shutdown...
+17209:S 03 May 2025 23:09:31.554 * Removing the pid file.
+17209:S 03 May 2025 23:09:31.554 * Removing the unix socket file.
+17209:S 03 May 2025 23:09:31.554 # Valkey is now ready to exit, bye bye...

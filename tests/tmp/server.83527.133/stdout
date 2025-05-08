@@ -1,0 +1,195 @@
+### Starting server for test 
+13558:M 03 May 2025 23:08:21.429 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+13558:M 03 May 2025 23:08:21.429 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+13558:M 03 May 2025 23:08:21.429 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=13558, just started
+13558:M 03 May 2025 23:08:21.429 * Configuration loaded
+13558:M 03 May 2025 23:08:21.430 * Increased maximum number of open files to 10032 (it was originally set to 256).
+13558:M 03 May 2025 23:08:21.430 * monotonic clock: POSIX clock_gettime
+13558:M 03 May 2025 23:08:21.430 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 22177
+ |###|   .+###############+.   |###|    PID: 13558                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+13558:M 03 May 2025 23:08:21.430 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+13558:M 03 May 2025 23:08:21.430 * No cluster configuration found, I'm 7b53909de5a5b513285c63c633eb24bd2b5c5271
+13558:M 03 May 2025 23:08:21.439 * Server initialized
+13558:M 03 May 2025 23:08:21.439 * Ready to accept connections tcp
+13558:M 03 May 2025 23:08:21.439 * Ready to accept connections unix
+13558:M 03 May 2025 23:08:21.572 - Accepted 127.0.0.1:63336
+13558:M 03 May 2025 23:08:21.572 - Client closed connection id=2 addr=127.0.0.1:63336 laddr=127.0.0.1:22177 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+13558:M 03 May 2025 23:08:21.588 - Accepted 127.0.0.1:63337
+13558:M 03 May 2025 23:08:22.176 - Accepting cluster node connection from 127.0.0.1:63444
+13558:M 03 May 2025 23:08:22.176 * IP address for this node updated to 127.0.0.1
+13558:M 03 May 2025 23:08:22.306 - Accepting cluster node connection from 127.0.0.1:63457
+13558:M 03 May 2025 23:08:22.628 - Accepting cluster node connection from 127.0.0.1:63484
+13558:M 03 May 2025 23:08:22.856 # Missing implement of connection type tls
+13558:M 03 May 2025 23:08:23.313 * configEpoch collision with node d3351edf56071833fdfa41e60870359aab92f2fe (). configEpoch set to 3
+13558:S 03 May 2025 23:08:23.344 * Connecting to PRIMARY 127.0.0.1:22180
+13558:S 03 May 2025 23:08:23.344 * PRIMARY <-> REPLICA sync started
+13558:S 03 May 2025 23:08:23.344 * Cluster state changed: ok
+13558:S 03 May 2025 23:08:23.344 * Non blocking connect for SYNC fired the event.
+13558:S 03 May 2025 23:08:23.345 * Primary replied to PING, replication can continue...
+13558:S 03 May 2025 23:08:23.345 * Partial resynchronization not possible (no cached primary)
+13558:S 03 May 2025 23:08:23.345 * Full resync from primary: a7ead21bb142f401c918fbdac0d265858b4a6274:0
+13558:S 03 May 2025 23:08:23.345 # DEBUG LOG: ========== I am replica 3 ==========
+13558:S 03 May 2025 23:08:23.346 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+13558:S 03 May 2025 23:08:23.349 * PRIMARY <-> REPLICA sync: Flushing old data
+13558:S 03 May 2025 23:08:23.350 * PRIMARY <-> REPLICA sync: Loading DB in memory
+13558:S 03 May 2025 23:08:23.350 * Loading RDB produced by Valkey version 255.255.255
+13558:S 03 May 2025 23:08:23.350 * RDB age 0 seconds
+13558:S 03 May 2025 23:08:23.350 * RDB memory usage when created 2.92 Mb
+13558:S 03 May 2025 23:08:23.350 * Done loading RDB, keys loaded: 0, keys expired: 0.
+13558:S 03 May 2025 23:08:23.350 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test Manual failover will reset the on-going election in tests/unit/cluster/manual-failover.tcl
+13558:S 03 May 2025 23:08:32.343 * Manual failover user request accepted (user request from 'id=3 addr=127.0.0.1:63337 laddr=127.0.0.1:22177 fd=14 name= user=default lib-name= lib-ver=').
+13558:S 03 May 2025 23:08:32.343 * Received replication offset for paused primary manual failover: 14
+13558:S 03 May 2025 23:08:32.343 * All primary replication stream processed, manual failover can start.
+13558:S 03 May 2025 23:08:32.343 * Start of election delayed for 0 milliseconds (rank #0, primary rank #0, offset 14).
+13558:S 03 May 2025 23:08:32.343 * Starting a failover election for epoch 4, node config epoch is 1
+13558:S 03 May 2025 23:08:32.353 * Currently unable to failover: Waiting for votes, but majority still not reached.
+13558:S 03 May 2025 23:08:32.353 * Needed quorum: 2. Number of votes received so far: 1
+13558:S 03 May 2025 23:08:33.048 * Currently unable to failover: Waiting for votes, but majority still not reached.
+13558:S 03 May 2025 23:08:33.048 * Needed quorum: 2. Number of votes received so far: 1
+13558:S 03 May 2025 23:08:34.057 * Currently unable to failover: Waiting for votes, but majority still not reached.
+13558:S 03 May 2025 23:08:34.057 * Needed quorum: 2. Number of votes received so far: 1
+13558:S 03 May 2025 23:08:35.066 * Currently unable to failover: Waiting for votes, but majority still not reached.
+13558:S 03 May 2025 23:08:35.066 * Needed quorum: 2. Number of votes received so far: 1
+13558:S 03 May 2025 23:08:36.073 * Currently unable to failover: Waiting for votes, but majority still not reached.
+13558:S 03 May 2025 23:08:36.073 * Needed quorum: 2. Number of votes received so far: 1
+13558:S 03 May 2025 23:08:37.083 * Currently unable to failover: Waiting for votes, but majority still not reached.
+13558:S 03 May 2025 23:08:37.083 * Needed quorum: 2. Number of votes received so far: 1
+13558:S 03 May 2025 23:08:37.386 # Manual failover timed out.
+13558:S 03 May 2025 23:08:37.470 * Manual failover user request accepted (user request from 'id=3 addr=127.0.0.1:63337 laddr=127.0.0.1:22177 fd=14 name= user=default lib-name= lib-ver=').
+13558:S 03 May 2025 23:08:37.470 * Received replication offset for paused primary manual failover: 14
+13558:S 03 May 2025 23:08:37.470 # Failover election in progress for epoch 4, but received a new manual failover. Resetting the election.
+13558:S 03 May 2025 23:08:37.470 * All primary replication stream processed, manual failover can start.
+13558:S 03 May 2025 23:08:37.470 * Start of election delayed for 0 milliseconds (rank #0, primary rank #0, offset 14).
+13558:S 03 May 2025 23:08:37.470 * Starting a failover election for epoch 5, node config epoch is 1
+13558:S 03 May 2025 23:08:37.489 * Failover election won: I'm the new primary.
+13558:S 03 May 2025 23:08:37.489 * configEpoch set to 5 after successful failover
+13558:S 03 May 2025 23:08:37.489 * Setting myself to primary in shard e767fc989d7d6c8fb29a85dd3dcf458da6b6481f after failover; my old primary is cf02de8b24f35eb538ab74e616c86f39a0edc2b6 ()
+13558:M 03 May 2025 23:08:37.489 * Connection with primary lost.
+13558:M 03 May 2025 23:08:37.489 * Caching the disconnected primary state.
+13558:M 03 May 2025 23:08:37.489 * Discarding previously cached primary state.
+13558:M 03 May 2025 23:08:37.489 * Setting secondary replication ID to a7ead21bb142f401c918fbdac0d265858b4a6274, valid up to offset: 15. New replication ID is d9f25319ce86ad9ea5d54b3ae33454a3f6dca7c3
+13558:M 03 May 2025 23:08:37.494 - Accepted 127.0.0.1:63750
+13558:M 03 May 2025 23:08:37.506 - Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 has old slots configuration, sending an UPDATE message about 7b53909de5a5b513285c63c633eb24bd2b5c5271
+13558:M 03 May 2025 23:08:37.509 * A failover occurred in shard e767fc989d7d6c8fb29a85dd3dcf458da6b6481f; node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 () failed over to node 7b53909de5a5b513285c63c633eb24bd2b5c5271 () with a config epoch of 5
+13558:M 03 May 2025 23:08:37.509 * Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 () is now a replica of node 7b53909de5a5b513285c63c633eb24bd2b5c5271 () in shard e767fc989d7d6c8fb29a85dd3dcf458da6b6481f
+13558:M 03 May 2025 23:08:37.509 * Replica 127.0.0.1:22180 asks for synchronization
+13558:M 03 May 2025 23:08:37.509 * Partial resynchronization request from 127.0.0.1:22180 accepted. Sending 0 bytes of backlog starting from offset 15.
+### Starting test Check for memory leaks (pid 13656) in tests/unit/cluster/manual-failover.tcl
+13558:M 03 May 2025 23:08:38.928 - Client closed connection id=15 addr=127.0.0.1:63750 laddr=127.0.0.1:22177 fd=21 name= age=1 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=333 tot-net-out=27 tot-cmds=6
+13558:M 03 May 2025 23:08:38.928 * Connection with replica 127.0.0.1:22180 lost.
+### Starting test Check for memory leaks (pid 13609) in tests/unit/cluster/manual-failover.tcl
+13558:M 03 May 2025 23:08:39.002 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:39.104 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:39.205 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:39.306 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:39.407 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:39.508 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:39.608 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:39.709 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:39.810 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:39.912 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:40.019 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:40.117 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:40.218 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:40.319 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:40.421 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:40.425 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+### Starting test Check for memory leaks (pid 13581) in tests/unit/cluster/manual-failover.tcl
+13558:M 03 May 2025 23:08:40.522 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:40.522 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:40.623 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:40.623 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:40.724 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:40.724 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:40.825 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:40.825 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:40.925 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:40.926 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:41.026 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:41.026 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:41.126 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:41.126 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:41.227 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:41.227 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:41.328 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:41.328 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:41.429 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:41.429 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:41.530 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:41.530 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:41.631 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:41.631 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:41.732 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:41.732 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:41.833 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:41.833 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:41.934 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:41.934 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:42.035 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:42.035 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:42.136 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:42.136 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:42.236 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:42.236 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:42.337 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:42.337 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:42.430 - Client closed connection id=3 addr=127.0.0.1:63337 laddr=127.0.0.1:22177 fd=14 name= age=21 idle=5 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=833 tot-net-out=24881 tot-cmds=27
+13558:M 03 May 2025 23:08:42.438 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:42.438 - Connection with Node 313e69edba26cebb02b2799cd6f82e643770baea at 127.0.0.1:32178 failed: Connection refused
+13558:M 03 May 2025 23:08:42.438 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:42.538 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:42.539 - Connection with Node 313e69edba26cebb02b2799cd6f82e643770baea at 127.0.0.1:32178 failed: Connection refused
+13558:M 03 May 2025 23:08:42.539 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:42.640 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:42.640 - Connection with Node 313e69edba26cebb02b2799cd6f82e643770baea at 127.0.0.1:32178 failed: Connection refused
+13558:M 03 May 2025 23:08:42.640 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:42.741 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:42.741 - Connection with Node 313e69edba26cebb02b2799cd6f82e643770baea at 127.0.0.1:32178 failed: Connection refused
+13558:M 03 May 2025 23:08:42.741 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:42.842 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:42.842 - Connection with Node 313e69edba26cebb02b2799cd6f82e643770baea at 127.0.0.1:32178 failed: Connection refused
+13558:M 03 May 2025 23:08:42.842 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:42.943 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:42.943 - Connection with Node 313e69edba26cebb02b2799cd6f82e643770baea at 127.0.0.1:32178 failed: Connection refused
+13558:M 03 May 2025 23:08:42.943 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:43.044 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:43.044 - Connection with Node 313e69edba26cebb02b2799cd6f82e643770baea at 127.0.0.1:32178 failed: Connection refused
+13558:M 03 May 2025 23:08:43.044 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:43.145 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:43.145 - Connection with Node 313e69edba26cebb02b2799cd6f82e643770baea at 127.0.0.1:32178 failed: Connection refused
+13558:M 03 May 2025 23:08:43.145 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:43.246 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:43.246 - Connection with Node 313e69edba26cebb02b2799cd6f82e643770baea at 127.0.0.1:32178 failed: Connection refused
+13558:M 03 May 2025 23:08:43.246 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:43.347 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:43.347 - Connection with Node 313e69edba26cebb02b2799cd6f82e643770baea at 127.0.0.1:32178 failed: Connection refused
+13558:M 03 May 2025 23:08:43.347 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:M 03 May 2025 23:08:44.498 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13558:M 03 May 2025 23:08:44.498 - Connection with Node 313e69edba26cebb02b2799cd6f82e643770baea at 127.0.0.1:32178 failed: Connection refused
+13558:M 03 May 2025 23:08:44.498 - Connection with Node d3351edf56071833fdfa41e60870359aab92f2fe at 127.0.0.1:32179 failed: Connection refused
+13558:signal-handler (1746281324) Received SIGTERM scheduling shutdown...
+13558:M 03 May 2025 23:08:44.599 * User requested shutdown...
+13558:M 03 May 2025 23:08:44.599 * Removing the pid file.
+13558:M 03 May 2025 23:08:44.599 * Saving the cluster configuration file before exiting.
+13558:M 03 May 2025 23:08:44.607 * Removing the unix socket file.
+13558:M 03 May 2025 23:08:44.607 # Valkey is now ready to exit, bye bye...

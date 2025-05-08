@@ -1,0 +1,72 @@
+### Starting server for test 
+83566:M 03 May 2025 23:03:40.913 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+83566:M 03 May 2025 23:03:40.913 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=83566, just started
+83566:M 03 May 2025 23:03:40.913 * Configuration loaded
+83566:M 03 May 2025 23:03:40.913 * Increased maximum number of open files to 10032 (it was originally set to 256).
+83566:M 03 May 2025 23:03:40.914 * monotonic clock: POSIX clock_gettime
+83566:M 03 May 2025 23:03:40.914 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23111
+ |###|   .+###############+.   |###|    PID: 83566                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+83566:M 03 May 2025 23:03:40.914 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+83566:M 03 May 2025 23:03:40.916 * Server initialized
+83566:M 03 May 2025 23:03:40.916 * Ready to accept connections tcp
+83566:M 03 May 2025 23:03:40.916 * Ready to accept connections unix
+83566:M 03 May 2025 23:03:40.941 - Accepted 127.0.0.1:58707
+83566:M 03 May 2025 23:03:40.941 - Client closed connection id=2 addr=127.0.0.1:58707 laddr=127.0.0.1:23111 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+83566:M 03 May 2025 23:03:40.958 - Accepted 127.0.0.1:58716
+83566:M 03 May 2025 23:03:40.960 - Accepted 127.0.0.1:58717
+### Starting test Test basic multiple selectors in tests/unit/acl-v2.tcl
+### Starting test Test ACL selectors by default have no permissions in tests/unit/acl-v2.tcl
+### Starting test Test deleting selectors in tests/unit/acl-v2.tcl
+### Starting test Test selector syntax error reports the error in the selector context in tests/unit/acl-v2.tcl
+### Starting test Test flexible selector definition in tests/unit/acl-v2.tcl
+### Starting test Test separate read permission in tests/unit/acl-v2.tcl
+### Starting test Test separate write permission in tests/unit/acl-v2.tcl
+### Starting test Test separate read and write permissions in tests/unit/acl-v2.tcl
+### Starting test Validate read and write permissions format in tests/unit/acl-v2.tcl
+### Starting test Validate key permissions format - empty and omitted pattern in tests/unit/acl-v2.tcl
+### Starting test Test separate read and write permissions on different selectors are not additive in tests/unit/acl-v2.tcl
+### Starting test Test SET with separate read permission in tests/unit/acl-v2.tcl
+### Starting test Test SET with separate write permission in tests/unit/acl-v2.tcl
+### Starting test Test SET with read and write permissions in tests/unit/acl-v2.tcl
+### Starting test Test BITFIELD with separate read permission in tests/unit/acl-v2.tcl
+### Starting test Test BITFIELD with separate write permission in tests/unit/acl-v2.tcl
+### Starting test Test BITFIELD with read and write permissions in tests/unit/acl-v2.tcl
+### Starting test Test ACL log correctly identifies the relevant item when selectors are used in tests/unit/acl-v2.tcl
+### Starting test Test ACL GETUSER response information in tests/unit/acl-v2.tcl
+### Starting test Test ACL list idempotency in tests/unit/acl-v2.tcl
+### Starting test Test R+W is the same as all permissions in tests/unit/acl-v2.tcl
+### Starting test Test basic dry run functionality in tests/unit/acl-v2.tcl
+### Starting test Test various commands for command permissions in tests/unit/acl-v2.tcl
+### Starting test Test various odd commands for key permissions in tests/unit/acl-v2.tcl
+### Starting test Existence test commands are not marked as access in tests/unit/acl-v2.tcl
+### Starting test Intersection cardinaltiy commands are access commands in tests/unit/acl-v2.tcl
+### Starting test Test general keyspace commands require some type of permission to execute in tests/unit/acl-v2.tcl
+### Starting test Cardinality commands require some type of permission to execute in tests/unit/acl-v2.tcl
+### Starting test Test sharded channel permissions in tests/unit/acl-v2.tcl
+### Starting test Test sort with ACL permissions in tests/unit/acl-v2.tcl
+### Starting test Test DRYRUN with wrong number of arguments in tests/unit/acl-v2.tcl
+83566:M 03 May 2025 23:03:41.039 - Client closed connection id=3 addr=127.0.0.1:58716 laddr=127.0.0.1:23111 fd=12 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=81 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=acl|dryrun user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=15128 tot-net-out=13320 tot-cmds=189
+83566:signal-handler (1746281025) Received SIGTERM scheduling shutdown...
+83566:M 03 May 2025 23:03:46.059 * User requested shutdown...
+83566:M 03 May 2025 23:03:46.060 * Removing the pid file.
+83566:M 03 May 2025 23:03:46.060 * Removing the unix socket file.
+83566:M 03 May 2025 23:03:46.060 # Valkey is now ready to exit, bye bye...

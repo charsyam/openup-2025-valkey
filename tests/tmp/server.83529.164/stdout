@@ -1,0 +1,84 @@
+### Starting server for test 
+16560:M 03 May 2025 23:09:20.880 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+16560:M 03 May 2025 23:09:20.880 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+16560:M 03 May 2025 23:09:20.880 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=16560, just started
+16560:M 03 May 2025 23:09:20.880 * Configuration loaded
+16560:M 03 May 2025 23:09:20.881 * Increased maximum number of open files to 10032 (it was originally set to 256).
+16560:M 03 May 2025 23:09:20.881 * monotonic clock: POSIX clock_gettime
+16560:M 03 May 2025 23:09:20.881 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 23192
+ |###|   .+###############+.   |###|    PID: 16560                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+16560:M 03 May 2025 23:09:20.881 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+16560:M 03 May 2025 23:09:20.881 * No cluster configuration found, I'm d48dff17e79da324dc167849dec024763412e72e
+16560:M 03 May 2025 23:09:20.888 * Server initialized
+16560:M 03 May 2025 23:09:20.888 * Ready to accept connections tcp
+16560:M 03 May 2025 23:09:20.888 * Ready to accept connections unix
+16560:M 03 May 2025 23:09:21.004 - Accepted 127.0.0.1:50065
+16560:M 03 May 2025 23:09:21.005 - Client closed connection id=2 addr=127.0.0.1:50065 laddr=127.0.0.1:23192 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+16560:M 03 May 2025 23:09:21.013 - Accepted 127.0.0.1:50066
+16560:M 03 May 2025 23:09:21.386 - Accepting cluster node connection from 127.0.0.1:50072
+16560:M 03 May 2025 23:09:21.386 * IP address for this node updated to 127.0.0.1
+16560:M 03 May 2025 23:09:21.495 * Successfully completed handshake with 858ee6a7fb1bdcfdda7ec3eef89be489b6bd18a6 ()
+16560:M 03 May 2025 23:09:21.541 - Accepting cluster node connection from 127.0.0.1:50081
+16560:M 03 May 2025 23:09:21.745 # Missing implement of connection type tls
+16560:M 03 May 2025 23:09:21.745 # DEBUG LOG: ========== I am primary 2 ==========
+16560:M 03 May 2025 23:09:22.901 * Cluster state changed: ok
+### Starting test Empty primary will check and delete the dirty slots in tests/unit/cluster/replica-migration.tcl
+16560:M 03 May 2025 23:09:23.298 * Slot 0 is migrated from node d48dff17e79da324dc167849dec024763412e72e () in shard 3bb586c4c16208552624d4248d87d83ae75b5be9 to node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd () in shard 6aa3a5cd6917d5005b2be7f18698a3f37ce51268.
+16560:M 03 May 2025 23:09:23.298 * My last slot was migrated to node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd () in shard 6aa3a5cd6917d5005b2be7f18698a3f37ce51268. I am now an empty primary.
+16560:M 03 May 2025 23:09:23.298 * Deleting keys in dirty slot 0 on node d48dff17e79da324dc167849dec024763412e72e () in shard 3bb586c4c16208552624d4248d87d83ae75b5be9
+### Starting test Check for memory leaks (pid 16601) in tests/unit/cluster/replica-migration.tcl
+16560:M 03 May 2025 23:09:24.921 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+### Starting test Check for memory leaks (pid 16581) in tests/unit/cluster/replica-migration.tcl
+16560:M 03 May 2025 23:09:25.022 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:25.124 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:25.225 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:25.326 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:25.426 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:25.527 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:25.628 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:25.729 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:25.830 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:25.931 * NODE 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd () possibly failing.
+16560:M 03 May 2025 23:09:25.932 # Cluster state changed: fail
+16560:M 03 May 2025 23:09:25.932 # Cluster is currently down: I am part of a minority partition.
+16560:M 03 May 2025 23:09:25.932 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:26.032 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:26.134 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:26.235 * NODE 858ee6a7fb1bdcfdda7ec3eef89be489b6bd18a6 () possibly failing.
+16560:M 03 May 2025 23:09:26.235 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:26.336 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:26.400 - Client closed connection id=3 addr=127.0.0.1:50066 laddr=127.0.0.1:23192 fd=14 name= age=5 idle=3 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=dbsize user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=364 tot-net-out=2655 tot-cmds=10
+16560:M 03 May 2025 23:09:26.438 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:26.438 - Connection with Node 858ee6a7fb1bdcfdda7ec3eef89be489b6bd18a6 at 127.0.0.1:33193 failed: Connection refused
+16560:M 03 May 2025 23:09:26.539 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:26.539 - Connection with Node 858ee6a7fb1bdcfdda7ec3eef89be489b6bd18a6 at 127.0.0.1:33193 failed: Connection refused
+16560:M 03 May 2025 23:09:26.640 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:26.640 - Connection with Node 858ee6a7fb1bdcfdda7ec3eef89be489b6bd18a6 at 127.0.0.1:33193 failed: Connection refused
+16560:M 03 May 2025 23:09:27.653 * NODE 858ee6a7fb1bdcfdda7ec3eef89be489b6bd18a6 () possibly failing.
+16560:M 03 May 2025 23:09:27.653 - Connection with Node 9fb2b4e075bb21d5f2c8818df84f1dc9c34f2dcd at 127.0.0.1:33194 failed: Connection refused
+16560:M 03 May 2025 23:09:27.653 - Connection with Node 858ee6a7fb1bdcfdda7ec3eef89be489b6bd18a6 at 127.0.0.1:33193 failed: Connection refused
+16560:signal-handler (1746281367) Received SIGTERM scheduling shutdown...
+16560:M 03 May 2025 23:09:27.754 * User requested shutdown...
+16560:M 03 May 2025 23:09:27.754 * Removing the pid file.
+16560:M 03 May 2025 23:09:27.754 * Saving the cluster configuration file before exiting.
+16560:M 03 May 2025 23:09:27.762 * Removing the unix socket file.
+16560:M 03 May 2025 23:09:27.762 # Valkey is now ready to exit, bye bye...

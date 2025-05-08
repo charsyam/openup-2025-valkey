@@ -1,0 +1,64 @@
+### Starting server for test 
+13609:M 03 May 2025 23:08:21.791 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+13609:M 03 May 2025 23:08:21.791 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+13609:M 03 May 2025 23:08:21.791 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=13609, just started
+13609:M 03 May 2025 23:08:21.791 * Configuration loaded
+13609:M 03 May 2025 23:08:21.792 * Increased maximum number of open files to 10032 (it was originally set to 256).
+13609:M 03 May 2025 23:08:21.792 * monotonic clock: POSIX clock_gettime
+13609:M 03 May 2025 23:08:21.792 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 22179
+ |###|   .+###############+.   |###|    PID: 13609                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+13609:M 03 May 2025 23:08:21.792 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+13609:M 03 May 2025 23:08:21.792 * No cluster configuration found, I'm d3351edf56071833fdfa41e60870359aab92f2fe
+13609:M 03 May 2025 23:08:21.799 * Server initialized
+13609:M 03 May 2025 23:08:21.799 * Ready to accept connections tcp
+13609:M 03 May 2025 23:08:21.799 * Ready to accept connections unix
+13609:M 03 May 2025 23:08:21.921 - Accepted 127.0.0.1:63390
+13609:M 03 May 2025 23:08:21.922 - Client closed connection id=2 addr=127.0.0.1:63390 laddr=127.0.0.1:22179 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+13609:M 03 May 2025 23:08:21.933 - Accepted 127.0.0.1:63398
+13609:M 03 May 2025 23:08:22.140 # Missing implement of connection type tls
+13609:M 03 May 2025 23:08:22.176 - Accepting cluster node connection from 127.0.0.1:63446
+13609:M 03 May 2025 23:08:22.176 * IP address for this node updated to 127.0.0.1
+13609:M 03 May 2025 23:08:22.306 * Successfully completed handshake with 7b53909de5a5b513285c63c633eb24bd2b5c5271 ()
+13609:M 03 May 2025 23:08:22.348 - Accepting cluster node connection from 127.0.0.1:63465
+13609:M 03 May 2025 23:08:22.628 - Accepting cluster node connection from 127.0.0.1:63483
+13609:M 03 May 2025 23:08:23.344 * Node 7b53909de5a5b513285c63c633eb24bd2b5c5271 () is no longer primary of shard 8616842a1586b9a5978f8c91c48da996753cac11; removed all 0 slot(s) it used to own
+13609:M 03 May 2025 23:08:23.344 * Node 7b53909de5a5b513285c63c633eb24bd2b5c5271 () is now part of shard e767fc989d7d6c8fb29a85dd3dcf458da6b6481f
+13609:M 03 May 2025 23:08:23.344 * Node 7b53909de5a5b513285c63c633eb24bd2b5c5271 () is now a replica of node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 () in shard e767fc989d7d6c8fb29a85dd3dcf458da6b6481f
+13609:M 03 May 2025 23:08:23.345 # DEBUG LOG: ========== I am primary 1 ==========
+13609:M 03 May 2025 23:08:23.818 * Cluster state changed: ok
+### Starting test Manual failover will reset the on-going election in tests/unit/cluster/manual-failover.tcl
+13609:M 03 May 2025 23:08:32.343 # Dropping packet of type auth-req that matches debug drop filter
+13609:M 03 May 2025 23:08:37.470 * Failover auth granted to 7b53909de5a5b513285c63c633eb24bd2b5c5271 () for epoch 5
+13609:M 03 May 2025 23:08:37.509 * A failover occurred in shard e767fc989d7d6c8fb29a85dd3dcf458da6b6481f; node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 () failed over to node 7b53909de5a5b513285c63c633eb24bd2b5c5271 () with a config epoch of 5
+13609:M 03 May 2025 23:08:37.509 * Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 () is now a replica of node 7b53909de5a5b513285c63c633eb24bd2b5c5271 () in shard e767fc989d7d6c8fb29a85dd3dcf458da6b6481f
+### Starting test Check for memory leaks (pid 13656) in tests/unit/cluster/manual-failover.tcl
+13609:M 03 May 2025 23:08:38.950 - Client closed connection id=3 addr=127.0.0.1:63398 laddr=127.0.0.1:22179 fd=14 name= age=17 idle=1 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=5 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1601 tot-net-out=25128 tot-cmds=52
+13609:M 03 May 2025 23:08:38.952 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13609:M 03 May 2025 23:08:39.053 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13609:M 03 May 2025 23:08:39.154 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13609:M 03 May 2025 23:08:40.244 - Connection with Node cf02de8b24f35eb538ab74e616c86f39a0edc2b6 at 127.0.0.1:32180 failed: Connection refused
+13609:signal-handler (1746281320) Received SIGTERM scheduling shutdown...
+13609:M 03 May 2025 23:08:40.344 * User requested shutdown...
+13609:M 03 May 2025 23:08:40.344 * Removing the pid file.
+13609:M 03 May 2025 23:08:40.344 * Saving the cluster configuration file before exiting.
+13609:M 03 May 2025 23:08:40.352 * Removing the unix socket file.
+13609:M 03 May 2025 23:08:40.352 # Valkey is now ready to exit, bye bye...

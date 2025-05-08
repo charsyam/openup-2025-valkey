@@ -1,0 +1,48 @@
+### Restarting server for test Fuzzer corrupt restore payloads - sanitize_dump: no in tests/integration/corrupt-dump-fuzzer.tcl
+10518:M 03 May 2025 23:07:34.332 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+10518:M 03 May 2025 23:07:34.332 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=10518, just started
+10518:M 03 May 2025 23:07:34.332 * Configuration loaded
+10518:M 03 May 2025 23:07:34.332 * Increased maximum number of open files to 10032 (it was originally set to 256).
+10518:M 03 May 2025 23:07:34.332 * monotonic clock: POSIX clock_gettime
+10518:M 03 May 2025 23:07:34.332 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21169
+ |###|   .+###############+.   |###|    PID: 10518                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+10518:M 03 May 2025 23:07:34.333 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+10518:M 03 May 2025 23:07:34.333 * Server initialized
+10518:M 03 May 2025 23:07:34.333 * Loading RDB produced by Valkey version 255.255.255
+10518:M 03 May 2025 23:07:34.333 * RDB age 6 seconds
+10518:M 03 May 2025 23:07:34.333 * RDB memory usage when created 1.46 Mb
+10518:M 03 May 2025 23:07:34.333 * Done loading RDB, keys loaded: 12, keys expired: 0.
+10518:M 03 May 2025 23:07:34.333 * DB loaded from disk: 0.000 seconds
+10518:M 03 May 2025 23:07:34.333 * Ready to accept connections tcp
+10518:M 03 May 2025 23:07:34.333 * Ready to accept connections unix
+10518:M 03 May 2025 23:07:34.333 - DB 9: 12 keys (0 volatile) in 14 slots HT.
+10518:M 03 May 2025 23:07:34.428 - Accepted 127.0.0.1:56948
+10518:M 03 May 2025 23:07:34.432 - Internal error in RDB reading offset 0, function at rdb.c:454 -> Invalid LZF compressed string
+10518:M 03 May 2025 23:07:34.432 - Internal error in RDB reading offset 0, function at rdb.c:2516 -> Stream listpacks loading failed.
+10518:M 03 May 2025 23:07:34.451 - Internal error in RDB reading offset 0, function at rdb.c:2523 -> Stream listpack integrity check failed.
+10518:M 03 May 2025 23:07:35.070 - Internal error in RDB reading offset 0, function at rdb.c:2463 -> Hash listpack integrity check failed.
+10518:M 03 May 2025 23:07:38.087 - Client closed connection id=2 addr=127.0.0.1:56948 laddr=127.0.0.1:21169 fd=12 name= age=4 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=4096 rbp=2048 obl=0 oll=0 omem=0 tot-mem=21504 events=r cmd=dbsize user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=685801 tot-net-out=218885757 tot-cmds=10755
+10518:signal-handler (1746281258) Received SIGTERM scheduling shutdown...
+10518:M 03 May 2025 23:07:38.165 * User requested shutdown...
+10518:M 03 May 2025 23:07:38.165 * Removing the pid file.
+10518:M 03 May 2025 23:07:38.165 * Removing the unix socket file.
+10518:M 03 May 2025 23:07:38.165 # Valkey is now ready to exit, bye bye...

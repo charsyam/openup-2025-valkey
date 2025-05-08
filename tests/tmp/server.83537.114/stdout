@@ -1,0 +1,177 @@
+### Starting server for test 
+10342:M 03 May 2025 23:07:32.643 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+10342:M 03 May 2025 23:07:32.643 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=10342, just started
+10342:M 03 May 2025 23:07:32.643 * Configuration loaded
+10342:M 03 May 2025 23:07:32.644 * Increased maximum number of open files to 10032 (it was originally set to 256).
+10342:M 03 May 2025 23:07:32.644 * monotonic clock: POSIX clock_gettime
+10342:M 03 May 2025 23:07:32.644 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27167
+ |###|   .+###############+.   |###|    PID: 10342                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+10342:M 03 May 2025 23:07:32.644 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+10342:M 03 May 2025 23:07:32.644 * Server initialized
+10342:M 03 May 2025 23:07:32.644 * Ready to accept connections tcp
+10342:M 03 May 2025 23:07:32.644 * Ready to accept connections unix
+10342:M 03 May 2025 23:07:32.660 - Accepted 127.0.0.1:56592
+10342:M 03 May 2025 23:07:32.660 - Client closed connection id=2 addr=127.0.0.1:56592 laddr=127.0.0.1:27167 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+10342:M 03 May 2025 23:07:32.691 - Accepted 127.0.0.1:56602
+10342:S 03 May 2025 23:07:32.871 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+10342:S 03 May 2025 23:07:32.871 * Connecting to PRIMARY 127.0.0.1:27168
+10342:S 03 May 2025 23:07:32.871 * PRIMARY <-> REPLICA sync started
+10342:S 03 May 2025 23:07:32.871 * REPLICAOF 127.0.0.1:27168 enabled (user request from 'id=3 addr=127.0.0.1:56602 laddr=127.0.0.1:27167 fd=12 name= user=default lib-name= lib-ver=')
+10342:S 03 May 2025 23:07:32.871 * Non blocking connect for SYNC fired the event.
+10342:S 03 May 2025 23:07:32.872 * Primary replied to PING, replication can continue...
+10342:S 03 May 2025 23:07:32.872 * Trying a partial resynchronization (request 98801e431789de8b9ac6773094a8c163eb8fc405:1).
+10342:S 03 May 2025 23:07:32.874 * Primary is currently unable to PSYNC but should be in the future: -NOMASTERLINK Can't SYNC while not connected with my master
+10342:S 03 May 2025 23:07:33.657 * Connecting to PRIMARY 127.0.0.1:27168
+10342:S 03 May 2025 23:07:33.657 * PRIMARY <-> REPLICA sync started
+10342:S 03 May 2025 23:07:33.657 * Non blocking connect for SYNC fired the event.
+10342:S 03 May 2025 23:07:33.658 * Primary replied to PING, replication can continue...
+10342:S 03 May 2025 23:07:33.662 * Trying a partial resynchronization (request 98801e431789de8b9ac6773094a8c163eb8fc405:1).
+10342:S 03 May 2025 23:07:33.666 * Full resync from primary: b9ccf019e44b6ce2aeef5b1872127d9bea85182f:0
+10342:S 03 May 2025 23:07:33.669 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+10342:S 03 May 2025 23:07:33.676 * Discarding previously cached primary state.
+10342:S 03 May 2025 23:07:33.676 * PRIMARY <-> REPLICA sync: Flushing old data
+10342:S 03 May 2025 23:07:33.676 * PRIMARY <-> REPLICA sync: Loading DB in memory
+10342:S 03 May 2025 23:07:33.676 * Loading RDB produced by Valkey version 255.255.255
+10342:S 03 May 2025 23:07:33.676 * RDB age 0 seconds
+10342:S 03 May 2025 23:07:33.676 * RDB memory usage when created 1.26 Mb
+10342:S 03 May 2025 23:07:33.676 * Done loading RDB, keys loaded: 0, keys expired: 0.
+10342:S 03 May 2025 23:07:33.677 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test PSYNC2: Partial resync after Master restart using RDB aux fields when offset is 0 in tests/integration/psync2-master-restart.tcl
+10342:S 03 May 2025 23:07:34.757 - Client closed connection id=5 addr=127.0.0.1:27168 laddr=127.0.0.1:56764 fd=13 name= age=1 idle=1 flags=M capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=34 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=NULL user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=68 tot-cmds=0
+10342:S 03 May 2025 23:07:34.757 * Connection with primary lost.
+10342:S 03 May 2025 23:07:34.757 * Caching the disconnected primary state.
+10342:S 03 May 2025 23:07:34.757 * Reconnecting to PRIMARY 127.0.0.1:27168
+10342:S 03 May 2025 23:07:34.758 * PRIMARY <-> REPLICA sync started
+10342:S 03 May 2025 23:07:34.758 * Non blocking connect for SYNC fired the event.
+10342:S 03 May 2025 23:07:34.758 * Primary replied to PING, replication can continue...
+10342:S 03 May 2025 23:07:34.758 * Trying a partial resynchronization (request b9ccf019e44b6ce2aeef5b1872127d9bea85182f:1).
+10342:S 03 May 2025 23:07:34.759 * Successful partial resynchronization with primary.
+10342:S 03 May 2025 23:07:34.759 * Primary replication ID changed to e5003112ae4ec09a1429c63b86eb5369f3081e9f
+10342:S 03 May 2025 23:07:34.759 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2: Partial resync after Master restart using RDB aux fields with data in tests/integration/psync2-master-restart.tcl
+10342:S 03 May 2025 23:07:35.758 - Client closed connection id=5 addr=127.0.0.1:27168 laddr=127.0.0.1:57015 fd=13 name= age=2 idle=0 flags=M capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=39 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=hset user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=156951 tot-net-out=107 tot-cmds=1351
+10342:S 03 May 2025 23:07:35.758 * Connection with primary lost.
+10342:S 03 May 2025 23:07:35.758 * Caching the disconnected primary state.
+10342:S 03 May 2025 23:07:35.759 * Reconnecting to PRIMARY 127.0.0.1:27168
+10342:S 03 May 2025 23:07:35.759 * PRIMARY <-> REPLICA sync started
+10342:S 03 May 2025 23:07:35.759 * Non blocking connect for SYNC fired the event.
+10342:S 03 May 2025 23:07:35.759 * Primary replied to PING, replication can continue...
+10342:S 03 May 2025 23:07:35.759 * Trying a partial resynchronization (request e5003112ae4ec09a1429c63b86eb5369f3081e9f:156952).
+10342:S 03 May 2025 23:07:35.759 * Successful partial resynchronization with primary.
+10342:S 03 May 2025 23:07:35.759 * Primary replication ID changed to 900bb2bbe8700124fb4a6dc41bc59b239910bf97
+10342:S 03 May 2025 23:07:35.759 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2: Partial resync after Master restart using RDB aux fields with expire in tests/integration/psync2-master-restart.tcl
+### Starting test Check for memory leaks (pid 10698) in tests/integration/psync2-master-restart.tcl
+10342:S 03 May 2025 23:07:37.686 - DB 0: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 1: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 2: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 3: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 4: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 5: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 6: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 7: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 8: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 9: 651 keys (64 volatile) in 896 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 10: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 11: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 12: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 13: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 14: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:37.686 - DB 15: 64 keys (64 volatile) in 112 slots HT.
+10342:S 03 May 2025 23:07:39.806 - Client closed connection id=5 addr=127.0.0.1:27168 laddr=127.0.0.1:57256 fd=13 name= age=6 idle=3 flags=M capa= db=15 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=65530 argv-mem=0 multi-mem=0 rbs=1024 rbp=39 obl=0 oll=0 omem=0 tot-mem=67072 events=r cmd=set user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=249409 tot-net-out=263 tot-cmds=3399
+10342:S 03 May 2025 23:07:39.806 * Connection with primary lost.
+10342:S 03 May 2025 23:07:39.806 * Caching the disconnected primary state.
+10342:S 03 May 2025 23:07:39.806 * Reconnecting to PRIMARY 127.0.0.1:27168
+10342:S 03 May 2025 23:07:39.806 * PRIMARY <-> REPLICA sync started
+10342:S 03 May 2025 23:07:39.806 * Non blocking connect for SYNC fired the event.
+10342:S 03 May 2025 23:07:39.807 * Primary replied to PING, replication can continue...
+10342:S 03 May 2025 23:07:39.810 * Trying a partial resynchronization (request 900bb2bbe8700124fb4a6dc41bc59b239910bf97:249410).
+10342:S 03 May 2025 23:07:39.815 * Successful partial resynchronization with primary.
+10342:S 03 May 2025 23:07:39.815 * Primary replication ID changed to cd1e13fb6d70a7debcfc0c3dfc28f88051734dc8
+10342:S 03 May 2025 23:07:39.815 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2: Full resync after Master restart when too many key expired in tests/integration/psync2-master-restart.tcl
+### Starting test Check for memory leaks (pid 10995) in tests/integration/psync2-master-restart.tcl
+10342:S 03 May 2025 23:07:42.731 - DB 0: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:42.731 - DB 1: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:42.731 - DB 2: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:42.731 - DB 3: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:42.731 - DB 4: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:42.731 - DB 5: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:42.731 - DB 6: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:42.732 - DB 7: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:42.732 - DB 8: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:42.732 - DB 9: 715 keys (128 volatile) in 896 slots HT.
+10342:S 03 May 2025 23:07:42.732 - DB 10: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:42.732 - DB 11: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:42.732 - DB 12: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:42.732 - DB 13: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:42.732 - DB 14: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:42.732 - DB 15: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 0: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 1: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 2: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 3: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 4: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 5: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 6: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 7: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 8: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 9: 715 keys (128 volatile) in 896 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 10: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 11: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 12: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 13: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 14: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.775 - DB 15: 128 keys (128 volatile) in 224 slots HT.
+10342:S 03 May 2025 23:07:47.872 - Client closed connection id=5 addr=127.0.0.1:27168 laddr=127.0.0.1:57991 fd=13 name= age=14 idle=7 flags=M capa= db=15 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=65530 argv-mem=0 multi-mem=0 rbs=1024 rbp=39 obl=0 oll=0 omem=0 tot-mem=67072 events=r cmd=set user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=461323 tot-net-out=575 tot-cmds=8535
+10342:S 03 May 2025 23:07:47.872 * Connection with primary lost.
+10342:S 03 May 2025 23:07:47.872 * Caching the disconnected primary state.
+10342:S 03 May 2025 23:07:47.872 * Reconnecting to PRIMARY 127.0.0.1:27168
+10342:S 03 May 2025 23:07:47.872 * PRIMARY <-> REPLICA sync started
+10342:S 03 May 2025 23:07:47.872 * Non blocking connect for SYNC fired the event.
+10342:S 03 May 2025 23:07:47.873 * Primary replied to PING, replication can continue...
+10342:S 03 May 2025 23:07:47.873 * Trying a partial resynchronization (request cd1e13fb6d70a7debcfc0c3dfc28f88051734dc8:461324).
+10342:S 03 May 2025 23:07:47.873 * Full resync from primary: 9d3f3887e94a7b6c7ff37f4c2597e2616fe6066a:513835
+10342:S 03 May 2025 23:07:47.875 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+10342:S 03 May 2025 23:07:47.879 * Discarding previously cached primary state.
+10342:S 03 May 2025 23:07:47.879 * PRIMARY <-> REPLICA sync: Flushing old data
+10342:S 03 May 2025 23:07:47.879 * PRIMARY <-> REPLICA sync: Loading DB in memory
+10342:S 03 May 2025 23:07:47.879 * Loading RDB produced by Valkey version 255.255.255
+10342:S 03 May 2025 23:07:47.879 * RDB age 0 seconds
+10342:S 03 May 2025 23:07:47.879 * RDB memory usage when created 1.32 Mb
+10342:S 03 May 2025 23:07:47.879 * Done loading RDB, keys loaded: 587, keys expired: 0.
+10342:S 03 May 2025 23:07:47.880 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test Check for memory leaks (pid 11362) in tests/integration/psync2-master-restart.tcl
+### Starting test Check for memory leaks (pid 10351) in tests/integration/psync2-master-restart.tcl
+10342:S 03 May 2025 23:07:52.817 - DB 9: 587 keys (0 volatile) in 896 slots HT.
+10342:S 03 May 2025 23:07:53.959 - Client closed connection id=6 addr=127.0.0.1:27168 laddr=127.0.0.1:59009 fd=13 name= age=6 idle=6 flags=M capa= db=15 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=39 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=NULL user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=273 tot-cmds=0
+10342:S 03 May 2025 23:07:53.959 * Connection with primary lost.
+10342:S 03 May 2025 23:07:53.959 * Caching the disconnected primary state.
+10342:S 03 May 2025 23:07:53.959 * Reconnecting to PRIMARY 127.0.0.1:27168
+10342:S 03 May 2025 23:07:53.960 * PRIMARY <-> REPLICA sync started
+10342:S 03 May 2025 23:07:53.960 # Error condition on socket for SYNC: Connection refused
+10342:S 03 May 2025 23:07:53.983 - Client closed connection id=3 addr=127.0.0.1:56602 laddr=127.0.0.1:27167 fd=12 name= age=21 idle=5 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=386 tot-net-out=95123 tot-cmds=20
+10342:signal-handler (1746281275) Received SIGTERM scheduling shutdown...
+10342:S 03 May 2025 23:07:56.080 * User requested shutdown...
+10342:S 03 May 2025 23:07:56.080 * Removing the pid file.
+10342:S 03 May 2025 23:07:56.080 * Removing the unix socket file.
+10342:S 03 May 2025 23:07:56.080 # Valkey is now ready to exit, bye bye...

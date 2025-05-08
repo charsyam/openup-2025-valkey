@@ -1,0 +1,77 @@
+### Starting server for test 
+86460:M 03 May 2025 23:04:06.574 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+86460:M 03 May 2025 23:04:06.574 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=86460, just started
+86460:M 03 May 2025 23:04:06.574 * Configuration loaded
+86460:M 03 May 2025 23:04:06.574 * Increased maximum number of open files to 10032 (it was originally set to 256).
+86460:M 03 May 2025 23:04:06.575 * monotonic clock: POSIX clock_gettime
+86460:M 03 May 2025 23:04:06.575 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27121
+ |###|   .+###############+.   |###|    PID: 86460                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+86460:M 03 May 2025 23:04:06.575 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+86460:M 03 May 2025 23:04:06.578 * Server initialized
+86460:M 03 May 2025 23:04:06.578 * Ready to accept connections tcp
+86460:M 03 May 2025 23:04:06.578 * Ready to accept connections unix
+86460:M 03 May 2025 23:04:06.709 - Accepted 127.0.0.1:59423
+86460:M 03 May 2025 23:04:06.709 - Client closed connection id=2 addr=127.0.0.1:59423 laddr=127.0.0.1:27121 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+86460:M 03 May 2025 23:04:06.723 - Accepted 127.0.0.1:59424
+### Starting test Connect a replica to the master instance in tests/unit/functions.tcl
+86460:M 03 May 2025 23:04:06.724 - Accepted 127.0.0.1:59425
+86460:M 03 May 2025 23:04:06.724 * Replica 127.0.0.1:27120 asks for synchronization
+86460:M 03 May 2025 23:04:06.724 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'dee97e0f9c5adb571488fd399263259e0ea4f958', my replication IDs are '965ad9fd1742cf8f71744d8c4ab7b37307357471' and '0000000000000000000000000000000000000000')
+86460:M 03 May 2025 23:04:06.724 * Replication backlog created, my new replication IDs are 'ff789fe999570315015e2964c79e16060414474e' and '0000000000000000000000000000000000000000'
+86460:M 03 May 2025 23:04:06.724 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+86460:M 03 May 2025 23:04:06.725 * Background RDB transfer started by pid 86491 to pipe through parent process
+86491:C 03 May 2025 23:04:06.725 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+86460:M 03 May 2025 23:04:06.725 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+86460:M 03 May 2025 23:04:06.727 * Background RDB transfer terminated with success
+86460:M 03 May 2025 23:04:06.727 * Streamed RDB transfer with replica 127.0.0.1:27120 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+86460:M 03 May 2025 23:04:06.727 * Synchronization with replica 127.0.0.1:27120 succeeded
+### Starting test FUNCTION - creation is replicated to replica in tests/unit/functions.tcl
+### Starting test FUNCTION - call on replica in tests/unit/functions.tcl
+### Starting test FUNCTION - restore is replicated to replica in tests/unit/functions.tcl
+### Starting test FUNCTION - delete is replicated to replica in tests/unit/functions.tcl
+### Starting test FUNCTION - flush is replicated to replica in tests/unit/functions.tcl
+### Starting test Disconnecting the replica from master instance in tests/unit/functions.tcl
+86460:M 03 May 2025 23:04:06.832 - Client closed connection id=4 addr=127.0.0.1:59425 laddr=127.0.0.1:27121 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=275 tot-net-out=631 tot-cmds=6
+86460:M 03 May 2025 23:04:06.832 * Connection with replica 127.0.0.1:27120 lost.
+86460:M 03 May 2025 23:04:06.833 - Accepted 127.0.0.1:59428
+86460:M 03 May 2025 23:04:06.833 * Replica 127.0.0.1:27120 asks for synchronization
+86460:M 03 May 2025 23:04:06.833 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'dd87cdb3d3829d39981148f11a58c2c7f6d0e783', my replication IDs are 'ff789fe999570315015e2964c79e16060414474e' and '0000000000000000000000000000000000000000')
+86460:M 03 May 2025 23:04:06.833 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+86460:M 03 May 2025 23:04:06.833 * Background RDB transfer started by pid 86503 to pipe through parent process
+86503:C 03 May 2025 23:04:06.834 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+86460:M 03 May 2025 23:04:06.834 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+86460:M 03 May 2025 23:04:06.838 * Background RDB transfer terminated with success
+86460:M 03 May 2025 23:04:06.838 * Streamed RDB transfer with replica 127.0.0.1:27120 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+86460:M 03 May 2025 23:04:06.838 * Synchronization with replica 127.0.0.1:27120 succeeded
+### Starting test FUNCTION - test replication to replica on rdb phase in tests/unit/functions.tcl
+### Starting test FUNCTION - test replication to replica on rdb phase info command in tests/unit/functions.tcl
+### Starting test FUNCTION - create on read only replica in tests/unit/functions.tcl
+### Starting test FUNCTION - delete on read only replica in tests/unit/functions.tcl
+### Starting test FUNCTION - function effect is replicated to replica in tests/unit/functions.tcl
+### Starting test FUNCTION - modify key space of read only replica in tests/unit/functions.tcl
+86460:M 03 May 2025 23:04:06.938 - Client closed connection id=3 addr=127.0.0.1:59424 laddr=127.0.0.1:27121 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=149 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1027 tot-net-out=226 tot-cmds=13
+86460:signal-handler (1746281047) Received SIGTERM scheduling shutdown...
+86460:M 03 May 2025 23:04:07.962 * User requested shutdown...
+86460:M 03 May 2025 23:04:07.962 * 1 of 1 replicas are in sync when shutting down.
+86460:M 03 May 2025 23:04:07.962 * Removing the pid file.
+86460:M 03 May 2025 23:04:07.962 * Removing the unix socket file.
+86460:M 03 May 2025 23:04:07.962 # Valkey is now ready to exit, bye bye...

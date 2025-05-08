@@ -1,0 +1,65 @@
+### Starting server for test 
+83579:M 03 May 2025 23:03:40.913 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+83579:M 03 May 2025 23:03:40.913 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=83579, just started
+83579:M 03 May 2025 23:03:40.913 * Configuration loaded
+83579:M 03 May 2025 23:03:40.913 * Increased maximum number of open files to 10032 (it was originally set to 256).
+83579:M 03 May 2025 23:03:40.913 * monotonic clock: POSIX clock_gettime
+83579:M 03 May 2025 23:03:40.914 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 24111
+ |###|   .+###############+.   |###|    PID: 83579                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+83579:M 03 May 2025 23:03:40.914 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+83579:M 03 May 2025 23:03:40.915 * Server initialized
+83579:M 03 May 2025 23:03:40.915 * Ready to accept connections tcp
+83579:M 03 May 2025 23:03:40.915 * Ready to accept connections unix
+83579:M 03 May 2025 23:03:40.940 - Accepted 127.0.0.1:58706
+83579:M 03 May 2025 23:03:40.940 - Client closed connection id=2 addr=127.0.0.1:58706 laddr=127.0.0.1:24111 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+83579:M 03 May 2025 23:03:40.954 - Accepted 127.0.0.1:58712
+### Starting test {standalone} SCAN basic in tests/unit/scan.tcl
+### Starting test {standalone} SCAN COUNT in tests/unit/scan.tcl
+### Starting test {standalone} SCAN MATCH in tests/unit/scan.tcl
+### Starting test {standalone} SCAN TYPE in tests/unit/scan.tcl
+### Starting test {standalone} SCAN unknown type in tests/unit/scan.tcl
+### Starting test {standalone} SCAN with expired keys in tests/unit/scan.tcl
+### Starting test {standalone} SCAN with expired keys with TYPE filter in tests/unit/scan.tcl
+### Starting test {standalone} SSCAN with encoding intset in tests/unit/scan.tcl
+### Starting test {standalone} SSCAN with encoding listpack in tests/unit/scan.tcl
+### Starting test {standalone} SSCAN with encoding hashtable in tests/unit/scan.tcl
+### Starting test {standalone} HSCAN with encoding listpack in tests/unit/scan.tcl
+### Starting test {standalone} HSCAN with encoding hashtable in tests/unit/scan.tcl
+### Starting test {standalone} ZSCAN with encoding listpack in tests/unit/scan.tcl
+### Starting test {standalone} ZSCAN with encoding skiplist in tests/unit/scan.tcl
+### Starting test {standalone} SCAN guarantees check under write load in tests/unit/scan.tcl
+### Starting test {standalone} SSCAN with integer encoded object (issue #1345) in tests/unit/scan.tcl
+### Starting test {standalone} SSCAN with PATTERN in tests/unit/scan.tcl
+### Starting test {standalone} HSCAN with PATTERN in tests/unit/scan.tcl
+### Starting test {standalone} HSCAN with NOVALUES in tests/unit/scan.tcl
+### Starting test {standalone} ZSCAN with PATTERN in tests/unit/scan.tcl
+### Starting test {standalone} ZSCAN with NOSCORES in tests/unit/scan.tcl
+### Starting test {standalone} ZSCAN scores: regression test for issue #2175 in tests/unit/scan.tcl
+### Starting test {standalone} SCAN regression test for issue #4906 in tests/unit/scan.tcl
+### Starting test {standalone} SCAN MATCH pattern implies cluster slot in tests/unit/scan.tcl
+83579:M 03 May 2025 23:03:44.422 - Client closed connection id=3 addr=127.0.0.1:58712 laddr=127.0.0.1:24111 fd=12 name= age=4 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=scan user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=2962816 tot-net-out=675234 tot-cmds=75922
+83579:M 03 May 2025 23:03:45.934 - DB 9: 300 keys (0 volatile) in 448 slots HT.
+83579:signal-handler (1746281028) Received SIGTERM scheduling shutdown...
+83579:M 03 May 2025 23:03:48.183 * User requested shutdown...
+83579:M 03 May 2025 23:03:48.183 * Removing the pid file.
+83579:M 03 May 2025 23:03:48.183 * Removing the unix socket file.
+83579:M 03 May 2025 23:03:48.183 # Valkey is now ready to exit, bye bye...

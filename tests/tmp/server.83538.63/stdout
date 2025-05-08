@@ -1,0 +1,61 @@
+### Starting server for test 
+1847:M 03 May 2025 23:06:16.949 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+1847:M 03 May 2025 23:06:16.949 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=1847, just started
+1847:M 03 May 2025 23:06:16.949 * Configuration loaded
+1847:M 03 May 2025 23:06:16.950 * Increased maximum number of open files to 10032 (it was originally set to 256).
+1847:M 03 May 2025 23:06:16.950 * monotonic clock: POSIX clock_gettime
+1847:M 03 May 2025 23:06:16.950 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27642
+ |###|   .+###############+.   |###|    PID: 1847                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+1847:M 03 May 2025 23:06:16.950 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+1847:M 03 May 2025 23:06:16.951 * Server initialized
+1847:M 03 May 2025 23:06:16.951 * Ready to accept connections tcp
+1847:M 03 May 2025 23:06:16.951 * Ready to accept connections unix
+1847:M 03 May 2025 23:06:17.105 - Accepted 127.0.0.1:62578
+1847:M 03 May 2025 23:06:17.107 - Client closed connection id=2 addr=127.0.0.1:62578 laddr=127.0.0.1:27642 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+1847:M 03 May 2025 23:06:17.135 - Accepted 127.0.0.1:62621
+### Starting test First server should have role slave after SLAVEOF in tests/integration/replication-3.tcl
+1847:M 03 May 2025 23:06:17.140 - Accepted 127.0.0.1:62624
+1847:M 03 May 2025 23:06:17.144 * Replica 127.0.0.1:27641 asks for synchronization
+1847:M 03 May 2025 23:06:17.144 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '047da2110d2787259b6a34cec46fd3f9f2668852', my replication IDs are '90e476976f044e07ed63d63392b1a59b04d6a2b2' and '0000000000000000000000000000000000000000')
+1847:M 03 May 2025 23:06:17.144 * Replication backlog created, my new replication IDs are '6fba08b125669450fb2bfb6e84e701b2d03a4a0d' and '0000000000000000000000000000000000000000'
+1847:M 03 May 2025 23:06:17.144 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+1847:M 03 May 2025 23:06:17.144 * Background RDB transfer started by pid 1872 to pipe through parent process
+1872:C 03 May 2025 23:06:17.145 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1847:M 03 May 2025 23:06:17.146 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+1847:M 03 May 2025 23:06:17.153 * Background RDB transfer terminated with success
+1847:M 03 May 2025 23:06:17.153 * Streamed RDB transfer with replica 127.0.0.1:27641 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+1847:M 03 May 2025 23:06:17.153 * Synchronization with replica 127.0.0.1:27641 succeeded
+### Starting test MASTER and SLAVE consistency with expire in tests/integration/replication-3.tcl
+### Starting test Master can replicate command longer than client-query-buffer-limit on replica in tests/integration/replication-3.tcl
+### Starting test Slave is able to evict keys created in writable slaves in tests/integration/replication-3.tcl
+1847:M 03 May 2025 23:06:21.976 - DB 9: 2800 keys (0 volatile) in 3584 slots HT.
+1847:M 03 May 2025 23:06:27.028 - DB 9: 2800 keys (0 volatile) in 3584 slots HT.
+### Starting test Writable replica doesn't return expired keys in tests/integration/replication-3.tcl
+### Starting test PFCOUNT updates cache on readonly replica in tests/integration/replication-3.tcl
+### Starting test PFCOUNT doesn't use expired key on readonly replica in tests/integration/replication-3.tcl
+1847:M 03 May 2025 23:06:27.825 - Client closed connection id=3 addr=127.0.0.1:62621 laddr=127.0.0.1:27642 fd=12 name= age=10 idle=0 flags=N capa= db=5 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=75 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=del user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=2810376 tot-net-out=251613 tot-cmds=22918
+1847:signal-handler (1746281190) Received SIGTERM scheduling shutdown...
+1847:M 03 May 2025 23:06:30.492 * User requested shutdown...
+1847:M 03 May 2025 23:06:30.492 * 1 of 1 replicas are in sync when shutting down.
+1847:M 03 May 2025 23:06:30.492 * Removing the pid file.
+1847:M 03 May 2025 23:06:30.492 * Removing the unix socket file.
+1847:M 03 May 2025 23:06:30.492 # Valkey is now ready to exit, bye bye...

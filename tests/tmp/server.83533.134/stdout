@@ -1,0 +1,81 @@
+### Starting server for test 
+8123:M 03 May 2025 23:07:00.472 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+8123:M 03 May 2025 23:07:00.472 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=8123, just started
+8123:M 03 May 2025 23:07:00.472 * Configuration loaded
+8123:M 03 May 2025 23:07:00.472 * Increased maximum number of open files to 10032 (it was originally set to 256).
+8123:M 03 May 2025 23:07:00.472 * monotonic clock: POSIX clock_gettime
+8123:M 03 May 2025 23:07:00.473 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25180
+ |###|   .+###############+.   |###|    PID: 8123                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+8123:M 03 May 2025 23:07:00.473 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+8123:M 03 May 2025 23:07:00.473 * Server initialized
+8123:M 03 May 2025 23:07:00.473 * Ready to accept connections tcp
+8123:M 03 May 2025 23:07:00.473 * Ready to accept connections unix
+8123:M 03 May 2025 23:07:00.625 - Accepted 127.0.0.1:62090
+8123:M 03 May 2025 23:07:00.625 - Client closed connection id=2 addr=127.0.0.1:62090 laddr=127.0.0.1:25180 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+8123:M 03 May 2025 23:07:00.638 - Accepted 127.0.0.1:62097
+### Starting test Slave should be able to synchronize with the master in tests/integration/replication-psync.tcl
+8123:S 03 May 2025 23:07:00.646 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+8123:S 03 May 2025 23:07:00.646 * Connecting to PRIMARY 127.0.0.1:25179
+8123:S 03 May 2025 23:07:00.647 * PRIMARY <-> REPLICA sync started
+8123:S 03 May 2025 23:07:00.647 * REPLICAOF 127.0.0.1:25179 enabled (user request from 'id=3 addr=127.0.0.1:62097 laddr=127.0.0.1:25180 fd=12 name= user=default lib-name= lib-ver=')
+8123:S 03 May 2025 23:07:00.647 * Non blocking connect for SYNC fired the event.
+8123:S 03 May 2025 23:07:00.647 * Primary replied to PING, replication can continue...
+8123:S 03 May 2025 23:07:00.648 * Trying a partial resynchronization (request 1632e8f053e54a72cf4261cbff6879fc2174432b:1).
+8123:S 03 May 2025 23:07:00.649 * Full resync from primary: a2e2c03607dce4f1fd2dbeff934589cb4e222f0f:0
+8123:S 03 May 2025 23:07:00.750 * PRIMARY <-> REPLICA sync: receiving 178 bytes from primary to disk
+8123:S 03 May 2025 23:07:00.754 * Discarding previously cached primary state.
+8123:S 03 May 2025 23:07:00.754 * PRIMARY <-> REPLICA sync: Flushing old data
+8123:S 03 May 2025 23:07:00.755 * PRIMARY <-> REPLICA sync: Loading DB in memory
+8123:S 03 May 2025 23:07:00.755 * Loading RDB produced by Valkey version 255.255.255
+8123:S 03 May 2025 23:07:00.755 * RDB age 0 seconds
+8123:S 03 May 2025 23:07:00.755 * RDB memory usage when created 1.18 Mb
+8123:S 03 May 2025 23:07:00.755 * Done loading RDB, keys loaded: 0, keys expired: 0.
+8123:S 03 May 2025 23:07:00.755 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test Detect write load to master in tests/integration/replication-psync.tcl
+### Starting test Test replication partial resync: ok after delay (diskless: no, disabled, dual-channel: no, reconnect: 1) in tests/integration/replication-psync.tcl
+8123:S 03 May 2025 23:07:01.875 * Connection with primary lost.
+8123:S 03 May 2025 23:07:01.875 * Caching the disconnected primary state.
+8123:S 03 May 2025 23:07:01.875 * Reconnecting to PRIMARY 127.0.0.1:25179
+8123:S 03 May 2025 23:07:01.875 * PRIMARY <-> REPLICA sync started
+8123:S 03 May 2025 23:07:04.882 * Non blocking connect for SYNC fired the event.
+8123:S 03 May 2025 23:07:04.884 * Primary replied to PING, replication can continue...
+8123:S 03 May 2025 23:07:04.885 * Trying a partial resynchronization (request a2e2c03607dce4f1fd2dbeff934589cb4e222f0f:851487).
+8123:S 03 May 2025 23:07:04.885 * Successful partial resynchronization with primary.
+8123:S 03 May 2025 23:07:04.885 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+8123:S 03 May 2025 23:07:06.961 * Connection with primary lost.
+8123:S 03 May 2025 23:07:06.961 * Caching the disconnected primary state.
+8123:S 03 May 2025 23:07:06.961 * Reconnecting to PRIMARY 127.0.0.1:25179
+8123:S 03 May 2025 23:07:06.961 * PRIMARY <-> REPLICA sync started
+8123:S 03 May 2025 23:07:09.966 * Non blocking connect for SYNC fired the event.
+8123:S 03 May 2025 23:07:09.966 * Primary replied to PING, replication can continue...
+8123:S 03 May 2025 23:07:09.966 * Trying a partial resynchronization (request a2e2c03607dce4f1fd2dbeff934589cb4e222f0f:4422910).
+8123:S 03 May 2025 23:07:09.966 * Successful partial resynchronization with primary.
+8123:S 03 May 2025 23:07:09.966 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+8123:S 03 May 2025 23:07:11.338 - Client closed connection id=3 addr=127.0.0.1:62097 laddr=127.0.0.1:25180 fd=12 name= age=11 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=63 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=519 tot-net-out=434 tot-cmds=18
+8123:S 03 May 2025 23:07:11.537 - DB 9: 7174 keys (0 volatile) in 14336 slots HT.
+8123:S 03 May 2025 23:07:11.537 - DB 11: 7211 keys (0 volatile) in 14336 slots HT.
+8123:S 03 May 2025 23:07:11.538 - DB 12: 6784 keys (0 volatile) in 7168 slots HT.
+8123:signal-handler (1746281235) Received SIGTERM scheduling shutdown...
+8123:S 03 May 2025 23:07:15.587 * User requested shutdown...
+8123:S 03 May 2025 23:07:15.587 * Removing the pid file.
+8123:S 03 May 2025 23:07:15.587 * Removing the unix socket file.
+8123:S 03 May 2025 23:07:15.587 # Valkey is now ready to exit, bye bye...

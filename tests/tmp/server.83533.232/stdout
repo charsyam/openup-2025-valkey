@@ -1,0 +1,80 @@
+### Starting server for test 
+21222:M 03 May 2025 23:11:52.346 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+21222:M 03 May 2025 23:11:52.346 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=21222, just started
+21222:M 03 May 2025 23:11:52.346 * Configuration loaded
+21222:M 03 May 2025 23:11:52.346 * Increased maximum number of open files to 10032 (it was originally set to 256).
+21222:M 03 May 2025 23:11:52.346 * monotonic clock: POSIX clock_gettime
+21222:M 03 May 2025 23:11:52.346 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25229
+ |###|   .+###############+.   |###|    PID: 21222                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+21222:M 03 May 2025 23:11:52.346 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+21222:M 03 May 2025 23:11:52.346 * Server initialized
+21222:M 03 May 2025 23:11:52.346 * Ready to accept connections tcp
+21222:M 03 May 2025 23:11:52.347 * Ready to accept connections unix
+21222:M 03 May 2025 23:11:52.469 - Accepted 127.0.0.1:50620
+21222:M 03 May 2025 23:11:52.469 - Client closed connection id=2 addr=127.0.0.1:50620 laddr=127.0.0.1:25229 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+21222:M 03 May 2025 23:11:52.477 - Accepted 127.0.0.1:50621
+### Starting test Slave should be able to synchronize with the master in tests/integration/replication-psync.tcl
+21222:M 03 May 2025 23:11:52.633 - Accepted 127.0.0.1:50624
+21222:M 03 May 2025 23:11:52.633 * Replica 127.0.0.1:25230 asks for synchronization
+21222:M 03 May 2025 23:11:52.633 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '31f2600c4a1691afa9850015cee08bf4549dce28', my replication IDs are '21cc34b421a36ee466650449285c26ac19385020' and '0000000000000000000000000000000000000000')
+21222:M 03 May 2025 23:11:52.633 * Replication backlog created, my new replication IDs are 'ae02e5ae4eefb2998977f807f1255499194301c0' and '0000000000000000000000000000000000000000'
+21222:M 03 May 2025 23:11:52.633 * Delay next BGSAVE for diskless SYNC
+21222:M 03 May 2025 23:11:52.640 - Accepted 127.0.0.1:50626
+21222:M 03 May 2025 23:11:52.640 - Accepted 127.0.0.1:50625
+21222:M 03 May 2025 23:11:52.640 - Accepted 127.0.0.1:50627
+21222:M 03 May 2025 23:11:53.349 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+21222:M 03 May 2025 23:11:53.350 * Background RDB transfer started by pid 21261 to pipe through parent process
+21261:C 03 May 2025 23:11:53.352 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+21222:M 03 May 2025 23:11:53.352 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+21222:M 03 May 2025 23:11:53.353 * Background RDB transfer terminated with success
+21222:M 03 May 2025 23:11:53.353 * Streamed RDB transfer with replica 127.0.0.1:25230 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+21222:M 03 May 2025 23:11:53.353 * Synchronization with replica 127.0.0.1:25230 succeeded
+### Starting test Detect write load to master in tests/integration/replication-psync.tcl
+### Starting test Test replication partial resync: ok after delay (diskless: yes, swapdb, dual-channel: no, reconnect: 1) in tests/integration/replication-psync.tcl
+21222:M 03 May 2025 23:11:53.455 - Reading from client: Connection reset by peer
+21222:M 03 May 2025 23:11:53.455 * Connection with replica client id #4 lost.
+21222:M 03 May 2025 23:11:53.455 - Accepted 127.0.0.1:50628
+21222:M 03 May 2025 23:11:56.461 * Replica 127.0.0.1:25230 asks for synchronization
+21222:M 03 May 2025 23:11:56.461 * Partial resynchronization request from 127.0.0.1:25230 accepted. Sending 6826585 bytes of backlog starting from offset 2041298.
+21222:M 03 May 2025 23:11:57.351 - DB 9: 10018 keys (0 volatile) in 14336 slots HT.
+21222:M 03 May 2025 23:11:57.351 - DB 11: 10024 keys (0 volatile) in 14336 slots HT.
+21222:M 03 May 2025 23:11:57.351 - DB 12: 9995 keys (0 volatile) in 14336 slots HT.
+21222:M 03 May 2025 23:11:58.522 - Reading from client: Connection reset by peer
+21222:M 03 May 2025 23:11:58.522 * Connection with replica client id #8 lost.
+21222:M 03 May 2025 23:11:58.522 - Accepted 127.0.0.1:50629
+21222:M 03 May 2025 23:12:01.523 * Replica 127.0.0.1:25230 asks for synchronization
+21222:M 03 May 2025 23:12:01.523 * Partial resynchronization request from 127.0.0.1:25230 accepted. Sending 5842172 bytes of backlog starting from offset 11351265.
+21222:M 03 May 2025 23:12:02.353 - DB 9: 18418 keys (0 volatile) in 28672 slots HT.
+21222:M 03 May 2025 23:12:02.353 - DB 11: 18349 keys (0 volatile) in 28672 slots HT.
+21222:M 03 May 2025 23:12:02.353 - DB 12: 18385 keys (0 volatile) in 28672 slots HT.
+21222:M 03 May 2025 23:12:02.460 - Client closed connection id=7 addr=127.0.0.1:50627 laddr=127.0.0.1:25229 fd=16 name=LOAD_HANDLER age=10 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=264 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=zadd user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=12583729 tot-net-out=1950398 tot-cmds=164968
+21222:M 03 May 2025 23:12:02.462 - Client closed connection id=6 addr=127.0.0.1:50625 laddr=127.0.0.1:25229 fd=15 name=LOAD_HANDLER age=10 idle=0 flags=N capa= db=11 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=264 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=sinterstore user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=12741209 tot-net-out=2010436 tot-cmds=165404
+21222:M 03 May 2025 23:12:02.464 - Reading from client: Connection reset by peer
+### Starting test Check for memory leaks (pid 21234) in tests/integration/replication-psync.tcl
+21222:M 03 May 2025 23:12:03.737 - Client closed connection id=9 addr=127.0.0.1:50629 laddr=127.0.0.1:25229 fd=13 name= age=5 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=289 tot-net-out=7543262 tot-cmds=6
+21222:M 03 May 2025 23:12:03.737 * Connection with replica 127.0.0.1:25230 lost.
+21222:M 03 May 2025 23:12:03.755 - Client closed connection id=3 addr=127.0.0.1:50621 laddr=127.0.0.1:25229 fd=12 name= age=11 idle=1 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=426 tot-net-out=12555 tot-cmds=11
+21222:signal-handler (1746281524) Received SIGTERM scheduling shutdown...
+21222:M 03 May 2025 23:12:04.810 * User requested shutdown...
+21222:M 03 May 2025 23:12:04.810 * Removing the pid file.
+21222:M 03 May 2025 23:12:04.810 * Removing the unix socket file.
+21222:M 03 May 2025 23:12:04.810 # Valkey is now ready to exit, bye bye...

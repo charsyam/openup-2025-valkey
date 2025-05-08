@@ -1,0 +1,81 @@
+### Starting server for test 
+84607:M 03 May 2025 23:03:50.535 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+84607:M 03 May 2025 23:03:50.535 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=84607, just started
+84607:M 03 May 2025 23:03:50.535 * Configuration loaded
+84607:M 03 May 2025 23:03:50.535 * Increased maximum number of open files to 10032 (it was originally set to 256).
+84607:M 03 May 2025 23:03:50.535 * monotonic clock: POSIX clock_gettime
+84607:M 03 May 2025 23:03:50.536 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27113
+ |###|   .+###############+.   |###|    PID: 84607                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+84607:M 03 May 2025 23:03:50.536 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+84607:M 03 May 2025 23:03:50.536 * Server initialized
+84607:M 03 May 2025 23:03:50.536 * Ready to accept connections tcp
+84607:M 03 May 2025 23:03:50.536 * Ready to accept connections unix
+84607:M 03 May 2025 23:03:50.553 - Accepted 127.0.0.1:58973
+84607:M 03 May 2025 23:03:50.553 - Client closed connection id=2 addr=127.0.0.1:58973 laddr=127.0.0.1:27113 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+84607:M 03 May 2025 23:03:50.566 - Accepted 127.0.0.1:58974
+### Starting test client evicted due to large argv in tests/unit/client-eviction.tcl
+84607:M 03 May 2025 23:03:50.566 - Accepted 127.0.0.1:58975
+84607:M 03 May 2025 23:03:50.582 * Evicting client: id=4 addr=127.0.0.1:58975 laddr=127.0.0.1:27113 fd=13 name=tst_xA3D age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=20434 qbuf-free=2994212 argv-mem=8 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=3031592 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1020614 tot-net-out=22 tot-cmds=4
+### Starting test client evicted due to large query buf in tests/unit/client-eviction.tcl
+84607:M 03 May 2025 23:03:50.582 - Accepted 127.0.0.1:58976
+84607:M 03 May 2025 23:03:50.591 * Evicting client: id=5 addr=127.0.0.1:58976 laddr=127.0.0.1:27113 fd=13 name=tst_xSaz age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=16876 qbuf-free=2997770 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=3031552 events=r cmd=client|setname user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=16956 tot-net-out=10 tot-cmds=2
+### Starting test client evicted due to percentage of maxmemory in tests/unit/client-eviction.tcl
+84607:M 03 May 2025 23:03:50.595 - Accepted 127.0.0.1:58977
+84607:M 03 May 2025 23:03:50.596 - Client closed connection id=6 addr=127.0.0.1:58977 laddr=127.0.0.1:27113 fd=13 name=tst_8UC1 age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=220199 qbuf-free=9167 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=246272 events=r cmd=client|setname user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=220278 tot-net-out=10 tot-cmds=2
+84607:M 03 May 2025 23:03:50.596 - Accepted 127.0.0.1:58978
+84607:M 03 May 2025 23:03:50.598 * Evicting client: id=7 addr=127.0.0.1:58978 laddr=127.0.0.1:27113 fd=13 name=tst_YvNN age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=4083 qbuf-free=454659 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=475648 events=r cmd=client|setname user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=4162 tot-net-out=10 tot-cmds=2
+### Starting test client evicted due to large multi buf in tests/unit/client-eviction.tcl
+84607:M 03 May 2025 23:03:50.599 - Accepted 127.0.0.1:58979
+84607:M 03 May 2025 23:03:50.617 * Evicting client: id=8 addr=127.0.0.1:58979 laddr=127.0.0.1:27113 fd=13 name=tst_ol1A age=0 idle=0 flags=x capa= db=9 sub=0 psub=0 ssub=0 multi=3 watch=0 qbuf=0 qbuf-free=753654 argv-mem=0 multi-mem=2250084 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=3020740 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=3750265 tot-net-out=79 tot-cmds=7
+### Starting test client evicted due to watched key list in tests/unit/client-eviction.tcl
+84607:M 03 May 2025 23:03:50.622 - Accepted 127.0.0.1:58980
+84607:M 03 May 2025 23:03:50.709 * Evicting client: id=9 addr=127.0.0.1:58980 laddr=127.0.0.1:27113 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=2309 qbuf=0 qbuf-free=0 argv-mem=0 multi-mem=0 rbs=16384 rbp=5 obl=0 oll=0 omem=0 tot-mem=183144 events=r cmd=watch user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56638 tot-net-out=11550 tot-cmds=2310
+### Starting test client evicted due to pubsub subscriptions in tests/unit/client-eviction.tcl
+84607:M 03 May 2025 23:03:50.710 - Accepted 127.0.0.1:58996
+84607:M 03 May 2025 23:03:50.868 * Evicting client: id=10 addr=127.0.0.1:58996 laddr=127.0.0.1:27113 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=4110 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=0 argv-mem=0 multi-mem=0 rbs=1024 rbp=38 obl=0 oll=0 omem=0 tot-mem=198480 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=126323 tot-net-out=153968 tot-cmds=4111
+84607:M 03 May 2025 23:03:50.869 - Accepted 127.0.0.1:58997
+84607:M 03 May 2025 23:03:51.019 * Evicting client: id=11 addr=127.0.0.1:58997 laddr=127.0.0.1:27113 fd=13 name= age=1 idle=0 flags=P capa= db=9 sub=4097 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=0 argv-mem=0 multi-mem=0 rbs=16384 rbp=36 obl=0 oll=0 omem=0 tot-mem=213528 events=r cmd=subscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=117726 tot-net-out=145280 tot-cmds=4098
+84607:M 03 May 2025 23:03:51.020 - Accepted 127.0.0.1:58998
+84607:M 03 May 2025 23:03:51.252 * Evicting client: id=12 addr=127.0.0.1:58998 laddr=127.0.0.1:27113 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=0 ssub=4110 multi=-1 watch=0 qbuf=0 qbuf-free=0 argv-mem=0 multi-mem=0 rbs=1024 rbp=38 obl=0 oll=0 omem=0 tot-mem=198480 events=r cmd=ssubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=126323 tot-net-out=153968 tot-cmds=4111
+### Starting test client evicted due to tracking redirection in tests/unit/client-eviction.tcl
+84607:M 03 May 2025 23:03:51.254 - Accepted 127.0.0.1:58999
+84607:M 03 May 2025 23:03:51.254 - Accepted 127.0.0.1:59000
+84607:M 03 May 2025 23:03:51.263 * Evicting client: id=14 addr=127.0.0.1:59000 laddr=127.0.0.1:27113 fd=14 name=redirected_client age=0 idle=0 flags=P capa= db=9 sub=1 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=0 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=14 omem=2883920 tot-mem=2900872 events=rw cmd=subscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=146 tot-net-out=564384 tot-cmds=4
+84607:M 03 May 2025 23:03:51.263 - Client closed connection id=13 addr=127.0.0.1:58999 laddr=127.0.0.1:27113 fd=13 name= age=0 idle=0 flags=tB capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=229366 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=246304 events=r cmd=evalsha user=default redir=14 resp=2 lib-name= lib-ver= tot-net-in=206089 tot-net-out=137 tot-cmds=35
+### Starting test client evicted due to client tracking prefixes in tests/unit/client-eviction.tcl
+84607:M 03 May 2025 23:03:51.263 - Accepted 127.0.0.1:59001
+84607:M 03 May 2025 23:03:52.515 * Evicting client: id=15 addr=127.0.0.1:59001 laddr=127.0.0.1:27113 fd=13 name= age=1 idle=0 flags=tB capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=0 argv-mem=0 multi-mem=0 rbs=1024 rbp=5 obl=0 oll=0 omem=0 tot-mem=197504 events=r cmd=client|tracking user=default redir=0 resp=2 lib-name= lib-ver= tot-net-in=251281 tot-net-out=9175 tot-cmds=1835
+### Starting test client evicted due to output buf in tests/unit/client-eviction.tcl
+84607:M 03 May 2025 23:03:52.519 - Accepted 127.0.0.1:59074
+84607:M 03 May 2025 23:03:52.521 * Evicting client: id=16 addr=127.0.0.1:59074 laddr=127.0.0.1:27113 fd=13 name=test_client age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=0 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=15 omem=3015016 tot-mem=3031912 events=rw cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=450 tot-net-out=858122 tot-cmds=21
+### Starting test client no-evict on in tests/unit/client-eviction.tcl
+84607:M 03 May 2025 23:03:52.521 - Accepted 127.0.0.1:59075
+### Starting test client no-evict off in tests/unit/client-eviction.tcl
+84607:M 03 May 2025 23:03:52.547 - Client closed connection id=17 addr=127.0.0.1:59075 laddr=127.0.0.1:27113 fd=13 name=tst_yi2F age=0 idle=0 flags=e capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=3000001 qbuf-free=14645 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=3031552 events=r cmd=client|no-evict user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=3000119 tot-net-out=15 tot-cmds=3
+84607:M 03 May 2025 23:03:52.547 - Accepted 127.0.0.1:59076
+84607:M 03 May 2025 23:03:52.556 * Evicting client: id=18 addr=127.0.0.1:59076 laddr=127.0.0.1:27113 fd=13 name=tst_qlLv age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=16876 qbuf-free=2997770 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=3031552 events=r cmd=client|no-evict user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=16995 tot-net-out=15 tot-cmds=3
+84607:M 03 May 2025 23:03:52.562 - Client closed connection id=3 addr=127.0.0.1:58974 laddr=127.0.0.1:27113 fd=12 name=control age=2 idle=0 flags=e capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=client|list user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=2572 tot-net-out=42099 tot-cmds=85
+84607:signal-handler (1746281035) Received SIGTERM scheduling shutdown...
+84607:M 03 May 2025 23:03:55.439 * User requested shutdown...
+84607:M 03 May 2025 23:03:55.439 * Removing the pid file.
+84607:M 03 May 2025 23:03:55.439 * Removing the unix socket file.
+84607:M 03 May 2025 23:03:55.439 # Valkey is now ready to exit, bye bye...

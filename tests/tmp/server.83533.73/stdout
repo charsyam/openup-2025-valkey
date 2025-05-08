@@ -1,0 +1,74 @@
+### Starting server for test Migrate the last slot away from a node using valkey-cli in tests/unit/cluster/cli.tcl
+97239:M 03 May 2025 23:05:29.396 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+97239:M 03 May 2025 23:05:29.396 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+97239:M 03 May 2025 23:05:29.396 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=97239, just started
+97239:M 03 May 2025 23:05:29.397 * Configuration loaded
+97239:M 03 May 2025 23:05:29.397 * Increased maximum number of open files to 10032 (it was originally set to 256).
+97239:M 03 May 2025 23:05:29.397 * monotonic clock: POSIX clock_gettime
+97239:M 03 May 2025 23:05:29.397 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25147
+ |###|   .+###############+.   |###|    PID: 97239                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+97239:M 03 May 2025 23:05:29.397 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+97239:M 03 May 2025 23:05:29.397 * No cluster configuration found, I'm 50447f04e2e99debad27dae933a339ef5cef4f76
+97239:M 03 May 2025 23:05:29.402 * Server initialized
+97239:M 03 May 2025 23:05:29.402 * Ready to accept connections tcp
+97239:M 03 May 2025 23:05:29.402 * Ready to accept connections unix
+97239:M 03 May 2025 23:05:29.571 - Accepted 127.0.0.1:56215
+97239:M 03 May 2025 23:05:29.572 - Client closed connection id=2 addr=127.0.0.1:56215 laddr=127.0.0.1:25147 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+97239:M 03 May 2025 23:05:29.637 - Accepted 127.0.0.1:56216
+97239:M 03 May 2025 23:05:29.661 - Accepted 127.0.0.1:56226
+97239:M 03 May 2025 23:05:29.663 # Missing implement of connection type tls
+97239:M 03 May 2025 23:05:29.676 * configEpoch set to 1 via CLUSTER SET-CONFIG-EPOCH
+97239:M 03 May 2025 23:05:29.705 - Accepting cluster node connection from 127.0.0.1:56233
+97239:M 03 May 2025 23:05:29.710 * IP address for this node updated to 127.0.0.1
+97239:M 03 May 2025 23:05:29.732 - Accepting cluster node connection from 127.0.0.1:56234
+97239:M 03 May 2025 23:05:30.699 - Client closed connection id=4 addr=127.0.0.1:56226 laddr=127.0.0.1:25147 fd=15 name= age=1 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=1024 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=53762 tot-net-out=19153 tot-cmds=10
+97239:M 03 May 2025 23:05:31.449 * Cluster state changed: ok
+97239:M 03 May 2025 23:05:31.468 - Accepted 127.0.0.1:56384
+97239:M 03 May 2025 23:05:31.473 - Client closed connection id=5 addr=127.0.0.1:56384 laddr=127.0.0.1:25147 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=31 tot-net-out=30 tot-cmds=0
+97239:M 03 May 2025 23:05:31.486 - Accepted 127.0.0.1:56387
+97239:M 03 May 2025 23:05:31.490 - Client closed connection id=6 addr=127.0.0.1:56387 laddr=127.0.0.1:25147 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|keyslot user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=39 tot-net-out=8 tot-cmds=1
+97239:M 03 May 2025 23:05:31.517 - Accepted 127.0.0.1:56389
+97239:M 03 May 2025 23:05:31.533 - Client closed connection id=7 addr=127.0.0.1:56389 laddr=127.0.0.1:25147 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=function|dump user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=98 tot-net-out=6639 tot-cmds=4
+97239:M 03 May 2025 23:05:31.603 - Accepting cluster node connection from 127.0.0.1:56395
+97239:M 03 May 2025 23:05:32.723 * Slot 12182 is migrated from node 8c803afea545336dff51cc9bb46504d6813dc3f8 () in shard 127989df1e2cb576b96fdccf4f27e072e32912b5 to node 24064a070f1e74bca35295f8b5e0677bdcc05aef () in shard 6998b7b00a5c82a4b33c6ccc3852e8fcd75972b2.
+97239:M 03 May 2025 23:05:32.784 - Accepted 127.0.0.1:56508
+97239:M 03 May 2025 23:05:32.793 - Client closed connection id=8 addr=127.0.0.1:56508 laddr=127.0.0.1:25147 fd=21 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86 tot-net-out=6864 tot-cmds=4
+97239:M 03 May 2025 23:05:32.824 - Accepted 127.0.0.1:56514
+97239:M 03 May 2025 23:05:32.835 - Client closed connection id=9 addr=127.0.0.1:56514 laddr=127.0.0.1:25147 fd=21 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=906 tot-cmds=3
+97239:M 03 May 2025 23:05:32.854 - Accepted 127.0.0.1:56521
+97239:M 03 May 2025 23:05:32.855 - Client closed connection id=10 addr=127.0.0.1:56521 laddr=127.0.0.1:25147 fd=21 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=906 tot-cmds=3
+97239:M 03 May 2025 23:05:32.871 - Accepted 127.0.0.1:56528
+97239:M 03 May 2025 23:05:32.872 - Client closed connection id=11 addr=127.0.0.1:56528 laddr=127.0.0.1:25147 fd=21 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=463 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=918 tot-cmds=3
+97239:M 03 May 2025 23:05:32.897 - Accepted 127.0.0.1:56532
+97239:M 03 May 2025 23:05:32.925 * Slot 12182 is migrated from node 24064a070f1e74bca35295f8b5e0677bdcc05aef () in shard 6998b7b00a5c82a4b33c6ccc3852e8fcd75972b2 to node 8c803afea545336dff51cc9bb46504d6813dc3f8 () in shard 127989df1e2cb576b96fdccf4f27e072e32912b5.
+97239:M 03 May 2025 23:05:32.939 * Node 24064a070f1e74bca35295f8b5e0677bdcc05aef () is no longer primary of shard 6998b7b00a5c82a4b33c6ccc3852e8fcd75972b2; removed all 0 slot(s) it used to own
+97239:M 03 May 2025 23:05:32.939 * Node 24064a070f1e74bca35295f8b5e0677bdcc05aef () is now part of shard 127989df1e2cb576b96fdccf4f27e072e32912b5
+97239:M 03 May 2025 23:05:32.939 * Node 24064a070f1e74bca35295f8b5e0677bdcc05aef () is now a replica of node 8c803afea545336dff51cc9bb46504d6813dc3f8 () in shard 127989df1e2cb576b96fdccf4f27e072e32912b5
+97239:M 03 May 2025 23:05:32.940 * Assigning slot 12182 to node 8c803afea545336dff51cc9bb46504d6813dc3f8 () in shard 127989df1e2cb576b96fdccf4f27e072e32912b5
+97239:M 03 May 2025 23:05:32.940 - Client closed connection id=12 addr=127.0.0.1:56532 laddr=127.0.0.1:25147 fd=21 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|setslot user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=154 tot-net-out=907 tot-cmds=3
+97239:M 03 May 2025 23:05:39.155 - Client closed connection id=3 addr=127.0.0.1:56216 laddr=127.0.0.1:25147 fd=14 name= age=10 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=370 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|slots user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=4474 tot-net-out=134003 tot-cmds=157
+97239:signal-handler (1746281139) Received SIGTERM scheduling shutdown...
+97239:M 03 May 2025 23:05:39.221 * User requested shutdown...
+97239:M 03 May 2025 23:05:39.221 * Removing the pid file.
+97239:M 03 May 2025 23:05:39.221 * Saving the cluster configuration file before exiting.
+97239:M 03 May 2025 23:05:39.225 * Removing the unix socket file.
+97239:M 03 May 2025 23:05:39.225 # Valkey is now ready to exit, bye bye...

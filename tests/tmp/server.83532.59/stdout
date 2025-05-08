@@ -1,0 +1,61 @@
+### Starting server for test 
+5387:M 03 May 2025 23:06:40.063 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5387:M 03 May 2025 23:06:40.063 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5387, just started
+5387:M 03 May 2025 23:06:40.063 * Configuration loaded
+5387:M 03 May 2025 23:06:40.063 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5387:M 03 May 2025 23:06:40.063 * monotonic clock: POSIX clock_gettime
+5387:M 03 May 2025 23:06:40.064 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 24640
+ |###|   .+###############+.   |###|    PID: 5387                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5387:M 03 May 2025 23:06:40.064 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5387:M 03 May 2025 23:06:40.064 * Server initialized
+5387:M 03 May 2025 23:06:40.064 * Ready to accept connections tcp
+5387:M 03 May 2025 23:06:40.064 * Ready to accept connections unix
+5387:M 03 May 2025 23:06:40.096 - Accepted 127.0.0.1:64062
+5387:M 03 May 2025 23:06:40.096 - Client closed connection id=2 addr=127.0.0.1:64062 laddr=127.0.0.1:24640 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+5387:M 03 May 2025 23:06:40.128 - Accepted 127.0.0.1:64078
+### Starting test First server should have role slave after SLAVEOF in tests/integration/replication-4.tcl
+5387:M 03 May 2025 23:06:40.333 - Accepted 127.0.0.1:64199
+5387:M 03 May 2025 23:06:40.334 * Replica 127.0.0.1:24641 asks for synchronization
+5387:M 03 May 2025 23:06:40.334 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '27cf79a9500f49368b1e05598e42c7e8f642839b', my replication IDs are '24d13a0c62ed920632b9b16de3a50af0af4249dd' and '0000000000000000000000000000000000000000')
+5387:M 03 May 2025 23:06:40.334 * Replication backlog created, my new replication IDs are 'b0eb8eef0c3206c1422da67e4b77954cf75a332b' and '0000000000000000000000000000000000000000'
+5387:M 03 May 2025 23:06:40.334 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+5387:M 03 May 2025 23:06:40.335 * Background RDB transfer started by pid 5439 to pipe through parent process
+5439:C 03 May 2025 23:06:40.336 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+5387:M 03 May 2025 23:06:40.336 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+5387:M 03 May 2025 23:06:40.342 * Background RDB transfer terminated with success
+5387:M 03 May 2025 23:06:40.342 * Streamed RDB transfer with replica 127.0.0.1:24641 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+5387:M 03 May 2025 23:06:40.342 * Synchronization with replica 127.0.0.1:24641 succeeded
+### Starting test With min-slaves-to-write (1,3): master should be writable in tests/integration/replication-4.tcl
+### Starting test With min-slaves-to-write (2,3): master should not be writable in tests/integration/replication-4.tcl
+### Starting test With min-slaves-to-write function without no-write flag in tests/integration/replication-4.tcl
+### Starting test With not enough good slaves, read in Lua script is still accepted in tests/integration/replication-4.tcl
+### Starting test With min-slaves-to-write: master not writable with lagged slave in tests/integration/replication-4.tcl
+### Starting test Check for memory leaks (pid 5410) in tests/integration/replication-4.tcl
+5387:M 03 May 2025 23:06:44.725 - Client closed connection id=4 addr=127.0.0.1:64199 laddr=127.0.0.1:24640 fd=13 name= age=4 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=275 tot-net-out=1010 tot-cmds=6
+5387:M 03 May 2025 23:06:44.725 * Connection with replica 127.0.0.1:24641 lost.
+5387:M 03 May 2025 23:06:44.801 - Client closed connection id=3 addr=127.0.0.1:64078 laddr=127.0.0.1:24640 fd=12 name= age=4 idle=1 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=457 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=eval user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=2408 tot-net-out=1502 tot-cmds=53
+5387:M 03 May 2025 23:06:45.138 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+5387:signal-handler (1746281206) Received SIGTERM scheduling shutdown...
+5387:M 03 May 2025 23:06:46.398 * User requested shutdown...
+5387:M 03 May 2025 23:06:46.398 * Removing the pid file.
+5387:M 03 May 2025 23:06:46.398 * Removing the unix socket file.
+5387:M 03 May 2025 23:06:46.398 # Valkey is now ready to exit, bye bye...

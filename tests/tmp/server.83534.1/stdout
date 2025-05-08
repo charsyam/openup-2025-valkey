@@ -1,0 +1,165 @@
+### Starting server for test 
+83607:M 03 May 2025 23:03:40.912 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+83607:M 03 May 2025 23:03:40.912 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=83607, just started
+83607:M 03 May 2025 23:03:40.912 * Configuration loaded
+83607:M 03 May 2025 23:03:40.913 * Increased maximum number of open files to 10032 (it was originally set to 256).
+83607:M 03 May 2025 23:03:40.913 * monotonic clock: POSIX clock_gettime
+83607:M 03 May 2025 23:03:40.914 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25611
+ |###|   .+###############+.   |###|    PID: 83607                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+83607:M 03 May 2025 23:03:40.914 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+83607:M 03 May 2025 23:03:40.916 * Server initialized
+83607:M 03 May 2025 23:03:40.916 * Ready to accept connections tcp
+83607:M 03 May 2025 23:03:40.916 * Ready to accept connections unix
+83607:M 03 May 2025 23:03:40.971 - Accepted 127.0.0.1:58736
+83607:M 03 May 2025 23:03:40.972 - Client closed connection id=2 addr=127.0.0.1:58736 laddr=127.0.0.1:25611 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+83607:M 03 May 2025 23:03:40.985 - Accepted 127.0.0.1:58745
+### Starting test Connections start with the default user in tests/unit/acl.tcl
+### Starting test It is possible to create new users in tests/unit/acl.tcl
+### Starting test Coverage: ACL USERS in tests/unit/acl.tcl
+### Starting test Usernames can not contain spaces or null characters in tests/unit/acl.tcl
+### Starting test New users start disabled in tests/unit/acl.tcl
+### Starting test Enabling the user allows the login in tests/unit/acl.tcl
+### Starting test Only the set of correct passwords work in tests/unit/acl.tcl
+### Starting test It is possible to remove passwords from the set of valid ones in tests/unit/acl.tcl
+### Starting test Test password hashes can be added in tests/unit/acl.tcl
+### Starting test Test password hashes validate input in tests/unit/acl.tcl
+### Starting test ACL GETUSER returns the password hash instead of the actual password in tests/unit/acl.tcl
+### Starting test Test hashed passwords removal in tests/unit/acl.tcl
+### Starting test By default users are not able to access any command in tests/unit/acl.tcl
+### Starting test By default users are not able to access any key in tests/unit/acl.tcl
+### Starting test It's possible to allow the access of a subset of keys in tests/unit/acl.tcl
+### Starting test By default, only default user is able to publish to any channel in tests/unit/acl.tcl
+### Starting test By default, only default user is not able to publish to any shard channel in tests/unit/acl.tcl
+### Starting test By default, only default user is able to subscribe to any channel in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:40.995 - Accepted 127.0.0.1:58758
+83607:M 03 May 2025 23:03:40.995 - Client closed connection id=4 addr=127.0.0.1:58758 laddr=127.0.0.1:25611 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33824 events=r cmd=subscribe user=psuser redir=-1 resp=2 lib-name= lib-ver= tot-net-in=175 tot-net-out=126 tot-cmds=5
+### Starting test By default, only default user is able to subscribe to any shard channel in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:40.996 - Accepted 127.0.0.1:58760
+83607:M 03 May 2025 23:03:40.996 - Client closed connection id=5 addr=127.0.0.1:58760 laddr=127.0.0.1:25611 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33824 events=r cmd=ssubscribe user=psuser redir=-1 resp=2 lib-name= lib-ver= tot-net-in=180 tot-net-out=129 tot-cmds=5
+### Starting test By default, only default user is able to subscribe to any pattern in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:40.996 - Accepted 127.0.0.1:58761
+83607:M 03 May 2025 23:03:40.997 - Client closed connection id=6 addr=127.0.0.1:58761 laddr=127.0.0.1:25611 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33824 events=r cmd=psubscribe user=psuser redir=-1 resp=2 lib-name= lib-ver= tot-net-in=182 tot-net-out=131 tot-cmds=5
+### Starting test It's possible to allow publishing to a subset of channels in tests/unit/acl.tcl
+### Starting test It's possible to allow publishing to a subset of shard channels in tests/unit/acl.tcl
+### Starting test Validate subset of channels is prefixed with resetchannels flag in tests/unit/acl.tcl
+### Starting test In transaction queue publish/subscribe/psubscribe to unauthorized channel will fail in tests/unit/acl.tcl
+### Starting test It's possible to allow subscribing to a subset of channels in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.002 - Accepted 127.0.0.1:58765
+### Starting test It's possible to allow subscribing to a subset of shard channels in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.005 - Accepted 127.0.0.1:58767
+### Starting test It's possible to allow subscribing to a subset of channel patterns in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.007 - Accepted 127.0.0.1:58768
+### Starting test Subscribers are killed when revoked of channel permission in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.010 - Accepted 127.0.0.1:58769
+### Starting test Subscribers are killed when revoked of channel permission in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.012 - Accepted 127.0.0.1:58770
+### Starting test Subscribers are killed when revoked of pattern permission in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.014 - Accepted 127.0.0.1:58771
+### Starting test Subscribers are killed when revoked of allchannels permission in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.016 - Accepted 127.0.0.1:58772
+### Starting test Subscribers are pardoned if literal permissions are retained and/or gaining allchannels in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.021 - Accepted 127.0.0.1:58773
+### Starting test blocked command gets rejected when reprocessed after permission change in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.029 - Client closed connection id=14 addr=127.0.0.1:58773 laddr=127.0.0.1:25611 fd=13 name=pardoned age=0 idle=0 flags=P capa= db=9 sub=1 psub=1 ssub=1 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33960 events=r cmd=psubscribe user=psuser redir=-1 resp=2 lib-name= lib-ver= tot-net-in=199 tot-net-out=122 tot-cmds=6
+83607:M 03 May 2025 23:03:41.030 - Accepted 127.0.0.1:58774
+83607:M 03 May 2025 23:03:41.032 - Client closed connection id=15 addr=127.0.0.1:58774 laddr=127.0.0.1:25611 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=psuser redir=-1 resp=2 lib-name= lib-ver= tot-net-in=108 tot-net-out=57 tot-cmds=3
+### Starting test Users can be configured to authenticate with any password in tests/unit/acl.tcl
+### Starting test ACLs can exclude single commands in tests/unit/acl.tcl
+### Starting test ACLs can include or exclude whole classes of commands in tests/unit/acl.tcl
+### Starting test ACLs can include single subcommands in tests/unit/acl.tcl
+### Starting test ACLs can exclude single subcommands, case 1 in tests/unit/acl.tcl
+### Starting test ACLs can exclude single subcommands, case 2 in tests/unit/acl.tcl
+### Starting test ACLs cannot include a subcommand with a specific arg in tests/unit/acl.tcl
+### Starting test ACLs cannot exclude or include a container commands with a specific arg in tests/unit/acl.tcl
+### Starting test ACLs cannot exclude or include a container command with two args in tests/unit/acl.tcl
+### Starting test ACLs including of a type includes also subcommands in tests/unit/acl.tcl
+### Starting test ACLs can block SELECT of all but a specific DB in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.060 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +select|0)
+83607:M 03 May 2025 23:03:41.061 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +select|0)
+### Starting test ACLs can block all DEBUG subcommands except one in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.063 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +debug|object)
+83607:M 03 May 2025 23:03:41.065 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +debug|object)
+### Starting test ACLs set can include subcommands, if already full command exists in tests/unit/acl.tcl
+### Starting test ACLs set can exclude subcommands, if already full command exists in tests/unit/acl.tcl
+### Starting test ACL SETUSER RESET reverting to default newly created user in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.082 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +debug|object)
+### Starting test ACL GETUSER is able to translate back command permissions in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.083 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +debug|digest)
+83607:M 03 May 2025 23:03:41.083 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +debug|digest)
+83607:M 03 May 2025 23:03:41.083 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +debug|digest)
+83607:M 03 May 2025 23:03:41.083 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +debug|segfault)
+83607:M 03 May 2025 23:03:41.083 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +debug|digest)
+83607:M 03 May 2025 23:03:41.083 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +debug|segfault)
+### Starting test ACL GETUSER provides reasonable results in tests/unit/acl.tcl
+### Starting test ACL GETUSER provides correct results in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.092 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +select|0)
+83607:M 03 May 2025 23:03:41.092 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +select|0)
+83607:M 03 May 2025 23:03:41.092 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +debug|segfault)
+83607:M 03 May 2025 23:03:41.092 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +select|0)
+### Starting test ACL CAT with illegal arguments in tests/unit/acl.tcl
+### Starting test ACL CAT without category - list all categories in tests/unit/acl.tcl
+### Starting test ACL CAT category - list all commands/subcommands that belong to category in tests/unit/acl.tcl
+### Starting test ACL requires explicit permission for scripting for EVAL_RO, EVALSHA_RO and FCALL_RO in tests/unit/acl.tcl
+### Starting test ACL #5998 regression: memory leaks adding / removing subcommands in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.094 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +debug|a)
+83607:M 03 May 2025 23:03:41.094 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +debug|b)
+83607:M 03 May 2025 23:03:41.094 # Deprecation warning: Allowing a first arg of an otherwise blocked command is a misuse of ACL and may get disabled in the future (offender: +debug|c)
+### Starting test ACL LOG aggregates similar errors together and assigns unique entry-id to new errors in tests/unit/acl.tcl
+### Starting test ACL LOG shows failed command executions at toplevel in tests/unit/acl.tcl
+### Starting test ACL LOG shows failed subcommand executions at toplevel in tests/unit/acl.tcl
+### Starting test ACL LOG is able to test similar events in tests/unit/acl.tcl
+### Starting test ACL LOG is able to log keys access violations and key name in tests/unit/acl.tcl
+### Starting test ACL LOG is able to log channel access violations and channel name in tests/unit/acl.tcl
+### Starting test ACL LOG RESET is able to flush the entries in the log in tests/unit/acl.tcl
+### Starting test ACL LOG can distinguish the transaction context (1) in tests/unit/acl.tcl
+### Starting test ACL LOG can distinguish the transaction context (2) in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.099 - Accepted 127.0.0.1:58780
+83607:M 03 May 2025 23:03:41.100 - Client closed connection id=16 addr=127.0.0.1:58780 laddr=127.0.0.1:25611 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=acl|setuser user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=73 tot-net-out=10 tot-cmds=2
+### Starting test ACL can log errors in the context of Lua scripting in tests/unit/acl.tcl
+### Starting test ACL LOG can accept a numerical argument to show less entries in tests/unit/acl.tcl
+### Starting test ACL LOG can log failed auth attempts in tests/unit/acl.tcl
+### Starting test ACLLOG - zero max length is correctly handled in tests/unit/acl.tcl
+### Starting test ACL LOG entries are limited to a maximum amount in tests/unit/acl.tcl
+### Starting test ACL LOG entries are still present on update of max len config in tests/unit/acl.tcl
+### Starting test When default user is off, new connections are not authenticated in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.104 - Accepted 127.0.0.1:58781
+### Starting test When default user has no command permission, hello command still works for other users in tests/unit/acl.tcl
+### Starting test When an authentication chain is used in the HELLO cmd, the last auth cmd has precedence in tests/unit/acl.tcl
+### Starting test When a setname chain is used in the HELLO cmd, the last setname cmd has precedence in tests/unit/acl.tcl
+### Starting test When authentication fails in the HELLO cmd, the client setname should not be applied in tests/unit/acl.tcl
+### Starting test ACL HELP should not have unexpected options in tests/unit/acl.tcl
+### Starting test Delete a user that the client doesn't use in tests/unit/acl.tcl
+### Starting test Delete a user that the client is using in tests/unit/acl.tcl
+### Starting test ACL GENPASS command failed test in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.107 - Accepted 127.0.0.1:58782
+### Starting test Default user can not be removed in tests/unit/acl.tcl
+### Starting test ACL load non-existing configured ACL file in tests/unit/acl.tcl
+### Starting test ACL-Metrics user AUTH failure in tests/unit/acl.tcl
+### Starting test ACL-Metrics invalid command accesses in tests/unit/acl.tcl
+### Starting test ACL-Metrics invalid key accesses in tests/unit/acl.tcl
+### Starting test ACL-Metrics invalid channels accesses in tests/unit/acl.tcl
+83607:M 03 May 2025 23:03:41.114 - Client closed connection id=18 addr=127.0.0.1:58782 laddr=127.0.0.1:25611 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1386 tot-net-out=209309 tot-cmds=50
+83607:signal-handler (1746281026) Received SIGTERM scheduling shutdown...
+83607:M 03 May 2025 23:03:46.442 * User requested shutdown...
+83607:M 03 May 2025 23:03:46.442 * Removing the pid file.
+83607:M 03 May 2025 23:03:46.442 * Removing the unix socket file.
+83607:M 03 May 2025 23:03:46.442 # Valkey is now ready to exit, bye bye...

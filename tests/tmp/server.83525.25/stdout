@@ -1,0 +1,64 @@
+### Starting server for test 
+86825:M 03 May 2025 23:04:08.135 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+86825:M 03 May 2025 23:04:08.135 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=86825, just started
+86825:M 03 May 2025 23:04:08.135 * Configuration loaded
+86825:M 03 May 2025 23:04:08.135 * Increased maximum number of open files to 10032 (it was originally set to 256).
+86825:M 03 May 2025 23:04:08.135 * monotonic clock: POSIX clock_gettime
+86825:M 03 May 2025 23:04:08.135 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21123
+ |###|   .+###############+.   |###|    PID: 86825                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+86825:M 03 May 2025 23:04:08.135 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+86825:M 03 May 2025 23:04:08.135 * Server initialized
+86825:M 03 May 2025 23:04:08.135 * Creating AOF base file appendonly.aof.1.base.aof on server start
+86825:M 03 May 2025 23:04:08.141 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+86825:M 03 May 2025 23:04:08.141 * Ready to accept connections tcp
+86825:M 03 May 2025 23:04:08.141 * Ready to accept connections unix
+86825:M 03 May 2025 23:04:08.286 - Accepted 127.0.0.1:59477
+86825:M 03 May 2025 23:04:08.286 - Client closed connection id=2 addr=127.0.0.1:59477 laddr=127.0.0.1:21123 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+86825:M 03 May 2025 23:04:08.295 - Accepted 127.0.0.1:59478
+### Starting test Connect a replica to the master instance in tests/unit/scripting.tcl
+86825:M 03 May 2025 23:04:08.295 - Accepted 127.0.0.1:59479
+86825:M 03 May 2025 23:04:08.295 * Replica 127.0.0.1:21122 asks for synchronization
+86825:M 03 May 2025 23:04:08.295 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '871e930c7522a8e7fb4ffd80b3bd8b308f53be38', my replication IDs are '1a411606b0cd7dafdc122bf95f5003309128b1e1' and '0000000000000000000000000000000000000000')
+86825:M 03 May 2025 23:04:08.295 * Replication backlog created, my new replication IDs are '36e93677442f9000f554072ba589771a72fadd40' and '0000000000000000000000000000000000000000'
+86825:M 03 May 2025 23:04:08.295 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+86825:M 03 May 2025 23:04:08.296 * Background RDB transfer started by pid 86849 to pipe through parent process
+86849:C 03 May 2025 23:04:08.296 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+86825:M 03 May 2025 23:04:08.296 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+86825:M 03 May 2025 23:04:08.300 * Background RDB transfer terminated with success
+86825:M 03 May 2025 23:04:08.300 * Streamed RDB transfer with replica 127.0.0.1:21122 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+86825:M 03 May 2025 23:04:08.300 * Synchronization with replica 127.0.0.1:21122 succeeded
+### Starting test Redis.replicate_commands() can be issued anywhere now in tests/unit/scripting.tcl
+### Starting test Redis.set_repl() can be issued before replicate_commands() now in tests/unit/scripting.tcl
+### Starting test Redis.set_repl() don't accept invalid values in tests/unit/scripting.tcl
+### Starting test Test selective replication of certain commands from Lua in tests/unit/scripting.tcl
+86825:M 03 May 2025 23:04:08.399 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.000 seconds
+86825:M 03 May 2025 23:04:08.399 * Append Only File loaded by DEBUG LOADAOF
+### Starting test PRNG is seeded randomly for command replication in tests/unit/scripting.tcl
+### Starting test Using side effects is not a problem with command replication in tests/unit/scripting.tcl
+86825:M 03 May 2025 23:04:08.400 - Client closed connection id=3 addr=127.0.0.1:59478 laddr=127.0.0.1:21123 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=119 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1886 tot-net-out=314 tot-cmds=26
+86825:signal-handler (1746281049) Received SIGTERM scheduling shutdown...
+86825:M 03 May 2025 23:04:09.684 * User requested shutdown...
+86825:M 03 May 2025 23:04:09.684 * 1 of 1 replicas are in sync when shutting down.
+86825:M 03 May 2025 23:04:09.684 * Calling fsync() on the AOF file.
+86825:M 03 May 2025 23:04:09.686 * Removing the pid file.
+86825:M 03 May 2025 23:04:09.687 * Removing the unix socket file.
+86825:M 03 May 2025 23:04:09.687 # Valkey is now ready to exit, bye bye...

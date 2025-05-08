@@ -1,0 +1,77 @@
+### Starting server for test 
+90530:M 03 May 2025 23:04:35.668 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+90530:M 03 May 2025 23:04:35.668 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=90530, just started
+90530:M 03 May 2025 23:04:35.668 * Configuration loaded
+90530:M 03 May 2025 23:04:35.669 * Increased maximum number of open files to 10032 (it was originally set to 256).
+90530:M 03 May 2025 23:04:35.669 * monotonic clock: POSIX clock_gettime
+90530:M 03 May 2025 23:04:35.670 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21134
+ |###|   .+###############+.   |###|    PID: 90530                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+90530:M 03 May 2025 23:04:35.670 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+90530:M 03 May 2025 23:04:35.671 * Server initialized
+90530:M 03 May 2025 23:04:35.671 * Ready to accept connections tcp
+90530:M 03 May 2025 23:04:35.671 * Ready to accept connections unix
+90530:M 03 May 2025 23:04:35.788 - Accepted 127.0.0.1:61607
+90530:M 03 May 2025 23:04:35.789 - Client closed connection id=2 addr=127.0.0.1:61607 laddr=127.0.0.1:21134 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+90530:M 03 May 2025 23:04:35.798 - Accepted 127.0.0.1:61610
+### Starting test Timedout read-only scripts can be killed by SCRIPT KILL in tests/unit/scripting.tcl
+90530:M 03 May 2025 23:04:35.799 - Accepted 127.0.0.1:61611
+90530:M 03 May 2025 23:04:35.809 # Slow script detected: still in execution after 10 milliseconds. You can try killing the script using the SCRIPT KILL command. Script name is: 694a5fe1ddb97a4c6a1bf299d9537c7d3d0f84e7.
+90530:M 03 May 2025 23:04:36.004 * Script killed by user with SCRIPT KILL.
+### Starting test Timedout read-only scripts can be killed by SCRIPT KILL even when use pcall in tests/unit/scripting.tcl
+90530:M 03 May 2025 23:04:36.209 - Reading from client: Connection reset by peer
+90530:M 03 May 2025 23:04:36.209 - Accepted 127.0.0.1:61772
+90530:M 03 May 2025 23:04:36.225 # Slow script detected: still in execution after 15 milliseconds. You can try killing the script using the SCRIPT KILL command. Script name is: 7c4647a0ff0df8a94e199764ea04d4f93a1c64b8.
+90530:M 03 May 2025 23:04:36.237 * Script killed by user with SCRIPT KILL.
+90530:M 03 May 2025 23:04:36.237 * Script killed by user with SCRIPT KILL.
+### Starting test Timedout script does not cause a false dead client in tests/unit/scripting.tcl
+90530:M 03 May 2025 23:04:36.346 - Client closed connection id=5 addr=127.0.0.1:61772 laddr=127.0.0.1:21134 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=eval user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=133 tot-net-out=120 tot-cmds=60001
+90530:M 03 May 2025 23:04:36.347 - Accepted 127.0.0.1:61816
+90530:M 03 May 2025 23:04:36.360 # Slow script detected: still in execution after 11 milliseconds. You can try killing the script using the SCRIPT KILL command. Script name is: b50655b6634f055327ef8affd1e1eecdf71f08ab.
+90530:M 03 May 2025 23:04:36.370 * Script killed by user with SCRIPT KILL.
+### Starting test Timedout script link is still usable after Lua returns in tests/unit/scripting.tcl
+90530:M 03 May 2025 23:04:36.375 - Client closed connection id=6 addr=127.0.0.1:61816 laddr=127.0.0.1:21134 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=98 tot-net-out=127 tot-cmds=40003
+90530:M 03 May 2025 23:04:36.391 # Slow script detected: still in execution after 14 milliseconds. You can try killing the script using the SCRIPT KILL command. Script name is: 0a7e845a64277a46b526d50c53b809747ee8ee21.
+### Starting test Timedout scripts and unblocked command in tests/unit/scripting.tcl
+90530:M 03 May 2025 23:04:36.419 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+90530:M 03 May 2025 23:04:36.420 * Background append only file rewriting started by pid 90606
+90530:M 03 May 2025 23:04:36.420 - Accepted 127.0.0.1:61838
+90530:M 03 May 2025 23:04:36.420 - Accepted 127.0.0.1:61839
+90606:C 03 May 2025 23:04:36.420 * Successfully created the temporary AOF base file temp-rewriteaof-bg-90606.aof
+90606:C 03 May 2025 23:04:36.420 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+90530:M 03 May 2025 23:04:36.421 - Accepted 127.0.0.1:61840
+90530:M 03 May 2025 23:04:36.482 # Slow script detected: still in execution after 61 milliseconds. You can try killing the script using the SCRIPT KILL command. Script name is: ec35a0690ef7a8789e27c6499f1a9bdb9d9b5d1b.
+90530:M 03 May 2025 23:04:36.687 * Background AOF rewrite terminated with success
+90530:M 03 May 2025 23:04:36.698 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-90606.aof into appendonly.aof.1.base.rdb
+90530:M 03 May 2025 23:04:36.701 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.1.incr.aof
+90530:M 03 May 2025 23:04:36.723 * Background AOF rewrite finished successfully
+90530:M 03 May 2025 23:04:36.723 - Background AOF rewrite signal handler took 36088us
+90530:M 03 May 2025 23:04:36.724 - Client closed connection id=7 addr=127.0.0.1:61838 laddr=127.0.0.1:21134 fd=16 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=1352 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=eval user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=388 tot-net-out=1357 tot-cmds=33338
+90530:M 03 May 2025 23:04:36.728 - Client closed connection id=8 addr=127.0.0.1:61839 laddr=127.0.0.1:21134 fd=17 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=18 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=blpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=52 tot-net-out=23 tot-cmds=2
+90530:M 03 May 2025 23:04:36.728 - Client closed connection id=9 addr=127.0.0.1:61840 laddr=127.0.0.1:21134 fd=18 name=abortscript age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=hello user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=76 tot-net-out=158 tot-cmds=2
+### Starting test Timedout scripts that modified data can't be killed by SCRIPT KILL in tests/unit/scripting.tcl
+90530:M 03 May 2025 23:04:36.733 - Accepted 127.0.0.1:61954
+90530:M 03 May 2025 23:04:36.744 # Slow script detected: still in execution after 10 milliseconds. You can try killing the script using the SCRIPT KILL command. Script name is: 3b900c6e4c470acb0a863a8f620527920863892b.
+### Starting test SHUTDOWN NOSAVE can kill a timedout script anyway in tests/unit/scripting.tcl
+90530:M 03 May 2025 23:04:36.940 * User requested shutdown... (user request from 'id=3 addr=127.0.0.1:61610 laddr=127.0.0.1:21134 fd=12 name= user=default lib-name= lib-ver=')
+90530:M 03 May 2025 23:04:36.940 * Removing the pid file.
+90530:M 03 May 2025 23:04:36.940 * Removing the unix socket file.
+90530:M 03 May 2025 23:04:36.940 # Valkey is now ready to exit, bye bye...

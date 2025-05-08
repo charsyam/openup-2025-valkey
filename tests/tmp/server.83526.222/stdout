@@ -1,0 +1,50 @@
+### Starting server for test 
+7453:M 03 May 2025 23:06:52.432 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+7453:M 03 May 2025 23:06:52.432 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=7453, just started
+7453:M 03 May 2025 23:06:52.432 * Configuration loaded
+7453:M 03 May 2025 23:06:52.432 * Increased maximum number of open files to 10032 (it was originally set to 256).
+7453:M 03 May 2025 23:06:52.432 * monotonic clock: POSIX clock_gettime
+7453:M 03 May 2025 23:06:52.432 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21721
+ |###|   .+###############+.   |###|    PID: 7453                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+7453:M 03 May 2025 23:06:52.432 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+7453:M 03 May 2025 23:06:52.433 * Server initialized
+7453:M 03 May 2025 23:06:52.433 * Ready to accept connections tcp
+7453:M 03 May 2025 23:06:52.433 * Ready to accept connections unix
+7453:M 03 May 2025 23:06:52.576 - Accepted 127.0.0.1:57045
+7453:M 03 May 2025 23:06:52.576 - Client closed connection id=2 addr=127.0.0.1:57045 laddr=127.0.0.1:21721 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+7453:M 03 May 2025 23:06:52.605 - Accepted 127.0.0.1:57075
+7453:S 03 May 2025 23:06:53.868 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+7453:S 03 May 2025 23:06:53.868 * Connecting to PRIMARY 127.0.0.1:21724
+7453:S 03 May 2025 23:06:53.868 * PRIMARY <-> REPLICA sync started
+7453:S 03 May 2025 23:06:53.868 * REPLICAOF 127.0.0.1:21724 enabled (user request from 'id=3 addr=127.0.0.1:57075 laddr=127.0.0.1:21721 fd=12 name= user=default lib-name= lib-ver=')
+7453:S 03 May 2025 23:06:53.868 * Non blocking connect for SYNC fired the event.
+7453:S 03 May 2025 23:06:53.868 * Primary replied to PING, replication can continue...
+7453:S 03 May 2025 23:06:53.868 * Trying a partial resynchronization (request 74e2aeffe528b13f01105fe244055619dbc9a9d7:1).
+7453:S 03 May 2025 23:06:54.799 * Full resync from primary: 8082dc41354cb8788030daae9b6e68921ce23599:4413
+### Starting test All replicas share one global replication buffer dualchannel no in tests/integration/replication-buffer.tcl
+7453:S 03 May 2025 23:06:54.929 * User requested shutdown... (user request from 'id=3 addr=127.0.0.1:57075 laddr=127.0.0.1:21721 fd=12 name= user=default lib-name= lib-ver=')
+7453:S 03 May 2025 23:06:54.930 * Removing the pid file.
+7453:S 03 May 2025 23:06:54.930 * Removing the unix socket file.
+7453:S 03 May 2025 23:06:54.930 # Valkey is now ready to exit, bye bye...
+### Starting test Replication buffer will become smaller when no replica uses dualchannel no in tests/integration/replication-buffer.tcl
+### Starting test Check for memory leaks (pid 7506) in tests/integration/replication-buffer.tcl
+### Starting test Check for memory leaks (pid 7492) in tests/integration/replication-buffer.tcl

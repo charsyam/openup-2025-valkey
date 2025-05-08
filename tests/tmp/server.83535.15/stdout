@@ -1,0 +1,43 @@
+### Starting server for test 
+86541:M 03 May 2025 23:04:07.231 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+86541:M 03 May 2025 23:04:07.231 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=86541, just started
+86541:M 03 May 2025 23:04:07.231 * Configuration loaded
+86541:M 03 May 2025 23:04:07.231 * Increased maximum number of open files to 10032 (it was originally set to 256).
+86541:M 03 May 2025 23:04:07.231 * monotonic clock: POSIX clock_gettime
+86541:M 03 May 2025 23:04:07.232 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26119
+ |###|   .+###############+.   |###|    PID: 86541                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+86541:M 03 May 2025 23:04:07.232 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+86541:M 03 May 2025 23:04:07.232 * Server initialized
+86541:M 03 May 2025 23:04:07.232 * Ready to accept connections tcp
+86541:M 03 May 2025 23:04:07.232 * Ready to accept connections unix
+86541:M 03 May 2025 23:04:07.362 - Accepted 127.0.0.1:59441
+86541:M 03 May 2025 23:04:07.362 - Client closed connection id=2 addr=127.0.0.1:59441 laddr=127.0.0.1:26119 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+86541:M 03 May 2025 23:04:07.373 - Accepted 127.0.0.1:59442
+### Starting test verify reply buffer limits in tests/unit/replybufsize.tcl
+86541:M 03 May 2025 23:04:07.373 - Accepted 127.0.0.1:59443
+86541:M 03 May 2025 23:04:07.998 - Client closed connection id=4 addr=127.0.0.1:59443 laddr=127.0.0.1:26119 fd=13 name=test_client age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=195 tot-net-out=163900 tot-cmds=7
+86541:M 03 May 2025 23:04:07.998 - Client closed connection id=3 addr=127.0.0.1:59442 laddr=127.0.0.1:26119 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=699 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=33334 tot-net-out=8364 tot-cmds=17
+86541:signal-handler (1746281049) Received SIGTERM scheduling shutdown...
+86541:M 03 May 2025 23:04:09.451 * User requested shutdown...
+86541:M 03 May 2025 23:04:09.451 * Removing the pid file.
+86541:M 03 May 2025 23:04:09.451 * Removing the unix socket file.
+86541:M 03 May 2025 23:04:09.451 # Valkey is now ready to exit, bye bye...

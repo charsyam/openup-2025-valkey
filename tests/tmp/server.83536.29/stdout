@@ -1,0 +1,64 @@
+### Starting server for test 
+89875:M 03 May 2025 23:04:30.107 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+89875:M 03 May 2025 23:04:30.107 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+89875:M 03 May 2025 23:04:30.107 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=89875, just started
+89875:M 03 May 2025 23:04:30.107 * Configuration loaded
+89875:M 03 May 2025 23:04:30.107 * Increased maximum number of open files to 10032 (it was originally set to 256).
+89875:M 03 May 2025 23:04:30.107 * monotonic clock: POSIX clock_gettime
+89875:M 03 May 2025 23:04:30.107 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 26625
+ |###|   .+###############+.   |###|    PID: 89875                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+89875:M 03 May 2025 23:04:30.107 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+89875:M 03 May 2025 23:04:30.107 * No cluster configuration found, I'm 6fc1b6b566174d4a9102c12b8579fcbc73e3fb51
+89875:M 03 May 2025 23:04:30.114 * Server initialized
+89875:M 03 May 2025 23:04:30.114 * Ready to accept connections tcp
+89875:M 03 May 2025 23:04:30.114 * Ready to accept connections unix
+89875:M 03 May 2025 23:04:30.235 - Accepted 127.0.0.1:60510
+89875:M 03 May 2025 23:04:30.236 - Client closed connection id=2 addr=127.0.0.1:60510 laddr=127.0.0.1:26625 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+89875:M 03 May 2025 23:04:30.247 - Accepted 127.0.0.1:60511
+89875:M 03 May 2025 23:04:30.437 # Missing implement of connection type tls
+89875:M 03 May 2025 23:04:30.480 - Accepting cluster node connection from 127.0.0.1:60514
+89875:M 03 May 2025 23:04:30.481 * IP address for this node updated to 127.0.0.1
+89875:M 03 May 2025 23:04:30.682 * configEpoch collision with node a7cbed488f5e0f9690669c5f23bac0c0ef995e4a (). configEpoch set to 2
+89875:M 03 May 2025 23:04:30.710 - Accepting cluster node connection from 127.0.0.1:60522
+89875:M 03 May 2025 23:04:30.754 - Accepting cluster node connection from 127.0.0.1:60526
+89875:M 03 May 2025 23:04:30.754 * configEpoch collision with node 88c76b4745cf1506f9298cf65015ca70231b4396 (). configEpoch set to 4
+89875:M 03 May 2025 23:04:30.766 - Accepting cluster node connection from 127.0.0.1:60531
+89875:M 03 May 2025 23:04:30.847 # DEBUG LOG: ========== I am primary 1 ==========
+89875:M 03 May 2025 23:04:32.148 * Cluster state changed: ok
+### Starting test Continuous slots distribution in tests/unit/cluster/multi-slot-operations.tcl
+89875:M 03 May 2025 23:04:32.376 # Cluster state changed: fail
+89875:M 03 May 2025 23:04:32.376 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+### Starting test ADDSLOTS command with several boundary conditions test suite in tests/unit/cluster/multi-slot-operations.tcl
+### Starting test ADDSLOTSRANGE command with several boundary conditions test suite in tests/unit/cluster/multi-slot-operations.tcl
+### Starting test DELSLOTSRANGE command with several boundary conditions test suite in tests/unit/cluster/multi-slot-operations.tcl
+### Starting test Check for memory leaks (pid 89898) in tests/unit/cluster/multi-slot-operations.tcl
+89875:M 03 May 2025 23:04:33.359 - Connection with Node a7cbed488f5e0f9690669c5f23bac0c0ef995e4a at 127.0.0.1:36626 failed: Connection refused
+89875:M 03 May 2025 23:04:33.436 - Client closed connection id=3 addr=127.0.0.1:60511 laddr=127.0.0.1:26625 fd=14 name= age=3 idle=1 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=580 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|slots user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=993 tot-net-out=12528 tot-cmds=30
+89875:M 03 May 2025 23:04:33.460 - Connection with Node a7cbed488f5e0f9690669c5f23bac0c0ef995e4a at 127.0.0.1:36626 failed: Connection refused
+89875:M 03 May 2025 23:04:33.561 - Connection with Node a7cbed488f5e0f9690669c5f23bac0c0ef995e4a at 127.0.0.1:36626 failed: Connection refused
+89875:M 03 May 2025 23:04:34.265 - Connection with Node a7cbed488f5e0f9690669c5f23bac0c0ef995e4a at 127.0.0.1:36626 failed: Connection refused
+89875:signal-handler (1746281074) Received SIGTERM scheduling shutdown...
+89875:M 03 May 2025 23:04:34.365 * User requested shutdown...
+89875:M 03 May 2025 23:04:34.370 * Removing the pid file.
+89875:M 03 May 2025 23:04:34.375 * Saving the cluster configuration file before exiting.
+89875:M 03 May 2025 23:04:34.472 * Removing the unix socket file.
+89875:M 03 May 2025 23:04:34.494 # Valkey is now ready to exit, bye bye...

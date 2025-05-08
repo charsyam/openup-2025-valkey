@@ -1,0 +1,160 @@
+### Starting server for test 
+87062:M 03 May 2025 23:04:09.523 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+87062:M 03 May 2025 23:04:09.523 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=87062, just started
+87062:M 03 May 2025 23:04:09.523 * Configuration loaded
+87062:M 03 May 2025 23:04:09.523 * Increased maximum number of open files to 10032 (it was originally set to 256).
+87062:M 03 May 2025 23:04:09.523 * monotonic clock: POSIX clock_gettime
+87062:M 03 May 2025 23:04:09.523 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26120
+ |###|   .+###############+.   |###|    PID: 87062                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+87062:M 03 May 2025 23:04:09.523 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+87062:M 03 May 2025 23:04:09.524 * Server initialized
+87062:M 03 May 2025 23:04:09.524 * Ready to accept connections tcp
+87062:M 03 May 2025 23:04:09.524 * Ready to accept connections unix
+87062:M 03 May 2025 23:04:09.653 - Accepted 127.0.0.1:59501
+87062:M 03 May 2025 23:04:09.653 - Client closed connection id=2 addr=127.0.0.1:59501 laddr=127.0.0.1:26120 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+87062:M 03 May 2025 23:04:09.700 - Accepted 127.0.0.1:59505
+### Starting test SET and GET an item in tests/unit/type/string.tcl
+### Starting test SET and GET an empty item in tests/unit/type/string.tcl
+### Starting test Very big payload in GET/SET in tests/unit/type/string.tcl
+### Starting test Very big payload random access in tests/unit/type/string.tcl
+### Starting test SET 10000 numeric keys and access all them in reverse order in tests/unit/type/string.tcl
+### Starting test DBSIZE should be 10000 now in tests/unit/type/string.tcl
+### Starting test SETNX target key missing in tests/unit/type/string.tcl
+### Starting test SETNX target key exists in tests/unit/type/string.tcl
+### Starting test SETNX against not-expired volatile key in tests/unit/type/string.tcl
+### Starting test SETNX against expired volatile key in tests/unit/type/string.tcl
+### Starting test GETEX EX option in tests/unit/type/string.tcl
+### Starting test GETEX PX option in tests/unit/type/string.tcl
+### Starting test GETEX EXAT option in tests/unit/type/string.tcl
+### Starting test GETEX PXAT option in tests/unit/type/string.tcl
+### Starting test GETEX PERSIST option in tests/unit/type/string.tcl
+### Starting test GETEX no option in tests/unit/type/string.tcl
+### Starting test GETEX syntax errors in tests/unit/type/string.tcl
+### Starting test GETEX and GET expired key or not exist in tests/unit/type/string.tcl
+### Starting test GETEX no arguments in tests/unit/type/string.tcl
+### Starting test GETDEL command in tests/unit/type/string.tcl
+### Starting test GETDEL propagate as DEL command to replica in tests/unit/type/string.tcl
+87062:M 03 May 2025 23:04:14.377 - Accepted 127.0.0.1:59605
+87062:M 03 May 2025 23:04:14.377 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+87062:M 03 May 2025 23:04:14.377 * Replication backlog created, my new replication IDs are '3d34aa40d944865e4336a65ca6d605d392822cb7' and '0000000000000000000000000000000000000000'
+87062:M 03 May 2025 23:04:14.377 * Starting BGSAVE for SYNC with target: disk using: normal sync
+87062:M 03 May 2025 23:04:14.378 * Background saving started by pid 87831
+87831:C 03 May 2025 23:04:14.388 * DB saved on disk
+87831:C 03 May 2025 23:04:14.388 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+87062:M 03 May 2025 23:04:14.450 * Background saving terminated with success
+87062:M 03 May 2025 23:04:14.450 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+87062:M 03 May 2025 23:04:14.451 - Client closed connection id=4 addr=127.0.0.1:59605 laddr=127.0.0.1:26120 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=76 tot-cmds=1
+87062:M 03 May 2025 23:04:14.451 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test GETEX without argument does not propagate to replica in tests/unit/type/string.tcl
+87062:M 03 May 2025 23:04:14.451 - Accepted 127.0.0.1:59606
+87062:M 03 May 2025 23:04:14.451 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+87062:M 03 May 2025 23:04:14.451 * Starting BGSAVE for SYNC with target: disk using: normal sync
+87062:M 03 May 2025 23:04:14.452 * Background saving started by pid 87832
+87832:C 03 May 2025 23:04:14.460 * DB saved on disk
+87832:C 03 May 2025 23:04:14.460 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+87062:M 03 May 2025 23:04:14.551 - DB 9: 20001 keys (9999 volatile) in 28672 slots HT.
+87062:M 03 May 2025 23:04:14.551 * Background saving terminated with success
+87062:M 03 May 2025 23:04:14.551 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+87062:M 03 May 2025 23:04:14.551 - Client closed connection id=5 addr=127.0.0.1:59606 laddr=127.0.0.1:26120 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=76 tot-cmds=1
+87062:M 03 May 2025 23:04:14.551 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test MGET in tests/unit/type/string.tcl
+### Starting test MGET against non existing key in tests/unit/type/string.tcl
+### Starting test MGET against non-string key in tests/unit/type/string.tcl
+### Starting test GETSET (set new value) in tests/unit/type/string.tcl
+### Starting test GETSET (replace old value) in tests/unit/type/string.tcl
+### Starting test MSET base case in tests/unit/type/string.tcl
+### Starting test MSET/MSETNX wrong number of args in tests/unit/type/string.tcl
+### Starting test MSET with already existing - same key twice in tests/unit/type/string.tcl
+### Starting test MSETNX with already existent key in tests/unit/type/string.tcl
+### Starting test MSETNX with not existing keys in tests/unit/type/string.tcl
+### Starting test MSETNX with not existing keys - same key twice in tests/unit/type/string.tcl
+### Starting test MSETNX with already existing keys - same key twice in tests/unit/type/string.tcl
+### Starting test STRLEN against non-existing key in tests/unit/type/string.tcl
+### Starting test STRLEN against integer-encoded value in tests/unit/type/string.tcl
+### Starting test STRLEN against plain string in tests/unit/type/string.tcl
+### Starting test SETBIT against non-existing key in tests/unit/type/string.tcl
+### Starting test SETBIT against string-encoded key in tests/unit/type/string.tcl
+### Starting test SETBIT against integer-encoded key in tests/unit/type/string.tcl
+### Starting test SETBIT against key with wrong type in tests/unit/type/string.tcl
+### Starting test SETBIT with out of range bit offset in tests/unit/type/string.tcl
+### Starting test SETBIT with non-bit argument in tests/unit/type/string.tcl
+### Starting test SETBIT fuzzing in tests/unit/type/string.tcl
+### Starting test GETBIT against non-existing key in tests/unit/type/string.tcl
+### Starting test GETBIT against string-encoded key in tests/unit/type/string.tcl
+### Starting test GETBIT against integer-encoded key in tests/unit/type/string.tcl
+### Starting test SETRANGE against non-existing key in tests/unit/type/string.tcl
+### Starting test SETRANGE against string-encoded key in tests/unit/type/string.tcl
+### Starting test SETRANGE against integer-encoded key in tests/unit/type/string.tcl
+### Starting test SETRANGE against key with wrong type in tests/unit/type/string.tcl
+### Starting test SETRANGE with out of range offset in tests/unit/type/string.tcl
+### Starting test GETRANGE against non-existing key in tests/unit/type/string.tcl
+### Starting test GETRANGE against wrong key type in tests/unit/type/string.tcl
+### Starting test GETRANGE against string value in tests/unit/type/string.tcl
+### Starting test GETRANGE against integer-encoded value in tests/unit/type/string.tcl
+### Starting test GETRANGE fuzzing in tests/unit/type/string.tcl
+### Starting test Coverage: SUBSTR in tests/unit/type/string.tcl
+### Starting test Extended SET can detect syntax errors in tests/unit/type/string.tcl
+### Starting test Extended SET NX option in tests/unit/type/string.tcl
+### Starting test Extended SET XX option in tests/unit/type/string.tcl
+### Starting test Extended SET GET option in tests/unit/type/string.tcl
+### Starting test Extended SET GET option with no previous value in tests/unit/type/string.tcl
+### Starting test Extended SET GET option with XX in tests/unit/type/string.tcl
+### Starting test Extended SET GET option with XX and no previous value in tests/unit/type/string.tcl
+### Starting test Extended SET GET option with NX in tests/unit/type/string.tcl
+### Starting test Extended SET GET option with NX and previous value in tests/unit/type/string.tcl
+### Starting test Extended SET GET with incorrect type should result in wrong type error in tests/unit/type/string.tcl
+### Starting test SET with IFEQ conditional in tests/unit/type/string.tcl
+### Starting test SET with IFEQ conditional - non-string current value in tests/unit/type/string.tcl
+### Starting test SET with IFEQ conditional - with get in tests/unit/type/string.tcl
+### Starting test SET with IFEQ conditional - non string current value with get in tests/unit/type/string.tcl
+### Starting test SET with IFEQ conditional - with xx in tests/unit/type/string.tcl
+### Starting test SET with IFEQ conditional - with nx in tests/unit/type/string.tcl
+### Starting test Extended SET EX option in tests/unit/type/string.tcl
+### Starting test Extended SET PX option in tests/unit/type/string.tcl
+### Starting test Extended SET EXAT option in tests/unit/type/string.tcl
+### Starting test Extended SET PXAT option in tests/unit/type/string.tcl
+### Starting test SET EXAT / PXAT Expiration time is expired in tests/unit/type/string.tcl
+87062:M 03 May 2025 23:04:15.593 - Accepted 127.0.0.1:59694
+87062:M 03 May 2025 23:04:15.593 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+87062:M 03 May 2025 23:04:15.593 * Starting BGSAVE for SYNC with target: disk using: normal sync
+87062:M 03 May 2025 23:04:15.594 * Background saving started by pid 87920
+87920:C 03 May 2025 23:04:15.598 * DB saved on disk
+87920:C 03 May 2025 23:04:15.598 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+87062:M 03 May 2025 23:04:15.653 * Background saving terminated with success
+87062:M 03 May 2025 23:04:15.653 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+87062:M 03 May 2025 23:04:15.654 - Client closed connection id=6 addr=127.0.0.1:59694 laddr=127.0.0.1:26120 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=158 tot-cmds=1
+87062:M 03 May 2025 23:04:15.654 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test Extended SET using multiple options at once in tests/unit/type/string.tcl
+### Starting test GETRANGE with huge ranges, Github issue #1844 in tests/unit/type/string.tcl
+### Starting test LCS basic in tests/unit/type/string.tcl
+### Starting test LCS len in tests/unit/type/string.tcl
+### Starting test LCS indexes in tests/unit/type/string.tcl
+### Starting test LCS indexes with match len in tests/unit/type/string.tcl
+### Starting test LCS indexes with match len and minimum match len in tests/unit/type/string.tcl
+### Starting test SETRANGE with huge offset in tests/unit/type/string.tcl
+### Starting test APPEND modifies the encoding from int to raw in tests/unit/type/string.tcl
+87062:M 03 May 2025 23:04:15.662 - Client closed connection id=3 addr=127.0.0.1:59505 laddr=127.0.0.1:26120 fd=12 name= age=6 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=2048 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=30307324 tot-net-out=253518656 tot-cmds=37433
+87062:signal-handler (1746281058) Received SIGTERM scheduling shutdown...
+87062:M 03 May 2025 23:04:18.767 * User requested shutdown...
+87062:M 03 May 2025 23:04:18.767 * Removing the pid file.
+87062:M 03 May 2025 23:04:18.767 * Removing the unix socket file.
+87062:M 03 May 2025 23:04:18.767 # Valkey is now ready to exit, bye bye...

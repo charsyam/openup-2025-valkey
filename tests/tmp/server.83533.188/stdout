@@ -1,0 +1,109 @@
+### Starting server for test 
+18089:M 03 May 2025 23:09:44.027 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+18089:M 03 May 2025 23:09:44.027 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=18089, just started
+18089:M 03 May 2025 23:09:44.027 * Configuration loaded
+18089:M 03 May 2025 23:09:44.028 * Increased maximum number of open files to 10032 (it was originally set to 256).
+18089:M 03 May 2025 23:09:44.028 * monotonic clock: POSIX clock_gettime
+18089:M 03 May 2025 23:09:44.028 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25207
+ |###|   .+###############+.   |###|    PID: 18089                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+18089:M 03 May 2025 23:09:44.028 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+18089:M 03 May 2025 23:09:44.031 * Server initialized
+18089:M 03 May 2025 23:09:44.031 * Ready to accept connections tcp
+18089:M 03 May 2025 23:09:44.031 * Ready to accept connections unix
+18089:M 03 May 2025 23:09:44.160 - Accepted 127.0.0.1:50342
+18089:M 03 May 2025 23:09:44.160 - Client closed connection id=2 addr=127.0.0.1:50342 laddr=127.0.0.1:25207 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+18089:M 03 May 2025 23:09:44.171 - Accepted 127.0.0.1:50343
+### Starting test Slave should be able to synchronize with the master in tests/integration/replication-psync.tcl
+18089:M 03 May 2025 23:09:44.336 - Accepted 127.0.0.1:50346
+18089:M 03 May 2025 23:09:44.336 * Replica 127.0.0.1:25208 asks for synchronization
+18089:M 03 May 2025 23:09:44.336 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'f50edc6c61fccbb64f4185befc3e60425dabb5a6', my replication IDs are 'dda87c5befd68a5e50e82a5b1de84f57b0b638eb' and '0000000000000000000000000000000000000000')
+18089:M 03 May 2025 23:09:44.336 * Replication backlog created, my new replication IDs are '601edd0260be9a7345cfaddf1981f217326cc36c' and '0000000000000000000000000000000000000000'
+18089:M 03 May 2025 23:09:44.336 * Delay next BGSAVE for diskless SYNC
+18089:M 03 May 2025 23:09:44.347 - Accepted 127.0.0.1:50347
+18089:M 03 May 2025 23:09:44.347 - Accepted 127.0.0.1:50348
+18089:M 03 May 2025 23:09:44.347 - Accepted 127.0.0.1:50349
+18089:M 03 May 2025 23:09:45.034 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+18089:M 03 May 2025 23:09:45.035 * Background RDB transfer started by pid 18135 to pipe through parent process
+18135:C 03 May 2025 23:09:45.038 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+18089:M 03 May 2025 23:09:45.038 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+18089:M 03 May 2025 23:09:45.045 * Background RDB transfer terminated with success
+18089:M 03 May 2025 23:09:45.045 * Streamed RDB transfer with replica 127.0.0.1:25208 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+18089:M 03 May 2025 23:09:45.045 * Synchronization with replica 127.0.0.1:25208 succeeded
+### Starting test Detect write load to master in tests/integration/replication-psync.tcl
+### Starting test Test replication partial resync: no backlog (diskless: yes, disabled, dual-channel: no, reconnect: 1) in tests/integration/replication-psync.tcl
+18089:M 03 May 2025 23:09:45.164 - Reading from client: Connection reset by peer
+18089:M 03 May 2025 23:09:45.164 * Connection with replica client id #4 lost.
+18089:M 03 May 2025 23:09:45.165 - Accepted 127.0.0.1:50354
+18089:M 03 May 2025 23:09:45.667 * Replica 127.0.0.1:25208 asks for synchronization
+18089:M 03 May 2025 23:09:45.667 * Unable to partial resync with replica 127.0.0.1:25208 for lack of backlog (Replica request was: 771888).
+18089:M 03 May 2025 23:09:45.667 * Delay next BGSAVE for diskless SYNC
+18089:M 03 May 2025 23:09:46.036 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+18089:M 03 May 2025 23:09:46.036 * Background RDB transfer started by pid 18202 to pipe through parent process
+18202:C 03 May 2025 23:09:46.040 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+18089:M 03 May 2025 23:09:46.041 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+18089:M 03 May 2025 23:09:46.050 * Background RDB transfer terminated with success
+18089:M 03 May 2025 23:09:46.050 * Streamed RDB transfer with replica 127.0.0.1:25208 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+18089:M 03 May 2025 23:09:46.050 * Synchronization with replica 127.0.0.1:25208 succeeded
+18089:M 03 May 2025 23:09:47.757 - Reading from client: Connection reset by peer
+18089:M 03 May 2025 23:09:47.757 * Connection with replica client id #8 lost.
+18089:M 03 May 2025 23:09:47.757 - Accepted 127.0.0.1:50364
+18089:M 03 May 2025 23:09:48.259 * Replica 127.0.0.1:25208 asks for synchronization
+18089:M 03 May 2025 23:09:48.259 * Unable to partial resync with replica 127.0.0.1:25208 for lack of backlog (Replica request was: 3880489).
+18089:M 03 May 2025 23:09:48.259 * Delay next BGSAVE for diskless SYNC
+18089:M 03 May 2025 23:09:49.039 - DB 9: 5849 keys (0 volatile) in 7168 slots HT.
+18089:M 03 May 2025 23:09:49.039 - DB 11: 5863 keys (0 volatile) in 7168 slots HT.
+18089:M 03 May 2025 23:09:49.039 - DB 12: 5954 keys (0 volatile) in 7168 slots HT.
+18089:M 03 May 2025 23:09:49.039 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+18089:M 03 May 2025 23:09:49.040 * Background RDB transfer started by pid 18255 to pipe through parent process
+18255:C 03 May 2025 23:09:49.051 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+18089:M 03 May 2025 23:09:49.051 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+18089:M 03 May 2025 23:09:49.070 * Background RDB transfer terminated with success
+18089:M 03 May 2025 23:09:49.070 * Streamed RDB transfer with replica 127.0.0.1:25208 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+18089:M 03 May 2025 23:09:49.070 * Synchronization with replica 127.0.0.1:25208 succeeded
+18089:M 03 May 2025 23:09:50.333 - Reading from client: Connection reset by peer
+18089:M 03 May 2025 23:09:50.333 * Connection with replica client id #9 lost.
+18089:M 03 May 2025 23:09:50.334 - Accepted 127.0.0.1:50370
+18089:M 03 May 2025 23:09:50.839 * Replica 127.0.0.1:25208 asks for synchronization
+18089:M 03 May 2025 23:09:50.839 * Unable to partial resync with replica 127.0.0.1:25208 for lack of backlog (Replica request was: 7344075).
+18089:M 03 May 2025 23:09:50.839 * Delay next BGSAVE for diskless SYNC
+18089:M 03 May 2025 23:09:51.042 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+18089:M 03 May 2025 23:09:51.043 * Background RDB transfer started by pid 18283 to pipe through parent process
+18283:C 03 May 2025 23:09:51.060 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+18089:M 03 May 2025 23:09:51.060 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+18089:M 03 May 2025 23:09:51.088 * Background RDB transfer terminated with success
+18089:M 03 May 2025 23:09:51.088 * Streamed RDB transfer with replica 127.0.0.1:25208 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+18089:M 03 May 2025 23:09:51.088 * Synchronization with replica 127.0.0.1:25208 succeeded
+18089:M 03 May 2025 23:09:52.811 - Client closed connection id=7 addr=127.0.0.1:50349 laddr=127.0.0.1:25207 fd=16 name=LOAD_HANDLER age=8 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=264 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=hset user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6498365 tot-net-out=984699 tot-cmds=85638
+18089:M 03 May 2025 23:09:52.816 - Client closed connection id=5 addr=127.0.0.1:50347 laddr=127.0.0.1:25207 fd=14 name=LOAD_HANDLER age=8 idle=0 flags=N capa= db=11 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=264 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=zrem user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6487234 tot-net-out=989494 tot-cmds=85221
+18089:M 03 May 2025 23:09:52.819 - Client closed connection id=6 addr=127.0.0.1:50348 laddr=127.0.0.1:25207 fd=15 name=LOAD_HANDLER age=8 idle=0 flags=N capa= db=12 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=264 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=sdiffstore user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6568191 tot-net-out=992046 tot-cmds=85224
+### Starting test Check for memory leaks (pid 18110) in tests/integration/replication-psync.tcl
+18089:M 03 May 2025 23:09:54.020 - Client closed connection id=10 addr=127.0.0.1:50370 laddr=127.0.0.1:25207 fd=13 name= age=4 idle=2 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=368 tot-net-out=1833350 tot-cmds=8
+18089:M 03 May 2025 23:09:54.020 * Connection with replica 127.0.0.1:25208 lost.
+18089:M 03 May 2025 23:09:54.041 - Client closed connection id=3 addr=127.0.0.1:50343 laddr=127.0.0.1:25207 fd=12 name= age=10 idle=2 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=4096 rbp=2048 obl=0 oll=0 omem=0 tot-mem=21504 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=420 tot-net-out=12516 tot-cmds=11
+18089:M 03 May 2025 23:09:54.117 - DB 9: 9769 keys (0 volatile) in 14336 slots HT.
+18089:M 03 May 2025 23:09:54.117 - DB 11: 9829 keys (0 volatile) in 14336 slots HT.
+18089:M 03 May 2025 23:09:54.117 - DB 12: 9927 keys (0 volatile) in 14336 slots HT.
+18089:signal-handler (1746281394) Received SIGTERM scheduling shutdown...
+18089:M 03 May 2025 23:09:55.041 * User requested shutdown...
+18089:M 03 May 2025 23:09:55.041 * Removing the pid file.
+18089:M 03 May 2025 23:09:55.042 * Removing the unix socket file.
+18089:M 03 May 2025 23:09:55.042 # Valkey is now ready to exit, bye bye...

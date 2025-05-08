@@ -1,0 +1,79 @@
+### Starting server for test 
+86166:M 03 May 2025 23:04:04.592 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+86166:M 03 May 2025 23:04:04.592 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=86166, just started
+86166:M 03 May 2025 23:04:04.592 * Configuration loaded
+86166:M 03 May 2025 23:04:04.593 * Increased maximum number of open files to 10032 (it was originally set to 256).
+86166:M 03 May 2025 23:04:04.593 * monotonic clock: POSIX clock_gettime
+86166:M 03 May 2025 23:04:04.593 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 24614
+ |###|   .+###############+.   |###|    PID: 86166                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+86166:M 03 May 2025 23:04:04.593 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+86166:M 03 May 2025 23:04:04.593 * Server initialized
+86166:M 03 May 2025 23:04:04.593 * Ready to accept connections tcp
+86166:M 03 May 2025 23:04:04.593 * Ready to accept connections unix
+86166:M 03 May 2025 23:04:04.739 - Accepted 127.0.0.1:59345
+86166:M 03 May 2025 23:04:04.739 - Client closed connection id=2 addr=127.0.0.1:59345 laddr=127.0.0.1:24614 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+86166:M 03 May 2025 23:04:04.760 - Accepted 127.0.0.1:59346
+### Starting test latencystats: disable/enable in tests/unit/info.tcl
+### Starting test latencystats: configure percentiles in tests/unit/info.tcl
+### Starting test latencystats: bad configure percentiles in tests/unit/info.tcl
+### Starting test latencystats: blocking commands in tests/unit/info.tcl
+86166:M 03 May 2025 23:04:04.766 - Accepted 127.0.0.1:59347
+86166:M 03 May 2025 23:04:04.767 - Client closed connection id=4 addr=127.0.0.1:59347 laddr=127.0.0.1:24614 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=blpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=95 tot-net-out=55 tot-cmds=3
+### Starting test latencystats: subcommands in tests/unit/info.tcl
+### Starting test latencystats: measure latency in tests/unit/info.tcl
+### Starting test errorstats: failed call authentication error in tests/unit/info.tcl
+### Starting test errorstats: failed call within MULTI/EXEC in tests/unit/info.tcl
+### Starting test errorstats: failed call within LUA in tests/unit/info.tcl
+### Starting test errorstats: failed call NOSCRIPT error in tests/unit/info.tcl
+### Starting test errorstats: failed call NOGROUP error in tests/unit/info.tcl
+### Starting test errorstats: rejected call unknown command in tests/unit/info.tcl
+### Starting test errorstats: rejected call within MULTI/EXEC in tests/unit/info.tcl
+### Starting test errorstats: rejected call due to wrong arity in tests/unit/info.tcl
+### Starting test errorstats: rejected call by OOM error in tests/unit/info.tcl
+86166:M 03 May 2025 23:04:04.839 # WARNING: the new maxmemory value set via CONFIG SET (1) is smaller than the current memory usage (1180336). This will result in key eviction and/or the inability to accept new write commands depending on the maxmemory-policy.
+### Starting test errorstats: rejected call by authorization error in tests/unit/info.tcl
+### Starting test errorstats: blocking commands in tests/unit/info.tcl
+86166:M 03 May 2025 23:04:04.841 - Accepted 127.0.0.1:59352
+86166:M 03 May 2025 23:04:04.843 - Client closed connection id=5 addr=127.0.0.1:59352 laddr=127.0.0.1:24614 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=blpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=83 tot-net-out=57 tot-cmds=3
+### Starting test errorstats: limit errors will not increase indefinitely in tests/unit/info.tcl
+### Starting test stats: eventloop metrics in tests/unit/info.tcl
+### Starting test stats: instantaneous metrics in tests/unit/info.tcl
+### Starting test stats: debug metrics in tests/unit/info.tcl
+### Starting test stats: client input and output buffer limit disconnections in tests/unit/info.tcl
+86166:M 03 May 2025 23:04:07.240 # Closing client that reached max query buffer length: id=3 addr=127.0.0.1:59346 laddr=127.0.0.1:24614 fd=12 name= age=3 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=1064928 qbuf-free=999446 argv-mem=6 multi-mem=0 rbs=12288 rbp=6144 obl=0 oll=0 omem=0 tot-mem=2077206 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1191936 tot-net-out=247806 tot-cmds=1299 (qbuf initial bytes: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+86166:M 03 May 2025 23:04:07.241 - Accepted 127.0.0.1:59436
+86166:M 03 May 2025 23:04:07.243 # Client id=6 addr=127.0.0.1:59436 laddr=127.0.0.1:24614 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=22 qbuf-free=131040 argv-mem=6 multi-mem=0 rbs=16384 rbp=16384 obl=16384 oll=1 omem=98328 tot-mem=246318 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=100290 tot-net-out=1981 tot-cmds=5 scheduled to be closed ASAP for overcoming of output buffer limits.
+86166:M 03 May 2025 23:04:07.243 - Accepted 127.0.0.1:59437
+### Starting test clients: pubsub clients in tests/unit/info.tcl
+86166:M 03 May 2025 23:04:07.244 - Accepted 127.0.0.1:59438
+86166:M 03 May 2025 23:04:07.244 - Accepted 127.0.0.1:59439
+86166:M 03 May 2025 23:04:07.245 - Client closed connection id=8 addr=127.0.0.1:59438 laddr=127.0.0.1:24614 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=0 ssub=1 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=ssubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=55 tot-net-out=41 tot-cmds=2
+86166:M 03 May 2025 23:04:07.245 - Client closed connection id=9 addr=127.0.0.1:59439 laddr=127.0.0.1:24614 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33824 events=r cmd=unsubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=172 tot-net-out=170 tot-cmds=5
+### Starting test clients: watching clients in tests/unit/info.tcl
+86166:M 03 May 2025 23:04:07.246 - Accepted 127.0.0.1:59440
+86166:M 03 May 2025 23:04:07.253 - Client closed connection id=10 addr=127.0.0.1:59440 laddr=127.0.0.1:24614 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=1 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33864 events=r cmd=discard user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=394 tot-net-out=2170 tot-cmds=18
+86166:M 03 May 2025 23:04:07.256 - Client closed connection id=7 addr=127.0.0.1:59437 laddr=127.0.0.1:24614 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=814 tot-net-out=126208 tot-cmds=37
+86166:signal-handler (1746281048) Received SIGTERM scheduling shutdown...
+86166:M 03 May 2025 23:04:08.380 * User requested shutdown...
+86166:M 03 May 2025 23:04:08.380 * Removing the pid file.
+86166:M 03 May 2025 23:04:08.380 * Removing the unix socket file.
+86166:M 03 May 2025 23:04:08.381 # Valkey is now ready to exit, bye bye...

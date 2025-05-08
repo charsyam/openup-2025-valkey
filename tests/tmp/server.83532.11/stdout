@@ -1,0 +1,118 @@
+### Starting server for test 
+87479:M 03 May 2025 23:04:11.494 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+87479:M 03 May 2025 23:04:11.494 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=87479, just started
+87479:M 03 May 2025 23:04:11.494 * Configuration loaded
+87479:M 03 May 2025 23:04:11.494 * Increased maximum number of open files to 10032 (it was originally set to 256).
+87479:M 03 May 2025 23:04:11.494 * monotonic clock: POSIX clock_gettime
+87479:M 03 May 2025 23:04:11.494 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 24616
+ |###|   .+###############+.   |###|    PID: 87479                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+87479:M 03 May 2025 23:04:11.494 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+87479:M 03 May 2025 23:04:11.494 * Server initialized
+87479:M 03 May 2025 23:04:11.494 * Ready to accept connections tcp
+87479:M 03 May 2025 23:04:11.494 * Ready to accept connections unix
+87479:M 03 May 2025 23:04:11.614 - Accepted 127.0.0.1:59549
+87479:M 03 May 2025 23:04:11.614 - Client closed connection id=2 addr=127.0.0.1:59549 laddr=127.0.0.1:24616 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+87479:M 03 May 2025 23:04:11.624 - Accepted 127.0.0.1:59550
+### Starting test XADD wrong number of args in tests/unit/type/stream.tcl
+### Starting test XADD can add entries into a stream that XRANGE can fetch in tests/unit/type/stream.tcl
+### Starting test XADD IDs are incremental in tests/unit/type/stream.tcl
+### Starting test XADD IDs are incremental when ms is the same as well in tests/unit/type/stream.tcl
+### Starting test XADD IDs correctly report an error when overflowing in tests/unit/type/stream.tcl
+### Starting test XADD auto-generated sequence is incremented for last ID in tests/unit/type/stream.tcl
+### Starting test XADD auto-generated sequence is zero for future timestamp ID in tests/unit/type/stream.tcl
+### Starting test XADD auto-generated sequence can't be smaller than last ID in tests/unit/type/stream.tcl
+### Starting test XADD auto-generated sequence can't overflow in tests/unit/type/stream.tcl
+### Starting test XADD 0-* should succeed in tests/unit/type/stream.tcl
+### Starting test XADD with MAXLEN option in tests/unit/type/stream.tcl
+### Starting test XADD with MAXLEN option and the '=' argument in tests/unit/type/stream.tcl
+### Starting test XADD with MAXLEN option and the '~' argument in tests/unit/type/stream.tcl
+### Starting test XADD with NOMKSTREAM option in tests/unit/type/stream.tcl
+### Starting test XADD with MINID option in tests/unit/type/stream.tcl
+### Starting test XTRIM with MINID option in tests/unit/type/stream.tcl
+### Starting test XTRIM with MINID option, big delta from master record in tests/unit/type/stream.tcl
+### Starting test XADD mass insertion and XLEN in tests/unit/type/stream.tcl
+### Starting test XADD with ID 0-0 in tests/unit/type/stream.tcl
+### Starting test XADD with LIMIT delete entries no more than limit in tests/unit/type/stream.tcl
+### Starting test XRANGE COUNT works as expected in tests/unit/type/stream.tcl
+### Starting test XREVRANGE COUNT works as expected in tests/unit/type/stream.tcl
+### Starting test XRANGE can be used to iterate the whole stream in tests/unit/type/stream.tcl
+### Starting test XREVRANGE returns the reverse of XRANGE in tests/unit/type/stream.tcl
+### Starting test XRANGE exclusive ranges in tests/unit/type/stream.tcl
+### Starting test XREAD with non empty stream in tests/unit/type/stream.tcl
+### Starting test Non blocking XREAD with empty streams in tests/unit/type/stream.tcl
+### Starting test XREAD with non empty second stream in tests/unit/type/stream.tcl
+### Starting test Blocking XREAD waiting new data in tests/unit/type/stream.tcl
+87479:M 03 May 2025 23:04:15.275 - Accepted 127.0.0.1:59633
+87479:M 03 May 2025 23:04:15.275 - Client closed connection id=4 addr=127.0.0.1:59633 laddr=127.0.0.1:24616 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xread user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=128 tot-net-out=81 tot-cmds=2
+### Starting test Blocking XREAD waiting old data in tests/unit/type/stream.tcl
+87479:M 03 May 2025 23:04:15.276 - Accepted 127.0.0.1:59634
+87479:M 03 May 2025 23:04:15.276 - Client closed connection id=5 addr=127.0.0.1:59634 laddr=127.0.0.1:24616 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xread user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=130 tot-net-out=134 tot-cmds=2
+### Starting test Blocking XREAD will not reply with an empty array in tests/unit/type/stream.tcl
+87479:M 03 May 2025 23:04:15.277 - Accepted 127.0.0.1:59636
+### Starting test Blocking XREAD for stream that ran dry (issue #5299) in tests/unit/type/stream.tcl
+87479:M 03 May 2025 23:04:15.320 - Client closed connection id=6 addr=127.0.0.1:59636 laddr=127.0.0.1:24616 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=5 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xread user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=87 tot-net-out=10 tot-cmds=2
+87479:M 03 May 2025 23:04:15.320 - Accepted 127.0.0.1:59679
+87479:M 03 May 2025 23:04:15.420 - Client closed connection id=7 addr=127.0.0.1:59679 laddr=127.0.0.1:24616 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=5 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xread user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=162 tot-net-out=75 tot-cmds=3
+### Starting test XREAD last element from non-empty stream in tests/unit/type/stream.tcl
+### Starting test XREAD last element from empty stream in tests/unit/type/stream.tcl
+### Starting test XREAD last element blocking from empty stream in tests/unit/type/stream.tcl
+87479:M 03 May 2025 23:04:15.423 - Accepted 127.0.0.1:59682
+87479:M 03 May 2025 23:04:15.426 - Client closed connection id=8 addr=127.0.0.1:59682 laddr=127.0.0.1:24616 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xread user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=94 tot-net-out=64 tot-cmds=2
+### Starting test XREAD last element blocking from non-empty stream in tests/unit/type/stream.tcl
+### Starting test XREAD last element from multiple streams in tests/unit/type/stream.tcl
+### Starting test XREAD last element with count > 1 in tests/unit/type/stream.tcl
+### Starting test XREAD: XADD + DEL should not awake client in tests/unit/type/stream.tcl
+87479:M 03 May 2025 23:04:15.427 - Accepted 127.0.0.1:59683
+87479:M 03 May 2025 23:04:15.428 - Client closed connection id=9 addr=127.0.0.1:59683 laddr=127.0.0.1:24616 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xread user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=88 tot-net-out=78 tot-cmds=2
+### Starting test XREAD: XADD + DEL + LPUSH should not awake client in tests/unit/type/stream.tcl
+87479:M 03 May 2025 23:04:15.428 - Accepted 127.0.0.1:59684
+87479:M 03 May 2025 23:04:15.428 - Client closed connection id=10 addr=127.0.0.1:59684 laddr=127.0.0.1:24616 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xread user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=88 tot-net-out=78 tot-cmds=2
+### Starting test XREAD with same stream name multiple times should work in tests/unit/type/stream.tcl
+87479:M 03 May 2025 23:04:15.429 - Accepted 127.0.0.1:59685
+### Starting test XREAD + multiple XADD inside transaction in tests/unit/type/stream.tcl
+87479:M 03 May 2025 23:04:15.429 - Client closed connection id=11 addr=127.0.0.1:59685 laddr=127.0.0.1:24616 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xread user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=119 tot-net-out=216 tot-cmds=2
+87479:M 03 May 2025 23:04:15.429 - Accepted 127.0.0.1:59686
+87479:M 03 May 2025 23:04:15.430 - Client closed connection id=12 addr=127.0.0.1:59686 laddr=127.0.0.1:24616 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xread user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=119 tot-net-out=513 tot-cmds=2
+### Starting test XDEL basic test in tests/unit/type/stream.tcl
+### Starting test XDEL multiply id test in tests/unit/type/stream.tcl
+### Starting test XDEL fuzz test in tests/unit/type/stream.tcl
+87479:M 03 May 2025 23:04:16.524 - DB 9: 11 keys (0 volatile) in 14 slots HT.
+### Starting test XRANGE fuzzing in tests/unit/type/stream.tcl
+87479:M 03 May 2025 23:04:21.565 - DB 9: 11 keys (0 volatile) in 14 slots HT.
+### Starting test XREVRANGE regression test for issue #5006 in tests/unit/type/stream.tcl
+### Starting test XREAD streamID edge (no-blocking) in tests/unit/type/stream.tcl
+### Starting test XREAD streamID edge (blocking) in tests/unit/type/stream.tcl
+87479:M 03 May 2025 23:04:21.908 - Accepted 127.0.0.1:60039
+87479:M 03 May 2025 23:04:21.909 - Client closed connection id=13 addr=127.0.0.1:60039 laddr=127.0.0.1:24616 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xread user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=105 tot-net-out=55 tot-cmds=2
+### Starting test XADD streamID edge in tests/unit/type/stream.tcl
+### Starting test XTRIM with MAXLEN option basic test in tests/unit/type/stream.tcl
+### Starting test XADD with LIMIT consecutive calls in tests/unit/type/stream.tcl
+### Starting test XTRIM with ~ is limited in tests/unit/type/stream.tcl
+### Starting test XTRIM without ~ is not limited in tests/unit/type/stream.tcl
+### Starting test XTRIM without ~ and with LIMIT in tests/unit/type/stream.tcl
+### Starting test XTRIM with LIMIT delete entries no more than limit in tests/unit/type/stream.tcl
+87479:M 03 May 2025 23:04:22.041 - Client closed connection id=3 addr=127.0.0.1:59550 laddr=127.0.0.1:24616 fd=12 name= age=11 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=xtrim user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1979627 tot-net-out=6364484 tot-cmds=33890
+87479:signal-handler (1746281063) Received SIGTERM scheduling shutdown...
+87479:M 03 May 2025 23:04:23.646 * User requested shutdown...
+87479:M 03 May 2025 23:04:23.646 * Removing the pid file.
+87479:M 03 May 2025 23:04:23.646 * Removing the unix socket file.
+87479:M 03 May 2025 23:04:23.646 # Valkey is now ready to exit, bye bye...

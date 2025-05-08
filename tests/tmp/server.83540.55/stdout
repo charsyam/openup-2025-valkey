@@ -1,0 +1,68 @@
+### Starting server for test 
+93731:M 03 May 2025 23:04:55.895 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+93731:M 03 May 2025 23:04:55.895 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+93731:M 03 May 2025 23:04:55.895 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=93731, just started
+93731:M 03 May 2025 23:04:55.895 * Configuration loaded
+93731:M 03 May 2025 23:04:55.895 * Increased maximum number of open files to 10032 (it was originally set to 256).
+93731:M 03 May 2025 23:04:55.895 * monotonic clock: POSIX clock_gettime
+93731:M 03 May 2025 23:04:55.896 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 28640
+ |###|   .+###############+.   |###|    PID: 93731                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+93731:M 03 May 2025 23:04:55.896 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+93731:M 03 May 2025 23:04:55.896 * No cluster configuration found, I'm e44c0d80244b334a4ea7b23f3b99efac562635d2
+93731:M 03 May 2025 23:04:55.903 * Server initialized
+93731:M 03 May 2025 23:04:55.903 * Ready to accept connections tcp
+93731:M 03 May 2025 23:04:55.903 * Ready to accept connections unix
+93731:M 03 May 2025 23:04:56.017 - Accepted 127.0.0.1:52335
+93731:M 03 May 2025 23:04:56.019 - Client closed connection id=2 addr=127.0.0.1:52335 laddr=127.0.0.1:28640 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+93731:M 03 May 2025 23:04:56.025 - Accepted 127.0.0.1:52336
+93731:M 03 May 2025 23:04:56.025 * Cluster meet 127.0.0.1:28639 (user request from 'id=3 addr=127.0.0.1:52336 laddr=127.0.0.1:28640 fd=14 name= user=default lib-name= lib-ver=').
+93731:M 03 May 2025 23:04:56.029 # Missing implement of connection type tls
+93731:M 03 May 2025 23:04:56.133 - Accepting cluster node connection from 127.0.0.1:52369
+93731:M 03 May 2025 23:04:56.134 * IP address for this node updated to 127.0.0.1
+93731:M 03 May 2025 23:04:56.135 * Successfully completed handshake with 0ea234c5a573ae85b5c08b06c738766e15398111 ()
+93731:M 03 May 2025 23:04:56.329 - Accepted 127.0.0.1:52435
+93731:M 03 May 2025 23:04:56.330 # DEBUG LOG: ========== I am primary 0 ==========
+93731:M 03 May 2025 23:04:56.332 * Node 0ea234c5a573ae85b5c08b06c738766e15398111 () is no longer primary of shard 217f60e97e2e86f24c190c9d02f6d16e42aec0a7; removed all 0 slot(s) it used to own
+93731:M 03 May 2025 23:04:56.332 * Node 0ea234c5a573ae85b5c08b06c738766e15398111 () is now part of shard 1768807c1651ba3a5079e034ea915e429064098a
+93731:M 03 May 2025 23:04:56.335 * Node 0ea234c5a573ae85b5c08b06c738766e15398111 () is now a replica of node e44c0d80244b334a4ea7b23f3b99efac562635d2 () in shard 1768807c1651ba3a5079e034ea915e429064098a
+93731:M 03 May 2025 23:04:56.335 * Replica 127.0.0.1:28639 asks for synchronization
+93731:M 03 May 2025 23:04:56.335 * Full resync requested by replica 127.0.0.1:28639
+93731:M 03 May 2025 23:04:56.335 * Replication backlog created, my new replication IDs are '83e882df58f7500799fa7993998429d86cf070ad' and '0000000000000000000000000000000000000000'
+93731:M 03 May 2025 23:04:56.335 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+93731:M 03 May 2025 23:04:56.336 * Background RDB transfer started by pid 93803 to pipe through parent process
+93803:C 03 May 2025 23:04:56.336 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+93731:M 03 May 2025 23:04:56.336 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+93731:M 03 May 2025 23:04:56.339 * Background RDB transfer terminated with success
+93731:M 03 May 2025 23:04:56.339 * Streamed RDB transfer with replica 127.0.0.1:28639 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+93731:M 03 May 2025 23:04:56.339 * Synchronization with replica 127.0.0.1:28639 succeeded
+93731:M 03 May 2025 23:04:57.921 * Cluster state changed: ok
+### Starting test Verify that single primary marks replica as failed in tests/unit/cluster/failure-marking.tcl
+93731:M 03 May 2025 23:05:09.220 * Marking node 0ea234c5a573ae85b5c08b06c738766e15398111 () as failing (quorum reached).
+93731:M 03 May 2025 23:05:09.262 - Client closed connection id=3 addr=127.0.0.1:52336 laddr=127.0.0.1:28640 fd=14 name= age=13 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=266 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7486 tot-net-out=102597 tot-cmds=258
+93731:M 03 May 2025 23:05:09.270 * Clear FAIL state for node 0ea234c5a573ae85b5c08b06c738766e15398111 (): replica is reachable again.
+93731:signal-handler (1746281110) Received SIGTERM scheduling shutdown...
+93731:M 03 May 2025 23:05:10.377 * User requested shutdown...
+93731:M 03 May 2025 23:05:10.378 * 1 of 1 replicas are in sync when shutting down.
+93731:M 03 May 2025 23:05:10.379 * Removing the pid file.
+93731:M 03 May 2025 23:05:10.379 * Saving the cluster configuration file before exiting.
+93731:M 03 May 2025 23:05:10.384 * Removing the unix socket file.
+93731:M 03 May 2025 23:05:10.384 # Valkey is now ready to exit, bye bye...

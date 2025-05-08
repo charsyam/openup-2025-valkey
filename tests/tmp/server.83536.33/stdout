@@ -1,0 +1,101 @@
+### Starting server for test 
+91021:M 03 May 2025 23:04:38.523 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+91021:M 03 May 2025 23:04:38.523 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+91021:M 03 May 2025 23:04:38.523 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=91021, just started
+91021:M 03 May 2025 23:04:38.523 * Configuration loaded
+91021:M 03 May 2025 23:04:38.523 * Increased maximum number of open files to 10032 (it was originally set to 256).
+91021:M 03 May 2025 23:04:38.523 * monotonic clock: POSIX clock_gettime
+91021:M 03 May 2025 23:04:38.523 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 26627
+ |###|   .+###############+.   |###|    PID: 91021                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+91021:M 03 May 2025 23:04:38.523 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+91021:M 03 May 2025 23:04:38.524 * No cluster configuration found, I'm f899de79d4cf32d0fb62faf99c5f6d888cdfe9cd
+91021:M 03 May 2025 23:04:38.534 * Server initialized
+91021:M 03 May 2025 23:04:38.534 * Ready to accept connections tcp
+91021:M 03 May 2025 23:04:38.534 * Ready to accept connections unix
+91021:M 03 May 2025 23:04:38.651 - Accepted 127.0.0.1:62629
+91021:M 03 May 2025 23:04:38.651 - Client closed connection id=2 addr=127.0.0.1:62629 laddr=127.0.0.1:26627 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+91021:M 03 May 2025 23:04:38.659 - Accepted 127.0.0.1:62630
+### Starting test Cluster nodes are reachable in tests/unit/cluster/cluster-multiple-meets.tcl
+### Starting test Before slots allocation, all nodes report cluster failure in tests/unit/cluster/cluster-multiple-meets.tcl
+### Starting test Cluster nodes haven't met each other in tests/unit/cluster/cluster-multiple-meets.tcl
+91021:M 03 May 2025 23:04:38.920 # Missing implement of connection type tls
+### Starting test Allocate slots in tests/unit/cluster/cluster-multiple-meets.tcl
+### Starting test Multiple MEETs from Node 1 to Node 0 should work in tests/unit/cluster/cluster-multiple-meets.tcl
+91021:M 03 May 2025 23:04:38.977 * Cluster meet 127.0.0.1:26628 (user request from 'id=3 addr=127.0.0.1:62630 laddr=127.0.0.1:26627 fd=14 name= user=default lib-name= lib-ver=').
+91021:M 03 May 2025 23:04:39.052 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:39.052 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:39.087 - Accepting cluster node connection from 127.0.0.1:62802
+91021:M 03 May 2025 23:04:39.087 * IP address for this node updated to 127.0.0.1
+91021:M 03 May 2025 23:04:39.146 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:39.146 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:39.146 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:39.146 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:39.189 - Accepting cluster node connection from 127.0.0.1:62841
+91021:M 03 May 2025 23:04:39.242 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:39.242 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:39.343 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:39.343 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:39.444 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:39.444 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:39.544 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:39.544 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:39.645 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:39.645 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:39.749 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:39.750 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:39.847 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:39.847 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:39.950 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:39.950 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:40.053 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:40.053 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:40.152 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:40.152 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:40.253 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:40.253 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:40.357 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:40.357 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:40.455 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:40.456 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:40.558 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+91021:M 03 May 2025 23:04:40.561 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:40.561 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:40.659 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:40.659 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:40.762 # Dropping packet of type pong that matches debug drop filter
+91021:M 03 May 2025 23:04:40.762 # Closing link for matching packet type pong
+91021:M 03 May 2025 23:04:40.809 - Accepting cluster node connection from 127.0.0.1:63365
+91021:M 03 May 2025 23:04:41.467 * Successfully completed handshake with 4473eb2ffc3349d2be0a82c1c8c8136f644b76a6 ()
+91021:M 03 May 2025 23:04:41.468 * Cluster state changed: ok
+### Starting test Check for memory leaks (pid 91053) in tests/unit/cluster/cluster-multiple-meets.tcl
+91021:M 03 May 2025 23:04:42.780 - Connection with Node 4473eb2ffc3349d2be0a82c1c8c8136f644b76a6 at 127.0.0.1:36628 failed: Connection refused
+91021:M 03 May 2025 23:04:42.828 - Client closed connection id=3 addr=127.0.0.1:62630 laddr=127.0.0.1:26627 fd=14 name= age=4 idle=1 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=4096 rbp=2048 obl=0 oll=0 omem=0 tot-mem=21504 events=r cmd=cluster|info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86905 tot-net-out=120309 tot-cmds=56
+91021:M 03 May 2025 23:04:42.881 - Connection with Node 4473eb2ffc3349d2be0a82c1c8c8136f644b76a6 at 127.0.0.1:36628 failed: Connection refused
+91021:M 03 May 2025 23:04:42.982 - Connection with Node 4473eb2ffc3349d2be0a82c1c8c8136f644b76a6 at 127.0.0.1:36628 failed: Connection refused
+91021:M 03 May 2025 23:04:43.083 - Connection with Node 4473eb2ffc3349d2be0a82c1c8c8136f644b76a6 at 127.0.0.1:36628 failed: Connection refused
+91021:M 03 May 2025 23:04:44.191 - Connection with Node 4473eb2ffc3349d2be0a82c1c8c8136f644b76a6 at 127.0.0.1:36628 failed: Connection refused
+91021:signal-handler (1746281084) Received SIGTERM scheduling shutdown...
+91021:M 03 May 2025 23:04:44.292 * User requested shutdown...
+91021:M 03 May 2025 23:04:44.292 * Removing the pid file.
+91021:M 03 May 2025 23:04:44.292 * Saving the cluster configuration file before exiting.
+91021:M 03 May 2025 23:04:44.298 * Removing the unix socket file.
+91021:M 03 May 2025 23:04:44.298 # Valkey is now ready to exit, bye bye...

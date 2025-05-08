@@ -1,0 +1,52 @@
+### Starting server for test diskless all replicas drop during rdb pipe in tests/integration/replication.tcl
+18281:M 03 May 2025 23:09:50.978 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+18281:M 03 May 2025 23:09:50.978 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=18281, just started
+18281:M 03 May 2025 23:09:50.978 * Configuration loaded
+18281:M 03 May 2025 23:09:50.978 * Increased maximum number of open files to 10032 (it was originally set to 256).
+18281:M 03 May 2025 23:09:50.978 * monotonic clock: POSIX clock_gettime
+18281:M 03 May 2025 23:09:50.978 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27686
+ |###|   .+###############+.   |###|    PID: 18281                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+18281:M 03 May 2025 23:09:50.978 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+18281:M 03 May 2025 23:09:50.979 * Server initialized
+18281:M 03 May 2025 23:09:50.979 * Ready to accept connections tcp
+18281:M 03 May 2025 23:09:50.979 * Ready to accept connections unix
+18281:M 03 May 2025 23:09:51.104 - Accepted 127.0.0.1:50371
+18281:M 03 May 2025 23:09:51.104 - Client closed connection id=2 addr=127.0.0.1:50371 laddr=127.0.0.1:27686 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+18281:M 03 May 2025 23:09:51.114 - Accepted 127.0.0.1:50372
+18281:S 03 May 2025 23:09:51.274 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+18281:S 03 May 2025 23:09:51.274 * Connecting to PRIMARY 127.0.0.1:27679
+18281:S 03 May 2025 23:09:51.274 * PRIMARY <-> REPLICA sync started
+18281:S 03 May 2025 23:09:51.274 * REPLICAOF 127.0.0.1:27679 enabled (user request from 'id=3 addr=127.0.0.1:50372 laddr=127.0.0.1:27686 fd=12 name= user=default lib-name= lib-ver=')
+18281:S 03 May 2025 23:09:51.274 * Non blocking connect for SYNC fired the event.
+18281:S 03 May 2025 23:09:51.275 * Primary replied to PING, replication can continue...
+18281:S 03 May 2025 23:09:51.275 * Trying a partial resynchronization (request b89f54055fd484adc553141d85c344bffbc393b0:1).
+18281:S 03 May 2025 23:09:52.110 * Full resync from primary: 7a0724a28b93f872adc1cb910898abe9a7911fa4:153
+18281:S 03 May 2025 23:09:52.117 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to parser
+18281:S 03 May 2025 23:09:52.117 * PRIMARY <-> REPLICA sync: Loading DB in memory
+18281:S 03 May 2025 23:09:52.117 * Loading RDB produced by Valkey version 255.255.255
+18281:S 03 May 2025 23:09:52.117 * RDB age 0 seconds
+18281:S 03 May 2025 23:09:52.117 * RDB memory usage when created 197.53 Mb
+18281:signal-handler (1746281392) Received shutdown signal during loading, scheduling shutdown.
+18281:S 03 May 2025 23:09:52.642 * User requested shutdown...
+18281:S 03 May 2025 23:09:52.642 * Removing the pid file.
+18281:S 03 May 2025 23:09:52.643 * Removing the unix socket file.
+18281:S 03 May 2025 23:09:52.643 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,80 @@
+### Starting server for test 
+4587:M 03 May 2025 23:06:35.119 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+4587:M 03 May 2025 23:06:35.119 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=4587, just started
+4587:M 03 May 2025 23:06:35.119 * Configuration loaded
+4587:M 03 May 2025 23:06:35.119 * Increased maximum number of open files to 10032 (it was originally set to 256).
+4587:M 03 May 2025 23:06:35.119 * monotonic clock: POSIX clock_gettime
+4587:M 03 May 2025 23:06:35.119 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27643
+ |###|   .+###############+.   |###|    PID: 4587                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+4587:M 03 May 2025 23:06:35.119 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+4587:M 03 May 2025 23:06:35.119 * Server initialized
+4587:M 03 May 2025 23:06:35.119 * Ready to accept connections tcp
+4587:M 03 May 2025 23:06:35.119 * Ready to accept connections unix
+4587:M 03 May 2025 23:06:35.237 - Accepted 127.0.0.1:60547
+4587:M 03 May 2025 23:06:35.238 - Client closed connection id=2 addr=127.0.0.1:60547 laddr=127.0.0.1:27643 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+4587:M 03 May 2025 23:06:35.267 - Accepted 127.0.0.1:60556
+### Starting test dismiss all data types memory in tests/integration/dismiss-mem.tcl
+4587:M 03 May 2025 23:06:35.314 * Background append only file rewriting started by pid 4628
+4628:C 03 May 2025 23:06:35.318 * Successfully created the temporary AOF base file temp-rewriteaof-bg-4628.aof
+4628:C 03 May 2025 23:06:35.318 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+4587:M 03 May 2025 23:06:35.322 * Background AOF rewrite terminated with success
+4587:M 03 May 2025 23:06:35.322 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-4628.aof into appendonly.aof.1.base.aof
+4587:M 03 May 2025 23:06:35.329 * Background AOF rewrite finished successfully
+4587:M 03 May 2025 23:06:35.329 - Background AOF rewrite signal handler took 6774us
+4587:M 03 May 2025 23:06:35.367 * DB loaded from base file appendonly.aof.1.base.aof: 0.001 seconds
+4587:M 03 May 2025 23:06:35.367 * Append Only File loaded by DEBUG LOADAOF
+### Starting test dismiss client output buffer in tests/integration/dismiss-mem.tcl
+4587:M 03 May 2025 23:06:35.419 - Accepted 127.0.0.1:60643
+4587:M 03 May 2025 23:06:35.525 * Background saving started by pid 4670
+4670:C 03 May 2025 23:06:35.531 * DB saved on disk
+4670:C 03 May 2025 23:06:35.531 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+4587:M 03 May 2025 23:06:35.545 * Background saving terminated with success
+### Starting test dismiss client query buffer in tests/integration/dismiss-mem.tcl
+4587:M 03 May 2025 23:06:35.579 - Accepted 127.0.0.1:60787
+4587:M 03 May 2025 23:06:35.690 * Background saving started by pid 4699
+4699:C 03 May 2025 23:06:35.699 * DB saved on disk
+4699:C 03 May 2025 23:06:35.699 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+4587:M 03 May 2025 23:06:35.747 * Background saving terminated with success
+### Starting test dismiss replication backlog in tests/integration/dismiss-mem.tcl
+4587:M 03 May 2025 23:06:35.974 - Accepted 127.0.0.1:61090
+4587:M 03 May 2025 23:06:35.974 * Replica 127.0.0.1:27644 asks for synchronization
+4587:M 03 May 2025 23:06:35.974 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '3d18171dbf9a6a767bfe3592f7afa77fe060da20', my replication IDs are '5027df54adacf7c524eba6cf27f64a39287a2d07' and '0000000000000000000000000000000000000000')
+4587:M 03 May 2025 23:06:35.974 * Replication backlog created, my new replication IDs are '956f1a2e46df26273bc507a9a7b0f0884fa1703c' and '0000000000000000000000000000000000000000'
+4587:M 03 May 2025 23:06:35.974 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+4587:M 03 May 2025 23:06:35.976 * Background RDB transfer started by pid 4732 to pipe through parent process
+4732:C 03 May 2025 23:06:35.979 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+4587:M 03 May 2025 23:06:35.979 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+4587:M 03 May 2025 23:06:36.008 * Background RDB transfer terminated with success
+4587:M 03 May 2025 23:06:36.008 * Streamed RDB transfer with replica 127.0.0.1:27644 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+4587:M 03 May 2025 23:06:36.008 * Synchronization with replica 127.0.0.1:27644 succeeded
+4587:M 03 May 2025 23:06:36.086 * Background saving started by pid 4760
+4760:C 03 May 2025 23:06:36.094 * DB saved on disk
+4760:C 03 May 2025 23:06:36.094 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+4587:M 03 May 2025 23:06:36.151 * Background saving terminated with success
+4587:M 03 May 2025 23:06:36.336 - Client closed connection id=7 addr=127.0.0.1:61090 laddr=127.0.0.1:27643 fd=15 name= age=1 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=275 tot-net-out=164475 tot-cmds=6
+4587:M 03 May 2025 23:06:36.336 * Connection with replica 127.0.0.1:27644 lost.
+4587:M 03 May 2025 23:06:36.487 - Client closed connection id=3 addr=127.0.0.1:60556 laddr=127.0.0.1:27643 fd=12 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=12288 rbp=6144 obl=0 oll=0 omem=0 tot-mem=29696 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=11227619 tot-net-out=158797 tot-cmds=1029
+4587:signal-handler (1746281200) Received SIGTERM scheduling shutdown...
+4587:M 03 May 2025 23:06:40.391 * User requested shutdown...
+4587:M 03 May 2025 23:06:40.391 * Removing the pid file.
+4587:M 03 May 2025 23:06:40.391 * Removing the unix socket file.
+4587:M 03 May 2025 23:06:40.391 # Valkey is now ready to exit, bye bye...

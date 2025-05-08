@@ -1,0 +1,92 @@
+### Starting server for test 
+97995:M 03 May 2025 23:05:40.554 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+97995:M 03 May 2025 23:05:40.557 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+97995:M 03 May 2025 23:05:40.559 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=97995, just started
+97995:M 03 May 2025 23:05:40.560 * Configuration loaded
+97995:M 03 May 2025 23:05:40.564 * Increased maximum number of open files to 10032 (it was originally set to 256).
+97995:M 03 May 2025 23:05:40.566 * monotonic clock: POSIX clock_gettime
+97995:M 03 May 2025 23:05:40.568 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25153
+ |###|   .+###############+.   |###|    PID: 97995                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+97995:M 03 May 2025 23:05:40.573 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+97995:M 03 May 2025 23:05:40.582 * No cluster configuration found, I'm fd2f4d1605af94fff7278f8ea701205e69d1ae4d
+97995:M 03 May 2025 23:05:40.604 * Server initialized
+97995:M 03 May 2025 23:05:40.604 * Ready to accept connections tcp
+97995:M 03 May 2025 23:05:40.604 * Ready to accept connections unix
+97995:M 03 May 2025 23:05:40.673 - Accepted 127.0.0.1:57079
+97995:M 03 May 2025 23:05:40.678 - Client closed connection id=2 addr=127.0.0.1:57079 laddr=127.0.0.1:25153 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+97995:M 03 May 2025 23:05:40.692 - Accepted 127.0.0.1:57080
+### Starting test valkey-cli -4 --cluster create using 127.0.0.1 with cluster-port in tests/unit/cluster/cli.tcl
+97995:M 03 May 2025 23:05:40.881 - Accepted 127.0.0.1:57095
+97995:M 03 May 2025 23:05:40.889 # Missing implement of connection type tls
+97995:M 03 May 2025 23:05:40.913 * configEpoch set to 2 via CLUSTER SET-CONFIG-EPOCH
+97995:M 03 May 2025 23:05:40.914 * Cluster meet 127.0.0.1:25155 (user request from 'id=4 addr=127.0.0.1:57095 laddr=127.0.0.1:25153 fd=15 name= user=default lib-name= lib-ver=').
+97995:M 03 May 2025 23:05:41.063 - Accepting cluster node connection from 127.0.0.1:57107
+97995:M 03 May 2025 23:05:41.063 * IP address for this node updated to 127.0.0.1
+97995:M 03 May 2025 23:05:41.063 * Successfully completed handshake with bae1551817cc174c3f08b498b09f48c615da3335 ()
+97995:M 03 May 2025 23:05:41.240 - Accepting cluster node connection from 127.0.0.1:57109
+97995:M 03 May 2025 23:05:41.918 - Client closed connection id=4 addr=127.0.0.1:57095 laddr=127.0.0.1:25153 fd=15 name= age=1 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=333 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=55799 tot-net-out=12569 tot-cmds=8
+97995:M 03 May 2025 23:05:41.919 - Accepted 127.0.0.1:57131
+97995:M 03 May 2025 23:05:41.923 - Client closed connection id=5 addr=127.0.0.1:57131 laddr=127.0.0.1:25153 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56 tot-net-out=666 tot-cmds=2
+97995:M 03 May 2025 23:05:42.622 * Cluster state changed: ok
+### Starting test valkey-cli -4 --cluster add-node using 127.0.0.1 with cluster-port in tests/unit/cluster/cli.tcl
+97995:M 03 May 2025 23:05:42.800 - Accepted 127.0.0.1:57182
+97995:M 03 May 2025 23:05:42.806 - Client closed connection id=6 addr=127.0.0.1:57182 laddr=127.0.0.1:25153 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56 tot-net-out=666 tot-cmds=2
+97995:M 03 May 2025 23:05:43.079 - Accepting cluster node connection from 127.0.0.1:57196
+97995:M 03 May 2025 23:05:43.539 - Accepted 127.0.0.1:57264
+97995:M 03 May 2025 23:05:43.551 - Client closed connection id=7 addr=127.0.0.1:57264 laddr=127.0.0.1:25153 fd=21 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56 tot-net-out=866 tot-cmds=2
+97995:M 03 May 2025 23:05:43.746 - Accepting cluster node connection from 127.0.0.1:57308
+### Starting test Check for memory leaks (pid 98011) in tests/unit/cluster/cli.tcl
+97995:M 03 May 2025 23:05:45.082 * Node f99568e6efd27a18b8e21a2aa05b6763d3957799 () reported node bae1551817cc174c3f08b498b09f48c615da3335 () as not reachable.
+97995:M 03 May 2025 23:05:45.082 * Marking node bae1551817cc174c3f08b498b09f48c615da3335 () as failing (quorum reached).
+97995:M 03 May 2025 23:05:45.082 # Cluster state changed: fail
+97995:M 03 May 2025 23:05:45.082 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+97995:M 03 May 2025 23:05:45.659 * Node f99568e6efd27a18b8e21a2aa05b6763d3957799 () reported node bae1551817cc174c3f08b498b09f48c615da3335 () is back online.
+97995:M 03 May 2025 23:05:45.660 * Clear FAIL state for node bae1551817cc174c3f08b498b09f48c615da3335 (): is reachable again and nobody is serving its slots after some time.
+97995:M 03 May 2025 23:05:45.660 * Cluster state changed: ok
+97995:M 03 May 2025 23:05:45.816 - Client closed connection id=3 addr=127.0.0.1:57080 laddr=127.0.0.1:25153 fd=14 name= age=5 idle=1 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=729 tot-net-out=13908 tot-cmds=27
+97995:M 03 May 2025 23:05:45.860 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97995:M 03 May 2025 23:05:45.961 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97995:M 03 May 2025 23:05:45.962 * FAIL message received from f99568e6efd27a18b8e21a2aa05b6763d3957799 () about bae1551817cc174c3f08b498b09f48c615da3335 ()
+97995:M 03 May 2025 23:05:45.962 # Cluster state changed: fail
+97995:M 03 May 2025 23:05:45.962 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+97995:M 03 May 2025 23:05:45.995 * Node f99568e6efd27a18b8e21a2aa05b6763d3957799 () reported node bae1551817cc174c3f08b498b09f48c615da3335 () as not reachable.
+97995:M 03 May 2025 23:05:46.062 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97995:M 03 May 2025 23:05:47.052 - Accepting cluster node connection from 127.0.0.1:57968
+97995:M 03 May 2025 23:05:47.053 - Accepting cluster node connection from 127.0.0.1:57987
+97995:M 03 May 2025 23:05:47.053 - Accepting cluster node connection from 127.0.0.1:57989
+97995:M 03 May 2025 23:05:47.053 - Accepting cluster node connection from 127.0.0.1:58053
+97995:M 03 May 2025 23:05:47.053 - Accepting cluster node connection from 127.0.0.1:58076
+97995:M 03 May 2025 23:05:47.053 - Accepting cluster node connection from 127.0.0.1:58081
+97995:M 03 May 2025 23:05:47.053 - Accepting cluster node connection from 127.0.0.1:58136
+97995:M 03 May 2025 23:05:47.053 - Accepting cluster node connection from 127.0.0.1:58154
+97995:M 03 May 2025 23:05:47.053 - Accepting cluster node connection from 127.0.0.1:58156
+97995:M 03 May 2025 23:05:47.053 - Accepting cluster node connection from 127.0.0.1:58200
+97995:M 03 May 2025 23:05:47.053 - Accepting cluster node connection from 127.0.0.1:58218
+97995:M 03 May 2025 23:05:47.053 - Accepting cluster node connection from 127.0.0.1:58220
+97995:M 03 May 2025 23:05:47.053 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97995:signal-handler (1746281147) Received SIGTERM scheduling shutdown...
+97995:M 03 May 2025 23:05:47.149 - Accepting cluster node connection from 127.0.0.1:58269
+97995:M 03 May 2025 23:05:47.154 * User requested shutdown...
+97995:M 03 May 2025 23:05:47.154 * Removing the pid file.
+97995:M 03 May 2025 23:05:47.154 * Saving the cluster configuration file before exiting.
+97995:M 03 May 2025 23:05:47.162 * Removing the unix socket file.
+97995:M 03 May 2025 23:05:47.162 # Valkey is now ready to exit, bye bye...

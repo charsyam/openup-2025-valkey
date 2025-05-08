@@ -1,0 +1,65 @@
+### Starting server for test 
+99717:M 03 May 2025 23:05:58.104 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+99717:M 03 May 2025 23:05:58.106 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+99717:M 03 May 2025 23:05:58.109 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=99717, just started
+99717:M 03 May 2025 23:05:58.111 * Configuration loaded
+99717:M 03 May 2025 23:05:58.113 * Increased maximum number of open files to 10032 (it was originally set to 256).
+99717:M 03 May 2025 23:05:58.119 * monotonic clock: POSIX clock_gettime
+99717:M 03 May 2025 23:05:58.121 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 28649
+ |###|   .+###############+.   |###|    PID: 99717                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+99717:M 03 May 2025 23:05:58.123 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+99717:M 03 May 2025 23:05:58.132 * No cluster configuration found, I'm 8322b1f1302f5ef1cbf44f389c4fc631594c867b
+99717:M 03 May 2025 23:05:58.143 * Server initialized
+99717:M 03 May 2025 23:05:58.143 * Ready to accept connections tcp
+99717:M 03 May 2025 23:05:58.143 * Ready to accept connections unix
+99717:M 03 May 2025 23:05:58.271 - Accepted 127.0.0.1:62702
+99717:M 03 May 2025 23:05:58.272 - Client closed connection id=2 addr=127.0.0.1:62702 laddr=127.0.0.1:28649 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+99717:M 03 May 2025 23:05:58.293 - Accepted 127.0.0.1:62705
+99717:M 03 May 2025 23:05:58.578 # Missing implement of connection type tls
+99717:M 03 May 2025 23:05:58.613 - Accepting cluster node connection from 127.0.0.1:62818
+99717:M 03 May 2025 23:05:58.613 * IP address for this node updated to 127.0.0.1
+99717:M 03 May 2025 23:05:58.815 * configEpoch collision with node b7121f72a8a8c147a59cceb3c92936e9713ed100 (). configEpoch set to 1
+99717:M 03 May 2025 23:05:58.855 # DEBUG LOG: ========== I am primary 1 ==========
+99717:M 03 May 2025 23:06:00.169 * Cluster state changed: ok
+### Starting test Cluster is up in tests/unit/cluster/slot-migration-response.tcl
+99717:M 03 May 2025 23:06:00.612 - Accepted 127.0.0.1:63854
+99717:M 03 May 2025 23:06:00.635 - Accepted 127.0.0.1:63858
+99717:M 03 May 2025 23:06:00.640 - Client closed connection id=12 addr=127.0.0.1:63858 laddr=127.0.0.1:28649 fd=18 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=28 tot-net-out=221 tot-cmds=1
+99717:M 03 May 2025 23:06:00.653 - Accepted 127.0.0.1:63860
+99717:M 03 May 2025 23:06:00.661 - Client closed connection id=11 addr=127.0.0.1:63854 laddr=127.0.0.1:28649 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=0 tot-cmds=0
+### Starting test Set many keys in the cluster in tests/unit/cluster/slot-migration-response.tcl
+### Starting test Test cluster responses during migration of slot x in tests/unit/cluster/slot-migration-response.tcl
+99717:M 03 May 2025 23:06:01.929 * Importing slot 10 from node b7121f72a8a8c147a59cceb3c92936e9713ed100 ()
+### Starting test Check for memory leaks (pid 99765) in tests/unit/cluster/slot-migration-response.tcl
+99717:M 03 May 2025 23:06:03.191 - DB 0: 2500 keys (0 volatile) in 15470 slots HT.
+99717:M 03 May 2025 23:06:03.498 - Connection with Node b7121f72a8a8c147a59cceb3c92936e9713ed100 at 127.0.0.1:38650 failed: Connection refused
+99717:M 03 May 2025 23:06:03.524 - Client closed connection id=3 addr=127.0.0.1:62705 laddr=127.0.0.1:28649 fd=14 name= age=5 idle=2 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=748 tot-net-out=4992 tot-cmds=21
+99717:M 03 May 2025 23:06:03.598 - Connection with Node b7121f72a8a8c147a59cceb3c92936e9713ed100 at 127.0.0.1:38650 failed: Connection refused
+99717:M 03 May 2025 23:06:03.699 - Connection with Node b7121f72a8a8c147a59cceb3c92936e9713ed100 at 127.0.0.1:38650 failed: Connection refused
+99717:M 03 May 2025 23:06:03.800 - Connection with Node b7121f72a8a8c147a59cceb3c92936e9713ed100 at 127.0.0.1:38650 failed: Connection refused
+99717:M 03 May 2025 23:06:04.627 - Connection with Node b7121f72a8a8c147a59cceb3c92936e9713ed100 at 127.0.0.1:38650 failed: Connection refused
+99717:signal-handler (1746281164) Received SIGTERM scheduling shutdown...
+99717:M 03 May 2025 23:06:04.728 * User requested shutdown...
+99717:M 03 May 2025 23:06:04.739 * Removing the pid file.
+99717:M 03 May 2025 23:06:04.742 * Saving the cluster configuration file before exiting.
+99717:M 03 May 2025 23:06:04.778 * Removing the unix socket file.
+99717:M 03 May 2025 23:06:04.780 # Valkey is now ready to exit, bye bye...

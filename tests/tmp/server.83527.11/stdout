@@ -1,0 +1,71 @@
+### Starting server for test 
+86795:M 03 May 2025 23:04:07.995 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+86795:M 03 May 2025 23:04:07.995 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=86795, just started
+86795:M 03 May 2025 23:04:07.995 * Configuration loaded
+86795:M 03 May 2025 23:04:07.995 * Increased maximum number of open files to 10032 (it was originally set to 256).
+86795:M 03 May 2025 23:04:07.995 * monotonic clock: POSIX clock_gettime
+86795:M 03 May 2025 23:04:07.995 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 22116
+ |###|   .+###############+.   |###|    PID: 86795                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+86795:M 03 May 2025 23:04:07.995 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+86795:M 03 May 2025 23:04:07.995 * Server initialized
+86795:M 03 May 2025 23:04:07.995 * Ready to accept connections tcp
+86795:M 03 May 2025 23:04:07.995 * Ready to accept connections unix
+86795:M 03 May 2025 23:04:08.009 - Accepted 127.0.0.1:59459
+86795:M 03 May 2025 23:04:08.009 - Client closed connection id=2 addr=127.0.0.1:59459 laddr=127.0.0.1:22116 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+86795:M 03 May 2025 23:04:08.020 - Accepted 127.0.0.1:59460
+### Starting test SPUBLISH/SSUBSCRIBE basics in tests/unit/pubsubshard.tcl
+86795:M 03 May 2025 23:04:08.020 - Accepted 127.0.0.1:59461
+### Starting test SPUBLISH/SSUBSCRIBE with two clients in tests/unit/pubsubshard.tcl
+86795:M 03 May 2025 23:04:08.021 - Client closed connection id=4 addr=127.0.0.1:59461 laddr=127.0.0.1:22116 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33824 events=r cmd=sunsubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=155 tot-net-out=273 tot-cmds=5
+86795:M 03 May 2025 23:04:08.021 - Accepted 127.0.0.1:59462
+86795:M 03 May 2025 23:04:08.022 - Accepted 127.0.0.1:59463
+86795:M 03 May 2025 23:04:08.022 - Client closed connection id=5 addr=127.0.0.1:59462 laddr=127.0.0.1:22116 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=0 ssub=1 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=ssubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=55 tot-net-out=81 tot-cmds=2
+86795:M 03 May 2025 23:04:08.022 - Client closed connection id=6 addr=127.0.0.1:59463 laddr=127.0.0.1:22116 fd=14 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=0 ssub=1 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=ssubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=55 tot-net-out=81 tot-cmds=2
+### Starting test SPUBLISH/SSUBSCRIBE after UNSUBSCRIBE without arguments in tests/unit/pubsubshard.tcl
+86795:M 03 May 2025 23:04:08.022 - Accepted 127.0.0.1:59464
+86795:M 03 May 2025 23:04:08.023 - Reading from client: Connection reset by peer
+### Starting test SSUBSCRIBE to one channel more than once in tests/unit/pubsubshard.tcl
+86795:M 03 May 2025 23:04:08.023 - Accepted 127.0.0.1:59465
+### Starting test SUNSUBSCRIBE from non-subscribed channels in tests/unit/pubsubshard.tcl
+86795:M 03 May 2025 23:04:08.024 - Client closed connection id=8 addr=127.0.0.1:59465 laddr=127.0.0.1:22116 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=0 ssub=1 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=ssubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=77 tot-net-out=153 tot-cmds=2
+86795:M 03 May 2025 23:04:08.024 - Accepted 127.0.0.1:59466
+86795:M 03 May 2025 23:04:08.024 - Client closed connection id=9 addr=127.0.0.1:59466 laddr=127.0.0.1:22116 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=sunsubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=120 tot-net-out=114 tot-cmds=4
+### Starting test PUBSUB command basics in tests/unit/pubsubshard.tcl
+### Starting test SPUBLISH/SSUBSCRIBE with two clients in tests/unit/pubsubshard.tcl
+86795:M 03 May 2025 23:04:08.025 - Accepted 127.0.0.1:59467
+86795:M 03 May 2025 23:04:08.025 - Accepted 127.0.0.1:59468
+86795:M 03 May 2025 23:04:08.026 - Reading from client: Connection reset by peer
+86795:M 03 May 2025 23:04:08.026 - Reading from client: Connection reset by peer
+### Starting test SPUBLISH/SSUBSCRIBE with PUBLISH/SUBSCRIBE in tests/unit/pubsubshard.tcl
+86795:M 03 May 2025 23:04:08.026 - Accepted 127.0.0.1:59469
+86795:M 03 May 2025 23:04:08.026 - Accepted 127.0.0.1:59470
+86795:M 03 May 2025 23:04:08.027 - Reading from client: Connection reset by peer
+86795:M 03 May 2025 23:04:08.027 - Reading from client: Connection reset by peer
+### Starting test PubSubShard with CLIENT REPLY OFF in tests/unit/pubsubshard.tcl
+86795:M 03 May 2025 23:04:08.027 - Accepted 127.0.0.1:59471
+86795:M 03 May 2025 23:04:08.028 - Client closed connection id=14 addr=127.0.0.1:59471 laddr=127.0.0.1:22116 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33824 events=r cmd=sunsubscribe user=default redir=-1 resp=3 lib-name= lib-ver= tot-net-in=265 tot-net-out=278 tot-cmds=10
+86795:M 03 May 2025 23:04:08.028 - Client closed connection id=3 addr=127.0.0.1:59460 laddr=127.0.0.1:22116 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=spublish user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=947 tot-net-out=201 tot-cmds=24
+86795:signal-handler (1746281049) Received SIGTERM scheduling shutdown...
+86795:M 03 May 2025 23:04:09.606 * User requested shutdown...
+86795:M 03 May 2025 23:04:09.606 * Removing the pid file.
+86795:M 03 May 2025 23:04:09.606 * Removing the unix socket file.
+86795:M 03 May 2025 23:04:09.606 # Valkey is now ready to exit, bye bye...

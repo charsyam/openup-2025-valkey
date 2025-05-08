@@ -1,0 +1,126 @@
+### Starting server for test 
+84468:M 03 May 2025 23:03:48.956 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+84468:M 03 May 2025 23:03:48.956 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=84468, just started
+84468:M 03 May 2025 23:03:48.956 * Configuration loaded
+84468:M 03 May 2025 23:03:48.956 * Increased maximum number of open files to 10032 (it was originally set to 256).
+84468:M 03 May 2025 23:03:48.956 * monotonic clock: POSIX clock_gettime
+84468:M 03 May 2025 23:03:48.956 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 28613
+ |###|   .+###############+.   |###|    PID: 84468                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+84468:M 03 May 2025 23:03:48.956 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+84468:M 03 May 2025 23:03:48.956 * Server initialized
+84468:M 03 May 2025 23:03:48.956 * Ready to accept connections tcp
+84468:M 03 May 2025 23:03:48.956 * Ready to accept connections unix
+84468:M 03 May 2025 23:03:49.096 - Accepted 127.0.0.1:58879
+84468:M 03 May 2025 23:03:49.096 - Client closed connection id=2 addr=127.0.0.1:58879 laddr=127.0.0.1:28613 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+84468:M 03 May 2025 23:03:49.126 - Accepted 127.0.0.1:58880
+84468:M 03 May 2025 23:03:49.126 - Accepted 127.0.0.1:58881
+84468:M 03 May 2025 23:03:49.126 - Accepted 127.0.0.1:58882
+84468:M 03 May 2025 23:03:49.126 - Accepted 127.0.0.1:58883
+### Starting test Clients are able to enable tracking and redirect it in tests/unit/tracking.tcl
+### Starting test The other connection is able to get invalidations in tests/unit/tracking.tcl
+### Starting test The client is now able to disable tracking in tests/unit/tracking.tcl
+### Starting test Clients can enable the BCAST mode with the empty prefix in tests/unit/tracking.tcl
+### Starting test The connection gets invalidation messages about all the keys in tests/unit/tracking.tcl
+### Starting test Clients can enable the BCAST mode with prefixes in tests/unit/tracking.tcl
+### Starting test Adding prefixes to BCAST mode works in tests/unit/tracking.tcl
+### Starting test Tracking NOLOOP mode in standard mode works in tests/unit/tracking.tcl
+### Starting test Tracking NOLOOP mode in BCAST mode works in tests/unit/tracking.tcl
+### Starting test Tracking gets notification of expired keys in tests/unit/tracking.tcl
+### Starting test Tracking gets notification of lazy expired keys in tests/unit/tracking.tcl
+### Starting test HELLO 3 reply is correct in tests/unit/tracking.tcl
+### Starting test RESP3 based basic invalidation in tests/unit/tracking.tcl
+### Starting test RESP3 tracking redirection in tests/unit/tracking.tcl
+### Starting test Invalidations of previous keys can be redirected after switching to RESP3 in tests/unit/tracking.tcl
+### Starting test Invalidations of new keys can be redirected after switching to RESP3 in tests/unit/tracking.tcl
+### Starting test Invalid keys should not be tracked for scripts in NOLOOP mode in tests/unit/tracking.tcl
+### Starting test Tracking only occurs for scripts when a command calls a read-only command in tests/unit/tracking.tcl
+### Starting test RESP3 Client gets tracking-redir-broken push message after cached key changed when rediretion client is terminated in tests/unit/tracking.tcl
+84468:M 03 May 2025 23:03:50.243 - Accepted 127.0.0.1:58959
+### Starting test Different clients can redirect to the same connection in tests/unit/tracking.tcl
+### Starting test Different clients using different protocols can track the same key in tests/unit/tracking.tcl
+### Starting test No invalidation message when using OPTIN option in tests/unit/tracking.tcl
+### Starting test Invalidation message sent when using OPTIN option with CLIENT CACHING yes in tests/unit/tracking.tcl
+### Starting test Invalidation message sent when using OPTOUT option in tests/unit/tracking.tcl
+### Starting test No invalidation message when using OPTOUT option with CLIENT CACHING no in tests/unit/tracking.tcl
+### Starting test Able to redirect to a RESP3 client in tests/unit/tracking.tcl
+### Starting test After switching from normal tracking to BCAST mode, no invalidation message is produced for pre-BCAST keys in tests/unit/tracking.tcl
+### Starting test BCAST with prefix collisions throw errors in tests/unit/tracking.tcl
+84468:M 03 May 2025 23:03:50.247 - Accepted 127.0.0.1:58960
+### Starting test hdel deliver invalidate message after response in the same connection in tests/unit/tracking.tcl
+### Starting test Tracking invalidation message is not interleaved with multiple keys response in tests/unit/tracking.tcl
+### Starting test Tracking invalidation message is not interleaved with transaction response in tests/unit/tracking.tcl
+### Starting test Tracking invalidation message of eviction keys should be before response in tests/unit/tracking.tcl
+### Starting test Unblocked BLMOVE gets notification after response in tests/unit/tracking.tcl
+### Starting test Tracking gets notification on tracking table key eviction in tests/unit/tracking.tcl
+### Starting test Invalidation message received for flushall in tests/unit/tracking.tcl
+84468:M 03 May 2025 23:03:50.443 - Accepted 127.0.0.1:58963
+84468:M 03 May 2025 23:03:50.443 - Accepted 127.0.0.1:58964
+### Starting test Invalidation message received for flushdb in tests/unit/tracking.tcl
+84468:M 03 May 2025 23:03:50.443 - Accepted 127.0.0.1:58965
+84468:M 03 May 2025 23:03:50.443 - Accepted 127.0.0.1:58966
+### Starting test Test ASYNC flushall in tests/unit/tracking.tcl
+84468:M 03 May 2025 23:03:50.444 - Accepted 127.0.0.1:58967
+84468:M 03 May 2025 23:03:50.444 - Accepted 127.0.0.1:58968
+### Starting test flushdb tracking invalidation message is not interleaved with transaction response in tests/unit/tracking.tcl
+84468:M 03 May 2025 23:03:50.445 - Accepted 127.0.0.1:58969
+84468:M 03 May 2025 23:03:50.445 - Accepted 127.0.0.1:58970
+### Starting test Server is able to evacuate enough keys when num of keys surpasses limit by more than defined initial effort in tests/unit/tracking.tcl
+84468:M 03 May 2025 23:03:50.446 - Accepted 127.0.0.1:58971
+84468:M 03 May 2025 23:03:50.446 - Accepted 127.0.0.1:58972
+### Starting test Tracking info is correct in tests/unit/tracking.tcl
+84468:M 03 May 2025 23:03:50.647 - Accepted 127.0.0.1:58981
+84468:M 03 May 2025 23:03:50.647 - Accepted 127.0.0.1:58982
+### Starting test CLIENT GETREDIR provides correct client id in tests/unit/tracking.tcl
+### Starting test CLIENT TRACKINGINFO provides reasonable results when tracking off in tests/unit/tracking.tcl
+### Starting test CLIENT TRACKINGINFO provides reasonable results when tracking on in tests/unit/tracking.tcl
+### Starting test CLIENT TRACKINGINFO provides reasonable results when tracking on with options in tests/unit/tracking.tcl
+### Starting test CLIENT TRACKINGINFO provides reasonable results when tracking optin in tests/unit/tracking.tcl
+### Starting test CLIENT TRACKINGINFO provides reasonable results when tracking optout in tests/unit/tracking.tcl
+### Starting test CLIENT TRACKINGINFO provides reasonable results when tracking bcast mode in tests/unit/tracking.tcl
+### Starting test CLIENT TRACKINGINFO provides reasonable results when tracking redir broken in tests/unit/tracking.tcl
+84468:M 03 May 2025 23:03:50.651 - Accepted 127.0.0.1:58983
+84468:M 03 May 2025 23:03:50.651 - Accepted 127.0.0.1:58984
+### Starting test Regression test for #11715 in tests/unit/tracking.tcl
+84468:M 03 May 2025 23:03:50.652 - Accepted 127.0.0.1:58985
+84468:M 03 May 2025 23:03:50.652 - Accepted 127.0.0.1:58986
+### Starting test RESP3 based basic invalidation with client reply off in tests/unit/tracking.tcl
+84468:M 03 May 2025 23:03:50.653 - Accepted 127.0.0.1:58987
+84468:M 03 May 2025 23:03:50.653 - Accepted 127.0.0.1:58988
+### Starting test RESP2 based basic invalidation with client reply off in tests/unit/tracking.tcl
+84468:M 03 May 2025 23:03:50.654 - Accepted 127.0.0.1:58989
+84468:M 03 May 2025 23:03:50.654 - Accepted 127.0.0.1:58990
+### Starting test RESP3 based basic redirect invalidation with client reply off in tests/unit/tracking.tcl
+84468:M 03 May 2025 23:03:50.655 - Accepted 127.0.0.1:58991
+84468:M 03 May 2025 23:03:50.655 - Accepted 127.0.0.1:58992
+84468:M 03 May 2025 23:03:50.655 - Accepted 127.0.0.1:58993
+84468:M 03 May 2025 23:03:50.655 - Client closed connection id=31 addr=127.0.0.1:58993 laddr=127.0.0.1:28613 fd=17 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=3 lib-name= lib-ver= tot-net-in=154 tot-net-out=209 tot-cmds=6
+### Starting test RESP3 based basic tracking-redir-broken with client reply off in tests/unit/tracking.tcl
+84468:M 03 May 2025 23:03:50.656 - Accepted 127.0.0.1:58994
+84468:M 03 May 2025 23:03:50.656 - Accepted 127.0.0.1:58995
+84468:M 03 May 2025 23:03:50.656 - Client closed connection id=6 addr=127.0.0.1:58883 laddr=127.0.0.1:28613 fd=15 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=152 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=set user=default redir=-1 resp=3 lib-name= lib-ver= tot-net-in=10524 tot-net-out=1736 tot-cmds=319
+84468:M 03 May 2025 23:03:50.656 - Client closed connection id=32 addr=127.0.0.1:58994 laddr=127.0.0.1:28613 fd=13 name= age=0 idle=0 flags=tR capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=33 resp=3 lib-name= lib-ver= tot-net-in=212 tot-net-out=221 tot-cmds=7
+84468:M 03 May 2025 23:03:50.656 - Client closed connection id=3 addr=127.0.0.1:58880 laddr=127.0.0.1:28613 fd=12 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=4096 rbp=4096 obl=0 oll=0 omem=0 tot-mem=21504 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=15512 tot-net-out=50221 tot-cmds=501
+84468:signal-handler (1746281033) Received SIGTERM scheduling shutdown...
+84468:M 03 May 2025 23:03:53.960 * User requested shutdown...
+84468:M 03 May 2025 23:03:53.960 * Removing the pid file.
+84468:M 03 May 2025 23:03:53.960 * Removing the unix socket file.
+84468:M 03 May 2025 23:03:53.960 # Valkey is now ready to exit, bye bye...

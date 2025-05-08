@@ -1,0 +1,79 @@
+### Starting server for test 
+11717:M 03 May 2025 23:07:51.950 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+11717:M 03 May 2025 23:07:51.950 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+11717:M 03 May 2025 23:07:51.950 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=11717, just started
+11717:M 03 May 2025 23:07:51.950 * Configuration loaded
+11717:M 03 May 2025 23:07:51.951 * Increased maximum number of open files to 10032 (it was originally set to 256).
+11717:M 03 May 2025 23:07:51.951 * monotonic clock: POSIX clock_gettime
+11717:M 03 May 2025 23:07:51.952 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25677
+ |###|   .+###############+.   |###|    PID: 11717                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+11717:M 03 May 2025 23:07:51.952 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+11717:M 03 May 2025 23:07:51.952 * No cluster configuration found, I'm 0c1805e4ba1f421bf1c32d9068cf7afed2aabfe4
+11717:M 03 May 2025 23:07:51.958 * Server initialized
+11717:M 03 May 2025 23:07:51.958 * Ready to accept connections tcp
+11717:M 03 May 2025 23:07:51.958 * Ready to accept connections unix
+11717:M 03 May 2025 23:07:52.138 - Accepted 127.0.0.1:59367
+11717:M 03 May 2025 23:07:52.138 - Client closed connection id=2 addr=127.0.0.1:59367 laddr=127.0.0.1:25677 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+11717:M 03 May 2025 23:07:52.156 - Accepted 127.0.0.1:59371
+11717:M 03 May 2025 23:07:52.353 # Missing implement of connection type tls
+11717:M 03 May 2025 23:07:52.406 - Accepting cluster node connection from 127.0.0.1:59388
+11717:M 03 May 2025 23:07:52.406 * IP address for this node updated to 127.0.0.1
+11717:M 03 May 2025 23:07:52.517 # DEBUG LOG: ========== I am primary 1 ==========
+11717:M 03 May 2025 23:07:53.977 * Cluster state changed: ok
+### Starting test Client blocked on XREADGROUP while stream's slot is migrated in tests/unit/cluster/slot-migration.tcl
+11717:M 03 May 2025 23:07:54.288 * Importing slot 609 from node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 ()
+11717:M 03 May 2025 23:07:54.289 - Accepted 127.0.0.1:59454
+### Starting test Check for memory leaks (pid 11740) in tests/unit/cluster/slot-migration.tcl
+11717:M 03 May 2025 23:07:56.907 # Cluster state changed: fail
+11717:M 03 May 2025 23:07:56.907 # Cluster is currently down: I am part of a minority partition.
+11717:M 03 May 2025 23:07:57.009 - DB 0: 1 keys (0 volatile) in 7 slots HT.
+11717:M 03 May 2025 23:07:57.401 - Client closed connection id=9 addr=127.0.0.1:59454 laddr=127.0.0.1:25677 fd=17 name= age=3 idle=3 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=restore-asking user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=139 tot-net-out=10 tot-cmds=2
+11717:M 03 May 2025 23:07:57.413 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:57.481 - Client closed connection id=3 addr=127.0.0.1:59371 laddr=127.0.0.1:25677 fd=14 name= age=5 idle=3 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=config|get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=628 tot-net-out=3280 tot-cmds=17
+11717:M 03 May 2025 23:07:57.514 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:57.615 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:57.716 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:57.817 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:57.918 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:58.019 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:58.121 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:58.222 * Cluster state changed: ok
+11717:M 03 May 2025 23:07:58.222 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:58.323 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:58.423 # Cluster state changed: fail
+11717:M 03 May 2025 23:07:58.423 # Cluster is currently down: I am part of a minority partition.
+11717:M 03 May 2025 23:07:58.424 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:58.524 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:58.626 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:58.727 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:58.828 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:58.929 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:59.030 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:59.131 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:07:59.232 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:M 03 May 2025 23:08:00.261 - Connection with Node 071bd8d441f5eb9813ba7f1bc2023b83b408ef47 at 127.0.0.1:35678 failed: Connection refused
+11717:signal-handler (1746281280) Received SIGTERM scheduling shutdown...
+11717:M 03 May 2025 23:08:00.362 * User requested shutdown...
+11717:M 03 May 2025 23:08:00.362 * Removing the pid file.
+11717:M 03 May 2025 23:08:00.362 * Saving the cluster configuration file before exiting.
+11717:M 03 May 2025 23:08:00.370 * Removing the unix socket file.
+11717:M 03 May 2025 23:08:00.370 # Valkey is now ready to exit, bye bye...

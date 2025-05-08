@@ -1,0 +1,264 @@
+### Starting server for test 
+7409:M 03 May 2025 23:06:52.248 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+7409:M 03 May 2025 23:06:52.248 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=7409, just started
+7409:M 03 May 2025 23:06:52.248 * Configuration loaded
+7409:M 03 May 2025 23:06:52.248 * Increased maximum number of open files to 10032 (it was originally set to 256).
+7409:M 03 May 2025 23:06:52.248 * monotonic clock: POSIX clock_gettime
+7409:M 03 May 2025 23:06:52.248 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26191
+ |###|   .+###############+.   |###|    PID: 7409                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+7409:M 03 May 2025 23:06:52.248 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+7409:M 03 May 2025 23:06:52.249 * Server initialized
+7409:M 03 May 2025 23:06:52.249 * Ready to accept connections tcp
+7409:M 03 May 2025 23:06:52.249 * Ready to accept connections unix
+7409:M 03 May 2025 23:06:52.384 - Accepted 127.0.0.1:56934
+7409:M 03 May 2025 23:06:52.384 - Client closed connection id=2 addr=127.0.0.1:56934 laddr=127.0.0.1:26191 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+7409:M 03 May 2025 23:06:52.410 - Accepted 127.0.0.1:56948
+### Starting test Make sure aof manifest appendonly.aof.manifest not in aof directory in tests/integration/aof-multi-part.tcl
+### Starting test AOF enable will create manifest file in tests/integration/aof-multi-part.tcl
+7409:M 03 May 2025 23:06:52.421 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+7409:M 03 May 2025 23:06:52.422 * Background append only file rewriting started by pid 7452
+7452:C 03 May 2025 23:06:52.423 * Successfully created the temporary AOF base file temp-rewriteaof-bg-7452.aof
+7452:C 03 May 2025 23:06:52.423 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+7409:M 03 May 2025 23:06:52.451 * Background AOF rewrite terminated with success
+7409:M 03 May 2025 23:06:52.451 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-7452.aof into appendonly.aof.1.base.rdb
+7409:M 03 May 2025 23:06:52.451 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.1.incr.aof
+7409:M 03 May 2025 23:06:52.458 * Background AOF rewrite finished successfully
+7409:M 03 May 2025 23:06:52.458 - Background AOF rewrite signal handler took 7163us
+7409:M 03 May 2025 23:06:52.485 - Accepted 127.0.0.1:56998
+7409:M 03 May 2025 23:06:52.588 * Creating AOF incr file appendonly.aof.2.incr.aof on background rewrite
+7409:M 03 May 2025 23:06:52.589 * Background append only file rewriting started by pid 7468
+7468:C 03 May 2025 23:06:52.595 * Successfully created the temporary AOF base file temp-rewriteaof-bg-7468.aof
+7468:C 03 May 2025 23:06:52.595 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+7409:M 03 May 2025 23:06:52.658 * Background AOF rewrite terminated with success
+7409:M 03 May 2025 23:06:52.658 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-7468.aof into appendonly.aof.2.base.rdb
+7409:M 03 May 2025 23:06:52.663 * Removing the history file appendonly.aof.1.incr.aof in the background
+7409:M 03 May 2025 23:06:52.663 * Removing the history file appendonly.aof.1.base.rdb in the background
+7409:M 03 May 2025 23:06:52.667 * Background AOF rewrite finished successfully
+7409:M 03 May 2025 23:06:52.668 - Background AOF rewrite signal handler took 9258us
+7409:M 03 May 2025 23:06:52.706 - Reading from client: Connection reset by peer
+7409:M 03 May 2025 23:06:52.829 * Reading RDB base file on AOF loading...
+7409:M 03 May 2025 23:06:52.829 * Loading RDB produced by Valkey version 255.255.255
+7409:M 03 May 2025 23:06:52.829 * RDB age 0 seconds
+7409:M 03 May 2025 23:06:52.829 * RDB memory usage when created 1.57 Mb
+7409:M 03 May 2025 23:06:52.830 * RDB is base AOF
+7409:M 03 May 2025 23:06:52.831 * Done loading RDB, keys loaded: 3858, keys expired: 0.
+7409:M 03 May 2025 23:06:52.832 * DB loaded from base file appendonly.aof.2.base.rdb: 0.002 seconds
+7409:M 03 May 2025 23:06:52.839 * DB loaded from incr file appendonly.aof.2.incr.aof: 0.007 seconds
+7409:M 03 May 2025 23:06:52.839 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF multiple rewrite failures will open multiple INCR AOFs in tests/integration/aof-multi-part.tcl
+7409:M 03 May 2025 23:06:52.869 - Accepted 127.0.0.1:57250
+7409:M 03 May 2025 23:06:52.966 * Creating AOF incr file appendonly.aof.3.incr.aof on background rewrite
+7409:M 03 May 2025 23:06:52.968 * Background append only file rewriting started by pid 7512
+7409:M 03 May 2025 23:06:53.069 # Background AOF rewrite terminated by signal 9
+7409:M 03 May 2025 23:06:53.116 * Creating AOF incr file appendonly.aof.4.incr.aof on background rewrite
+7409:M 03 May 2025 23:06:53.118 * Background append only file rewriting started by pid 7540
+7409:M 03 May 2025 23:06:53.169 # Background AOF rewrite terminated by signal 9
+7409:M 03 May 2025 23:06:53.213 * Creating AOF incr file appendonly.aof.5.incr.aof on background rewrite
+7409:M 03 May 2025 23:06:53.215 * Background append only file rewriting started by pid 7553
+7409:M 03 May 2025 23:06:53.270 # Background AOF rewrite terminated by signal 9
+7409:M 03 May 2025 23:06:53.313 - Reading from client: Connection reset by peer
+7409:M 03 May 2025 23:06:53.470 * Reading RDB base file on AOF loading...
+7409:M 03 May 2025 23:06:53.470 * Loading RDB produced by Valkey version 255.255.255
+7409:M 03 May 2025 23:06:53.470 * RDB age 1 seconds
+7409:M 03 May 2025 23:06:53.470 * RDB memory usage when created 1.57 Mb
+7409:M 03 May 2025 23:06:53.470 * RDB is base AOF
+7409:M 03 May 2025 23:06:53.472 * Done loading RDB, keys loaded: 3858, keys expired: 0.
+7409:M 03 May 2025 23:06:53.472 * DB loaded from base file appendonly.aof.2.base.rdb: 0.002 seconds
+7409:M 03 May 2025 23:06:53.486 * DB loaded from incr file appendonly.aof.2.incr.aof: 0.014 seconds
+7409:M 03 May 2025 23:06:53.499 * DB loaded from incr file appendonly.aof.3.incr.aof: 0.013 seconds
+7409:M 03 May 2025 23:06:53.505 * DB loaded from incr file appendonly.aof.4.incr.aof: 0.006 seconds
+7409:M 03 May 2025 23:06:53.511 * DB loaded from incr file appendonly.aof.5.incr.aof: 0.006 seconds
+7409:M 03 May 2025 23:06:53.511 * Append Only File loaded by DEBUG LOADAOF
+7409:M 03 May 2025 23:06:53.588 * Creating AOF incr file appendonly.aof.6.incr.aof on background rewrite
+7409:M 03 May 2025 23:06:53.589 * Background append only file rewriting started by pid 7558
+7558:C 03 May 2025 23:06:53.600 * Successfully created the temporary AOF base file temp-rewriteaof-bg-7558.aof
+7558:C 03 May 2025 23:06:53.601 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+7409:M 03 May 2025 23:06:53.612 * Background AOF rewrite terminated with success
+7409:M 03 May 2025 23:06:53.612 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-7558.aof into appendonly.aof.3.base.rdb
+7409:M 03 May 2025 23:06:53.618 * Removing the history file appendonly.aof.2.incr.aof in the background
+7409:M 03 May 2025 23:06:53.618 * Removing the history file appendonly.aof.3.incr.aof in the background
+7409:M 03 May 2025 23:06:53.618 * Removing the history file appendonly.aof.4.incr.aof in the background
+7409:M 03 May 2025 23:06:53.619 * Removing the history file appendonly.aof.5.incr.aof in the background
+7409:M 03 May 2025 23:06:53.619 * Removing the history file appendonly.aof.2.base.rdb in the background
+7409:M 03 May 2025 23:06:53.626 * Background AOF rewrite finished successfully
+7409:M 03 May 2025 23:06:53.626 - Background AOF rewrite signal handler took 13520us
+7409:M 03 May 2025 23:06:53.736 * Reading RDB base file on AOF loading...
+7409:M 03 May 2025 23:06:53.736 * Loading RDB produced by Valkey version 255.255.255
+7409:M 03 May 2025 23:06:53.736 * RDB age 0 seconds
+7409:M 03 May 2025 23:06:53.736 * RDB memory usage when created 3.10 Mb
+7409:M 03 May 2025 23:06:53.736 * RDB is base AOF
+7409:M 03 May 2025 23:06:53.745 * Done loading RDB, keys loaded: 24089, keys expired: 0.
+7409:M 03 May 2025 23:06:53.745 * DB loaded from base file appendonly.aof.3.base.rdb: 0.009 seconds
+7409:M 03 May 2025 23:06:53.745 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite doesn't open new aof when AOF turn off in tests/integration/aof-multi-part.tcl
+7409:M 03 May 2025 23:06:53.835 * Background append only file rewriting started by pid 7561
+7561:C 03 May 2025 23:06:53.845 * Successfully created the temporary AOF base file temp-rewriteaof-bg-7561.aof
+7561:C 03 May 2025 23:06:53.845 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+7409:M 03 May 2025 23:06:53.935 * Background AOF rewrite terminated with success
+7409:M 03 May 2025 23:06:53.935 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-7561.aof into appendonly.aof.4.base.rdb
+7409:M 03 May 2025 23:06:53.940 * Removing the history file appendonly.aof.6.incr.aof in the background
+7409:M 03 May 2025 23:06:53.941 * Removing the history file appendonly.aof.3.base.rdb in the background
+7409:M 03 May 2025 23:06:53.947 * Background AOF rewrite finished successfully
+7409:M 03 May 2025 23:06:53.947 - Background AOF rewrite signal handler took 11469us
+7409:M 03 May 2025 23:06:54.002 * Reading RDB base file on AOF loading...
+7409:M 03 May 2025 23:06:54.002 * Loading RDB produced by Valkey version 255.255.255
+7409:M 03 May 2025 23:06:54.002 * RDB age 1 seconds
+7409:M 03 May 2025 23:06:54.002 * RDB memory usage when created 3.10 Mb
+7409:M 03 May 2025 23:06:54.002 * RDB is base AOF
+7409:M 03 May 2025 23:06:54.015 * Done loading RDB, keys loaded: 24089, keys expired: 0.
+7409:M 03 May 2025 23:06:54.015 * DB loaded from base file appendonly.aof.4.base.rdb: 0.013 seconds
+7409:M 03 May 2025 23:06:54.015 * Append Only File loaded by DEBUG LOADAOF
+7409:M 03 May 2025 23:06:54.075 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+7409:M 03 May 2025 23:06:54.076 * Background append only file rewriting started by pid 7562
+7562:C 03 May 2025 23:06:54.084 * Successfully created the temporary AOF base file temp-rewriteaof-bg-7562.aof
+7562:C 03 May 2025 23:06:54.084 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+7409:M 03 May 2025 23:06:54.176 * Background AOF rewrite terminated with success
+7409:M 03 May 2025 23:06:54.176 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-7562.aof into appendonly.aof.5.base.rdb
+7409:M 03 May 2025 23:06:54.176 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.1.incr.aof
+7409:M 03 May 2025 23:06:54.182 * Removing the history file appendonly.aof.4.base.rdb in the background
+7409:M 03 May 2025 23:06:54.188 * Background AOF rewrite finished successfully
+7409:M 03 May 2025 23:06:54.189 - Background AOF rewrite signal handler took 12878us
+### Starting test AOF enable/disable auto gc in tests/integration/aof-multi-part.tcl
+7409:M 03 May 2025 23:06:54.193 * Creating AOF incr file appendonly.aof.2.incr.aof on background rewrite
+7409:M 03 May 2025 23:06:54.195 * Background append only file rewriting started by pid 7563
+7563:C 03 May 2025 23:06:54.203 * Successfully created the temporary AOF base file temp-rewriteaof-bg-7563.aof
+7563:C 03 May 2025 23:06:54.204 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+7409:M 03 May 2025 23:06:54.289 * Background AOF rewrite terminated with success
+7409:M 03 May 2025 23:06:54.290 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-7563.aof into appendonly.aof.6.base.rdb
+7409:M 03 May 2025 23:06:54.293 * Background AOF rewrite finished successfully
+7409:M 03 May 2025 23:06:54.293 - Background AOF rewrite signal handler took 3583us
+7409:M 03 May 2025 23:06:54.309 * Creating AOF incr file appendonly.aof.3.incr.aof on background rewrite
+7409:M 03 May 2025 23:06:54.310 * Background append only file rewriting started by pid 7564
+7564:C 03 May 2025 23:06:54.318 * Successfully created the temporary AOF base file temp-rewriteaof-bg-7564.aof
+7564:C 03 May 2025 23:06:54.318 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+7409:M 03 May 2025 23:06:54.394 * Background AOF rewrite terminated with success
+7409:M 03 May 2025 23:06:54.394 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-7564.aof into appendonly.aof.7.base.rdb
+7409:M 03 May 2025 23:06:54.400 * Background AOF rewrite finished successfully
+7409:M 03 May 2025 23:06:54.400 - Background AOF rewrite signal handler took 6423us
+7409:M 03 May 2025 23:06:54.418 * Removing the history file appendonly.aof.2.incr.aof in the background
+7409:M 03 May 2025 23:06:54.418 * Removing the history file appendonly.aof.6.base.rdb in the background
+7409:M 03 May 2025 23:06:54.418 * Removing the history file appendonly.aof.1.incr.aof in the background
+7409:M 03 May 2025 23:06:54.418 * Removing the history file appendonly.aof.5.base.rdb in the background
+### Starting test AOF can produce consecutive sequence number after reload in tests/integration/aof-multi-part.tcl
+7409:M 03 May 2025 23:06:54.424 * Reading RDB base file on AOF loading...
+7409:M 03 May 2025 23:06:54.424 * Loading RDB produced by Valkey version 255.255.255
+7409:M 03 May 2025 23:06:54.424 * RDB age 0 seconds
+7409:M 03 May 2025 23:06:54.424 * RDB memory usage when created 3.10 Mb
+7409:M 03 May 2025 23:06:54.424 * RDB is base AOF
+7409:M 03 May 2025 23:06:54.433 * Done loading RDB, keys loaded: 24089, keys expired: 0.
+7409:M 03 May 2025 23:06:54.433 * DB loaded from base file appendonly.aof.7.base.rdb: 0.009 seconds
+7409:M 03 May 2025 23:06:54.433 * Append Only File loaded by DEBUG LOADAOF
+7409:M 03 May 2025 23:06:54.437 * Creating AOF incr file appendonly.aof.4.incr.aof on background rewrite
+7409:M 03 May 2025 23:06:54.438 * Background append only file rewriting started by pid 7565
+7565:C 03 May 2025 23:06:54.446 * Successfully created the temporary AOF base file temp-rewriteaof-bg-7565.aof
+7565:C 03 May 2025 23:06:54.446 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+7409:M 03 May 2025 23:06:54.501 * Background AOF rewrite terminated with success
+7409:M 03 May 2025 23:06:54.501 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-7565.aof into appendonly.aof.8.base.rdb
+7409:M 03 May 2025 23:06:54.505 * Removing the history file appendonly.aof.3.incr.aof in the background
+7409:M 03 May 2025 23:06:54.505 * Removing the history file appendonly.aof.7.base.rdb in the background
+7409:M 03 May 2025 23:06:54.510 * Background AOF rewrite finished successfully
+7409:M 03 May 2025 23:06:54.510 - Background AOF rewrite signal handler took 9391us
+### Starting test AOF enable during BGSAVE will not write data util AOFRW finish in tests/integration/aof-multi-part.tcl
+7409:M 03 May 2025 23:06:54.549 * Background saving started by pid 7567
+7409:M 03 May 2025 23:06:54.550 * AOF was enabled but there is already another background operation. An AOF background was scheduled to start when possible.
+7409:M 03 May 2025 23:06:54.551 * Reading RDB base file on AOF loading...
+7409:M 03 May 2025 23:06:54.551 * Loading RDB produced by Valkey version 255.255.255
+7409:M 03 May 2025 23:06:54.551 * RDB age 0 seconds
+7409:M 03 May 2025 23:06:54.551 * RDB memory usage when created 3.10 Mb
+7409:M 03 May 2025 23:06:54.551 * RDB is base AOF
+7409:M 03 May 2025 23:06:54.563 * Done loading RDB, keys loaded: 24089, keys expired: 0.
+7409:M 03 May 2025 23:06:54.563 * DB loaded from base file appendonly.aof.8.base.rdb: 0.012 seconds
+7409:M 03 May 2025 23:06:54.563 * Append Only File loaded by DEBUG LOADAOF
+7409:M 03 May 2025 23:06:54.610 # Background saving terminated by signal 9
+7409:M 03 May 2025 23:06:54.712 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+7409:M 03 May 2025 23:06:54.713 * Background append only file rewriting started by pid 7581
+7581:C 03 May 2025 23:06:54.722 * Successfully created the temporary AOF base file temp-rewriteaof-bg-7581.aof
+7581:C 03 May 2025 23:06:54.722 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+7409:M 03 May 2025 23:06:54.813 * Background AOF rewrite terminated with success
+7409:M 03 May 2025 23:06:54.813 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-7581.aof into appendonly.aof.9.base.rdb
+7409:M 03 May 2025 23:06:54.814 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.5.incr.aof
+7409:M 03 May 2025 23:06:54.820 * Removing the history file appendonly.aof.4.incr.aof in the background
+7409:M 03 May 2025 23:06:54.820 * Removing the history file appendonly.aof.8.base.rdb in the background
+7409:M 03 May 2025 23:06:54.826 * Background AOF rewrite finished successfully
+7409:M 03 May 2025 23:06:54.826 - Background AOF rewrite signal handler took 12436us
+7409:M 03 May 2025 23:06:54.827 * Reading RDB base file on AOF loading...
+7409:M 03 May 2025 23:06:54.827 * Loading RDB produced by Valkey version 255.255.255
+7409:M 03 May 2025 23:06:54.827 * RDB age 0 seconds
+7409:M 03 May 2025 23:06:54.827 * RDB memory usage when created 3.15 Mb
+7409:M 03 May 2025 23:06:54.827 * RDB is base AOF
+7409:M 03 May 2025 23:06:54.836 * Done loading RDB, keys loaded: 24089, keys expired: 0.
+7409:M 03 May 2025 23:06:54.836 * DB loaded from base file appendonly.aof.9.base.rdb: 0.009 seconds
+7409:M 03 May 2025 23:06:54.836 * DB loaded from incr file appendonly.aof.5.incr.aof: 0.000 seconds
+7409:M 03 May 2025 23:06:54.836 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF will trigger limit when AOFRW fails many times in tests/integration/aof-multi-part.tcl
+7409:M 03 May 2025 23:06:54.841 * Creating AOF incr file appendonly.aof.6.incr.aof on background rewrite
+7409:M 03 May 2025 23:06:54.843 * Background append only file rewriting started by pid 7595
+7595:C 03 May 2025 23:06:54.844 * Successfully created the temporary AOF base file temp-rewriteaof-bg-7595.aof
+7595:C 03 May 2025 23:06:54.844 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+7409:M 03 May 2025 23:06:54.927 * Background AOF rewrite terminated with success
+7409:M 03 May 2025 23:06:54.927 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-7595.aof into appendonly.aof.10.base.rdb
+7409:M 03 May 2025 23:06:54.932 * Removing the history file appendonly.aof.5.incr.aof in the background
+7409:M 03 May 2025 23:06:54.932 * Removing the history file appendonly.aof.9.base.rdb in the background
+7409:M 03 May 2025 23:06:54.936 * Background AOF rewrite finished successfully
+7409:M 03 May 2025 23:06:54.936 - Background AOF rewrite signal handler took 9399us
+7409:M 03 May 2025 23:06:54.956 * Creating AOF incr file appendonly.aof.7.incr.aof on background rewrite
+7409:M 03 May 2025 23:06:54.958 * Background append only file rewriting started by pid 7601
+7409:M 03 May 2025 23:06:55.037 # Background AOF rewrite terminated by signal 9
+7409:M 03 May 2025 23:06:55.056 * Creating AOF incr file appendonly.aof.8.incr.aof on background rewrite
+7409:M 03 May 2025 23:06:55.059 * Background append only file rewriting started by pid 7610
+7409:M 03 May 2025 23:06:55.139 # Background AOF rewrite terminated by signal 9
+7409:M 03 May 2025 23:06:55.165 * Creating AOF incr file appendonly.aof.9.incr.aof on background rewrite
+7409:M 03 May 2025 23:06:55.167 * Background append only file rewriting started by pid 7631
+7409:M 03 May 2025 23:06:55.241 # Background AOF rewrite terminated by signal 9
+7409:M 03 May 2025 23:06:55.342 # Background AOF rewrite has repeatedly failed and triggered the limit, will retry in 1 minutes
+7409:M 03 May 2025 23:06:55.452 * Creating AOF incr file appendonly.aof.10.incr.aof on background rewrite
+7409:M 03 May 2025 23:06:55.454 * Background append only file rewriting started by pid 7697
+7697:C 03 May 2025 23:06:55.455 * Successfully created the temporary AOF base file temp-rewriteaof-bg-7697.aof
+7697:C 03 May 2025 23:06:55.455 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+7409:M 03 May 2025 23:06:55.544 * Background AOF rewrite terminated with success
+7409:M 03 May 2025 23:06:55.544 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-7697.aof into appendonly.aof.11.base.rdb
+7409:M 03 May 2025 23:06:55.551 * Removing the history file appendonly.aof.6.incr.aof in the background
+7409:M 03 May 2025 23:06:55.551 * Removing the history file appendonly.aof.7.incr.aof in the background
+7409:M 03 May 2025 23:06:55.551 * Removing the history file appendonly.aof.8.incr.aof in the background
+7409:M 03 May 2025 23:06:55.551 * Removing the history file appendonly.aof.9.incr.aof in the background
+7409:M 03 May 2025 23:06:55.551 * Removing the history file appendonly.aof.10.base.rdb in the background
+7409:M 03 May 2025 23:06:55.557 * Background AOF rewrite finished successfully
+7409:M 03 May 2025 23:06:55.557 - Background AOF rewrite signal handler took 12420us
+7409:M 03 May 2025 23:06:55.563 * Reading RDB base file on AOF loading...
+7409:M 03 May 2025 23:06:55.563 * Loading RDB produced by Valkey version 255.255.255
+7409:M 03 May 2025 23:06:55.563 * RDB age 0 seconds
+7409:M 03 May 2025 23:06:55.563 * RDB memory usage when created 1.42 Mb
+7409:M 03 May 2025 23:06:55.563 * RDB is base AOF
+7409:M 03 May 2025 23:06:55.563 * Done loading RDB, keys loaded: 2, keys expired: 0.
+7409:M 03 May 2025 23:06:55.563 * DB loaded from base file appendonly.aof.11.base.rdb: 0.000 seconds
+7409:M 03 May 2025 23:06:55.563 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF will open a temporary INCR AOF to accumulate data until the first AOFRW success when AOF is dynamically enabled in tests/integration/aof-multi-part.tcl
+7409:M 03 May 2025 23:06:56.768 - DB 9: 2 keys (0 volatile) in 7 slots HT.
+### Starting test Check for memory leaks (pid 7722) in tests/integration/aof-multi-part.tcl
+7409:M 03 May 2025 23:06:59.774 - Client closed connection id=3 addr=127.0.0.1:56948 laddr=127.0.0.1:26191 fd=12 name= age=7 idle=4 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=4215 tot-net-out=389900 tot-cmds=133
+7409:M 03 May 2025 23:07:02.658 - DB 9: 2 keys (0 volatile) in 7 slots HT.
+7409:signal-handler (1746281222) Received SIGTERM scheduling shutdown...
+7409:M 03 May 2025 23:07:02.759 * User requested shutdown...
+7409:M 03 May 2025 23:07:02.759 * Calling fsync() on the AOF file.
+7409:M 03 May 2025 23:07:02.765 * Removing the pid file.
+7409:M 03 May 2025 23:07:02.765 * Removing the unix socket file.
+7409:M 03 May 2025 23:07:02.766 # Valkey is now ready to exit, bye bye...

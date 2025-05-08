@@ -1,0 +1,65 @@
+### Starting server for test 
+85936:M 03 May 2025 23:04:02.982 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+85936:M 03 May 2025 23:04:02.982 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=85936, just started
+85936:M 03 May 2025 23:04:02.982 * Configuration loaded
+85936:M 03 May 2025 23:04:02.982 * Increased maximum number of open files to 10032 (it was originally set to 256).
+85936:M 03 May 2025 23:04:02.982 * monotonic clock: POSIX clock_gettime
+85936:M 03 May 2025 23:04:02.982 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25118
+ |###|   .+###############+.   |###|    PID: 85936                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+85936:M 03 May 2025 23:04:02.982 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+85936:M 03 May 2025 23:04:02.983 * Server initialized
+85936:M 03 May 2025 23:04:02.983 * Ready to accept connections tcp
+85936:M 03 May 2025 23:04:02.983 * Ready to accept connections unix
+85936:M 03 May 2025 23:04:03.116 - Accepted 127.0.0.1:59304
+85936:M 03 May 2025 23:04:03.116 - Client closed connection id=2 addr=127.0.0.1:59304 laddr=127.0.0.1:25118 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+85936:M 03 May 2025 23:04:03.127 - Accepted 127.0.0.1:59306
+### Starting test AUTH fails when binary password is wrong in tests/unit/auth.tcl
+### Starting test AUTH succeeds when binary password is correct in tests/unit/auth.tcl
+### Starting test primaryauth test with binary password dualchannel = yes in tests/unit/auth.tcl
+85936:M 03 May 2025 23:04:03.351 - Accepted 127.0.0.1:59311
+85936:M 03 May 2025 23:04:03.352 - Reading from client: Connection reset by peer
+85936:M 03 May 2025 23:04:04.205 - Accepted 127.0.0.1:59325
+85936:M 03 May 2025 23:04:04.205 * Replica 127.0.0.1:25119 asks for synchronization
+85936:M 03 May 2025 23:04:04.205 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '8adc93c0516648047665896236fb2f25ab10ddaa', my replication IDs are '3e515e6c1055f2d008d45aa361df200914808431' and '0000000000000000000000000000000000000000')
+85936:M 03 May 2025 23:04:04.205 * Dual channel replication: Replica 127.0.0.1:25119 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+85936:M 03 May 2025 23:04:04.205 - Accepted 127.0.0.1:59326
+85936:M 03 May 2025 23:04:04.205 * Replica 127.0.0.1:25119 asks for synchronization
+85936:M 03 May 2025 23:04:04.205 * Replication backlog created, my new replication IDs are '0fa0ae5b2f30ef2e263e75f1366a3d07290f0889' and '0000000000000000000000000000000000000000'
+85936:M 03 May 2025 23:04:04.205 * Starting BGSAVE for SYNC with target: replicas sockets using: dual-channel
+85936:M 03 May 2025 23:04:04.205 * Dual channel replication: Sending to replica 127.0.0.1:25119 RDB end offset 0 and client-id 6
+85936:M 03 May 2025 23:04:04.206 * Background RDB transfer started by pid 86112 to direct socket to replica
+86112:C 03 May 2025 23:04:04.206 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+85936:M 03 May 2025 23:04:04.206 * Replica 127.0.0.1:25119 asks for synchronization
+85936:M 03 May 2025 23:04:04.206 * Partial resynchronization request from 127.0.0.1:25119 accepted. Sending 0 bytes of backlog starting from offset 1.
+85936:M 03 May 2025 23:04:04.210 - Client closed connection id=6 addr=127.0.0.1:59326 laddr=127.0.0.1:25118 fd=14 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=145 tot-net-out=10 tot-cmds=3
+85936:M 03 May 2025 23:04:04.210 * Dual channel replication: Replica 127.0.0.1:25119 rdb channel disconnected.
+85936:M 03 May 2025 23:04:04.210 * Synchronization with replica 127.0.0.1:25119 succeeded
+### Starting test Check for memory leaks (pid 85983) in tests/unit/auth.tcl
+85936:M 03 May 2025 23:04:04.296 * Background RDB transfer terminated with success
+85936:M 03 May 2025 23:04:05.149 - Client closed connection id=5 addr=127.0.0.1:59325 laddr=127.0.0.1:25118 fd=13 name= age=1 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=446 tot-net-out=59 tot-cmds=8
+85936:M 03 May 2025 23:04:05.149 * Connection with replica 127.0.0.1:25119 lost.
+85936:M 03 May 2025 23:04:05.232 - Client closed connection id=3 addr=127.0.0.1:59306 laddr=127.0.0.1:25118 fd=12 name= age=2 idle=2 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=5 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=302 tot-net-out=94 tot-cmds=7
+85936:signal-handler (1746281046) Received SIGTERM scheduling shutdown...
+85936:M 03 May 2025 23:04:06.258 * User requested shutdown...
+85936:M 03 May 2025 23:04:06.258 * Removing the pid file.
+85936:M 03 May 2025 23:04:06.258 * Removing the unix socket file.
+85936:M 03 May 2025 23:04:06.258 # Valkey is now ready to exit, bye bye...

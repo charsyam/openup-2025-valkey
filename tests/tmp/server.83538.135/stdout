@@ -1,0 +1,1304 @@
+### Starting server for test diskless loading short read in tests/integration/replication.tcl
+16972:M 03 May 2025 23:09:25.971 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+16972:M 03 May 2025 23:09:25.971 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=16972, just started
+16972:M 03 May 2025 23:09:25.971 * Configuration loaded
+16972:M 03 May 2025 23:09:25.971 * Increased maximum number of open files to 10032 (it was originally set to 256).
+16972:M 03 May 2025 23:09:25.971 * monotonic clock: POSIX clock_gettime
+16972:M 03 May 2025 23:09:25.972 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27678
+ |###|   .+###############+.   |###|    PID: 16972                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+16972:M 03 May 2025 23:09:25.972 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+16972:M 03 May 2025 23:09:25.972 * Server initialized
+16972:M 03 May 2025 23:09:25.972 * Ready to accept connections tcp
+16972:M 03 May 2025 23:09:25.972 * Ready to accept connections unix
+16972:M 03 May 2025 23:09:26.117 - Accepted 127.0.0.1:50116
+16972:M 03 May 2025 23:09:26.117 - Client closed connection id=2 addr=127.0.0.1:50116 laddr=127.0.0.1:27678 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+16972:M 03 May 2025 23:09:26.144 - Accepted 127.0.0.1:50118
+16972:M 03 May 2025 23:09:27.033 - Accepted 127.0.0.1:50128
+16972:M 03 May 2025 23:09:27.033 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:27.033 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'b7a68ad883265b0362479bc672d621b46eb22cca', my replication IDs are '70f024c6209d39f1617dd191b7562355003f0633' and '0000000000000000000000000000000000000000')
+16972:M 03 May 2025 23:09:27.033 * Replication backlog created, my new replication IDs are '994ab9731f8f2095d0d1ca0102f4afbb6b9c1600' and '0000000000000000000000000000000000000000'
+16972:M 03 May 2025 23:09:27.033 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:27.038 * Background RDB transfer started by pid 17018 to pipe through parent process
+16972:M 03 May 2025 23:09:27.090 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:27.090 * Diskless rdb transfer, last replica dropped, killing fork child.
+17018:signal-handler (1746281367) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:27.091 - Accepted 127.0.0.1:50129
+16972:M 03 May 2025 23:09:27.091 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:27.091 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'b7a68ad883265b0362479bc672d621b46eb22cca', my replication IDs are '994ab9731f8f2095d0d1ca0102f4afbb6b9c1600' and '0000000000000000000000000000000000000000')
+16972:M 03 May 2025 23:09:27.091 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:27.091 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:27.091 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:27.094 * Background RDB transfer started by pid 17021 to pipe through parent process
+17021:C 03 May 2025 23:09:27.203 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:27.203 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:27.206 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:27.206 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:27.206 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:27.244 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:27.245 - Accepted 127.0.0.1:50130
+16972:M 03 May 2025 23:09:27.245 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:27.245 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 1.
+16972:M 03 May 2025 23:09:27.256 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:27.257 - Accepted 127.0.0.1:50131
+16972:M 03 May 2025 23:09:27.257 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:27.257 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 1).
+16972:M 03 May 2025 23:09:27.257 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:27.261 * Background RDB transfer started by pid 17024 to pipe through parent process
+16972:M 03 May 2025 23:09:27.278 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:27.278 * Diskless rdb transfer, last replica dropped, killing fork child.
+17024:signal-handler (1746281367) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:27.279 - Accepted 127.0.0.1:50132
+16972:M 03 May 2025 23:09:27.279 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:27.279 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 1).
+16972:M 03 May 2025 23:09:27.279 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:27.280 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:27.280 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:27.283 * Background RDB transfer started by pid 17027 to pipe through parent process
+17027:C 03 May 2025 23:09:27.392 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:27.392 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:27.394 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:27.394 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:27.394 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:27.450 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:27.450 - Accepted 127.0.0.1:50133
+16972:M 03 May 2025 23:09:27.450 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:27.450 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 164326.
+16972:M 03 May 2025 23:09:27.460 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:27.461 - Accepted 127.0.0.1:50134
+16972:M 03 May 2025 23:09:27.461 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:27.461 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 164326).
+16972:M 03 May 2025 23:09:27.461 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:27.464 * Background RDB transfer started by pid 17030 to pipe through parent process
+16972:M 03 May 2025 23:09:27.488 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:27.488 * Diskless rdb transfer, last replica dropped, killing fork child.
+17030:signal-handler (1746281367) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:27.489 - Accepted 127.0.0.1:50135
+16972:M 03 May 2025 23:09:27.489 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:27.489 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 164326).
+16972:M 03 May 2025 23:09:27.489 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:27.489 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:27.489 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:27.492 * Background RDB transfer started by pid 17033 to pipe through parent process
+17033:C 03 May 2025 23:09:27.603 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:27.603 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:27.606 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:27.606 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:27.606 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:27.634 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:27.634 - Accepted 127.0.0.1:50136
+16972:M 03 May 2025 23:09:27.635 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:27.635 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 328651.
+16972:M 03 May 2025 23:09:27.645 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:27.646 - Accepted 127.0.0.1:50137
+16972:M 03 May 2025 23:09:27.646 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:27.646 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 328651).
+16972:M 03 May 2025 23:09:27.646 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:27.649 * Background RDB transfer started by pid 17036 to pipe through parent process
+16972:M 03 May 2025 23:09:27.669 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:27.669 * Diskless rdb transfer, last replica dropped, killing fork child.
+17036:signal-handler (1746281367) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:27.670 - Accepted 127.0.0.1:50140
+16972:M 03 May 2025 23:09:27.670 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:27.671 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:27.671 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 328651).
+16972:M 03 May 2025 23:09:27.671 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:27.674 * Background RDB transfer started by pid 17041 to pipe through parent process
+17041:C 03 May 2025 23:09:27.787 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:27.788 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:27.789 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:27.789 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:27.789 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:27.810 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:27.810 - Accepted 127.0.0.1:50141
+16972:M 03 May 2025 23:09:27.811 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:27.811 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 492976.
+16972:M 03 May 2025 23:09:27.821 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:27.821 - Accepted 127.0.0.1:50142
+16972:M 03 May 2025 23:09:27.822 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:27.822 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 492976).
+16972:M 03 May 2025 23:09:27.822 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:27.824 * Background RDB transfer started by pid 17053 to pipe through parent process
+16972:M 03 May 2025 23:09:27.880 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:27.880 * Diskless rdb transfer, last replica dropped, killing fork child.
+17053:signal-handler (1746281367) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:27.881 - Accepted 127.0.0.1:50143
+16972:M 03 May 2025 23:09:27.881 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:27.881 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 492976).
+16972:M 03 May 2025 23:09:27.881 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:27.881 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:27.882 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:27.884 * Background RDB transfer started by pid 17056 to pipe through parent process
+17056:C 03 May 2025 23:09:27.994 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:27.995 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:27.996 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:27.996 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:27.996 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:28.023 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.024 - Accepted 127.0.0.1:50144
+16972:M 03 May 2025 23:09:28.026 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.026 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 657301.
+16972:M 03 May 2025 23:09:28.035 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.035 - Accepted 127.0.0.1:50145
+16972:M 03 May 2025 23:09:28.036 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.036 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 657301).
+16972:M 03 May 2025 23:09:28.036 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:28.039 * Background RDB transfer started by pid 17059 to pipe through parent process
+16972:M 03 May 2025 23:09:28.072 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.072 * Diskless rdb transfer, last replica dropped, killing fork child.
+17059:signal-handler (1746281368) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:28.073 - Accepted 127.0.0.1:50146
+16972:M 03 May 2025 23:09:28.073 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.073 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 657301).
+16972:M 03 May 2025 23:09:28.073 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:28.075 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:28.075 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:28.078 * Background RDB transfer started by pid 17062 to pipe through parent process
+17062:C 03 May 2025 23:09:28.186 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:28.186 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:28.188 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:28.188 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:28.188 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:28.238 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.238 - Accepted 127.0.0.1:50147
+16972:M 03 May 2025 23:09:28.238 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.238 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 821626.
+16972:M 03 May 2025 23:09:28.248 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.248 - Accepted 127.0.0.1:50148
+16972:M 03 May 2025 23:09:28.249 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.249 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 821626).
+16972:M 03 May 2025 23:09:28.249 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:28.252 * Background RDB transfer started by pid 17080 to pipe through parent process
+16972:M 03 May 2025 23:09:28.277 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.277 * Diskless rdb transfer, last replica dropped, killing fork child.
+17080:signal-handler (1746281368) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:28.277 - Accepted 127.0.0.1:50149
+16972:M 03 May 2025 23:09:28.278 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.278 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 821626).
+16972:M 03 May 2025 23:09:28.278 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:28.280 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:28.280 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:28.285 * Background RDB transfer started by pid 17083 to pipe through parent process
+17083:C 03 May 2025 23:09:28.393 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:28.394 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:28.397 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:28.397 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:28.397 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:28.412 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.413 - Accepted 127.0.0.1:50150
+16972:M 03 May 2025 23:09:28.413 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.413 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 985951.
+16972:M 03 May 2025 23:09:28.423 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.423 - Accepted 127.0.0.1:50151
+16972:M 03 May 2025 23:09:28.424 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.424 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 985951).
+16972:M 03 May 2025 23:09:28.424 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:28.427 * Background RDB transfer started by pid 17086 to pipe through parent process
+16972:M 03 May 2025 23:09:28.466 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.466 * Diskless rdb transfer, last replica dropped, killing fork child.
+17086:signal-handler (1746281368) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:28.467 - Accepted 127.0.0.1:50152
+16972:M 03 May 2025 23:09:28.467 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.467 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 985951).
+16972:M 03 May 2025 23:09:28.467 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:28.468 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:28.468 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:28.471 * Background RDB transfer started by pid 17089 to pipe through parent process
+17089:C 03 May 2025 23:09:28.579 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:28.579 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:28.582 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:28.582 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:28.582 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:28.621 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.621 - Accepted 127.0.0.1:50153
+16972:M 03 May 2025 23:09:28.622 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.622 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 1150276.
+16972:M 03 May 2025 23:09:28.632 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.633 - Accepted 127.0.0.1:50154
+16972:M 03 May 2025 23:09:28.633 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.633 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 1150276).
+16972:M 03 May 2025 23:09:28.633 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:28.636 * Background RDB transfer started by pid 17092 to pipe through parent process
+16972:M 03 May 2025 23:09:28.687 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.687 * Diskless rdb transfer, last replica dropped, killing fork child.
+17092:signal-handler (1746281368) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:28.687 - Accepted 127.0.0.1:50155
+16972:M 03 May 2025 23:09:28.688 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.688 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 1150276).
+16972:M 03 May 2025 23:09:28.688 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:28.688 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:28.688 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:28.691 * Background RDB transfer started by pid 17095 to pipe through parent process
+17095:C 03 May 2025 23:09:28.803 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:28.803 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:28.806 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:28.806 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:28.806 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:28.846 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.847 - Accepted 127.0.0.1:50156
+16972:M 03 May 2025 23:09:28.847 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.847 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 1314601.
+16972:M 03 May 2025 23:09:28.859 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.859 - Accepted 127.0.0.1:50157
+16972:M 03 May 2025 23:09:28.859 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.859 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 1314601).
+16972:M 03 May 2025 23:09:28.859 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:28.862 * Background RDB transfer started by pid 17098 to pipe through parent process
+16972:M 03 May 2025 23:09:28.893 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:28.893 * Diskless rdb transfer, last replica dropped, killing fork child.
+17098:signal-handler (1746281368) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:28.894 - Accepted 127.0.0.1:50158
+16972:M 03 May 2025 23:09:28.894 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:28.894 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 1314601).
+16972:M 03 May 2025 23:09:28.894 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:28.895 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:28.895 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:28.898 * Background RDB transfer started by pid 17101 to pipe through parent process
+17101:C 03 May 2025 23:09:29.008 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:29.008 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:29.011 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:29.011 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:29.011 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:29.048 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.048 - Accepted 127.0.0.1:50159
+16972:M 03 May 2025 23:09:29.049 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.049 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 1478926.
+16972:M 03 May 2025 23:09:29.060 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.060 - Accepted 127.0.0.1:50160
+16972:M 03 May 2025 23:09:29.061 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.061 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 1478926).
+16972:M 03 May 2025 23:09:29.061 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:29.064 * Background RDB transfer started by pid 17104 to pipe through parent process
+16972:M 03 May 2025 23:09:29.111 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.111 * Diskless rdb transfer, last replica dropped, killing fork child.
+17104:signal-handler (1746281369) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:29.111 - Accepted 127.0.0.1:50161
+16972:M 03 May 2025 23:09:29.112 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.112 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 1478926).
+16972:M 03 May 2025 23:09:29.112 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:29.114 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:29.114 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:29.117 * Background RDB transfer started by pid 17107 to pipe through parent process
+17107:C 03 May 2025 23:09:29.226 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:29.226 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:29.227 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:29.228 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:29.228 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:29.259 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.260 - Accepted 127.0.0.1:50162
+16972:M 03 May 2025 23:09:29.260 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.260 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 1643251.
+16972:M 03 May 2025 23:09:29.271 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.272 - Accepted 127.0.0.1:50163
+16972:M 03 May 2025 23:09:29.272 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.272 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 1643251).
+16972:M 03 May 2025 23:09:29.272 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:29.275 * Background RDB transfer started by pid 17110 to pipe through parent process
+16972:M 03 May 2025 23:09:29.288 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.288 * Diskless rdb transfer, last replica dropped, killing fork child.
+17110:signal-handler (1746281369) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:29.289 - Accepted 127.0.0.1:50164
+16972:M 03 May 2025 23:09:29.289 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.289 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 1643251).
+16972:M 03 May 2025 23:09:29.289 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:29.290 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:29.290 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:29.293 * Background RDB transfer started by pid 17113 to pipe through parent process
+17113:C 03 May 2025 23:09:29.402 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:29.402 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:29.405 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:29.405 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:29.405 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:29.455 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.455 - Accepted 127.0.0.1:50165
+16972:M 03 May 2025 23:09:29.456 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.456 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 1807576.
+16972:M 03 May 2025 23:09:29.467 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.468 - Accepted 127.0.0.1:50166
+16972:M 03 May 2025 23:09:29.468 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.468 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 1807576).
+16972:M 03 May 2025 23:09:29.468 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:29.471 * Background RDB transfer started by pid 17116 to pipe through parent process
+16972:M 03 May 2025 23:09:29.506 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.506 * Diskless rdb transfer, last replica dropped, killing fork child.
+17116:signal-handler (1746281369) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:29.507 - Accepted 127.0.0.1:50167
+16972:M 03 May 2025 23:09:29.507 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.507 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 1807576).
+16972:M 03 May 2025 23:09:29.507 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:29.508 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:29.508 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:29.511 * Background RDB transfer started by pid 17119 to pipe through parent process
+17119:C 03 May 2025 23:09:29.613 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:29.613 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:29.616 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:29.616 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:29.616 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:29.666 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.667 - Accepted 127.0.0.1:50168
+16972:M 03 May 2025 23:09:29.667 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.667 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 1971901.
+16972:M 03 May 2025 23:09:29.676 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.676 - Accepted 127.0.0.1:50169
+16972:M 03 May 2025 23:09:29.676 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.676 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 1971901).
+16972:M 03 May 2025 23:09:29.676 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:29.679 * Background RDB transfer started by pid 17146 to pipe through parent process
+16972:M 03 May 2025 23:09:29.722 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.722 * Diskless rdb transfer, last replica dropped, killing fork child.
+17146:signal-handler (1746281369) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:29.722 - Accepted 127.0.0.1:50170
+16972:M 03 May 2025 23:09:29.722 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.722 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 1971901).
+16972:M 03 May 2025 23:09:29.722 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:29.725 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:29.725 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:29.727 * Background RDB transfer started by pid 17159 to pipe through parent process
+17159:C 03 May 2025 23:09:29.810 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:29.810 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:29.812 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:29.812 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:29.812 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:29.846 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.847 - Accepted 127.0.0.1:50175
+16972:M 03 May 2025 23:09:29.847 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.847 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 2136226.
+16972:M 03 May 2025 23:09:29.858 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.858 - Accepted 127.0.0.1:50176
+16972:M 03 May 2025 23:09:29.858 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.858 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 2136226).
+16972:M 03 May 2025 23:09:29.858 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:29.861 * Background RDB transfer started by pid 17185 to pipe through parent process
+16972:M 03 May 2025 23:09:29.909 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:29.909 * Diskless rdb transfer, last replica dropped, killing fork child.
+17185:signal-handler (1746281369) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:29.909 - Accepted 127.0.0.1:50177
+16972:M 03 May 2025 23:09:29.909 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:29.909 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 2136226).
+16972:M 03 May 2025 23:09:29.909 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:29.912 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:29.912 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:29.914 * Background RDB transfer started by pid 17188 to pipe through parent process
+17188:C 03 May 2025 23:09:30.009 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:30.010 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:30.012 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:30.012 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:30.012 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:30.023 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.023 - Accepted 127.0.0.1:50186
+16972:M 03 May 2025 23:09:30.024 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.024 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 2300551.
+16972:M 03 May 2025 23:09:30.034 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.035 - Accepted 127.0.0.1:50187
+16972:M 03 May 2025 23:09:30.035 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.035 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 2300551).
+16972:M 03 May 2025 23:09:30.035 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:30.038 * Background RDB transfer started by pid 17211 to pipe through parent process
+16972:M 03 May 2025 23:09:30.047 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.047 * Diskless rdb transfer, last replica dropped, killing fork child.
+17211:signal-handler (1746281370) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:30.048 - Accepted 127.0.0.1:50188
+16972:M 03 May 2025 23:09:30.048 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.048 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 2300551).
+16972:M 03 May 2025 23:09:30.048 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:30.048 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:30.048 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:30.051 * Background RDB transfer started by pid 17214 to pipe through parent process
+17214:C 03 May 2025 23:09:30.158 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:30.159 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:30.162 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:30.162 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:30.162 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:30.199 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.200 - Accepted 127.0.0.1:50194
+16972:M 03 May 2025 23:09:30.200 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.200 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 2464876.
+16972:M 03 May 2025 23:09:30.213 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.213 - Accepted 127.0.0.1:50195
+16972:M 03 May 2025 23:09:30.214 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.214 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 2464876).
+16972:M 03 May 2025 23:09:30.214 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:30.217 * Background RDB transfer started by pid 17225 to pipe through parent process
+16972:M 03 May 2025 23:09:30.263 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.263 * Diskless rdb transfer, last replica dropped, killing fork child.
+17225:signal-handler (1746281370) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:30.264 - Accepted 127.0.0.1:50196
+16972:M 03 May 2025 23:09:30.265 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.265 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 2464876).
+16972:M 03 May 2025 23:09:30.265 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:30.265 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:30.265 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:30.267 * Background RDB transfer started by pid 17228 to pipe through parent process
+17228:C 03 May 2025 23:09:30.389 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:30.389 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:30.391 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:30.391 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:30.391 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:30.439 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.440 - Accepted 127.0.0.1:50199
+16972:M 03 May 2025 23:09:30.440 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.440 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 2629201.
+16972:M 03 May 2025 23:09:30.449 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.449 - Accepted 127.0.0.1:50200
+16972:M 03 May 2025 23:09:30.449 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.449 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 2629201).
+16972:M 03 May 2025 23:09:30.449 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:30.452 * Background RDB transfer started by pid 17236 to pipe through parent process
+16972:M 03 May 2025 23:09:30.465 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.466 * Diskless rdb transfer, last replica dropped, killing fork child.
+17236:signal-handler (1746281370) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:30.466 - Accepted 127.0.0.1:50201
+16972:M 03 May 2025 23:09:30.466 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.466 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 2629201).
+16972:M 03 May 2025 23:09:30.466 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:30.467 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:30.467 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:30.470 * Background RDB transfer started by pid 17239 to pipe through parent process
+17239:C 03 May 2025 23:09:30.566 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:30.567 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:30.570 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:30.570 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:30.570 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:30.586 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.586 - Accepted 127.0.0.1:50202
+16972:M 03 May 2025 23:09:30.586 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.586 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 2793526.
+16972:M 03 May 2025 23:09:30.596 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.596 - Accepted 127.0.0.1:50203
+16972:M 03 May 2025 23:09:30.596 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.596 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 2793526).
+16972:M 03 May 2025 23:09:30.596 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:30.599 * Background RDB transfer started by pid 17242 to pipe through parent process
+16972:M 03 May 2025 23:09:30.651 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.651 * Diskless rdb transfer, last replica dropped, killing fork child.
+17242:signal-handler (1746281370) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:30.652 - Accepted 127.0.0.1:50204
+16972:M 03 May 2025 23:09:30.652 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.652 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 2793526).
+16972:M 03 May 2025 23:09:30.652 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:30.653 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:30.653 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:30.655 * Background RDB transfer started by pid 17245 to pipe through parent process
+17245:C 03 May 2025 23:09:30.760 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:30.760 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:30.764 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:30.764 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:30.764 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:30.784 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.784 - Accepted 127.0.0.1:50205
+16972:M 03 May 2025 23:09:30.784 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.785 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 2957851.
+16972:M 03 May 2025 23:09:30.794 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.794 - Accepted 127.0.0.1:50206
+16972:M 03 May 2025 23:09:30.795 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.795 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 2957851).
+16972:M 03 May 2025 23:09:30.795 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:30.797 * Background RDB transfer started by pid 17255 to pipe through parent process
+16972:M 03 May 2025 23:09:30.807 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.807 * Diskless rdb transfer, last replica dropped, killing fork child.
+17255:signal-handler (1746281370) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:30.808 - Accepted 127.0.0.1:50207
+16972:M 03 May 2025 23:09:30.809 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:30.809 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.809 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 2957851).
+16972:M 03 May 2025 23:09:30.809 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:30.811 * Background RDB transfer started by pid 17258 to pipe through parent process
+17258:C 03 May 2025 23:09:30.897 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:30.898 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:30.900 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:30.900 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:30.900 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:30.924 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.924 - Accepted 127.0.0.1:50208
+16972:M 03 May 2025 23:09:30.924 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.924 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 3122176.
+16972:M 03 May 2025 23:09:30.933 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.933 - Accepted 127.0.0.1:50209
+16972:M 03 May 2025 23:09:30.933 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.934 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 3122176).
+16972:M 03 May 2025 23:09:30.934 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:30.936 * Background RDB transfer started by pid 17261 to pipe through parent process
+16972:M 03 May 2025 23:09:30.945 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:30.945 * Diskless rdb transfer, last replica dropped, killing fork child.
+17261:signal-handler (1746281370) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:30.947 - Accepted 127.0.0.1:50210
+16972:M 03 May 2025 23:09:30.947 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:30.947 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:30.947 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 3122176).
+16972:M 03 May 2025 23:09:30.947 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:30.949 * Background RDB transfer started by pid 17264 to pipe through parent process
+17264:C 03 May 2025 23:09:31.045 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:31.045 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:31.046 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:31.046 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:31.046 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:31.079 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.079 - Accepted 127.0.0.1:50211
+16972:M 03 May 2025 23:09:31.080 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.080 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 3286501.
+16972:M 03 May 2025 23:09:31.089 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.090 - Accepted 127.0.0.1:50212
+16972:M 03 May 2025 23:09:31.090 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.090 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 3286501).
+16972:M 03 May 2025 23:09:31.090 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:31.092 * Background RDB transfer started by pid 17267 to pipe through parent process
+16972:M 03 May 2025 23:09:31.102 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.102 * Diskless rdb transfer, last replica dropped, killing fork child.
+17267:signal-handler (1746281371) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:31.103 - Accepted 127.0.0.1:50213
+16972:M 03 May 2025 23:09:31.103 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:31.103 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.103 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 3286501).
+16972:M 03 May 2025 23:09:31.103 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:31.106 * Background RDB transfer started by pid 17270 to pipe through parent process
+17270:C 03 May 2025 23:09:31.201 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:31.202 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:31.204 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:31.204 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:31.204 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:31.218 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.218 - Accepted 127.0.0.1:50214
+16972:M 03 May 2025 23:09:31.219 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.219 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 3450826.
+16972:M 03 May 2025 23:09:31.227 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.227 - Accepted 127.0.0.1:50215
+16972:M 03 May 2025 23:09:31.227 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.227 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 3450826).
+16972:M 03 May 2025 23:09:31.227 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:31.230 * Background RDB transfer started by pid 17273 to pipe through parent process
+16972:M 03 May 2025 23:09:31.272 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.272 * Diskless rdb transfer, last replica dropped, killing fork child.
+17273:signal-handler (1746281371) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:31.273 - Accepted 127.0.0.1:50216
+16972:M 03 May 2025 23:09:31.273 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.273 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 3450826).
+16972:M 03 May 2025 23:09:31.273 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:31.274 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:31.274 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:31.276 * Background RDB transfer started by pid 17276 to pipe through parent process
+17276:C 03 May 2025 23:09:31.372 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:31.372 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:31.375 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:31.375 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:31.375 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:31.393 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.393 - Accepted 127.0.0.1:50217
+16972:M 03 May 2025 23:09:31.393 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.394 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 3615151.
+16972:M 03 May 2025 23:09:31.402 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.402 - Accepted 127.0.0.1:50218
+16972:M 03 May 2025 23:09:31.403 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.403 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 3615151).
+16972:M 03 May 2025 23:09:31.403 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:31.405 * Background RDB transfer started by pid 17279 to pipe through parent process
+16972:M 03 May 2025 23:09:31.464 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.464 * Diskless rdb transfer, last replica dropped, killing fork child.
+17279:signal-handler (1746281371) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:31.465 - Accepted 127.0.0.1:50219
+16972:M 03 May 2025 23:09:31.465 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.465 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 3615151).
+16972:M 03 May 2025 23:09:31.465 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:31.466 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:31.466 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:31.469 * Background RDB transfer started by pid 17285 to pipe through parent process
+17285:C 03 May 2025 23:09:31.551 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:31.551 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:31.552 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:31.552 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:31.552 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:31.604 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.604 - Accepted 127.0.0.1:50220
+16972:M 03 May 2025 23:09:31.605 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.605 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 3779476.
+16972:M 03 May 2025 23:09:31.615 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.615 - Accepted 127.0.0.1:50221
+16972:M 03 May 2025 23:09:31.616 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.616 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 3779476).
+16972:M 03 May 2025 23:09:31.616 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:31.619 * Background RDB transfer started by pid 17300 to pipe through parent process
+16972:M 03 May 2025 23:09:31.631 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.632 * Diskless rdb transfer, last replica dropped, killing fork child.
+17300:signal-handler (1746281371) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:31.632 - Accepted 127.0.0.1:50222
+16972:M 03 May 2025 23:09:31.632 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.632 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 3779476).
+16972:M 03 May 2025 23:09:31.632 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:31.634 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:31.634 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:31.636 * Background RDB transfer started by pid 17303 to pipe through parent process
+16972:M 03 May 2025 23:09:31.685 - DB 9: 95 keys (30 volatile) in 112 slots HT.
+17303:C 03 May 2025 23:09:31.716 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:31.717 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:31.718 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:31.718 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:31.718 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:31.735 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.735 - Accepted 127.0.0.1:50223
+16972:M 03 May 2025 23:09:31.736 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.736 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 3943801.
+16972:M 03 May 2025 23:09:31.745 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.745 - Accepted 127.0.0.1:50224
+16972:M 03 May 2025 23:09:31.745 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.745 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 3943801).
+16972:M 03 May 2025 23:09:31.745 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:31.748 * Background RDB transfer started by pid 17306 to pipe through parent process
+16972:M 03 May 2025 23:09:31.773 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.773 * Diskless rdb transfer, last replica dropped, killing fork child.
+17306:signal-handler (1746281371) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:31.773 - Accepted 127.0.0.1:50225
+16972:M 03 May 2025 23:09:31.773 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.773 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 3943801).
+16972:M 03 May 2025 23:09:31.773 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:31.791 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:31.791 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:31.794 * Background RDB transfer started by pid 17310 to pipe through parent process
+17310:C 03 May 2025 23:09:31.866 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:31.867 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:31.869 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:31.869 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:31.869 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:31.896 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.897 - Accepted 127.0.0.1:50226
+16972:M 03 May 2025 23:09:31.897 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.897 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 4108126.
+16972:M 03 May 2025 23:09:31.906 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.906 - Accepted 127.0.0.1:50227
+16972:M 03 May 2025 23:09:31.906 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.906 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 4108126).
+16972:M 03 May 2025 23:09:31.906 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:31.909 * Background RDB transfer started by pid 17323 to pipe through parent process
+16972:M 03 May 2025 23:09:31.946 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:31.946 * Diskless rdb transfer, last replica dropped, killing fork child.
+17323:signal-handler (1746281371) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:31.947 - Accepted 127.0.0.1:50228
+16972:M 03 May 2025 23:09:31.947 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:31.947 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 4108126).
+16972:M 03 May 2025 23:09:31.947 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:31.947 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:31.947 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:31.950 * Background RDB transfer started by pid 17331 to pipe through parent process
+17331:C 03 May 2025 23:09:32.031 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:32.031 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:32.034 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:32.034 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:32.034 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:32.087 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.088 - Accepted 127.0.0.1:50229
+16972:M 03 May 2025 23:09:32.088 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.088 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 4272451.
+16972:M 03 May 2025 23:09:32.106 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.106 - Accepted 127.0.0.1:50230
+16972:M 03 May 2025 23:09:32.106 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.106 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 4272451).
+16972:M 03 May 2025 23:09:32.106 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:32.109 * Background RDB transfer started by pid 17334 to pipe through parent process
+16972:M 03 May 2025 23:09:32.178 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.178 * Diskless rdb transfer, last replica dropped, killing fork child.
+17334:signal-handler (1746281372) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:32.178 - Accepted 127.0.0.1:50231
+16972:M 03 May 2025 23:09:32.179 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.179 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 4272451).
+16972:M 03 May 2025 23:09:32.179 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:32.180 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:32.180 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:32.183 * Background RDB transfer started by pid 17337 to pipe through parent process
+17337:C 03 May 2025 23:09:32.276 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:32.276 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:32.280 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:32.280 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:32.280 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:32.290 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.290 - Accepted 127.0.0.1:50232
+16972:M 03 May 2025 23:09:32.291 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.291 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 4436776.
+16972:M 03 May 2025 23:09:32.299 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.299 - Accepted 127.0.0.1:50233
+16972:M 03 May 2025 23:09:32.299 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.299 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 4436776).
+16972:M 03 May 2025 23:09:32.299 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:32.302 * Background RDB transfer started by pid 17340 to pipe through parent process
+16972:M 03 May 2025 23:09:32.343 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.343 * Diskless rdb transfer, last replica dropped, killing fork child.
+17340:signal-handler (1746281372) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:32.344 - Accepted 127.0.0.1:50234
+16972:M 03 May 2025 23:09:32.344 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.344 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 4436776).
+16972:M 03 May 2025 23:09:32.344 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:32.346 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:32.346 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:32.348 * Background RDB transfer started by pid 17343 to pipe through parent process
+17343:C 03 May 2025 23:09:32.437 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:32.437 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:32.439 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:32.439 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:32.439 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:32.461 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.461 - Accepted 127.0.0.1:50235
+16972:M 03 May 2025 23:09:32.461 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.461 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 4601101.
+16972:M 03 May 2025 23:09:32.471 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.471 - Accepted 127.0.0.1:50236
+16972:M 03 May 2025 23:09:32.471 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.471 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 4601101).
+16972:M 03 May 2025 23:09:32.471 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:32.474 * Background RDB transfer started by pid 17346 to pipe through parent process
+16972:M 03 May 2025 23:09:32.481 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.481 * Diskless rdb transfer, last replica dropped, killing fork child.
+17346:signal-handler (1746281372) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:32.483 - Accepted 127.0.0.1:50237
+16972:M 03 May 2025 23:09:32.483 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:32.483 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.483 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 4601101).
+16972:M 03 May 2025 23:09:32.483 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:32.485 * Background RDB transfer started by pid 17349 to pipe through parent process
+17349:C 03 May 2025 23:09:32.574 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:32.574 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:32.577 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:32.577 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:32.577 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:32.621 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.621 - Accepted 127.0.0.1:50238
+16972:M 03 May 2025 23:09:32.621 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.621 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 4765426.
+16972:M 03 May 2025 23:09:32.629 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.630 - Accepted 127.0.0.1:50239
+16972:M 03 May 2025 23:09:32.630 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.630 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 4765426).
+16972:M 03 May 2025 23:09:32.630 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:32.633 * Background RDB transfer started by pid 17365 to pipe through parent process
+16972:M 03 May 2025 23:09:32.670 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.670 * Diskless rdb transfer, last replica dropped, killing fork child.
+17365:signal-handler (1746281372) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:32.670 - Accepted 127.0.0.1:50240
+16972:M 03 May 2025 23:09:32.671 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.671 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 4765426).
+16972:M 03 May 2025 23:09:32.671 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:32.673 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:32.673 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:32.676 * Background RDB transfer started by pid 17370 to pipe through parent process
+17370:C 03 May 2025 23:09:32.756 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:32.757 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:32.760 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:32.760 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:32.760 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:32.804 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.805 - Accepted 127.0.0.1:50241
+16972:M 03 May 2025 23:09:32.805 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.805 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 4929751.
+16972:M 03 May 2025 23:09:32.814 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.814 - Accepted 127.0.0.1:50242
+16972:M 03 May 2025 23:09:32.814 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.814 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 4929751).
+16972:M 03 May 2025 23:09:32.814 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:32.817 * Background RDB transfer started by pid 17373 to pipe through parent process
+16972:M 03 May 2025 23:09:32.885 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.885 * Diskless rdb transfer, last replica dropped, killing fork child.
+17373:signal-handler (1746281372) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:32.885 - Accepted 127.0.0.1:50243
+16972:M 03 May 2025 23:09:32.886 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.886 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 4929751).
+16972:M 03 May 2025 23:09:32.886 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:32.888 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:32.888 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:32.890 * Background RDB transfer started by pid 17379 to pipe through parent process
+17379:C 03 May 2025 23:09:32.966 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:32.966 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:32.967 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:32.967 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:32.967 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:32.977 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.978 - Accepted 127.0.0.1:50244
+16972:M 03 May 2025 23:09:32.978 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.978 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 5094076.
+16972:M 03 May 2025 23:09:32.987 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:32.987 - Accepted 127.0.0.1:50245
+16972:M 03 May 2025 23:09:32.988 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:32.988 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 5094076).
+16972:M 03 May 2025 23:09:32.988 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:32.990 * Background RDB transfer started by pid 17395 to pipe through parent process
+16972:M 03 May 2025 23:09:33.031 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.031 * Diskless rdb transfer, last replica dropped, killing fork child.
+17395:signal-handler (1746281373) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:33.032 - Accepted 127.0.0.1:50246
+16972:M 03 May 2025 23:09:33.032 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.032 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 5094076).
+16972:M 03 May 2025 23:09:33.032 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:33.034 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:33.034 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:33.036 * Background RDB transfer started by pid 17398 to pipe through parent process
+17398:C 03 May 2025 23:09:33.111 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:33.111 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:33.114 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:33.114 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:33.114 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:33.154 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.154 - Accepted 127.0.0.1:50249
+16972:M 03 May 2025 23:09:33.154 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.154 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 5258401.
+16972:M 03 May 2025 23:09:33.163 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.163 - Accepted 127.0.0.1:50250
+16972:M 03 May 2025 23:09:33.163 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.163 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 5258401).
+16972:M 03 May 2025 23:09:33.163 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:33.166 * Background RDB transfer started by pid 17412 to pipe through parent process
+16972:M 03 May 2025 23:09:33.196 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.196 * Diskless rdb transfer, last replica dropped, killing fork child.
+17412:signal-handler (1746281373) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:33.196 - Accepted 127.0.0.1:50251
+16972:M 03 May 2025 23:09:33.197 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.197 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 5258401).
+16972:M 03 May 2025 23:09:33.197 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:33.197 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:33.197 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:33.199 * Background RDB transfer started by pid 17415 to pipe through parent process
+17415:C 03 May 2025 23:09:33.279 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:33.279 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:33.283 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:33.283 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:33.283 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:33.334 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.335 - Accepted 127.0.0.1:50258
+16972:M 03 May 2025 23:09:33.335 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.335 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 5422726.
+16972:M 03 May 2025 23:09:33.346 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.346 - Accepted 127.0.0.1:50259
+16972:M 03 May 2025 23:09:33.347 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.347 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 5422726).
+16972:M 03 May 2025 23:09:33.347 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:33.349 * Background RDB transfer started by pid 17470 to pipe through parent process
+16972:M 03 May 2025 23:09:33.359 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.359 * Diskless rdb transfer, last replica dropped, killing fork child.
+17470:signal-handler (1746281373) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:33.359 - Accepted 127.0.0.1:50260
+16972:M 03 May 2025 23:09:33.360 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.360 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 5422726).
+16972:M 03 May 2025 23:09:33.360 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:33.360 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:33.360 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:33.363 * Background RDB transfer started by pid 17473 to pipe through parent process
+17473:C 03 May 2025 23:09:33.457 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:33.457 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:33.460 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:33.460 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:33.460 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:33.512 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.513 - Accepted 127.0.0.1:50261
+16972:M 03 May 2025 23:09:33.513 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.513 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 5587051.
+16972:M 03 May 2025 23:09:33.524 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.524 - Accepted 127.0.0.1:50262
+16972:M 03 May 2025 23:09:33.525 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.525 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 5587051).
+16972:M 03 May 2025 23:09:33.525 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:33.527 * Background RDB transfer started by pid 17499 to pipe through parent process
+16972:M 03 May 2025 23:09:33.555 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.555 * Diskless rdb transfer, last replica dropped, killing fork child.
+17499:signal-handler (1746281373) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:33.556 - Accepted 127.0.0.1:50263
+16972:M 03 May 2025 23:09:33.556 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.556 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 5587051).
+16972:M 03 May 2025 23:09:33.556 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:33.557 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:33.557 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:33.559 * Background RDB transfer started by pid 17504 to pipe through parent process
+17504:C 03 May 2025 23:09:33.651 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:33.651 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:33.654 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:33.654 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:33.654 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:33.662 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.662 - Accepted 127.0.0.1:50264
+16972:M 03 May 2025 23:09:33.663 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.663 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 5751376.
+16972:M 03 May 2025 23:09:33.673 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.673 - Accepted 127.0.0.1:50265
+16972:M 03 May 2025 23:09:33.674 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.674 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 5751376).
+16972:M 03 May 2025 23:09:33.674 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:33.676 * Background RDB transfer started by pid 17527 to pipe through parent process
+16972:M 03 May 2025 23:09:33.721 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.721 * Diskless rdb transfer, last replica dropped, killing fork child.
+17527:signal-handler (1746281373) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:33.721 - Accepted 127.0.0.1:50266
+16972:M 03 May 2025 23:09:33.722 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.722 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 5751376).
+16972:M 03 May 2025 23:09:33.722 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:33.724 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:33.724 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:33.727 * Background RDB transfer started by pid 17546 to pipe through parent process
+17546:C 03 May 2025 23:09:33.816 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:33.816 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:33.820 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:33.820 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:33.820 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:33.874 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.874 - Accepted 127.0.0.1:50269
+16972:M 03 May 2025 23:09:33.875 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.875 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 5915701.
+16972:M 03 May 2025 23:09:33.886 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.886 - Accepted 127.0.0.1:50270
+16972:M 03 May 2025 23:09:33.886 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.886 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 5915701).
+16972:M 03 May 2025 23:09:33.886 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:33.889 * Background RDB transfer started by pid 17569 to pipe through parent process
+16972:M 03 May 2025 23:09:33.913 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:33.913 * Diskless rdb transfer, last replica dropped, killing fork child.
+17569:signal-handler (1746281373) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:33.914 - Accepted 127.0.0.1:50271
+16972:M 03 May 2025 23:09:33.914 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:33.914 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:33.914 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 5915701).
+16972:M 03 May 2025 23:09:33.914 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:33.917 * Background RDB transfer started by pid 17572 to pipe through parent process
+17572:C 03 May 2025 23:09:34.007 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:34.008 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:34.010 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:34.011 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:34.011 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:34.044 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.045 - Accepted 127.0.0.1:50272
+16972:M 03 May 2025 23:09:34.045 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.045 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 6080026.
+16972:M 03 May 2025 23:09:34.056 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.056 - Accepted 127.0.0.1:50273
+16972:M 03 May 2025 23:09:34.056 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.056 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 6080026).
+16972:M 03 May 2025 23:09:34.056 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:34.059 * Background RDB transfer started by pid 17581 to pipe through parent process
+16972:M 03 May 2025 23:09:34.087 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.087 * Diskless rdb transfer, last replica dropped, killing fork child.
+17581:signal-handler (1746281374) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:34.088 - Accepted 127.0.0.1:50275
+16972:M 03 May 2025 23:09:34.088 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.088 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 6080026).
+16972:M 03 May 2025 23:09:34.088 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:34.091 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:34.091 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:34.093 * Background RDB transfer started by pid 17590 to pipe through parent process
+17590:C 03 May 2025 23:09:34.184 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:34.184 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:34.187 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:34.187 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:34.187 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:34.225 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.225 - Accepted 127.0.0.1:50280
+16972:M 03 May 2025 23:09:34.226 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.226 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 6244351.
+16972:M 03 May 2025 23:09:34.238 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.239 - Accepted 127.0.0.1:50281
+16972:M 03 May 2025 23:09:34.239 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.239 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 6244351).
+16972:M 03 May 2025 23:09:34.239 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:34.242 * Background RDB transfer started by pid 17594 to pipe through parent process
+16972:M 03 May 2025 23:09:34.271 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.271 * Diskless rdb transfer, last replica dropped, killing fork child.
+17594:signal-handler (1746281374) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:34.272 - Accepted 127.0.0.1:50282
+16972:M 03 May 2025 23:09:34.273 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.273 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 6244351).
+16972:M 03 May 2025 23:09:34.273 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:34.274 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:34.274 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:34.277 * Background RDB transfer started by pid 17597 to pipe through parent process
+17597:C 03 May 2025 23:09:34.378 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:34.379 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:34.380 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:34.380 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:34.380 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:34.434 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.435 - Accepted 127.0.0.1:50283
+16972:M 03 May 2025 23:09:34.438 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.438 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 6408676.
+16972:M 03 May 2025 23:09:34.452 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.452 - Accepted 127.0.0.1:50284
+16972:M 03 May 2025 23:09:34.452 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.452 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 6408676).
+16972:M 03 May 2025 23:09:34.452 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:34.455 * Background RDB transfer started by pid 17600 to pipe through parent process
+16972:M 03 May 2025 23:09:34.504 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.504 * Diskless rdb transfer, last replica dropped, killing fork child.
+17600:signal-handler (1746281374) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:34.505 - Accepted 127.0.0.1:50285
+16972:M 03 May 2025 23:09:34.505 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.505 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 6408676).
+16972:M 03 May 2025 23:09:34.505 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:34.507 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:34.507 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:34.510 * Background RDB transfer started by pid 17603 to pipe through parent process
+17603:C 03 May 2025 23:09:34.604 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:34.604 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:34.607 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:34.607 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:34.607 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:34.649 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.649 - Accepted 127.0.0.1:50286
+16972:M 03 May 2025 23:09:34.649 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.649 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 6573001.
+16972:M 03 May 2025 23:09:34.663 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.663 - Accepted 127.0.0.1:50287
+16972:M 03 May 2025 23:09:34.663 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.663 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 6573001).
+16972:M 03 May 2025 23:09:34.663 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:34.666 * Background RDB transfer started by pid 17606 to pipe through parent process
+16972:M 03 May 2025 23:09:34.676 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.676 * Diskless rdb transfer, last replica dropped, killing fork child.
+17606:signal-handler (1746281374) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:34.677 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:34.679 - Accepted 127.0.0.1:50288
+16972:M 03 May 2025 23:09:34.679 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.679 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 6573001).
+16972:M 03 May 2025 23:09:34.679 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:34.682 * Background RDB transfer started by pid 17609 to pipe through parent process
+17609:C 03 May 2025 23:09:34.776 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:34.776 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:34.778 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:34.778 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:34.778 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:34.830 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.830 - Accepted 127.0.0.1:50289
+16972:M 03 May 2025 23:09:34.830 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.830 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 6737326.
+16972:M 03 May 2025 23:09:34.844 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.844 - Accepted 127.0.0.1:50290
+16972:M 03 May 2025 23:09:34.845 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.845 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 6737326).
+16972:M 03 May 2025 23:09:34.845 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:34.848 * Background RDB transfer started by pid 17612 to pipe through parent process
+16972:M 03 May 2025 23:09:34.886 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:34.886 * Diskless rdb transfer, last replica dropped, killing fork child.
+17612:signal-handler (1746281374) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:34.887 - Accepted 127.0.0.1:50291
+16972:M 03 May 2025 23:09:34.887 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:34.887 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 6737326).
+16972:M 03 May 2025 23:09:34.887 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:34.887 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:34.887 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:34.890 * Background RDB transfer started by pid 17615 to pipe through parent process
+17615:C 03 May 2025 23:09:34.983 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:34.984 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:34.986 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:34.986 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:34.986 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:35.004 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.005 - Accepted 127.0.0.1:50292
+16972:M 03 May 2025 23:09:35.005 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.005 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 6901651.
+16972:M 03 May 2025 23:09:35.019 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.019 - Accepted 127.0.0.1:50293
+16972:M 03 May 2025 23:09:35.020 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.020 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 6901651).
+16972:M 03 May 2025 23:09:35.020 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:35.023 * Background RDB transfer started by pid 17619 to pipe through parent process
+16972:M 03 May 2025 23:09:35.035 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.035 * Diskless rdb transfer, last replica dropped, killing fork child.
+17619:signal-handler (1746281375) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:35.036 - Accepted 127.0.0.1:50294
+16972:M 03 May 2025 23:09:35.036 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.036 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 6901651).
+16972:M 03 May 2025 23:09:35.036 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:35.038 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:35.038 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:35.041 * Background RDB transfer started by pid 17622 to pipe through parent process
+17622:C 03 May 2025 23:09:35.145 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:35.145 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:35.148 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:35.148 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:35.148 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:35.171 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.171 - Accepted 127.0.0.1:50298
+16972:M 03 May 2025 23:09:35.171 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.171 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 7065976.
+16972:M 03 May 2025 23:09:35.185 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.185 - Accepted 127.0.0.1:50299
+16972:M 03 May 2025 23:09:35.186 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.186 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 7065976).
+16972:M 03 May 2025 23:09:35.186 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:35.188 * Background RDB transfer started by pid 17631 to pipe through parent process
+16972:M 03 May 2025 23:09:35.217 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.217 * Diskless rdb transfer, last replica dropped, killing fork child.
+17631:signal-handler (1746281375) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:35.218 - Accepted 127.0.0.1:50300
+16972:M 03 May 2025 23:09:35.218 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.218 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 7065976).
+16972:M 03 May 2025 23:09:35.218 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:35.218 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:35.218 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:35.221 * Background RDB transfer started by pid 17636 to pipe through parent process
+17636:C 03 May 2025 23:09:35.324 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:35.325 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:35.327 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:35.327 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:35.327 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:35.396 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.397 - Accepted 127.0.0.1:50301
+16972:M 03 May 2025 23:09:35.397 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.397 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 7230301.
+16972:M 03 May 2025 23:09:35.410 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.410 - Accepted 127.0.0.1:50302
+16972:M 03 May 2025 23:09:35.410 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.410 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 7230301).
+16972:M 03 May 2025 23:09:35.410 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:35.413 * Background RDB transfer started by pid 17643 to pipe through parent process
+16972:M 03 May 2025 23:09:35.458 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.458 * Diskless rdb transfer, last replica dropped, killing fork child.
+17643:signal-handler (1746281375) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:35.459 - Accepted 127.0.0.1:50303
+16972:M 03 May 2025 23:09:35.460 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.460 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 7230301).
+16972:M 03 May 2025 23:09:35.460 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:35.462 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:35.462 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:35.464 * Background RDB transfer started by pid 17647 to pipe through parent process
+17647:C 03 May 2025 23:09:35.566 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:35.566 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:35.569 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:35.569 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:35.569 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:35.580 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.580 - Accepted 127.0.0.1:50304
+16972:M 03 May 2025 23:09:35.581 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.581 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 7394626.
+16972:M 03 May 2025 23:09:35.595 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.595 - Accepted 127.0.0.1:50305
+16972:M 03 May 2025 23:09:35.595 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.595 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 7394626).
+16972:M 03 May 2025 23:09:35.595 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:35.598 * Background RDB transfer started by pid 17654 to pipe through parent process
+16972:M 03 May 2025 23:09:35.610 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.610 * Diskless rdb transfer, last replica dropped, killing fork child.
+17654:signal-handler (1746281375) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:35.611 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:35.612 - Accepted 127.0.0.1:50306
+16972:M 03 May 2025 23:09:35.612 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.612 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 7394626).
+16972:M 03 May 2025 23:09:35.612 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:35.615 * Background RDB transfer started by pid 17657 to pipe through parent process
+17657:C 03 May 2025 23:09:35.714 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:35.715 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:35.718 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:35.718 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:35.718 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:35.777 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.777 - Accepted 127.0.0.1:50307
+16972:M 03 May 2025 23:09:35.778 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.778 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 7558951.
+16972:M 03 May 2025 23:09:35.792 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.792 - Accepted 127.0.0.1:50308
+16972:M 03 May 2025 23:09:35.792 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.793 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 7558951).
+16972:M 03 May 2025 23:09:35.793 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:35.795 * Background RDB transfer started by pid 17661 to pipe through parent process
+16972:M 03 May 2025 23:09:35.841 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.842 * Diskless rdb transfer, last replica dropped, killing fork child.
+17661:signal-handler (1746281375) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:35.842 - Accepted 127.0.0.1:50309
+16972:M 03 May 2025 23:09:35.842 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.842 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 7558951).
+16972:M 03 May 2025 23:09:35.842 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:35.843 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:35.843 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:35.846 * Background RDB transfer started by pid 17664 to pipe through parent process
+17664:C 03 May 2025 23:09:35.946 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:35.946 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:35.948 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:35.948 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:35.948 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:35.968 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.968 - Accepted 127.0.0.1:50310
+16972:M 03 May 2025 23:09:35.968 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.968 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 7723276.
+16972:M 03 May 2025 23:09:35.983 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:35.984 - Accepted 127.0.0.1:50311
+16972:M 03 May 2025 23:09:35.984 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:35.984 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 7723276).
+16972:M 03 May 2025 23:09:35.984 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:35.987 * Background RDB transfer started by pid 17668 to pipe through parent process
+16972:M 03 May 2025 23:09:36.034 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:36.034 * Diskless rdb transfer, last replica dropped, killing fork child.
+17668:signal-handler (1746281376) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:36.035 - Accepted 127.0.0.1:50312
+16972:M 03 May 2025 23:09:36.035 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:36.036 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:36.036 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 7723276).
+16972:M 03 May 2025 23:09:36.036 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:36.039 * Background RDB transfer started by pid 17671 to pipe through parent process
+17671:C 03 May 2025 23:09:36.139 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:36.140 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:36.141 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:36.141 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:36.141 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:36.160 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:36.160 - Accepted 127.0.0.1:50313
+16972:M 03 May 2025 23:09:36.161 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:36.161 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 7887601.
+16972:M 03 May 2025 23:09:36.176 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:36.176 - Accepted 127.0.0.1:50314
+16972:M 03 May 2025 23:09:36.176 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:36.177 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 7887601).
+16972:M 03 May 2025 23:09:36.177 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:36.179 * Background RDB transfer started by pid 17674 to pipe through parent process
+16972:M 03 May 2025 23:09:36.208 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:36.208 * Diskless rdb transfer, last replica dropped, killing fork child.
+17674:signal-handler (1746281376) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:36.209 - Accepted 127.0.0.1:50315
+16972:M 03 May 2025 23:09:36.209 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:36.209 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 7887601).
+16972:M 03 May 2025 23:09:36.209 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:36.210 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:36.210 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:36.213 * Background RDB transfer started by pid 17677 to pipe through parent process
+17677:C 03 May 2025 23:09:36.310 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:36.310 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:36.313 * Background RDB transfer terminated with success
+16972:M 03 May 2025 23:09:36.313 * Streamed RDB transfer with replica 127.0.0.1:27677 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+16972:M 03 May 2025 23:09:36.313 * Synchronization with replica 127.0.0.1:27677 succeeded
+16972:M 03 May 2025 23:09:36.354 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:36.354 - Accepted 127.0.0.1:50316
+16972:M 03 May 2025 23:09:36.354 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:36.354 * Partial resynchronization request from 127.0.0.1:27677 accepted. Sending 0 bytes of backlog starting from offset 8051926.
+16972:M 03 May 2025 23:09:36.369 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:36.369 - Accepted 127.0.0.1:50317
+16972:M 03 May 2025 23:09:36.370 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:36.370 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 8051926).
+16972:M 03 May 2025 23:09:36.370 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:36.373 * Background RDB transfer started by pid 17681 to pipe through parent process
+16972:M 03 May 2025 23:09:36.373 - Client closed connection id=3 addr=127.0.0.1:50118 laddr=127.0.0.1:27678 fd=12 name= age=10 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=69 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=83650245 tot-net-out=20946 tot-cmds=1547
+16972:signal-handler (1746281376) Received SIGTERM scheduling shutdown...
+16972:M 03 May 2025 23:09:36.386 # Diskless rdb transfer, read error sending DB to replicas: Interrupted system call
+16972:M 03 May 2025 23:09:36.386 * Connection with replica 127.0.0.1:27677 lost.
+16972:M 03 May 2025 23:09:36.386 * Diskless rdb transfer, last replica dropped, killing fork child.
+17681:signal-handler (1746281376) Received SIGUSR1 in child, exiting now.
+16972:M 03 May 2025 23:09:36.387 - Accepted 127.0.0.1:50318
+16972:M 03 May 2025 23:09:36.387 * Replica 127.0.0.1:27677 asks for synchronization
+16972:M 03 May 2025 23:09:36.387 * Unable to partial resync with replica 127.0.0.1:27677 for lack of backlog (Replica request was: 8051926).
+16972:M 03 May 2025 23:09:36.387 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+16972:M 03 May 2025 23:09:36.387 * User requested shutdown...
+16972:M 03 May 2025 23:09:36.387 * Waiting for replicas before shutting down.
+16972:M 03 May 2025 23:09:36.387 # Background RDB transfer terminated by signal 30
+16972:M 03 May 2025 23:09:36.387 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+16972:M 03 May 2025 23:09:36.390 * Background RDB transfer started by pid 17685 to pipe through parent process
+17685:C 03 May 2025 23:09:36.488 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+16972:M 03 May 2025 23:09:36.488 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+16972:M 03 May 2025 23:09:36.490 * 1 of 1 replicas are in sync when shutting down.
+16972:M 03 May 2025 23:09:36.490 # There is a child saving an .rdb. Killing it!
+16972:M 03 May 2025 23:09:36.490 * Removing the pid file.
+16972:M 03 May 2025 23:09:36.490 * Removing the unix socket file.
+16972:M 03 May 2025 23:09:36.490 # Valkey is now ready to exit, bye bye...

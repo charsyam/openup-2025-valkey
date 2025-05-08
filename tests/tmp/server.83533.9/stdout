@@ -1,0 +1,61 @@
+### Starting server for test 
+85159:M 03 May 2025 23:03:57.071 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+85159:M 03 May 2025 23:03:57.071 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=85159, just started
+85159:M 03 May 2025 23:03:57.071 * Configuration loaded
+85159:M 03 May 2025 23:03:57.072 * Increased maximum number of open files to 10032 (it was originally set to 256).
+85159:M 03 May 2025 23:03:57.072 * monotonic clock: POSIX clock_gettime
+85159:M 03 May 2025 23:03:57.072 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25115
+ |###|   .+###############+.   |###|    PID: 85159                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+85159:M 03 May 2025 23:03:57.072 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+85159:M 03 May 2025 23:03:57.072 * Server initialized
+85159:M 03 May 2025 23:03:57.073 * Ready to accept connections tcp
+85159:M 03 May 2025 23:03:57.073 * Ready to accept connections unix
+85159:M 03 May 2025 23:03:57.213 - Accepted 127.0.0.1:59177
+85159:M 03 May 2025 23:03:57.213 - Client closed connection id=2 addr=127.0.0.1:59177 laddr=127.0.0.1:25115 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+85159:M 03 May 2025 23:03:57.224 - Accepted 127.0.0.1:59178
+### Starting test BITFIELD: setup slave in tests/unit/bitfield.tcl
+85159:S 03 May 2025 23:03:57.224 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+85159:S 03 May 2025 23:03:57.224 * Connecting to PRIMARY 127.0.0.1:25114
+85159:S 03 May 2025 23:03:57.225 * PRIMARY <-> REPLICA sync started
+85159:S 03 May 2025 23:03:57.225 * REPLICAOF 127.0.0.1:25114 enabled (user request from 'id=3 addr=127.0.0.1:59178 laddr=127.0.0.1:25115 fd=12 name= user=default lib-name= lib-ver=')
+85159:S 03 May 2025 23:03:57.225 * Non blocking connect for SYNC fired the event.
+85159:S 03 May 2025 23:03:57.225 * Primary replied to PING, replication can continue...
+85159:S 03 May 2025 23:03:57.225 * Trying a partial resynchronization (request 2873d90aee7c9734f50b8835112d00649e28f898:1).
+85159:S 03 May 2025 23:03:57.225 * Full resync from primary: 027e88999d782c0db14aeb7a48d4a7f792d8306e:0
+85159:S 03 May 2025 23:03:57.225 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+85159:S 03 May 2025 23:03:57.229 * Discarding previously cached primary state.
+85159:S 03 May 2025 23:03:57.229 * PRIMARY <-> REPLICA sync: Flushing old data
+85159:S 03 May 2025 23:03:57.229 * PRIMARY <-> REPLICA sync: Loading DB in memory
+85159:S 03 May 2025 23:03:57.229 * Loading RDB produced by Valkey version 255.255.255
+85159:S 03 May 2025 23:03:57.229 * RDB age 0 seconds
+85159:S 03 May 2025 23:03:57.229 * RDB memory usage when created 1.16 Mb
+85159:S 03 May 2025 23:03:57.229 * Done loading RDB, keys loaded: 0, keys expired: 0.
+85159:S 03 May 2025 23:03:57.229 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test BITFIELD: write on master, read on slave in tests/unit/bitfield.tcl
+### Starting test BITFIELD_RO with only key as argument on read-only replica in tests/unit/bitfield.tcl
+### Starting test BITFIELD_RO fails when write option is used on read-only replica in tests/unit/bitfield.tcl
+85159:S 03 May 2025 23:03:57.328 - Client closed connection id=3 addr=127.0.0.1:59178 laddr=127.0.0.1:25115 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=6254 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bitfield_ro user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=285 tot-net-out=18763 tot-cmds=8
+85159:signal-handler (1746281038) Received SIGTERM scheduling shutdown...
+85159:S 03 May 2025 23:03:58.591 * User requested shutdown...
+85159:S 03 May 2025 23:03:58.591 * Removing the pid file.
+85159:S 03 May 2025 23:03:58.591 * Removing the unix socket file.
+85159:S 03 May 2025 23:03:58.591 # Valkey is now ready to exit, bye bye...

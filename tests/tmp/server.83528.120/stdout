@@ -1,0 +1,76 @@
+### Starting server for test 
+10248:M 03 May 2025 23:07:31.516 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+10248:M 03 May 2025 23:07:31.516 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=10248, just started
+10248:M 03 May 2025 23:07:31.516 * Configuration loaded
+10248:M 03 May 2025 23:07:31.516 * Increased maximum number of open files to 10032 (it was originally set to 256).
+10248:M 03 May 2025 23:07:31.516 * monotonic clock: POSIX clock_gettime
+10248:M 03 May 2025 23:07:31.516 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 22669
+ |###|   .+###############+.   |###|    PID: 10248                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+10248:M 03 May 2025 23:07:31.516 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+10248:M 03 May 2025 23:07:31.517 * Server initialized
+10248:M 03 May 2025 23:07:31.517 * Ready to accept connections tcp
+10248:M 03 May 2025 23:07:31.517 * Ready to accept connections unix
+10248:M 03 May 2025 23:07:31.532 - Accepted 127.0.0.1:56388
+10248:M 03 May 2025 23:07:31.532 - Client closed connection id=2 addr=127.0.0.1:56388 laddr=127.0.0.1:22669 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+10248:M 03 May 2025 23:07:31.569 - Accepted 127.0.0.1:56406
+### Starting test PSYNC2 pingoff: setup in tests/integration/psync2-pingoff.tcl
+10248:M 03 May 2025 23:07:31.570 - Accepted 127.0.0.1:56407
+10248:M 03 May 2025 23:07:31.570 * Replica 127.0.0.1:22668 asks for synchronization
+10248:M 03 May 2025 23:07:31.570 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'b537c346ef3ef8427d34c89067382c5d0fcfb590', my replication IDs are '25c92d6b9f70725be30f7896a52240a2b5052cc9' and '0000000000000000000000000000000000000000')
+10248:M 03 May 2025 23:07:31.570 * Replication backlog created, my new replication IDs are '1ac53340042001091eb5c80e9784516784bd6a45' and '0000000000000000000000000000000000000000'
+10248:M 03 May 2025 23:07:31.570 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+10248:M 03 May 2025 23:07:31.572 * Background RDB transfer started by pid 10262 to pipe through parent process
+10262:C 03 May 2025 23:07:31.572 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+10248:M 03 May 2025 23:07:31.572 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+10248:M 03 May 2025 23:07:31.576 * Background RDB transfer terminated with success
+10248:M 03 May 2025 23:07:31.576 * Streamed RDB transfer with replica 127.0.0.1:22668 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+10248:M 03 May 2025 23:07:31.576 * Synchronization with replica 127.0.0.1:22668 succeeded
+### Starting test PSYNC2 pingoff: write and wait replication in tests/integration/psync2-pingoff.tcl
+### Starting test PSYNC2 pingoff: pause replica and promote it in tests/integration/psync2-pingoff.tcl
+10248:M 03 May 2025 23:07:36.573 - DB 9: 2 keys (0 volatile) in 7 slots HT.
+10248:M 03 May 2025 23:07:37.582 - Reading from client: Connection reset by peer
+10248:M 03 May 2025 23:07:37.582 * Connection with replica client id #4 lost.
+### Starting test Make the old master a replica of the new one and check conditions in tests/integration/psync2-pingoff.tcl
+10248:S 03 May 2025 23:07:37.583 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+10248:S 03 May 2025 23:07:37.583 * Connecting to PRIMARY 127.0.0.1:22668
+10248:S 03 May 2025 23:07:37.584 * PRIMARY <-> REPLICA sync started
+10248:S 03 May 2025 23:07:37.584 * REPLICAOF 127.0.0.1:22668 enabled (user request from 'id=3 addr=127.0.0.1:56406 laddr=127.0.0.1:22669 fd=12 name= user=default lib-name= lib-ver=')
+10248:S 03 May 2025 23:07:37.584 * Non blocking connect for SYNC fired the event.
+10248:S 03 May 2025 23:07:37.584 * Primary replied to PING, replication can continue...
+10248:S 03 May 2025 23:07:37.584 * Trying a partial resynchronization (request 1ac53340042001091eb5c80e9784516784bd6a45:175).
+10248:S 03 May 2025 23:07:37.584 * Full resync from primary: 0fec99b10a751a68ac48d7b3694d2092f31f7c6d:118
+10248:S 03 May 2025 23:07:37.587 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+10248:S 03 May 2025 23:07:37.591 * Discarding previously cached primary state.
+10248:S 03 May 2025 23:07:37.591 * PRIMARY <-> REPLICA sync: Flushing old data
+10248:S 03 May 2025 23:07:37.591 * PRIMARY <-> REPLICA sync: Loading DB in memory
+10248:S 03 May 2025 23:07:37.591 * Loading RDB produced by Valkey version 255.255.255
+10248:S 03 May 2025 23:07:37.591 * RDB age 0 seconds
+10248:S 03 May 2025 23:07:37.591 * RDB memory usage when created 1.42 Mb
+10248:S 03 May 2025 23:07:37.591 * Done loading RDB, keys loaded: 2, keys expired: 0.
+10248:S 03 May 2025 23:07:37.591 * PRIMARY <-> REPLICA sync: Finished with success
+10248:S 03 May 2025 23:07:38.587 - Client closed connection id=3 addr=127.0.0.1:56406 laddr=127.0.0.1:22669 fd=12 name= age=7 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=2048 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=361 tot-net-out=25164 tot-cmds=14
+10248:S 03 May 2025 23:07:41.621 - DB 9: 3 keys (0 volatile) in 7 slots HT.
+10248:signal-handler (1746281264) Received SIGTERM scheduling shutdown...
+10248:S 03 May 2025 23:07:44.335 * User requested shutdown...
+10248:S 03 May 2025 23:07:44.335 * Removing the pid file.
+10248:S 03 May 2025 23:07:44.335 * Removing the unix socket file.
+10248:S 03 May 2025 23:07:44.336 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,41 @@
+### Starting server for test corrupt payload: fuzzer findings - hash listpack first element too long entry len in tests/integration/corrupt-dump.tcl
+6285:M 03 May 2025 23:06:44.110 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+6285:M 03 May 2025 23:06:44.110 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=6285, just started
+6285:M 03 May 2025 23:06:44.110 * Configuration loaded
+6285:M 03 May 2025 23:06:44.110 * Increased maximum number of open files to 10032 (it was originally set to 256).
+6285:M 03 May 2025 23:06:44.110 * monotonic clock: POSIX clock_gettime
+6285:M 03 May 2025 23:06:44.111 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21706
+ |###|   .+###############+.   |###|    PID: 6285                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+6285:M 03 May 2025 23:06:44.111 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+6285:M 03 May 2025 23:06:44.111 * Server initialized
+6285:M 03 May 2025 23:06:44.111 * Ready to accept connections tcp
+6285:M 03 May 2025 23:06:44.111 * Ready to accept connections unix
+6285:M 03 May 2025 23:06:44.240 - Accepted 127.0.0.1:50821
+6285:M 03 May 2025 23:06:44.241 - Client closed connection id=2 addr=127.0.0.1:50821 laddr=127.0.0.1:21706 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+6285:M 03 May 2025 23:06:44.263 - Accepted 127.0.0.1:50827
+6285:M 03 May 2025 23:06:44.263 - Internal error in RDB reading offset 0, function at rdb.c:2463 -> Hash listpack integrity check failed.
+6285:M 03 May 2025 23:06:44.272 - Client closed connection id=3 addr=127.0.0.1:50827 laddr=127.0.0.1:21706 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=restore user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=230 tot-net-out=37 tot-cmds=4
+6285:signal-handler (1746281204) Received SIGTERM scheduling shutdown...
+6285:M 03 May 2025 23:06:44.313 * User requested shutdown...
+6285:M 03 May 2025 23:06:44.313 * Removing the pid file.
+6285:M 03 May 2025 23:06:44.313 * Removing the unix socket file.
+6285:M 03 May 2025 23:06:44.313 # Valkey is now ready to exit, bye bye...

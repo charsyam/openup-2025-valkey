@@ -1,0 +1,126 @@
+### Starting server for test 
+15340:M 03 May 2025 23:08:50.424 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+15340:M 03 May 2025 23:08:50.424 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=15340, just started
+15340:M 03 May 2025 23:08:50.424 * Configuration loaded
+15340:M 03 May 2025 23:08:50.424 * Increased maximum number of open files to 10032 (it was originally set to 256).
+15340:M 03 May 2025 23:08:50.424 * monotonic clock: POSIX clock_gettime
+15340:M 03 May 2025 23:08:50.424 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25198
+ |###|   .+###############+.   |###|    PID: 15340                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+15340:M 03 May 2025 23:08:50.424 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+15340:M 03 May 2025 23:08:50.425 * Server initialized
+15340:M 03 May 2025 23:08:50.425 * Ready to accept connections tcp
+15340:M 03 May 2025 23:08:50.425 * Ready to accept connections unix
+15340:M 03 May 2025 23:08:50.557 - Accepted 127.0.0.1:65087
+15340:M 03 May 2025 23:08:50.558 - Client closed connection id=2 addr=127.0.0.1:65087 laddr=127.0.0.1:25198 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+15340:M 03 May 2025 23:08:50.569 - Accepted 127.0.0.1:65088
+### Starting test Slave should be able to synchronize with the master in tests/integration/replication-psync.tcl
+15340:S 03 May 2025 23:08:50.579 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+15340:S 03 May 2025 23:08:50.579 * Connecting to PRIMARY 127.0.0.1:25197
+15340:S 03 May 2025 23:08:50.579 * PRIMARY <-> REPLICA sync started
+15340:S 03 May 2025 23:08:50.579 * REPLICAOF 127.0.0.1:25197 enabled (user request from 'id=3 addr=127.0.0.1:65088 laddr=127.0.0.1:25198 fd=12 name= user=default lib-name= lib-ver=')
+15340:S 03 May 2025 23:08:50.579 * Non blocking connect for SYNC fired the event.
+15340:S 03 May 2025 23:08:50.580 * Primary replied to PING, replication can continue...
+15340:S 03 May 2025 23:08:50.580 * Trying a partial resynchronization (request ca5c85c50e4df134be0a807eb8fd46283f1eb3aa:1).
+15340:S 03 May 2025 23:08:50.581 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+15340:S 03 May 2025 23:08:51.282 * Dual channel replication: Trying a partial resynchronization using main channel (request 9375c821cb6d35e7da57faa3c4423f0bfb7a1bea:565122).
+15340:S 03 May 2025 23:08:51.283 * Dual channel replication: PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization, RDB load in background.
+15340:S 03 May 2025 23:08:51.283 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+15340:S 03 May 2025 23:08:51.288 * Discarding previously cached primary state.
+15340:S 03 May 2025 23:08:51.288 * PRIMARY <-> REPLICA sync: Flushing old data
+15340:S 03 May 2025 23:08:51.288 * PRIMARY <-> REPLICA sync: Loading DB in memory
+15340:S 03 May 2025 23:08:51.288 * Loading RDB produced by Valkey version 255.255.255
+15340:S 03 May 2025 23:08:51.288 * RDB age 0 seconds
+15340:S 03 May 2025 23:08:51.288 * RDB memory usage when created 2.11 Mb
+15340:S 03 May 2025 23:08:51.290 * Done loading RDB, keys loaded: 1837, keys expired: 0.
+15340:S 03 May 2025 23:08:51.290 * Dual channel replication: Successfully streamed replication data into memory
+15340:S 03 May 2025 23:08:51.290 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test Detect write load to master in tests/integration/replication-psync.tcl
+### Starting test Test replication partial resync: no backlog (diskless: yes, disabled, dual-channel: yes, reconnect: 1) in tests/integration/replication-psync.tcl
+15340:S 03 May 2025 23:08:51.414 * Connection with primary lost.
+15340:S 03 May 2025 23:08:51.414 * Caching the disconnected primary state.
+15340:S 03 May 2025 23:08:51.414 * Reconnecting to PRIMARY 127.0.0.1:25197
+15340:S 03 May 2025 23:08:51.414 * PRIMARY <-> REPLICA sync started
+15340:S 03 May 2025 23:08:51.916 * Non blocking connect for SYNC fired the event.
+15340:S 03 May 2025 23:08:51.916 * Primary replied to PING, replication can continue...
+15340:S 03 May 2025 23:08:51.916 * Trying a partial resynchronization (request 9375c821cb6d35e7da57faa3c4423f0bfb7a1bea:687834).
+15340:S 03 May 2025 23:08:51.916 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+15340:S 03 May 2025 23:08:52.284 * Dual channel replication: Trying a partial resynchronization using main channel (request 9375c821cb6d35e7da57faa3c4423f0bfb7a1bea:1471195).
+15340:S 03 May 2025 23:08:52.284 * Dual channel replication: PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization, RDB load in background.
+15340:S 03 May 2025 23:08:52.284 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+15340:S 03 May 2025 23:08:52.291 * Discarding previously cached primary state.
+15340:S 03 May 2025 23:08:52.291 * PRIMARY <-> REPLICA sync: Flushing old data
+15340:S 03 May 2025 23:08:52.291 * PRIMARY <-> REPLICA sync: Loading DB in memory
+15340:S 03 May 2025 23:08:52.291 * Loading RDB produced by Valkey version 255.255.255
+15340:S 03 May 2025 23:08:52.291 * RDB age 0 seconds
+15340:S 03 May 2025 23:08:52.291 * RDB memory usage when created 2.70 Mb
+15340:S 03 May 2025 23:08:52.296 * Done loading RDB, keys loaded: 4849, keys expired: 0.
+15340:S 03 May 2025 23:08:52.296 * Dual channel replication: Successfully streamed replication data into memory
+15340:S 03 May 2025 23:08:52.296 * PRIMARY <-> REPLICA sync: Finished with success
+15340:S 03 May 2025 23:08:53.992 * Connection with primary lost.
+15340:S 03 May 2025 23:08:53.992 * Caching the disconnected primary state.
+15340:S 03 May 2025 23:08:53.992 * Reconnecting to PRIMARY 127.0.0.1:25197
+15340:S 03 May 2025 23:08:53.992 * PRIMARY <-> REPLICA sync started
+15340:S 03 May 2025 23:08:54.493 * Non blocking connect for SYNC fired the event.
+15340:S 03 May 2025 23:08:54.496 * Primary replied to PING, replication can continue...
+15340:S 03 May 2025 23:08:54.499 * Trying a partial resynchronization (request 9375c821cb6d35e7da57faa3c4423f0bfb7a1bea:3058895).
+15340:S 03 May 2025 23:08:54.504 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+15340:S 03 May 2025 23:08:55.289 * Dual channel replication: Trying a partial resynchronization using main channel (request 9375c821cb6d35e7da57faa3c4423f0bfb7a1bea:4071953).
+15340:S 03 May 2025 23:08:55.289 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+15340:S 03 May 2025 23:08:55.291 * Dual channel replication: PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization, RDB load in background.
+15340:S 03 May 2025 23:08:55.309 * Discarding previously cached primary state.
+15340:S 03 May 2025 23:08:55.310 * PRIMARY <-> REPLICA sync: Flushing old data
+15340:S 03 May 2025 23:08:55.310 * PRIMARY <-> REPLICA sync: Loading DB in memory
+15340:S 03 May 2025 23:08:55.310 * Loading RDB produced by Valkey version 255.255.255
+15340:S 03 May 2025 23:08:55.310 * RDB age 0 seconds
+15340:S 03 May 2025 23:08:55.310 * RDB memory usage when created 4.36 Mb
+15340:S 03 May 2025 23:08:55.334 * Done loading RDB, keys loaded: 12807, keys expired: 0.
+15340:S 03 May 2025 23:08:55.334 * Dual channel replication: Successfully streamed replication data into memory
+15340:S 03 May 2025 23:08:55.334 * PRIMARY <-> REPLICA sync: Finished with success
+15340:S 03 May 2025 23:08:56.407 - DB 9: 4772 keys (0 volatile) in 7168 slots HT.
+15340:S 03 May 2025 23:08:56.407 - DB 11: 4821 keys (0 volatile) in 7168 slots HT.
+15340:S 03 May 2025 23:08:56.407 - DB 12: 4770 keys (0 volatile) in 7168 slots HT.
+15340:S 03 May 2025 23:08:56.587 * Connection with primary lost.
+15340:S 03 May 2025 23:08:56.588 * Caching the disconnected primary state.
+15340:S 03 May 2025 23:08:56.588 * Reconnecting to PRIMARY 127.0.0.1:25197
+15340:S 03 May 2025 23:08:56.588 * PRIMARY <-> REPLICA sync started
+15340:S 03 May 2025 23:08:57.089 * Non blocking connect for SYNC fired the event.
+15340:S 03 May 2025 23:08:57.090 * Primary replied to PING, replication can continue...
+15340:S 03 May 2025 23:08:57.090 * Trying a partial resynchronization (request 9375c821cb6d35e7da57faa3c4423f0bfb7a1bea:4737424).
+15340:S 03 May 2025 23:08:57.090 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+15340:S 03 May 2025 23:08:58.297 * Dual channel replication: Trying a partial resynchronization using main channel (request 9375c821cb6d35e7da57faa3c4423f0bfb7a1bea:6167742).
+15340:S 03 May 2025 23:08:58.297 * Dual channel replication: PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization, RDB load in background.
+15340:S 03 May 2025 23:08:58.297 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+15340:S 03 May 2025 23:08:58.325 * Discarding previously cached primary state.
+15340:S 03 May 2025 23:08:58.325 * PRIMARY <-> REPLICA sync: Flushing old data
+15340:S 03 May 2025 23:08:58.325 * PRIMARY <-> REPLICA sync: Loading DB in memory
+15340:S 03 May 2025 23:08:58.326 * Loading RDB produced by Valkey version 255.255.255
+15340:S 03 May 2025 23:08:58.326 * RDB age 0 seconds
+15340:S 03 May 2025 23:08:58.326 * RDB memory usage when created 5.61 Mb
+15340:S 03 May 2025 23:08:58.347 * Done loading RDB, keys loaded: 18845, keys expired: 0.
+15340:S 03 May 2025 23:08:58.347 * Dual channel replication: Successfully streamed replication data into memory
+15340:S 03 May 2025 23:08:58.347 * PRIMARY <-> REPLICA sync: Finished with success
+15340:S 03 May 2025 23:08:59.235 - Client closed connection id=3 addr=127.0.0.1:65088 laddr=127.0.0.1:25198 fd=12 name= age=9 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=63 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=804 tot-net-out=1173 tot-cmds=34
+15340:signal-handler (1746281340) Received SIGTERM scheduling shutdown...
+15340:S 03 May 2025 23:09:00.652 * User requested shutdown...
+15340:S 03 May 2025 23:09:00.652 * Removing the pid file.
+15340:S 03 May 2025 23:09:00.652 * Removing the unix socket file.
+15340:S 03 May 2025 23:09:00.652 # Valkey is now ready to exit, bye bye...

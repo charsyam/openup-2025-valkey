@@ -1,0 +1,101 @@
+### Starting server for test 
+11889:M 03 May 2025 23:07:55.110 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+11889:M 03 May 2025 23:07:55.110 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=11889, just started
+11889:M 03 May 2025 23:07:55.110 * Configuration loaded
+11889:M 03 May 2025 23:07:55.110 * Increased maximum number of open files to 10032 (it was originally set to 256).
+11889:M 03 May 2025 23:07:55.110 * monotonic clock: POSIX clock_gettime
+11889:M 03 May 2025 23:07:55.111 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25187
+ |###|   .+###############+.   |###|    PID: 11889                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+11889:M 03 May 2025 23:07:55.111 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+11889:M 03 May 2025 23:07:55.111 * Server initialized
+11889:M 03 May 2025 23:07:55.111 * Ready to accept connections tcp
+11889:M 03 May 2025 23:07:55.111 * Ready to accept connections unix
+11889:M 03 May 2025 23:07:55.264 - Accepted 127.0.0.1:59458
+11889:M 03 May 2025 23:07:55.265 - Client closed connection id=2 addr=127.0.0.1:59458 laddr=127.0.0.1:25187 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+11889:M 03 May 2025 23:07:55.287 - Accepted 127.0.0.1:59459
+### Starting test Slave should be able to synchronize with the master in tests/integration/replication-psync.tcl
+11889:M 03 May 2025 23:07:55.539 - Accepted 127.0.0.1:59462
+11889:M 03 May 2025 23:07:55.541 * Replica 127.0.0.1:25188 asks for synchronization
+11889:M 03 May 2025 23:07:55.541 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '84a5ad27e9b51c423a6e4acb5b79a6c2da6e9881', my replication IDs are '7b443e4d8cc1efc046bb142f8b83ddd8a9e63fae' and '0000000000000000000000000000000000000000')
+11889:M 03 May 2025 23:07:55.541 * Replication backlog created, my new replication IDs are 'c2b6be1550433ccc98ea8bfd4dfd248c4eec4109' and '0000000000000000000000000000000000000000'
+11889:M 03 May 2025 23:07:55.541 * Starting BGSAVE for SYNC with target: disk using: normal sync
+11889:M 03 May 2025 23:07:55.543 * Background saving started by pid 11934
+11934:C 03 May 2025 23:07:55.548 * DB saved on disk
+11934:C 03 May 2025 23:07:55.549 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+11889:M 03 May 2025 23:07:55.555 - Accepted 127.0.0.1:59463
+11889:M 03 May 2025 23:07:55.556 - Accepted 127.0.0.1:59464
+11889:M 03 May 2025 23:07:55.558 - Accepted 127.0.0.1:59465
+11889:M 03 May 2025 23:07:55.616 * Background saving terminated with success
+11889:M 03 May 2025 23:07:55.616 * Synchronization with replica 127.0.0.1:25188 succeeded
+### Starting test Detect write load to master in tests/integration/replication-psync.tcl
+### Starting test Test replication partial resync: no backlog (diskless: no, swapdb, dual-channel: no, reconnect: 1) in tests/integration/replication-psync.tcl
+11889:M 03 May 2025 23:07:56.756 - Client closed connection id=4 addr=127.0.0.1:59462 laddr=127.0.0.1:25187 fd=13 name= age=1 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=314 tot-net-out=611656 tot-cmds=7
+11889:M 03 May 2025 23:07:56.756 * Connection with replica 127.0.0.1:25188 lost.
+11889:M 03 May 2025 23:07:56.756 - Accepted 127.0.0.1:59481
+11889:M 03 May 2025 23:07:57.262 * Replica 127.0.0.1:25188 asks for synchronization
+11889:M 03 May 2025 23:07:57.262 * Unable to partial resync with replica 127.0.0.1:25188 for lack of backlog (Replica request was: 611635).
+11889:M 03 May 2025 23:07:57.262 * Starting BGSAVE for SYNC with target: disk using: normal sync
+11889:M 03 May 2025 23:07:57.263 * Background saving started by pid 12054
+12054:C 03 May 2025 23:07:57.278 * DB saved on disk
+12054:C 03 May 2025 23:07:57.278 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+11889:M 03 May 2025 23:07:57.318 * Background saving terminated with success
+11889:M 03 May 2025 23:07:57.318 * Synchronization with replica 127.0.0.1:25188 succeeded
+11889:M 03 May 2025 23:07:59.331 - Client closed connection id=8 addr=127.0.0.1:59481 laddr=127.0.0.1:25187 fd=13 name= age=3 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=15 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=365 tot-net-out=1430486 tot-cmds=8
+11889:M 03 May 2025 23:07:59.331 * Connection with replica client id #8 lost.
+11889:M 03 May 2025 23:07:59.331 - Accepted 127.0.0.1:59535
+11889:M 03 May 2025 23:07:59.837 * Replica 127.0.0.1:25188 asks for synchronization
+11889:M 03 May 2025 23:07:59.837 * Unable to partial resync with replica 127.0.0.1:25188 for lack of backlog (Replica request was: 2362246).
+11889:M 03 May 2025 23:07:59.837 * Starting BGSAVE for SYNC with target: disk using: normal sync
+11889:M 03 May 2025 23:07:59.837 * Background saving started by pid 12263
+12263:C 03 May 2025 23:07:59.851 * DB saved on disk
+12263:C 03 May 2025 23:07:59.852 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+11889:M 03 May 2025 23:07:59.920 * Background saving terminated with success
+11889:M 03 May 2025 23:07:59.923 * Synchronization with replica 127.0.0.1:25188 succeeded
+11889:M 03 May 2025 23:08:00.120 - DB 9: 3265 keys (0 volatile) in 3584 slots HT.
+11889:M 03 May 2025 23:08:00.121 - DB 11: 3321 keys (0 volatile) in 3584 slots HT.
+11889:M 03 May 2025 23:08:00.123 - DB 12: 3227 keys (0 volatile) in 3584 slots HT.
+11889:M 03 May 2025 23:08:01.907 - Client closed connection id=9 addr=127.0.0.1:59535 laddr=127.0.0.1:25187 fd=13 name= age=2 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=15 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=367 tot-net-out=1697798 tot-cmds=8
+11889:M 03 May 2025 23:08:01.907 * Connection with replica 127.0.0.1:25188 lost.
+11889:M 03 May 2025 23:08:01.907 - Accepted 127.0.0.1:59585
+11889:M 03 May 2025 23:08:02.409 * Replica 127.0.0.1:25188 asks for synchronization
+11889:M 03 May 2025 23:08:02.409 * Unable to partial resync with replica 127.0.0.1:25188 for lack of backlog (Replica request was: 4535284).
+11889:M 03 May 2025 23:08:02.409 * Starting BGSAVE for SYNC with target: disk using: normal sync
+11889:M 03 May 2025 23:08:02.411 * Background saving started by pid 12439
+12439:C 03 May 2025 23:08:02.937 * DB saved on disk
+12439:C 03 May 2025 23:08:02.937 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+11889:M 03 May 2025 23:08:03.025 * Background saving terminated with success
+11889:M 03 May 2025 23:08:03.033 * Synchronization with replica 127.0.0.1:25188 succeeded
+11889:M 03 May 2025 23:08:04.377 - Reading from client: Connection reset by peer
+11889:M 03 May 2025 23:08:04.386 - Reading from client: Connection reset by peer
+11889:M 03 May 2025 23:08:04.462 - Reading from client: Connection reset by peer
+### Starting test Check for memory leaks (pid 11923) in tests/integration/replication-psync.tcl
+11889:M 03 May 2025 23:08:05.170 - DB 9: 5960 keys (0 volatile) in 7168 slots HT.
+11889:M 03 May 2025 23:08:05.170 - DB 11: 6109 keys (0 volatile) in 7168 slots HT.
+11889:M 03 May 2025 23:08:05.170 - DB 12: 6098 keys (0 volatile) in 7168 slots HT.
+11889:M 03 May 2025 23:08:07.112 - Client closed connection id=10 addr=127.0.0.1:59585 laddr=127.0.0.1:25187 fd=13 name= age=6 idle=2 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=367 tot-net-out=1021477 tot-cmds=8
+11889:M 03 May 2025 23:08:07.112 * Connection with replica 127.0.0.1:25188 lost.
+11889:M 03 May 2025 23:08:07.149 - Client closed connection id=3 addr=127.0.0.1:59459 laddr=127.0.0.1:25187 fd=12 name= age=12 idle=3 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=435 tot-net-out=12520 tot-cmds=12
+11889:signal-handler (1746281289) Received SIGTERM scheduling shutdown...
+11889:M 03 May 2025 23:08:09.276 * User requested shutdown...
+11889:M 03 May 2025 23:08:09.276 * Removing the pid file.
+11889:M 03 May 2025 23:08:09.276 * Removing the unix socket file.
+11889:M 03 May 2025 23:08:09.276 # Valkey is now ready to exit, bye bye...

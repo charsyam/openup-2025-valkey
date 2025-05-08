@@ -1,0 +1,58 @@
+### Starting server for test 
+84030:M 03 May 2025 23:03:46.526 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+84030:M 03 May 2025 23:03:46.526 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=84030, just started
+84030:M 03 May 2025 23:03:46.526 * Configuration loaded
+84030:M 03 May 2025 23:03:46.526 * Increased maximum number of open files to 10032 (it was originally set to 256).
+84030:M 03 May 2025 23:03:46.526 * monotonic clock: POSIX clock_gettime
+84030:M 03 May 2025 23:03:46.527 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25612
+ |###|   .+###############+.   |###|    PID: 84030                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+84030:M 03 May 2025 23:03:46.527 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+84030:M 03 May 2025 23:03:46.527 * Server initialized
+84030:M 03 May 2025 23:03:46.527 * Ready to accept connections tcp
+84030:M 03 May 2025 23:03:46.527 * Ready to accept connections unix
+84030:M 03 May 2025 23:03:46.540 - Accepted 127.0.0.1:58807
+84030:M 03 May 2025 23:03:46.540 - Client closed connection id=2 addr=127.0.0.1:58807 laddr=127.0.0.1:25612 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+84030:M 03 May 2025 23:03:46.559 - Accepted 127.0.0.1:58808
+### Starting test default: load from include file, can access any channels in tests/unit/acl.tcl
+### Starting test default: with config acl-pubsub-default allchannels after reset, can access any channels in tests/unit/acl.tcl
+### Starting test default: with config acl-pubsub-default resetchannels after reset, can not access any channels in tests/unit/acl.tcl
+### Starting test Alice: can execute all command in tests/unit/acl.tcl
+### Starting test Bob: just execute @set and acl command in tests/unit/acl.tcl
+### Starting test ACL LOAD only disconnects affected clients in tests/unit/acl.tcl
+84030:M 03 May 2025 23:03:46.563 - Accepted 127.0.0.1:58809
+84030:M 03 May 2025 23:03:46.563 - Client closed connection id=3 addr=127.0.0.1:58808 laddr=127.0.0.1:25612 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33856 events=r cmd=set user=bob redir=-1 resp=2 lib-name= lib-ver= tot-net-in=953 tot-net-out=544 tot-cmds=21
+84030:M 03 May 2025 23:03:46.564 - Accepted 127.0.0.1:58810
+84030:M 03 May 2025 23:03:46.564 - Accepted 127.0.0.1:58811
+84030:M 03 May 2025 23:03:46.564 - Client closed connection id=5 addr=127.0.0.1:58810 laddr=127.0.0.1:25612 fd=12 name= age=0 idle=0 flags=P capa= db=9 sub=1 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=subscribe user=alice redir=-1 resp=2 lib-name= lib-ver= tot-net-in=89 tot-net-out=91 tot-cmds=3
+### Starting test ACL LOAD disconnects clients of deleted users in tests/unit/acl.tcl
+84030:M 03 May 2025 23:03:46.565 - Accepted 127.0.0.1:58812
+84030:M 03 May 2025 23:03:46.565 - Client closed connection id=4 addr=127.0.0.1:58809 laddr=127.0.0.1:25612 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=publish user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=200 tot-net-out=19 tot-cmds=4
+84030:M 03 May 2025 23:03:46.565 - Accepted 127.0.0.1:58813
+84030:M 03 May 2025 23:03:46.565 - Accepted 127.0.0.1:58814
+84030:M 03 May 2025 23:03:46.566 - Client closed connection id=8 addr=127.0.0.1:58813 laddr=127.0.0.1:25612 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=1 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=subscribe user=alice redir=-1 resp=2 lib-name= lib-ver= tot-net-in=88 tot-net-out=89 tot-cmds=3
+### Starting test ACL load and save in tests/unit/acl.tcl
+### Starting test ACL load and save with restricted channels in tests/unit/acl.tcl
+84030:signal-handler (1746281028) Received SIGTERM scheduling shutdown...
+84030:M 03 May 2025 23:03:48.299 * User requested shutdown...
+84030:M 03 May 2025 23:03:48.299 * Removing the pid file.
+84030:M 03 May 2025 23:03:48.300 * Removing the unix socket file.
+84030:M 03 May 2025 23:03:48.300 # Valkey is now ready to exit, bye bye...

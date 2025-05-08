@@ -1,0 +1,65 @@
+### Starting server for test 
+10609:M 03 May 2025 23:07:35.019 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+10609:M 03 May 2025 23:07:35.019 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=10609, just started
+10609:M 03 May 2025 23:07:35.020 * Configuration loaded
+10609:M 03 May 2025 23:07:35.020 * Increased maximum number of open files to 10032 (it was originally set to 256).
+10609:M 03 May 2025 23:07:35.020 * monotonic clock: POSIX clock_gettime
+10609:M 03 May 2025 23:07:35.020 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25183
+ |###|   .+###############+.   |###|    PID: 10609                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+10609:M 03 May 2025 23:07:35.020 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+10609:M 03 May 2025 23:07:35.021 * Server initialized
+10609:M 03 May 2025 23:07:35.021 * Ready to accept connections tcp
+10609:M 03 May 2025 23:07:35.021 * Ready to accept connections unix
+10609:M 03 May 2025 23:07:35.037 - Accepted 127.0.0.1:57082
+10609:M 03 May 2025 23:07:35.037 - Client closed connection id=2 addr=127.0.0.1:57082 laddr=127.0.0.1:25183 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+10609:M 03 May 2025 23:07:35.063 - Accepted 127.0.0.1:57084
+### Starting test Slave should be able to synchronize with the master in tests/integration/replication-psync.tcl
+10609:M 03 May 2025 23:07:35.178 - Accepted 127.0.0.1:57107
+10609:M 03 May 2025 23:07:35.178 * Replica 127.0.0.1:25184 asks for synchronization
+10609:M 03 May 2025 23:07:35.178 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'eaa166e3e9adb0b939b01ae63a45c6cdb4edd167', my replication IDs are '73e6bbc4d77ac1dcccba5603fad4c73f8f522a81' and '0000000000000000000000000000000000000000')
+10609:M 03 May 2025 23:07:35.178 * Replication backlog created, my new replication IDs are '7580dcaa927b5bfcd4d47785f04931bba81e4fdc' and '0000000000000000000000000000000000000000'
+10609:M 03 May 2025 23:07:35.178 * Starting BGSAVE for SYNC with target: disk using: normal sync
+10609:M 03 May 2025 23:07:35.180 * Background saving started by pid 10631
+10609:M 03 May 2025 23:07:35.184 - Accepted 127.0.0.1:57111
+10631:C 03 May 2025 23:07:35.185 * DB saved on disk
+10631:C 03 May 2025 23:07:35.185 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+10609:M 03 May 2025 23:07:35.187 - Accepted 127.0.0.1:57112
+10609:M 03 May 2025 23:07:35.190 - Accepted 127.0.0.1:57113
+10609:M 03 May 2025 23:07:35.222 * Background saving terminated with success
+10609:M 03 May 2025 23:07:35.222 * Synchronization with replica 127.0.0.1:25184 succeeded
+### Starting test Detect write load to master in tests/integration/replication-psync.tcl
+### Starting test Test replication partial resync: no reconnection, just sync (diskless: no, swapdb, dual-channel: no, reconnect: 0) in tests/integration/replication-psync.tcl
+10609:M 03 May 2025 23:07:36.293 - Reading from client: Connection reset by peer
+10609:M 03 May 2025 23:07:36.298 - Reading from client: Connection reset by peer
+10609:M 03 May 2025 23:07:36.341 - Reading from client: Connection reset by peer
+### Starting test Check for memory leaks (pid 10623) in tests/integration/replication-psync.tcl
+10609:M 03 May 2025 23:07:38.734 - Client closed connection id=4 addr=127.0.0.1:57107 laddr=127.0.0.1:25183 fd=13 name= age=3 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=353 tot-net-out=901009 tot-cmds=8
+10609:M 03 May 2025 23:07:38.735 * Connection with replica 127.0.0.1:25184 lost.
+10609:M 03 May 2025 23:07:38.765 - Client closed connection id=3 addr=127.0.0.1:57084 laddr=127.0.0.1:25183 fd=12 name= age=3 idle=2 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=dbsize user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=425 tot-net-out=6277 tot-cmds=11
+10609:M 03 May 2025 23:07:40.074 - DB 9: 1009 keys (0 volatile) in 1792 slots HT.
+10609:M 03 May 2025 23:07:40.074 - DB 11: 991 keys (0 volatile) in 1792 slots HT.
+10609:M 03 May 2025 23:07:40.074 - DB 12: 965 keys (0 volatile) in 1792 slots HT.
+10609:signal-handler (1746281263) Received SIGTERM scheduling shutdown...
+10609:M 03 May 2025 23:07:43.780 * User requested shutdown...
+10609:M 03 May 2025 23:07:43.780 * Removing the pid file.
+10609:M 03 May 2025 23:07:43.780 * Removing the unix socket file.
+10609:M 03 May 2025 23:07:43.780 # Valkey is now ready to exit, bye bye...

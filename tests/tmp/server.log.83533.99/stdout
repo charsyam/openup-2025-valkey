@@ -1,0 +1,81 @@
+### Starting server for test 
+2232:M 03 May 2025 23:06:20.369 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+2232:M 03 May 2025 23:06:20.369 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=2232, just started
+2232:M 03 May 2025 23:06:20.369 * Configuration loaded
+2232:M 03 May 2025 23:06:20.369 * Increased maximum number of open files to 10032 (it was originally set to 256).
+2232:M 03 May 2025 23:06:20.369 * monotonic clock: POSIX clock_gettime
+2232:M 03 May 2025 23:06:20.369 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25166
+ |###|   .+###############+.   |###|    PID: 2232                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+2232:M 03 May 2025 23:06:20.369 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+2232:M 03 May 2025 23:06:20.370 * Server initialized
+2232:M 03 May 2025 23:06:20.370 * Ready to accept connections tcp
+2232:M 03 May 2025 23:06:20.370 * Ready to accept connections unix
+2232:M 03 May 2025 23:06:20.503 - Accepted 127.0.0.1:49682
+2232:M 03 May 2025 23:06:20.504 - Client closed connection id=2 addr=127.0.0.1:49682 laddr=127.0.0.1:25166 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+2232:M 03 May 2025 23:06:20.515 - Accepted 127.0.0.1:49706
+### Starting test Server is able to generate a stack trace on selected systems in tests/integration/logging.tcl
+2232:signal-handler (1746281180) 
+--- WATCHDOG TIMER EXPIRED ---
+
+------ STACK TRACE ------
+EIP:
+0   libsystem_kernel.dylib              0x000000018b58f1c8 __semwait_signal + 8
+
+Backtrace:
+0   libsystem_platform.dylib            0x000000018b607624 _sigtramp + 56
+1   libsystem_c.dylib                   0x000000018b46b6f4 nanosleep + 220
+2   valkey-server                       0x0000000102e1bab0 debugCommand + 5192
+3   valkey-server                       0x0000000102d8b640 call + 440
+4   valkey-server                       0x0000000102d8d428 processCommand + 3204
+5   valkey-server                       0x0000000102da78a4 processInputBuffer + 524
+6   valkey-server                       0x0000000102da6c84 readQueryFromClient + 92
+7   valkey-server                       0x0000000102eb1ef8 connSocketEventHandler + 180
+8   valkey-server                       0x0000000102d72c58 aeProcessEvents + 356
+9   valkey-server                       0x0000000102d9bf4c main + 27000
+10  dyld                                0x000000018b22eb4c start + 6000
+
+------ STACK TRACE DONE ------
+2232:signal-handler (1746281180) --------
+
+2232:M 03 May 2025 23:06:20.740 - Client closed connection id=3 addr=127.0.0.1:49706 laddr=127.0.0.1:25166 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=7 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=126 tot-net-out=22 tot-cmds=4
+2232:signal-handler (1746281181) 
+--- WATCHDOG TIMER EXPIRED ---
+
+------ STACK TRACE ------
+EIP:
+0   libsystem_kernel.dylib              0x000000018b591d04 kevent + 8
+
+Backtrace:
+0   libsystem_platform.dylib            0x000000018b607624 _sigtramp + 56
+1   valkey-server                       0x0000000102d729ac aeApiPoll + 100
+2   valkey-server                       0x0000000102d72bc8 aeProcessEvents + 212
+3   valkey-server                       0x0000000102d9bf4c main + 27000
+4   dyld                                0x000000018b22eb4c start + 6000
+
+------ STACK TRACE DONE ------
+2232:signal-handler (1746281181) --------
+
+2232:signal-handler (1746281181) Received SIGTERM scheduling shutdown...
+2232:M 03 May 2025 23:06:22.069 * User requested shutdown...
+2232:M 03 May 2025 23:06:22.069 * Removing the pid file.
+2232:M 03 May 2025 23:06:22.069 * Removing the unix socket file.
+2232:M 03 May 2025 23:06:22.069 # Valkey is now ready to exit, bye bye...

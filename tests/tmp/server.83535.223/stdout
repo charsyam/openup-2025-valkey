@@ -1,0 +1,53 @@
+### Starting server for test Generate timestamp annotations in AOF in tests/integration/aof.tcl
+12677:M 03 May 2025 23:08:08.637 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+12677:M 03 May 2025 23:08:08.637 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=12677, just started
+12677:M 03 May 2025 23:08:08.637 * Configuration loaded
+12677:M 03 May 2025 23:08:08.638 * Increased maximum number of open files to 10032 (it was originally set to 256).
+12677:M 03 May 2025 23:08:08.638 * monotonic clock: POSIX clock_gettime
+12677:M 03 May 2025 23:08:08.638 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26222
+ |###|   .+###############+.   |###|    PID: 12677                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+12677:M 03 May 2025 23:08:08.638 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+12677:M 03 May 2025 23:08:08.639 * Server initialized
+12677:M 03 May 2025 23:08:08.639 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+12677:M 03 May 2025 23:08:08.646 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+12677:M 03 May 2025 23:08:08.646 * Ready to accept connections tcp
+12677:M 03 May 2025 23:08:08.646 * Ready to accept connections unix
+12677:M 03 May 2025 23:08:08.768 - Accepted 127.0.0.1:60068
+12677:M 03 May 2025 23:08:08.768 - Client closed connection id=2 addr=127.0.0.1:60068 laddr=127.0.0.1:26222 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+12677:M 03 May 2025 23:08:08.782 - Accepted 127.0.0.1:60069
+12677:M 03 May 2025 23:08:08.797 * Creating AOF incr file appendonly.aof.2.incr.aof on background rewrite
+12677:M 03 May 2025 23:08:08.797 * Background append only file rewriting started by pid 12686
+12686:C 03 May 2025 23:08:08.801 * Successfully created the temporary AOF base file temp-rewriteaof-bg-12686.aof
+12686:C 03 May 2025 23:08:08.801 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+12677:M 03 May 2025 23:08:08.848 * Background AOF rewrite terminated with success
+12677:M 03 May 2025 23:08:08.849 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-12686.aof into appendonly.aof.2.base.aof
+12677:M 03 May 2025 23:08:08.855 * Removing the history file appendonly.aof.1.incr.aof in the background
+12677:M 03 May 2025 23:08:08.855 * Removing the history file appendonly.aof.1.base.rdb in the background
+12677:M 03 May 2025 23:08:08.861 * Background AOF rewrite finished successfully
+12677:M 03 May 2025 23:08:08.861 - Background AOF rewrite signal handler took 12260us
+12677:M 03 May 2025 23:08:08.874 - Client closed connection id=3 addr=127.0.0.1:60069 laddr=127.0.0.1:26222 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=6090 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=config|get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=477 tot-net-out=12573 tot-cmds=13
+12677:signal-handler (1746281288) Received SIGTERM scheduling shutdown...
+12677:M 03 May 2025 23:08:08.961 * User requested shutdown...
+12677:M 03 May 2025 23:08:08.964 * Calling fsync() on the AOF file.
+12677:M 03 May 2025 23:08:08.968 * Removing the pid file.
+12677:M 03 May 2025 23:08:08.968 * Removing the unix socket file.
+12677:M 03 May 2025 23:08:08.968 # Valkey is now ready to exit, bye bye...

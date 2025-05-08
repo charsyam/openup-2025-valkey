@@ -1,0 +1,93 @@
+### Starting server for test 
+7753:M 03 May 2025 23:06:55.746 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+7753:M 03 May 2025 23:06:55.746 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=7753, just started
+7753:M 03 May 2025 23:06:55.746 * Configuration loaded
+7753:M 03 May 2025 23:06:55.746 * Increased maximum number of open files to 10032 (it was originally set to 256).
+7753:M 03 May 2025 23:06:55.746 * monotonic clock: POSIX clock_gettime
+7753:M 03 May 2025 23:06:55.747 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27648
+ |###|   .+###############+.   |###|    PID: 7753                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+7753:M 03 May 2025 23:06:55.747 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+7753:M 03 May 2025 23:06:55.748 * Server initialized
+7753:M 03 May 2025 23:06:55.748 * Ready to accept connections tcp
+7753:M 03 May 2025 23:06:55.748 * Ready to accept connections unix
+7753:M 03 May 2025 23:06:55.764 - Accepted 127.0.0.1:59065
+7753:M 03 May 2025 23:06:55.765 - Client closed connection id=2 addr=127.0.0.1:59065 laddr=127.0.0.1:27648 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+7753:M 03 May 2025 23:06:55.805 - Accepted 127.0.0.1:59089
+### Starting test Set instance A as slave of B in tests/integration/replication.tcl
+7753:M 03 May 2025 23:06:55.806 - Accepted 127.0.0.1:59090
+7753:M 03 May 2025 23:06:55.806 * Replica 127.0.0.1:27647 asks for synchronization
+7753:M 03 May 2025 23:06:55.806 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '79b1cab6e3616dae47c4f20953985cfb3639f01f', my replication IDs are '09b6776e0a97d9e939a147198f8464e5f470ea44' and '0000000000000000000000000000000000000000')
+7753:M 03 May 2025 23:06:55.806 * Replication backlog created, my new replication IDs are 'bafab161860ea902b26ae6b7c528f637b786d609' and '0000000000000000000000000000000000000000'
+7753:M 03 May 2025 23:06:55.806 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+7753:M 03 May 2025 23:06:55.807 * Background RDB transfer started by pid 7763 to pipe through parent process
+7763:C 03 May 2025 23:06:55.808 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+7753:M 03 May 2025 23:06:55.808 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+7753:M 03 May 2025 23:06:55.811 * Background RDB transfer terminated with success
+7753:M 03 May 2025 23:06:55.811 * Streamed RDB transfer with replica 127.0.0.1:27647 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+7753:M 03 May 2025 23:06:55.811 * Synchronization with replica 127.0.0.1:27647 succeeded
+### Starting test INCRBYFLOAT replication, should not remove expire in tests/integration/replication.tcl
+### Starting test GETSET replication in tests/integration/replication.tcl
+### Starting test BRPOPLPUSH replication, when blocking against empty list in tests/integration/replication.tcl
+7753:M 03 May 2025 23:06:55.911 - Accepted 127.0.0.1:59153
+### Starting test BRPOPLPUSH replication, list exists in tests/integration/replication.tcl
+7753:M 03 May 2025 23:06:55.912 - Accepted 127.0.0.1:59172
+### Starting test BLMOVE (left, left) replication, when blocking against empty list in tests/integration/replication.tcl
+7753:M 03 May 2025 23:06:56.916 - Accepted 127.0.0.1:59770
+### Starting test BLMOVE (left, left) replication, list exists in tests/integration/replication.tcl
+7753:M 03 May 2025 23:06:56.917 - Accepted 127.0.0.1:59771
+### Starting test BLMOVE (left, right) replication, when blocking against empty list in tests/integration/replication.tcl
+7753:M 03 May 2025 23:06:57.923 - Accepted 127.0.0.1:60350
+### Starting test BLMOVE (left, right) replication, list exists in tests/integration/replication.tcl
+7753:M 03 May 2025 23:06:57.924 - Accepted 127.0.0.1:60351
+### Starting test BLMOVE (right, left) replication, when blocking against empty list in tests/integration/replication.tcl
+7753:M 03 May 2025 23:06:58.929 - Accepted 127.0.0.1:61057
+### Starting test BLMOVE (right, left) replication, list exists in tests/integration/replication.tcl
+7753:M 03 May 2025 23:06:58.930 - Accepted 127.0.0.1:61058
+### Starting test BLMOVE (right, right) replication, when blocking against empty list in tests/integration/replication.tcl
+7753:M 03 May 2025 23:06:59.956 - Accepted 127.0.0.1:61669
+### Starting test BLMOVE (right, right) replication, list exists in tests/integration/replication.tcl
+7753:M 03 May 2025 23:06:59.972 - Accepted 127.0.0.1:61673
+7753:M 03 May 2025 23:07:00.804 - DB 9: 4 keys (0 volatile) in 7 slots HT.
+7753:M 03 May 2025 23:07:00.804 . Total: 11 clients connected (1 replicas), 1491648 (1.42M) bytes in use
+### Starting test BLPOP followed by role change, issue #2473 in tests/integration/replication.tcl
+7753:M 03 May 2025 23:07:00.978 - Accepted 127.0.0.1:62345
+7753:M 03 May 2025 23:07:00.978 - Client closed connection id=4 addr=127.0.0.1:59090 laddr=127.0.0.1:27648 fd=13 name= age=5 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=457 tot-net-out=1319 tot-cmds=11
+7753:M 03 May 2025 23:07:00.978 * Connection with replica 127.0.0.1:27647 lost.
+7753:S 03 May 2025 23:07:00.978 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+7753:S 03 May 2025 23:07:00.978 * Connecting to PRIMARY 127.0.0.1:27647
+7753:S 03 May 2025 23:07:00.978 * PRIMARY <-> REPLICA sync started
+7753:S 03 May 2025 23:07:00.978 * REPLICAOF 127.0.0.1:27647 enabled (user request from 'id=3 addr=127.0.0.1:59089 laddr=127.0.0.1:27648 fd=12 name= user=default lib-name= lib-ver=')
+7753:S 03 May 2025 23:07:00.978 * Non blocking connect for SYNC fired the event.
+7753:S 03 May 2025 23:07:00.978 * Primary replied to PING, replication can continue...
+7753:S 03 May 2025 23:07:00.978 * Trying a partial resynchronization (request bafab161860ea902b26ae6b7c528f637b786d609:1298).
+7753:S 03 May 2025 23:07:00.978 * Successful partial resynchronization with primary.
+7753:S 03 May 2025 23:07:00.978 * Primary replication ID changed to 23a246f913556cf735691bf7936a783d4d3703d5
+7753:S 03 May 2025 23:07:00.978 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test Replica output bytes metric in tests/integration/replication.tcl
+7753:S 03 May 2025 23:07:01.185 - Client closed connection id=3 addr=127.0.0.1:59089 laddr=127.0.0.1:27648 fd=12 name= age=6 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6144 rbp=1532 obl=0 oll=0 omem=0 tot-mem=23552 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1441 tot-net-out=15858 tot-cmds=49
+7753:S 03 May 2025 23:07:05.856 - DB 9: 6 keys (0 volatile) in 7 slots HT.
+7753:S 03 May 2025 23:07:05.856 . Total: 11 clients connected (0 replicas), 1616224 (1.54M) bytes in use
+7753:signal-handler (1746281227) Received SIGTERM scheduling shutdown...
+7753:S 03 May 2025 23:07:07.426 * User requested shutdown...
+7753:S 03 May 2025 23:07:07.426 * Removing the pid file.
+7753:S 03 May 2025 23:07:07.426 * Removing the unix socket file.
+7753:S 03 May 2025 23:07:07.426 # Valkey is now ready to exit, bye bye...

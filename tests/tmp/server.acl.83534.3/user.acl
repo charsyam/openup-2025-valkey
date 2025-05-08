@@ -1,0 +1,6 @@
+user alice on sanitize-payload #2bd806c97f0e00af1a1fc3328fa763a9269723c8db8fac4f93af71db186d6e90 ~* &* +@all
+user bob on sanitize-payload #81b637d8fcd2c6da6359e6963113a1170de795e4b725b84d1e0b4cfd9ec58ce9 ~set* &* -@all +@set +acl
+user default on nopass sanitize-payload ~* &* +@all
+user doug on sanitize-payload #c898ab690b82d903b50458f17f5d2da9316ee335619a208c823b723317c443bf ~* resetchannels &test +@all
+user eve on sanitize-payload #85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b ~* resetchannels -@all +get
+user harry on nopass sanitize-payload ~* resetchannels &test +@all

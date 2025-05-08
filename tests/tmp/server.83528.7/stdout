@@ -1,0 +1,69 @@
+### Starting server for test 
+86360:M 03 May 2025 23:04:06.097 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+86360:M 03 May 2025 23:04:06.097 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=86360, just started
+86360:M 03 May 2025 23:04:06.097 * Configuration loaded
+86360:M 03 May 2025 23:04:06.097 * Increased maximum number of open files to 10032 (it was originally set to 256).
+86360:M 03 May 2025 23:04:06.097 * monotonic clock: POSIX clock_gettime
+86360:M 03 May 2025 23:04:06.098 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 22614
+ |###|   .+###############+.   |###|    PID: 86360                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+86360:M 03 May 2025 23:04:06.098 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+86360:M 03 May 2025 23:04:06.099 * Server initialized
+86360:M 03 May 2025 23:04:06.099 * Ready to accept connections tcp
+86360:M 03 May 2025 23:04:06.099 * Ready to accept connections unix
+86360:M 03 May 2025 23:04:06.211 - Accepted 127.0.0.1:59389
+86360:M 03 May 2025 23:04:06.211 - Client closed connection id=2 addr=127.0.0.1:59389 laddr=127.0.0.1:22614 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+86360:M 03 May 2025 23:04:06.221 - Accepted 127.0.0.1:59390
+### Starting test First server should have role slave after REPLICAOF in tests/unit/expire.tcl
+86360:S 03 May 2025 23:04:06.222 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+86360:S 03 May 2025 23:04:06.222 * Connecting to PRIMARY 127.0.0.1:22612
+86360:S 03 May 2025 23:04:06.222 * PRIMARY <-> REPLICA sync started
+86360:S 03 May 2025 23:04:06.222 * REPLICAOF 127.0.0.1:22612 enabled (user request from 'id=3 addr=127.0.0.1:59390 laddr=127.0.0.1:22614 fd=12 name= user=default lib-name= lib-ver=')
+86360:S 03 May 2025 23:04:06.222 * Non blocking connect for SYNC fired the event.
+86360:S 03 May 2025 23:04:06.222 * Primary replied to PING, replication can continue...
+86360:S 03 May 2025 23:04:06.222 * Trying a partial resynchronization (request c4739735463a19997bca230650b397539d82231e:1).
+86360:S 03 May 2025 23:04:06.222 * Full resync from primary: 657de162eafa87dbadbd52eccf141853bfb01d10:1103
+### Starting test For all replicated TTL-related commands, absolute expire times are identical on primary and replica in tests/unit/expire.tcl
+86360:S 03 May 2025 23:04:06.223 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+86360:S 03 May 2025 23:04:06.226 * Discarding previously cached primary state.
+86360:S 03 May 2025 23:04:06.226 * PRIMARY <-> REPLICA sync: Flushing old data
+86360:S 03 May 2025 23:04:06.226 * PRIMARY <-> REPLICA sync: Loading DB in memory
+86360:S 03 May 2025 23:04:06.226 * Loading RDB produced by Valkey version 255.255.255
+86360:S 03 May 2025 23:04:06.226 * RDB age 0 seconds
+86360:S 03 May 2025 23:04:06.226 * RDB memory usage when created 1.77 Mb
+86360:S 03 May 2025 23:04:06.226 * Done loading RDB, keys loaded: 6, keys expired: 0.
+86360:S 03 May 2025 23:04:06.226 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test expired key which is created in writeable replicas should be deleted by active expiry in tests/unit/expire.tcl
+86360:S 03 May 2025 23:04:06.229 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+86360:S 03 May 2025 23:04:06.229 * Background append only file rewriting started by pid 86388
+86388:C 03 May 2025 23:04:06.230 * Successfully created the temporary AOF base file temp-rewriteaof-bg-86388.aof
+86388:C 03 May 2025 23:04:06.230 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+86360:S 03 May 2025 23:04:06.301 * Background AOF rewrite terminated with success
+86360:S 03 May 2025 23:04:06.301 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-86388.aof into appendonly.aof.1.base.rdb
+86360:S 03 May 2025 23:04:06.301 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.1.incr.aof
+86360:S 03 May 2025 23:04:06.305 * Background AOF rewrite finished successfully
+86360:S 03 May 2025 23:04:06.305 - Background AOF rewrite signal handler took 4458us
+86360:S 03 May 2025 23:04:06.515 - Client closed connection id=3 addr=127.0.0.1:59390 laddr=127.0.0.1:22614 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6656 rbp=6409 obl=0 oll=0 omem=0 tot-mem=24064 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1250 tot-net-out=152047 tot-cmds=50
+86360:signal-handler (1746281047) Received SIGTERM scheduling shutdown...
+86360:S 03 May 2025 23:04:07.515 * User requested shutdown...
+86360:S 03 May 2025 23:04:07.515 * Removing the pid file.
+86360:S 03 May 2025 23:04:07.515 * Removing the unix socket file.
+86360:S 03 May 2025 23:04:07.515 # Valkey is now ready to exit, bye bye...

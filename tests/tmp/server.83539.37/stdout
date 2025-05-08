@@ -1,0 +1,107 @@
+### Starting server for test 
+94467:M 03 May 2025 23:05:03.051 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+94467:M 03 May 2025 23:05:03.051 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+94467:M 03 May 2025 23:05:03.053 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=94467, just started
+94467:M 03 May 2025 23:05:03.054 * Configuration loaded
+94467:M 03 May 2025 23:05:03.054 * Increased maximum number of open files to 10032 (it was originally set to 256).
+94467:M 03 May 2025 23:05:03.063 * monotonic clock: POSIX clock_gettime
+94467:M 03 May 2025 23:05:03.067 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 28129
+ |###|   .+###############+.   |###|    PID: 94467                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+94467:M 03 May 2025 23:05:03.076 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+94467:M 03 May 2025 23:05:03.084 * No cluster configuration found, I'm bbaaf57e0f87cb3972f3efdfdf5f010238516ae8
+94467:M 03 May 2025 23:05:03.095 * Server initialized
+94467:M 03 May 2025 23:05:03.095 * Ready to accept connections tcp
+94467:M 03 May 2025 23:05:03.095 * Ready to accept connections unix
+94467:M 03 May 2025 23:05:03.218 - Accepted 127.0.0.1:54077
+94467:M 03 May 2025 23:05:03.220 - Client closed connection id=2 addr=127.0.0.1:54077 laddr=127.0.0.1:28129 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+94467:M 03 May 2025 23:05:03.239 - Accepted 127.0.0.1:54083
+94467:M 03 May 2025 23:05:03.240 * Cluster meet 127.0.0.1:28128 (user request from 'id=3 addr=127.0.0.1:54083 laddr=127.0.0.1:28129 fd=14 name= user=default lib-name= lib-ver=').
+94467:M 03 May 2025 23:05:03.253 # Missing implement of connection type tls
+94467:M 03 May 2025 23:05:03.394 - Accepting cluster node connection from 127.0.0.1:54172
+94467:M 03 May 2025 23:05:03.394 * IP address for this node updated to 127.0.0.1
+94467:M 03 May 2025 23:05:03.404 * Successfully completed handshake with c4b845e23f1d67d7dfa732e2ac2f040beb76338e ()
+94467:M 03 May 2025 23:05:03.408 * configEpoch collision with node c4b845e23f1d67d7dfa732e2ac2f040beb76338e (). configEpoch set to 1
+94467:M 03 May 2025 23:05:03.430 - Accepted 127.0.0.1:54181
+94467:M 03 May 2025 23:05:03.431 * Node c4b845e23f1d67d7dfa732e2ac2f040beb76338e () is no longer primary of shard 7a68b48b8f1da698e3cfec6f238e7dddd0b8ac17; removed all 0 slot(s) it used to own
+94467:M 03 May 2025 23:05:03.431 * Node c4b845e23f1d67d7dfa732e2ac2f040beb76338e () is now part of shard 376950733650694548ff2c98b76ee14c5d326920
+94467:M 03 May 2025 23:05:03.431 * Node c4b845e23f1d67d7dfa732e2ac2f040beb76338e () is now a replica of node bbaaf57e0f87cb3972f3efdfdf5f010238516ae8 () in shard 376950733650694548ff2c98b76ee14c5d326920
+94467:M 03 May 2025 23:05:03.431 # DEBUG LOG: ========== I am primary 0 ==========
+94467:M 03 May 2025 23:05:03.431 * Replica 127.0.0.1:28128 asks for synchronization
+94467:M 03 May 2025 23:05:03.431 * Full resync requested by replica 127.0.0.1:28128
+94467:M 03 May 2025 23:05:03.431 * Replication backlog created, my new replication IDs are 'ef489f5094ae157cbcbf1eefc45d68364f498cd6' and '0000000000000000000000000000000000000000'
+94467:M 03 May 2025 23:05:03.431 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+94467:M 03 May 2025 23:05:03.432 * Background RDB transfer started by pid 94495 to pipe through parent process
+94495:C 03 May 2025 23:05:03.432 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+94467:M 03 May 2025 23:05:03.432 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+94467:M 03 May 2025 23:05:03.435 * Background RDB transfer terminated with success
+94467:M 03 May 2025 23:05:03.435 * Streamed RDB transfer with replica 127.0.0.1:28128 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+94467:M 03 May 2025 23:05:03.435 * Synchronization with replica 127.0.0.1:28128 succeeded
+94467:M 03 May 2025 23:05:05.123 * Cluster state changed: ok
+### Starting test Cluster is up in tests/unit/cluster/replica-in-sync.tcl
+### Starting test Cluster is writable in tests/unit/cluster/replica-in-sync.tcl
+94467:M 03 May 2025 23:05:13.377 - Accepted 127.0.0.1:62207
+94467:M 03 May 2025 23:05:13.380 - Client closed connection id=10 addr=127.0.0.1:62207 laddr=127.0.0.1:28129 fd=18 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=28 tot-net-out=249 tot-cmds=1
+94467:M 03 May 2025 23:05:13.383 - Accepted 127.0.0.1:62209
+94467:M 03 May 2025 23:05:13.446 - Client closed connection id=11 addr=127.0.0.1:62209 laddr=127.0.0.1:28129 fd=18 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=30 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7970 tot-net-out=3490 tot-cmds=200
+### Starting test Fill up primary with data in tests/unit/cluster/replica-in-sync.tcl
+### Starting test Add new node as replica in tests/unit/cluster/replica-in-sync.tcl
+### Starting test Check digest and replica state in tests/unit/cluster/replica-in-sync.tcl
+### Starting test Replica in loading state is hidden in tests/unit/cluster/replica-in-sync.tcl
+94467:M 03 May 2025 23:05:13.479 * Connection with replica 127.0.0.1:28128 lost.
+94467:M 03 May 2025 23:05:13.487 - Accepted 127.0.0.1:62286
+94467:M 03 May 2025 23:05:13.506 * Replica 127.0.0.1:28128 asks for synchronization
+94467:M 03 May 2025 23:05:13.508 * Unable to partial resync with replica 127.0.0.1:28128 for lack of backlog (Replica request was: 5518).
+94467:M 03 May 2025 23:05:13.508 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+94467:M 03 May 2025 23:05:13.509 * Background RDB transfer started by pid 95342 to pipe through parent process
+95342:C 03 May 2025 23:05:13.513 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+94467:M 03 May 2025 23:05:13.514 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+94467:M 03 May 2025 23:05:13.599 * Background RDB transfer terminated with success
+94467:M 03 May 2025 23:05:13.605 * Streamed RDB transfer with replica 127.0.0.1:28128 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+94467:M 03 May 2025 23:05:13.611 * Synchronization with replica 127.0.0.1:28128 succeeded
+94467:M 03 May 2025 23:05:18.288 - DB 0: 1200 keys (0 volatile) in 7812 slots HT.
+### Starting test Check disconnected replica not hidden from slots in tests/unit/cluster/replica-in-sync.tcl
+94467:M 03 May 2025 23:05:19.891 * Connection with replica 127.0.0.1:28128 lost.
+94467:M 03 May 2025 23:05:19.892 - Accepted 127.0.0.1:49817
+94467:M 03 May 2025 23:05:19.892 - Client closed connection id=20 addr=127.0.0.1:49817 laddr=127.0.0.1:28129 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=343 tot-net-out=238 tot-cmds=0
+94467:M 03 May 2025 23:05:19.892 - Accepted 127.0.0.1:49818
+94467:M 03 May 2025 23:05:19.893 - Client closed connection id=21 addr=127.0.0.1:49818 laddr=127.0.0.1:28129 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=343 tot-net-out=238 tot-cmds=0
+94467:M 03 May 2025 23:05:19.893 - Accepted 127.0.0.1:49821
+94467:M 03 May 2025 23:05:19.894 - Client closed connection id=22 addr=127.0.0.1:49821 laddr=127.0.0.1:28129 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=343 tot-net-out=238 tot-cmds=0
+94467:M 03 May 2025 23:05:19.895 - Accepted 127.0.0.1:49827
+94467:M 03 May 2025 23:05:19.903 - Client closed connection id=23 addr=127.0.0.1:49827 laddr=127.0.0.1:28129 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=343 tot-net-out=238 tot-cmds=0
+94467:M 03 May 2025 23:05:19.905 - Accepted 127.0.0.1:49832
+94467:M 03 May 2025 23:05:19.948 - Client closed connection id=24 addr=127.0.0.1:49832 laddr=127.0.0.1:28129 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=343 tot-net-out=238 tot-cmds=0
+94467:M 03 May 2025 23:05:19.953 - Accepted 127.0.0.1:49877
+94467:M 03 May 2025 23:05:19.971 - Client closed connection id=25 addr=127.0.0.1:49877 laddr=127.0.0.1:28129 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=343 tot-net-out=238 tot-cmds=0
+94467:M 03 May 2025 23:05:19.973 - Accepted 127.0.0.1:49891
+94467:M 03 May 2025 23:05:19.994 - Client closed connection id=26 addr=127.0.0.1:49891 laddr=127.0.0.1:28129 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=136 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=343 tot-net-out=238 tot-cmds=0
+94467:M 03 May 2025 23:05:20.003 - Client closed connection id=3 addr=127.0.0.1:54083 laddr=127.0.0.1:28129 fd=14 name= age=17 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=112206 tot-net-out=97446 tot-cmds=319
+94467:M 03 May 2025 23:05:20.004 - Accepted 127.0.0.1:49918
+94467:M 03 May 2025 23:05:20.019 * Replica 127.0.0.1:28128 asks for synchronization
+94467:M 03 May 2025 23:05:20.019 * Partial resynchronization request from 127.0.0.1:28128 accepted. Sending 0 bytes of backlog starting from offset 111237.
+94467:signal-handler (1746281121) Received SIGTERM scheduling shutdown...
+94467:M 03 May 2025 23:05:21.330 * User requested shutdown...
+94467:M 03 May 2025 23:05:21.337 * 1 of 1 replicas are in sync when shutting down.
+94467:M 03 May 2025 23:05:21.337 * Removing the pid file.
+94467:M 03 May 2025 23:05:21.347 * Saving the cluster configuration file before exiting.
+94467:M 03 May 2025 23:05:21.392 * Removing the unix socket file.
+94467:M 03 May 2025 23:05:21.398 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,61 @@
+### Starting server for test 
+4650:M 03 May 2025 23:06:35.435 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+4650:M 03 May 2025 23:06:35.435 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=4650, just started
+4650:M 03 May 2025 23:06:35.435 * Configuration loaded
+4650:M 03 May 2025 23:06:35.436 * Increased maximum number of open files to 10032 (it was originally set to 256).
+4650:M 03 May 2025 23:06:35.436 * monotonic clock: POSIX clock_gettime
+4650:M 03 May 2025 23:06:35.436 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 22656
+ |###|   .+###############+.   |###|    PID: 4650                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+4650:M 03 May 2025 23:06:35.436 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+4650:M 03 May 2025 23:06:35.436 * Server initialized
+4650:M 03 May 2025 23:06:35.436 * Ready to accept connections tcp
+4650:M 03 May 2025 23:06:35.436 * Ready to accept connections unix
+4650:M 03 May 2025 23:06:35.449 - Accepted 127.0.0.1:60695
+4650:M 03 May 2025 23:06:35.449 - Client closed connection id=2 addr=127.0.0.1:60695 laddr=127.0.0.1:22656 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+4650:M 03 May 2025 23:06:35.476 - Accepted 127.0.0.1:60705
+### Starting test Test FLUSHALL aborts bgsave in tests/integration/rdb.tcl
+4650:M 03 May 2025 23:06:35.609 * Background saving started by pid 4686
+4686:signal-handler (1746281195) Received SIGUSR1 in child, exiting now.
+4650:M 03 May 2025 23:06:35.638 # Background saving terminated by signal 30
+### Starting test bgsave resets the change counter in tests/integration/rdb.tcl
+4650:M 03 May 2025 23:06:35.733 * Background saving started by pid 4704
+4704:C 03 May 2025 23:06:35.746 * DB saved on disk
+4704:C 03 May 2025 23:06:35.746 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+4650:M 03 May 2025 23:06:35.839 * Background saving terminated with success
+### Starting test bgsave cancel aborts save in tests/integration/rdb.tcl
+4650:M 03 May 2025 23:06:35.845 * Background saving started by pid 4718
+4650:M 03 May 2025 23:06:35.865 * Background saving will be aborted due to user request
+4718:signal-handler (1746281195) Received SIGUSR1 in child, exiting now.
+4650:M 03 May 2025 23:06:35.940 # Background saving terminated by signal 30
+### Starting test bgsave cancel schedulled request in tests/integration/rdb.tcl
+4650:M 03 May 2025 23:06:35.976 * Background append only file rewriting started by pid 4733
+4650:M 03 May 2025 23:06:35.977 * Background saving scheduled due to user request
+4650:M 03 May 2025 23:06:35.977 * Scheduled background saving will be cancelled due to user request
+4650:M 03 May 2025 23:06:35.978 - Client closed connection id=3 addr=127.0.0.1:60705 laddr=127.0.0.1:22656 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6144 rbp=6009 obl=0 oll=0 omem=0 tot-mem=23552 events=r cmd=bgsave user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=188506 tot-net-out=92232 tot-cmds=5231
+4650:signal-handler (1746281197) Received SIGTERM scheduling shutdown...
+4650:M 03 May 2025 23:06:37.530 * User requested shutdown...
+4650:M 03 May 2025 23:06:37.530 # There is a child rewriting the AOF. Killing it!
+4650:M 03 May 2025 23:06:37.530 * Killing running AOF rewrite child: 4733
+4733:signal-handler (1746281197) Received SIGUSR1 in child, exiting now.
+4650:M 03 May 2025 23:06:37.538 * Removing the pid file.
+4650:M 03 May 2025 23:06:37.538 * Removing the unix socket file.
+4650:M 03 May 2025 23:06:37.538 # Valkey is now ready to exit, bye bye...

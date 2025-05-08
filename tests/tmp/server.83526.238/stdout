@@ -1,0 +1,72 @@
+### Starting server for test 
+9609:M 03 May 2025 23:07:21.761 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+9609:M 03 May 2025 23:07:21.761 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=9609, just started
+9609:M 03 May 2025 23:07:21.761 * Configuration loaded
+9609:M 03 May 2025 23:07:21.761 * Increased maximum number of open files to 10032 (it was originally set to 256).
+9609:M 03 May 2025 23:07:21.761 * monotonic clock: POSIX clock_gettime
+9609:M 03 May 2025 23:07:21.762 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21729
+ |###|   .+###############+.   |###|    PID: 9609                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+9609:M 03 May 2025 23:07:21.762 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+9609:M 03 May 2025 23:07:21.763 * Server initialized
+9609:M 03 May 2025 23:07:21.763 * Ready to accept connections tcp
+9609:M 03 May 2025 23:07:21.763 * Ready to accept connections unix
+9609:M 03 May 2025 23:07:21.915 - Accepted 127.0.0.1:55398
+9609:M 03 May 2025 23:07:21.915 - Client closed connection id=2 addr=127.0.0.1:55398 laddr=127.0.0.1:21729 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+9609:M 03 May 2025 23:07:21.933 - Accepted 127.0.0.1:55399
+### Starting test Replication backlog size can outgrow the backlog limit config dualchannel no in tests/integration/replication-buffer.tcl
+9609:S 03 May 2025 23:07:22.211 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+9609:S 03 May 2025 23:07:22.212 * Connecting to PRIMARY 127.0.0.1:21730
+9609:S 03 May 2025 23:07:22.212 * PRIMARY <-> REPLICA sync started
+9609:S 03 May 2025 23:07:22.212 * REPLICAOF 127.0.0.1:21730 enabled (user request from 'id=3 addr=127.0.0.1:55399 laddr=127.0.0.1:21729 fd=12 name= user=default lib-name= lib-ver=')
+9609:S 03 May 2025 23:07:22.212 * Non blocking connect for SYNC fired the event.
+9609:S 03 May 2025 23:07:22.212 * Primary replied to PING, replication can continue...
+9609:S 03 May 2025 23:07:22.212 * Trying a partial resynchronization (request cf9b8967f5538e3ade738485d96686ed45adb027:1).
+9609:S 03 May 2025 23:07:22.212 * Full resync from primary: 3effe112f686d1a9ea53338bc00c37ce2d8975b0:10037913
+### Starting test Replica could use replication buffer (beyond backlog config) for partial resynchronization  dualchannel no in tests/integration/replication-buffer.tcl
+9609:S 03 May 2025 23:07:27.894 - Accepted 127.0.0.1:55931
+9609:S 03 May 2025 23:07:27.895 - Client closed connection id=5 addr=127.0.0.1:55931 laddr=127.0.0.1:21729 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=249 tot-net-out=83 tot-cmds=5
+9609:S 03 May 2025 23:07:28.582 - Accepted 127.0.0.1:55986
+9609:S 03 May 2025 23:07:28.582 - Client closed connection id=6 addr=127.0.0.1:55986 laddr=127.0.0.1:21729 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=249 tot-net-out=83 tot-cmds=5
+9609:S 03 May 2025 23:07:29.590 - Accepted 127.0.0.1:56103
+9609:S 03 May 2025 23:07:29.591 - Client closed connection id=7 addr=127.0.0.1:56103 laddr=127.0.0.1:21729 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=249 tot-net-out=83 tot-cmds=5
+### Starting test Replication backlog memory will become smaller if disconnecting with replica dualchannel no in tests/integration/replication-buffer.tcl
+9609:S 03 May 2025 23:07:31.437 # I/O error reading bulk count from PRIMARY: Undefined error: 0
+9609:S 03 May 2025 23:07:31.437 * Reconnecting to PRIMARY 127.0.0.1:21730 after failure
+9609:S 03 May 2025 23:07:31.437 * PRIMARY <-> REPLICA sync started
+9609:S 03 May 2025 23:07:31.437 * Non blocking connect for SYNC fired the event.
+9609:S 03 May 2025 23:07:31.439 * Primary replied to PING, replication can continue...
+9609:S 03 May 2025 23:07:31.442 * Trying a partial resynchronization (request cf9b8967f5538e3ade738485d96686ed45adb027:1).
+9609:S 03 May 2025 23:07:31.443 * Full resync from primary: 3effe112f686d1a9ea53338bc00c37ce2d8975b0:311374821
+### Starting test Check for memory leaks (pid 9631) in tests/integration/replication-buffer.tcl
+9609:S 03 May 2025 23:07:34.931 # I/O error reading bulk count from PRIMARY: Undefined error: 0
+9609:S 03 May 2025 23:07:34.931 * Reconnecting to PRIMARY 127.0.0.1:21730 after failure
+9609:S 03 May 2025 23:07:34.931 * PRIMARY <-> REPLICA sync started
+9609:S 03 May 2025 23:07:34.931 # Error condition on socket for SYNC: Connection refused
+9609:S 03 May 2025 23:07:34.980 - Client closed connection id=3 addr=127.0.0.1:55399 laddr=127.0.0.1:21729 fd=12 name= age=13 idle=5 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=role user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=317 tot-net-out=6040 tot-cmds=8
+9609:S 03 May 2025 23:07:35.379 * Connecting to PRIMARY 127.0.0.1:21730
+9609:S 03 May 2025 23:07:35.379 * PRIMARY <-> REPLICA sync started
+9609:S 03 May 2025 23:07:35.379 # Error condition on socket for SYNC: Connection refused
+9609:signal-handler (1746281257) Received SIGTERM scheduling shutdown...
+9609:S 03 May 2025 23:07:37.454 * User requested shutdown...
+9609:S 03 May 2025 23:07:37.454 * Removing the pid file.
+9609:S 03 May 2025 23:07:37.454 * Removing the unix socket file.
+9609:S 03 May 2025 23:07:37.454 # Valkey is now ready to exit, bye bye...

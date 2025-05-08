@@ -1,0 +1,52 @@
+### Starting server for test replication child dies when parent is killed - diskless: no dual-channel-replication-enabled: no in tests/integration/replication.tcl
+18790:M 03 May 2025 23:10:02.470 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+18790:M 03 May 2025 23:10:02.470 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=18790, just started
+18790:M 03 May 2025 23:10:02.470 * Configuration loaded
+18790:M 03 May 2025 23:10:02.470 * Increased maximum number of open files to 10032 (it was originally set to 256).
+18790:M 03 May 2025 23:10:02.470 * monotonic clock: POSIX clock_gettime
+18790:M 03 May 2025 23:10:02.470 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27695
+ |###|   .+###############+.   |###|    PID: 18790                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+18790:M 03 May 2025 23:10:02.470 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+18790:M 03 May 2025 23:10:02.471 * Server initialized
+18790:M 03 May 2025 23:10:02.471 * Ready to accept connections tcp
+18790:M 03 May 2025 23:10:02.471 * Ready to accept connections unix
+18790:M 03 May 2025 23:10:02.592 - Accepted 127.0.0.1:50408
+18790:M 03 May 2025 23:10:02.593 - Client closed connection id=2 addr=127.0.0.1:50408 laddr=127.0.0.1:27695 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+18790:M 03 May 2025 23:10:02.601 - Accepted 127.0.0.1:50409
+18790:S 03 May 2025 23:10:02.601 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+18790:S 03 May 2025 23:10:02.601 * Connecting to PRIMARY 127.0.0.1:27694
+18790:S 03 May 2025 23:10:02.601 * PRIMARY <-> REPLICA sync started
+18790:S 03 May 2025 23:10:02.601 * REPLICAOF 127.0.0.1:27694 enabled (user request from 'id=3 addr=127.0.0.1:50409 laddr=127.0.0.1:27695 fd=12 name= user=default lib-name= lib-ver=')
+18790:S 03 May 2025 23:10:02.601 * Non blocking connect for SYNC fired the event.
+18790:S 03 May 2025 23:10:02.601 * Primary replied to PING, replication can continue...
+18790:S 03 May 2025 23:10:02.601 * Trying a partial resynchronization (request 1b22b7188ae12ff712bbdc3700e01980e5774e18:1).
+18790:S 03 May 2025 23:10:02.602 * Full resync from primary: f1b0ca36a92de6a283cfde2037b060e60d2658bb:0
+18790:S 03 May 2025 23:10:03.769 # I/O error reading bulk count from PRIMARY: Undefined error: 0
+18790:S 03 May 2025 23:10:03.769 * Reconnecting to PRIMARY 127.0.0.1:27694 after failure
+18790:S 03 May 2025 23:10:03.769 * PRIMARY <-> REPLICA sync started
+18790:S 03 May 2025 23:10:03.769 # Error condition on socket for SYNC: Connection refused
+18790:S 03 May 2025 23:10:03.784 - Client closed connection id=3 addr=127.0.0.1:50409 laddr=127.0.0.1:27695 fd=12 name= age=1 idle=1 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=replicaof user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=140 tot-net-out=15 tot-cmds=3
+18790:signal-handler (1746281403) Received SIGTERM scheduling shutdown...
+18790:S 03 May 2025 23:10:03.882 * User requested shutdown...
+18790:S 03 May 2025 23:10:03.882 * Removing the pid file.
+18790:S 03 May 2025 23:10:03.882 * Removing the unix socket file.
+18790:S 03 May 2025 23:10:03.882 # Valkey is now ready to exit, bye bye...

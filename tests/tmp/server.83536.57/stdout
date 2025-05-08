@@ -1,0 +1,51 @@
+### Starting server for test 
+99185:M 03 May 2025 23:05:53.456 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+99185:M 03 May 2025 23:05:53.464 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+99185:M 03 May 2025 23:05:53.473 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=99185, just started
+99185:M 03 May 2025 23:05:53.475 * Configuration loaded
+99185:M 03 May 2025 23:05:53.478 * Increased maximum number of open files to 10032 (it was originally set to 256).
+99185:M 03 May 2025 23:05:53.484 * monotonic clock: POSIX clock_gettime
+99185:M 03 May 2025 23:05:53.491 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 26639
+ |###|   .+###############+.   |###|    PID: 99185                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+99185:M 03 May 2025 23:05:53.493 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+99185:M 03 May 2025 23:05:53.493 * No cluster configuration found, I'm 5d618736ce1bce74af7aa388b236b5d07ba646fd
+99185:M 03 May 2025 23:05:53.504 * Server initialized
+99185:M 03 May 2025 23:05:53.505 * Ready to accept connections tcp
+99185:M 03 May 2025 23:05:53.505 * Ready to accept connections unix
+99185:M 03 May 2025 23:05:53.721 - Accepted 127.0.0.1:61179
+99185:M 03 May 2025 23:05:53.723 - Client closed connection id=2 addr=127.0.0.1:61179 laddr=127.0.0.1:26639 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+99185:M 03 May 2025 23:05:53.753 - Accepted 127.0.0.1:61205
+99185:M 03 May 2025 23:05:53.754 # Missing implement of connection type tls
+99185:M 03 May 2025 23:05:53.757 # DEBUG LOG: ========== I am primary 0 ==========
+99185:M 03 May 2025 23:05:55.524 * Cluster state changed: ok
+### Starting test CLUSTER SLOT-STATS network-bytes-out, for non-slot specific commands. in tests/unit/cluster/slot-stats.tcl
+### Starting test CLUSTER SLOT-STATS network-bytes-out, for slot specific commands. in tests/unit/cluster/slot-stats.tcl
+99185:M 03 May 2025 23:05:58.555 - DB 0: 1 keys (0 volatile) in 7 slots HT.
+### Starting test CLUSTER SLOT-STATS network-bytes-out, blocking commands. in tests/unit/cluster/slot-stats.tcl
+99185:M 03 May 2025 23:05:58.729 - Accepted 127.0.0.1:62850
+99185:M 03 May 2025 23:06:02.605 - Client closed connection id=3 addr=127.0.0.1:61205 laddr=127.0.0.1:26639 fd=14 name= age=9 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=flushall user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1820 tot-net-out=7062952 tot-cmds=58
+99185:signal-handler (1746281164) Received SIGTERM scheduling shutdown...
+99185:M 03 May 2025 23:06:04.152 * User requested shutdown...
+99185:M 03 May 2025 23:06:04.155 * Removing the pid file.
+99185:M 03 May 2025 23:06:04.155 * Saving the cluster configuration file before exiting.
+99185:M 03 May 2025 23:06:04.171 * Removing the unix socket file.
+99185:M 03 May 2025 23:06:04.171 # Valkey is now ready to exit, bye bye...

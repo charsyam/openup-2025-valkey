@@ -1,0 +1,57 @@
+### Starting server for test Handshake eventually succeeds after node handshake timeout on both sides with inconsistent view of the cluster in tests/unit/cluster/cluster-reliable-meet.tcl
+377:M 03 May 2025 23:06:03.173 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+377:M 03 May 2025 23:06:03.178 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+377:M 03 May 2025 23:06:03.180 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=377, just started
+377:M 03 May 2025 23:06:03.180 * Configuration loaded
+377:M 03 May 2025 23:06:03.186 * Increased maximum number of open files to 10032 (it was originally set to 256).
+377:M 03 May 2025 23:06:03.192 * monotonic clock: POSIX clock_gettime
+377:M 03 May 2025 23:06:03.198 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 23652
+ |###|   .+###############+.   |###|    PID: 377                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+377:M 03 May 2025 23:06:03.205 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+377:M 03 May 2025 23:06:03.207 * No cluster configuration found, I'm 3d430b9700b5fe230b4dac8989baa1840ac03c6c
+377:M 03 May 2025 23:06:03.216 * Server initialized
+377:M 03 May 2025 23:06:03.216 * Ready to accept connections tcp
+377:M 03 May 2025 23:06:03.216 * Ready to accept connections unix
+377:M 03 May 2025 23:06:03.372 - Accepted 127.0.0.1:65285
+377:M 03 May 2025 23:06:03.378 - Client closed connection id=2 addr=127.0.0.1:65285 laddr=127.0.0.1:23652 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+377:M 03 May 2025 23:06:03.407 - Accepted 127.0.0.1:65293
+377:M 03 May 2025 23:06:03.407 # Missing implement of connection type tls
+377:M 03 May 2025 23:06:03.469 - Accepting cluster node connection from 127.0.0.1:65333
+377:M 03 May 2025 23:06:03.469 * IP address for this node updated to 127.0.0.1
+377:M 03 May 2025 23:06:03.525 * configEpoch collision with node c555baea2daa79ccc48dfca120263b2732427faa (). configEpoch set to 2
+377:M 03 May 2025 23:06:05.239 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+377:M 03 May 2025 23:06:07.557 * Sending MEET packet to node c555baea2daa79ccc48dfca120263b2732427faa () because there is no inbound link for it
+377:M 03 May 2025 23:06:07.561 # Clusterbus handshake timeout 127.0.0.1:33650
+377:M 03 May 2025 23:06:08.169 * Successfully completed handshake with c555baea2daa79ccc48dfca120263b2732427faa ()
+377:M 03 May 2025 23:06:11.596 * Sending MEET packet to node c555baea2daa79ccc48dfca120263b2732427faa () because there is no inbound link for it
+377:M 03 May 2025 23:06:11.597 * Successfully completed handshake with c555baea2daa79ccc48dfca120263b2732427faa ()
+377:M 03 May 2025 23:06:11.656 - Accepting cluster node connection from 127.0.0.1:56225
+377:M 03 May 2025 23:06:11.698 * Node 4a47b8f75616f276ca5d0df03d2fa066dc705fd6 () reported node c555baea2daa79ccc48dfca120263b2732427faa () as not reachable.
+377:M 03 May 2025 23:06:11.698 * Cluster state changed: ok
+377:M 03 May 2025 23:06:11.848 - Accepting cluster node connection from 127.0.0.1:56529
+377:M 03 May 2025 23:06:13.211 - Client closed connection id=3 addr=127.0.0.1:65293 laddr=127.0.0.1:23652 fd=14 name= age=10 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=343 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|links user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=3528 tot-net-out=40949 tot-cmds=126
+377:signal-handler (1746281173) Received SIGTERM scheduling shutdown...
+377:M 03 May 2025 23:06:13.311 * User requested shutdown...
+377:M 03 May 2025 23:06:13.311 * Removing the pid file.
+377:M 03 May 2025 23:06:13.311 * Saving the cluster configuration file before exiting.
+377:M 03 May 2025 23:06:13.317 * Removing the unix socket file.
+377:M 03 May 2025 23:06:13.318 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,62 @@
+### Starting server for test Kill rdb child process if its dumping RDB is not useful in tests/integration/replication.tcl
+19153:M 03 May 2025 23:10:06.578 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+19153:M 03 May 2025 23:10:06.578 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=19153, just started
+19153:M 03 May 2025 23:10:06.578 * Configuration loaded
+19153:M 03 May 2025 23:10:06.579 * Increased maximum number of open files to 10032 (it was originally set to 256).
+19153:M 03 May 2025 23:10:06.579 * monotonic clock: POSIX clock_gettime
+19153:M 03 May 2025 23:10:06.579 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27701
+ |###|   .+###############+.   |###|    PID: 19153                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+19153:M 03 May 2025 23:10:06.579 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+19153:M 03 May 2025 23:10:06.579 * Server initialized
+19153:M 03 May 2025 23:10:06.579 * Ready to accept connections tcp
+19153:M 03 May 2025 23:10:06.579 * Ready to accept connections unix
+19153:M 03 May 2025 23:10:06.694 - Accepted 127.0.0.1:50431
+19153:M 03 May 2025 23:10:06.694 - Client closed connection id=2 addr=127.0.0.1:50431 laddr=127.0.0.1:27701 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+19153:M 03 May 2025 23:10:06.700 - Accepted 127.0.0.1:50432
+19153:S 03 May 2025 23:10:06.980 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+19153:S 03 May 2025 23:10:06.980 * Connecting to PRIMARY 127.0.0.1:27703
+19153:S 03 May 2025 23:10:06.980 * PRIMARY <-> REPLICA sync started
+19153:S 03 May 2025 23:10:06.980 * REPLICAOF 127.0.0.1:27703 enabled (user request from 'id=3 addr=127.0.0.1:50432 laddr=127.0.0.1:27701 fd=12 name= user=default lib-name= lib-ver=')
+19153:S 03 May 2025 23:10:06.980 * Non blocking connect for SYNC fired the event.
+19153:S 03 May 2025 23:10:06.980 * Primary replied to PING, replication can continue...
+19153:S 03 May 2025 23:10:06.980 * Trying a partial resynchronization (request 467a83a3484abe6c4df342bf30c1d5406f307301:1).
+19153:S 03 May 2025 23:10:06.980 * Full resync from primary: 1b8dd28a2d8ec52ea0f16dae7700346e70758904:0
+19153:M 03 May 2025 23:10:06.981 * Discarding previously cached primary state.
+19153:M 03 May 2025 23:10:06.981 * Setting secondary replication ID to 467a83a3484abe6c4df342bf30c1d5406f307301, valid up to offset: 1. New replication ID is 5f9eca4765f4fbfcd7d52be522459abf28c17dfb
+19153:M 03 May 2025 23:10:06.981 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:50432 laddr=127.0.0.1:27701 fd=12 name= user=default lib-name= lib-ver=')
+19153:S 03 May 2025 23:10:07.165 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+19153:S 03 May 2025 23:10:07.165 * Connecting to PRIMARY 127.0.0.1:27703
+19153:S 03 May 2025 23:10:07.166 * PRIMARY <-> REPLICA sync started
+19153:S 03 May 2025 23:10:07.166 * REPLICAOF 127.0.0.1:27703 enabled (user request from 'id=3 addr=127.0.0.1:50432 laddr=127.0.0.1:27701 fd=12 name= user=default lib-name= lib-ver=')
+19153:S 03 May 2025 23:10:07.166 * Non blocking connect for SYNC fired the event.
+19153:S 03 May 2025 23:10:07.166 * Primary replied to PING, replication can continue...
+19153:S 03 May 2025 23:10:07.166 * Trying a partial resynchronization (request 5f9eca4765f4fbfcd7d52be522459abf28c17dfb:1).
+19153:S 03 May 2025 23:10:07.166 * Full resync from primary: 1b8dd28a2d8ec52ea0f16dae7700346e70758904:0
+19153:M 03 May 2025 23:10:07.270 * Discarding previously cached primary state.
+19153:M 03 May 2025 23:10:07.271 * Setting secondary replication ID to 5f9eca4765f4fbfcd7d52be522459abf28c17dfb, valid up to offset: 1. New replication ID is be95d3e6e166d7586e24e698be801d0e40505155
+19153:M 03 May 2025 23:10:07.271 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:50432 laddr=127.0.0.1:27701 fd=12 name= user=default lib-name= lib-ver=')
+19153:M 03 May 2025 23:10:07.537 - Client closed connection id=3 addr=127.0.0.1:50432 laddr=127.0.0.1:27701 fd=12 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=5 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=slaveof user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=177 tot-net-out=25 tot-cmds=5
+19153:signal-handler (1746281407) Received SIGTERM scheduling shutdown...
+19153:M 03 May 2025 23:10:07.589 * User requested shutdown...
+19153:M 03 May 2025 23:10:07.589 * Removing the pid file.
+19153:M 03 May 2025 23:10:07.589 * Removing the unix socket file.
+19153:M 03 May 2025 23:10:07.589 # Valkey is now ready to exit, bye bye...

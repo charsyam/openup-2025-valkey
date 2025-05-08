@@ -1,0 +1,50 @@
+### Starting server for test 
+85737:M 03 May 2025 23:04:02.096 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+85737:M 03 May 2025 23:04:02.096 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=85737, just started
+85737:M 03 May 2025 23:04:02.096 * Configuration loaded
+85737:M 03 May 2025 23:04:02.096 * Increased maximum number of open files to 10032 (it was originally set to 256).
+85737:M 03 May 2025 23:04:02.096 * monotonic clock: POSIX clock_gettime
+85737:M 03 May 2025 23:04:02.096 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27614
+ |###|   .+###############+.   |###|    PID: 85737                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+85737:M 03 May 2025 23:04:02.096 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+85737:M 03 May 2025 23:04:02.097 * Server initialized
+85737:M 03 May 2025 23:04:02.097 * Ready to accept connections tcp
+85737:M 03 May 2025 23:04:02.097 * Ready to accept connections unix
+85737:M 03 May 2025 23:04:02.243 - Accepted 127.0.0.1:59270
+85737:M 03 May 2025 23:04:02.243 - Client closed connection id=2 addr=127.0.0.1:59270 laddr=127.0.0.1:27614 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+85737:M 03 May 2025 23:04:02.270 - Accepted 127.0.0.1:59272
+### Starting test query buffer resized correctly in tests/unit/querybuf.tcl
+85737:M 03 May 2025 23:04:02.270 - Accepted 127.0.0.1:59273
+85737:M 03 May 2025 23:04:05.004 - Client closed connection id=4 addr=127.0.0.1:59273 laddr=127.0.0.1:27614 fd=13 name=test_client age=3 idle=3 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=98 tot-net-out=15 tot-cmds=3
+### Starting test query buffer resized correctly when not idle in tests/unit/querybuf.tcl
+85737:M 03 May 2025 23:04:05.004 - Accepted 127.0.0.1:59360
+85737:M 03 May 2025 23:04:05.032 - Client closed connection id=5 addr=127.0.0.1:59360 laddr=127.0.0.1:27614 fd=13 name=test_client age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=5 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=400485 tot-net-out=30 tot-cmds=6
+### Starting test query buffer resized correctly with fat argv in tests/unit/querybuf.tcl
+85737:M 03 May 2025 23:04:05.033 - Accepted 127.0.0.1:59365
+85737:M 03 May 2025 23:04:07.605 - DB 9: 2 keys (0 volatile) in 7 slots HT.
+85737:M 03 May 2025 23:04:08.010 - Client closed connection id=6 addr=127.0.0.1:59365 laddr=127.0.0.1:27614 fd=13 name=test_client age=3 idle=3 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=1 qbuf-free=1015797 argv-mem=4 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=1017364 events=r cmd=client|setname user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=101 tot-net-out=10 tot-cmds=2
+85737:M 03 May 2025 23:04:08.010 - Client closed connection id=3 addr=127.0.0.1:59272 laddr=127.0.0.1:27614 fd=12 name= age=6 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=706 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=client|list user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=12571 tot-net-out=330935 tot-cmds=481
+85737:signal-handler (1746281049) Received SIGTERM scheduling shutdown...
+85737:M 03 May 2025 23:04:09.160 * User requested shutdown...
+85737:M 03 May 2025 23:04:09.160 * Removing the pid file.
+85737:M 03 May 2025 23:04:09.160 * Removing the unix socket file.
+85737:M 03 May 2025 23:04:09.160 # Valkey is now ready to exit, bye bye...

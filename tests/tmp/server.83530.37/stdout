@@ -1,0 +1,67 @@
+### Starting server for test 
+91875:M 03 May 2025 23:04:43.100 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+91875:M 03 May 2025 23:04:43.100 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+91875:M 03 May 2025 23:04:43.100 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=91875, just started
+91875:M 03 May 2025 23:04:43.100 * Configuration loaded
+91875:M 03 May 2025 23:04:43.100 * Increased maximum number of open files to 10032 (it was originally set to 256).
+91875:M 03 May 2025 23:04:43.100 * monotonic clock: POSIX clock_gettime
+91875:M 03 May 2025 23:04:43.100 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 23629
+ |###|   .+###############+.   |###|    PID: 91875                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+91875:M 03 May 2025 23:04:43.100 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+91875:M 03 May 2025 23:04:43.101 * No cluster configuration found, I'm 27304d97243d430e0beda9fe03805e06d7d4f24f
+91875:M 03 May 2025 23:04:43.107 * Server initialized
+91875:M 03 May 2025 23:04:43.107 * Ready to accept connections tcp
+91875:M 03 May 2025 23:04:43.107 * Ready to accept connections unix
+91875:M 03 May 2025 23:04:43.294 - Accepted 127.0.0.1:64040
+91875:M 03 May 2025 23:04:43.294 - Client closed connection id=2 addr=127.0.0.1:64040 laddr=127.0.0.1:23629 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+91875:M 03 May 2025 23:04:43.317 - Accepted 127.0.0.1:64053
+91875:M 03 May 2025 23:04:43.469 # Missing implement of connection type tls
+91875:M 03 May 2025 23:04:43.541 - Accepting cluster node connection from 127.0.0.1:64108
+91875:M 03 May 2025 23:04:43.541 * IP address for this node updated to 127.0.0.1
+91875:M 03 May 2025 23:04:43.680 - Accepting cluster node connection from 127.0.0.1:64138
+91875:M 03 May 2025 23:04:43.680 * configEpoch collision with node d4fda3b504f864c6ab4c0eca70adc807b03907c2 (). configEpoch set to 2
+91875:M 03 May 2025 23:04:43.721 # DEBUG LOG: ========== I am primary 1 ==========
+91875:M 03 May 2025 23:04:45.137 * Cluster state changed: ok
+### Starting test Each node has two links with each peer in tests/unit/cluster/links.tcl
+### Starting test Validate cluster links format in tests/unit/cluster/links.tcl
+### Starting test Disconnect link when send buffer limit reached in tests/unit/cluster/links.tcl
+91875:M 03 May 2025 23:04:48.985 - Accepting cluster node connection from 127.0.0.1:65384
+91875:M 03 May 2025 23:04:48.985 - Accepting cluster node connection from 127.0.0.1:49738
+91875:M 03 May 2025 23:04:48.996 - Accepting cluster node connection from 127.0.0.1:49972
+91875:M 03 May 2025 23:04:49.100 - Accepting cluster node connection from 127.0.0.1:50021
+### Starting test Link memory increases with publishes in tests/unit/cluster/links.tcl
+91875:M 03 May 2025 23:04:49.302 - Accepting cluster node connection from 127.0.0.1:50112
+### Starting test Link memory resets after publish messages flush in tests/unit/cluster/links.tcl
+### Starting test Check for memory leaks (pid 91915) in tests/unit/cluster/links.tcl
+91875:M 03 May 2025 23:04:51.105 - Connection with Node 1fa92d9c555156b78991e1bc110da199640e5dac at 127.0.0.1:33630 failed: Connection refused
+91875:M 03 May 2025 23:04:51.154 - Client closed connection id=3 addr=127.0.0.1:64053 laddr=127.0.0.1:23629 fd=14 name= age=8 idle=6 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=633 tot-net-out=6923 tot-cmds=20
+91875:M 03 May 2025 23:04:51.206 - Connection with Node 1fa92d9c555156b78991e1bc110da199640e5dac at 127.0.0.1:33630 failed: Connection refused
+91875:M 03 May 2025 23:04:51.307 - Connection with Node 1fa92d9c555156b78991e1bc110da199640e5dac at 127.0.0.1:33630 failed: Connection refused
+91875:M 03 May 2025 23:04:51.408 - Connection with Node 1fa92d9c555156b78991e1bc110da199640e5dac at 127.0.0.1:33630 failed: Connection refused
+91875:M 03 May 2025 23:04:51.509 - Connection with Node 1fa92d9c555156b78991e1bc110da199640e5dac at 127.0.0.1:33630 failed: Connection refused
+91875:M 03 May 2025 23:04:52.565 - Connection with Node 1fa92d9c555156b78991e1bc110da199640e5dac at 127.0.0.1:33630 failed: Connection refused
+91875:signal-handler (1746281092) Received SIGTERM scheduling shutdown...
+91875:M 03 May 2025 23:04:52.666 * User requested shutdown...
+91875:M 03 May 2025 23:04:52.669 * Removing the pid file.
+91875:M 03 May 2025 23:04:52.672 * Saving the cluster configuration file before exiting.
+91875:M 03 May 2025 23:04:52.697 * Removing the unix socket file.
+91875:M 03 May 2025 23:04:52.706 # Valkey is now ready to exit, bye bye...

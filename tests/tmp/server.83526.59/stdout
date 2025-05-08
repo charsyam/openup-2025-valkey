@@ -1,0 +1,173 @@
+### Starting server for test 
+90879:M 03 May 2025 23:04:38.013 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+90879:M 03 May 2025 23:04:38.013 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+90879:M 03 May 2025 23:04:38.013 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=90879, just started
+90879:M 03 May 2025 23:04:38.013 * Configuration loaded
+90879:M 03 May 2025 23:04:38.013 * Increased maximum number of open files to 10032 (it was originally set to 256).
+90879:M 03 May 2025 23:04:38.013 * monotonic clock: POSIX clock_gettime
+90879:M 03 May 2025 23:04:38.013 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 21641
+ |###|   .+###############+.   |###|    PID: 90879                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+90879:M 03 May 2025 23:04:38.013 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+90879:M 03 May 2025 23:04:38.014 * No cluster configuration found, I'm 6446ac906db3193e8d92368c67f202e98d4bb858
+90879:M 03 May 2025 23:04:38.023 * Server initialized
+90879:M 03 May 2025 23:04:38.023 * Ready to accept connections tcp
+90879:M 03 May 2025 23:04:38.023 * Ready to accept connections unix
+90879:M 03 May 2025 23:04:38.110 - Accepted 127.0.0.1:62409
+90879:M 03 May 2025 23:04:38.110 - Client closed connection id=2 addr=127.0.0.1:62409 laddr=127.0.0.1:21641 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+90879:M 03 May 2025 23:04:38.118 - Accepted 127.0.0.1:62410
+90879:M 03 May 2025 23:04:38.283 # Missing implement of connection type tls
+90879:M 03 May 2025 23:04:38.349 - Accepting cluster node connection from 127.0.0.1:62515
+90879:M 03 May 2025 23:04:38.349 * IP address for this node updated to 127.0.0.1
+90879:M 03 May 2025 23:04:38.532 * configEpoch collision with node 9193e9d26a2a40ae652d79ff50f144c07542f397 (). configEpoch set to 1
+90879:S 03 May 2025 23:04:38.563 * Connecting to PRIMARY 127.0.0.1:21642
+90879:S 03 May 2025 23:04:38.564 * PRIMARY <-> REPLICA sync started
+90879:S 03 May 2025 23:04:38.564 * Cluster state changed: ok
+90879:S 03 May 2025 23:04:38.565 * Non blocking connect for SYNC fired the event.
+90879:S 03 May 2025 23:04:38.565 # DEBUG LOG: ========== I am replica 1 ==========
+90879:S 03 May 2025 23:04:38.565 * Primary replied to PING, replication can continue...
+90879:S 03 May 2025 23:04:38.565 * Partial resynchronization not possible (no cached primary)
+90879:S 03 May 2025 23:04:38.565 * Full resync from primary: fe401358da67566cfa623e35278b0e53412c3339:0
+90879:S 03 May 2025 23:04:38.566 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+90879:S 03 May 2025 23:04:38.569 * PRIMARY <-> REPLICA sync: Flushing old data
+90879:S 03 May 2025 23:04:38.569 * PRIMARY <-> REPLICA sync: Loading DB in memory
+90879:S 03 May 2025 23:04:38.569 * Loading RDB produced by Valkey version 255.255.255
+90879:S 03 May 2025 23:04:38.569 * RDB age 0 seconds
+90879:S 03 May 2025 23:04:38.569 * RDB memory usage when created 2.91 Mb
+90879:S 03 May 2025 23:04:38.569 * Done loading RDB, keys loaded: 0, keys expired: 0.
+90879:S 03 May 2025 23:04:38.569 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test Cluster should start ok in tests/unit/cluster/diskless-load-swapdb.tcl
+### Starting test Cluster is writable in tests/unit/cluster/diskless-load-swapdb.tcl
+90879:S 03 May 2025 23:04:48.513 - Accepted 127.0.0.1:49747
+90879:S 03 May 2025 23:04:48.555 - Client closed connection id=12 addr=127.0.0.1:49747 laddr=127.0.0.1:21641 fd=18 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=0 tot-cmds=0
+### Starting test Main db not affected when fail to diskless load in tests/unit/cluster/diskless-load-swapdb.tcl
+90879:S 03 May 2025 23:04:48.569 * CONFIG REWRITE executed with success.
+90879:S 03 May 2025 23:04:48.611 * DB saved on disk
+90879:S 03 May 2025 23:04:49.029 - Client closed connection id=3 addr=127.0.0.1:62410 laddr=127.0.0.1:21641 fd=14 name= age=11 idle=1 flags=r capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=save user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=900 tot-net-out=10283 tot-cmds=27
+### Starting test Check for memory leaks (pid 90879) in tests/unit/cluster/diskless-load-swapdb.tcl
+90879:signal-handler (1746281090) Received SIGTERM scheduling shutdown...
+90879:S 03 May 2025 23:04:50.293 * User requested shutdown...
+90879:S 03 May 2025 23:04:50.293 * Removing the pid file.
+90879:S 03 May 2025 23:04:50.293 * Saving the cluster configuration file before exiting.
+90879:S 03 May 2025 23:04:50.300 * Removing the unix socket file.
+90879:S 03 May 2025 23:04:50.300 # Valkey is now ready to exit, bye bye...
+### Restarting server for test Main db not affected when fail to diskless load in tests/unit/cluster/diskless-load-swapdb.tcl
+92785:M 03 May 2025 23:04:50.399 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+92785:M 03 May 2025 23:04:50.399 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=92785, just started
+92785:M 03 May 2025 23:04:50.399 * Configuration loaded
+92785:M 03 May 2025 23:04:50.399 * Increased maximum number of open files to 10032 (it was originally set to 256).
+92785:M 03 May 2025 23:04:50.399 * monotonic clock: POSIX clock_gettime
+92785:M 03 May 2025 23:04:50.399 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 21641
+ |###|   .+###############+.   |###|    PID: 92785                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+92785:M 03 May 2025 23:04:50.399 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+92785:M 03 May 2025 23:04:50.399 * Node configuration loaded, I'm 6446ac906db3193e8d92368c67f202e98d4bb858
+92785:M 03 May 2025 23:04:50.400 * Server initialized
+92785:M 03 May 2025 23:04:50.400 * Loading RDB produced by Valkey version 255.255.255
+92785:M 03 May 2025 23:04:50.400 * RDB age 2 seconds
+92785:M 03 May 2025 23:04:50.400 * RDB memory usage when created 3.07 Mb
+92785:M 03 May 2025 23:04:50.400 * Done loading RDB, keys loaded: 101, keys expired: 0.
+92785:M 03 May 2025 23:04:50.400 * DB loaded from disk: 0.000 seconds
+92785:M 03 May 2025 23:04:50.400 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+92785:M 03 May 2025 23:04:50.400 * Ready to accept connections tcp
+92785:M 03 May 2025 23:04:50.400 * Ready to accept connections unix
+92785:M 03 May 2025 23:04:50.400 * Cluster state changed: ok
+92785:M 03 May 2025 23:04:50.400 - DB 0: 101 keys (0 volatile) in 707 slots HT.
+92785:S 03 May 2025 23:04:50.400 * Discarding previously cached primary state.
+92785:S 03 May 2025 23:04:50.400 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+92785:S 03 May 2025 23:04:50.400 * Connecting to PRIMARY 127.0.0.1:21642
+92785:S 03 May 2025 23:04:50.400 * PRIMARY <-> REPLICA sync started
+92785:S 03 May 2025 23:04:50.400 * Non blocking connect for SYNC fired the event.
+92785:S 03 May 2025 23:04:50.400 * Primary replied to PING, replication can continue...
+92785:S 03 May 2025 23:04:50.400 * Trying a partial resynchronization (request fe401358da67566cfa623e35278b0e53412c3339:5547).
+92785:S 03 May 2025 23:04:50.401 * Full resync from primary: fe401358da67566cfa623e35278b0e53412c3339:10564458
+92785:S 03 May 2025 23:04:50.459 - Accepting cluster node connection from 127.0.0.1:50562
+92785:S 03 May 2025 23:04:50.524 - Accepted 127.0.0.1:50573
+92785:S 03 May 2025 23:04:50.568 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to parser
+92785:S 03 May 2025 23:04:50.568 * PRIMARY <-> REPLICA sync: Loading DB in memory
+92785:S 03 May 2025 23:04:50.568 * Loading RDB produced by Valkey version 255.255.255
+92785:S 03 May 2025 23:04:50.568 * RDB age 0 seconds
+92785:S 03 May 2025 23:04:50.568 * RDB memory usage when created 19.29 Mb
+92785:S 03 May 2025 23:05:12.794 - Accepting cluster node connection from 127.0.0.1:51735
+92785:S 03 May 2025 23:05:12.795 - Accepting cluster node connection from 127.0.0.1:52580
+92785:S 03 May 2025 23:05:12.796 - Accepting cluster node connection from 127.0.0.1:53092
+92785:S 03 May 2025 23:05:12.796 - Accepting cluster node connection from 127.0.0.1:53974
+92785:S 03 May 2025 23:05:12.806 - Accepting cluster node connection from 127.0.0.1:55571
+92785:S 03 May 2025 23:05:12.812 - Accepting cluster node connection from 127.0.0.1:58141
+92785:S 03 May 2025 23:05:12.813 - Accepting cluster node connection from 127.0.0.1:61373
+92785:S 03 May 2025 23:06:12.819 # Short read or OOM loading DB. Unrecoverable error, aborting now.
+92785:S 03 May 2025 23:06:12.819 # Internal error in RDB reading offset 2096776, function at rdb.c:3415 -> Unexpected EOF reading RDB file. Failure loading rdb format from socket, assuming connection error, resuming operation.
+92785:S 03 May 2025 23:06:12.819 # Failed trying to load the PRIMARY synchronization DB from socket, check server logs.
+92785:S 03 May 2025 23:06:12.819 * PRIMARY <-> REPLICA sync: Discarding temporary DB in background
+92785:S 03 May 2025 23:06:12.819 * Reconnecting to PRIMARY 127.0.0.1:21642 after failure
+92785:S 03 May 2025 23:06:12.819 * PRIMARY <-> REPLICA sync started
+92785:S 03 May 2025 23:06:12.820 * Non blocking connect for SYNC fired the event.
+92785:S 03 May 2025 23:06:12.856 * Primary replied to PING, replication can continue...
+92785:S 03 May 2025 23:06:12.856 * Trying a partial resynchronization (request fe401358da67566cfa623e35278b0e53412c3339:5547).
+### Starting test Check for memory leaks (pid 90931) in tests/unit/cluster/diskless-load-swapdb.tcl
+92785:S 03 May 2025 23:06:12.961 * Full resync from primary: fe401358da67566cfa623e35278b0e53412c3339:10564486
+92785:S 03 May 2025 23:06:13.125 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to parser
+92785:S 03 May 2025 23:06:13.125 * PRIMARY <-> REPLICA sync: Loading DB in memory
+92785:S 03 May 2025 23:06:13.125 * Loading RDB produced by Valkey version 255.255.255
+92785:S 03 May 2025 23:06:13.125 * RDB age 1 seconds
+92785:S 03 May 2025 23:06:13.125 * RDB memory usage when created 19.29 Mb
+92785:S 03 May 2025 23:06:24.655 # Short read or OOM loading DB. Unrecoverable error, aborting now.
+92785:S 03 May 2025 23:06:24.655 # Internal error in RDB reading offset 0, function at rdb.c:3415 -> Unexpected EOF reading RDB file. Failure loading rdb format from socket, assuming connection error, resuming operation.
+92785:S 03 May 2025 23:06:24.655 # Failed trying to load the PRIMARY synchronization DB from socket, check server logs.
+92785:S 03 May 2025 23:06:24.655 * PRIMARY <-> REPLICA sync: Discarding temporary DB in background
+92785:S 03 May 2025 23:06:24.656 * Reconnecting to PRIMARY 127.0.0.1:21642 after failure
+92785:S 03 May 2025 23:06:24.656 * PRIMARY <-> REPLICA sync started
+92785:S 03 May 2025 23:06:24.656 - Accepting cluster node connection from 127.0.0.1:60210
+92785:S 03 May 2025 23:06:24.656 - Accepting cluster node connection from 127.0.0.1:63630
+92785:S 03 May 2025 23:06:24.656 - Accepting cluster node connection from 127.0.0.1:50253
+92785:S 03 May 2025 23:06:24.656 - Accepting cluster node connection from 127.0.0.1:52324
+92785:S 03 May 2025 23:06:24.656 # Error condition on socket for SYNC: Connection refused
+92785:S 03 May 2025 23:06:24.691 - Client closed connection id=4 addr=127.0.0.1:50573 laddr=127.0.0.1:21641 fd=17 name= age=94 idle=12 flags=r capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6656 rbp=0 obl=0 oll=0 omem=0 tot-mem=24064 events=r cmd=cluster|getkeysinslot user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=245 tot-net-out=38715 tot-cmds=10
+92785:S 03 May 2025 23:06:24.757 * Connecting to PRIMARY 127.0.0.1:21642
+92785:S 03 May 2025 23:06:24.757 * PRIMARY <-> REPLICA sync started
+92785:S 03 May 2025 23:06:24.757 # Error condition on socket for SYNC: Connection refused
+92785:S 03 May 2025 23:06:24.758 - Connection with Node 9193e9d26a2a40ae652d79ff50f144c07542f397 at 127.0.0.1:31642 failed: Connection refused
+92785:S 03 May 2025 23:06:24.858 - Connection with Node 9193e9d26a2a40ae652d79ff50f144c07542f397 at 127.0.0.1:31642 failed: Connection refused
+92785:S 03 May 2025 23:06:25.895 - Connection with Node 9193e9d26a2a40ae652d79ff50f144c07542f397 at 127.0.0.1:31642 failed: Connection refused
+92785:signal-handler (1746281185) Received SIGTERM scheduling shutdown...
+92785:S 03 May 2025 23:06:25.996 * User requested shutdown...
+92785:S 03 May 2025 23:06:25.996 * Removing the pid file.
+92785:S 03 May 2025 23:06:25.996 * Saving the cluster configuration file before exiting.
+92785:S 03 May 2025 23:06:26.007 * Removing the unix socket file.
+92785:S 03 May 2025 23:06:26.007 # Valkey is now ready to exit, bye bye...

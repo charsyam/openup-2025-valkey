@@ -1,0 +1,53 @@
+### Starting server for test Shutting down master waits for replica timeout in tests/integration/shutdown.tcl
+8480:M 03 May 2025 23:07:06.622 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+8480:M 03 May 2025 23:07:06.622 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=8480, just started
+8480:M 03 May 2025 23:07:06.622 * Configuration loaded
+8480:M 03 May 2025 23:07:06.622 * Increased maximum number of open files to 10032 (it was originally set to 256).
+8480:M 03 May 2025 23:07:06.622 * monotonic clock: POSIX clock_gettime
+8480:M 03 May 2025 23:07:06.623 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26197
+ |###|   .+###############+.   |###|    PID: 8480                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+8480:M 03 May 2025 23:07:06.623 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+8480:M 03 May 2025 23:07:06.623 * Server initialized
+8480:M 03 May 2025 23:07:06.623 * Ready to accept connections tcp
+8480:M 03 May 2025 23:07:06.623 * Ready to accept connections unix
+8480:M 03 May 2025 23:07:06.639 - Accepted 127.0.0.1:49712
+8480:M 03 May 2025 23:07:06.640 - Client closed connection id=2 addr=127.0.0.1:49712 laddr=127.0.0.1:26197 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+8480:M 03 May 2025 23:07:06.669 - Accepted 127.0.0.1:49731
+8480:M 03 May 2025 23:07:06.769 - Accepted 127.0.0.1:49804
+8480:M 03 May 2025 23:07:06.770 * Replica 127.0.0.1:26198 asks for synchronization
+8480:M 03 May 2025 23:07:06.770 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'd3567c34c0e6519d3e9b54a6bd5090e484ed1cb9', my replication IDs are 'f53a53e554c342c752f47ef689b3be8746bc96c2' and '0000000000000000000000000000000000000000')
+8480:M 03 May 2025 23:07:06.770 * Replication backlog created, my new replication IDs are 'ef9f584bfe68a37a7f08c8504e9d21941ae194c6' and '0000000000000000000000000000000000000000'
+8480:M 03 May 2025 23:07:06.770 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+8480:M 03 May 2025 23:07:06.771 * Background RDB transfer started by pid 8494 to pipe through parent process
+8494:C 03 May 2025 23:07:06.771 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+8480:M 03 May 2025 23:07:06.772 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+8480:M 03 May 2025 23:07:06.775 * Background RDB transfer terminated with success
+8480:M 03 May 2025 23:07:06.776 * Streamed RDB transfer with replica 127.0.0.1:26198 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+8480:M 03 May 2025 23:07:06.776 * Synchronization with replica 127.0.0.1:26198 succeeded
+8480:signal-handler (1746281227) Received SIGTERM scheduling shutdown...
+8480:M 03 May 2025 23:07:07.127 * User requested shutdown...
+8480:M 03 May 2025 23:07:07.127 * Waiting for replicas before shutting down.
+8480:M 03 May 2025 23:07:08.136 * Lagging replica 127.0.0.1:26198 reported offset 3259314 behind master, lag=2, state=online.
+8480:M 03 May 2025 23:07:08.137 * 0 of 1 replicas are in sync when shutting down.
+8480:M 03 May 2025 23:07:08.137 * Removing the pid file.
+8480:M 03 May 2025 23:07:08.137 * Removing the unix socket file.
+8480:M 03 May 2025 23:07:08.137 # Valkey is now ready to exit, bye bye...

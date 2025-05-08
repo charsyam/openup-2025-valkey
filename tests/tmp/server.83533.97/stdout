@@ -1,0 +1,107 @@
+### Starting server for test 
+416:M 03 May 2025 23:06:03.426 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+416:M 03 May 2025 23:06:03.427 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+416:M 03 May 2025 23:06:03.429 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=416, just started
+416:M 03 May 2025 23:06:03.432 * Configuration loaded
+416:M 03 May 2025 23:06:03.437 * Increased maximum number of open files to 10032 (it was originally set to 256).
+416:M 03 May 2025 23:06:03.439 * monotonic clock: POSIX clock_gettime
+416:M 03 May 2025 23:06:03.439 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25165
+ |###|   .+###############+.   |###|    PID: 416                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+416:M 03 May 2025 23:06:03.445 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+416:M 03 May 2025 23:06:03.448 * No cluster configuration found, I'm a5db02ada00a74da18faa190c270f2220f36904a
+416:M 03 May 2025 23:06:03.458 * Server initialized
+416:M 03 May 2025 23:06:03.458 * Ready to accept connections tcp
+416:M 03 May 2025 23:06:03.458 * Ready to accept connections unix
+416:M 03 May 2025 23:06:03.596 - Accepted 127.0.0.1:65383
+416:M 03 May 2025 23:06:03.597 - Client closed connection id=2 addr=127.0.0.1:65383 laddr=127.0.0.1:25165 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+416:M 03 May 2025 23:06:03.613 - Accepted 127.0.0.1:65385
+416:M 03 May 2025 23:06:03.615 * Cluster meet 127.0.0.1:25164 (user request from 'id=3 addr=127.0.0.1:65385 laddr=127.0.0.1:25165 fd=14 name= user=default lib-name= lib-ver=').
+416:M 03 May 2025 23:06:03.643 # Missing implement of connection type tls
+416:M 03 May 2025 23:06:03.729 - Accepting cluster node connection from 127.0.0.1:65441
+416:M 03 May 2025 23:06:03.730 * IP address for this node updated to 127.0.0.1
+416:M 03 May 2025 23:06:03.735 * Successfully completed handshake with cde250def77765a2bb8254716c8fa925dda7cb5b ()
+416:M 03 May 2025 23:06:03.741 * configEpoch collision with node cde250def77765a2bb8254716c8fa925dda7cb5b (). configEpoch set to 1
+416:M 03 May 2025 23:06:03.772 - Accepted 127.0.0.1:65476
+416:M 03 May 2025 23:06:03.773 * Node cde250def77765a2bb8254716c8fa925dda7cb5b () is no longer primary of shard 81de324fbe43ac6baba4f4c99d65753c8abcedc3; removed all 0 slot(s) it used to own
+416:M 03 May 2025 23:06:03.773 * Node cde250def77765a2bb8254716c8fa925dda7cb5b () is now part of shard aff5016310967d4ce7aadfd5c075c6f796551149
+416:M 03 May 2025 23:06:03.773 * Node cde250def77765a2bb8254716c8fa925dda7cb5b () is now a replica of node a5db02ada00a74da18faa190c270f2220f36904a () in shard aff5016310967d4ce7aadfd5c075c6f796551149
+416:M 03 May 2025 23:06:03.773 # DEBUG LOG: ========== I am primary 0 ==========
+416:M 03 May 2025 23:06:03.773 * Replica 127.0.0.1:25164 asks for synchronization
+416:M 03 May 2025 23:06:03.773 * Full resync requested by replica 127.0.0.1:25164
+416:M 03 May 2025 23:06:03.773 * Replication backlog created, my new replication IDs are '90a9f88cbe39d4bbb774a238ad68fecee455e499' and '0000000000000000000000000000000000000000'
+416:M 03 May 2025 23:06:03.773 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+416:M 03 May 2025 23:06:03.775 * Background RDB transfer started by pid 460 to pipe through parent process
+460:C 03 May 2025 23:06:03.775 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+416:M 03 May 2025 23:06:03.778 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+416:M 03 May 2025 23:06:03.802 * Background RDB transfer terminated with success
+416:M 03 May 2025 23:06:03.806 * Streamed RDB transfer with replica 127.0.0.1:25164 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+416:M 03 May 2025 23:06:03.809 * Synchronization with replica 127.0.0.1:25164 succeeded
+416:M 03 May 2025 23:06:05.481 * Cluster state changed: ok
+### Starting test Cluster should start ok in tests/unit/cluster/transactions-on-replica.tcl
+### Starting test Can't read from replica without READONLY in tests/unit/cluster/transactions-on-replica.tcl
+### Starting test Can't read from replica after READWRITE in tests/unit/cluster/transactions-on-replica.tcl
+### Starting test Can read from replica after READONLY in tests/unit/cluster/transactions-on-replica.tcl
+### Starting test Can perform HSET primary and HGET from replica in tests/unit/cluster/transactions-on-replica.tcl
+### Starting test Can MULTI-EXEC transaction of HGET operations from replica in tests/unit/cluster/transactions-on-replica.tcl
+### Starting test MULTI-EXEC with write operations is MOVED in tests/unit/cluster/transactions-on-replica.tcl
+### Starting test write command is QUEUED, then EXEC should be MOVED after failover in tests/unit/cluster/transactions-on-replica.tcl
+416:M 03 May 2025 23:06:13.715 - Accepted 127.0.0.1:58961
+416:M 03 May 2025 23:06:13.716 * Failover auth granted to cde250def77765a2bb8254716c8fa925dda7cb5b () for epoch 2
+416:M 03 May 2025 23:06:13.730 - Client closed connection id=7 addr=127.0.0.1:65476 laddr=127.0.0.1:25165 fd=17 name= age=10 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=667 tot-net-out=196 tot-cmds=17
+416:M 03 May 2025 23:06:13.730 * Connection with replica 127.0.0.1:25164 lost.
+416:M 03 May 2025 23:06:13.734 * Configuration change detected. Reconfiguring myself as a replica of node cde250def77765a2bb8254716c8fa925dda7cb5b () in shard aff5016310967d4ce7aadfd5c075c6f796551149
+416:S 03 May 2025 23:06:13.734 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+416:S 03 May 2025 23:06:13.734 * Connecting to PRIMARY 127.0.0.1:25164
+416:S 03 May 2025 23:06:13.734 * PRIMARY <-> REPLICA sync started
+416:S 03 May 2025 23:06:13.741 * Non blocking connect for SYNC fired the event.
+416:S 03 May 2025 23:06:13.741 * Primary replied to PING, replication can continue...
+416:S 03 May 2025 23:06:13.741 * Trying a partial resynchronization (request 90a9f88cbe39d4bbb774a238ad68fecee455e499:170).
+416:S 03 May 2025 23:06:13.741 * Successful partial resynchronization with primary.
+416:S 03 May 2025 23:06:13.741 * Primary replication ID changed to e6c0d28794be824fcc6e36e00457da384ca0dc53
+416:S 03 May 2025 23:06:13.741 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+416:S 03 May 2025 23:06:14.734 - Client closed connection id=9 addr=127.0.0.1:58961 laddr=127.0.0.1:25165 fd=18 name= age=1 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=30 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=exec user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=74 tot-net-out=51 tot-cmds=2
+416:S 03 May 2025 23:06:14.734 * Forced failover user request accepted (user request from 'id=3 addr=127.0.0.1:65385 laddr=127.0.0.1:25165 fd=14 name= user=default lib-name= lib-ver=').
+416:S 03 May 2025 23:06:14.734 * Start of election delayed for 0 milliseconds (rank #0, primary rank #0, offset 169).
+416:S 03 May 2025 23:06:14.734 * Starting a failover election for epoch 3, node config epoch is 2
+416:S 03 May 2025 23:06:14.744 * Failover election won: I'm the new primary.
+416:S 03 May 2025 23:06:14.744 * configEpoch set to 3 after successful failover
+416:S 03 May 2025 23:06:14.744 * Setting myself to primary in shard aff5016310967d4ce7aadfd5c075c6f796551149 after failover; my old primary is cde250def77765a2bb8254716c8fa925dda7cb5b ()
+416:M 03 May 2025 23:06:14.744 * Connection with primary lost.
+416:M 03 May 2025 23:06:14.744 * Caching the disconnected primary state.
+416:M 03 May 2025 23:06:14.744 * Discarding previously cached primary state.
+416:M 03 May 2025 23:06:14.744 * Setting secondary replication ID to e6c0d28794be824fcc6e36e00457da384ca0dc53, valid up to offset: 170. New replication ID is 9d31db449c7d372f34c7a8faa41dcad469105b4b
+416:M 03 May 2025 23:06:14.774 - Accepted 127.0.0.1:60129
+416:M 03 May 2025 23:06:14.779 - Node cde250def77765a2bb8254716c8fa925dda7cb5b has old slots configuration, sending an UPDATE message about a5db02ada00a74da18faa190c270f2220f36904a
+416:M 03 May 2025 23:06:14.779 * A failover occurred in shard aff5016310967d4ce7aadfd5c075c6f796551149; node cde250def77765a2bb8254716c8fa925dda7cb5b () failed over to node a5db02ada00a74da18faa190c270f2220f36904a () with a config epoch of 3
+416:M 03 May 2025 23:06:14.779 * Node cde250def77765a2bb8254716c8fa925dda7cb5b () is now a replica of node a5db02ada00a74da18faa190c270f2220f36904a () in shard aff5016310967d4ce7aadfd5c075c6f796551149
+416:M 03 May 2025 23:06:14.780 * Replica 127.0.0.1:25164 asks for synchronization
+416:M 03 May 2025 23:06:14.780 * Partial resynchronization request from 127.0.0.1:25164 accepted. Sending 0 bytes of backlog starting from offset 170.
+### Starting test read-only blocking operations from replica in tests/unit/cluster/transactions-on-replica.tcl
+### Starting test reply MOVED when eval from replica for update in tests/unit/cluster/transactions-on-replica.tcl
+416:M 03 May 2025 23:06:15.786 - Client closed connection id=3 addr=127.0.0.1:65385 laddr=127.0.0.1:25165 fd=14 name= age=12 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=xadd user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6096 tot-net-out=112718 tot-cmds=208
+416:signal-handler (1746281177) Received SIGTERM scheduling shutdown...
+416:M 03 May 2025 23:06:17.926 * User requested shutdown...
+416:M 03 May 2025 23:06:17.926 * 1 of 1 replicas are in sync when shutting down.
+416:M 03 May 2025 23:06:17.926 * Removing the pid file.
+416:M 03 May 2025 23:06:17.926 * Saving the cluster configuration file before exiting.
+416:M 03 May 2025 23:06:17.931 * Removing the unix socket file.
+416:M 03 May 2025 23:06:17.932 # Valkey is now ready to exit, bye bye...

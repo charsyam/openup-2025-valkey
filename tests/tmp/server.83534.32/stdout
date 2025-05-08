@@ -1,0 +1,43 @@
+### Starting server for test 
+86976:M 03 May 2025 23:04:09.207 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+86976:M 03 May 2025 23:04:09.207 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=86976, just started
+86976:M 03 May 2025 23:04:09.207 * Configuration loaded
+86976:M 03 May 2025 23:04:09.207 * Increased maximum number of open files to 10032 (it was originally set to 256).
+86976:M 03 May 2025 23:04:09.207 * monotonic clock: POSIX clock_gettime
+86976:M 03 May 2025 23:04:09.207 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25624
+ |###|   .+###############+.   |###|    PID: 86976                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+86976:M 03 May 2025 23:04:09.207 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+86976:M 03 May 2025 23:04:09.207 * Server initialized
+86976:M 03 May 2025 23:04:09.207 * Ready to accept connections tcp
+86976:M 03 May 2025 23:04:09.207 * Ready to accept connections unix
+86976:M 03 May 2025 23:04:09.346 - Accepted 127.0.0.1:59489
+86976:M 03 May 2025 23:04:09.349 - Client closed connection id=2 addr=127.0.0.1:59489 laddr=127.0.0.1:25624 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+86976:M 03 May 2025 23:04:09.372 - Accepted 127.0.0.1:59491
+### Starting test Regression for a crash with blocking ops and pipelining in tests/unit/protocol.tcl
+86976:M 03 May 2025 23:04:09.373 - Accepted 127.0.0.1:59492
+86976:M 03 May 2025 23:04:09.374 - Client closed connection id=4 addr=127.0.0.1:59492 laddr=127.0.0.1:25624 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=rpush user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=91 tot-net-out=13 tot-cmds=3
+86976:M 03 May 2025 23:04:09.374 - Reading from client: Connection reset by peer
+86976:signal-handler (1746281050) Received SIGTERM scheduling shutdown...
+86976:M 03 May 2025 23:04:10.559 * User requested shutdown...
+86976:M 03 May 2025 23:04:10.559 * Removing the pid file.
+86976:M 03 May 2025 23:04:10.559 * Removing the unix socket file.
+86976:M 03 May 2025 23:04:10.559 # Valkey is now ready to exit, bye bye...

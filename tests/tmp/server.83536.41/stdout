@@ -1,0 +1,116 @@
+### Starting server for test 
+92114:M 03 May 2025 23:04:44.963 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+92114:M 03 May 2025 23:04:44.970 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+92114:M 03 May 2025 23:04:44.978 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=92114, just started
+92114:M 03 May 2025 23:04:44.986 * Configuration loaded
+92114:M 03 May 2025 23:04:44.989 * Increased maximum number of open files to 10032 (it was originally set to 256).
+92114:M 03 May 2025 23:04:44.996 * monotonic clock: POSIX clock_gettime
+92114:M 03 May 2025 23:04:45.019 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 26631
+ |###|   .+###############+.   |###|    PID: 92114                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+92114:M 03 May 2025 23:04:45.022 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+92114:M 03 May 2025 23:04:45.029 * No cluster configuration found, I'm f15740c37371a3a8dfbb0c5844703e61e08ee98a
+92114:M 03 May 2025 23:04:45.044 * Server initialized
+92114:M 03 May 2025 23:04:45.044 * Ready to accept connections tcp
+92114:M 03 May 2025 23:04:45.044 * Ready to accept connections unix
+92114:M 03 May 2025 23:04:45.123 - Accepted 127.0.0.1:64620
+92114:M 03 May 2025 23:04:45.123 - Client closed connection id=2 addr=127.0.0.1:64620 laddr=127.0.0.1:26631 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+92114:M 03 May 2025 23:04:45.142 - Accepted 127.0.0.1:64628
+92114:M 03 May 2025 23:04:45.736 - Accepting cluster node connection from 127.0.0.1:64797
+92114:M 03 May 2025 23:04:45.736 * IP address for this node updated to 127.0.0.1
+92114:M 03 May 2025 23:04:45.863 * Successfully completed handshake with b6078f57bd5bfad24cd8e7b2be250abbe73202f7 ()
+92114:M 03 May 2025 23:04:45.888 - Accepting cluster node connection from 127.0.0.1:64870
+92114:M 03 May 2025 23:04:45.929 # Missing implement of connection type tls
+92114:M 03 May 2025 23:04:45.947 - Accepting cluster node connection from 127.0.0.1:64903
+92114:S 03 May 2025 23:04:45.958 * Connecting to PRIMARY 127.0.0.1:26634
+92114:S 03 May 2025 23:04:45.958 * PRIMARY <-> REPLICA sync started
+92114:S 03 May 2025 23:04:45.958 - Accepting cluster node connection from 127.0.0.1:64913
+92114:S 03 May 2025 23:04:45.958 * Cluster state changed: ok
+92114:S 03 May 2025 23:04:45.959 * Non blocking connect for SYNC fired the event.
+92114:S 03 May 2025 23:04:45.964 * Primary replied to PING, replication can continue...
+92114:S 03 May 2025 23:04:45.971 * Partial resynchronization not possible (no cached primary)
+92114:S 03 May 2025 23:04:45.971 * Full resync from primary: 9fb7f2c75bd1830992c0a12913d1abff6e6f86bb:0
+92114:S 03 May 2025 23:04:45.971 * Node 393d85b08c8277cd2e6737ff8fa5fb97e00f87bc () is no longer primary of shard 2518b9589a5ff148bb62b8610c4a14b34f9e0fb3; removed all 0 slot(s) it used to own
+92114:S 03 May 2025 23:04:45.971 * Node 393d85b08c8277cd2e6737ff8fa5fb97e00f87bc () is now part of shard 5078366b5b8316336bb432cfa9eef46ec92edef5
+92114:S 03 May 2025 23:04:45.971 * Node 393d85b08c8277cd2e6737ff8fa5fb97e00f87bc () is now a replica of node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc () in shard 5078366b5b8316336bb432cfa9eef46ec92edef5
+92114:S 03 May 2025 23:04:45.973 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+92114:S 03 May 2025 23:04:45.975 * PRIMARY <-> REPLICA sync: Flushing old data
+92114:S 03 May 2025 23:04:45.975 * PRIMARY <-> REPLICA sync: Loading DB in memory
+92114:S 03 May 2025 23:04:45.975 * Loading RDB produced by Valkey version 255.255.255
+92114:S 03 May 2025 23:04:45.975 * RDB age 0 seconds
+92114:S 03 May 2025 23:04:45.975 * RDB memory usage when created 2.91 Mb
+92114:S 03 May 2025 23:04:45.975 * Done loading RDB, keys loaded: 0, keys expired: 0.
+92114:S 03 May 2025 23:04:45.975 * PRIMARY <-> REPLICA sync: Finished with success
+92114:S 03 May 2025 23:04:45.978 # DEBUG LOG: ========== I am replica 3 ==========
+92114:S 03 May 2025 23:04:46.024 - Accepting cluster node connection from 127.0.0.1:64946
+92114:S 03 May 2025 23:04:46.024 * Node b3d4904df8944becb13a00b7aefd277cb3284de6 () is no longer primary of shard 48e3516bead6d03cf39ad488894c23feb2efc38c; removed all 0 slot(s) it used to own
+92114:S 03 May 2025 23:04:46.024 * Node b3d4904df8944becb13a00b7aefd277cb3284de6 () is now part of shard e55bdd5cdca6f94bacfd1a00abe1a7c257e2c214
+92114:S 03 May 2025 23:04:46.024 * Node b3d4904df8944becb13a00b7aefd277cb3284de6 () is now a replica of node b6078f57bd5bfad24cd8e7b2be250abbe73202f7 () in shard e55bdd5cdca6f94bacfd1a00abe1a7c257e2c214
+### Starting test NOADDR nodes will be marked as FAIL in tests/unit/cluster/noaddr.tcl
+92114:S 03 May 2025 23:04:55.793 * FAIL message received from b6078f57bd5bfad24cd8e7b2be250abbe73202f7 () about ef87969321deaba623a07e7edaed2fe693c1c373 ()
+92114:S 03 May 2025 23:04:55.793 # Cluster state changed: fail
+92114:S 03 May 2025 23:04:55.793 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+92114:S 03 May 2025 23:04:55.838 * PONG contains mismatching sender ID. About node ef87969321deaba623a07e7edaed2fe693c1c373 () in shard 69671a7b04efb4590ed7c939b8b22c66405736c4 added 10102 ms ago, having flags 7945
+92114:S 03 May 2025 23:04:55.838 * Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc () reported node ef87969321deaba623a07e7edaed2fe693c1c373 () as not reachable.
+92114:S 03 May 2025 23:04:55.938 * Start of election delayed for 782 milliseconds (rank #0, primary rank #0, offset 14).
+92114:S 03 May 2025 23:04:56.039 * Currently unable to failover: Waiting the delay before I can start a new failover.
+92114:S 03 May 2025 23:04:56.745 * Starting a failover election for epoch 5, node config epoch is 1
+92114:S 03 May 2025 23:04:56.830 * Currently unable to failover: Waiting for votes, but majority still not reached.
+92114:S 03 May 2025 23:04:56.832 * Needed quorum: 2. Number of votes received so far: 1
+92114:S 03 May 2025 23:04:56.849 * Failover election won: I'm the new primary.
+92114:S 03 May 2025 23:04:56.852 * configEpoch set to 5 after successful failover
+92114:S 03 May 2025 23:04:56.855 * Setting myself to primary in shard 69671a7b04efb4590ed7c939b8b22c66405736c4 after failover; my old primary is ef87969321deaba623a07e7edaed2fe693c1c373 ()
+92114:M 03 May 2025 23:04:56.860 * Connection with primary lost.
+92114:M 03 May 2025 23:04:56.860 * Caching the disconnected primary state.
+92114:M 03 May 2025 23:04:56.860 * Discarding previously cached primary state.
+92114:M 03 May 2025 23:04:56.860 * Setting secondary replication ID to 9fb7f2c75bd1830992c0a12913d1abff6e6f86bb, valid up to offset: 15. New replication ID is b090d6d721db90f722699cd341fc866067c105b8
+92114:M 03 May 2025 23:04:56.862 * Cluster state changed: ok
+### Starting test Check for memory leaks (pid 92173) in tests/unit/cluster/noaddr.tcl
+### Starting test Check for memory leaks (pid 92156) in tests/unit/cluster/noaddr.tcl
+92114:M 03 May 2025 23:04:58.974 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:04:59.074 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+### Starting test Check for memory leaks (pid 92137) in tests/unit/cluster/noaddr.tcl
+92114:M 03 May 2025 23:04:59.174 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:04:59.275 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:04:59.377 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:04:59.478 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:04:59.579 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:04:59.680 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:04:59.781 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:04:59.882 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:04:59.983 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:05:00.085 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:05:00.185 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:05:00.286 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:05:00.286 - Connection with Node b6078f57bd5bfad24cd8e7b2be250abbe73202f7 at 127.0.0.1:36632 failed: Connection refused
+92114:M 03 May 2025 23:05:00.296 - Client closed connection id=3 addr=127.0.0.1:64628 laddr=127.0.0.1:26631 fd=14 name= age=15 idle=4 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=478 tot-net-out=5554 tot-cmds=11
+92114:M 03 May 2025 23:05:00.387 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:05:00.388 - Connection with Node b6078f57bd5bfad24cd8e7b2be250abbe73202f7 at 127.0.0.1:36632 failed: Connection refused
+92114:M 03 May 2025 23:05:00.489 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:05:00.490 - Connection with Node b6078f57bd5bfad24cd8e7b2be250abbe73202f7 at 127.0.0.1:36632 failed: Connection refused
+92114:M 03 May 2025 23:05:01.179 - Connection with Node 8a95d869ad2ae82375efb0b8e17b9310c5964ecc at 127.0.0.1:36633 failed: Connection refused
+92114:M 03 May 2025 23:05:01.179 - Connection with Node b6078f57bd5bfad24cd8e7b2be250abbe73202f7 at 127.0.0.1:36632 failed: Connection refused
+92114:signal-handler (1746281101) Received SIGTERM scheduling shutdown...
+92114:M 03 May 2025 23:05:01.280 * User requested shutdown...
+92114:M 03 May 2025 23:05:01.282 * Removing the pid file.
+92114:M 03 May 2025 23:05:01.283 * Saving the cluster configuration file before exiting.
+92114:M 03 May 2025 23:05:01.289 * Removing the unix socket file.
+92114:M 03 May 2025 23:05:01.289 # Valkey is now ready to exit, bye bye...

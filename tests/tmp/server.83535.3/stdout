@@ -1,0 +1,256 @@
+### Starting server for test 
+85272:M 03 May 2025 23:03:57.906 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+85272:M 03 May 2025 23:03:57.906 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=85272, just started
+85272:M 03 May 2025 23:03:57.906 * Configuration loaded
+85272:M 03 May 2025 23:03:57.906 * Increased maximum number of open files to 10032 (it was originally set to 256).
+85272:M 03 May 2025 23:03:57.906 * monotonic clock: POSIX clock_gettime
+85272:M 03 May 2025 23:03:57.906 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26112
+ |###|   .+###############+.   |###|    PID: 85272                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+85272:M 03 May 2025 23:03:57.906 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+85272:M 03 May 2025 23:03:57.907 * Server initialized
+85272:M 03 May 2025 23:03:57.907 * Ready to accept connections tcp
+85272:M 03 May 2025 23:03:57.907 * Ready to accept connections unix
+85272:M 03 May 2025 23:03:58.038 - Accepted 127.0.0.1:59188
+85272:M 03 May 2025 23:03:58.038 - Client closed connection id=2 addr=127.0.0.1:59188 laddr=127.0.0.1:26112 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+85272:M 03 May 2025 23:03:58.064 - Accepted 127.0.0.1:59189
+### Starting test Turning off AOF kills the background writing child if any in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:03:58.065 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+85272:M 03 May 2025 23:03:58.066 * Background append only file rewriting started by pid 85292
+85292:C 03 May 2025 23:03:58.067 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85292.aof
+85292:C 03 May 2025 23:03:58.067 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:03:58.109 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:03:58.109 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85292.aof into appendonly.aof.1.base.aof
+85272:M 03 May 2025 23:03:58.109 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.1.incr.aof
+85272:M 03 May 2025 23:03:58.115 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:03:58.115 - Background AOF rewrite signal handler took 6475us
+85272:M 03 May 2025 23:03:58.127 * Creating AOF incr file appendonly.aof.2.incr.aof on background rewrite
+85272:M 03 May 2025 23:03:58.128 * Background append only file rewriting started by pid 85293
+85272:M 03 May 2025 23:03:58.130 * Killing running AOF rewrite child: 85293
+85293:signal-handler (1746281038) Received SIGUSR1 in child, exiting now.
+### Starting test AOF rewrite of list with listpack encoding, string data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:03:58.140 * Background append only file rewriting started by pid 85295
+85295:C 03 May 2025 23:03:58.141 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85295.aof
+85295:C 03 May 2025 23:03:58.141 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:03:58.216 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:03:58.216 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85295.aof into appendonly.aof.2.base.aof
+85272:M 03 May 2025 23:03:58.222 * Removing the history file appendonly.aof.1.incr.aof in the background
+85272:M 03 May 2025 23:03:58.222 * Removing the history file appendonly.aof.2.incr.aof in the background
+85272:M 03 May 2025 23:03:58.222 * Removing the history file appendonly.aof.1.base.aof in the background
+85272:M 03 May 2025 23:03:58.227 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:03:58.227 - Background AOF rewrite signal handler took 10866us
+85272:M 03 May 2025 23:03:58.249 * DB loaded from base file appendonly.aof.2.base.aof: 0.000 seconds
+85272:M 03 May 2025 23:03:58.249 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of list with quicklist encoding, string data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:03:58.343 * Background append only file rewriting started by pid 85304
+85304:C 03 May 2025 23:03:58.344 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85304.aof
+85304:C 03 May 2025 23:03:58.344 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:03:58.430 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:03:58.430 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85304.aof into appendonly.aof.3.base.aof
+85272:M 03 May 2025 23:03:58.434 * Removing the history file appendonly.aof.2.base.aof in the background
+85272:M 03 May 2025 23:03:58.446 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:03:58.446 - Background AOF rewrite signal handler took 15732us
+85272:M 03 May 2025 23:03:58.459 * DB loaded from base file appendonly.aof.3.base.aof: 0.001 seconds
+85272:M 03 May 2025 23:03:58.459 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of list with listpack encoding, int data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:03:58.546 * Background append only file rewriting started by pid 85320
+85320:C 03 May 2025 23:03:58.546 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85320.aof
+85320:C 03 May 2025 23:03:58.546 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:03:58.546 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:03:58.547 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85320.aof into appendonly.aof.4.base.aof
+85272:M 03 May 2025 23:03:58.555 * Removing the history file appendonly.aof.3.base.aof in the background
+85272:M 03 May 2025 23:03:58.559 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:03:58.559 - Background AOF rewrite signal handler took 12165us
+85272:M 03 May 2025 23:03:58.559 * DB loaded from base file appendonly.aof.4.base.aof: 0.000 seconds
+85272:M 03 May 2025 23:03:58.559 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of list with quicklist encoding, int data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:03:58.668 * Background append only file rewriting started by pid 85342
+85342:C 03 May 2025 23:03:58.670 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85342.aof
+85342:C 03 May 2025 23:03:58.671 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:03:58.760 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:03:58.760 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85342.aof into appendonly.aof.5.base.aof
+85272:M 03 May 2025 23:03:58.765 * Removing the history file appendonly.aof.4.base.aof in the background
+85272:M 03 May 2025 23:03:58.776 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:03:58.776 - Background AOF rewrite signal handler took 15878us
+85272:M 03 May 2025 23:03:58.784 * DB loaded from base file appendonly.aof.5.base.aof: 0.000 seconds
+85272:M 03 May 2025 23:03:58.784 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of set with intset encoding, string data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:03:58.792 * Background append only file rewriting started by pid 85356
+85356:C 03 May 2025 23:03:58.793 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85356.aof
+85356:C 03 May 2025 23:03:58.793 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:03:58.877 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:03:58.877 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85356.aof into appendonly.aof.6.base.aof
+85272:M 03 May 2025 23:03:58.883 * Removing the history file appendonly.aof.5.base.aof in the background
+85272:M 03 May 2025 23:03:58.889 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:03:58.889 - Background AOF rewrite signal handler took 12359us
+85272:M 03 May 2025 23:03:58.902 * DB loaded from base file appendonly.aof.6.base.aof: 0.000 seconds
+85272:M 03 May 2025 23:03:58.902 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of set with hashtable encoding, string data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:03:58.956 * Background append only file rewriting started by pid 85370
+85370:C 03 May 2025 23:03:58.957 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85370.aof
+85370:C 03 May 2025 23:03:58.957 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:03:58.990 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:03:58.990 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85370.aof into appendonly.aof.7.base.aof
+85272:M 03 May 2025 23:03:58.996 * Removing the history file appendonly.aof.6.base.aof in the background
+85272:M 03 May 2025 23:03:58.999 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:03:58.999 - Background AOF rewrite signal handler took 8892us
+85272:M 03 May 2025 23:03:59.012 * DB loaded from base file appendonly.aof.7.base.aof: 0.000 seconds
+85272:M 03 May 2025 23:03:59.012 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of set with intset encoding, int data in tests/unit/aofrw.tcl
+85375:C 03 May 2025 23:03:59.017 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85375.aof
+85272:M 03 May 2025 23:03:59.018 * Background append only file rewriting started by pid 85375
+85375:C 03 May 2025 23:03:59.018 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:03:59.101 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:03:59.101 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85375.aof into appendonly.aof.8.base.aof
+85272:M 03 May 2025 23:03:59.107 * Removing the history file appendonly.aof.7.base.aof in the background
+85272:M 03 May 2025 23:03:59.114 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:03:59.114 - Background AOF rewrite signal handler took 13531us
+85272:M 03 May 2025 23:03:59.126 * DB loaded from base file appendonly.aof.8.base.aof: 0.000 seconds
+85272:M 03 May 2025 23:03:59.126 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of set with hashtable encoding, int data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:03:59.213 * Background append only file rewriting started by pid 85376
+85376:C 03 May 2025 23:03:59.213 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85376.aof
+85376:C 03 May 2025 23:03:59.213 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:03:59.214 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:03:59.215 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85376.aof into appendonly.aof.9.base.aof
+85272:M 03 May 2025 23:03:59.221 * Removing the history file appendonly.aof.8.base.aof in the background
+85272:M 03 May 2025 23:03:59.227 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:03:59.227 - Background AOF rewrite signal handler took 12760us
+85272:M 03 May 2025 23:03:59.269 * DB loaded from base file appendonly.aof.9.base.aof: 0.001 seconds
+85272:M 03 May 2025 23:03:59.269 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of hash with listpack encoding, string data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:03:59.271 * Background append only file rewriting started by pid 85377
+85377:C 03 May 2025 23:03:59.272 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85377.aof
+85377:C 03 May 2025 23:03:59.272 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:03:59.327 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:03:59.328 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85377.aof into appendonly.aof.10.base.aof
+85272:M 03 May 2025 23:03:59.333 * Removing the history file appendonly.aof.9.base.aof in the background
+85272:M 03 May 2025 23:03:59.339 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:03:59.339 - Background AOF rewrite signal handler took 12108us
+85272:M 03 May 2025 23:03:59.380 * DB loaded from base file appendonly.aof.10.base.aof: 0.000 seconds
+85272:M 03 May 2025 23:03:59.380 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of hash with hashtable encoding, string data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:03:59.502 * Background append only file rewriting started by pid 85401
+85401:C 03 May 2025 23:03:59.503 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85401.aof
+85401:C 03 May 2025 23:03:59.503 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:03:59.541 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:03:59.541 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85401.aof into appendonly.aof.11.base.aof
+85272:M 03 May 2025 23:03:59.548 * Removing the history file appendonly.aof.10.base.aof in the background
+85272:M 03 May 2025 23:03:59.554 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:03:59.554 - Background AOF rewrite signal handler took 13800us
+85272:M 03 May 2025 23:03:59.561 * DB loaded from base file appendonly.aof.11.base.aof: 0.002 seconds
+85272:M 03 May 2025 23:03:59.561 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of hash with listpack encoding, int data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:03:59.566 * Background append only file rewriting started by pid 85406
+85406:C 03 May 2025 23:03:59.566 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85406.aof
+85406:C 03 May 2025 23:03:59.567 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:03:59.656 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:03:59.656 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85406.aof into appendonly.aof.12.base.aof
+85272:M 03 May 2025 23:03:59.663 * Removing the history file appendonly.aof.11.base.aof in the background
+85272:M 03 May 2025 23:03:59.669 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:03:59.669 - Background AOF rewrite signal handler took 12976us
+85272:M 03 May 2025 23:03:59.680 * DB loaded from base file appendonly.aof.12.base.aof: 0.000 seconds
+85272:M 03 May 2025 23:03:59.680 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of hash with hashtable encoding, int data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:03:59.863 * Background append only file rewriting started by pid 85445
+85445:C 03 May 2025 23:03:59.863 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85445.aof
+85445:C 03 May 2025 23:03:59.864 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:03:59.870 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:03:59.870 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85445.aof into appendonly.aof.13.base.aof
+85272:M 03 May 2025 23:03:59.875 * Removing the history file appendonly.aof.12.base.aof in the background
+85272:M 03 May 2025 23:03:59.879 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:03:59.879 - Background AOF rewrite signal handler took 8797us
+85272:M 03 May 2025 23:03:59.924 * DB loaded from base file appendonly.aof.13.base.aof: 0.003 seconds
+85272:M 03 May 2025 23:03:59.924 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of zset with listpack encoding, string data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:03:59.928 * Background append only file rewriting started by pid 85453
+85453:C 03 May 2025 23:03:59.928 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85453.aof
+85453:C 03 May 2025 23:03:59.928 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:03:59.980 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:03:59.980 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85453.aof into appendonly.aof.14.base.aof
+85272:M 03 May 2025 23:03:59.985 * Removing the history file appendonly.aof.13.base.aof in the background
+85272:M 03 May 2025 23:03:59.992 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:03:59.992 - Background AOF rewrite signal handler took 11914us
+85272:M 03 May 2025 23:03:59.993 * DB loaded from base file appendonly.aof.14.base.aof: 0.001 seconds
+85272:M 03 May 2025 23:03:59.993 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of zset with skiplist encoding, string data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:04:00.101 * Background append only file rewriting started by pid 85477
+85477:C 03 May 2025 23:04:00.102 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85477.aof
+85477:C 03 May 2025 23:04:00.102 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:04:00.193 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:04:00.193 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85477.aof into appendonly.aof.15.base.aof
+85272:M 03 May 2025 23:04:00.199 * Removing the history file appendonly.aof.14.base.aof in the background
+85272:M 03 May 2025 23:04:00.212 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:04:00.212 - Background AOF rewrite signal handler took 19330us
+85272:M 03 May 2025 23:04:00.213 * DB loaded from base file appendonly.aof.15.base.aof: 0.001 seconds
+85272:M 03 May 2025 23:04:00.213 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of zset with listpack encoding, int data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:04:00.217 * Background append only file rewriting started by pid 85489
+85489:C 03 May 2025 23:04:00.218 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85489.aof
+85489:C 03 May 2025 23:04:00.218 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:04:00.314 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:04:00.314 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85489.aof into appendonly.aof.16.base.aof
+85272:M 03 May 2025 23:04:00.321 * Removing the history file appendonly.aof.15.base.aof in the background
+85272:M 03 May 2025 23:04:00.327 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:04:00.327 - Background AOF rewrite signal handler took 13339us
+85272:M 03 May 2025 23:04:00.328 * DB loaded from base file appendonly.aof.16.base.aof: 0.000 seconds
+85272:M 03 May 2025 23:04:00.328 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite of zset with skiplist encoding, int data in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:04:00.415 * Background append only file rewriting started by pid 85530
+85530:C 03 May 2025 23:04:00.416 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85530.aof
+85530:C 03 May 2025 23:04:00.416 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:04:00.429 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:04:00.429 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85530.aof into appendonly.aof.17.base.aof
+85272:M 03 May 2025 23:04:00.435 * Removing the history file appendonly.aof.16.base.aof in the background
+85272:M 03 May 2025 23:04:00.441 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:04:00.441 - Background AOF rewrite signal handler took 12124us
+85272:M 03 May 2025 23:04:00.469 * DB loaded from base file appendonly.aof.17.base.aof: 0.001 seconds
+85272:M 03 May 2025 23:04:00.469 * Append Only File loaded by DEBUG LOADAOF
+### Starting test AOF rewrite functions in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:04:00.472 * Background append only file rewriting started by pid 85540
+85540:C 03 May 2025 23:04:00.473 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85540.aof
+85540:C 03 May 2025 23:04:00.473 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85272:M 03 May 2025 23:04:00.541 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:04:00.542 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85540.aof into appendonly.aof.18.base.aof
+85272:M 03 May 2025 23:04:00.548 * Removing the history file appendonly.aof.17.base.aof in the background
+85272:M 03 May 2025 23:04:00.555 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:04:00.555 - Background AOF rewrite signal handler took 14066us
+85272:M 03 May 2025 23:04:00.580 * DB loaded from base file appendonly.aof.18.base.aof: 0.000 seconds
+85272:M 03 May 2025 23:04:00.581 * Append Only File loaded by DEBUG LOADAOF
+### Starting test BGREWRITEAOF is delayed if BGSAVE is in progress in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:04:00.583 * Background saving started by pid 85566
+85272:M 03 May 2025 23:04:00.583 * Background append only file rewriting scheduled.
+85272:M 03 May 2025 23:04:00.657 # Background saving terminated by signal 9
+85272:M 03 May 2025 23:04:00.760 * Background append only file rewriting started by pid 85600
+85600:C 03 May 2025 23:04:00.761 * Successfully created the temporary AOF base file temp-rewriteaof-bg-85600.aof
+85600:C 03 May 2025 23:04:00.761 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+### Starting test BGREWRITEAOF is refused if already in progress in tests/unit/aofrw.tcl
+85272:M 03 May 2025 23:04:00.840 - Client closed connection id=3 addr=127.0.0.1:59189 laddr=127.0.0.1:26112 fd=12 name= age=2 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6144 rbp=6046 obl=0 oll=0 omem=0 tot-mem=23552 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=401043 tot-net-out=331999 tot-cmds=8251
+85272:M 03 May 2025 23:04:00.860 * Background AOF rewrite terminated with success
+85272:M 03 May 2025 23:04:00.863 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-85600.aof into appendonly.aof.19.base.aof
+85272:M 03 May 2025 23:04:00.873 * Removing the history file appendonly.aof.18.base.aof in the background
+85272:M 03 May 2025 23:04:00.881 * Background AOF rewrite finished successfully
+85272:M 03 May 2025 23:04:00.881 - Background AOF rewrite signal handler took 20343us
+85272:signal-handler (1746281042) Received SIGTERM scheduling shutdown...
+85272:M 03 May 2025 23:04:02.386 * User requested shutdown...
+85272:M 03 May 2025 23:04:02.386 * Removing the pid file.
+85272:M 03 May 2025 23:04:02.386 * Removing the unix socket file.
+85272:M 03 May 2025 23:04:02.386 # Valkey is now ready to exit, bye bye...

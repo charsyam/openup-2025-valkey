@@ -1,0 +1,521 @@
+### Restarting server for test Fuzzer corrupt restore payloads - sanitize_dump: no in tests/integration/corrupt-dump-fuzzer.tcl
+10039:M 03 May 2025 23:07:28.849 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+10039:M 03 May 2025 23:07:28.850 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=10039, just started
+10039:M 03 May 2025 23:07:28.850 * Configuration loaded
+10039:M 03 May 2025 23:07:28.850 * Increased maximum number of open files to 10032 (it was originally set to 256).
+10039:M 03 May 2025 23:07:28.850 * monotonic clock: POSIX clock_gettime
+10039:M 03 May 2025 23:07:28.851 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21169
+ |###|   .+###############+.   |###|    PID: 10039                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+10039:M 03 May 2025 23:07:28.853 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+10039:M 03 May 2025 23:07:28.857 * Server initialized
+10039:M 03 May 2025 23:07:28.861 * Loading RDB produced by Valkey version 255.255.255
+10039:M 03 May 2025 23:07:28.862 * RDB age 0 seconds
+10039:M 03 May 2025 23:07:28.862 * RDB memory usage when created 1.46 Mb
+10039:M 03 May 2025 23:07:28.862 * Done loading RDB, keys loaded: 12, keys expired: 0.
+10039:M 03 May 2025 23:07:28.862 * DB loaded from disk: 0.001 seconds
+10039:M 03 May 2025 23:07:28.862 * Ready to accept connections tcp
+10039:M 03 May 2025 23:07:28.862 * Ready to accept connections unix
+10039:M 03 May 2025 23:07:28.862 - DB 9: 12 keys (0 volatile) in 14 slots HT.
+10039:M 03 May 2025 23:07:29.021 - Accepted 127.0.0.1:56028
+10039:M 03 May 2025 23:07:33.877 - DB 9: 13 keys (0 volatile) in 14 slots HT.
+10039:M 03 May 2025 23:07:34.030 - Internal error in RDB reading offset 0, function at rdb.c:2506 -> Stream node key entry is not the size of a stream ID
+
+
+=== VALKEY BUG REPORT START: Cut & paste starting from here ===
+10039:M 03 May 2025 23:07:34.059 # === ASSERTION FAILED ===
+10039:M 03 May 2025 23:07:34.059 # ==> listpack.c:1320 'lpValidateNext(lp, &p, lpbytes)' is not true
+
+------ STACK TRACE ------
+
+Backtrace:
+0   valkey-server                       0x00000001010fad48 lpFind + 916
+1   valkey-server                       0x0000000101040094 setTypeIsMemberAux + 312
+2   valkey-server                       0x0000000101041ad4 smoveCommand + 1052
+3   valkey-server                       0x0000000100fe3640 call + 440
+4   valkey-server                       0x0000000100fe5428 processCommand + 3204
+5   valkey-server                       0x0000000100fff8a4 processInputBuffer + 524
+6   valkey-server                       0x0000000100ffec84 readQueryFromClient + 92
+7   valkey-server                       0x0000000101109ef8 connSocketEventHandler + 180
+8   valkey-server                       0x0000000100fcac58 aeProcessEvents + 356
+9   valkey-server                       0x0000000100ff3f4c main + 27000
+10  dyld                                0x000000018b22eb4c start + 6000
+
+------ STACK TRACE DONE ------
+
+------ INFO OUTPUT ------
+# Server
+redis_version:7.2.4
+server_name:valkey
+valkey_version:255.255.255
+valkey_release_stage:dev
+redis_git_sha1:06ac4d81
+redis_git_dirty:0
+redis_build_id:8f12ef29dc18e557
+server_mode:standalone
+os:Darwin 24.4.0 arm64
+arch_bits:64
+monotonic_clock:POSIX clock_gettime
+multiplexing_api:kqueue
+gcc_version:4.2.1
+process_id:10039
+process_supervised:no
+run_id:54312ab720bc4b9f7b33ed8a209d517b6ab56ffc
+tcp_port:21169
+server_time_usec:1746281254059246
+uptime_in_seconds:6
+uptime_in_days:0
+hz:10
+configured_hz:10
+clients_hz:10
+lru_clock:1450789
+executable:/Users/junyeong/maindir/openup/src/valkey-server
+config_file:/Users/junyeong/maindir/openup/./tests/tmp/valkey.conf.83525.119
+io_threads_active:0
+availability_zone:
+listener0:name=tcp,bind=127.0.0.1,port=21169
+listener1:name=unix,bind=/Users/junyeong/maindir/openup/tests/tmp/server.83525.118/socket
+
+# Clients
+connected_clients:1
+cluster_connections:0
+maxclients:10000
+client_recent_max_input_buffer:0
+client_recent_max_output_buffer:16920
+blocked_clients:0
+tracking_clients:0
+pubsub_clients:0
+watching_clients:0
+clients_in_timeout_table:0
+total_watched_keys:0
+total_blocking_keys:0
+total_blocking_keys_on_nokey:0
+paused_reason:none
+paused_actions:none
+paused_timeout_milliseconds:0
+
+# Memory
+used_memory:3022992
+used_memory_human:2.88M
+used_memory_rss:9142272
+used_memory_rss_human:8.72M
+used_memory_peak:3039200
+used_memory_peak_human:2.90M
+used_memory_peak_perc:99.47%
+used_memory_overhead:1107856
+used_memory_startup:1105472
+used_memory_dataset:1915136
+used_memory_dataset_perc:99.88%
+allocator_allocated:3020608
+allocator_active:9075712
+allocator_resident:9075712
+allocator_muzzy:0
+total_system_memory:17179869184
+total_system_memory_human:16.00G
+used_memory_lua:32768
+used_memory_vm_eval:32768
+used_memory_lua_human:32.00K
+used_memory_scripts_eval:0
+number_of_cached_scripts:0
+number_of_functions:0
+number_of_libraries:0
+used_memory_vm_functions:33792
+used_memory_vm_total:66560
+used_memory_vm_total_human:65.00K
+used_memory_functions:232
+used_memory_scripts:232
+used_memory_scripts_human:232B
+maxmemory:0
+maxmemory_human:0B
+maxmemory_policy:noeviction
+allocator_frag_ratio:1.00
+allocator_frag_bytes:0
+allocator_rss_ratio:1.00
+allocator_rss_bytes:0
+rss_overhead_ratio:1.01
+rss_overhead_bytes:66560
+mem_fragmentation_ratio:3.03
+mem_fragmentation_bytes:6121664
+mem_not_counted_for_evict:0
+mem_replication_backlog:0
+mem_total_replication_buffers:0
+mem_clients_slaves:0
+mem_clients_normal:1536
+mem_cluster_links:0
+mem_aof_buffer:0
+mem_allocator:libc
+mem_overhead_db_hashtable_rehashing:0
+active_defrag_running:0
+lazyfree_pending_objects:0
+lazyfreed_objects:0
+
+# Persistence
+loading:0
+async_loading:0
+current_cow_peak:0
+current_cow_size:0
+current_cow_size_age:0
+current_fork_perc:0.00
+current_save_keys_processed:0
+current_save_keys_total:0
+rdb_changes_since_last_save:2230
+rdb_bgsave_in_progress:0
+rdb_last_save_time:1746281248
+rdb_last_bgsave_status:ok
+rdb_last_bgsave_time_sec:-1
+rdb_current_bgsave_time_sec:-1
+rdb_saves:0
+rdb_last_cow_size:0
+rdb_last_load_keys_expired:0
+rdb_last_load_keys_loaded:12
+aof_enabled:0
+aof_rewrite_in_progress:0
+aof_rewrite_scheduled:0
+aof_last_rewrite_time_sec:-1
+aof_current_rewrite_time_sec:-1
+aof_last_bgrewrite_status:ok
+aof_rewrites:0
+aof_rewrites_consecutive_failures:0
+aof_last_write_status:ok
+aof_last_cow_size:0
+module_fork_in_progress:0
+module_fork_last_cow_size:0
+
+# Stats
+total_connections_received:1
+total_commands_processed:14369
+instantaneous_ops_per_sec:2896
+total_net_input_bytes:865306
+total_net_output_bytes:2840401
+total_net_repl_input_bytes:0
+total_net_repl_output_bytes:0
+instantaneous_input_kbps:183.01
+instantaneous_output_kbps:499.12
+instantaneous_input_repl_kbps:0.00
+instantaneous_output_repl_kbps:0.00
+rejected_connections:0
+sync_full:0
+sync_partial_ok:0
+sync_partial_err:0
+expired_keys:0
+expired_stale_perc:0.00
+expired_time_cap_reached_count:0
+expire_cycle_cpu_milliseconds:0
+evicted_keys:0
+evicted_clients:0
+evicted_scripts:0
+total_eviction_exceeded_time:0
+current_eviction_exceeded_time:0
+keyspace_hits:1437
+keyspace_misses:1408
+pubsub_channels:0
+pubsub_patterns:0
+pubsubshard_channels:0
+latest_fork_usec:0
+total_forks:0
+migrate_cached_sockets:0
+slave_expires_tracked_keys:0
+active_defrag_hits:0
+active_defrag_misses:0
+active_defrag_key_hits:0
+active_defrag_key_misses:0
+total_active_defrag_time:0
+current_active_defrag_time:0
+tracking_total_keys:0
+tracking_total_items:0
+tracking_total_prefixes:0
+unexpected_error_replies:0
+total_error_replies:1886
+dump_payload_sanitizations:0
+total_reads_processed:14442
+total_writes_processed:14441
+io_threaded_reads_processed:0
+io_threaded_writes_processed:0
+io_threaded_freed_objects:0
+io_threaded_accept_processed:0
+io_threaded_poll_processed:0
+io_threaded_total_prefetch_batches:0
+io_threaded_total_prefetch_entries:0
+client_query_buffer_limit_disconnections:0
+client_output_buffer_limit_disconnections:0
+reply_buffer_shrinks:1
+reply_buffer_expands:0
+eventloop_cycles:14494
+eventloop_duration_sum:379072
+eventloop_duration_cmd_sum:56037
+instantaneous_eventloop_cycles_per_sec:2905
+instantaneous_eventloop_duration_usec:26
+acl_access_denied_auth:0
+acl_access_denied_cmd:0
+acl_access_denied_key:0
+acl_access_denied_channel:0
+
+# Replication
+role:master
+connected_slaves:0
+replicas_waiting_psync:0
+master_failover_state:no-failover
+master_replid:63b7c635bec161f7df41dd8b18987fd2fcf25cd1
+master_replid2:0000000000000000000000000000000000000000
+master_repl_offset:0
+second_repl_offset:-1
+repl_backlog_active:0
+repl_backlog_size:10485760
+repl_backlog_first_byte_offset:0
+repl_backlog_histlen:0
+
+# CPU
+used_cpu_sys:0.196604
+used_cpu_user:0.127994
+used_cpu_sys_children:0.000000
+used_cpu_user_children:0.000000
+
+# Modules
+
+# Commandstats
+cmdstat_zscan:calls=74,usec=160,usec_per_call=2.16,rejected_calls=0,failed_calls=45
+cmdstat_sunion:calls=117,usec=188,usec_per_call=1.61,rejected_calls=0,failed_calls=0
+cmdstat_scard:calls=106,usec=62,usec_per_call=0.58,rejected_calls=0,failed_calls=0
+cmdstat_command|info:calls=7195,usec=37023,usec_per_call=5.15,rejected_calls=0,failed_calls=0
+cmdstat_zremrangebyrank:calls=52,usec=82,usec_per_call=1.58,rejected_calls=0,failed_calls=23
+cmdstat_zrank:calls=43,usec=66,usec_per_call=1.53,rejected_calls=0,failed_calls=0
+cmdstat_zunionstore:calls=58,usec=98,usec_per_call=1.69,rejected_calls=0,failed_calls=58
+cmdstat_zrevrangebyscore:calls=51,usec=107,usec_per_call=2.10,rejected_calls=0,failed_calls=15
+cmdstat_zinterstore:calls=40,usec=83,usec_per_call=2.08,rejected_calls=0,failed_calls=40
+cmdstat_zscore:calls=45,usec=48,usec_per_call=1.07,rejected_calls=0,failed_calls=0
+cmdstat_rpushx:calls=233,usec=1001,usec_per_call=4.30,rejected_calls=0,failed_calls=0
+cmdstat_rpoplpush:calls=215,usec=827,usec_per_call=3.85,rejected_calls=0,failed_calls=0
+cmdstat_zrem:calls=61,usec=76,usec_per_call=1.25,rejected_calls=0,failed_calls=0
+cmdstat_lpop:calls=227,usec=660,usec_per_call=2.91,rejected_calls=0,failed_calls=0
+cmdstat_rpush:calls=224,usec=854,usec_per_call=3.81,rejected_calls=0,failed_calls=0
+cmdstat_zcard:calls=53,usec=46,usec_per_call=0.87,rejected_calls=0,failed_calls=0
+cmdstat_type:calls=6,usec=9,usec_per_call=1.50,rejected_calls=0,failed_calls=0
+cmdstat_lpush:calls=221,usec=867,usec_per_call=3.92,rejected_calls=0,failed_calls=0
+cmdstat_sdiffstore:calls=106,usec=183,usec_per_call=1.73,rejected_calls=0,failed_calls=0
+cmdstat_smove:calls=132,usec=66,usec_per_call=0.50,rejected_calls=0,failed_calls=0
+cmdstat_dump:calls=9,usec=125,usec_per_call=13.89,rejected_calls=0,failed_calls=0
+cmdstat_lpos:calls=222,usec=364,usec_per_call=1.64,rejected_calls=0,failed_calls=0
+cmdstat_xadd:calls=68,usec=427,usec_per_call=6.28,rejected_calls=0,failed_calls=36
+cmdstat_sdiff:calls=114,usec=257,usec_per_call=2.25,rejected_calls=0,failed_calls=0
+cmdstat_del:calls=5,usec=27,usec_per_call=5.40,rejected_calls=0,failed_calls=0
+cmdstat_config|set:calls=1,usec=8,usec_per_call=8.00,rejected_calls=0,failed_calls=0
+cmdstat_zlexcount:calls=52,usec=69,usec_per_call=1.33,rejected_calls=0,failed_calls=52
+cmdstat_lpushx:calls=240,usec=554,usec_per_call=2.31,rejected_calls=0,failed_calls=0
+cmdstat_lrange:calls=242,usec=242,usec_per_call=1.00,rejected_calls=0,failed_calls=101
+cmdstat_lset:calls=215,usec=269,usec_per_call=1.25,rejected_calls=0,failed_calls=215
+cmdstat_zrangebyscore:calls=43,usec=89,usec_per_call=2.07,rejected_calls=0,failed_calls=11
+cmdstat_xack:calls=61,usec=82,usec_per_call=1.34,rejected_calls=0,failed_calls=0
+cmdstat_spop:calls=95,usec=178,usec_per_call=1.87,rejected_calls=0,failed_calls=0
+cmdstat_srandmember:calls=106,usec=84,usec_per_call=0.79,rejected_calls=0,failed_calls=0
+cmdstat_zremrangebyscore:calls=65,usec=152,usec_per_call=2.34,rejected_calls=0,failed_calls=16
+cmdstat_xclaim:calls=79,usec=356,usec_per_call=4.51,rejected_calls=0,failed_calls=79
+cmdstat_sscan:calls=137,usec=143,usec_per_call=1.04,rejected_calls=0,failed_calls=91
+cmdstat_zrevrange:calls=52,usec=70,usec_per_call=1.35,rejected_calls=0,failed_calls=25
+cmdstat_zcount:calls=62,usec=133,usec_per_call=2.15,rejected_calls=0,failed_calls=19
+cmdstat_dbsize:calls=5,usec=2,usec_per_call=0.40,rejected_calls=0,failed_calls=0
+cmdstat_xrange:calls=65,usec=144,usec_per_call=2.22,rejected_calls=0,failed_calls=55
+cmdstat_rpop:calls=219,usec=1789,usec_per_call=8.17,rejected_calls=0,failed_calls=0
+cmdstat_zincrby:calls=58,usec=429,usec_per_call=7.40,rejected_calls=0,failed_calls=13
+cmdstat_ltrim:calls=209,usec=788,usec_per_call=3.77,rejected_calls=0,failed_calls=76
+cmdstat_xlen:calls=51,usec=42,usec_per_call=0.82,rejected_calls=0,failed_calls=0
+cmdstat_xread:calls=58,usec=334,usec_per_call=5.76,rejected_calls=0,failed_calls=19
+cmdstat_sismember:calls=111,usec=61,usec_per_call=0.55,rejected_calls=0,failed_calls=0
+cmdstat_zadd:calls=49,usec=340,usec_per_call=6.94,rejected_calls=0,failed_calls=11
+cmdstat_zrandmember:calls=68,usec=101,usec_per_call=1.49,rejected_calls=0,failed_calls=0
+cmdstat_xdel:calls=70,usec=177,usec_per_call=2.53,rejected_calls=0,failed_calls=47
+cmdstat_lrem:calls=219,usec=336,usec_per_call=1.53,rejected_calls=0,failed_calls=36
+cmdstat_sunionstore:calls=107,usec=208,usec_per_call=1.94,rejected_calls=0,failed_calls=0
+cmdstat_xreadgroup:calls=53,usec=60,usec_per_call=1.13,rejected_calls=0,failed_calls=53
+cmdstat_restore:calls=9,usec=163,usec_per_call=18.11,rejected_calls=0,failed_calls=3
+cmdstat_sinter:calls=124,usec=143,usec_per_call=1.15,rejected_calls=0,failed_calls=0
+cmdstat_zremrangebylex:calls=68,usec=66,usec_per_call=0.97,rejected_calls=0,failed_calls=68
+cmdstat_xrevrange:calls=63,usec=151,usec_per_call=2.40,rejected_calls=0,failed_calls=56
+cmdstat_xtrim:calls=78,usec=80,usec_per_call=1.03,rejected_calls=0,failed_calls=78
+cmdstat_sinterstore:calls=120,usec=137,usec_per_call=1.14,rejected_calls=0,failed_calls=0
+cmdstat_zrange:calls=56,usec=93,usec_per_call=1.66,rejected_calls=0,failed_calls=19
+cmdstat_ping:calls=6,usec=2,usec_per_call=0.33,rejected_calls=0,failed_calls=0
+cmdstat_llen:calls=192,usec=153,usec_per_call=0.80,rejected_calls=0,failed_calls=0
+cmdstat_zpopmax:calls=53,usec=236,usec_per_call=4.45,rejected_calls=0,failed_calls=0
+cmdstat_linsert:calls=248,usec=203,usec_per_call=0.82,rejected_calls=0,failed_calls=248
+cmdstat_smembers:calls=102,usec=93,usec_per_call=0.91,rejected_calls=0,failed_calls=0
+cmdstat_zrevrank:calls=56,usec=71,usec_per_call=1.27,rejected_calls=0,failed_calls=0
+cmdstat_xinfo|stream:calls=57,usec=2003,usec_per_call=35.14,rejected_calls=0,failed_calls=0
+cmdstat_select:calls=1,usec=2,usec_per_call=2.00,rejected_calls=0,failed_calls=0
+cmdstat_xpending:calls=65,usec=333,usec_per_call=5.12,rejected_calls=0,failed_calls=65
+cmdstat_sadd:calls=100,usec=510,usec_per_call=5.10,rejected_calls=0,failed_calls=0
+cmdstat_srem:calls=122,usec=74,usec_per_call=0.61,rejected_calls=0,failed_calls=0
+cmdstat_randomkey:calls=9,usec=32,usec_per_call=3.56,rejected_calls=0,failed_calls=0
+cmdstat_zpopmin:calls=48,usec=206,usec_per_call=4.29,rejected_calls=0,failed_calls=0
+cmdstat_zrevrangebylex:calls=55,usec=40,usec_per_call=0.73,rejected_calls=0,failed_calls=55
+cmdstat_lindex:calls=220,usec=259,usec_per_call=1.18,rejected_calls=0,failed_calls=39
+cmdstat_zrangebylex:calls=47,usec=36,usec_per_call=0.77,rejected_calls=0,failed_calls=47
+cmdstat_debug:calls=1,usec=5,usec_per_call=5.00,rejected_calls=0,failed_calls=0
+
+# Errorstats
+errorstat_ERR:count=1742
+errorstat_NOGROUP:count=144
+
+# Latencystats
+latency_percentiles_usec_zscan:p50=1.003,p99=12.031,p99.9=13.055
+latency_percentiles_usec_sunion:p50=1.003,p99=6.015,p99.9=12.031
+latency_percentiles_usec_scard:p50=0.001,p99=3.007,p99.9=6.015
+latency_percentiles_usec_command|info:p50=3.007,p99=22.015,p99.9=92.159
+latency_percentiles_usec_zremrangebyrank:p50=1.003,p99=10.047,p99.9=15.039
+latency_percentiles_usec_zrank:p50=1.003,p99=7.007,p99.9=7.007
+latency_percentiles_usec_zunionstore:p50=1.003,p99=5.023,p99.9=7.007
+latency_percentiles_usec_zrevrangebyscore:p50=2.007,p99=6.015,p99.9=7.007
+latency_percentiles_usec_zinterstore:p50=2.007,p99=5.023,p99.9=5.023
+latency_percentiles_usec_zscore:p50=1.003,p99=3.007,p99.9=3.007
+latency_percentiles_usec_rpushx:p50=2.007,p99=9.023,p99.9=471.039
+latency_percentiles_usec_rpoplpush:p50=3.007,p99=13.055,p99.9=20.095
+latency_percentiles_usec_zrem:p50=1.003,p99=6.015,p99.9=10.047
+latency_percentiles_usec_lpop:p50=2.007,p99=12.031,p99.9=14.015
+latency_percentiles_usec_rpush:p50=3.007,p99=15.039,p99.9=44.031
+latency_percentiles_usec_zcard:p50=1.003,p99=3.007,p99.9=9.023
+latency_percentiles_usec_type:p50=1.003,p99=2.007,p99.9=2.007
+latency_percentiles_usec_lpush:p50=3.007,p99=21.119,p99.9=22.015
+latency_percentiles_usec_sdiffstore:p50=1.003,p99=9.023,p99.9=9.023
+latency_percentiles_usec_smove:p50=0.001,p99=2.007,p99.9=3.007
+latency_percentiles_usec_dump:p50=6.015,p99=48.127,p99.9=48.127
+latency_percentiles_usec_lpos:p50=1.003,p99=8.031,p99.9=9.023
+latency_percentiles_usec_xadd:p50=4.015,p99=15.039,p99.9=18.047
+latency_percentiles_usec_sdiff:p50=1.003,p99=12.031,p99.9=74.239
+latency_percentiles_usec_del:p50=7.007,p99=10.047,p99.9=10.047
+latency_percentiles_usec_config|set:p50=8.031,p99=8.031,p99.9=8.031
+latency_percentiles_usec_zlexcount:p50=1.003,p99=3.007,p99.9=24.063
+latency_percentiles_usec_lpushx:p50=2.007,p99=12.031,p99.9=16.063
+latency_percentiles_usec_lrange:p50=1.003,p99=4.015,p99.9=7.007
+latency_percentiles_usec_lset:p50=1.003,p99=7.007,p99.9=12.031
+latency_percentiles_usec_zrangebyscore:p50=1.003,p99=6.015,p99.9=6.015
+latency_percentiles_usec_xack:p50=1.003,p99=4.015,p99.9=7.007
+latency_percentiles_usec_spop:p50=1.003,p99=9.023,p99.9=11.007
+latency_percentiles_usec_srandmember:p50=1.003,p99=2.007,p99.9=3.007
+latency_percentiles_usec_zremrangebyscore:p50=2.007,p99=8.031,p99.9=11.007
+latency_percentiles_usec_xclaim:p50=4.015,p99=10.047,p99.9=41.215
+latency_percentiles_usec_sscan:p50=1.003,p99=3.007,p99.9=5.023
+latency_percentiles_usec_zrevrange:p50=1.003,p99=3.007,p99.9=5.023
+latency_percentiles_usec_zcount:p50=2.007,p99=5.023,p99.9=8.031
+latency_percentiles_usec_dbsize:p50=0.001,p99=1.003,p99.9=1.003
+latency_percentiles_usec_xrange:p50=2.007,p99=10.047,p99.9=11.007
+latency_percentiles_usec_rpop:p50=2.007,p99=13.055,p99.9=1138.687
+latency_percentiles_usec_zincrby:p50=6.015,p99=19.071,p99.9=33.023
+latency_percentiles_usec_ltrim:p50=2.007,p99=15.039,p99.9=164.863
+latency_percentiles_usec_xlen:p50=1.003,p99=3.007,p99.9=3.007
+latency_percentiles_usec_xread:p50=4.015,p99=24.063,p99.9=27.007
+latency_percentiles_usec_sismember:p50=0.001,p99=3.007,p99.9=4.015
+latency_percentiles_usec_zadd:p50=6.015,p99=24.063,p99.9=24.063
+latency_percentiles_usec_zrandmember:p50=1.003,p99=5.023,p99.9=6.015
+latency_percentiles_usec_xdel:p50=2.007,p99=6.015,p99.9=7.007
+latency_percentiles_usec_lrem:p50=1.003,p99=7.007,p99.9=8.031
+latency_percentiles_usec_sunionstore:p50=1.003,p99=11.007,p99.9=12.031
+latency_percentiles_usec_xreadgroup:p50=1.003,p99=3.007,p99.9=6.015
+latency_percentiles_usec_restore:p50=14.015,p99=58.111,p99.9=58.111
+latency_percentiles_usec_sinter:p50=1.003,p99=7.007,p99.9=8.031
+latency_percentiles_usec_zremrangebylex:p50=1.003,p99=2.007,p99.9=10.047
+latency_percentiles_usec_xrevrange:p50=2.007,p99=11.007,p99.9=11.007
+latency_percentiles_usec_xtrim:p50=1.003,p99=2.007,p99.9=4.015
+latency_percentiles_usec_sinterstore:p50=1.003,p99=4.015,p99.9=5.023
+latency_percentiles_usec_zrange:p50=1.003,p99=7.007,p99.9=11.007
+latency_percentiles_usec_ping:p50=0.001,p99=1.003,p99.9=1.003
+latency_percentiles_usec_llen:p50=1.003,p99=6.015,p99.9=7.007
+latency_percentiles_usec_zpopmax:p50=4.015,p99=12.031,p99.9=29.055
+latency_percentiles_usec_linsert:p50=1.003,p99=2.007,p99.9=32.127
+latency_percentiles_usec_smembers:p50=1.003,p99=4.015,p99.9=4.015
+latency_percentiles_usec_zrevrank:p50=1.003,p99=4.015,p99.9=5.023
+latency_percentiles_usec_xinfo|stream:p50=20.095,p99=90.111,p99.9=802.815
+latency_percentiles_usec_select:p50=2.007,p99=2.007,p99.9=2.007
+latency_percentiles_usec_xpending:p50=3.007,p99=52.223,p99.9=62.207
+latency_percentiles_usec_sadd:p50=4.015,p99=16.063,p99.9=46.079
+latency_percentiles_usec_srem:p50=1.003,p99=3.007,p99.9=4.015
+latency_percentiles_usec_randomkey:p50=4.015,p99=5.023,p99.9=5.023
+latency_percentiles_usec_zpopmin:p50=4.015,p99=24.063,p99.9=24.063
+latency_percentiles_usec_zrevrangebylex:p50=1.003,p99=2.007,p99.9=2.007
+latency_percentiles_usec_lindex:p50=1.003,p99=3.007,p99.9=26.111
+latency_percentiles_usec_zrangebylex:p50=1.003,p99=2.007,p99.9=2.007
+latency_percentiles_usec_debug:p50=5.023,p99=5.023,p99.9=5.023
+
+# Cluster
+cluster_enabled:0
+
+# Keyspace
+db9:keys=13,expires=0,avg_ttl=0
+
+------ CLIENT LIST OUTPUT ------
+id=2 addr=127.0.0.1:56028 laddr=127.0.0.1:21169 fd=12 name= age=5 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=0 argv-mem=16 multi-mem=0 rbs=1024 rbp=818 obl=0 oll=0 omem=0 tot-mem=1584 events=r cmd=smove user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=865306 tot-net-out=2840401 tot-cmds=14369
+
+------ CURRENT CLIENT INFO ------
+id=2 addr=127.0.0.1:56028 laddr=127.0.0.1:21169 fd=12 name= age=5 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=0 argv-mem=16 multi-mem=0 rbs=1024 rbp=818 obl=0 oll=0 omem=0 tot-mem=1584 events=r cmd=smove user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=865306 tot-net-out=2840401 tot-cmds=14369
+argc: 4
+argv[0]: "SMOVE"
+argv[1]: "_set"
+argv[2]: "_set"
+argv[3]: "170"
+10039:M 03 May 2025 23:07:34.060 # key '_set' found in DB containing the following object:
+10039:M 03 May 2025 23:07:34.060 # Object type: 2
+10039:M 03 May 2025 23:07:34.060 # Object encoding: 11
+10039:M 03 May 2025 23:07:34.060 # Object refcount: 1
+
+------ EXECUTING CLIENT INFO ------
+id=2 addr=127.0.0.1:56028 laddr=127.0.0.1:21169 fd=12 name= age=5 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=0 argv-mem=16 multi-mem=0 rbs=1024 rbp=818 obl=0 oll=0 omem=0 tot-mem=1584 events=r cmd=smove user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=865306 tot-net-out=2840401 tot-cmds=14369
+argc: 4
+argv[0]: "SMOVE"
+argv[1]: "_set"
+argv[2]: "_set"
+argv[3]: "170"
+10039:M 03 May 2025 23:07:34.060 # key '_set' found in DB containing the following object:
+10039:M 03 May 2025 23:07:34.060 # Object type: 2
+10039:M 03 May 2025 23:07:34.060 # Object encoding: 11
+10039:M 03 May 2025 23:07:34.060 # Object refcount: 1
+
+------ MODULES INFO OUTPUT ------
+
+------ CONFIG DEBUG OUTPUT ------
+dual-channel-replication-enabled no
+import-mode no
+lazyfree-lazy-eviction yes
+list-compress-depth 0
+client-query-buffer-limit 1gb
+debug-context ""
+io-threads 1
+sanitize-dump-payload no
+lazyfree-lazy-user-del yes
+repl-diskless-sync yes
+activedefrag no
+lazyfree-lazy-expire yes
+repl-diskless-load disabled
+lazyfree-lazy-server-del yes
+replica-read-only yes
+slave-read-only yes
+lazyfree-lazy-user-flush yes
+proto-max-bulk-len 512mb
+
+=== VALKEY BUG REPORT END. Make sure to include from START to END. ===
+
+       Please report the crash by opening an issue on github:
+
+           https://github.com/valkey-io/valkey/issues
+
+  If a module was involved, please open in the module's repo instead.
+
+  Suspect RAM error? Use valkey-server --test-memory to verify it.
+
+  Some other issues could be detected by valkey-server --check-system
+### corrupt payload: "\x14\x0F\x0F\x00\x00\x00\x03\x00\x00\x01\x82\x5F\x31\x03\xD8\x01\xFF\x0B\x00\x75\x55\xDB\x95\x6A\x48\x63\x56"

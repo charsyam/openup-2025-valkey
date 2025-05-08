@@ -1,0 +1,75 @@
+### Starting server for test 
+98011:M 03 May 2025 23:05:40.718 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+98011:M 03 May 2025 23:05:40.720 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+98011:M 03 May 2025 23:05:40.722 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=98011, just started
+98011:M 03 May 2025 23:05:40.723 * Configuration loaded
+98011:M 03 May 2025 23:05:40.725 * Increased maximum number of open files to 10032 (it was originally set to 256).
+98011:M 03 May 2025 23:05:40.731 * monotonic clock: POSIX clock_gettime
+98011:M 03 May 2025 23:05:40.736 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25155
+ |###|   .+###############+.   |###|    PID: 98011                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+98011:M 03 May 2025 23:05:40.738 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+98011:M 03 May 2025 23:05:40.743 * No cluster configuration found, I'm bae1551817cc174c3f08b498b09f48c615da3335
+98011:M 03 May 2025 23:05:40.758 * Server initialized
+98011:M 03 May 2025 23:05:40.758 * Ready to accept connections tcp
+98011:M 03 May 2025 23:05:40.758 * Ready to accept connections unix
+98011:M 03 May 2025 23:05:40.856 - Accepted 127.0.0.1:57092
+98011:M 03 May 2025 23:05:40.859 - Client closed connection id=2 addr=127.0.0.1:57092 laddr=127.0.0.1:25155 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+98011:M 03 May 2025 23:05:40.871 - Accepted 127.0.0.1:57093
+### Starting test valkey-cli -4 --cluster create using 127.0.0.1 with cluster-port in tests/unit/cluster/cli.tcl
+98011:M 03 May 2025 23:05:40.875 - Accepted 127.0.0.1:57094
+98011:M 03 May 2025 23:05:40.880 # Missing implement of connection type tls
+98011:M 03 May 2025 23:05:40.913 * configEpoch set to 1 via CLUSTER SET-CONFIG-EPOCH
+98011:M 03 May 2025 23:05:40.933 - Accepting cluster node connection from 127.0.0.1:57104
+98011:M 03 May 2025 23:05:40.937 * IP address for this node updated to 127.0.0.1
+98011:M 03 May 2025 23:05:41.006 - Accepting cluster node connection from 127.0.0.1:57106
+98011:M 03 May 2025 23:05:41.923 - Client closed connection id=4 addr=127.0.0.1:57094 laddr=127.0.0.1:25155 fd=15 name= age=1 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=1024 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=53762 tot-net-out=19154 tot-cmds=10
+98011:M 03 May 2025 23:05:42.777 * Cluster state changed: ok
+### Starting test valkey-cli -4 --cluster add-node using 127.0.0.1 with cluster-port in tests/unit/cluster/cli.tcl
+98011:M 03 May 2025 23:05:42.799 - Accepted 127.0.0.1:57181
+98011:M 03 May 2025 23:05:42.806 - Client closed connection id=5 addr=127.0.0.1:57181 laddr=127.0.0.1:25155 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=function|dump user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=98 tot-net-out=6613 tot-cmds=4
+98011:M 03 May 2025 23:05:42.876 - Accepting cluster node connection from 127.0.0.1:57188
+98011:M 03 May 2025 23:05:43.534 - Accepted 127.0.0.1:57257
+98011:M 03 May 2025 23:05:43.551 - Client closed connection id=6 addr=127.0.0.1:57257 laddr=127.0.0.1:25155 fd=21 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=function|dump user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=98 tot-net-out=6816 tot-cmds=4
+98011:M 03 May 2025 23:05:43.646 - Accepting cluster node connection from 127.0.0.1:57288
+98011:M 03 May 2025 23:05:44.190 - Client closed connection id=3 addr=127.0.0.1:57093 laddr=127.0.0.1:25155 fd=14 name= age=4 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=520 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1269 tot-net-out=24416 tot-cmds=47
+98011:M 03 May 2025 23:05:45.625 - Accepting cluster node connection from 127.0.0.1:57575
+98011:M 03 May 2025 23:05:45.628 - Accepting cluster node connection from 127.0.0.1:57585
+98011:M 03 May 2025 23:05:45.631 - Accepting cluster node connection from 127.0.0.1:57591
+98011:M 03 May 2025 23:05:45.632 - Accepting cluster node connection from 127.0.0.1:57599
+98011:signal-handler (1746281145) Received SIGTERM scheduling shutdown...
+98011:M 03 May 2025 23:05:45.649 - Accepting cluster node connection from 127.0.0.1:57647
+98011:M 03 May 2025 23:05:45.649 - Accepting cluster node connection from 127.0.0.1:57656
+98011:M 03 May 2025 23:05:45.649 - Accepting cluster node connection from 127.0.0.1:57662
+98011:M 03 May 2025 23:05:45.649 - Accepting cluster node connection from 127.0.0.1:57669
+98011:M 03 May 2025 23:05:45.649 - Accepting cluster node connection from 127.0.0.1:57694
+98011:M 03 May 2025 23:05:45.649 - Accepting cluster node connection from 127.0.0.1:57703
+98011:M 03 May 2025 23:05:45.649 - Accepting cluster node connection from 127.0.0.1:57709
+98011:M 03 May 2025 23:05:45.649 - Accepting cluster node connection from 127.0.0.1:57714
+98011:M 03 May 2025 23:05:45.649 - Accepting cluster node connection from 127.0.0.1:57754
+98011:M 03 May 2025 23:05:45.649 - Accepting cluster node connection from 127.0.0.1:57763
+98011:M 03 May 2025 23:05:45.659 - Accepting cluster node connection from 127.0.0.1:57767
+98011:M 03 May 2025 23:05:45.676 - Accepting cluster node connection from 127.0.0.1:57774
+98011:M 03 May 2025 23:05:45.725 * User requested shutdown...
+98011:M 03 May 2025 23:05:45.725 * Removing the pid file.
+98011:M 03 May 2025 23:05:45.726 * Saving the cluster configuration file before exiting.
+98011:M 03 May 2025 23:05:45.754 * Removing the unix socket file.
+98011:M 03 May 2025 23:05:45.756 # Valkey is now ready to exit, bye bye...

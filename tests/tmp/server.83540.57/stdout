@@ -1,0 +1,102 @@
+### Starting server for test 
+95184:M 03 May 2025 23:05:11.751 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+95184:M 03 May 2025 23:05:11.755 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+95184:M 03 May 2025 23:05:11.758 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=95184, just started
+95184:M 03 May 2025 23:05:11.764 * Configuration loaded
+95184:M 03 May 2025 23:05:11.765 * Increased maximum number of open files to 10032 (it was originally set to 256).
+95184:M 03 May 2025 23:05:11.767 * monotonic clock: POSIX clock_gettime
+95184:M 03 May 2025 23:05:11.767 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 28641
+ |###|   .+###############+.   |###|    PID: 95184                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+95184:M 03 May 2025 23:05:11.767 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+95184:M 03 May 2025 23:05:11.768 * No cluster configuration found, I'm 3308b86ae54991ce3a75be9f6d572af2b6b400c4
+95184:M 03 May 2025 23:05:11.775 * Server initialized
+95184:M 03 May 2025 23:05:11.775 * Ready to accept connections tcp
+95184:M 03 May 2025 23:05:11.775 * Ready to accept connections unix
+95184:M 03 May 2025 23:05:11.927 - Accepted 127.0.0.1:60916
+95184:M 03 May 2025 23:05:11.928 - Client closed connection id=2 addr=127.0.0.1:60916 laddr=127.0.0.1:28641 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+95184:M 03 May 2025 23:05:11.947 - Accepted 127.0.0.1:60948
+95184:M 03 May 2025 23:05:12.555 - Accepting cluster node connection from 127.0.0.1:61532
+95184:M 03 May 2025 23:05:12.557 * IP address for this node updated to 127.0.0.1
+95184:M 03 May 2025 23:05:12.685 * configEpoch collision with node ff724192187d1c46e432f36a8e049314b4edfda6 (). configEpoch set to 1
+95184:M 03 May 2025 23:05:12.778 # Missing implement of connection type tls
+95184:S 03 May 2025 23:05:12.835 * Connecting to PRIMARY 127.0.0.1:28643
+95184:S 03 May 2025 23:05:12.836 * PRIMARY <-> REPLICA sync started
+95184:S 03 May 2025 23:05:12.839 * Cluster state changed: ok
+95184:S 03 May 2025 23:05:12.877 * Non blocking connect for SYNC fired the event.
+95184:S 03 May 2025 23:05:12.877 * Primary replied to PING, replication can continue...
+95184:S 03 May 2025 23:05:12.880 * Partial resynchronization not possible (no cached primary)
+95184:S 03 May 2025 23:05:12.880 * Full resync from primary: b062a70e0797ca2095fa417ee33d4714dedddc7c:0
+95184:S 03 May 2025 23:05:12.880 # DEBUG LOG: ========== I am replica 2 ==========
+95184:S 03 May 2025 23:05:12.882 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+95184:S 03 May 2025 23:05:12.885 * PRIMARY <-> REPLICA sync: Flushing old data
+95184:S 03 May 2025 23:05:12.885 * PRIMARY <-> REPLICA sync: Loading DB in memory
+95184:S 03 May 2025 23:05:12.885 * Loading RDB produced by Valkey version 255.255.255
+95184:S 03 May 2025 23:05:12.885 * RDB age 0 seconds
+95184:S 03 May 2025 23:05:12.885 * RDB memory usage when created 2.92 Mb
+95184:S 03 May 2025 23:05:12.885 * Done loading RDB, keys loaded: 0, keys expired: 0.
+95184:S 03 May 2025 23:05:12.885 * PRIMARY <-> REPLICA sync: Finished with success
+95184:S 03 May 2025 23:05:12.885 - Accepting cluster node connection from 127.0.0.1:61796
+### Starting test Verify that multiple primaries mark replica as failed in tests/unit/cluster/failure-marking.tcl
+95184:S 03 May 2025 23:05:26.235 - Accepting cluster node connection from 127.0.0.1:53932
+95184:S 03 May 2025 23:05:26.241 - Accepting cluster node connection from 127.0.0.1:55019
+### Starting test Check for memory leaks (pid 95258) in tests/unit/cluster/failure-marking.tcl
+95184:S 03 May 2025 23:05:27.458 - Client closed connection id=6 addr=127.0.0.1:28643 laddr=127.0.0.1:61753 fd=18 name= age=15 idle=5 flags=M capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=65530 argv-mem=0 multi-mem=0 rbs=1024 rbp=35 obl=0 oll=0 omem=0 tot-mem=67072 events=r cmd=ping user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=14 tot-net-out=410 tot-cmds=1
+95184:S 03 May 2025 23:05:27.459 * Connection with primary lost.
+95184:S 03 May 2025 23:05:27.459 * Caching the disconnected primary state.
+95184:S 03 May 2025 23:05:27.459 * Reconnecting to PRIMARY 127.0.0.1:28643
+95184:S 03 May 2025 23:05:27.459 * PRIMARY <-> REPLICA sync started
+95184:S 03 May 2025 23:05:27.460 # Error condition on socket for SYNC: Connection refused
+95184:S 03 May 2025 23:05:27.547 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+### Starting test Check for memory leaks (pid 95213) in tests/unit/cluster/failure-marking.tcl
+95184:S 03 May 2025 23:05:27.648 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:27.749 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:27.852 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:27.952 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:28.052 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:28.152 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:28.254 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:28.354 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:28.455 * Connecting to PRIMARY 127.0.0.1:28643
+95184:S 03 May 2025 23:05:28.457 * PRIMARY <-> REPLICA sync started
+95184:S 03 May 2025 23:05:28.463 # Error condition on socket for SYNC: Connection refused
+95184:S 03 May 2025 23:05:28.466 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:28.564 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:28.665 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:28.752 - Client closed connection id=3 addr=127.0.0.1:60948 laddr=127.0.0.1:28641 fd=14 name= age=17 idle=6 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=400 tot-net-out=9937 tot-cmds=12
+95184:S 03 May 2025 23:05:28.766 - Connection with Node 6ba00b7a745ef7c9aa811a56d70e207c349c1ca0 at 127.0.0.1:38642 failed: Connection refused
+95184:S 03 May 2025 23:05:28.769 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:28.867 - Connection with Node 6ba00b7a745ef7c9aa811a56d70e207c349c1ca0 at 127.0.0.1:38642 failed: Connection refused
+95184:S 03 May 2025 23:05:28.875 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:28.972 - Connection with Node 6ba00b7a745ef7c9aa811a56d70e207c349c1ca0 at 127.0.0.1:38642 failed: Connection refused
+95184:S 03 May 2025 23:05:28.978 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:29.073 - Connection with Node 6ba00b7a745ef7c9aa811a56d70e207c349c1ca0 at 127.0.0.1:38642 failed: Connection refused
+95184:S 03 May 2025 23:05:29.076 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:29.174 - Connection with Node 6ba00b7a745ef7c9aa811a56d70e207c349c1ca0 at 127.0.0.1:38642 failed: Connection refused
+95184:S 03 May 2025 23:05:29.174 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:S 03 May 2025 23:05:30.380 - Connection with Node 6ba00b7a745ef7c9aa811a56d70e207c349c1ca0 at 127.0.0.1:38642 failed: Connection refused
+95184:S 03 May 2025 23:05:30.382 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95184:signal-handler (1746281130) Received SIGTERM scheduling shutdown...
+95184:S 03 May 2025 23:05:30.481 * User requested shutdown...
+95184:S 03 May 2025 23:05:30.481 * Removing the pid file.
+95184:S 03 May 2025 23:05:30.481 * Saving the cluster configuration file before exiting.
+95184:S 03 May 2025 23:05:30.499 * Removing the unix socket file.
+95184:S 03 May 2025 23:05:30.499 # Valkey is now ready to exit, bye bye...

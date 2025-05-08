@@ -1,0 +1,202 @@
+### Starting server for test 
+6302:M 03 May 2025 23:06:44.136 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+6302:M 03 May 2025 23:06:44.136 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=6302, just started
+6302:M 03 May 2025 23:06:44.136 * Configuration loaded
+6302:M 03 May 2025 23:06:44.136 * Increased maximum number of open files to 10032 (it was originally set to 256).
+6302:M 03 May 2025 23:06:44.136 * monotonic clock: POSIX clock_gettime
+6302:M 03 May 2025 23:06:44.136 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23661
+ |###|   .+###############+.   |###|    PID: 6302                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+6302:M 03 May 2025 23:06:44.136 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+6302:M 03 May 2025 23:06:44.137 * Server initialized
+6302:M 03 May 2025 23:06:44.137 * Ready to accept connections tcp
+6302:M 03 May 2025 23:06:44.137 * Ready to accept connections unix
+6302:M 03 May 2025 23:06:44.274 - Accepted 127.0.0.1:50833
+6302:M 03 May 2025 23:06:44.277 - Client closed connection id=2 addr=127.0.0.1:50833 laddr=127.0.0.1:23661 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+6302:M 03 May 2025 23:06:44.330 - Accepted 127.0.0.1:50904
+### Starting test Toggle dual-channel-replication-enabled: yes start in tests/integration/dual-channel-replication.tcl
+6302:S 03 May 2025 23:06:44.588 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+6302:S 03 May 2025 23:06:44.588 * Connecting to PRIMARY 127.0.0.1:23662
+6302:S 03 May 2025 23:06:44.588 * PRIMARY <-> REPLICA sync started
+6302:S 03 May 2025 23:06:44.588 * REPLICAOF 127.0.0.1:23662 enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+6302:S 03 May 2025 23:06:44.588 * Non blocking connect for SYNC fired the event.
+6302:S 03 May 2025 23:06:44.589 * Primary replied to PING, replication can continue...
+6302:S 03 May 2025 23:06:44.589 * Trying a partial resynchronization (request a1b0c15f4c1e15313355ac25739dff3d185bf419:1).
+6302:S 03 May 2025 23:06:44.589 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+6302:S 03 May 2025 23:06:44.591 * Dual channel replication: Trying a partial resynchronization using main channel (request 0299f73ef86caf3b6b127138713ab2b1a9f52352:1).
+6302:S 03 May 2025 23:06:44.592 * Dual channel replication: PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization, RDB load in background.
+6302:S 03 May 2025 23:06:44.593 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+6302:S 03 May 2025 23:06:44.604 * Discarding previously cached primary state.
+6302:S 03 May 2025 23:06:44.604 * PRIMARY <-> REPLICA sync: Flushing old data
+6302:S 03 May 2025 23:06:44.604 * PRIMARY <-> REPLICA sync: Loading DB in memory
+6302:S 03 May 2025 23:06:44.604 * Loading RDB produced by Valkey version 255.255.255
+6302:S 03 May 2025 23:06:44.604 * RDB age 0 seconds
+6302:S 03 May 2025 23:06:44.604 * RDB memory usage when created 11.16 Mb
+6302:S 03 May 2025 23:06:44.629 * Done loading RDB, keys loaded: 1000, keys expired: 0.
+6302:S 03 May 2025 23:06:44.629 * Dual channel replication: Successfully streamed replication data into memory
+6302:S 03 May 2025 23:06:44.629 * PRIMARY <-> REPLICA sync: Finished with success
+6302:M 03 May 2025 23:06:44.696 * Connection with primary lost.
+6302:M 03 May 2025 23:06:44.696 * Caching the disconnected primary state.
+6302:M 03 May 2025 23:06:44.696 * Discarding previously cached primary state.
+6302:M 03 May 2025 23:06:44.696 * Setting secondary replication ID to 0299f73ef86caf3b6b127138713ab2b1a9f52352, valid up to offset: 1. New replication ID is a1127d698ca4adb48661d39af7723f0489d993fd
+6302:M 03 May 2025 23:06:44.696 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+6302:S 03 May 2025 23:06:44.787 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+6302:S 03 May 2025 23:06:44.787 * Connecting to PRIMARY 127.0.0.1:23662
+6302:S 03 May 2025 23:06:44.787 * PRIMARY <-> REPLICA sync started
+6302:S 03 May 2025 23:06:44.787 * REPLICAOF 127.0.0.1:23662 enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+6302:S 03 May 2025 23:06:44.787 * Non blocking connect for SYNC fired the event.
+6302:S 03 May 2025 23:06:44.787 * Primary replied to PING, replication can continue...
+6302:S 03 May 2025 23:06:44.787 * Trying a partial resynchronization (request a1127d698ca4adb48661d39af7723f0489d993fd:1).
+6302:S 03 May 2025 23:06:44.787 * Full resync from primary: 0299f73ef86caf3b6b127138713ab2b1a9f52352:10039813
+6302:S 03 May 2025 23:06:44.791 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+6302:S 03 May 2025 23:06:44.804 * Discarding previously cached primary state.
+6302:S 03 May 2025 23:06:44.804 * PRIMARY <-> REPLICA sync: Flushing old data
+6302:S 03 May 2025 23:06:44.804 * PRIMARY <-> REPLICA sync: Loading DB in memory
+6302:S 03 May 2025 23:06:44.804 * Loading RDB produced by Valkey version 255.255.255
+6302:S 03 May 2025 23:06:44.804 * RDB age 0 seconds
+6302:S 03 May 2025 23:06:44.804 * RDB memory usage when created 20.78 Mb
+6302:S 03 May 2025 23:06:44.826 * Done loading RDB, keys loaded: 1000, keys expired: 0.
+6302:S 03 May 2025 23:06:44.826 * PRIMARY <-> REPLICA sync: Finished with success
+6302:M 03 May 2025 23:06:44.902 * Connection with primary lost.
+6302:M 03 May 2025 23:06:44.902 * Caching the disconnected primary state.
+6302:M 03 May 2025 23:06:44.902 * Discarding previously cached primary state.
+6302:M 03 May 2025 23:06:44.903 * Setting secondary replication ID to 0299f73ef86caf3b6b127138713ab2b1a9f52352, valid up to offset: 10039814. New replication ID is 819539d98851edc2ca5ff308610a44f4885441e0
+6302:M 03 May 2025 23:06:44.903 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+### Starting test Online toggle dual-channel-replication-enabled on primary, starting with 'yes' in tests/integration/dual-channel-replication.tcl
+6302:S 03 May 2025 23:06:45.018 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+6302:S 03 May 2025 23:06:45.018 * Connecting to PRIMARY 127.0.0.1:23662
+6302:S 03 May 2025 23:06:45.018 * PRIMARY <-> REPLICA sync started
+6302:S 03 May 2025 23:06:45.019 * REPLICAOF 127.0.0.1:23662 enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+6302:S 03 May 2025 23:06:45.019 * Non blocking connect for SYNC fired the event.
+6302:S 03 May 2025 23:06:45.019 * Primary replied to PING, replication can continue...
+6302:S 03 May 2025 23:06:45.020 * Trying a partial resynchronization (request 819539d98851edc2ca5ff308610a44f4885441e0:10039814).
+6302:S 03 May 2025 23:06:45.020 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+6302:S 03 May 2025 23:06:45.025 * Dual channel replication: Trying a partial resynchronization using main channel (request 0299f73ef86caf3b6b127138713ab2b1a9f52352:20079627).
+6302:S 03 May 2025 23:06:45.025 * Dual channel replication: PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization, RDB load in background.
+6302:M 03 May 2025 23:06:47.033 * Discarding previously cached primary state.
+6302:M 03 May 2025 23:06:47.033 * Dual channel replication: Aborting dual channel sync
+6302:M 03 May 2025 23:06:47.033 * Setting secondary replication ID to 819539d98851edc2ca5ff308610a44f4885441e0, valid up to offset: 10039814. New replication ID is 07088ce4a4a5dde9db53fcfcb518d9b7b46e641e
+6302:M 03 May 2025 23:06:47.033 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+### Starting test Online toggle dual-channel-replication-enabled on replica, starting with 'yes' in tests/integration/dual-channel-replication.tcl
+6302:S 03 May 2025 23:06:47.124 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+6302:S 03 May 2025 23:06:47.124 * Connecting to PRIMARY 127.0.0.1:23662
+6302:S 03 May 2025 23:06:47.124 * PRIMARY <-> REPLICA sync started
+6302:S 03 May 2025 23:06:47.124 * REPLICAOF 127.0.0.1:23662 enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+6302:S 03 May 2025 23:06:47.124 * Non blocking connect for SYNC fired the event.
+6302:S 03 May 2025 23:06:47.124 * Primary replied to PING, replication can continue...
+6302:S 03 May 2025 23:06:47.124 * Trying a partial resynchronization (request 07088ce4a4a5dde9db53fcfcb518d9b7b46e641e:10039814).
+6302:S 03 May 2025 23:06:47.124 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+6302:S 03 May 2025 23:06:49.187 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6302:S 03 May 2025 23:06:54.234 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6302:S 03 May 2025 23:06:59.283 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6302:S 03 May 2025 23:07:04.333 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6302:S 03 May 2025 23:07:09.053 * Dual channel replication: Trying a partial resynchronization using main channel (request 0299f73ef86caf3b6b127138713ab2b1a9f52352:30119468).
+6302:S 03 May 2025 23:07:09.054 * Dual channel replication: PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization, RDB load in background.
+6302:S 03 May 2025 23:07:09.378 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6302:M 03 May 2025 23:07:10.231 * Discarding previously cached primary state.
+6302:M 03 May 2025 23:07:10.231 * Dual channel replication: Aborting dual channel sync
+6302:M 03 May 2025 23:07:10.231 * Setting secondary replication ID to 07088ce4a4a5dde9db53fcfcb518d9b7b46e641e, valid up to offset: 10039814. New replication ID is dc131889cdb745a3fb399a38e2904d138eab2def
+6302:M 03 May 2025 23:07:10.231 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+### Starting test Toggle dual-channel-replication-enabled: no start in tests/integration/dual-channel-replication.tcl
+6302:S 03 May 2025 23:07:10.334 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+6302:S 03 May 2025 23:07:10.334 * Connecting to PRIMARY 127.0.0.1:23662
+6302:S 03 May 2025 23:07:10.334 * PRIMARY <-> REPLICA sync started
+6302:S 03 May 2025 23:07:10.334 * REPLICAOF 127.0.0.1:23662 enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+6302:S 03 May 2025 23:07:10.334 * Non blocking connect for SYNC fired the event.
+6302:S 03 May 2025 23:07:10.334 * Primary replied to PING, replication can continue...
+6302:S 03 May 2025 23:07:10.334 * Trying a partial resynchronization (request dc131889cdb745a3fb399a38e2904d138eab2def:10039814).
+6302:S 03 May 2025 23:07:14.440 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6302:S 03 May 2025 23:07:19.500 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6302:S 03 May 2025 23:07:24.546 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6302:S 03 May 2025 23:07:29.596 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6302:S 03 May 2025 23:07:33.101 * Full resync from primary: 0299f73ef86caf3b6b127138713ab2b1a9f52352:40159308
+6302:S 03 May 2025 23:07:33.103 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+6302:S 03 May 2025 23:07:33.116 * Discarding previously cached primary state.
+6302:S 03 May 2025 23:07:33.116 * PRIMARY <-> REPLICA sync: Flushing old data
+6302:S 03 May 2025 23:07:33.116 * PRIMARY <-> REPLICA sync: Loading DB in memory
+6302:S 03 May 2025 23:07:33.116 * Loading RDB produced by Valkey version 255.255.255
+6302:S 03 May 2025 23:07:33.116 * RDB age 0 seconds
+6302:S 03 May 2025 23:07:33.116 * RDB memory usage when created 21.14 Mb
+6302:S 03 May 2025 23:07:33.140 * Done loading RDB, keys loaded: 1000, keys expired: 0.
+6302:S 03 May 2025 23:07:33.140 * PRIMARY <-> REPLICA sync: Finished with success
+6302:M 03 May 2025 23:07:33.168 * Connection with primary lost.
+6302:M 03 May 2025 23:07:33.169 * Caching the disconnected primary state.
+6302:M 03 May 2025 23:07:33.169 * Discarding previously cached primary state.
+6302:M 03 May 2025 23:07:33.169 * Setting secondary replication ID to 0299f73ef86caf3b6b127138713ab2b1a9f52352, valid up to offset: 40159309. New replication ID is 210b9cd6d33b83ee0a08d797048c744c572d2b1c
+6302:M 03 May 2025 23:07:33.169 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+6302:S 03 May 2025 23:07:33.266 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+6302:S 03 May 2025 23:07:33.266 * Connecting to PRIMARY 127.0.0.1:23662
+6302:S 03 May 2025 23:07:33.267 * PRIMARY <-> REPLICA sync started
+6302:S 03 May 2025 23:07:33.267 * REPLICAOF 127.0.0.1:23662 enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+6302:S 03 May 2025 23:07:33.267 * Non blocking connect for SYNC fired the event.
+6302:S 03 May 2025 23:07:33.267 * Primary replied to PING, replication can continue...
+6302:S 03 May 2025 23:07:33.267 * Trying a partial resynchronization (request 210b9cd6d33b83ee0a08d797048c744c572d2b1c:40159309).
+6302:S 03 May 2025 23:07:33.267 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+6302:S 03 May 2025 23:07:33.271 * Dual channel replication: Trying a partial resynchronization using main channel (request 0299f73ef86caf3b6b127138713ab2b1a9f52352:50199122).
+6302:S 03 May 2025 23:07:33.271 * Dual channel replication: PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization, RDB load in background.
+6302:S 03 May 2025 23:07:33.272 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+6302:S 03 May 2025 23:07:33.285 * Discarding previously cached primary state.
+6302:S 03 May 2025 23:07:33.285 * PRIMARY <-> REPLICA sync: Flushing old data
+6302:S 03 May 2025 23:07:33.285 * PRIMARY <-> REPLICA sync: Loading DB in memory
+6302:S 03 May 2025 23:07:33.285 * Loading RDB produced by Valkey version 255.255.255
+6302:S 03 May 2025 23:07:33.285 * RDB age 0 seconds
+6302:S 03 May 2025 23:07:33.285 * RDB memory usage when created 21.24 Mb
+6302:S 03 May 2025 23:07:33.309 * Done loading RDB, keys loaded: 1000, keys expired: 0.
+6302:S 03 May 2025 23:07:33.309 * Dual channel replication: Successfully streamed replication data into memory
+6302:S 03 May 2025 23:07:33.309 * PRIMARY <-> REPLICA sync: Finished with success
+6302:M 03 May 2025 23:07:33.380 * Connection with primary lost.
+6302:M 03 May 2025 23:07:33.380 * Caching the disconnected primary state.
+6302:M 03 May 2025 23:07:33.380 * Discarding previously cached primary state.
+6302:M 03 May 2025 23:07:33.380 * Setting secondary replication ID to 0299f73ef86caf3b6b127138713ab2b1a9f52352, valid up to offset: 50199122. New replication ID is a7b755c705ac9bf27456a2b0780bf197c99aac17
+6302:M 03 May 2025 23:07:33.380 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+### Starting test Online toggle dual-channel-replication-enabled on primary, starting with 'no' in tests/integration/dual-channel-replication.tcl
+6302:S 03 May 2025 23:07:33.514 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+6302:S 03 May 2025 23:07:33.514 * Connecting to PRIMARY 127.0.0.1:23662
+6302:S 03 May 2025 23:07:33.515 * PRIMARY <-> REPLICA sync started
+6302:S 03 May 2025 23:07:33.515 * REPLICAOF 127.0.0.1:23662 enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+6302:S 03 May 2025 23:07:33.515 * Non blocking connect for SYNC fired the event.
+6302:S 03 May 2025 23:07:33.515 * Primary replied to PING, replication can continue...
+6302:S 03 May 2025 23:07:33.515 * Trying a partial resynchronization (request a7b755c705ac9bf27456a2b0780bf197c99aac17:50199122).
+6302:S 03 May 2025 23:07:33.517 * Full resync from primary: 0299f73ef86caf3b6b127138713ab2b1a9f52352:60238934
+6302:S 03 May 2025 23:07:34.657 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6302:M 03 May 2025 23:07:35.520 * Discarding previously cached primary state.
+6302:M 03 May 2025 23:07:35.520 * Setting secondary replication ID to a7b755c705ac9bf27456a2b0780bf197c99aac17, valid up to offset: 50199122. New replication ID is 3e8f4c6925692b084e5dd5e34dac865fafd77fad
+6302:M 03 May 2025 23:07:35.520 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+### Starting test Online toggle dual-channel-replication-enabled on replica, starting with 'no' in tests/integration/dual-channel-replication.tcl
+6302:S 03 May 2025 23:07:35.671 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+6302:S 03 May 2025 23:07:35.673 * Connecting to PRIMARY 127.0.0.1:23662
+6302:S 03 May 2025 23:07:35.673 * PRIMARY <-> REPLICA sync started
+6302:S 03 May 2025 23:07:35.673 * REPLICAOF 127.0.0.1:23662 enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+6302:S 03 May 2025 23:07:35.673 * Non blocking connect for SYNC fired the event.
+6302:S 03 May 2025 23:07:35.673 * Primary replied to PING, replication can continue...
+6302:S 03 May 2025 23:07:35.674 * Trying a partial resynchronization (request 3e8f4c6925692b084e5dd5e34dac865fafd77fad:50199122).
+6302:S 03 May 2025 23:07:35.674 * Full resync from primary: 0299f73ef86caf3b6b127138713ab2b1a9f52352:70278761
+6302:M 03 May 2025 23:07:36.682 * Discarding previously cached primary state.
+6302:M 03 May 2025 23:07:36.682 * Setting secondary replication ID to 3e8f4c6925692b084e5dd5e34dac865fafd77fad, valid up to offset: 50199122. New replication ID is 39650721f2453d221d9967a611bfb0b9f8ea2f53
+6302:M 03 May 2025 23:07:36.682 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= user=default lib-name= lib-ver=')
+### Starting test Check for memory leaks (pid 6384) in tests/integration/dual-channel-replication.tcl
+6302:M 03 May 2025 23:07:39.158 - Client closed connection id=3 addr=127.0.0.1:50904 laddr=127.0.0.1:23661 fd=12 name= age=55 idle=3 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=4096 rbp=2048 obl=0 oll=0 omem=0 tot-mem=21504 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1508 tot-net-out=49321 tot-cmds=35
+6302:M 03 May 2025 23:07:39.711 - DB 9: 1000 keys (0 volatile) in 1792 slots HT.
+6302:signal-handler (1746281265) Received SIGTERM scheduling shutdown...
+6302:M 03 May 2025 23:07:45.961 * User requested shutdown...
+6302:M 03 May 2025 23:07:45.961 * Removing the pid file.
+6302:M 03 May 2025 23:07:45.961 * Removing the unix socket file.
+6302:M 03 May 2025 23:07:45.961 # Valkey is now ready to exit, bye bye...

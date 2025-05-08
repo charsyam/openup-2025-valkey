@@ -1,0 +1,82 @@
+### Starting server for test 
+14842:M 03 May 2025 23:08:44.892 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+14842:M 03 May 2025 23:08:44.892 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+14842:M 03 May 2025 23:08:44.892 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=14842, just started
+14842:M 03 May 2025 23:08:44.892 * Configuration loaded
+14842:M 03 May 2025 23:08:44.893 * Increased maximum number of open files to 10032 (it was originally set to 256).
+14842:M 03 May 2025 23:08:44.893 * monotonic clock: POSIX clock_gettime
+14842:M 03 May 2025 23:08:44.893 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 22182
+ |###|   .+###############+.   |###|    PID: 14842                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+14842:M 03 May 2025 23:08:44.893 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+14842:M 03 May 2025 23:08:44.894 * No cluster configuration found, I'm e772ac331af6e33cf8d17e41b4e34c74693c514f
+14842:M 03 May 2025 23:08:44.903 * Server initialized
+14842:M 03 May 2025 23:08:44.903 * Ready to accept connections tcp
+14842:M 03 May 2025 23:08:44.903 * Ready to accept connections unix
+14842:M 03 May 2025 23:08:45.044 - Accepted 127.0.0.1:64338
+14842:M 03 May 2025 23:08:45.044 - Client closed connection id=2 addr=127.0.0.1:64338 laddr=127.0.0.1:22182 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+14842:M 03 May 2025 23:08:45.063 - Accepted 127.0.0.1:64342
+14842:M 03 May 2025 23:08:45.486 - Accepting cluster node connection from 127.0.0.1:64415
+14842:M 03 May 2025 23:08:45.486 * IP address for this node updated to 127.0.0.1
+14842:M 03 May 2025 23:08:45.597 - Accepting cluster node connection from 127.0.0.1:64434
+14842:M 03 May 2025 23:08:46.113 - Accepting cluster node connection from 127.0.0.1:64521
+14842:M 03 May 2025 23:08:46.145 # Missing implement of connection type tls
+14842:M 03 May 2025 23:08:46.266 * Node c83912cf52efe38f048a5c73d1d0541b01016190 () is no longer primary of shard c2db648ddeeb5b9a12d168678da044815c15f346; removed all 0 slot(s) it used to own
+14842:M 03 May 2025 23:08:46.266 * Node c83912cf52efe38f048a5c73d1d0541b01016190 () is now part of shard b707f3d8a87b687428e0a46af1b35c2f625751fe
+14842:M 03 May 2025 23:08:46.266 * Node c83912cf52efe38f048a5c73d1d0541b01016190 () is now a replica of node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db () in shard b707f3d8a87b687428e0a46af1b35c2f625751fe
+14842:M 03 May 2025 23:08:46.268 # DEBUG LOG: ========== I am primary 2 ==========
+14842:M 03 May 2025 23:08:46.920 * Cluster state changed: ok
+### Starting test Broadcast PONG to the cluster when the node role changes in tests/unit/cluster/manual-failover.tcl
+14842:M 03 May 2025 23:08:56.173 * Failover auth granted to c83912cf52efe38f048a5c73d1d0541b01016190 () for epoch 4
+14842:M 03 May 2025 23:08:56.218 * A failover occurred in shard b707f3d8a87b687428e0a46af1b35c2f625751fe; node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db () failed over to node c83912cf52efe38f048a5c73d1d0541b01016190 () with a config epoch of 4
+14842:M 03 May 2025 23:08:56.218 * Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db () is now a replica of node c83912cf52efe38f048a5c73d1d0541b01016190 () in shard b707f3d8a87b687428e0a46af1b35c2f625751fe
+14842:M 03 May 2025 23:08:56.229 * Failover auth granted to 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db () for epoch 5
+14842:M 03 May 2025 23:08:56.269 * A failover occurred in shard b707f3d8a87b687428e0a46af1b35c2f625751fe; node c83912cf52efe38f048a5c73d1d0541b01016190 () failed over to node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db () with a config epoch of 5
+14842:M 03 May 2025 23:08:56.269 * Node c83912cf52efe38f048a5c73d1d0541b01016190 () is now a replica of node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db () in shard b707f3d8a87b687428e0a46af1b35c2f625751fe
+### Starting test Check for memory leaks (pid 14917) in tests/unit/cluster/manual-failover.tcl
+### Starting test Check for memory leaks (pid 14882) in tests/unit/cluster/manual-failover.tcl
+14842:M 03 May 2025 23:08:57.911 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:58.012 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:58.113 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:58.214 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:58.315 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:58.416 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:58.517 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:58.617 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:58.718 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:58.818 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:58.919 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:59.021 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:59.122 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:59.223 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:59.274 - Client closed connection id=3 addr=127.0.0.1:64342 laddr=127.0.0.1:22182 fd=14 name= age=14 idle=3 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=518 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=641 tot-net-out=7692 tot-cmds=18
+14842:M 03 May 2025 23:08:59.325 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:59.325 - Connection with Node beda3f819fed970bccc908f2095b530b67e878ad at 127.0.0.1:32183 failed: Connection refused
+14842:M 03 May 2025 23:08:59.426 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:08:59.426 - Connection with Node beda3f819fed970bccc908f2095b530b67e878ad at 127.0.0.1:32183 failed: Connection refused
+14842:M 03 May 2025 23:09:00.484 - Connection with Node 93c2e10a5d1fab6c193c5cabd7e99e944f72e1db at 127.0.0.1:32184 failed: Connection refused
+14842:M 03 May 2025 23:09:00.484 - Connection with Node beda3f819fed970bccc908f2095b530b67e878ad at 127.0.0.1:32183 failed: Connection refused
+14842:signal-handler (1746281340) Received SIGTERM scheduling shutdown...
+14842:M 03 May 2025 23:09:00.585 * User requested shutdown...
+14842:M 03 May 2025 23:09:00.585 * Removing the pid file.
+14842:M 03 May 2025 23:09:00.585 * Saving the cluster configuration file before exiting.
+14842:M 03 May 2025 23:09:00.592 * Removing the unix socket file.
+14842:M 03 May 2025 23:09:00.592 # Valkey is now ready to exit, bye bye...

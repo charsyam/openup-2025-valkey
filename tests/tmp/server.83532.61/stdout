@@ -1,0 +1,63 @@
+### Starting server for test 
+5410:M 03 May 2025 23:06:40.163 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5410:M 03 May 2025 23:06:40.163 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5410, just started
+5410:M 03 May 2025 23:06:40.163 * Configuration loaded
+5410:M 03 May 2025 23:06:40.163 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5410:M 03 May 2025 23:06:40.163 * monotonic clock: POSIX clock_gettime
+5410:M 03 May 2025 23:06:40.164 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 24641
+ |###|   .+###############+.   |###|    PID: 5410                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5410:M 03 May 2025 23:06:40.164 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5410:M 03 May 2025 23:06:40.164 * Server initialized
+5410:M 03 May 2025 23:06:40.164 * Ready to accept connections tcp
+5410:M 03 May 2025 23:06:40.164 * Ready to accept connections unix
+5410:M 03 May 2025 23:06:40.307 - Accepted 127.0.0.1:64179
+5410:M 03 May 2025 23:06:40.307 - Client closed connection id=2 addr=127.0.0.1:64179 laddr=127.0.0.1:24641 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+5410:M 03 May 2025 23:06:40.332 - Accepted 127.0.0.1:64197
+### Starting test First server should have role slave after SLAVEOF in tests/integration/replication-4.tcl
+5410:S 03 May 2025 23:06:40.333 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+5410:S 03 May 2025 23:06:40.333 * Connecting to PRIMARY 127.0.0.1:24640
+5410:S 03 May 2025 23:06:40.333 * PRIMARY <-> REPLICA sync started
+5410:S 03 May 2025 23:06:40.333 * REPLICAOF 127.0.0.1:24640 enabled (user request from 'id=3 addr=127.0.0.1:64197 laddr=127.0.0.1:24641 fd=12 name= user=default lib-name= lib-ver=')
+5410:S 03 May 2025 23:06:40.333 * Non blocking connect for SYNC fired the event.
+5410:S 03 May 2025 23:06:40.334 * Primary replied to PING, replication can continue...
+5410:S 03 May 2025 23:06:40.334 * Trying a partial resynchronization (request 27cf79a9500f49368b1e05598e42c7e8f642839b:1).
+5410:S 03 May 2025 23:06:40.334 * Full resync from primary: b0eb8eef0c3206c1422da67e4b77954cf75a332b:0
+5410:S 03 May 2025 23:06:40.336 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+5410:S 03 May 2025 23:06:40.342 * Discarding previously cached primary state.
+5410:S 03 May 2025 23:06:40.342 * PRIMARY <-> REPLICA sync: Flushing old data
+5410:S 03 May 2025 23:06:40.342 * PRIMARY <-> REPLICA sync: Loading DB in memory
+5410:S 03 May 2025 23:06:40.342 * Loading RDB produced by Valkey version 255.255.255
+5410:S 03 May 2025 23:06:40.342 * RDB age 0 seconds
+5410:S 03 May 2025 23:06:40.342 * RDB memory usage when created 1.19 Mb
+5410:S 03 May 2025 23:06:40.342 * Done loading RDB, keys loaded: 0, keys expired: 0.
+5410:S 03 May 2025 23:06:40.342 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test With min-slaves-to-write (1,3): master should be writable in tests/integration/replication-4.tcl
+### Starting test With min-slaves-to-write (2,3): master should not be writable in tests/integration/replication-4.tcl
+### Starting test With min-slaves-to-write function without no-write flag in tests/integration/replication-4.tcl
+### Starting test With not enough good slaves, read in Lua script is still accepted in tests/integration/replication-4.tcl
+### Starting test With min-slaves-to-write: master not writable with lagged slave in tests/integration/replication-4.tcl
+5410:S 03 May 2025 23:06:43.212 - Client closed connection id=3 addr=127.0.0.1:64197 laddr=127.0.0.1:24641 fd=12 name= age=3 idle=3 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=slaveof user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=66 tot-net-out=10 tot-cmds=2
+5410:signal-handler (1746281204) Received SIGTERM scheduling shutdown...
+5410:S 03 May 2025 23:06:44.724 * User requested shutdown...
+5410:S 03 May 2025 23:06:44.724 * Removing the pid file.
+5410:S 03 May 2025 23:06:44.724 * Removing the unix socket file.
+5410:S 03 May 2025 23:06:44.724 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,51 @@
+### Starting server for test INCRBYFLOAT: We can call scripts expanding client->argv from Lua in tests/unit/scripting.tcl
+90370:M 03 May 2025 23:04:33.704 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+90370:M 03 May 2025 23:04:33.706 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=90370, just started
+90370:M 03 May 2025 23:04:33.710 * Configuration loaded
+90370:M 03 May 2025 23:04:33.721 * Increased maximum number of open files to 10032 (it was originally set to 256).
+90370:M 03 May 2025 23:04:33.724 * monotonic clock: POSIX clock_gettime
+90370:M 03 May 2025 23:04:33.728 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21133
+ |###|   .+###############+.   |###|    PID: 90370                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+90370:M 03 May 2025 23:04:33.741 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+90370:M 03 May 2025 23:04:33.745 * Server initialized
+90370:M 03 May 2025 23:04:33.745 * Ready to accept connections tcp
+90370:M 03 May 2025 23:04:33.745 * Ready to accept connections unix
+90370:M 03 May 2025 23:04:33.837 - Accepted 127.0.0.1:60945
+90370:M 03 May 2025 23:04:33.840 - Client closed connection id=2 addr=127.0.0.1:60945 laddr=127.0.0.1:21133 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+90370:M 03 May 2025 23:04:33.861 - Accepted 127.0.0.1:60973
+90370:M 03 May 2025 23:04:33.869 - Accepted 127.0.0.1:60980
+90370:M 03 May 2025 23:04:33.875 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+90370:M 03 May 2025 23:04:33.878 * Replication backlog created, my new replication IDs are '0284af393f68753fc23f260a7436fc9c2b4ca62b' and '0000000000000000000000000000000000000000'
+90370:M 03 May 2025 23:04:33.887 * Starting BGSAVE for SYNC with target: disk using: normal sync
+90370:M 03 May 2025 23:04:33.888 * Background saving started by pid 90386
+90386:C 03 May 2025 23:04:33.912 * DB saved on disk
+90386:C 03 May 2025 23:04:33.921 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+90370:M 03 May 2025 23:04:33.945 * Background saving terminated with success
+90370:M 03 May 2025 23:04:33.946 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+90370:M 03 May 2025 23:04:33.956 - Client closed connection id=4 addr=127.0.0.1:60980 laddr=127.0.0.1:21133 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=107 tot-cmds=1
+90370:M 03 May 2025 23:04:33.959 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+90370:M 03 May 2025 23:04:33.963 - Client closed connection id=3 addr=127.0.0.1:60973 laddr=127.0.0.1:21133 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=5 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=380 tot-net-out=30 tot-cmds=9
+90370:signal-handler (1746281074) Received SIGTERM scheduling shutdown...
+90370:M 03 May 2025 23:04:34.046 * User requested shutdown...
+90370:M 03 May 2025 23:04:34.047 * Removing the pid file.
+90370:M 03 May 2025 23:04:34.053 * Removing the unix socket file.
+90370:M 03 May 2025 23:04:34.072 # Valkey is now ready to exit, bye bye...

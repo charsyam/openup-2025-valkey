@@ -1,0 +1,76 @@
+### Starting server for test 
+90227:M 03 May 2025 23:04:32.669 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+90227:M 03 May 2025 23:04:32.669 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+90227:M 03 May 2025 23:04:32.669 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=90227, just started
+90227:M 03 May 2025 23:04:32.669 * Configuration loaded
+90227:M 03 May 2025 23:04:32.669 * Increased maximum number of open files to 10032 (it was originally set to 256).
+90227:M 03 May 2025 23:04:32.669 * monotonic clock: POSIX clock_gettime
+90227:M 03 May 2025 23:04:32.670 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 27620
+ |###|   .+###############+.   |###|    PID: 90227                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+90227:M 03 May 2025 23:04:32.670 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+90227:M 03 May 2025 23:04:32.670 * No cluster configuration found, I'm 786708e89fdb970559d6f8b3ccf5751c27caad2c
+90227:M 03 May 2025 23:04:32.676 * Server initialized
+90227:M 03 May 2025 23:04:32.676 * Ready to accept connections tcp
+90227:M 03 May 2025 23:04:32.676 * Ready to accept connections unix
+90227:M 03 May 2025 23:04:32.800 - Accepted 127.0.0.1:60641
+90227:M 03 May 2025 23:04:32.800 - Client closed connection id=2 addr=127.0.0.1:60641 laddr=127.0.0.1:27620 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+90227:M 03 May 2025 23:04:32.811 - Accepted 127.0.0.1:60642
+### Starting test Cluster nodes are reachable in tests/unit/cluster/base.tcl
+### Starting test Cluster Join and auto-discovery test in tests/unit/cluster/base.tcl
+90227:M 03 May 2025 23:04:32.812 * Cluster meet 127.0.0.1:27619 (user request from 'id=3 addr=127.0.0.1:60642 laddr=127.0.0.1:27620 fd=14 name= user=default lib-name= lib-ver=').
+90227:M 03 May 2025 23:04:32.813 # Missing implement of connection type tls
+90227:M 03 May 2025 23:04:32.910 - Accepting cluster node connection from 127.0.0.1:60657
+90227:M 03 May 2025 23:04:32.910 * IP address for this node updated to 127.0.0.1
+90227:M 03 May 2025 23:04:32.910 * Successfully completed handshake with f0f0cb5db4132ecfb2d7e432c5fc0a905cf203e9 ()
+90227:M 03 May 2025 23:04:32.910 * configEpoch collision with node f0f0cb5db4132ecfb2d7e432c5fc0a905cf203e9 (). configEpoch set to 1
+90227:M 03 May 2025 23:04:33.180 - Accepting cluster node connection from 127.0.0.1:60704
+90227:M 03 May 2025 23:04:33.369 - Accepting cluster node connection from 127.0.0.1:60747
+90227:M 03 May 2025 23:04:33.470 - Accepting cluster node connection from 127.0.0.1:60781
+### Starting test Before slots allocation, all nodes report cluster failure in tests/unit/cluster/base.tcl
+### Starting test Different nodes have different IDs in tests/unit/cluster/base.tcl
+### Starting test It is possible to perform slot allocation in tests/unit/cluster/base.tcl
+### Starting test After the join, every node gets a different config epoch in tests/unit/cluster/base.tcl
+### Starting test Nodes should report cluster_state is ok now in tests/unit/cluster/base.tcl
+90227:M 03 May 2025 23:04:34.693 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+90227:M 03 May 2025 23:04:36.763 * Cluster state changed: ok
+### Starting test Sanity for CLUSTER COUNTKEYSINSLOT in tests/unit/cluster/base.tcl
+### Starting test It is possible to write and read from the cluster in tests/unit/cluster/base.tcl
+90227:M 03 May 2025 23:04:39.294 - Accepted 127.0.0.1:62877
+90227:M 03 May 2025 23:04:39.296 - Client closed connection id=4 addr=127.0.0.1:62877 laddr=127.0.0.1:27620 fd=23 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=28 tot-net-out=84083 tot-cmds=1
+90227:M 03 May 2025 23:04:39.298 - Accepted 127.0.0.1:62880
+90227:M 03 May 2025 23:04:39.353 - Client closed connection id=5 addr=127.0.0.1:62880 laddr=127.0.0.1:27620 fd=23 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1588 tot-net-out=696 tot-cmds=40
+### Starting test CLUSTER RESET SOFT test in tests/unit/cluster/base.tcl
+90227:M 03 May 2025 23:04:39.356 * Cluster reset (user request from 'id=3 addr=127.0.0.1:60642 laddr=127.0.0.1:27620 fd=14 name= user=default lib-name= lib-ver=').
+90227:M 03 May 2025 23:04:39.356 # Cluster state changed: fail
+90227:M 03 May 2025 23:04:39.356 # Cluster is currently down: I am part of a minority partition.
+### Starting test Coverage: CLUSTER HELP in tests/unit/cluster/base.tcl
+### Starting test Coverage: ASKING in tests/unit/cluster/base.tcl
+### Starting test CLUSTER SLAVES and CLUSTER REPLICAS with zero replicas in tests/unit/cluster/base.tcl
+90227:M 03 May 2025 23:04:39.371 - Client closed connection id=3 addr=127.0.0.1:60642 laddr=127.0.0.1:27620 fd=14 name= age=7 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=514 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|replicas user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=37211 tot-net-out=48476 tot-cmds=78
+90227:M 03 May 2025 23:04:39.392 - Accepting cluster node connection from 127.0.0.1:62916
+90227:M 03 May 2025 23:04:39.396 - Accepting cluster node connection from 127.0.0.1:62917
+90227:signal-handler (1746281080) Received SIGTERM scheduling shutdown...
+90227:M 03 May 2025 23:04:40.443 * User requested shutdown...
+90227:M 03 May 2025 23:04:40.443 * Removing the pid file.
+90227:M 03 May 2025 23:04:40.443 * Saving the cluster configuration file before exiting.
+90227:M 03 May 2025 23:04:40.448 * Removing the unix socket file.
+90227:M 03 May 2025 23:04:40.448 # Valkey is now ready to exit, bye bye...

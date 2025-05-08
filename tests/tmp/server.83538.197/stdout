@@ -1,0 +1,51 @@
+### Starting server for test 
+19364:M 03 May 2025 23:10:12.483 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+19364:M 03 May 2025 23:10:12.483 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=19364, just started
+19364:M 03 May 2025 23:10:12.483 * Configuration loaded
+19364:M 03 May 2025 23:10:12.484 * Increased maximum number of open files to 10032 (it was originally set to 256).
+19364:M 03 May 2025 23:10:12.484 * monotonic clock: POSIX clock_gettime
+19364:M 03 May 2025 23:10:12.484 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27709
+ |###|   .+###############+.   |###|    PID: 19364                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+19364:M 03 May 2025 23:10:12.484 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+19364:M 03 May 2025 23:10:12.484 * Server initialized
+19364:M 03 May 2025 23:10:12.484 * Ready to accept connections tcp
+19364:M 03 May 2025 23:10:12.484 * Ready to accept connections unix
+19364:M 03 May 2025 23:10:12.609 - Accepted 127.0.0.1:50470
+19364:M 03 May 2025 23:10:12.609 - Client closed connection id=2 addr=127.0.0.1:50470 laddr=127.0.0.1:27709 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+19364:M 03 May 2025 23:10:12.619 - Accepted 127.0.0.1:50471
+19364:M 03 May 2025 23:10:13.148 - Accepted 127.0.0.1:50478
+19364:M 03 May 2025 23:10:13.149 * Replica 127.0.0.1:27711 asks for synchronization
+19364:M 03 May 2025 23:10:13.149 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '136b51f1514fef166ab9003dbb1e8463892626f6', my replication IDs are '110f236d95131e47dd5c08363a63c644577ccd24' and '0000000000000000000000000000000000000000')
+19364:M 03 May 2025 23:10:13.149 * Replication backlog created, my new replication IDs are '2cf3d7a3e2e6180bb5f41eccd3425d2d88e71eb5' and '0000000000000000000000000000000000000000'
+19364:M 03 May 2025 23:10:13.149 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+19364:M 03 May 2025 23:10:13.149 * Background RDB transfer started by pid 19396 to pipe through parent process
+19364:M 03 May 2025 23:10:13.254 * User requested shutdown... (user request from 'id=3 addr=127.0.0.1:50471 laddr=127.0.0.1:27709 fd=12 name= user=default lib-name= lib-ver=')
+19364:M 03 May 2025 23:10:13.254 * 1 of 1 replicas are in sync when shutting down.
+19364:M 03 May 2025 23:10:13.254 # There is a child saving an .rdb. Killing it!
+19364:M 03 May 2025 23:10:13.254 * Removing the pid file.
+19396:signal-handler (1746281413) Received SIGUSR1 in child, exiting now.
+19364:M 03 May 2025 23:10:13.254 * Removing the unix socket file.
+19364:M 03 May 2025 23:10:13.255 # Valkey is now ready to exit, bye bye...
+### Starting test Don't disconnect with replicas before loading transferred RDB when full sync with dual-channel-replication no in tests/integration/replication.tcl
+### Starting test Discard cache master before loading transferred RDB when full sync with dual-channel-replication no in tests/integration/replication.tcl
+### Starting test Check for memory leaks (pid 19386) in tests/integration/replication.tcl
+### Starting test Check for memory leaks (pid 19375) in tests/integration/replication.tcl

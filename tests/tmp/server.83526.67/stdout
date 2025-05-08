@@ -1,0 +1,41 @@
+### Starting server for test corrupt payload: invalid zlbytes header in tests/integration/corrupt-dump.tcl
+3374:M 03 May 2025 23:06:26.807 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+3374:M 03 May 2025 23:06:26.807 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=3374, just started
+3374:M 03 May 2025 23:06:26.807 * Configuration loaded
+3374:M 03 May 2025 23:06:26.807 * Increased maximum number of open files to 10032 (it was originally set to 256).
+3374:M 03 May 2025 23:06:26.807 * monotonic clock: POSIX clock_gettime
+3374:M 03 May 2025 23:06:26.807 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21645
+ |###|   .+###############+.   |###|    PID: 3374                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+3374:M 03 May 2025 23:06:26.807 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+3374:M 03 May 2025 23:06:26.808 * Server initialized
+3374:M 03 May 2025 23:06:26.808 * Ready to accept connections tcp
+3374:M 03 May 2025 23:06:26.808 * Ready to accept connections unix
+3374:M 03 May 2025 23:06:26.945 - Accepted 127.0.0.1:54277
+3374:M 03 May 2025 23:06:26.945 - Client closed connection id=2 addr=127.0.0.1:54277 laddr=127.0.0.1:21645 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+3374:M 03 May 2025 23:06:26.974 - Accepted 127.0.0.1:54315
+3374:M 03 May 2025 23:06:26.975 - Internal error in RDB reading offset 0, function at rdb.c:2437 -> Hash ziplist integrity check failed.
+3374:M 03 May 2025 23:06:26.985 - Client closed connection id=3 addr=127.0.0.1:54315 laddr=127.0.0.1:21645 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=restore user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=102 tot-net-out=27 tot-cmds=2
+3374:signal-handler (1746281186) Received SIGTERM scheduling shutdown...
+3374:M 03 May 2025 23:06:27.009 * User requested shutdown...
+3374:M 03 May 2025 23:06:27.009 * Removing the pid file.
+3374:M 03 May 2025 23:06:27.009 * Removing the unix socket file.
+3374:M 03 May 2025 23:06:27.010 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,50 @@
+### Starting server for test 
+90627:M 03 May 2025 23:04:36.548 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+90627:M 03 May 2025 23:04:36.548 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=90627, just started
+90627:M 03 May 2025 23:04:36.548 * Configuration loaded
+90627:M 03 May 2025 23:04:36.549 * Increased maximum number of open files to 10032 (it was originally set to 256).
+90627:M 03 May 2025 23:04:36.549 * monotonic clock: POSIX clock_gettime
+90627:M 03 May 2025 23:04:36.549 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 24624
+ |###|   .+###############+.   |###|    PID: 90627                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+90627:M 03 May 2025 23:04:36.549 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+90627:M 03 May 2025 23:04:36.549 * Server initialized
+90627:M 03 May 2025 23:04:36.549 * Ready to accept connections tcp
+90627:M 03 May 2025 23:04:36.549 * Ready to accept connections unix
+90627:M 03 May 2025 23:04:36.687 - Accepted 127.0.0.1:61928
+90627:M 03 May 2025 23:04:36.695 - Client closed connection id=2 addr=127.0.0.1:61928 laddr=127.0.0.1:24624 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+90627:M 03 May 2025 23:04:36.725 - Accepted 127.0.0.1:61948
+### Starting test XADD can CREATE an empty stream in tests/unit/type/stream.tcl
+### Starting test XSETID can set a specific ID in tests/unit/type/stream.tcl
+### Starting test XSETID cannot SETID with smaller ID in tests/unit/type/stream.tcl
+### Starting test XSETID cannot SETID on non-existent key in tests/unit/type/stream.tcl
+### Starting test XSETID cannot run with an offset but without a maximal tombstone in tests/unit/type/stream.tcl
+### Starting test XSETID cannot run with a maximal tombstone but without an offset in tests/unit/type/stream.tcl
+### Starting test XSETID errors on negstive offset in tests/unit/type/stream.tcl
+### Starting test XSETID cannot set the maximal tombstone with larger ID in tests/unit/type/stream.tcl
+### Starting test XSETID cannot set the offset to less than the length in tests/unit/type/stream.tcl
+### Starting test XSETID cannot set smaller ID than current MAXDELETEDID in tests/unit/type/stream.tcl
+90627:M 03 May 2025 23:04:36.739 - Client closed connection id=3 addr=127.0.0.1:61948 laddr=127.0.0.1:24624 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xsetid user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1303 tot-net-out=1468 tot-cmds=28
+90627:signal-handler (1746281077) Received SIGTERM scheduling shutdown...
+90627:M 03 May 2025 23:04:38.008 * User requested shutdown...
+90627:M 03 May 2025 23:04:38.008 * Removing the pid file.
+90627:M 03 May 2025 23:04:38.008 * Removing the unix socket file.
+90627:M 03 May 2025 23:04:38.008 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,76 @@
+### Starting server for test Multi Part AOF can handle appendfilename contains whitespaces in tests/integration/aof-multi-part.tcl
+7217:M 03 May 2025 23:06:50.266 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+7217:M 03 May 2025 23:06:50.266 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=7217, just started
+7217:M 03 May 2025 23:06:50.266 * Configuration loaded
+7217:M 03 May 2025 23:06:50.267 * Increased maximum number of open files to 10032 (it was originally set to 256).
+7217:M 03 May 2025 23:06:50.267 * monotonic clock: POSIX clock_gettime
+7217:M 03 May 2025 23:06:50.267 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26187
+ |###|   .+###############+.   |###|    PID: 7217                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+7217:M 03 May 2025 23:06:50.267 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+7217:M 03 May 2025 23:06:50.267 * Server initialized
+7217:M 03 May 2025 23:06:50.268 * Creating AOF base file  file seq 
+
+.aof .1.base.rdb on server start
+7217:M 03 May 2025 23:06:50.274 * Creating AOF incr file  file seq 
+
+.aof .1.incr.aof on server start
+7217:M 03 May 2025 23:06:50.274 * Ready to accept connections tcp
+7217:M 03 May 2025 23:06:50.274 * Ready to accept connections unix
+7217:M 03 May 2025 23:06:50.282 - Accepted 127.0.0.1:55442
+7217:M 03 May 2025 23:06:50.282 - Client closed connection id=2 addr=127.0.0.1:55442 laddr=127.0.0.1:26187 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+7217:M 03 May 2025 23:06:50.304 - Accepted 127.0.0.1:55462
+7217:M 03 May 2025 23:06:50.304 - Accepted 127.0.0.1:55463
+7217:M 03 May 2025 23:06:50.311 * Creating AOF incr file  file seq 
+
+.aof .2.incr.aof on background rewrite
+7217:M 03 May 2025 23:06:50.312 * Background append only file rewriting started by pid 7230
+7230:C 03 May 2025 23:06:50.314 * Successfully created the temporary AOF base file temp-rewriteaof-bg-7230.aof
+7230:C 03 May 2025 23:06:50.314 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+7217:M 03 May 2025 23:06:50.374 * Background AOF rewrite terminated with success
+7217:M 03 May 2025 23:06:50.375 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-7230.aof into  file seq 
+
+.aof .2.base.rdb
+7217:M 03 May 2025 23:06:50.381 * Removing the history file  file seq 
+
+.aof .1.incr.aof in the background
+7217:M 03 May 2025 23:06:50.381 * Removing the history file  file seq 
+
+.aof .1.base.rdb in the background
+7217:M 03 May 2025 23:06:50.383 * Background AOF rewrite finished successfully
+7217:M 03 May 2025 23:06:50.384 - Background AOF rewrite signal handler took 9024us
+7217:M 03 May 2025 23:06:50.422 * Reading RDB base file on AOF loading...
+7217:M 03 May 2025 23:06:50.422 * Loading RDB produced by Valkey version 255.255.255
+7217:M 03 May 2025 23:06:50.422 * RDB age 0 seconds
+7217:M 03 May 2025 23:06:50.422 * RDB memory usage when created 1.16 Mb
+7217:M 03 May 2025 23:06:50.422 * RDB is base AOF
+7217:M 03 May 2025 23:06:50.422 * Done loading RDB, keys loaded: 1, keys expired: 0.
+7217:M 03 May 2025 23:06:50.422 * DB loaded from base file  file seq 
+
+.aof .2.base.rdb: 0.000 seconds
+7217:M 03 May 2025 23:06:50.422 * Append Only File loaded by DEBUG LOADAOF
+7217:M 03 May 2025 23:06:50.422 - Client closed connection id=3 addr=127.0.0.1:55462 laddr=127.0.0.1:26187 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+7217:signal-handler (1746281210) Received SIGTERM scheduling shutdown...
+7217:M 03 May 2025 23:06:50.485 * User requested shutdown...
+7217:M 03 May 2025 23:06:50.485 * Calling fsync() on the AOF file.
+7217:M 03 May 2025 23:06:50.488 * Removing the pid file.
+7217:M 03 May 2025 23:06:50.488 * Removing the unix socket file.
+7217:M 03 May 2025 23:06:50.488 # Valkey is now ready to exit, bye bye...

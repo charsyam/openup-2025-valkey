@@ -1,0 +1,62 @@
+### Starting server for test 
+13597:M 03 May 2025 23:08:21.760 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+13597:M 03 May 2025 23:08:21.760 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=13597, just started
+13597:M 03 May 2025 23:08:21.760 * Configuration loaded
+13597:M 03 May 2025 23:08:21.760 * Increased maximum number of open files to 10032 (it was originally set to 256).
+13597:M 03 May 2025 23:08:21.760 * monotonic clock: POSIX clock_gettime
+13597:M 03 May 2025 23:08:21.761 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23667
+ |###|   .+###############+.   |###|    PID: 13597                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+13597:M 03 May 2025 23:08:21.761 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+13597:M 03 May 2025 23:08:21.762 * Server initialized
+13597:M 03 May 2025 23:08:21.762 * Ready to accept connections tcp
+13597:M 03 May 2025 23:08:21.762 * Ready to accept connections unix
+13597:M 03 May 2025 23:08:21.892 - Accepted 127.0.0.1:63386
+13597:M 03 May 2025 23:08:21.892 - Client closed connection id=2 addr=127.0.0.1:63386 laddr=127.0.0.1:23667 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+13597:M 03 May 2025 23:08:21.905 - Accepted 127.0.0.1:63387
+### Starting test Test dual-channel-replication sync- psync established after rdb load in tests/integration/dual-channel-replication.tcl
+13597:M 03 May 2025 23:08:21.907 - Accepted 127.0.0.1:63388
+13597:M 03 May 2025 23:08:21.908 * Replica 127.0.0.1:23666 asks for synchronization
+13597:M 03 May 2025 23:08:21.908 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '409ea98dad2152a46e897fe9197b7b06bf646a4f', my replication IDs are 'a9deb61190841fd2bfe317dd83e3459cb340d353' and '0000000000000000000000000000000000000000')
+13597:M 03 May 2025 23:08:21.908 * Dual channel replication: Replica 127.0.0.1:23666 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+13597:M 03 May 2025 23:08:21.909 - Accepted 127.0.0.1:63389
+13597:M 03 May 2025 23:08:21.909 * Replica 127.0.0.1:23666 asks for synchronization
+13597:M 03 May 2025 23:08:21.909 * Replication backlog created, my new replication IDs are 'e9aedc6b13b939348e7fcca71f0e4b6a683409bd' and '0000000000000000000000000000000000000000'
+13597:M 03 May 2025 23:08:21.909 * Starting BGSAVE for SYNC with target: replicas sockets using: dual-channel
+13597:M 03 May 2025 23:08:21.909 * Dual channel replication: Sending to replica 127.0.0.1:23666 RDB end offset 0 and client-id 5
+13597:M 03 May 2025 23:08:21.909 * Background RDB transfer started by pid 13647 to direct socket to replica
+13597:M 03 May 2025 23:08:21.909 * Process is about to stop.
+13647:C 03 May 2025 23:08:21.910 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+13597:M 03 May 2025 23:08:21.925 * Process has been continued.
+13597:M 03 May 2025 23:08:21.926 - Client closed connection id=5 addr=127.0.0.1:63389 laddr=127.0.0.1:23667 fd=14 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=121 tot-net-out=5 tot-cmds=2
+13597:M 03 May 2025 23:08:21.926 - Dual channel replication: Postpone RDB client id=5 (127.0.0.1:23666) free for 60 seconds
+13597:M 03 May 2025 23:08:21.926 * Replica 127.0.0.1:23666 asks for synchronization
+13597:M 03 May 2025 23:08:21.926 * Partial resynchronization request from 127.0.0.1:23666 accepted. Sending 0 bytes of backlog starting from offset 1.
+13597:M 03 May 2025 23:08:21.926 * Dual channel replication: Replica 127.0.0.1:23666 rdb channel disconnected.
+13597:M 03 May 2025 23:08:21.926 * Synchronization with replica 127.0.0.1:23666 succeeded
+13597:M 03 May 2025 23:08:21.964 * Background RDB transfer terminated with success
+13597:M 03 May 2025 23:08:22.038 - Client closed connection id=3 addr=127.0.0.1:63387 laddr=127.0.0.1:23667 fd=12 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=6035 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=284 tot-net-out=12102 tot-cmds=8
+13597:signal-handler (1746281303) Received SIGTERM scheduling shutdown...
+13597:M 03 May 2025 23:08:23.315 * User requested shutdown...
+13597:M 03 May 2025 23:08:23.316 * 1 of 1 replicas are in sync when shutting down.
+13597:M 03 May 2025 23:08:23.316 * Removing the pid file.
+13597:M 03 May 2025 23:08:23.316 * Removing the unix socket file.
+13597:M 03 May 2025 23:08:23.317 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,70 @@
+### Starting server for test 
+99996:M 03 May 2025 23:06:00.982 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+99996:M 03 May 2025 23:06:00.982 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+99996:M 03 May 2025 23:06:00.985 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=99996, just started
+99996:M 03 May 2025 23:06:00.988 * Configuration loaded
+99996:M 03 May 2025 23:06:01.003 * Increased maximum number of open files to 10032 (it was originally set to 256).
+99996:M 03 May 2025 23:06:01.005 * monotonic clock: POSIX clock_gettime
+99996:M 03 May 2025 23:06:01.009 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 23650
+ |###|   .+###############+.   |###|    PID: 99996                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+99996:M 03 May 2025 23:06:01.019 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+99996:M 03 May 2025 23:06:01.023 * No cluster configuration found, I'm 4a47b8f75616f276ca5d0df03d2fa066dc705fd6
+99996:M 03 May 2025 23:06:01.033 * Server initialized
+99996:M 03 May 2025 23:06:01.033 * Ready to accept connections tcp
+99996:M 03 May 2025 23:06:01.033 * Ready to accept connections unix
+99996:M 03 May 2025 23:06:01.150 - Accepted 127.0.0.1:64085
+99996:M 03 May 2025 23:06:01.150 - Client closed connection id=2 addr=127.0.0.1:64085 laddr=127.0.0.1:23650 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+99996:M 03 May 2025 23:06:01.163 - Accepted 127.0.0.1:64092
+99996:M 03 May 2025 23:06:01.165 * Cluster meet 127.0.0.1:23649 (user request from 'id=3 addr=127.0.0.1:64092 laddr=127.0.0.1:23650 fd=14 name= user=default lib-name= lib-ver=').
+99996:M 03 May 2025 23:06:01.203 # Missing implement of connection type tls
+99996:M 03 May 2025 23:06:01.258 - Accepting cluster node connection from 127.0.0.1:64136
+99996:M 03 May 2025 23:06:01.258 * IP address for this node updated to 127.0.0.1
+99996:M 03 May 2025 23:06:01.258 * Successfully completed handshake with c555baea2daa79ccc48dfca120263b2732427faa ()
+99996:M 03 May 2025 23:06:01.259 * configEpoch collision with node c555baea2daa79ccc48dfca120263b2732427faa (). configEpoch set to 1
+99996:M 03 May 2025 23:06:01.275 # DEBUG LOG: ========== I am primary 0 ==========
+99996:M 03 May 2025 23:06:03.061 * Cluster state changed: ok
+### Starting test Handshake eventually succeeds after node handshake timeout on both sides with inconsistent view of the cluster in tests/unit/cluster/cluster-reliable-meet.tcl
+99996:M 03 May 2025 23:06:03.409 * Cluster meet 127.0.0.1:23652 (user request from 'id=3 addr=127.0.0.1:64092 laddr=127.0.0.1:23650 fd=14 name= user=default lib-name= lib-ver=').
+99996:M 03 May 2025 23:06:03.472 # Dropping packet of type pong that matches debug drop filter
+99996:M 03 May 2025 23:06:03.472 # Dropping packet of type pong that matches debug drop filter
+99996:M 03 May 2025 23:06:03.524 - Accepting cluster node connection from 127.0.0.1:65348
+99996:M 03 May 2025 23:06:03.524 # Dropping packet of type ping that matches debug drop filter
+99996:M 03 May 2025 23:06:03.581 # Dropping packet of type ping that matches debug drop filter
+99996:M 03 May 2025 23:06:05.580 # Dropping packet of type pong that matches debug drop filter
+99996:M 03 May 2025 23:06:07.497 # Clusterbus handshake timeout 127.0.0.1:23651
+99996:M 03 May 2025 23:06:07.498 # Cluster state changed: fail
+99996:M 03 May 2025 23:06:07.502 # Cluster is currently down: I am part of a minority partition.
+99996:M 03 May 2025 23:06:07.720 - Accepting cluster node connection from 127.0.0.1:51890
+99996:M 03 May 2025 23:06:11.698 - Accepting cluster node connection from 127.0.0.1:56278
+99996:M 03 May 2025 23:06:13.354 - Client closed connection id=3 addr=127.0.0.1:64092 laddr=127.0.0.1:23650 fd=14 name= age=12 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=361 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|links user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=5890 tot-net-out=73005 tot-cmds=205
+99996:M 03 May 2025 23:06:13.363 - Connection with Node 3d430b9700b5fe230b4dac8989baa1840ac03c6c at 127.0.0.1:23651 failed: Connection refused
+99996:M 03 May 2025 23:06:13.467 - Connection with Node 3d430b9700b5fe230b4dac8989baa1840ac03c6c at 127.0.0.1:23651 failed: Connection refused
+99996:M 03 May 2025 23:06:13.568 - Connection with Node 3d430b9700b5fe230b4dac8989baa1840ac03c6c at 127.0.0.1:23651 failed: Connection refused
+99996:M 03 May 2025 23:06:13.670 - Connection with Node 3d430b9700b5fe230b4dac8989baa1840ac03c6c at 127.0.0.1:23651 failed: Connection refused
+99996:M 03 May 2025 23:06:13.771 - Connection with Node 3d430b9700b5fe230b4dac8989baa1840ac03c6c at 127.0.0.1:23651 failed: Connection refused
+99996:M 03 May 2025 23:06:15.020 - Connection with Node 3d430b9700b5fe230b4dac8989baa1840ac03c6c at 127.0.0.1:23651 failed: Connection refused
+99996:signal-handler (1746281175) Received SIGTERM scheduling shutdown...
+99996:M 03 May 2025 23:06:15.121 * User requested shutdown...
+99996:M 03 May 2025 23:06:15.121 * Removing the pid file.
+99996:M 03 May 2025 23:06:15.122 * Saving the cluster configuration file before exiting.
+99996:M 03 May 2025 23:06:15.134 * Removing the unix socket file.
+99996:M 03 May 2025 23:06:15.134 # Valkey is now ready to exit, bye bye...

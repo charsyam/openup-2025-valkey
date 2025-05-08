@@ -1,0 +1,50 @@
+### Starting server for test 
+94305:M 03 May 2025 23:05:01.099 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+94305:M 03 May 2025 23:05:01.105 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+94305:M 03 May 2025 23:05:01.108 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=94305, just started
+94305:M 03 May 2025 23:05:01.111 * Configuration loaded
+94305:M 03 May 2025 23:05:01.114 * Increased maximum number of open files to 10032 (it was originally set to 256).
+94305:M 03 May 2025 23:05:01.114 * monotonic clock: POSIX clock_gettime
+94305:M 03 May 2025 23:05:01.115 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25135
+ |###|   .+###############+.   |###|    PID: 94305                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+94305:M 03 May 2025 23:05:01.115 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+94305:M 03 May 2025 23:05:01.115 * No cluster configuration found, I'm f954bd2abe5024522c9a69fb5944b349575dbdfb
+94305:M 03 May 2025 23:05:01.122 * Server initialized
+94305:M 03 May 2025 23:05:01.122 * Ready to accept connections tcp
+94305:M 03 May 2025 23:05:01.122 * Ready to accept connections unix
+94305:M 03 May 2025 23:05:01.252 - Accepted 127.0.0.1:53359
+94305:M 03 May 2025 23:05:01.254 - Client closed connection id=2 addr=127.0.0.1:53359 laddr=127.0.0.1:25135 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+94305:M 03 May 2025 23:05:01.270 - Accepted 127.0.0.1:53366
+### Starting test Create 1 node cluster in tests/unit/cluster/cli.tcl
+94305:M 03 May 2025 23:05:01.288 - Accepted 127.0.0.1:53377
+94305:M 03 May 2025 23:05:01.289 # Missing implement of connection type tls
+94305:M 03 May 2025 23:05:01.292 * configEpoch set to 1 via CLUSTER SET-CONFIG-EPOCH
+94305:M 03 May 2025 23:05:02.297 - Client closed connection id=4 addr=127.0.0.1:53377 laddr=127.0.0.1:25135 fd=15 name= age=1 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=1024 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=169321 tot-net-out=18248 tot-cmds=8
+94305:M 03 May 2025 23:05:03.141 * Cluster state changed: ok
+### Starting test Create 2 node cluster in tests/unit/cluster/cli.tcl
+94305:M 03 May 2025 23:05:04.281 - Client closed connection id=3 addr=127.0.0.1:53366 laddr=127.0.0.1:25135 fd=14 name= age=3 idle=1 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=322 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=459 tot-net-out=5472 tot-cmds=17
+94305:signal-handler (1746281105) Received SIGTERM scheduling shutdown...
+94305:M 03 May 2025 23:05:05.208 * User requested shutdown...
+94305:M 03 May 2025 23:05:05.209 * Removing the pid file.
+94305:M 03 May 2025 23:05:05.209 * Saving the cluster configuration file before exiting.
+94305:M 03 May 2025 23:05:05.217 * Removing the unix socket file.
+94305:M 03 May 2025 23:05:05.217 # Valkey is now ready to exit, bye bye...

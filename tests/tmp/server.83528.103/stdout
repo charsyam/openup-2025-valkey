@@ -1,0 +1,223 @@
+### Starting server for test 
+7396:M 03 May 2025 23:06:52.171 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+7396:M 03 May 2025 23:06:52.171 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=7396, just started
+7396:M 03 May 2025 23:06:52.171 * Configuration loaded
+7396:M 03 May 2025 23:06:52.172 * Increased maximum number of open files to 10032 (it was originally set to 256).
+7396:M 03 May 2025 23:06:52.172 * monotonic clock: POSIX clock_gettime
+7396:M 03 May 2025 23:06:52.172 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 22661
+ |###|   .+###############+.   |###|    PID: 7396                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+7396:M 03 May 2025 23:06:52.172 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+7396:M 03 May 2025 23:06:52.173 * Server initialized
+7396:M 03 May 2025 23:06:52.173 * Ready to accept connections tcp
+7396:M 03 May 2025 23:06:52.173 * Ready to accept connections unix
+7396:M 03 May 2025 23:06:52.302 - Accepted 127.0.0.1:56877
+7396:M 03 May 2025 23:06:52.302 - Client closed connection id=2 addr=127.0.0.1:56877 laddr=127.0.0.1:22661 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+7396:M 03 May 2025 23:06:52.322 - Accepted 127.0.0.1:56890
+### Starting test PSYNC2 #3899 regression: setup in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:06:52.605 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+7396:S 03 May 2025 23:06:52.606 * Connecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:06:52.606 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:06:52.606 * REPLICAOF 127.0.0.1:22663 enabled (user request from 'id=3 addr=127.0.0.1:56890 laddr=127.0.0.1:22661 fd=12 name= user=default lib-name= lib-ver=')
+7396:S 03 May 2025 23:06:52.606 * Non blocking connect for SYNC fired the event.
+7396:S 03 May 2025 23:06:52.606 * Primary replied to PING, replication can continue...
+7396:S 03 May 2025 23:06:52.607 * Trying a partial resynchronization (request 8b820ee70dc0c51ffe1799c6a8999e14420aa15f:1).
+7396:S 03 May 2025 23:06:52.610 * Full resync from primary: 07d1b11cbe44c40e317aa8f2281c6dfd2bd4bd86:54
+7396:S 03 May 2025 23:06:52.611 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+7396:S 03 May 2025 23:06:52.613 * Discarding previously cached primary state.
+7396:S 03 May 2025 23:06:52.613 * PRIMARY <-> REPLICA sync: Flushing old data
+7396:S 03 May 2025 23:06:52.613 * PRIMARY <-> REPLICA sync: Loading DB in memory
+7396:S 03 May 2025 23:06:52.613 * Loading RDB produced by Valkey version 255.255.255
+7396:S 03 May 2025 23:06:52.613 * RDB age 0 seconds
+7396:S 03 May 2025 23:06:52.613 * RDB memory usage when created 1.27 Mb
+7396:S 03 May 2025 23:06:52.613 * Done loading RDB, keys loaded: 1, keys expired: 0.
+7396:S 03 May 2025 23:06:52.613 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:06:56.410 * Connection with primary lost.
+7396:S 03 May 2025 23:06:56.410 * Caching the disconnected primary state.
+7396:S 03 May 2025 23:06:56.410 * Reconnecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:06:56.410 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:06:56.410 * Non blocking connect for SYNC fired the event.
+7396:S 03 May 2025 23:06:56.411 * Primary replied to PING, replication can continue...
+7396:S 03 May 2025 23:06:56.411 * Trying a partial resynchronization (request 07d1b11cbe44c40e317aa8f2281c6dfd2bd4bd86:10161834).
+7396:S 03 May 2025 23:06:56.411 * Successful partial resynchronization with primary.
+7396:S 03 May 2025 23:06:56.411 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+7396:S 03 May 2025 23:06:57.193 - DB 0: 1000 keys (0 volatile) in 1792 slots HT.
+7396:S 03 May 2025 23:06:57.193 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:06:59.763 * Connection with primary lost.
+7396:S 03 May 2025 23:06:59.763 * Caching the disconnected primary state.
+7396:S 03 May 2025 23:06:59.763 * Reconnecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:06:59.763 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:06:59.763 * Non blocking connect for SYNC fired the event.
+7396:S 03 May 2025 23:06:59.763 * Primary replied to PING, replication can continue...
+7396:S 03 May 2025 23:06:59.764 * Trying a partial resynchronization (request 07d1b11cbe44c40e317aa8f2281c6dfd2bd4bd86:28549797).
+7396:S 03 May 2025 23:06:59.764 * Successful partial resynchronization with primary.
+7396:S 03 May 2025 23:06:59.764 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:07:02.205 - DB 0: 1000 keys (0 volatile) in 1792 slots HT.
+7396:S 03 May 2025 23:07:02.206 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:07:02.574 * Connection with primary lost.
+7396:S 03 May 2025 23:07:02.574 * Caching the disconnected primary state.
+7396:S 03 May 2025 23:07:02.574 * Reconnecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:02.574 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:02.574 * Non blocking connect for SYNC fired the event.
+7396:S 03 May 2025 23:07:02.574 * Primary replied to PING, replication can continue...
+7396:S 03 May 2025 23:07:02.575 * Trying a partial resynchronization (request 07d1b11cbe44c40e317aa8f2281c6dfd2bd4bd86:38777124).
+7396:S 03 May 2025 23:07:02.575 * Successful partial resynchronization with primary.
+7396:S 03 May 2025 23:07:02.575 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:07:02.782 * Connection with primary lost.
+7396:S 03 May 2025 23:07:02.782 * Caching the disconnected primary state.
+7396:S 03 May 2025 23:07:02.782 * Reconnecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:02.782 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:02.782 * Non blocking connect for SYNC fired the event.
+7396:S 03 May 2025 23:07:02.782 * Primary replied to PING, replication can continue...
+7396:S 03 May 2025 23:07:02.782 * Trying a partial resynchronization (request 07d1b11cbe44c40e317aa8f2281c6dfd2bd4bd86:39691106).
+7396:S 03 May 2025 23:07:02.783 * Successful partial resynchronization with primary.
+7396:S 03 May 2025 23:07:02.783 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:07:02.884 * Connection with primary lost.
+7396:S 03 May 2025 23:07:02.884 * Caching the disconnected primary state.
+7396:S 03 May 2025 23:07:02.884 * Reconnecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:02.884 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:02.884 * Non blocking connect for SYNC fired the event.
+7396:S 03 May 2025 23:07:02.885 * Primary replied to PING, replication can continue...
+7396:S 03 May 2025 23:07:02.885 * Trying a partial resynchronization (request 07d1b11cbe44c40e317aa8f2281c6dfd2bd4bd86:40257650).
+7396:S 03 May 2025 23:07:02.885 * Successful partial resynchronization with primary.
+7396:S 03 May 2025 23:07:02.885 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:07:03.299 * Connection with primary lost.
+7396:S 03 May 2025 23:07:03.299 * Caching the disconnected primary state.
+7396:S 03 May 2025 23:07:03.299 * Reconnecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:03.299 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:03.299 * Non blocking connect for SYNC fired the event.
+7396:S 03 May 2025 23:07:03.299 * Primary replied to PING, replication can continue...
+7396:S 03 May 2025 23:07:03.299 * Trying a partial resynchronization (request 07d1b11cbe44c40e317aa8f2281c6dfd2bd4bd86:42153731).
+7396:S 03 May 2025 23:07:03.300 * Successful partial resynchronization with primary.
+7396:S 03 May 2025 23:07:03.300 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:07:03.925 * Connection with primary lost.
+7396:S 03 May 2025 23:07:03.925 * Caching the disconnected primary state.
+7396:S 03 May 2025 23:07:03.925 * Reconnecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:03.925 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:03.925 * Non blocking connect for SYNC fired the event.
+7396:S 03 May 2025 23:07:03.926 * Primary replied to PING, replication can continue...
+7396:S 03 May 2025 23:07:03.926 * Trying a partial resynchronization (request 07d1b11cbe44c40e317aa8f2281c6dfd2bd4bd86:44790134).
+7396:S 03 May 2025 23:07:03.926 * Successful partial resynchronization with primary.
+7396:S 03 May 2025 23:07:03.926 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:07:04.336 * Connection with primary lost.
+7396:S 03 May 2025 23:07:04.336 * Caching the disconnected primary state.
+7396:S 03 May 2025 23:07:04.336 * Reconnecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:04.336 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:04.336 * Non blocking connect for SYNC fired the event.
+7396:S 03 May 2025 23:07:04.336 * Primary replied to PING, replication can continue...
+7396:S 03 May 2025 23:07:04.336 * Trying a partial resynchronization (request 07d1b11cbe44c40e317aa8f2281c6dfd2bd4bd86:46781519).
+7396:S 03 May 2025 23:07:04.337 * Successful partial resynchronization with primary.
+7396:S 03 May 2025 23:07:04.337 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:07:04.957 * Connection with primary lost.
+7396:S 03 May 2025 23:07:04.957 * Caching the disconnected primary state.
+7396:S 03 May 2025 23:07:04.957 * Reconnecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:04.957 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:04.957 * Non blocking connect for SYNC fired the event.
+7396:S 03 May 2025 23:07:04.957 * Primary replied to PING, replication can continue...
+7396:S 03 May 2025 23:07:04.957 * Trying a partial resynchronization (request 07d1b11cbe44c40e317aa8f2281c6dfd2bd4bd86:49058684).
+7396:S 03 May 2025 23:07:04.957 * Successful partial resynchronization with primary.
+7396:S 03 May 2025 23:07:04.958 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:07:07.211 - DB 0: 1000 keys (0 volatile) in 1792 slots HT.
+7396:S 03 May 2025 23:07:07.211 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:07:08.069 * Connection with primary lost.
+7396:S 03 May 2025 23:07:08.069 * Caching the disconnected primary state.
+7396:S 03 May 2025 23:07:08.069 * Reconnecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:08.069 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:08.069 * Non blocking connect for SYNC fired the event.
+7396:S 03 May 2025 23:07:08.069 * Primary replied to PING, replication can continue...
+7396:S 03 May 2025 23:07:08.070 * Trying a partial resynchronization (request 07d1b11cbe44c40e317aa8f2281c6dfd2bd4bd86:63860603).
+7396:S 03 May 2025 23:07:08.070 * Successful partial resynchronization with primary.
+7396:S 03 May 2025 23:07:08.070 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+### Starting test PSYNC2 #3899 regression: kill first replica in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:07:12.231 - DB 0: 1000 keys (0 volatile) in 1792 slots HT.
+7396:S 03 May 2025 23:07:12.231 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+### Starting test PSYNC2 #3899 regression: kill chained replica in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:07:12.432 * Connection with primary lost.
+7396:S 03 May 2025 23:07:12.433 * Caching the disconnected primary state.
+7396:S 03 May 2025 23:07:12.433 * Reconnecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:12.433 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:12.433 * Non blocking connect for SYNC fired the event.
+7396:S 03 May 2025 23:07:12.435 * Primary replied to PING, replication can continue...
+7396:S 03 May 2025 23:07:12.442 * Trying a partial resynchronization (request 07d1b11cbe44c40e317aa8f2281c6dfd2bd4bd86:77175113).
+7396:S 03 May 2025 23:07:12.445 * Successful partial resynchronization with primary.
+7396:S 03 May 2025 23:07:12.445 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2 #3899 regression: verify consistency in tests/integration/psync2-reg.tcl
+### Starting test Check for memory leaks (pid 7455) in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:07:17.052 - Client closed connection id=5 addr=127.0.0.1:22663 laddr=127.0.0.1:53342 fd=13 name= age=25 idle=4 flags=M capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=65530 argv-mem=0 multi-mem=0 rbs=1024 rbp=41 obl=0 oll=0 omem=0 tot-mem=67072 events=r cmd=incr user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=82308717 tot-net-out=1005 tot-cmds=2494205
+7396:S 03 May 2025 23:07:17.052 * Connection with primary lost.
+7396:S 03 May 2025 23:07:17.052 * Caching the disconnected primary state.
+7396:S 03 May 2025 23:07:17.052 * Reconnecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:17.052 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:17.052 # Error condition on socket for SYNC: Connection refused
+### Starting test Check for memory leaks (pid 7429) in tests/integration/psync2-reg.tcl
+7396:S 03 May 2025 23:07:17.278 - DB 0: 1000 keys (0 volatile) in 1792 slots HT.
+7396:S 03 May 2025 23:07:17.278 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+7396:S 03 May 2025 23:07:17.278 * Connecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:17.279 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:17.279 # Error condition on socket for SYNC: Connection refused
+7396:S 03 May 2025 23:07:18.287 * Connecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:18.287 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:18.287 # Error condition on socket for SYNC: Connection refused
+7396:S 03 May 2025 23:07:19.298 * Connecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:19.298 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:19.298 # Error condition on socket for SYNC: Connection refused
+7396:S 03 May 2025 23:07:19.577 - Client closed connection id=3 addr=127.0.0.1:56890 laddr=127.0.0.1:22661 fd=12 name= age=27 idle=6 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=651 tot-net-out=6339 tot-cmds=16
+7396:S 03 May 2025 23:07:20.307 * Connecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:20.307 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:20.307 # Error condition on socket for SYNC: Connection refused
+7396:S 03 May 2025 23:07:21.316 * Connecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:21.316 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:21.316 # Error condition on socket for SYNC: Connection refused
+7396:S 03 May 2025 23:07:22.324 - DB 0: 1000 keys (0 volatile) in 1792 slots HT.
+7396:S 03 May 2025 23:07:22.324 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+7396:S 03 May 2025 23:07:22.324 * Connecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:22.324 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:22.324 # Error condition on socket for SYNC: Connection refused
+7396:S 03 May 2025 23:07:23.334 * Connecting to PRIMARY 127.0.0.1:22663
+7396:S 03 May 2025 23:07:23.334 * PRIMARY <-> REPLICA sync started
+7396:S 03 May 2025 23:07:23.334 # Error condition on socket for SYNC: Connection refused
+7396:signal-handler (1746281247) Received SIGTERM scheduling shutdown...
+7396:S 03 May 2025 23:07:27.119 * User requested shutdown...
+7396:S 03 May 2025 23:07:27.119 * Removing the pid file.
+7396:S 03 May 2025 23:07:27.119 * Removing the unix socket file.
+7396:S 03 May 2025 23:07:27.119 # Valkey is now ready to exit, bye bye...

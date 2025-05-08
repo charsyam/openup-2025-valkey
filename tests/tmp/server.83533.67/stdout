@@ -1,0 +1,110 @@
+### Starting server for test Migrate the last slot away from a node using valkey-cli in tests/unit/cluster/cli.tcl
+97124:M 03 May 2025 23:05:28.555 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+97124:M 03 May 2025 23:05:28.555 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+97124:M 03 May 2025 23:05:28.555 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=97124, just started
+97124:M 03 May 2025 23:05:28.555 * Configuration loaded
+97124:M 03 May 2025 23:05:28.555 * Increased maximum number of open files to 10032 (it was originally set to 256).
+97124:M 03 May 2025 23:05:28.555 * monotonic clock: POSIX clock_gettime
+97124:M 03 May 2025 23:05:28.556 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25144
+ |###|   .+###############+.   |###|    PID: 97124                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+97124:M 03 May 2025 23:05:28.556 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+97124:M 03 May 2025 23:05:28.556 * No cluster configuration found, I'm 24064a070f1e74bca35295f8b5e0677bdcc05aef
+97124:M 03 May 2025 23:05:28.562 * Server initialized
+97124:M 03 May 2025 23:05:28.562 * Ready to accept connections tcp
+97124:M 03 May 2025 23:05:28.562 * Ready to accept connections unix
+97124:M 03 May 2025 23:05:28.703 - Accepted 127.0.0.1:55997
+97124:M 03 May 2025 23:05:28.709 - Client closed connection id=2 addr=127.0.0.1:55997 laddr=127.0.0.1:25144 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+97124:M 03 May 2025 23:05:28.730 - Accepted 127.0.0.1:56014
+97124:M 03 May 2025 23:05:30.590 # Cluster is currently down: I am part of a minority partition.
+97124:M 03 May 2025 23:05:31.526 - Accepted 127.0.0.1:56393
+97124:M 03 May 2025 23:05:31.529 # Missing implement of connection type tls
+97124:M 03 May 2025 23:05:31.529 * Cluster meet 127.0.0.1:25147 (user request from 'id=4 addr=127.0.0.1:56393 laddr=127.0.0.1:25144 fd=15 name= user=default lib-name= lib-ver=').
+97124:M 03 May 2025 23:05:31.533 - Client closed connection id=4 addr=127.0.0.1:56393 laddr=127.0.0.1:25144 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|meet user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=212 tot-net-out=12237 tot-cmds=7
+97124:M 03 May 2025 23:05:31.650 - Accepting cluster node connection from 127.0.0.1:56396
+97124:M 03 May 2025 23:05:31.650 * IP address for this node updated to 127.0.0.1
+97124:M 03 May 2025 23:05:31.651 * Successfully completed handshake with 50447f04e2e99debad27dae933a339ef5cef4f76 ()
+97124:M 03 May 2025 23:05:31.651 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+97124:M 03 May 2025 23:05:31.856 - Accepting cluster node connection from 127.0.0.1:56415
+97124:M 03 May 2025 23:05:31.930 - Accepting cluster node connection from 127.0.0.1:56420
+97124:M 03 May 2025 23:05:32.611 * Cluster state changed: ok
+97124:M 03 May 2025 23:05:32.634 - Accepted 127.0.0.1:56490
+97124:M 03 May 2025 23:05:32.638 * Importing slot 12182 from node 8c803afea545336dff51cc9bb46504d6813dc3f8 ()
+97124:M 03 May 2025 23:05:32.687 - Accepted 127.0.0.1:56505
+97124:M 03 May 2025 23:05:32.691 * Assigning slot 12182 to node 24064a070f1e74bca35295f8b5e0677bdcc05aef () in shard 6998b7b00a5c82a4b33c6ccc3852e8fcd75972b2
+97124:M 03 May 2025 23:05:32.691 * New configEpoch set to 4
+97124:M 03 May 2025 23:05:32.691 * ConfigEpoch updated after importing slot 12182
+97124:M 03 May 2025 23:05:32.788 - Accepted 127.0.0.1:56510
+97124:M 03 May 2025 23:05:32.793 - Client closed connection id=7 addr=127.0.0.1:56510 laddr=127.0.0.1:25144 fd=23 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=906 tot-cmds=3
+97124:M 03 May 2025 23:05:32.825 - Accepted 127.0.0.1:56515
+97124:M 03 May 2025 23:05:32.835 - Client closed connection id=8 addr=127.0.0.1:56515 laddr=127.0.0.1:25144 fd=23 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=906 tot-cmds=3
+97124:M 03 May 2025 23:05:32.851 - Accepted 127.0.0.1:56519
+97124:M 03 May 2025 23:05:32.855 - Client closed connection id=9 addr=127.0.0.1:56519 laddr=127.0.0.1:25144 fd=23 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=906 tot-cmds=3
+97124:M 03 May 2025 23:05:32.864 - Accepted 127.0.0.1:56525
+97124:M 03 May 2025 23:05:32.872 - Client closed connection id=10 addr=127.0.0.1:56525 laddr=127.0.0.1:25144 fd=23 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86 tot-net-out=6895 tot-cmds=4
+97124:M 03 May 2025 23:05:32.890 - Accepted 127.0.0.1:56529
+97124:M 03 May 2025 23:05:32.918 * Migrating slot 12182 to node 8c803afea545336dff51cc9bb46504d6813dc3f8 ()
+97124:M 03 May 2025 23:05:32.925 * Slot 12182 is migrated from node 24064a070f1e74bca35295f8b5e0677bdcc05aef () in shard 6998b7b00a5c82a4b33c6ccc3852e8fcd75972b2 to node 8c803afea545336dff51cc9bb46504d6813dc3f8 () in shard 127989df1e2cb576b96fdccf4f27e072e32912b5.
+97124:M 03 May 2025 23:05:32.925 * Slot 12182 is no longer being migrated to node 8c803afea545336dff51cc9bb46504d6813dc3f8 () in shard 127989df1e2cb576b96fdccf4f27e072e32912b5.
+97124:M 03 May 2025 23:05:32.925 * Configuration change detected. Reconfiguring myself as a replica of node 8c803afea545336dff51cc9bb46504d6813dc3f8 () in shard 127989df1e2cb576b96fdccf4f27e072e32912b5
+97124:S 03 May 2025 23:05:32.925 * Connecting to PRIMARY 127.0.0.1:25145
+97124:S 03 May 2025 23:05:32.925 * PRIMARY <-> REPLICA sync started
+97124:S 03 May 2025 23:05:32.938 * Non blocking connect for SYNC fired the event.
+97124:S 03 May 2025 23:05:32.939 * Primary replied to PING, replication can continue...
+97124:S 03 May 2025 23:05:32.940 * Partial resynchronization not possible (no cached primary)
+97124:S 03 May 2025 23:05:32.940 - Client closed connection id=11 addr=127.0.0.1:56529 laddr=127.0.0.1:25144 fd=23 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=44 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|setslot user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=469 tot-net-out=6963 tot-cmds=8
+97124:S 03 May 2025 23:05:32.940 * Full resync from primary: 22e86d6e6bef2cf23ff56500cc4c1b03e30cca29:0
+97124:S 03 May 2025 23:05:32.943 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+97124:S 03 May 2025 23:05:32.946 * PRIMARY <-> REPLICA sync: Flushing old data
+97124:S 03 May 2025 23:05:32.947 * PRIMARY <-> REPLICA sync: Loading DB in memory
+97124:S 03 May 2025 23:05:32.947 * Loading RDB produced by Valkey version 255.255.255
+97124:S 03 May 2025 23:05:32.949 * RDB age 0 seconds
+97124:S 03 May 2025 23:05:32.949 * RDB memory usage when created 3.16 Mb
+97124:S 03 May 2025 23:05:32.950 * Done loading RDB, keys loaded: 1, keys expired: 0.
+97124:S 03 May 2025 23:05:32.951 * PRIMARY <-> REPLICA sync: Finished with success
+97124:S 03 May 2025 23:05:33.630 - DB 0: 1 keys (0 volatile) in 7 slots HT.
+97124:S 03 May 2025 23:05:38.676 - DB 0: 1 keys (0 volatile) in 7 slots HT.
+97124:S 03 May 2025 23:05:39.280 - Connection with Node 50447f04e2e99debad27dae933a339ef5cef4f76 at 127.0.0.1:35147 failed: Connection refused
+97124:S 03 May 2025 23:05:39.381 - Connection with Node b6735e9779e5fb78feb913bee01e49e352bf3c52 at 127.0.0.1:35146 failed: Connection refused
+97124:S 03 May 2025 23:05:39.383 - Connection with Node 50447f04e2e99debad27dae933a339ef5cef4f76 at 127.0.0.1:35147 failed: Connection refused
+97124:S 03 May 2025 23:05:39.482 - Connection with Node b6735e9779e5fb78feb913bee01e49e352bf3c52 at 127.0.0.1:35146 failed: Connection refused
+97124:S 03 May 2025 23:05:39.486 - Connection with Node 50447f04e2e99debad27dae933a339ef5cef4f76 at 127.0.0.1:35147 failed: Connection refused
+97124:S 03 May 2025 23:05:39.583 - Connection with Node b6735e9779e5fb78feb913bee01e49e352bf3c52 at 127.0.0.1:35146 failed: Connection refused
+97124:S 03 May 2025 23:05:39.585 - Connection with Node 50447f04e2e99debad27dae933a339ef5cef4f76 at 127.0.0.1:35147 failed: Connection refused
+97124:S 03 May 2025 23:05:39.684 - Connection with Node b6735e9779e5fb78feb913bee01e49e352bf3c52 at 127.0.0.1:35146 failed: Connection refused
+97124:S 03 May 2025 23:05:39.684 - Connection with Node 50447f04e2e99debad27dae933a339ef5cef4f76 at 127.0.0.1:35147 failed: Connection refused
+97124:S 03 May 2025 23:05:39.742 - Client closed connection id=12 addr=127.0.0.1:25145 laddr=127.0.0.1:56534 fd=25 name= age=7 idle=0 flags=M capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=35 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=replconf user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=51 tot-net-out=308 tot-cmds=2
+97124:S 03 May 2025 23:05:39.742 * Connection with primary lost.
+97124:S 03 May 2025 23:05:39.742 * Caching the disconnected primary state.
+97124:S 03 May 2025 23:05:39.742 * Reconnecting to PRIMARY 127.0.0.1:25145
+97124:S 03 May 2025 23:05:39.742 * PRIMARY <-> REPLICA sync started
+97124:S 03 May 2025 23:05:39.742 - Client closed connection id=6 addr=127.0.0.1:56505 laddr=127.0.0.1:25144 fd=22 name= age=7 idle=7 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=restore-asking user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86 tot-net-out=10 tot-cmds=2
+97124:S 03 May 2025 23:05:39.742 # Error condition on socket for SYNC: Connection refused
+97124:S 03 May 2025 23:05:39.785 - Connection with Node 8c803afea545336dff51cc9bb46504d6813dc3f8 at 127.0.0.1:35145 failed: Connection refused
+97124:S 03 May 2025 23:05:39.790 - Connection with Node b6735e9779e5fb78feb913bee01e49e352bf3c52 at 127.0.0.1:35146 failed: Connection refused
+97124:S 03 May 2025 23:05:39.792 - Connection with Node 50447f04e2e99debad27dae933a339ef5cef4f76 at 127.0.0.1:35147 failed: Connection refused
+97124:S 03 May 2025 23:05:39.809 - Client closed connection id=3 addr=127.0.0.1:56014 laddr=127.0.0.1:25144 fd=14 name= age=11 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=370 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|slots user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=543 tot-net-out=10549 tot-cmds=20
+97124:signal-handler (1746281139) Received SIGTERM scheduling shutdown...
+97124:S 03 May 2025 23:05:39.885 * User requested shutdown...
+97124:S 03 May 2025 23:05:39.889 * Removing the pid file.
+97124:S 03 May 2025 23:05:39.889 * Saving the cluster configuration file before exiting.
+97124:S 03 May 2025 23:05:39.900 * Removing the unix socket file.
+97124:S 03 May 2025 23:05:39.900 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,66 @@
+### Starting server for test 
+94483:M 03 May 2025 23:05:03.225 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+94483:M 03 May 2025 23:05:03.225 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+94483:M 03 May 2025 23:05:03.228 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=94483, just started
+94483:M 03 May 2025 23:05:03.231 * Configuration loaded
+94483:M 03 May 2025 23:05:03.234 * Increased maximum number of open files to 10032 (it was originally set to 256).
+94483:M 03 May 2025 23:05:03.237 * monotonic clock: POSIX clock_gettime
+94483:M 03 May 2025 23:05:03.237 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 26635
+ |###|   .+###############+.   |###|    PID: 94483                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+94483:M 03 May 2025 23:05:03.252 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+94483:M 03 May 2025 23:05:03.252 * No cluster configuration found, I'm 5d1446c5ac4ea8d1c830471e6107125b09b263c1
+94483:M 03 May 2025 23:05:03.264 * Server initialized
+94483:M 03 May 2025 23:05:03.264 * Ready to accept connections tcp
+94483:M 03 May 2025 23:05:03.264 * Ready to accept connections unix
+94483:M 03 May 2025 23:05:03.391 - Accepted 127.0.0.1:54167
+94483:M 03 May 2025 23:05:03.394 - Client closed connection id=2 addr=127.0.0.1:54167 laddr=127.0.0.1:26635 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+94483:M 03 May 2025 23:05:03.408 - Accepted 127.0.0.1:54176
+94483:M 03 May 2025 23:05:03.417 # Missing implement of connection type tls
+94483:M 03 May 2025 23:05:03.420 # DEBUG LOG: ========== I am primary 0 ==========
+94483:M 03 May 2025 23:05:05.280 * Cluster state changed: ok
+### Starting test CLUSTER SLOT-STATS cpu-usec reset upon CONFIG RESETSTAT. in tests/unit/cluster/slot-stats.tcl
+### Starting test CLUSTER SLOT-STATS cpu-usec reset upon slot migration. in tests/unit/cluster/slot-stats.tcl
+94483:M 03 May 2025 23:05:06.411 # Cluster state changed: fail
+94483:M 03 May 2025 23:05:06.411 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+94483:M 03 May 2025 23:05:07.594 * Cluster state changed: ok
+94483:M 03 May 2025 23:05:08.310 - DB 0: 1 keys (0 volatile) in 7 slots HT.
+### Starting test CLUSTER SLOT-STATS cpu-usec for non-slot specific commands. in tests/unit/cluster/slot-stats.tcl
+### Starting test CLUSTER SLOT-STATS cpu-usec for slot specific commands. in tests/unit/cluster/slot-stats.tcl
+### Starting test CLUSTER SLOT-STATS cpu-usec for blocking commands, unblocked on keyspace update. in tests/unit/cluster/slot-stats.tcl
+94483:M 03 May 2025 23:05:10.873 - Accepted 127.0.0.1:59748
+### Starting test CLUSTER SLOT-STATS cpu-usec for blocking commands, unblocked on timeout. in tests/unit/cluster/slot-stats.tcl
+94483:M 03 May 2025 23:05:13.541 - Accepted 127.0.0.1:62333
+### Starting test CLUSTER SLOT-STATS cpu-usec for transactions. in tests/unit/cluster/slot-stats.tcl
+94483:M 03 May 2025 23:05:16.099 - Accepted 127.0.0.1:64099
+94483:M 03 May 2025 23:05:18.425 - DB 0: 1 keys (0 volatile) in 7 slots HT.
+### Starting test CLUSTER SLOT-STATS cpu-usec for lua-scripts, without cross-slot keys. in tests/unit/cluster/slot-stats.tcl
+### Starting test CLUSTER SLOT-STATS cpu-usec for lua-scripts, with cross-slot keys. in tests/unit/cluster/slot-stats.tcl
+### Starting test CLUSTER SLOT-STATS cpu-usec for functions, without cross-slot keys. in tests/unit/cluster/slot-stats.tcl
+94483:M 03 May 2025 23:05:23.483 - DB 0: 1 keys (0 volatile) in 7 slots HT.
+### Starting test CLUSTER SLOT-STATS cpu-usec for functions, with cross-slot keys. in tests/unit/cluster/slot-stats.tcl
+94483:M 03 May 2025 23:05:24.947 - Client closed connection id=3 addr=127.0.0.1:54176 laddr=127.0.0.1:26635 fd=14 name= age=21 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=flushall user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=4711 tot-net-out=24864711 tot-cmds=149
+94483:signal-handler (1746281126) Received SIGTERM scheduling shutdown...
+94483:M 03 May 2025 23:05:26.209 * User requested shutdown...
+94483:M 03 May 2025 23:05:26.213 * Removing the pid file.
+94483:M 03 May 2025 23:05:26.219 * Saving the cluster configuration file before exiting.
+94483:M 03 May 2025 23:05:26.262 * Removing the unix socket file.
+94483:M 03 May 2025 23:05:26.265 # Valkey is now ready to exit, bye bye...

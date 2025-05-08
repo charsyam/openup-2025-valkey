@@ -1,0 +1,59 @@
+### Starting server for test 
+85217:M 03 May 2025 23:03:57.270 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+85217:M 03 May 2025 23:03:57.270 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=85217, just started
+85217:M 03 May 2025 23:03:57.270 * Configuration loaded
+85217:M 03 May 2025 23:03:57.270 * Increased maximum number of open files to 10032 (it was originally set to 256).
+85217:M 03 May 2025 23:03:57.270 * monotonic clock: POSIX clock_gettime
+85217:M 03 May 2025 23:03:57.270 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 28117
+ |###|   .+###############+.   |###|    PID: 85217                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+85217:M 03 May 2025 23:03:57.270 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+85217:M 03 May 2025 23:03:57.270 * Server initialized
+85217:M 03 May 2025 23:03:57.270 * Ready to accept connections tcp
+85217:M 03 May 2025 23:03:57.270 * Ready to accept connections unix
+85217:M 03 May 2025 23:03:57.284 - Accepted 127.0.0.1:59180
+85217:M 03 May 2025 23:03:57.284 - Client closed connection id=2 addr=127.0.0.1:59180 laddr=127.0.0.1:28117 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+85217:M 03 May 2025 23:03:57.295 - Accepted 127.0.0.1:59181
+### Starting test maxmemory - is the memory limit honoured? (policy allkeys-random) in tests/unit/maxmemory.tcl
+### Starting test maxmemory - is the memory limit honoured? (policy allkeys-lru) in tests/unit/maxmemory.tcl
+### Starting test maxmemory - is the memory limit honoured? (policy allkeys-lfu) in tests/unit/maxmemory.tcl
+### Starting test maxmemory - is the memory limit honoured? (policy volatile-lru) in tests/unit/maxmemory.tcl
+### Starting test maxmemory - is the memory limit honoured? (policy volatile-lfu) in tests/unit/maxmemory.tcl
+### Starting test maxmemory - is the memory limit honoured? (policy volatile-random) in tests/unit/maxmemory.tcl
+### Starting test maxmemory - is the memory limit honoured? (policy volatile-ttl) in tests/unit/maxmemory.tcl
+### Starting test maxmemory - only allkeys-* should remove non-volatile keys (allkeys-random) in tests/unit/maxmemory.tcl
+### Starting test maxmemory - only allkeys-* should remove non-volatile keys (allkeys-lru) in tests/unit/maxmemory.tcl
+### Starting test maxmemory - only allkeys-* should remove non-volatile keys (volatile-lru) in tests/unit/maxmemory.tcl
+### Starting test maxmemory - only allkeys-* should remove non-volatile keys (volatile-random) in tests/unit/maxmemory.tcl
+### Starting test maxmemory - only allkeys-* should remove non-volatile keys (volatile-ttl) in tests/unit/maxmemory.tcl
+### Starting test maxmemory - policy volatile-lru should only remove volatile keys. in tests/unit/maxmemory.tcl
+85217:M 03 May 2025 23:04:02.280 - DB 9: 1013 keys (506 volatile) in 1792 slots HT.
+### Starting test maxmemory - policy volatile-lfu should only remove volatile keys. in tests/unit/maxmemory.tcl
+85217:M 03 May 2025 23:04:07.284 - DB 9: 13140 keys (6553 volatile) in 14336 slots HT.
+### Starting test maxmemory - policy volatile-random should only remove volatile keys. in tests/unit/maxmemory.tcl
+### Starting test maxmemory - policy volatile-ttl should only remove volatile keys. in tests/unit/maxmemory.tcl
+85217:M 03 May 2025 23:04:12.290 - DB 9: 9103 keys (4551 volatile) in 14336 slots HT.
+85217:M 03 May 2025 23:04:14.233 - Client closed connection id=3 addr=127.0.0.1:59181 laddr=127.0.0.1:28117 fd=12 name= age=17 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=8192 rbp=6068 obl=0 oll=0 omem=0 tot-mem=25600 events=r cmd=exists user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6404516 tot-net-out=306467012 tot-cmds=166971
+85217:signal-handler (1746281057) Received SIGTERM scheduling shutdown...
+85217:M 03 May 2025 23:04:17.699 * User requested shutdown...
+85217:M 03 May 2025 23:04:17.699 * Removing the pid file.
+85217:M 03 May 2025 23:04:17.699 * Removing the unix socket file.
+85217:M 03 May 2025 23:04:17.699 # Valkey is now ready to exit, bye bye...

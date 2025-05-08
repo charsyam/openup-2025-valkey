@@ -1,0 +1,48 @@
+### Starting server for test 
+84068:M 03 May 2025 23:03:46.578 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+84068:M 03 May 2025 23:03:46.578 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+84068:M 03 May 2025 23:03:46.578 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=84068, just started
+84068:M 03 May 2025 23:03:46.578 * Configuration loaded
+84068:M 03 May 2025 23:03:46.578 * Increased maximum number of open files to 10032 (it was originally set to 256).
+84068:M 03 May 2025 23:03:46.578 * monotonic clock: POSIX clock_gettime
+84068:M 03 May 2025 23:03:46.578 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 27112
+ |###|   .+###############+.   |###|    PID: 84068                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+84068:M 03 May 2025 23:03:46.578 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+84068:M 03 May 2025 23:03:46.580 * No cluster configuration found, I'm ab50d3bc84dddd568f68fdb73cdb054a185dd6f8
+84068:M 03 May 2025 23:03:46.596 * Server initialized
+84068:M 03 May 2025 23:03:46.596 * Ready to accept connections tcp
+84068:M 03 May 2025 23:03:46.596 * Ready to accept connections unix
+84068:M 03 May 2025 23:03:46.712 - Accepted 127.0.0.1:58824
+84068:M 03 May 2025 23:03:46.712 - Client closed connection id=2 addr=127.0.0.1:58824 laddr=127.0.0.1:27112 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+84068:M 03 May 2025 23:03:46.730 - Accepted 127.0.0.1:58825
+84068:M 03 May 2025 23:03:46.732 # Missing implement of connection type tls
+84068:M 03 May 2025 23:03:46.732 # DEBUG LOG: ========== I am primary 0 ==========
+84068:M 03 May 2025 23:03:48.613 * Cluster state changed: ok
+### Starting test KEYS with empty DB in cluster mode in tests/unit/keyspace.tcl
+### Starting test KEYS with empty slot in cluster mode in tests/unit/keyspace.tcl
+84068:M 03 May 2025 23:03:48.654 - Client closed connection id=3 addr=127.0.0.1:58825 laddr=127.0.0.1:27112 fd=14 name= age=2 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=322 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=keys user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1303 tot-net-out=12311 tot-cmds=46
+84068:signal-handler (1746281030) Received SIGTERM scheduling shutdown...
+84068:M 03 May 2025 23:03:50.478 * User requested shutdown...
+84068:M 03 May 2025 23:03:50.478 * Removing the pid file.
+84068:M 03 May 2025 23:03:50.478 * Saving the cluster configuration file before exiting.
+84068:M 03 May 2025 23:03:50.485 * Removing the unix socket file.
+84068:M 03 May 2025 23:03:50.485 # Valkey is now ready to exit, bye bye...

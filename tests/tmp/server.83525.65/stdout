@@ -1,0 +1,101 @@
+### Starting server for test 
+92524:M 03 May 2025 23:04:48.789 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+92524:M 03 May 2025 23:04:48.791 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=92524, just started
+92524:M 03 May 2025 23:04:48.791 * Configuration loaded
+92524:M 03 May 2025 23:04:48.791 * Increased maximum number of open files to 10032 (it was originally set to 256).
+92524:M 03 May 2025 23:04:48.791 * monotonic clock: POSIX clock_gettime
+92524:M 03 May 2025 23:04:48.791 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21143
+ |###|   .+###############+.   |###|    PID: 92524                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+92524:M 03 May 2025 23:04:48.792 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+92524:M 03 May 2025 23:04:48.796 * Server initialized
+92524:M 03 May 2025 23:04:48.796 * Ready to accept connections tcp
+92524:M 03 May 2025 23:04:48.796 * Ready to accept connections unix
+92524:M 03 May 2025 23:04:48.937 - Accepted 127.0.0.1:49939
+92524:M 03 May 2025 23:04:48.937 - Client closed connection id=2 addr=127.0.0.1:49939 laddr=127.0.0.1:21143 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+92524:M 03 May 2025 23:04:48.945 - Accepted 127.0.0.1:49948
+### Starting test Shebang support for lua engine in tests/unit/scripting.tcl
+### Starting test Unknown shebang option in tests/unit/scripting.tcl
+### Starting test Unknown shebang flag in tests/unit/scripting.tcl
+### Starting test allow-oom shebang flag in tests/unit/scripting.tcl
+92524:M 03 May 2025 23:04:48.946 # WARNING: the new maxmemory value set via CONFIG SET (1) is smaller than the current memory usage (1222256). This will result in key eviction and/or the inability to accept new write commands depending on the maxmemory-policy.
+### Starting test no-writes shebang flag in tests/unit/scripting.tcl
+### Starting test no-writes shebang flag on replica in tests/unit/scripting.tcl
+92524:M 03 May 2025 23:04:49.171 - Accepted 127.0.0.1:50048
+92524:M 03 May 2025 23:04:49.171 * Replica 127.0.0.1:21144 asks for synchronization
+92524:M 03 May 2025 23:04:49.171 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'f6071e07304687ece7944e97a172d36b88ab7e2d', my replication IDs are 'd9cc404b2c5bf4f5e55b6254a9633aaef8a55ee0' and '0000000000000000000000000000000000000000')
+92524:M 03 May 2025 23:04:49.171 * Replication backlog created, my new replication IDs are '262b4e895c797c1eefad2fde34ddcd8747fa9ca9' and '0000000000000000000000000000000000000000'
+92524:M 03 May 2025 23:04:49.171 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+92524:M 03 May 2025 23:04:49.172 * Background RDB transfer started by pid 92579 to pipe through parent process
+92579:C 03 May 2025 23:04:49.172 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+92524:M 03 May 2025 23:04:49.173 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+92524:M 03 May 2025 23:04:49.176 * Background RDB transfer terminated with success
+92524:M 03 May 2025 23:04:49.176 * Streamed RDB transfer with replica 127.0.0.1:21144 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+92524:M 03 May 2025 23:04:49.176 * Synchronization with replica 127.0.0.1:21144 succeeded
+92524:M 03 May 2025 23:04:49.277 - Client closed connection id=4 addr=127.0.0.1:50048 laddr=127.0.0.1:21143 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=275 tot-net-out=22 tot-cmds=6
+92524:M 03 May 2025 23:04:49.277 * Connection with replica 127.0.0.1:21144 lost.
+92524:M 03 May 2025 23:04:49.277 - Accepted 127.0.0.1:50091
+92524:M 03 May 2025 23:04:49.278 * Replica 127.0.0.1:21144 asks for synchronization
+92524:M 03 May 2025 23:04:49.278 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'ea75c452ca82be7494c2dd1d415e976ba3c92fcf', my replication IDs are '262b4e895c797c1eefad2fde34ddcd8747fa9ca9' and '0000000000000000000000000000000000000000')
+92524:M 03 May 2025 23:04:49.278 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+92524:M 03 May 2025 23:04:49.278 * Background RDB transfer started by pid 92581 to pipe through parent process
+92581:C 03 May 2025 23:04:49.279 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+92524:M 03 May 2025 23:04:49.279 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+92524:M 03 May 2025 23:04:49.282 * Background RDB transfer terminated with success
+92524:M 03 May 2025 23:04:49.282 * Streamed RDB transfer with replica 127.0.0.1:21144 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+92524:M 03 May 2025 23:04:49.282 * Synchronization with replica 127.0.0.1:21144 succeeded
+### Starting test Check for memory leaks (pid 92555) in tests/unit/scripting.tcl
+92524:M 03 May 2025 23:04:50.527 - Client closed connection id=5 addr=127.0.0.1:50091 laddr=127.0.0.1:21143 fd=13 name= age=1 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=275 tot-net-out=22 tot-cmds=6
+92524:M 03 May 2025 23:04:50.527 * Connection with replica 127.0.0.1:21144 lost.
+### Starting test not enough good replicas in tests/unit/scripting.tcl
+### Starting test not enough good replicas state change during long script in tests/unit/scripting.tcl
+92524:M 03 May 2025 23:04:50.635 - Accepted 127.0.0.1:50627
+92524:M 03 May 2025 23:04:50.635 * Replica 127.0.0.1:21145 asks for synchronization
+92524:M 03 May 2025 23:04:50.635 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'a47d4057f042436572d9647f643cf388a0701789', my replication IDs are '262b4e895c797c1eefad2fde34ddcd8747fa9ca9' and '0000000000000000000000000000000000000000')
+92524:M 03 May 2025 23:04:50.635 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+92524:M 03 May 2025 23:04:50.637 * Background RDB transfer started by pid 92834 to pipe through parent process
+92834:C 03 May 2025 23:04:50.637 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+92524:M 03 May 2025 23:04:50.637 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+92524:M 03 May 2025 23:04:50.641 * Background RDB transfer terminated with success
+92524:M 03 May 2025 23:04:50.641 * Streamed RDB transfer with replica 127.0.0.1:21145 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+92524:M 03 May 2025 23:04:50.641 * Synchronization with replica 127.0.0.1:21145 succeeded
+92524:M 03 May 2025 23:04:50.738 - Accepted 127.0.0.1:50660
+92524:M 03 May 2025 23:04:50.803 # Slow script detected: still in execution after 65 milliseconds. You can try killing the script using the SCRIPT KILL command. Script name is: 38cb2bb6adfaa904434218b85594d9c94777e5c1.
+92524:M 03 May 2025 23:04:50.905 - Client closed connection id=6 addr=127.0.0.1:50627 laddr=127.0.0.1:21143 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=277 tot-net-out=22 tot-cmds=6
+92524:M 03 May 2025 23:04:50.905 * Connection with replica 127.0.0.1:21145 lost.
+92524:M 03 May 2025 23:04:50.907 - Client closed connection id=7 addr=127.0.0.1:50660 laddr=127.0.0.1:21143 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=4 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=eval user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=442 tot-net-out=9 tot-cmds=18186
+### Starting test allow-stale shebang flag in tests/unit/scripting.tcl
+92524:S 03 May 2025 23:04:51.041 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+92524:S 03 May 2025 23:04:51.041 * Connecting to PRIMARY 127.0.0.1:1
+92524:S 03 May 2025 23:04:51.041 * PRIMARY <-> REPLICA sync started
+92524:S 03 May 2025 23:04:51.041 * REPLICAOF 127.0.0.1:1 enabled (user request from 'id=3 addr=127.0.0.1:49948 laddr=127.0.0.1:21143 fd=12 name= user=default lib-name= lib-ver=')
+92524:S 03 May 2025 23:04:51.041 # Error condition on socket for SYNC: Connection refused
+92524:M 03 May 2025 23:04:51.041 * Discarding previously cached primary state.
+92524:M 03 May 2025 23:04:51.041 * Setting secondary replication ID to 262b4e895c797c1eefad2fde34ddcd8747fa9ca9, valid up to offset: 629. New replication ID is cd195fe709dda1716c57b572ac69ed2e0eb240b3
+92524:M 03 May 2025 23:04:51.041 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:49948 laddr=127.0.0.1:21143 fd=12 name= user=default lib-name= lib-ver=')
+### Starting test reject script do not cause a Lua stack leak in tests/unit/scripting.tcl
+92524:M 03 May 2025 23:04:51.042 # WARNING: the new maxmemory value set via CONFIG SET (1) is smaller than the current memory usage (1480784). This will result in key eviction and/or the inability to accept new write commands depending on the maxmemory-policy.
+92524:M 03 May 2025 23:04:51.045 - Client closed connection id=3 addr=127.0.0.1:49948 laddr=127.0.0.1:21143 fd=12 name= age=3 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=489 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=eval user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7121 tot-net-out=5547 tot-cmds=54
+92524:signal-handler (1746281092) Received SIGTERM scheduling shutdown...
+92524:M 03 May 2025 23:04:52.210 * User requested shutdown...
+92524:M 03 May 2025 23:04:52.210 * Removing the pid file.
+92524:M 03 May 2025 23:04:52.210 * Removing the unix socket file.
+92524:M 03 May 2025 23:04:52.210 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,85 @@
+### Starting server for test 
+84978:M 03 May 2025 23:03:56.663 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+84978:M 03 May 2025 23:03:56.663 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=84978, just started
+84978:M 03 May 2025 23:03:56.663 * Configuration loaded
+84978:M 03 May 2025 23:03:56.663 * Increased maximum number of open files to 10032 (it was originally set to 256).
+84978:M 03 May 2025 23:03:56.663 * monotonic clock: POSIX clock_gettime
+84978:M 03 May 2025 23:03:56.663 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 28615
+ |###|   .+###############+.   |###|    PID: 84978                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+84978:M 03 May 2025 23:03:56.663 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+84978:M 03 May 2025 23:03:56.663 * Server initialized
+84978:M 03 May 2025 23:03:56.663 * Ready to accept connections tcp
+84978:M 03 May 2025 23:03:56.663 * Ready to accept connections unix
+84978:M 03 May 2025 23:03:56.787 - Accepted 127.0.0.1:59153
+84978:M 03 May 2025 23:03:56.788 - Client closed connection id=2 addr=127.0.0.1:59153 laddr=127.0.0.1:28615 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+84978:M 03 May 2025 23:03:56.798 - Accepted 127.0.0.1:59154
+### Starting test DUMP / RESTORE are able to serialize / unserialize a simple key in tests/unit/dump.tcl
+### Starting test RESTORE can set an arbitrary expire to the materialized key in tests/unit/dump.tcl
+### Starting test RESTORE can set an expire that overflows a 32 bit integer in tests/unit/dump.tcl
+### Starting test RESTORE can set an absolute expire in tests/unit/dump.tcl
+### Starting test RESTORE with ABSTTL in the past in tests/unit/dump.tcl
+### Starting test RESTORE can set LRU in tests/unit/dump.tcl
+### Starting test RESTORE can set LFU in tests/unit/dump.tcl
+### Starting test RESTORE returns an error of the key already exists in tests/unit/dump.tcl
+### Starting test RESTORE can overwrite an existing key with REPLACE in tests/unit/dump.tcl
+### Starting test RESTORE can detect a syntax error for unrecognized options in tests/unit/dump.tcl
+### Starting test RESTORE should not store key that are already expired, with REPLACE will propagate it as DEL or UNLINK in tests/unit/dump.tcl
+84978:M 03 May 2025 23:03:56.813 - Accepted 127.0.0.1:59155
+84978:M 03 May 2025 23:03:56.813 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+84978:M 03 May 2025 23:03:56.813 * Replication backlog created, my new replication IDs are 'b3e6d333e1dad0c28ffdfd9a144c777de082d3ea' and '0000000000000000000000000000000000000000'
+84978:M 03 May 2025 23:03:56.813 * Starting BGSAVE for SYNC with target: disk using: normal sync
+84978:M 03 May 2025 23:03:56.813 * Background saving started by pid 85083
+85083:C 03 May 2025 23:03:56.817 * DB saved on disk
+85083:C 03 May 2025 23:03:56.817 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+84978:M 03 May 2025 23:03:56.866 * Background saving terminated with success
+84978:M 03 May 2025 23:03:56.866 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+84978:M 03 May 2025 23:03:56.867 - Client closed connection id=4 addr=127.0.0.1:59155 laddr=127.0.0.1:28615 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=78 tot-cmds=1
+84978:M 03 May 2025 23:03:56.867 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test RESTORE key with future RDB version, strict version check in tests/unit/dump.tcl
+### Starting test RESTORE key with future RDB version, relaxed version check in tests/unit/dump.tcl
+### Starting test DUMP of non existing key returns nil in tests/unit/dump.tcl
+### Starting test MIGRATE is caching connections in tests/unit/dump.tcl
+### Starting test MIGRATE cached connections are released after some time in tests/unit/dump.tcl
+84978:M 03 May 2025 23:04:01.722 - DB 9: 2 keys (0 volatile) in 7 slots HT.
+84978:M 03 May 2025 23:04:06.768 - DB 9: 2 keys (0 volatile) in 7 slots HT.
+84978:M 03 May 2025 23:04:11.815 - DB 9: 2 keys (0 volatile) in 7 slots HT.
+### Starting test MIGRATE is able to migrate a key between two instances in tests/unit/dump.tcl
+### Starting test MIGRATE is able to copy a key between two instances in tests/unit/dump.tcl
+### Starting test MIGRATE will not overwrite existing keys, unless REPLACE is used in tests/unit/dump.tcl
+### Starting test MIGRATE propagates TTL correctly in tests/unit/dump.tcl
+### Starting test MIGRATE can correctly transfer large values in tests/unit/dump.tcl
+84978:M 03 May 2025 23:04:16.829 - DB 9: 4 keys (0 volatile) in 7 slots HT.
+### Starting test MIGRATE can correctly transfer hashes in tests/unit/dump.tcl
+### Starting test MIGRATE timeout actually works in tests/unit/dump.tcl
+### Starting test MIGRATE can migrate multiple keys at once in tests/unit/dump.tcl
+### Starting test MIGRATE with multiple keys must have empty key arg in tests/unit/dump.tcl
+### Starting test MIGRATE with multiple keys migrate just existing ones in tests/unit/dump.tcl
+### Starting test MIGRATE with multiple keys: stress command rewriting in tests/unit/dump.tcl
+### Starting test MIGRATE with multiple keys: delete just ack keys in tests/unit/dump.tcl
+### Starting test MIGRATE AUTH: correct and wrong password cases in tests/unit/dump.tcl
+84978:M 03 May 2025 23:04:21.885 - Client closed connection id=3 addr=127.0.0.1:59154 laddr=127.0.0.1:28615 fd=12 name= age=25 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=migrate user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=9687554 tot-net-out=823327 tot-cmds=80152
+84978:M 03 May 2025 23:04:22.316 - DB 9: 3 keys (0 volatile) in 7 slots HT.
+84978:signal-handler (1746281063) Received SIGTERM scheduling shutdown...
+84978:M 03 May 2025 23:04:23.289 * User requested shutdown...
+84978:M 03 May 2025 23:04:23.290 * Removing the pid file.
+84978:M 03 May 2025 23:04:23.290 * Removing the unix socket file.
+84978:M 03 May 2025 23:04:23.293 # Valkey is now ready to exit, bye bye...

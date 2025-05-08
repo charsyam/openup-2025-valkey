@@ -1,0 +1,49 @@
+### Starting server for test 
+7218:M 03 May 2025 23:06:50.266 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+7218:M 03 May 2025 23:06:50.266 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=7218, just started
+7218:M 03 May 2025 23:06:50.266 * Configuration loaded
+7218:M 03 May 2025 23:06:50.266 * Increased maximum number of open files to 10032 (it was originally set to 256).
+7218:M 03 May 2025 23:06:50.266 * monotonic clock: POSIX clock_gettime
+7218:M 03 May 2025 23:06:50.266 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 22660
+ |###|   .+###############+.   |###|    PID: 7218                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+7218:M 03 May 2025 23:06:50.266 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+7218:M 03 May 2025 23:06:50.266 * Server initialized
+7218:M 03 May 2025 23:06:50.266 * Ready to accept connections tcp
+7218:M 03 May 2025 23:06:50.266 * Ready to accept connections unix
+7218:M 03 May 2025 23:06:50.282 - Accepted 127.0.0.1:55441
+7218:M 03 May 2025 23:06:50.282 - Client closed connection id=2 addr=127.0.0.1:55441 laddr=127.0.0.1:22660 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+7218:M 03 May 2025 23:06:50.305 - Accepted 127.0.0.1:55464
+### Starting test failed bgsave prevents writes in tests/integration/rdb.tcl
+7218:M 03 May 2025 23:06:50.339 * Background saving started by pid 7234
+7218:M 03 May 2025 23:06:50.368 # Background saving terminated by signal 9
+7218:M 03 May 2025 23:06:50.417 * Background saving started by pid 7237
+7237:C 03 May 2025 23:06:50.422 * DB saved on disk
+7237:C 03 May 2025 23:06:50.422 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+7218:M 03 May 2025 23:06:50.469 * Background saving terminated with success
+7218:M 03 May 2025 23:06:50.472 - Client closed connection id=3 addr=127.0.0.1:55464 laddr=127.0.0.1:22660 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6144 rbp=6010 obl=0 oll=0 omem=0 tot-mem=23552 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=35655 tot-net-out=30172 tot-cmds=1018
+7218:signal-handler (1746281212) Received SIGTERM scheduling shutdown...
+7218:M 03 May 2025 23:06:52.099 * User requested shutdown...
+7218:M 03 May 2025 23:06:52.099 * Saving the final RDB snapshot before exiting.
+7218:M 03 May 2025 23:06:52.103 * DB saved on disk
+7218:M 03 May 2025 23:06:52.103 * Removing the pid file.
+7218:M 03 May 2025 23:06:52.103 * Removing the unix socket file.
+7218:M 03 May 2025 23:06:52.103 # Valkey is now ready to exit, bye bye...

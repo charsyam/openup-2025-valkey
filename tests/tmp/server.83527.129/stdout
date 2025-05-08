@@ -1,0 +1,89 @@
+### Starting server for test 
+11991:M 03 May 2025 23:07:56.410 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+11991:M 03 May 2025 23:07:56.410 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+11991:M 03 May 2025 23:07:56.410 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=11991, just started
+11991:M 03 May 2025 23:07:56.410 * Configuration loaded
+11991:M 03 May 2025 23:07:56.410 * Increased maximum number of open files to 10032 (it was originally set to 256).
+11991:M 03 May 2025 23:07:56.410 * monotonic clock: POSIX clock_gettime
+11991:M 03 May 2025 23:07:56.411 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 22175
+ |###|   .+###############+.   |###|    PID: 11991                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+11991:M 03 May 2025 23:07:56.411 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+11991:M 03 May 2025 23:07:56.411 * No cluster configuration found, I'm 8ff3785e0ff75ee6d71787198ab8cfd4a987a76c
+11991:M 03 May 2025 23:07:56.419 * Server initialized
+11991:M 03 May 2025 23:07:56.419 * Ready to accept connections tcp
+11991:M 03 May 2025 23:07:56.419 * Ready to accept connections unix
+11991:M 03 May 2025 23:07:56.542 - Accepted 127.0.0.1:59476
+11991:M 03 May 2025 23:07:56.542 - Client closed connection id=2 addr=127.0.0.1:59476 laddr=127.0.0.1:22175 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+11991:M 03 May 2025 23:07:56.556 - Accepted 127.0.0.1:59477
+11991:M 03 May 2025 23:07:56.752 # Missing implement of connection type tls
+11991:M 03 May 2025 23:07:56.802 - Accepting cluster node connection from 127.0.0.1:59483
+11991:M 03 May 2025 23:07:56.802 * IP address for this node updated to 127.0.0.1
+11991:M 03 May 2025 23:07:56.925 * Successfully completed handshake with 56feb27fa10f2da6b23a7de12d289d07167b0146 ()
+11991:M 03 May 2025 23:07:56.925 * Successfully completed handshake with be61d9b3fcb528263b426c39329debea4bb47f02 ()
+11991:M 03 May 2025 23:07:56.925 * configEpoch collision with node be61d9b3fcb528263b426c39329debea4bb47f02 (). configEpoch set to 2
+11991:M 03 May 2025 23:07:56.943 - Accepting cluster node connection from 127.0.0.1:59494
+11991:M 03 May 2025 23:07:56.964 - Accepting cluster node connection from 127.0.0.1:59497
+11991:M 03 May 2025 23:07:57.064 - Accepting cluster node connection from 127.0.0.1:59500
+11991:M 03 May 2025 23:07:57.956 * Node 56feb27fa10f2da6b23a7de12d289d07167b0146 () is no longer primary of shard 1804ffd1b165df5b45e4a7ea9a4a83d84b4c6f15; removed all 0 slot(s) it used to own
+11991:M 03 May 2025 23:07:57.956 * Node 56feb27fa10f2da6b23a7de12d289d07167b0146 () is now part of shard 0d5fa7fec298ed4adc30376f4db7d1c01d502091
+11991:M 03 May 2025 23:07:57.956 * Node 56feb27fa10f2da6b23a7de12d289d07167b0146 () is now a replica of node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 () in shard 0d5fa7fec298ed4adc30376f4db7d1c01d502091
+11991:M 03 May 2025 23:07:57.957 # DEBUG LOG: ========== I am primary 1 ==========
+11991:M 03 May 2025 23:07:58.438 * Cluster state changed: ok
+### Starting test Automatic failover vote is not limited by two times the node timeout - mixed failover in tests/unit/cluster/manual-failover.tcl
+11991:M 03 May 2025 23:08:07.259 * Failover auth granted to 56feb27fa10f2da6b23a7de12d289d07167b0146 () for epoch 4
+11991:M 03 May 2025 23:08:07.305 * A failover occurred in shard 0d5fa7fec298ed4adc30376f4db7d1c01d502091; node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 () failed over to node 56feb27fa10f2da6b23a7de12d289d07167b0146 () with a config epoch of 4
+11991:M 03 May 2025 23:08:07.305 * Node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 () is now a replica of node 56feb27fa10f2da6b23a7de12d289d07167b0146 () in shard 0d5fa7fec298ed4adc30376f4db7d1c01d502091
+11991:M 03 May 2025 23:08:07.316 * Failover auth granted to 6f81b2cbab6093de36e66536aafb71fd2d7728d9 () for epoch 5
+11991:M 03 May 2025 23:08:07.353 * A failover occurred in shard 0d5fa7fec298ed4adc30376f4db7d1c01d502091; node 56feb27fa10f2da6b23a7de12d289d07167b0146 () failed over to node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 () with a config epoch of 5
+11991:M 03 May 2025 23:08:07.355 * Node 56feb27fa10f2da6b23a7de12d289d07167b0146 () is now a replica of node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 () in shard 0d5fa7fec298ed4adc30376f4db7d1c01d502091
+11991:M 03 May 2025 23:08:10.265 * FAIL message received from be61d9b3fcb528263b426c39329debea4bb47f02 () about 6f81b2cbab6093de36e66536aafb71fd2d7728d9 ()
+11991:M 03 May 2025 23:08:10.265 # Cluster state changed: fail
+11991:M 03 May 2025 23:08:10.265 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+11991:M 03 May 2025 23:08:10.461 * Node be61d9b3fcb528263b426c39329debea4bb47f02 () reported node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 () as not reachable.
+11991:M 03 May 2025 23:08:11.233 * Failover auth granted to 56feb27fa10f2da6b23a7de12d289d07167b0146 () for epoch 6
+11991:M 03 May 2025 23:08:11.270 * Cluster state changed: ok
+### Starting test Check for memory leaks (pid 12018) in tests/unit/cluster/manual-failover.tcl
+11991:M 03 May 2025 23:08:11.470 * Node 56feb27fa10f2da6b23a7de12d289d07167b0146 () reported node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 () as not reachable.
+11991:M 03 May 2025 23:08:14.736 - Node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 has old slots configuration, sending an UPDATE message about 56feb27fa10f2da6b23a7de12d289d07167b0146
+11991:M 03 May 2025 23:08:14.741 * A failover occurred in shard 0d5fa7fec298ed4adc30376f4db7d1c01d502091; node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 () failed over to node 56feb27fa10f2da6b23a7de12d289d07167b0146 () with a config epoch of 6
+11991:M 03 May 2025 23:08:14.741 * Node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 () is now a replica of node 56feb27fa10f2da6b23a7de12d289d07167b0146 () in shard 0d5fa7fec298ed4adc30376f4db7d1c01d502091
+11991:M 03 May 2025 23:08:14.741 * Clear FAIL state for node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 (): replica is reachable again.
+11991:M 03 May 2025 23:08:14.881 - Client closed connection id=3 addr=127.0.0.1:59477 laddr=127.0.0.1:22175 fd=14 name= age=18 idle=7 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|slots user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1718 tot-net-out=33658 tot-cmds=58
+11991:M 03 May 2025 23:08:14.903 - Connection with Node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 at 127.0.0.1:32176 failed: Connection refused
+11991:M 03 May 2025 23:08:15.004 - Connection with Node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 at 127.0.0.1:32176 failed: Connection refused
+11991:M 03 May 2025 23:08:15.105 - Connection with Node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 at 127.0.0.1:32176 failed: Connection refused
+11991:M 03 May 2025 23:08:15.163 * Node 56feb27fa10f2da6b23a7de12d289d07167b0146 () reported node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 () is back online.
+11991:M 03 May 2025 23:08:15.206 - Connection with Node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 at 127.0.0.1:32176 failed: Connection refused
+11991:M 03 May 2025 23:08:15.218 * Node be61d9b3fcb528263b426c39329debea4bb47f02 () reported node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 () is back online.
+11991:M 03 May 2025 23:08:15.306 - Connection with Node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 at 127.0.0.1:32176 failed: Connection refused
+11991:M 03 May 2025 23:08:15.407 - Connection with Node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 at 127.0.0.1:32176 failed: Connection refused
+11991:M 03 May 2025 23:08:15.508 - Connection with Node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 at 127.0.0.1:32176 failed: Connection refused
+11991:M 03 May 2025 23:08:15.609 - Connection with Node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 at 127.0.0.1:32176 failed: Connection refused
+11991:M 03 May 2025 23:08:15.710 - Connection with Node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 at 127.0.0.1:32176 failed: Connection refused
+11991:M 03 May 2025 23:08:15.810 - Connection with Node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 at 127.0.0.1:32176 failed: Connection refused
+11991:M 03 May 2025 23:08:17.030 - Connection with Node 6f81b2cbab6093de36e66536aafb71fd2d7728d9 at 127.0.0.1:32176 failed: Connection refused
+11991:signal-handler (1746281297) Received SIGTERM scheduling shutdown...
+11991:M 03 May 2025 23:08:17.131 * User requested shutdown...
+11991:M 03 May 2025 23:08:17.131 * Removing the pid file.
+11991:M 03 May 2025 23:08:17.131 * Saving the cluster configuration file before exiting.
+11991:M 03 May 2025 23:08:17.137 * Removing the unix socket file.
+11991:M 03 May 2025 23:08:17.137 # Valkey is now ready to exit, bye bye...

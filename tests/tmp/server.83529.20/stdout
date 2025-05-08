@@ -1,0 +1,72 @@
+### Starting server for test 
+87702:M 03 May 2025 23:04:12.977 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+87702:M 03 May 2025 23:04:12.977 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=87702, just started
+87702:M 03 May 2025 23:04:12.977 * Configuration loaded
+87702:M 03 May 2025 23:04:12.977 * Increased maximum number of open files to 10032 (it was originally set to 256).
+87702:M 03 May 2025 23:04:12.977 * monotonic clock: POSIX clock_gettime
+87702:M 03 May 2025 23:04:12.977 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23120
+ |###|   .+###############+.   |###|    PID: 87702                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+87702:M 03 May 2025 23:04:12.977 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+87702:M 03 May 2025 23:04:12.978 * Server initialized
+87702:M 03 May 2025 23:04:12.978 * Ready to accept connections tcp
+87702:M 03 May 2025 23:04:12.978 * Ready to accept connections unix
+87702:M 03 May 2025 23:04:13.105 - Accepted 127.0.0.1:59591
+87702:M 03 May 2025 23:04:13.105 - Client closed connection id=2 addr=127.0.0.1:59591 laddr=127.0.0.1:23120 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+87702:M 03 May 2025 23:04:13.115 - Accepted 127.0.0.1:59592
+### Starting test INCR against non existing key in tests/unit/type/incr.tcl
+### Starting test INCR against key created by incr itself in tests/unit/type/incr.tcl
+### Starting test DECR against key created by incr in tests/unit/type/incr.tcl
+### Starting test DECR against key is not exist and incr in tests/unit/type/incr.tcl
+### Starting test INCR against key originally set with SET in tests/unit/type/incr.tcl
+### Starting test INCR over 32bit value in tests/unit/type/incr.tcl
+### Starting test INCRBY over 32bit value with over 32bit increment in tests/unit/type/incr.tcl
+### Starting test INCR fails against key with spaces (left) in tests/unit/type/incr.tcl
+### Starting test INCR fails against key with spaces (right) in tests/unit/type/incr.tcl
+### Starting test INCR fails against key with spaces (both) in tests/unit/type/incr.tcl
+### Starting test DECRBY negation overflow in tests/unit/type/incr.tcl
+### Starting test INCR fails against a key holding a list in tests/unit/type/incr.tcl
+### Starting test DECRBY over 32bit value with over 32bit increment, negative res in tests/unit/type/incr.tcl
+### Starting test DECRBY against key is not exist in tests/unit/type/incr.tcl
+### Starting test INCR can modify objects in-place in tests/unit/type/incr.tcl
+### Starting test INCRBYFLOAT against non existing key in tests/unit/type/incr.tcl
+### Starting test INCRBYFLOAT against key originally set with SET in tests/unit/type/incr.tcl
+### Starting test INCRBYFLOAT over 32bit value in tests/unit/type/incr.tcl
+### Starting test INCRBYFLOAT over 32bit value with over 32bit increment in tests/unit/type/incr.tcl
+### Starting test INCRBYFLOAT fails against key with spaces (left) in tests/unit/type/incr.tcl
+### Starting test INCRBYFLOAT fails against key with spaces (right) in tests/unit/type/incr.tcl
+### Starting test INCRBYFLOAT fails against key with spaces (both) in tests/unit/type/incr.tcl
+### Starting test INCRBYFLOAT fails against a key holding a list in tests/unit/type/incr.tcl
+### Starting test INCRBYFLOAT does not allow NaN or Infinity in tests/unit/type/incr.tcl
+### Starting test INCRBYFLOAT decrement in tests/unit/type/incr.tcl
+### Starting test string to double with null terminator in tests/unit/type/incr.tcl
+### Starting test No negative zero in tests/unit/type/incr.tcl
+### Starting test INCRBY INCRBYFLOAT DECRBY against unhappy path in tests/unit/type/incr.tcl
+### Starting test incr operation should update encoding from raw to int in tests/unit/type/incr.tcl
+### Starting test decr operation should update encoding from raw to int in tests/unit/type/incr.tcl
+### Starting test incrby operation should update encoding from raw to int in tests/unit/type/incr.tcl
+### Starting test decrby operation should update encoding from raw to int in tests/unit/type/incr.tcl
+87702:M 03 May 2025 23:04:13.138 - Client closed connection id=3 addr=127.0.0.1:59592 laddr=127.0.0.1:23120 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=3706 tot-net-out=1718 tot-cmds=109
+87702:signal-handler (1746281056) Received SIGTERM scheduling shutdown...
+87702:M 03 May 2025 23:04:16.802 * User requested shutdown...
+87702:M 03 May 2025 23:04:16.802 * Removing the pid file.
+87702:M 03 May 2025 23:04:16.802 * Removing the unix socket file.
+87702:M 03 May 2025 23:04:16.802 # Valkey is now ready to exit, bye bye...

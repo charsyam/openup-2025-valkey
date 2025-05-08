@@ -1,0 +1,64 @@
+### Starting server for test 
+95213:M 03 May 2025 23:05:12.062 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+95213:M 03 May 2025 23:05:12.066 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+95213:M 03 May 2025 23:05:12.069 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=95213, just started
+95213:M 03 May 2025 23:05:12.069 * Configuration loaded
+95213:M 03 May 2025 23:05:12.070 * Increased maximum number of open files to 10032 (it was originally set to 256).
+95213:M 03 May 2025 23:05:12.070 * monotonic clock: POSIX clock_gettime
+95213:M 03 May 2025 23:05:12.070 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 28642
+ |###|   .+###############+.   |###|    PID: 95213                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+95213:M 03 May 2025 23:05:12.070 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+95213:M 03 May 2025 23:05:12.071 * No cluster configuration found, I'm 6ba00b7a745ef7c9aa811a56d70e207c349c1ca0
+95213:M 03 May 2025 23:05:12.077 * Server initialized
+95213:M 03 May 2025 23:05:12.077 * Ready to accept connections tcp
+95213:M 03 May 2025 23:05:12.077 * Ready to accept connections unix
+95213:M 03 May 2025 23:05:12.175 - Accepted 127.0.0.1:61201
+95213:M 03 May 2025 23:05:12.178 - Client closed connection id=2 addr=127.0.0.1:61201 laddr=127.0.0.1:28642 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=7 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+95213:M 03 May 2025 23:05:12.200 - Accepted 127.0.0.1:61242
+95213:M 03 May 2025 23:05:12.551 # Missing implement of connection type tls
+95213:M 03 May 2025 23:05:12.555 - Accepting cluster node connection from 127.0.0.1:61533
+95213:M 03 May 2025 23:05:12.557 * IP address for this node updated to 127.0.0.1
+95213:M 03 May 2025 23:05:12.757 * configEpoch collision with node ff724192187d1c46e432f36a8e049314b4edfda6 (). configEpoch set to 2
+95213:M 03 May 2025 23:05:12.785 - Accepting cluster node connection from 127.0.0.1:61712
+95213:M 03 May 2025 23:05:12.877 * Node 3308b86ae54991ce3a75be9f6d572af2b6b400c4 () is no longer primary of shard acc7da26815871f95e4901854aaf6860325fa396; removed all 0 slot(s) it used to own
+95213:M 03 May 2025 23:05:12.880 * Node 3308b86ae54991ce3a75be9f6d572af2b6b400c4 () is now part of shard 5e2e3c50c87431cb0596fe000f205ddf69d0f7d6
+95213:M 03 May 2025 23:05:12.880 * Node 3308b86ae54991ce3a75be9f6d572af2b6b400c4 () is now a replica of node ff724192187d1c46e432f36a8e049314b4edfda6 () in shard 5e2e3c50c87431cb0596fe000f205ddf69d0f7d6
+95213:M 03 May 2025 23:05:12.880 # DEBUG LOG: ========== I am primary 1 ==========
+95213:M 03 May 2025 23:05:14.103 * Cluster state changed: ok
+### Starting test Verify that multiple primaries mark replica as failed in tests/unit/cluster/failure-marking.tcl
+95213:M 03 May 2025 23:05:25.961 - Accepting cluster node connection from 127.0.0.1:53933
+95213:M 03 May 2025 23:05:26.108 * Node ff724192187d1c46e432f36a8e049314b4edfda6 () reported node 3308b86ae54991ce3a75be9f6d572af2b6b400c4 () as not reachable.
+95213:M 03 May 2025 23:05:26.113 * Marking node 3308b86ae54991ce3a75be9f6d572af2b6b400c4 () as failing (quorum reached).
+95213:M 03 May 2025 23:05:26.245 * Clear FAIL state for node 3308b86ae54991ce3a75be9f6d572af2b6b400c4 (): replica is reachable again.
+95213:M 03 May 2025 23:05:26.271 * Node ff724192187d1c46e432f36a8e049314b4edfda6 () reported node 3308b86ae54991ce3a75be9f6d572af2b6b400c4 () is back online.
+### Starting test Check for memory leaks (pid 95258) in tests/unit/cluster/failure-marking.tcl
+95213:M 03 May 2025 23:05:27.483 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95213:M 03 May 2025 23:05:27.521 - Client closed connection id=3 addr=127.0.0.1:61242 laddr=127.0.0.1:28642 fd=14 name= age=15 idle=5 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=role user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=592 tot-net-out=5362 tot-cmds=19
+95213:M 03 May 2025 23:05:27.584 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95213:M 03 May 2025 23:05:27.686 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95213:M 03 May 2025 23:05:28.582 - Connection with Node ff724192187d1c46e432f36a8e049314b4edfda6 at 127.0.0.1:38643 failed: Connection refused
+95213:signal-handler (1746281128) Received SIGTERM scheduling shutdown...
+95213:M 03 May 2025 23:05:28.683 * User requested shutdown...
+95213:M 03 May 2025 23:05:28.684 * Removing the pid file.
+95213:M 03 May 2025 23:05:28.684 * Saving the cluster configuration file before exiting.
+95213:M 03 May 2025 23:05:28.688 * Removing the unix socket file.
+95213:M 03 May 2025 23:05:28.691 # Valkey is now ready to exit, bye bye...

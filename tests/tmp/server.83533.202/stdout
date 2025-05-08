@@ -1,0 +1,64 @@
+### Starting server for test 
+19728:M 03 May 2025 23:10:19.694 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+19728:M 03 May 2025 23:10:19.694 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=19728, just started
+19728:M 03 May 2025 23:10:19.694 * Configuration loaded
+19728:M 03 May 2025 23:10:19.694 * Increased maximum number of open files to 10032 (it was originally set to 256).
+19728:M 03 May 2025 23:10:19.694 * monotonic clock: POSIX clock_gettime
+19728:M 03 May 2025 23:10:19.695 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25214
+ |###|   .+###############+.   |###|    PID: 19728                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+19728:M 03 May 2025 23:10:19.695 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+19728:M 03 May 2025 23:10:19.695 * Server initialized
+19728:M 03 May 2025 23:10:19.695 * Ready to accept connections tcp
+19728:M 03 May 2025 23:10:19.695 * Ready to accept connections unix
+19728:M 03 May 2025 23:10:19.814 - Accepted 127.0.0.1:50504
+19728:M 03 May 2025 23:10:19.814 - Client closed connection id=2 addr=127.0.0.1:50504 laddr=127.0.0.1:25214 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+19728:M 03 May 2025 23:10:19.819 - Accepted 127.0.0.1:50505
+### Starting test Slave should be able to synchronize with the master in tests/integration/replication-psync.tcl
+19728:S 03 May 2025 23:10:19.822 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+19728:S 03 May 2025 23:10:19.822 * Connecting to PRIMARY 127.0.0.1:25213
+19728:S 03 May 2025 23:10:19.822 * PRIMARY <-> REPLICA sync started
+19728:S 03 May 2025 23:10:19.822 * REPLICAOF 127.0.0.1:25213 enabled (user request from 'id=3 addr=127.0.0.1:50505 laddr=127.0.0.1:25214 fd=12 name= user=default lib-name= lib-ver=')
+19728:S 03 May 2025 23:10:19.822 * Non blocking connect for SYNC fired the event.
+19728:S 03 May 2025 23:10:19.822 * Primary replied to PING, replication can continue...
+19728:S 03 May 2025 23:10:19.822 * Trying a partial resynchronization (request d3299fc23939c164658bdf81ea998c1adc2d8f86:1).
+19728:S 03 May 2025 23:10:19.822 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+19728:S 03 May 2025 23:10:20.563 * Dual channel replication: Trying a partial resynchronization using main channel (request d943e8a52fe0a02705354301f1461f1a2fe4d483:963137).
+19728:S 03 May 2025 23:10:20.563 * Dual channel replication: PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization, RDB load in background.
+19728:S 03 May 2025 23:10:20.563 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to parser
+19728:S 03 May 2025 23:10:20.563 * PRIMARY <-> REPLICA sync: Loading DB in memory
+19728:S 03 May 2025 23:10:20.563 * Loading RDB produced by Valkey version 255.255.255
+19728:S 03 May 2025 23:10:20.563 * RDB age 0 seconds
+19728:S 03 May 2025 23:10:20.563 * RDB memory usage when created 3.30 Mb
+19728:S 03 May 2025 23:10:20.566 * Done loading RDB, keys loaded: 3236, keys expired: 0.
+19728:S 03 May 2025 23:10:20.566 * Discarding previously cached primary state.
+19728:S 03 May 2025 23:10:20.566 * PRIMARY <-> REPLICA sync: Swapping active DB with loaded DB
+19728:S 03 May 2025 23:10:20.566 * PRIMARY <-> REPLICA sync: Discarding old DB in background
+19728:S 03 May 2025 23:10:20.566 * Dual channel replication: Successfully streamed replication data into memory
+19728:S 03 May 2025 23:10:20.566 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test Detect write load to master in tests/integration/replication-psync.tcl
+### Starting test Test replication partial resync: no reconnection, just sync (diskless: yes, swapdb, dual-channel: yes, reconnect: 0) in tests/integration/replication-psync.tcl
+19728:S 03 May 2025 23:10:20.686 - Client closed connection id=3 addr=127.0.0.1:50505 laddr=127.0.0.1:25214 fd=12 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=63 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=494 tot-net-out=1180 tot-cmds=24
+19728:signal-handler (1746281421) Received SIGTERM scheduling shutdown...
+19728:S 03 May 2025 23:10:21.584 * User requested shutdown...
+19728:S 03 May 2025 23:10:21.584 * Removing the pid file.
+19728:S 03 May 2025 23:10:21.584 * Removing the unix socket file.
+19728:S 03 May 2025 23:10:21.584 # Valkey is now ready to exit, bye bye...

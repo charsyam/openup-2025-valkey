@@ -1,0 +1,105 @@
+### Starting server for test 
+83599:M 03 May 2025 23:03:40.912 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+83599:M 03 May 2025 23:03:40.912 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=83599, just started
+83599:M 03 May 2025 23:03:40.912 * Configuration loaded
+83599:M 03 May 2025 23:03:40.913 * Increased maximum number of open files to 10032 (it was originally set to 256).
+83599:M 03 May 2025 23:03:40.913 * monotonic clock: POSIX clock_gettime
+83599:M 03 May 2025 23:03:40.913 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26111
+ |###|   .+###############+.   |###|    PID: 83599                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+83599:M 03 May 2025 23:03:40.914 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+83599:M 03 May 2025 23:03:40.915 * Server initialized
+83599:M 03 May 2025 23:03:40.915 * Ready to accept connections tcp
+83599:M 03 May 2025 23:03:40.915 * Ready to accept connections unix
+83599:M 03 May 2025 23:03:40.961 - Accepted 127.0.0.1:58718
+83599:M 03 May 2025 23:03:40.961 - Client closed connection id=2 addr=127.0.0.1:58718 laddr=127.0.0.1:26111 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+83599:M 03 May 2025 23:03:40.976 - Accepted 127.0.0.1:58739
+83599:M 03 May 2025 23:03:40.978 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+83599:M 03 May 2025 23:03:40.978 * Background append only file rewriting started by pid 83823
+83823:C 03 May 2025 23:03:40.979 * Successfully created the temporary AOF base file temp-rewriteaof-bg-83823.aof
+83823:C 03 May 2025 23:03:40.980 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+83599:M 03 May 2025 23:03:41.016 * Background AOF rewrite terminated with success
+83599:M 03 May 2025 23:03:41.016 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-83823.aof into appendonly.aof.1.base.rdb
+83599:M 03 May 2025 23:03:41.016 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.1.incr.aof
+83599:M 03 May 2025 23:03:41.022 * Background AOF rewrite finished successfully
+83599:M 03 May 2025 23:03:41.023 - Background AOF rewrite signal handler took 6431us
+### Starting test AOF rewrite during write load: RDB preamble=yes in tests/unit/aofrw.tcl
+83599:M 03 May 2025 23:03:41.068 - Accepted 127.0.0.1:58775
+83599:M 03 May 2025 23:03:41.068 - Accepted 127.0.0.1:58776
+83599:M 03 May 2025 23:03:41.070 - Accepted 127.0.0.1:58777
+83599:M 03 May 2025 23:03:41.072 - Accepted 127.0.0.1:58778
+83599:M 03 May 2025 23:03:41.075 - Accepted 127.0.0.1:58779
+83599:M 03 May 2025 23:03:44.218 * Creating AOF incr file appendonly.aof.2.incr.aof on background rewrite
+83599:M 03 May 2025 23:03:44.220 * Background append only file rewriting started by pid 83874
+83874:C 03 May 2025 23:03:44.338 * Successfully created the temporary AOF base file temp-rewriteaof-bg-83874.aof
+83874:C 03 May 2025 23:03:44.338 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+83599:M 03 May 2025 23:03:44.411 * Background AOF rewrite terminated with success
+83599:M 03 May 2025 23:03:44.411 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-83874.aof into appendonly.aof.2.base.rdb
+83599:M 03 May 2025 23:03:44.417 * Removing the history file appendonly.aof.1.incr.aof in the background
+83599:M 03 May 2025 23:03:44.417 * Removing the history file appendonly.aof.1.base.rdb in the background
+83599:M 03 May 2025 23:03:44.421 * Background AOF rewrite finished successfully
+83599:M 03 May 2025 23:03:44.421 - Background AOF rewrite signal handler took 9929us
+83599:M 03 May 2025 23:03:45.485 - Reading from client: Connection reset by peer
+83599:M 03 May 2025 23:03:45.488 - Reading from client: Connection reset by peer
+83599:M 03 May 2025 23:03:45.492 - Reading from client: Connection reset by peer
+83599:M 03 May 2025 23:03:45.494 - Reading from client: Connection reset by peer
+83599:M 03 May 2025 23:03:45.497 - Reading from client: Connection reset by peer
+83599:M 03 May 2025 23:03:46.669 * Reading RDB base file on AOF loading...
+83599:M 03 May 2025 23:03:46.669 * Loading RDB produced by Valkey version 255.255.255
+83599:M 03 May 2025 23:03:46.669 * RDB age 2 seconds
+83599:M 03 May 2025 23:03:46.669 * RDB memory usage when created 28.84 Mb
+83599:M 03 May 2025 23:03:46.669 * RDB is base AOF
+83599:M 03 May 2025 23:03:46.781 * Done loading RDB, keys loaded: 371032, keys expired: 0.
+83599:M 03 May 2025 23:03:46.781 * DB loaded from base file appendonly.aof.2.base.rdb: 0.112 seconds
+83599:M 03 May 2025 23:03:47.050 * DB loaded from incr file appendonly.aof.2.incr.aof: 0.269 seconds
+83599:M 03 May 2025 23:03:47.050 * Append Only File loaded by DEBUG LOADAOF
+83599:M 03 May 2025 23:03:48.630 - DB 9: 564788 keys (0 volatile) in 917504 slots HT.
+### Starting test AOF rewrite during write load: RDB preamble=no in tests/unit/aofrw.tcl
+83599:M 03 May 2025 23:03:48.656 - Accepted 127.0.0.1:58861
+83599:M 03 May 2025 23:03:48.656 - Accepted 127.0.0.1:58862
+83599:M 03 May 2025 23:03:48.656 - Accepted 127.0.0.1:58863
+83599:M 03 May 2025 23:03:48.656 - Accepted 127.0.0.1:58864
+83599:M 03 May 2025 23:03:48.656 - Accepted 127.0.0.1:58865
+83599:M 03 May 2025 23:03:51.767 * Creating AOF incr file appendonly.aof.3.incr.aof on background rewrite
+83599:M 03 May 2025 23:03:51.769 * Background append only file rewriting started by pid 84635
+84635:C 03 May 2025 23:03:51.895 * Successfully created the temporary AOF base file temp-rewriteaof-bg-84635.aof
+84635:C 03 May 2025 23:03:51.895 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+83599:M 03 May 2025 23:03:51.990 * Background AOF rewrite terminated with success
+83599:M 03 May 2025 23:03:51.990 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-84635.aof into appendonly.aof.3.base.aof
+83599:M 03 May 2025 23:03:51.996 * Removing the history file appendonly.aof.2.incr.aof in the background
+83599:M 03 May 2025 23:03:51.996 * Removing the history file appendonly.aof.2.base.rdb in the background
+83599:M 03 May 2025 23:03:52.002 * Background AOF rewrite finished successfully
+83599:M 03 May 2025 23:03:52.002 - Background AOF rewrite signal handler took 11522us
+83599:M 03 May 2025 23:03:53.017 - Reading from client: Connection reset by peer
+83599:M 03 May 2025 23:03:53.020 - Error writing to client: Broken pipe
+83599:M 03 May 2025 23:03:53.025 - Reading from client: Connection reset by peer
+83599:M 03 May 2025 23:03:53.030 - Reading from client: Connection reset by peer
+83599:M 03 May 2025 23:03:53.033 - Reading from client: Connection reset by peer
+83599:M 03 May 2025 23:03:54.642 * DB loaded from base file appendonly.aof.3.base.aof: 0.561 seconds
+83599:M 03 May 2025 23:03:55.109 * DB loaded from incr file appendonly.aof.3.incr.aof: 0.467 seconds
+83599:M 03 May 2025 23:03:55.109 * Append Only File loaded by DEBUG LOADAOF
+83599:M 03 May 2025 23:03:56.147 - Client closed connection id=3 addr=127.0.0.1:58739 laddr=127.0.0.1:26111 fd=12 name= age=16 idle=1 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=8192 rbp=4096 obl=0 oll=0 omem=0 tot-mem=25600 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=791 tot-net-out=74982 tot-cmds=33
+83599:signal-handler (1746281037) Received SIGTERM scheduling shutdown...
+83599:M 03 May 2025 23:03:57.794 * User requested shutdown...
+83599:M 03 May 2025 23:03:57.794 * Calling fsync() on the AOF file.
+83599:M 03 May 2025 23:03:57.796 * Removing the pid file.
+83599:M 03 May 2025 23:03:57.796 * Removing the unix socket file.
+83599:M 03 May 2025 23:03:57.796 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,1143 @@
+### Starting server for test Multi Part AOF can't load data when some file missing in tests/integration/aof-multi-part.tcl
+5372:M 03 May 2025 23:06:39.987 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5372:M 03 May 2025 23:06:39.987 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5372, just started
+5372:M 03 May 2025 23:06:39.987 * Configuration loaded
+5372:M 03 May 2025 23:06:39.987 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5372:M 03 May 2025 23:06:39.987 * monotonic clock: POSIX clock_gettime
+5372:M 03 May 2025 23:06:39.988 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26165
+ |###|   .+###############+.   |###|    PID: 5372                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5372:M 03 May 2025 23:06:39.988 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5372:M 03 May 2025 23:06:39.988 * Server initialized
+5372:M 03 May 2025 23:06:39.988 # Unable to obtain the AOF file appendonly.aof.1.incr.aof length. stat: No such file or directory
+### Starting server for test Multi Part AOF can't load data when the sequence not increase monotonically in tests/integration/aof-multi-part.tcl
+5420:M 03 May 2025 23:06:40.231 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5420:M 03 May 2025 23:06:40.231 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5420, just started
+5420:M 03 May 2025 23:06:40.231 * Configuration loaded
+5420:M 03 May 2025 23:06:40.231 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5420:M 03 May 2025 23:06:40.231 * monotonic clock: POSIX clock_gettime
+5420:M 03 May 2025 23:06:40.231 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26166
+ |###|   .+###############+.   |###|    PID: 5420                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5420:M 03 May 2025 23:06:40.231 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5420:M 03 May 2025 23:06:40.232 * Server initialized
+5420:M 03 May 2025 23:06:40.232 # 
+*** FATAL AOF MANIFEST FILE ERROR ***
+
+5420:M 03 May 2025 23:06:40.232 # Reading the manifest file, at line 2
+
+5420:M 03 May 2025 23:06:40.232 # >>> 'file appendonly.aof.1.incr.aof seq 1 type i'
+
+5420:M 03 May 2025 23:06:40.232 # Found a non-monotonic sequence number
+
+### Starting server for test Multi Part AOF can't load data when there are blank lines in the manifest file in tests/integration/aof-multi-part.tcl
+5477:M 03 May 2025 23:06:40.512 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5477:M 03 May 2025 23:06:40.512 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5477, just started
+5477:M 03 May 2025 23:06:40.512 * Configuration loaded
+5477:M 03 May 2025 23:06:40.513 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5477:M 03 May 2025 23:06:40.513 * monotonic clock: POSIX clock_gettime
+5477:M 03 May 2025 23:06:40.513 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26167
+ |###|   .+###############+.   |###|    PID: 5477                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5477:M 03 May 2025 23:06:40.513 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5477:M 03 May 2025 23:06:40.514 * Server initialized
+5477:M 03 May 2025 23:06:40.514 # 
+*** FATAL AOF MANIFEST FILE ERROR ***
+
+5477:M 03 May 2025 23:06:40.514 # Reading the manifest file, at line 2
+
+5477:M 03 May 2025 23:06:40.514 # >>> ''
+
+5477:M 03 May 2025 23:06:40.514 # Invalid AOF manifest file format
+
+### Starting server for test Multi Part AOF can't load data when there is a duplicate base file in tests/integration/aof-multi-part.tcl
+5536:M 03 May 2025 23:06:40.837 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5536:M 03 May 2025 23:06:40.837 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5536, just started
+5536:M 03 May 2025 23:06:40.837 * Configuration loaded
+5536:M 03 May 2025 23:06:40.837 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5536:M 03 May 2025 23:06:40.837 * monotonic clock: POSIX clock_gettime
+5536:M 03 May 2025 23:06:40.837 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26168
+ |###|   .+###############+.   |###|    PID: 5536                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5536:M 03 May 2025 23:06:40.837 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5536:M 03 May 2025 23:06:40.838 * Server initialized
+5536:M 03 May 2025 23:06:40.838 # 
+*** FATAL AOF MANIFEST FILE ERROR ***
+
+5536:M 03 May 2025 23:06:40.838 # Reading the manifest file, at line 2
+
+5536:M 03 May 2025 23:06:40.838 # >>> 'file appendonly.aof.2.base.aof seq 2 type b'
+
+5536:M 03 May 2025 23:06:40.838 # Found duplicate base file information
+
+### Starting server for test Multi Part AOF can't load data when the manifest format is wrong (type unknown) in tests/integration/aof-multi-part.tcl
+5593:M 03 May 2025 23:06:41.114 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5593:M 03 May 2025 23:06:41.114 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5593, just started
+5593:M 03 May 2025 23:06:41.114 * Configuration loaded
+5593:M 03 May 2025 23:06:41.114 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5593:M 03 May 2025 23:06:41.114 * monotonic clock: POSIX clock_gettime
+5593:M 03 May 2025 23:06:41.114 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26169
+ |###|   .+###############+.   |###|    PID: 5593                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5593:M 03 May 2025 23:06:41.114 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5593:M 03 May 2025 23:06:41.114 * Server initialized
+5593:M 03 May 2025 23:06:41.114 # 
+*** FATAL AOF MANIFEST FILE ERROR ***
+
+5593:M 03 May 2025 23:06:41.114 # Reading the manifest file, at line 1
+
+5593:M 03 May 2025 23:06:41.114 # >>> 'file appendonly.aof.1.base.aof seq 1 type x'
+
+5593:M 03 May 2025 23:06:41.114 # Unknown AOF file type
+
+### Starting server for test Multi Part AOF can't load data when the manifest format is wrong (missing key) in tests/integration/aof-multi-part.tcl
+5616:M 03 May 2025 23:06:41.238 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5616:M 03 May 2025 23:06:41.239 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5616, just started
+5616:M 03 May 2025 23:06:41.239 * Configuration loaded
+5616:M 03 May 2025 23:06:41.239 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5616:M 03 May 2025 23:06:41.239 * monotonic clock: POSIX clock_gettime
+5616:M 03 May 2025 23:06:41.240 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26170
+ |###|   .+###############+.   |###|    PID: 5616                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5616:M 03 May 2025 23:06:41.240 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5616:M 03 May 2025 23:06:41.240 * Server initialized
+5616:M 03 May 2025 23:06:41.240 # 
+*** FATAL AOF MANIFEST FILE ERROR ***
+
+5616:M 03 May 2025 23:06:41.240 # Reading the manifest file, at line 1
+
+5616:M 03 May 2025 23:06:41.240 # >>> 'filx appendonly.aof.1.base.aof seq 1 type b'
+
+5616:M 03 May 2025 23:06:41.240 # Invalid AOF manifest file format
+
+### Starting server for test Multi Part AOF can't load data when the manifest format is wrong (line too short) in tests/integration/aof-multi-part.tcl
+5651:M 03 May 2025 23:06:41.352 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5651:M 03 May 2025 23:06:41.352 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5651, just started
+5651:M 03 May 2025 23:06:41.352 * Configuration loaded
+5651:M 03 May 2025 23:06:41.352 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5651:M 03 May 2025 23:06:41.352 * monotonic clock: POSIX clock_gettime
+5651:M 03 May 2025 23:06:41.353 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26171
+ |###|   .+###############+.   |###|    PID: 5651                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5651:M 03 May 2025 23:06:41.353 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5651:M 03 May 2025 23:06:41.356 * Server initialized
+5651:M 03 May 2025 23:06:41.356 # 
+*** FATAL AOF MANIFEST FILE ERROR ***
+
+5651:M 03 May 2025 23:06:41.356 # Reading the manifest file, at line 2
+
+5651:M 03 May 2025 23:06:41.356 # >>> 'file appendonly.aof.1.incr.aof type i'
+
+5651:M 03 May 2025 23:06:41.356 # Invalid AOF manifest file format
+
+### Starting server for test Multi Part AOF can't load data when the manifest format is wrong (line too long) in tests/integration/aof-multi-part.tcl
+5714:M 03 May 2025 23:06:41.580 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5714:M 03 May 2025 23:06:41.580 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5714, just started
+5714:M 03 May 2025 23:06:41.580 * Configuration loaded
+5714:M 03 May 2025 23:06:41.580 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5714:M 03 May 2025 23:06:41.580 * monotonic clock: POSIX clock_gettime
+5714:M 03 May 2025 23:06:41.581 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26172
+ |###|   .+###############+.   |###|    PID: 5714                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5714:M 03 May 2025 23:06:41.581 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5714:M 03 May 2025 23:06:41.581 * Server initialized
+5714:M 03 May 2025 23:06:41.581 # 
+*** FATAL AOF MANIFEST FILE ERROR ***
+
+5714:M 03 May 2025 23:06:41.581 # The AOF manifest file contains too long line
+
+### Starting server for test Multi Part AOF can't load data when the manifest format is wrong (odd parameter) in tests/integration/aof-multi-part.tcl
+5790:M 03 May 2025 23:06:41.884 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5790:M 03 May 2025 23:06:41.884 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5790, just started
+5790:M 03 May 2025 23:06:41.884 * Configuration loaded
+5790:M 03 May 2025 23:06:41.885 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5790:M 03 May 2025 23:06:41.885 * monotonic clock: POSIX clock_gettime
+5790:M 03 May 2025 23:06:41.885 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26173
+ |###|   .+###############+.   |###|    PID: 5790                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5790:M 03 May 2025 23:06:41.885 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5790:M 03 May 2025 23:06:41.885 * Server initialized
+5790:M 03 May 2025 23:06:41.885 # 
+*** FATAL AOF MANIFEST FILE ERROR ***
+
+5790:M 03 May 2025 23:06:41.885 # Reading the manifest file, at line 2
+
+5790:M 03 May 2025 23:06:41.885 # >>> 'file appendonly.aof.1.incr.aof seq 1 type i newkey'
+
+5790:M 03 May 2025 23:06:41.885 # Invalid AOF manifest file format
+
+### Starting server for test Multi Part AOF can't load data when the manifest file is empty in tests/integration/aof-multi-part.tcl
+5838:M 03 May 2025 23:06:42.014 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5838:M 03 May 2025 23:06:42.014 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5838, just started
+5838:M 03 May 2025 23:06:42.014 * Configuration loaded
+5838:M 03 May 2025 23:06:42.014 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5838:M 03 May 2025 23:06:42.014 * monotonic clock: POSIX clock_gettime
+5838:M 03 May 2025 23:06:42.015 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26174
+ |###|   .+###############+.   |###|    PID: 5838                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5838:M 03 May 2025 23:06:42.015 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5838:M 03 May 2025 23:06:42.015 * Server initialized
+5838:M 03 May 2025 23:06:42.015 # 
+*** FATAL AOF MANIFEST FILE ERROR ***
+
+5838:M 03 May 2025 23:06:42.015 # Found an empty AOF manifest
+
+### Starting server for test Multi Part AOF can start when no aof and no manifest in tests/integration/aof-multi-part.tcl
+5876:M 03 May 2025 23:06:42.161 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5876:M 03 May 2025 23:06:42.161 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5876, just started
+5876:M 03 May 2025 23:06:42.161 * Configuration loaded
+5876:M 03 May 2025 23:06:42.161 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5876:M 03 May 2025 23:06:42.161 * monotonic clock: POSIX clock_gettime
+5876:M 03 May 2025 23:06:42.162 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26175
+ |###|   .+###############+.   |###|    PID: 5876                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5876:M 03 May 2025 23:06:42.162 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5876:M 03 May 2025 23:06:42.162 * Server initialized
+5876:M 03 May 2025 23:06:42.162 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+5876:M 03 May 2025 23:06:42.167 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+5876:M 03 May 2025 23:06:42.167 * Ready to accept connections tcp
+5876:M 03 May 2025 23:06:42.167 * Ready to accept connections unix
+5876:M 03 May 2025 23:06:42.297 - Accepted 127.0.0.1:49241
+5876:M 03 May 2025 23:06:42.297 - Client closed connection id=2 addr=127.0.0.1:49241 laddr=127.0.0.1:26175 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+5876:M 03 May 2025 23:06:42.324 - Accepted 127.0.0.1:49245
+5876:M 03 May 2025 23:06:42.337 - Accepted 127.0.0.1:49247
+5876:M 03 May 2025 23:06:42.338 - Client closed connection id=3 addr=127.0.0.1:49245 laddr=127.0.0.1:26175 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+5876:signal-handler (1746281202) Received SIGTERM scheduling shutdown...
+5876:M 03 May 2025 23:06:42.369 * User requested shutdown...
+5876:M 03 May 2025 23:06:42.369 * Calling fsync() on the AOF file.
+5876:M 03 May 2025 23:06:42.371 * Removing the pid file.
+5876:M 03 May 2025 23:06:42.371 * Removing the unix socket file.
+5876:M 03 May 2025 23:06:42.371 # Valkey is now ready to exit, bye bye...
+### Starting server for test Multi Part AOF can start when we have en empty AOF dir in tests/integration/aof-multi-part.tcl
+5938:M 03 May 2025 23:06:42.443 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5938:M 03 May 2025 23:06:42.444 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5938, just started
+5938:M 03 May 2025 23:06:42.444 * Configuration loaded
+5938:M 03 May 2025 23:06:42.444 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5938:M 03 May 2025 23:06:42.444 * monotonic clock: POSIX clock_gettime
+5938:M 03 May 2025 23:06:42.444 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26176
+ |###|   .+###############+.   |###|    PID: 5938                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5938:M 03 May 2025 23:06:42.444 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5938:M 03 May 2025 23:06:42.445 * Server initialized
+5938:M 03 May 2025 23:06:42.445 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+5938:M 03 May 2025 23:06:42.451 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+5938:M 03 May 2025 23:06:42.451 * Ready to accept connections tcp
+5938:M 03 May 2025 23:06:42.451 * Ready to accept connections unix
+5938:M 03 May 2025 23:06:42.616 - Accepted 127.0.0.1:49426
+5938:M 03 May 2025 23:06:42.616 - Client closed connection id=2 addr=127.0.0.1:49426 laddr=127.0.0.1:26176 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+5938:M 03 May 2025 23:06:42.674 - Accepted 127.0.0.1:49455
+5938:M 03 May 2025 23:06:42.685 - Client closed connection id=3 addr=127.0.0.1:49455 laddr=127.0.0.1:26176 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+5938:signal-handler (1746281202) Received SIGTERM scheduling shutdown...
+5938:M 03 May 2025 23:06:42.755 * User requested shutdown...
+5938:M 03 May 2025 23:06:42.755 * Calling fsync() on the AOF file.
+5938:M 03 May 2025 23:06:42.758 * Removing the pid file.
+5938:M 03 May 2025 23:06:42.758 * Removing the unix socket file.
+5938:M 03 May 2025 23:06:42.758 # Valkey is now ready to exit, bye bye...
+### Starting server for test Multi Part AOF can load data discontinuously increasing sequence in tests/integration/aof-multi-part.tcl
+6024:M 03 May 2025 23:06:42.885 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+6024:M 03 May 2025 23:06:42.885 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=6024, just started
+6024:M 03 May 2025 23:06:42.885 * Configuration loaded
+6024:M 03 May 2025 23:06:42.885 * Increased maximum number of open files to 10032 (it was originally set to 256).
+6024:M 03 May 2025 23:06:42.885 * monotonic clock: POSIX clock_gettime
+6024:M 03 May 2025 23:06:42.886 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26177
+ |###|   .+###############+.   |###|    PID: 6024                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+6024:M 03 May 2025 23:06:42.886 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+6024:M 03 May 2025 23:06:42.886 * Server initialized
+6024:M 03 May 2025 23:06:42.886 * DB loaded from base file appendonly.aof.1.base.aof: 0.000 seconds
+6024:M 03 May 2025 23:06:42.886 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.000 seconds
+6024:M 03 May 2025 23:06:42.886 * DB loaded from incr file appendonly.aof.3.incr.aof: 0.000 seconds
+6024:M 03 May 2025 23:06:42.886 * DB loaded from append only file: 0.000 seconds
+6024:M 03 May 2025 23:06:42.886 * Opening AOF incr file appendonly.aof.3.incr.aof on server start
+6024:M 03 May 2025 23:06:42.886 * Ready to accept connections tcp
+6024:M 03 May 2025 23:06:42.886 * Ready to accept connections unix
+6024:M 03 May 2025 23:06:42.886 - DB 0: 3 keys (0 volatile) in 7 slots HT.
+6024:M 03 May 2025 23:06:43.048 - Accepted 127.0.0.1:49785
+6024:M 03 May 2025 23:06:43.048 - Client closed connection id=5 addr=127.0.0.1:49785 laddr=127.0.0.1:26177 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+6024:M 03 May 2025 23:06:43.061 - Accepted 127.0.0.1:49808
+6024:M 03 May 2025 23:06:43.087 - Accepted 127.0.0.1:49824
+6024:M 03 May 2025 23:06:43.087 - Client closed connection id=6 addr=127.0.0.1:49808 laddr=127.0.0.1:26177 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+6024:signal-handler (1746281203) Received SIGTERM scheduling shutdown...
+6024:M 03 May 2025 23:06:43.189 * User requested shutdown...
+6024:M 03 May 2025 23:06:43.192 * Calling fsync() on the AOF file.
+6024:M 03 May 2025 23:06:43.203 * Removing the pid file.
+6024:M 03 May 2025 23:06:43.205 * Removing the unix socket file.
+6024:M 03 May 2025 23:06:43.205 # Valkey is now ready to exit, bye bye...
+### Starting server for test Multi Part AOF can load data when manifest add new k-v in tests/integration/aof-multi-part.tcl
+6125:M 03 May 2025 23:06:43.373 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+6125:M 03 May 2025 23:06:43.373 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=6125, just started
+6125:M 03 May 2025 23:06:43.373 * Configuration loaded
+6125:M 03 May 2025 23:06:43.373 * Increased maximum number of open files to 10032 (it was originally set to 256).
+6125:M 03 May 2025 23:06:43.373 * monotonic clock: POSIX clock_gettime
+6125:M 03 May 2025 23:06:43.373 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26178
+ |###|   .+###############+.   |###|    PID: 6125                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+6125:M 03 May 2025 23:06:43.374 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+6125:M 03 May 2025 23:06:43.377 * Server initialized
+6125:M 03 May 2025 23:06:43.378 * DB loaded from base file appendonly.aof.1.base.aof: 0.001 seconds
+6125:M 03 May 2025 23:06:43.379 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.001 seconds
+6125:M 03 May 2025 23:06:43.380 * DB loaded from incr file appendonly.aof.3.incr.aof: 0.001 seconds
+6125:M 03 May 2025 23:06:43.380 * DB loaded from append only file: 0.003 seconds
+6125:M 03 May 2025 23:06:43.380 * Opening AOF incr file appendonly.aof.3.incr.aof on server start
+6125:M 03 May 2025 23:06:43.380 * Ready to accept connections tcp
+6125:M 03 May 2025 23:06:43.380 * Ready to accept connections unix
+6125:M 03 May 2025 23:06:43.495 - Accepted 127.0.0.1:50213
+6125:M 03 May 2025 23:06:43.495 - Client closed connection id=5 addr=127.0.0.1:50213 laddr=127.0.0.1:26178 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+6125:M 03 May 2025 23:06:43.527 - Accepted 127.0.0.1:50265
+6125:M 03 May 2025 23:06:43.543 - Accepted 127.0.0.1:50270
+6125:M 03 May 2025 23:06:43.547 - Client closed connection id=6 addr=127.0.0.1:50265 laddr=127.0.0.1:26178 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+6125:signal-handler (1746281203) Received SIGTERM scheduling shutdown...
+6125:M 03 May 2025 23:06:43.584 * User requested shutdown...
+6125:M 03 May 2025 23:06:43.584 * Calling fsync() on the AOF file.
+6125:M 03 May 2025 23:06:43.588 * Removing the pid file.
+6125:M 03 May 2025 23:06:43.588 * Removing the unix socket file.
+6125:M 03 May 2025 23:06:43.588 # Valkey is now ready to exit, bye bye...
+### Starting server for test Multi Part AOF can load data when some AOFs are empty in tests/integration/aof-multi-part.tcl
+6193:M 03 May 2025 23:06:43.756 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+6193:M 03 May 2025 23:06:43.756 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=6193, just started
+6193:M 03 May 2025 23:06:43.756 * Configuration loaded
+6193:M 03 May 2025 23:06:43.756 * Increased maximum number of open files to 10032 (it was originally set to 256).
+6193:M 03 May 2025 23:06:43.756 * monotonic clock: POSIX clock_gettime
+6193:M 03 May 2025 23:06:43.757 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26179
+ |###|   .+###############+.   |###|    PID: 6193                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+6193:M 03 May 2025 23:06:43.757 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+6193:M 03 May 2025 23:06:43.757 * Server initialized
+6193:M 03 May 2025 23:06:43.757 * DB loaded from base file appendonly.aof.1.base.aof: 0.000 seconds
+6193:M 03 May 2025 23:06:43.757 * DB loaded from incr file appendonly.aof.3.incr.aof: 0.000 seconds
+6193:M 03 May 2025 23:06:43.757 * DB loaded from append only file: 0.000 seconds
+6193:M 03 May 2025 23:06:43.757 * Opening AOF incr file appendonly.aof.3.incr.aof on server start
+6193:M 03 May 2025 23:06:43.757 * Ready to accept connections tcp
+6193:M 03 May 2025 23:06:43.757 * Ready to accept connections unix
+6193:M 03 May 2025 23:06:43.757 - DB 0: 2 keys (0 volatile) in 7 slots HT.
+6193:M 03 May 2025 23:06:43.898 - Accepted 127.0.0.1:50539
+6193:M 03 May 2025 23:06:43.899 - Client closed connection id=4 addr=127.0.0.1:50539 laddr=127.0.0.1:26179 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+6193:M 03 May 2025 23:06:43.921 - Accepted 127.0.0.1:50574
+6193:M 03 May 2025 23:06:43.933 - Accepted 127.0.0.1:50575
+6193:M 03 May 2025 23:06:43.938 - Client closed connection id=5 addr=127.0.0.1:50574 laddr=127.0.0.1:26179 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+6193:signal-handler (1746281203) Received SIGTERM scheduling shutdown...
+6193:M 03 May 2025 23:06:43.959 * User requested shutdown...
+6193:M 03 May 2025 23:06:43.959 * Calling fsync() on the AOF file.
+6193:M 03 May 2025 23:06:43.962 * Removing the pid file.
+6193:M 03 May 2025 23:06:43.962 * Removing the unix socket file.
+6193:M 03 May 2025 23:06:43.962 # Valkey is now ready to exit, bye bye...
+### Starting server for test Multi Part AOF can load data from old version valkey (rdb preamble no) in tests/integration/aof-multi-part.tcl
+6266:M 03 May 2025 23:06:44.017 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+6266:M 03 May 2025 23:06:44.017 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=6266, just started
+6266:M 03 May 2025 23:06:44.017 * Configuration loaded
+6266:M 03 May 2025 23:06:44.018 * Increased maximum number of open files to 10032 (it was originally set to 256).
+6266:M 03 May 2025 23:06:44.018 * monotonic clock: POSIX clock_gettime
+6266:M 03 May 2025 23:06:44.018 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26180
+ |###|   .+###############+.   |###|    PID: 6266                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+6266:M 03 May 2025 23:06:44.018 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+6266:M 03 May 2025 23:06:44.019 * Server initialized
+6266:M 03 May 2025 23:06:44.024 * Successfully migrated an old-style AOF file (appendonly.aof) into the AOF directory (appendonlydir).
+6266:M 03 May 2025 23:06:44.024 * DB loaded from base file appendonly.aof: 0.000 seconds
+6266:M 03 May 2025 23:06:44.024 * DB loaded from append only file: 0.006 seconds
+6266:M 03 May 2025 23:06:44.031 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+6266:M 03 May 2025 23:06:44.031 * Ready to accept connections tcp
+6266:M 03 May 2025 23:06:44.031 * Ready to accept connections unix
+6266:M 03 May 2025 23:06:44.031 - DB 0: 3 keys (0 volatile) in 7 slots HT.
+6266:M 03 May 2025 23:06:44.145 - Accepted 127.0.0.1:50733
+6266:M 03 May 2025 23:06:44.145 - Client closed connection id=3 addr=127.0.0.1:50733 laddr=127.0.0.1:26180 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+6266:M 03 May 2025 23:06:44.157 - Accepted 127.0.0.1:50736
+6266:M 03 May 2025 23:06:44.161 - Accepted 127.0.0.1:50737
+6266:M 03 May 2025 23:06:44.166 * Creating AOF incr file appendonly.aof.2.incr.aof on background rewrite
+6266:M 03 May 2025 23:06:44.167 * Background append only file rewriting started by pid 6319
+6319:C 03 May 2025 23:06:44.170 * Successfully created the temporary AOF base file temp-rewriteaof-bg-6319.aof
+6319:C 03 May 2025 23:06:44.170 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+6266:M 03 May 2025 23:06:44.234 * Background AOF rewrite terminated with success
+6266:M 03 May 2025 23:06:44.234 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-6319.aof into appendonly.aof.2.base.rdb
+6266:M 03 May 2025 23:06:44.240 * Removing the history file appendonly.aof.1.incr.aof in the background
+6266:M 03 May 2025 23:06:44.240 * Removing the history file appendonly.aof in the background
+6266:M 03 May 2025 23:06:44.244 * Background AOF rewrite finished successfully
+6266:M 03 May 2025 23:06:44.244 - Background AOF rewrite signal handler took 10741us
+6266:M 03 May 2025 23:06:44.277 * Reading RDB base file on AOF loading...
+6266:M 03 May 2025 23:06:44.277 * Loading RDB produced by Valkey version 255.255.255
+6266:M 03 May 2025 23:06:44.277 * RDB age 0 seconds
+6266:M 03 May 2025 23:06:44.277 * RDB memory usage when created 1.18 Mb
+6266:M 03 May 2025 23:06:44.277 * RDB is base AOF
+6266:M 03 May 2025 23:06:44.277 * Done loading RDB, keys loaded: 4, keys expired: 0.
+6266:M 03 May 2025 23:06:44.277 * DB loaded from base file appendonly.aof.2.base.rdb: 0.001 seconds
+6266:M 03 May 2025 23:06:44.277 * DB loaded from incr file appendonly.aof.2.incr.aof: 0.000 seconds
+6266:M 03 May 2025 23:06:44.277 * Append Only File loaded by DEBUG LOADAOF
+6266:M 03 May 2025 23:06:44.278 - Client closed connection id=4 addr=127.0.0.1:50736 laddr=127.0.0.1:26180 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+6266:signal-handler (1746281204) Received SIGTERM scheduling shutdown...
+6266:M 03 May 2025 23:06:44.345 * User requested shutdown...
+6266:M 03 May 2025 23:06:44.345 * Calling fsync() on the AOF file.
+6266:M 03 May 2025 23:06:44.348 * Removing the pid file.
+6266:M 03 May 2025 23:06:44.348 * Removing the unix socket file.
+6266:M 03 May 2025 23:06:44.348 # Valkey is now ready to exit, bye bye...
+### Starting server for test Multi Part AOF can load data from old version valkey (rdb preamble yes) in tests/integration/aof-multi-part.tcl
+6422:M 03 May 2025 23:06:44.508 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+6422:M 03 May 2025 23:06:44.508 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=6422, just started
+6422:M 03 May 2025 23:06:44.508 * Configuration loaded
+6422:M 03 May 2025 23:06:44.508 * Increased maximum number of open files to 10032 (it was originally set to 256).
+6422:M 03 May 2025 23:06:44.508 * monotonic clock: POSIX clock_gettime
+6422:M 03 May 2025 23:06:44.508 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26181
+ |###|   .+###############+.   |###|    PID: 6422                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+6422:M 03 May 2025 23:06:44.508 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+6422:M 03 May 2025 23:06:44.509 * Server initialized
+6422:M 03 May 2025 23:06:44.516 * Successfully migrated an old-style AOF file (appendonly.aof) into the AOF directory (appendonlydir).
+6422:M 03 May 2025 23:06:44.516 * Reading RDB preamble from AOF file...
+6422:M 03 May 2025 23:06:44.516 * Loading RDB produced by Redis version 255.255.255
+6422:M 03 May 2025 23:06:44.516 * RDB age 105583134 seconds
+6422:M 03 May 2025 23:06:44.516 * RDB memory usage when created 1.03 Mb
+6422:M 03 May 2025 23:06:44.516 * RDB has an AOF tail
+6422:M 03 May 2025 23:06:44.516 * Done loading RDB, keys loaded: 2, keys expired: 0.
+6422:M 03 May 2025 23:06:44.516 * Reading the remaining AOF tail...
+6422:M 03 May 2025 23:06:44.516 * DB loaded from base file appendonly.aof: 0.000 seconds
+6422:M 03 May 2025 23:06:44.516 * DB loaded from append only file: 0.007 seconds
+6422:M 03 May 2025 23:06:44.523 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+6422:M 03 May 2025 23:06:44.523 * Ready to accept connections tcp
+6422:M 03 May 2025 23:06:44.523 * Ready to accept connections unix
+6422:M 03 May 2025 23:06:44.523 - DB 0: 3 keys (0 volatile) in 7 slots HT.
+6422:M 03 May 2025 23:06:44.680 - Accepted 127.0.0.1:51185
+6422:M 03 May 2025 23:06:44.680 - Client closed connection id=3 addr=127.0.0.1:51185 laddr=127.0.0.1:26181 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+6422:M 03 May 2025 23:06:44.724 - Accepted 127.0.0.1:51245
+6422:M 03 May 2025 23:06:44.739 - Accepted 127.0.0.1:51263
+6422:M 03 May 2025 23:06:44.747 * Creating AOF incr file appendonly.aof.2.incr.aof on background rewrite
+6422:M 03 May 2025 23:06:44.749 * Background append only file rewriting started by pid 6484
+6484:C 03 May 2025 23:06:44.749 * Successfully created the temporary AOF base file temp-rewriteaof-bg-6484.aof
+6484:C 03 May 2025 23:06:44.749 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+6422:M 03 May 2025 23:06:44.825 * Background AOF rewrite terminated with success
+6422:M 03 May 2025 23:06:44.825 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-6484.aof into appendonly.aof.2.base.rdb
+6422:M 03 May 2025 23:06:44.832 * Removing the history file appendonly.aof.1.incr.aof in the background
+6422:M 03 May 2025 23:06:44.832 * Removing the history file appendonly.aof in the background
+6422:M 03 May 2025 23:06:44.839 * Background AOF rewrite finished successfully
+6422:M 03 May 2025 23:06:44.839 - Background AOF rewrite signal handler took 13491us
+6422:M 03 May 2025 23:06:44.873 * Reading RDB base file on AOF loading...
+6422:M 03 May 2025 23:06:44.875 * Loading RDB produced by Valkey version 255.255.255
+6422:M 03 May 2025 23:06:44.875 * RDB age 0 seconds
+6422:M 03 May 2025 23:06:44.875 * RDB memory usage when created 1.19 Mb
+6422:M 03 May 2025 23:06:44.875 * RDB is base AOF
+6422:M 03 May 2025 23:06:44.875 * Done loading RDB, keys loaded: 4, keys expired: 0.
+6422:M 03 May 2025 23:06:44.875 * DB loaded from base file appendonly.aof.2.base.rdb: 0.002 seconds
+6422:M 03 May 2025 23:06:44.875 * DB loaded from incr file appendonly.aof.2.incr.aof: 0.000 seconds
+6422:M 03 May 2025 23:06:44.875 * Append Only File loaded by DEBUG LOADAOF
+6422:M 03 May 2025 23:06:44.877 - Client closed connection id=4 addr=127.0.0.1:51245 laddr=127.0.0.1:26181 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=5 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+6422:signal-handler (1746281204) Received SIGTERM scheduling shutdown...
+6422:M 03 May 2025 23:06:44.940 * User requested shutdown...
+6422:M 03 May 2025 23:06:44.940 * Calling fsync() on the AOF file.
+6422:M 03 May 2025 23:06:44.945 * Removing the pid file.
+6422:M 03 May 2025 23:06:44.945 * Removing the unix socket file.
+6422:M 03 May 2025 23:06:44.945 # Valkey is now ready to exit, bye bye...
+### Starting server for test Multi Part AOF can continue the upgrade from the interrupted upgrade state in tests/integration/aof-multi-part.tcl
+6562:M 03 May 2025 23:06:45.067 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+6562:M 03 May 2025 23:06:45.067 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=6562, just started
+6562:M 03 May 2025 23:06:45.067 * Configuration loaded
+6562:M 03 May 2025 23:06:45.067 * Increased maximum number of open files to 10032 (it was originally set to 256).
+6562:M 03 May 2025 23:06:45.067 * monotonic clock: POSIX clock_gettime
+6562:M 03 May 2025 23:06:45.067 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26182
+ |###|   .+###############+.   |###|    PID: 6562                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+6562:M 03 May 2025 23:06:45.067 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+6562:M 03 May 2025 23:06:45.068 * Server initialized
+6562:M 03 May 2025 23:06:45.074 * Successfully migrated an old-style AOF file (appendonly.aof) into the AOF directory (appendonlydir).
+6562:M 03 May 2025 23:06:45.074 * DB loaded from base file appendonly.aof: 0.000 seconds
+6562:M 03 May 2025 23:06:45.074 * DB loaded from append only file: 0.006 seconds
+6562:M 03 May 2025 23:06:45.078 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+6562:M 03 May 2025 23:06:45.079 * Ready to accept connections tcp
+6562:M 03 May 2025 23:06:45.079 * Ready to accept connections unix
+6562:M 03 May 2025 23:06:45.079 - DB 0: 3 keys (0 volatile) in 7 slots HT.
+6562:M 03 May 2025 23:06:45.082 - Accepted 127.0.0.1:51537
+6562:M 03 May 2025 23:06:45.082 - Client closed connection id=3 addr=127.0.0.1:51537 laddr=127.0.0.1:26182 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+6562:M 03 May 2025 23:06:45.095 - Accepted 127.0.0.1:51549
+6562:M 03 May 2025 23:06:45.102 - Accepted 127.0.0.1:51562
+6562:M 03 May 2025 23:06:45.104 - Client closed connection id=4 addr=127.0.0.1:51549 laddr=127.0.0.1:26182 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+6562:signal-handler (1746281205) Received SIGTERM scheduling shutdown...
+6562:M 03 May 2025 23:06:45.180 * User requested shutdown...
+6562:M 03 May 2025 23:06:45.180 * Calling fsync() on the AOF file.
+6562:M 03 May 2025 23:06:45.183 * Removing the pid file.
+6562:M 03 May 2025 23:06:45.183 * Removing the unix socket file.
+6562:M 03 May 2025 23:06:45.184 # Valkey is now ready to exit, bye bye...
+### Starting server for test Multi Part AOF can be loaded correctly when both server dir and aof dir contain old AOF in tests/integration/aof-multi-part.tcl
+6653:M 03 May 2025 23:06:45.457 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+6653:M 03 May 2025 23:06:45.459 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=6653, just started
+6653:M 03 May 2025 23:06:45.459 * Configuration loaded
+6653:M 03 May 2025 23:06:45.460 * Increased maximum number of open files to 10032 (it was originally set to 256).
+6653:M 03 May 2025 23:06:45.462 * monotonic clock: POSIX clock_gettime
+6653:M 03 May 2025 23:06:45.462 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26183
+ |###|   .+###############+.   |###|    PID: 6653                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+6653:M 03 May 2025 23:06:45.462 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+6653:M 03 May 2025 23:06:45.462 * Server initialized
+6653:M 03 May 2025 23:06:45.463 * DB loaded from base file appendonly.aof: 0.000 seconds
+6653:M 03 May 2025 23:06:45.463 * DB loaded from append only file: 0.000 seconds
+6653:M 03 May 2025 23:06:45.469 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+6653:M 03 May 2025 23:06:45.469 * Ready to accept connections tcp
+6653:M 03 May 2025 23:06:45.469 * Ready to accept connections unix
+6653:M 03 May 2025 23:06:45.469 - DB 0: 3 keys (0 volatile) in 7 slots HT.
+6653:M 03 May 2025 23:06:45.601 - Accepted 127.0.0.1:51931
+6653:M 03 May 2025 23:06:45.603 - Client closed connection id=3 addr=127.0.0.1:51931 laddr=127.0.0.1:26183 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+6653:M 03 May 2025 23:06:45.640 - Accepted 127.0.0.1:51977
+6653:M 03 May 2025 23:06:45.662 - Accepted 127.0.0.1:51987
+6653:M 03 May 2025 23:06:45.678 - Client closed connection id=4 addr=127.0.0.1:51977 laddr=127.0.0.1:26183 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+6653:signal-handler (1746281205) Received SIGTERM scheduling shutdown...
+6653:M 03 May 2025 23:06:45.774 * User requested shutdown...
+6653:M 03 May 2025 23:06:45.774 * Calling fsync() on the AOF file.
+6653:M 03 May 2025 23:06:45.776 * Removing the pid file.
+6653:M 03 May 2025 23:06:45.776 * Removing the unix socket file.
+6653:M 03 May 2025 23:06:45.776 # Valkey is now ready to exit, bye bye...
+### Starting server for test Multi Part AOF can't load data when the manifest contains the old AOF file name but the file does not exist in server dir and aof dir in tests/integration/aof-multi-part.tcl
+6737:M 03 May 2025 23:06:45.899 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+6737:M 03 May 2025 23:06:45.899 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=6737, just started
+6737:M 03 May 2025 23:06:45.899 * Configuration loaded
+6737:M 03 May 2025 23:06:45.899 * Increased maximum number of open files to 10032 (it was originally set to 256).
+6737:M 03 May 2025 23:06:45.899 * monotonic clock: POSIX clock_gettime
+6737:M 03 May 2025 23:06:45.900 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26184
+ |###|   .+###############+.   |###|    PID: 6737                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+6737:M 03 May 2025 23:06:45.900 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+6737:M 03 May 2025 23:06:45.900 * Server initialized
+6737:M 03 May 2025 23:06:45.900 # Unable to obtain the AOF file appendonly.aof length. stat: No such file or directory
+### Starting server for test Multi Part AOF can upgrade when when two servers share the same server dir in tests/integration/aof-multi-part.tcl
+6769:M 03 May 2025 23:06:46.071 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+6769:M 03 May 2025 23:06:46.073 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=6769, just started
+6769:M 03 May 2025 23:06:46.074 * Configuration loaded
+6769:M 03 May 2025 23:06:46.077 * Increased maximum number of open files to 10032 (it was originally set to 256).
+6769:M 03 May 2025 23:06:46.080 * monotonic clock: POSIX clock_gettime
+6769:M 03 May 2025 23:06:46.080 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26185
+ |###|   .+###############+.   |###|    PID: 6769                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+6769:M 03 May 2025 23:06:46.083 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+6769:M 03 May 2025 23:06:46.086 * Server initialized
+6769:M 03 May 2025 23:06:46.093 * Successfully migrated an old-style AOF file (appendonly.aof) into the AOF directory (appendonlydir).
+6769:M 03 May 2025 23:06:46.094 * DB loaded from base file appendonly.aof: 0.000 seconds
+6769:M 03 May 2025 23:06:46.096 * DB loaded from append only file: 0.010 seconds
+6769:M 03 May 2025 23:06:46.110 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+6769:M 03 May 2025 23:06:46.112 * Ready to accept connections tcp
+6769:M 03 May 2025 23:06:46.113 * Ready to accept connections unix
+6769:M 03 May 2025 23:06:46.263 - Accepted 127.0.0.1:52500
+6769:M 03 May 2025 23:06:46.263 - Client closed connection id=3 addr=127.0.0.1:52500 laddr=127.0.0.1:26185 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+6769:M 03 May 2025 23:06:46.287 - Accepted 127.0.0.1:52509
+6769:M 03 May 2025 23:06:46.288 - Accepted 127.0.0.1:52510
+### Starting server for test Multi Part AOF can upgrade when when two servers share the same server dir in tests/integration/aof-multi-part.tcl
+6810:M 03 May 2025 23:06:46.316 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+6810:M 03 May 2025 23:06:46.316 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=6810, just started
+6810:M 03 May 2025 23:06:46.316 * Configuration loaded
+6810:M 03 May 2025 23:06:46.316 * Increased maximum number of open files to 10032 (it was originally set to 256).
+6810:M 03 May 2025 23:06:46.316 * monotonic clock: POSIX clock_gettime
+6810:M 03 May 2025 23:06:46.317 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26186
+ |###|   .+###############+.   |###|    PID: 6810                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+6810:M 03 May 2025 23:06:46.317 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+6810:M 03 May 2025 23:06:46.317 * Server initialized
+6810:M 03 May 2025 23:06:46.324 * Successfully migrated an old-style AOF file (appendonly.aof2) into the AOF directory (appendonlydir).
+6810:M 03 May 2025 23:06:46.324 * DB loaded from base file appendonly.aof2: 0.000 seconds
+6810:M 03 May 2025 23:06:46.324 * DB loaded from append only file: 0.007 seconds
+6810:M 03 May 2025 23:06:46.330 * Creating AOF incr file appendonly.aof2.1.incr.aof on server start
+6810:M 03 May 2025 23:06:46.330 * Ready to accept connections tcp
+6810:M 03 May 2025 23:06:46.330 * Ready to accept connections unix
+6810:M 03 May 2025 23:06:46.330 - DB 0: 3 keys (0 volatile) in 7 slots HT.
+6810:M 03 May 2025 23:06:46.467 - Accepted 127.0.0.1:52665
+6810:M 03 May 2025 23:06:46.468 - Client closed connection id=3 addr=127.0.0.1:52665 laddr=127.0.0.1:26186 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+6810:M 03 May 2025 23:06:46.497 - Accepted 127.0.0.1:52674
+6810:M 03 May 2025 23:06:46.498 - Accepted 127.0.0.1:52675
+### Starting test Multi Part AOF can upgrade when when two servers share the same server dir (server1) in tests/integration/aof-multi-part.tcl
+### Starting test Multi Part AOF can upgrade when when two servers share the same server dir (server1) in tests/integration/aof-multi-part.tcl
+6769:M 03 May 2025 23:06:46.509 * Creating AOF incr file appendonly.aof.2.incr.aof on background rewrite
+6769:M 03 May 2025 23:06:46.511 * Background append only file rewriting started by pid 6856
+6856:C 03 May 2025 23:06:46.513 * Successfully created the temporary AOF base file temp-rewriteaof-bg-6856.aof
+6856:C 03 May 2025 23:06:46.513 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+6769:M 03 May 2025 23:06:46.516 * Background AOF rewrite terminated with success
+6769:M 03 May 2025 23:06:46.516 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-6856.aof into appendonly.aof.2.base.rdb
+6769:M 03 May 2025 23:06:46.522 * Removing the history file appendonly.aof.1.incr.aof in the background
+6769:M 03 May 2025 23:06:46.523 * Removing the history file appendonly.aof in the background
+6769:M 03 May 2025 23:06:46.529 * Background AOF rewrite finished successfully
+6769:M 03 May 2025 23:06:46.529 - Background AOF rewrite signal handler took 12823us
+6769:M 03 May 2025 23:06:46.566 * Reading RDB base file on AOF loading...
+6769:M 03 May 2025 23:06:46.566 * Loading RDB produced by Valkey version 255.255.255
+6769:M 03 May 2025 23:06:46.566 * RDB age 0 seconds
+6769:M 03 May 2025 23:06:46.566 * RDB memory usage when created 1.15 Mb
+6769:M 03 May 2025 23:06:46.566 * RDB is base AOF
+6769:M 03 May 2025 23:06:46.567 * Done loading RDB, keys loaded: 3, keys expired: 0.
+6769:M 03 May 2025 23:06:46.567 * DB loaded from base file appendonly.aof.2.base.rdb: 0.000 seconds
+6769:M 03 May 2025 23:06:46.567 * DB loaded from incr file appendonly.aof.2.incr.aof: 0.000 seconds
+6769:M 03 May 2025 23:06:46.567 * Append Only File loaded by DEBUG LOADAOF
+### Starting test Multi Part AOF can upgrade when when two servers share the same server dir (server2) in tests/integration/aof-multi-part.tcl
+### Starting test Multi Part AOF can upgrade when when two servers share the same server dir (server2) in tests/integration/aof-multi-part.tcl
+6810:M 03 May 2025 23:06:46.577 * Creating AOF incr file appendonly.aof2.2.incr.aof on background rewrite
+6810:M 03 May 2025 23:06:46.578 * Background append only file rewriting started by pid 6870
+6870:C 03 May 2025 23:06:46.581 * Successfully created the temporary AOF base file temp-rewriteaof-bg-6870.aof
+6870:C 03 May 2025 23:06:46.581 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+6810:M 03 May 2025 23:06:46.634 * Background AOF rewrite terminated with success
+6810:M 03 May 2025 23:06:46.634 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-6870.aof into appendonly.aof2.2.base.rdb
+6810:M 03 May 2025 23:06:46.640 * Removing the history file appendonly.aof2.1.incr.aof in the background
+6810:M 03 May 2025 23:06:46.640 * Removing the history file appendonly.aof2 in the background
+6810:M 03 May 2025 23:06:46.646 * Background AOF rewrite finished successfully
+6810:M 03 May 2025 23:06:46.647 - Background AOF rewrite signal handler took 12419us
+6810:M 03 May 2025 23:06:46.647 * Reading RDB base file on AOF loading...
+6810:M 03 May 2025 23:06:46.647 * Loading RDB produced by Valkey version 255.255.255
+6810:M 03 May 2025 23:06:46.647 * RDB age 0 seconds
+6810:M 03 May 2025 23:06:46.647 * RDB memory usage when created 1.18 Mb
+6810:M 03 May 2025 23:06:46.648 * RDB is base AOF
+6810:M 03 May 2025 23:06:46.648 * Done loading RDB, keys loaded: 3, keys expired: 0.
+6810:M 03 May 2025 23:06:46.648 * DB loaded from base file appendonly.aof2.2.base.rdb: 0.000 seconds
+6810:M 03 May 2025 23:06:46.648 * DB loaded from incr file appendonly.aof2.2.incr.aof: 0.000 seconds
+6810:M 03 May 2025 23:06:46.648 * Append Only File loaded by DEBUG LOADAOF
+6810:M 03 May 2025 23:06:46.648 - Client closed connection id=4 addr=127.0.0.1:52674 laddr=127.0.0.1:26186 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+### Starting test Check for memory leaks (pid 6810) in tests/integration/aof-multi-part.tcl
+6810:signal-handler (1746281207) Received SIGTERM scheduling shutdown...
+6810:M 03 May 2025 23:06:48.047 * User requested shutdown...
+6810:M 03 May 2025 23:06:48.047 * Calling fsync() on the AOF file.
+6810:M 03 May 2025 23:06:48.051 * Removing the pid file.
+6810:M 03 May 2025 23:06:48.051 * Removing the unix socket file.
+6810:M 03 May 2025 23:06:48.051 # Valkey is now ready to exit, bye bye...
+6769:M 03 May 2025 23:06:48.163 - Client closed connection id=4 addr=127.0.0.1:52509 laddr=127.0.0.1:26185 fd=13 name= age=2 idle=2 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+6769:signal-handler (1746281210) Received SIGTERM scheduling shutdown...
+6769:M 03 May 2025 23:06:50.211 * User requested shutdown...
+6769:M 03 May 2025 23:06:50.211 * Calling fsync() on the AOF file.
+6769:M 03 May 2025 23:06:50.212 * Removing the pid file.
+6769:M 03 May 2025 23:06:50.212 * Removing the unix socket file.
+6769:M 03 May 2025 23:06:50.212 # Valkey is now ready to exit, bye bye...
+### Starting server for test Multi Part AOF can create BASE (RDB format) when server starts from empty in tests/integration/aof-multi-part.tcl
+7256:M 03 May 2025 23:06:50.581 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+7256:M 03 May 2025 23:06:50.581 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=7256, just started
+7256:M 03 May 2025 23:06:50.581 * Configuration loaded
+7256:M 03 May 2025 23:06:50.582 * Increased maximum number of open files to 10032 (it was originally set to 256).
+7256:M 03 May 2025 23:06:50.582 * monotonic clock: POSIX clock_gettime
+7256:M 03 May 2025 23:06:50.582 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26188
+ |###|   .+###############+.   |###|    PID: 7256                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+7256:M 03 May 2025 23:06:50.582 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+7256:M 03 May 2025 23:06:50.582 * Server initialized
+7256:M 03 May 2025 23:06:50.582 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+7256:M 03 May 2025 23:06:50.589 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+7256:M 03 May 2025 23:06:50.589 * Ready to accept connections tcp
+7256:M 03 May 2025 23:06:50.589 * Ready to accept connections unix
+7256:M 03 May 2025 23:06:50.599 - Accepted 127.0.0.1:55676
+7256:M 03 May 2025 23:06:50.599 - Client closed connection id=2 addr=127.0.0.1:55676 laddr=127.0.0.1:26188 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+7256:M 03 May 2025 23:06:50.628 - Accepted 127.0.0.1:55700
+7256:M 03 May 2025 23:06:50.629 - Accepted 127.0.0.1:55701
+7256:M 03 May 2025 23:06:50.629 * Reading RDB base file on AOF loading...
+7256:M 03 May 2025 23:06:50.629 * Loading RDB produced by Valkey version 255.255.255
+7256:M 03 May 2025 23:06:50.629 * RDB age 0 seconds
+7256:M 03 May 2025 23:06:50.629 * RDB memory usage when created 1.05 Mb
+7256:M 03 May 2025 23:06:50.629 * RDB is base AOF
+7256:M 03 May 2025 23:06:50.629 * Done loading RDB, keys loaded: 0, keys expired: 0.
+7256:M 03 May 2025 23:06:50.629 * DB loaded from base file appendonly.aof.1.base.rdb: 0.000 seconds
+7256:M 03 May 2025 23:06:50.629 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.000 seconds
+7256:M 03 May 2025 23:06:50.629 * Append Only File loaded by DEBUG LOADAOF
+7256:M 03 May 2025 23:06:50.629 - Client closed connection id=3 addr=127.0.0.1:55700 laddr=127.0.0.1:26188 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+7256:signal-handler (1746281210) Received SIGTERM scheduling shutdown...
+7256:M 03 May 2025 23:06:50.690 * User requested shutdown...
+7256:M 03 May 2025 23:06:50.690 * Calling fsync() on the AOF file.
+7256:M 03 May 2025 23:06:50.692 * Removing the pid file.
+7256:M 03 May 2025 23:06:50.692 * Removing the unix socket file.
+7256:M 03 May 2025 23:06:50.692 # Valkey is now ready to exit, bye bye...
+### Starting server for test Multi Part AOF can create BASE (AOF format) when server starts from empty in tests/integration/aof-multi-part.tcl
+7285:M 03 May 2025 23:06:50.785 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+7285:M 03 May 2025 23:06:50.785 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=7285, just started
+7285:M 03 May 2025 23:06:50.785 * Configuration loaded
+7285:M 03 May 2025 23:06:50.785 * Increased maximum number of open files to 10032 (it was originally set to 256).
+7285:M 03 May 2025 23:06:50.786 * monotonic clock: POSIX clock_gettime
+7285:M 03 May 2025 23:06:50.786 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26189
+ |###|   .+###############+.   |###|    PID: 7285                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+7285:M 03 May 2025 23:06:50.786 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+7285:M 03 May 2025 23:06:50.786 * Server initialized
+7285:M 03 May 2025 23:06:50.786 * Creating AOF base file appendonly.aof.1.base.aof on server start
+7285:M 03 May 2025 23:06:50.791 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+7285:M 03 May 2025 23:06:50.791 * Ready to accept connections tcp
+7285:M 03 May 2025 23:06:50.791 * Ready to accept connections unix
+7285:M 03 May 2025 23:06:50.801 - Accepted 127.0.0.1:55848
+7285:M 03 May 2025 23:06:50.802 - Client closed connection id=2 addr=127.0.0.1:55848 laddr=127.0.0.1:26189 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+7285:M 03 May 2025 23:06:50.831 - Accepted 127.0.0.1:55871
+7285:M 03 May 2025 23:06:50.831 - Accepted 127.0.0.1:55872
+7285:M 03 May 2025 23:06:50.831 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.000 seconds
+7285:M 03 May 2025 23:06:50.831 * Append Only File loaded by DEBUG LOADAOF
+7285:M 03 May 2025 23:06:50.832 - Client closed connection id=3 addr=127.0.0.1:55871 laddr=127.0.0.1:26189 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+7285:signal-handler (1746281210) Received SIGTERM scheduling shutdown...
+7285:M 03 May 2025 23:06:50.892 * User requested shutdown...
+7285:M 03 May 2025 23:06:50.893 * Calling fsync() on the AOF file.
+7285:M 03 May 2025 23:06:50.895 * Removing the pid file.
+7285:M 03 May 2025 23:06:50.895 * Removing the unix socket file.
+7285:M 03 May 2025 23:06:50.896 # Valkey is now ready to exit, bye bye...
+### Starting server for test Changing aof-use-rdb-preamble during rewrite process in tests/integration/aof-multi-part.tcl
+7314:M 03 May 2025 23:06:50.939 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+7314:M 03 May 2025 23:06:50.939 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=7314, just started
+7314:M 03 May 2025 23:06:50.939 * Configuration loaded
+7314:M 03 May 2025 23:06:50.939 * Increased maximum number of open files to 10032 (it was originally set to 256).
+7314:M 03 May 2025 23:06:50.939 * monotonic clock: POSIX clock_gettime
+7314:M 03 May 2025 23:06:50.940 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26190
+ |###|   .+###############+.   |###|    PID: 7314                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+7314:M 03 May 2025 23:06:50.940 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+7314:M 03 May 2025 23:06:50.940 * Server initialized
+7314:M 03 May 2025 23:06:50.940 * Creating AOF base file appendonly.aof.1.base.aof on server start
+7314:M 03 May 2025 23:06:50.944 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+7314:M 03 May 2025 23:06:50.944 * Ready to accept connections tcp
+7314:M 03 May 2025 23:06:50.944 * Ready to accept connections unix
+7314:M 03 May 2025 23:06:50.955 - Accepted 127.0.0.1:55974
+7314:M 03 May 2025 23:06:50.955 - Client closed connection id=2 addr=127.0.0.1:55974 laddr=127.0.0.1:26190 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+7314:M 03 May 2025 23:06:50.967 - Accepted 127.0.0.1:55975
+7314:M 03 May 2025 23:06:50.982 * Creating AOF incr file appendonly.aof.2.incr.aof on background rewrite
+7314:M 03 May 2025 23:06:50.982 * Background append only file rewriting started by pid 7330
+7330:C 03 May 2025 23:06:51.988 * Successfully created the temporary AOF base file temp-rewriteaof-bg-7330.aof
+7330:C 03 May 2025 23:06:51.989 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+7314:M 03 May 2025 23:06:52.054 * Background AOF rewrite terminated with success
+7314:M 03 May 2025 23:06:52.054 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-7330.aof into appendonly.aof.2.base.aof
+7314:M 03 May 2025 23:06:52.060 * Removing the history file appendonly.aof.1.incr.aof in the background
+7314:M 03 May 2025 23:06:52.060 * Removing the history file appendonly.aof.1.base.aof in the background
+7314:M 03 May 2025 23:06:52.066 * Background AOF rewrite finished successfully
+7314:M 03 May 2025 23:06:52.066 - Background AOF rewrite signal handler took 12356us
+7314:M 03 May 2025 23:06:52.066 - Client closed connection id=3 addr=127.0.0.1:55975 laddr=127.0.0.1:26190 fd=13 name= age=2 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6144 rbp=6093 obl=0 oll=0 omem=0 tot-mem=23552 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=580 tot-net-out=134032 tot-cmds=29
+7314:signal-handler (1746281212) Received SIGTERM scheduling shutdown...
+7314:M 03 May 2025 23:06:52.167 * User requested shutdown...
+7314:M 03 May 2025 23:06:52.167 * Calling fsync() on the AOF file.
+7314:M 03 May 2025 23:06:52.170 * Removing the pid file.
+7314:M 03 May 2025 23:06:52.170 * Removing the unix socket file.
+7314:M 03 May 2025 23:06:52.170 # Valkey is now ready to exit, bye bye...

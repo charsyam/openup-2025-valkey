@@ -1,0 +1,62 @@
+### Starting server for test 
+5481:M 03 May 2025 23:06:40.535 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5481:M 03 May 2025 23:06:40.535 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5481, just started
+5481:M 03 May 2025 23:06:40.535 * Configuration loaded
+5481:M 03 May 2025 23:06:40.535 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5481:M 03 May 2025 23:06:40.535 * monotonic clock: POSIX clock_gettime
+5481:M 03 May 2025 23:06:40.535 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27645
+ |###|   .+###############+.   |###|    PID: 5481                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5481:M 03 May 2025 23:06:40.536 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5481:M 03 May 2025 23:06:40.536 * Server initialized
+5481:M 03 May 2025 23:06:40.536 * Ready to accept connections tcp
+5481:M 03 May 2025 23:06:40.536 * Ready to accept connections unix
+5481:M 03 May 2025 23:06:40.707 - Accepted 127.0.0.1:64453
+5481:M 03 May 2025 23:06:40.708 - Client closed connection id=2 addr=127.0.0.1:64453 laddr=127.0.0.1:27645 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+5481:M 03 May 2025 23:06:40.731 - Accepted 127.0.0.1:64464
+5481:S 03 May 2025 23:06:41.025 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+5481:S 03 May 2025 23:06:41.025 * Connecting to PRIMARY 127.0.0.1:27646
+5481:S 03 May 2025 23:06:41.026 * PRIMARY <-> REPLICA sync started
+5481:S 03 May 2025 23:06:41.026 * REPLICAOF 127.0.0.1:27646 enabled (user request from 'id=3 addr=127.0.0.1:64464 laddr=127.0.0.1:27645 fd=12 name= user=default lib-name= lib-ver=')
+5481:S 03 May 2025 23:06:41.026 * Non blocking connect for SYNC fired the event.
+5481:S 03 May 2025 23:06:41.026 * Primary replied to PING, replication can continue...
+### Starting test Slave enters handshake in tests/integration/replication.tcl
+5481:S 03 May 2025 23:06:41.026 * Trying a partial resynchronization (request 6d0596af897eb4ee59a77d25b61f47390299461d:1).
+### Starting test Slave enters wait_bgsave in tests/integration/replication.tcl
+5481:S 03 May 2025 23:06:47.618 # Timeout connecting to the PRIMARY...
+5481:S 03 May 2025 23:06:47.618 * Reconnecting to PRIMARY 127.0.0.1:27646 after failure
+5481:S 03 May 2025 23:06:47.618 * PRIMARY <-> REPLICA sync started
+5481:S 03 May 2025 23:06:47.618 * Non blocking connect for SYNC fired the event.
+5481:S 03 May 2025 23:06:51.029 * Primary replied to PING, replication can continue...
+### Starting test Slave is able to detect timeout during handshake in tests/integration/replication.tcl
+5481:S 03 May 2025 23:06:51.029 * Trying a partial resynchronization (request 6d0596af897eb4ee59a77d25b61f47390299461d:1).
+### Starting test Check for memory leaks (pid 5526) in tests/integration/replication.tcl
+5481:S 03 May 2025 23:06:53.072 # Failed to read response from the server: Undefined error: 0
+5481:S 03 May 2025 23:06:53.072 # Primary did not reply to PSYNC, will try later
+5481:S 03 May 2025 23:06:53.120 - Client closed connection id=3 addr=127.0.0.1:64464 laddr=127.0.0.1:27645 fd=12 name= age=13 idle=12 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=131 tot-net-out=73 tot-cmds=4
+5481:S 03 May 2025 23:06:53.677 * Connecting to PRIMARY 127.0.0.1:27646
+5481:S 03 May 2025 23:06:53.678 * PRIMARY <-> REPLICA sync started
+5481:S 03 May 2025 23:06:53.678 # Error condition on socket for SYNC: Connection refused
+5481:signal-handler (1746281215) Received SIGTERM scheduling shutdown...
+5481:S 03 May 2025 23:06:55.450 * User requested shutdown...
+5481:S 03 May 2025 23:06:55.452 * Removing the pid file.
+5481:S 03 May 2025 23:06:55.452 * Removing the unix socket file.
+5481:S 03 May 2025 23:06:55.452 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,95 @@
+### Starting server for test 
+86432:M 03 May 2025 23:04:06.422 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+86432:M 03 May 2025 23:04:06.422 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=86432, just started
+86432:M 03 May 2025 23:04:06.422 * Configuration loaded
+86432:M 03 May 2025 23:04:06.423 * Increased maximum number of open files to 10032 (it was originally set to 256).
+86432:M 03 May 2025 23:04:06.423 * monotonic clock: POSIX clock_gettime
+86432:M 03 May 2025 23:04:06.423 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25622
+ |###|   .+###############+.   |###|    PID: 86432                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+86432:M 03 May 2025 23:04:06.423 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+86432:M 03 May 2025 23:04:06.423 * Server initialized
+86432:M 03 May 2025 23:04:06.423 * Ready to accept connections tcp
+86432:M 03 May 2025 23:04:06.423 * Ready to accept connections unix
+86432:M 03 May 2025 23:04:06.543 - Accepted 127.0.0.1:59398
+86432:M 03 May 2025 23:04:06.543 - Client closed connection id=2 addr=127.0.0.1:59398 laddr=127.0.0.1:25622 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+86432:M 03 May 2025 23:04:06.559 - Accepted 127.0.0.1:59399
+### Starting test Handle an empty query in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.560 - Accepted 127.0.0.1:59400
+86432:M 03 May 2025 23:04:06.560 - Client closed connection id=3 addr=127.0.0.1:59399 laddr=127.0.0.1:25622 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+### Starting test Negative multibulk length in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.562 - Accepted 127.0.0.1:59401
+86432:M 03 May 2025 23:04:06.562 - Client closed connection id=4 addr=127.0.0.1:59400 laddr=127.0.0.1:25622 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=39 tot-net-out=12 tot-cmds=2
+### Starting test Out of range multibulk length in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.567 - Accepted 127.0.0.1:59402
+86432:M 03 May 2025 23:04:06.567 - Client closed connection id=5 addr=127.0.0.1:59401 laddr=127.0.0.1:25622 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=43 tot-net-out=12 tot-cmds=2
+86432:M 03 May 2025 23:04:06.567 - Protocol error (invalid mbulk count) from client: id=6 addr=127.0.0.1:59402 laddr=127.0.0.1:25622 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=13 qbuf-free=16877 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=47 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=36 tot-net-out=5 tot-cmds=1. Query buffer: '*3000000000..'
+### Starting test Wrong multibulk payload header in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.568 - Accepted 127.0.0.1:59403
+86432:M 03 May 2025 23:04:06.571 - Protocol error (expected $ but got something else) from client: id=7 addr=127.0.0.1:59403 laddr=127.0.0.1:25622 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=26 qbuf-free=16864 argv-mem=4 multi-mem=0 rbs=16384 rbp=16384 obl=44 oll=0 omem=0 tot-mem=33812 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=49 tot-net-out=5 tot-cmds=1. Query buffer: 'fooz..'
+### Starting test Negative multibulk payload length in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.573 - Accepted 127.0.0.1:59404
+86432:M 03 May 2025 23:04:06.573 - Protocol error (invalid bulk length) from client: id=8 addr=127.0.0.1:59404 laddr=127.0.0.1:25622 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=26 qbuf-free=16864 argv-mem=4 multi-mem=0 rbs=16384 rbp=16384 obl=42 oll=0 omem=0 tot-mem=33812 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=49 tot-net-out=5 tot-cmds=1. Query buffer: '$-10..'
+### Starting test Out of range multibulk payload length in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.573 - Accepted 127.0.0.1:59405
+86432:M 03 May 2025 23:04:06.574 - Protocol error (invalid bulk length) from client: id=9 addr=127.0.0.1:59405 laddr=127.0.0.1:25622 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=33 qbuf-free=16857 argv-mem=4 multi-mem=0 rbs=16384 rbp=16384 obl=42 oll=0 omem=0 tot-mem=33812 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56 tot-net-out=5 tot-cmds=1. Query buffer: '$2000000000..'
+### Starting test Non-number multibulk payload length in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.574 - Accepted 127.0.0.1:59406
+86432:M 03 May 2025 23:04:06.575 - Protocol error (invalid bulk length) from client: id=10 addr=127.0.0.1:59406 laddr=127.0.0.1:25622 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=29 qbuf-free=16861 argv-mem=4 multi-mem=0 rbs=16384 rbp=16384 obl=42 oll=0 omem=0 tot-mem=33812 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=52 tot-net-out=5 tot-cmds=1. Query buffer: '$blabla..'
+### Starting test Multi bulk request not followed by bulk arguments in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.578 - Accepted 127.0.0.1:59407
+86432:M 03 May 2025 23:04:06.578 - Protocol error (expected $ but got something else) from client: id=11 addr=127.0.0.1:59407 laddr=127.0.0.1:25622 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=9 qbuf-free=16881 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=44 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=32 tot-net-out=5 tot-cmds=1. Query buffer: 'foo..'
+### Starting test Generic wrong number of args in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.580 - Accepted 127.0.0.1:59408
+### Starting test Unbalanced number of quotes in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.581 - Accepted 127.0.0.1:59409
+86432:M 03 May 2025 23:04:06.581 - Client closed connection id=12 addr=127.0.0.1:59408 laddr=127.0.0.1:25622 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=56 tot-cmds=2
+86432:M 03 May 2025 23:04:06.581 - Protocol error (unbalanced quotes in inline request) from client: id=13 addr=127.0.0.1:59409 laddr=127.0.0.1:25622 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=37 qbuf-free=16853 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=51 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=60 tot-net-out=5 tot-cmds=1. Query buffer: 'set """test-key""" test-value..ping..'
+### Starting test Protocol desync regression test #1 in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.581 - Accepted 127.0.0.1:59410
+86432:M 03 May 2025 23:04:06.582 - Protocol error (too big inline request) from client: id=14 addr=127.0.0.1:59410 laddr=127.0.0.1:25622 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=66561 qbuf-free=31733 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=45 oll=0 omem=0 tot-mem=115200 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=66561 tot-net-out=0 tot-cmds=0. Query buffer: '' (... more 66433 bytes ...) 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+### Starting test Protocol desync regression test #2 in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.582 - Accepted 127.0.0.1:59411
+86432:M 03 May 2025 23:04:06.583 - Protocol error (too big mbulk count string) from client: id=15 addr=127.0.0.1:59411 laddr=127.0.0.1:25622 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=66562 qbuf-free=97268 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=49 oll=0 omem=0 tot-mem=180736 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=66562 tot-net-out=0 tot-cmds=0. Query buffer: '*' (... more 66434 bytes ...) 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+### Starting test Protocol desync regression test #3 in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.583 - Accepted 127.0.0.1:59412
+86432:M 03 May 2025 23:04:06.583 - Protocol error (too big inline request) from client: id=16 addr=127.0.0.1:59412 laddr=127.0.0.1:25622 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=66562 qbuf-free=97268 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=45 oll=0 omem=0 tot-mem=180736 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=66562 tot-net-out=0 tot-cmds=0. Query buffer: '$' (... more 66434 bytes ...) 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+### Starting test Protocol desync regression test #4 in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.584 - Accepted 127.0.0.1:59413
+86432:M 03 May 2025 23:04:06.584 - Protocol error (too big bulk count string) from client: id=17 addr=127.0.0.1:59413 laddr=127.0.0.1:25622 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=66563 qbuf-free=97267 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=48 oll=0 omem=0 tot-mem=180736 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=66567 tot-net-out=0 tot-cmds=0. Query buffer: '.$' (... more 66435 bytes ...) 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+86432:M 03 May 2025 23:04:06.584 - Accepted 127.0.0.1:59414
+### Starting test raw protocol response in tests/unit/protocol.tcl
+### Starting test raw protocol response - deferred in tests/unit/protocol.tcl
+### Starting test raw protocol response - multiline in tests/unit/protocol.tcl
+### Starting test RESP3 attributes in tests/unit/protocol.tcl
+### Starting test RESP3 attributes readraw in tests/unit/protocol.tcl
+### Starting test RESP3 attributes on RESP2 in tests/unit/protocol.tcl
+### Starting test test big number parsing in tests/unit/protocol.tcl
+### Starting test test bool parsing in tests/unit/protocol.tcl
+### Starting test test verbatim str parsing in tests/unit/protocol.tcl
+### Starting test test large number of args in tests/unit/protocol.tcl
+### Starting test test argument rewriting - issue 9598 in tests/unit/protocol.tcl
+86432:M 03 May 2025 23:04:06.606 - Client closed connection id=18 addr=127.0.0.1:59414 laddr=127.0.0.1:25622 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=exec user=default redir=-1 resp=3 lib-name= lib-ver= tot-net-in=141009 tot-net-out=1816 tot-cmds=35
+86432:signal-handler (1746281047) Received SIGTERM scheduling shutdown...
+86432:M 03 May 2025 23:04:07.560 * User requested shutdown...
+86432:M 03 May 2025 23:04:07.560 * Removing the pid file.
+86432:M 03 May 2025 23:04:07.560 * Removing the unix socket file.
+86432:M 03 May 2025 23:04:07.560 # Valkey is now ready to exit, bye bye...

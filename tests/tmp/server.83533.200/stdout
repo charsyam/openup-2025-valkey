@@ -1,0 +1,70 @@
+### Starting server for test 
+19717:M 03 May 2025 23:10:19.558 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+19717:M 03 May 2025 23:10:19.558 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=19717, just started
+19717:M 03 May 2025 23:10:19.558 * Configuration loaded
+19717:M 03 May 2025 23:10:19.559 * Increased maximum number of open files to 10032 (it was originally set to 256).
+19717:M 03 May 2025 23:10:19.559 * monotonic clock: POSIX clock_gettime
+19717:M 03 May 2025 23:10:19.559 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25213
+ |###|   .+###############+.   |###|    PID: 19717                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+19717:M 03 May 2025 23:10:19.559 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+19717:M 03 May 2025 23:10:19.559 * Server initialized
+19717:M 03 May 2025 23:10:19.559 * Ready to accept connections tcp
+19717:M 03 May 2025 23:10:19.559 * Ready to accept connections unix
+19717:M 03 May 2025 23:10:19.678 - Accepted 127.0.0.1:50502
+19717:M 03 May 2025 23:10:19.678 - Client closed connection id=2 addr=127.0.0.1:50502 laddr=127.0.0.1:25213 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+19717:M 03 May 2025 23:10:19.684 - Accepted 127.0.0.1:50503
+### Starting test Slave should be able to synchronize with the master in tests/integration/replication-psync.tcl
+19717:M 03 May 2025 23:10:19.822 - Accepted 127.0.0.1:50506
+19717:M 03 May 2025 23:10:19.822 * Replica 127.0.0.1:25214 asks for synchronization
+19717:M 03 May 2025 23:10:19.822 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'd3299fc23939c164658bdf81ea998c1adc2d8f86', my replication IDs are '1008d3240cea87f9945e93ee53694a8cfc7875dd' and '0000000000000000000000000000000000000000')
+19717:M 03 May 2025 23:10:19.822 * Dual channel replication: Replica 127.0.0.1:25214 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+19717:M 03 May 2025 23:10:19.822 - Accepted 127.0.0.1:50507
+19717:M 03 May 2025 23:10:19.822 * Replica 127.0.0.1:25214 asks for synchronization
+19717:M 03 May 2025 23:10:19.823 * Replication backlog created, my new replication IDs are 'd943e8a52fe0a02705354301f1461f1a2fe4d483' and '0000000000000000000000000000000000000000'
+19717:M 03 May 2025 23:10:19.823 * Delay next BGSAVE for diskless SYNC
+19717:M 03 May 2025 23:10:19.829 - Accepted 127.0.0.1:50508
+19717:M 03 May 2025 23:10:19.829 - Accepted 127.0.0.1:50509
+19717:M 03 May 2025 23:10:19.829 - Accepted 127.0.0.1:50510
+19717:M 03 May 2025 23:10:20.562 * Starting BGSAVE for SYNC with target: replicas sockets using: dual-channel
+19717:M 03 May 2025 23:10:20.562 * Dual channel replication: Sending to replica 127.0.0.1:25214 RDB end offset 963136 and client-id 5
+19717:M 03 May 2025 23:10:20.563 * Background RDB transfer started by pid 19756 to direct socket to replica
+19717:M 03 May 2025 23:10:20.563 * Replica 127.0.0.1:25214 asks for synchronization
+19717:M 03 May 2025 23:10:20.563 * Partial resynchronization request from 127.0.0.1:25214 accepted. Sending 296 bytes of backlog starting from offset 963137.
+19756:C 03 May 2025 23:10:20.566 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+19717:M 03 May 2025 23:10:20.566 - Client closed connection id=5 addr=127.0.0.1:50507 laddr=127.0.0.1:25213 fd=14 name= age=1 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=121 tot-net-out=5 tot-cmds=2
+19717:M 03 May 2025 23:10:20.566 * Dual channel replication: Replica 127.0.0.1:25214 rdb channel disconnected.
+19717:M 03 May 2025 23:10:20.567 * Synchronization with replica 127.0.0.1:25214 succeeded
+### Starting test Detect write load to master in tests/integration/replication-psync.tcl
+### Starting test Test replication partial resync: no reconnection, just sync (diskless: yes, swapdb, dual-channel: yes, reconnect: 0) in tests/integration/replication-psync.tcl
+19717:M 03 May 2025 23:10:20.658 - Reading from client: Connection reset by peer
+19717:M 03 May 2025 23:10:20.661 - Client closed connection id=6 addr=127.0.0.1:50508 laddr=127.0.0.1:25213 fd=15 name=LOAD_HANDLER age=1 idle=0 flags=N capa= db=11 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=264 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=hset user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=670816 tot-net-out=98903 tot-cmds=9190
+19717:M 03 May 2025 23:10:20.663 * Background RDB transfer terminated with success
+19717:M 03 May 2025 23:10:20.664 - Client closed connection id=7 addr=127.0.0.1:50509 laddr=127.0.0.1:25213 fd=16 name=LOAD_HANDLER age=1 idle=0 flags=N capa= db=12 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=262 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=zrem user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=691915 tot-net-out=97198 tot-cmds=9241
+### Starting test Check for memory leaks (pid 19728) in tests/integration/replication-psync.tcl
+19717:M 03 May 2025 23:10:21.584 - Client closed connection id=4 addr=127.0.0.1:50506 laddr=127.0.0.1:25213 fd=13 name= age=2 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=5 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=472 tot-net-out=105756 tot-cmds=9
+19717:M 03 May 2025 23:10:21.584 * Connection with replica 127.0.0.1:25214 lost.
+19717:M 03 May 2025 23:10:21.595 - Client closed connection id=3 addr=127.0.0.1:50503 laddr=127.0.0.1:25213 fd=12 name= age=2 idle=1 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=dbsize user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=411 tot-net-out=6285 tot-cmds=10
+19717:signal-handler (1746281422) Received SIGTERM scheduling shutdown...
+19717:M 03 May 2025 23:10:22.404 * User requested shutdown...
+19717:M 03 May 2025 23:10:22.404 * Removing the pid file.
+19717:M 03 May 2025 23:10:22.404 * Removing the unix socket file.
+19717:M 03 May 2025 23:10:22.404 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,122 @@
+### Starting server for test 
+92624:M 03 May 2025 23:04:49.573 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+92624:M 03 May 2025 23:04:49.573 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+92624:M 03 May 2025 23:04:49.573 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=92624, just started
+92624:M 03 May 2025 23:04:49.573 * Configuration loaded
+92624:M 03 May 2025 23:04:49.573 * Increased maximum number of open files to 10032 (it was originally set to 256).
+92624:M 03 May 2025 23:04:49.573 * monotonic clock: POSIX clock_gettime
+92624:M 03 May 2025 23:04:49.573 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 26134
+ |###|   .+###############+.   |###|    PID: 92624                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+92624:M 03 May 2025 23:04:49.573 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+92624:M 03 May 2025 23:04:49.573 * No cluster configuration found, I'm dc792912f2c0ffacc9010ee5e114b89385445182
+92624:M 03 May 2025 23:04:49.579 * Server initialized
+92624:M 03 May 2025 23:04:49.579 * Ready to accept connections tcp
+92624:M 03 May 2025 23:04:49.579 * Ready to accept connections unix
+92624:M 03 May 2025 23:04:49.743 - Accepted 127.0.0.1:50274
+92624:M 03 May 2025 23:04:49.744 - Client closed connection id=2 addr=127.0.0.1:50274 laddr=127.0.0.1:26134 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+92624:M 03 May 2025 23:04:49.759 - Accepted 127.0.0.1:50279
+92624:M 03 May 2025 23:04:49.947 # Missing implement of connection type tls
+92624:M 03 May 2025 23:04:50.001 - Accepting cluster node connection from 127.0.0.1:50378
+92624:M 03 May 2025 23:04:50.001 * IP address for this node updated to 127.0.0.1
+92624:M 03 May 2025 23:04:50.109 # DEBUG LOG: ========== I am primary 1 ==========
+92624:M 03 May 2025 23:04:51.597 * Cluster state changed: ok
+### Starting test Cluster is up in tests/unit/cluster/half-migrated-slot.tcl
+92624:M 03 May 2025 23:04:51.893 - Accepted 127.0.0.1:51032
+92624:M 03 May 2025 23:04:51.912 - Accepted 127.0.0.1:51034
+92624:M 03 May 2025 23:04:51.912 - Client closed connection id=10 addr=127.0.0.1:51034 laddr=127.0.0.1:26134 fd=18 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=28 tot-net-out=221 tot-cmds=1
+92624:M 03 May 2025 23:04:51.912 - Accepted 127.0.0.1:51036
+92624:M 03 May 2025 23:04:51.912 - Client closed connection id=9 addr=127.0.0.1:51032 laddr=127.0.0.1:26134 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=0 tot-cmds=0
+### Starting test Half init migration in 'migrating' is fixable in tests/unit/cluster/half-migrated-slot.tcl
+92624:M 03 May 2025 23:04:51.934 - Accepted 127.0.0.1:51044
+92624:M 03 May 2025 23:04:51.934 - Client closed connection id=12 addr=127.0.0.1:51044 laddr=127.0.0.1:26134 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|countkeysinslot user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=168 tot-net-out=454 tot-cmds=5
+92624:M 03 May 2025 23:04:51.968 - Accepted 127.0.0.1:51065
+92624:M 03 May 2025 23:04:51.968 - Client closed connection id=13 addr=127.0.0.1:51065 laddr=127.0.0.1:26134 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=446 tot-cmds=3
+### Starting test Half init migration in 'importing' is fixable in tests/unit/cluster/half-migrated-slot.tcl
+92624:M 03 May 2025 23:04:51.969 * Importing slot 609 from node 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45 ()
+92624:M 03 May 2025 23:04:51.977 - Accepted 127.0.0.1:51067
+92624:M 03 May 2025 23:04:51.977 * Marking slot 609 stable
+92624:M 03 May 2025 23:04:51.978 * Assigning slot 609 to node 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45 () in shard 563ccff275e16852efeb96d6e139a3709b61f8a4
+92624:M 03 May 2025 23:04:51.978 - Client closed connection id=14 addr=127.0.0.1:51067 laddr=127.0.0.1:26134 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|setslot user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=321 tot-net-out=562 tot-cmds=7
+92624:M 03 May 2025 23:04:52.003 - Accepted 127.0.0.1:51070
+92624:M 03 May 2025 23:04:52.003 - Client closed connection id=15 addr=127.0.0.1:51070 laddr=127.0.0.1:26134 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=446 tot-cmds=3
+### Starting test Init migration and move key in tests/unit/cluster/half-migrated-slot.tcl
+92624:M 03 May 2025 23:04:52.004 * Importing slot 609 from node 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45 ()
+92624:M 03 May 2025 23:04:52.004 - Accepted 127.0.0.1:51071
+92624:M 03 May 2025 23:04:52.009 - Accepted 127.0.0.1:51073
+92624:M 03 May 2025 23:04:52.009 * Marking slot 609 stable
+92624:M 03 May 2025 23:04:52.010 * New configEpoch set to 2
+92624:M 03 May 2025 23:04:52.022 - Client closed connection id=18 addr=127.0.0.1:51073 laddr=127.0.0.1:26134 fd=19 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=exec user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=360 tot-net-out=614 tot-cmds=11
+92624:M 03 May 2025 23:04:52.040 - Accepted 127.0.0.1:51081
+92624:M 03 May 2025 23:04:52.040 - Client closed connection id=19 addr=127.0.0.1:51081 laddr=127.0.0.1:26134 fd=19 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=470 tot-cmds=3
+92624:M 03 May 2025 23:04:52.041 - Accepted 127.0.0.1:51082
+92624:M 03 May 2025 23:04:52.041 - Client closed connection id=20 addr=127.0.0.1:51082 laddr=127.0.0.1:26134 fd=19 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=28 tot-net-out=233 tot-cmds=1
+92624:M 03 May 2025 23:04:52.041 - Accepted 127.0.0.1:51096
+92624:M 03 May 2025 23:04:52.041 - Client closed connection id=11 addr=127.0.0.1:51036 laddr=127.0.0.1:26134 fd=18 name= age=1 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=9 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=240 tot-net-out=24 tot-cmds=4
+92624:M 03 May 2025 23:04:52.057 - Accepted 127.0.0.1:51103
+92624:M 03 May 2025 23:04:52.057 - Client closed connection id=22 addr=127.0.0.1:51103 laddr=127.0.0.1:26134 fd=18 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=28 tot-net-out=233 tot-cmds=1
+92624:M 03 May 2025 23:04:52.057 - Accepted 127.0.0.1:51105
+92624:M 03 May 2025 23:04:52.057 - Client closed connection id=21 addr=127.0.0.1:51096 laddr=127.0.0.1:26134 fd=19 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=22 tot-net-out=9 tot-cmds=1
+### Starting test Move key again in tests/unit/cluster/half-migrated-slot.tcl
+92624:M 03 May 2025 23:04:52.076 * Migrating slot 609 to node 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45 ()
+### Starting test Half-finish migration in tests/unit/cluster/half-migrated-slot.tcl
+92624:M 03 May 2025 23:04:52.080 * Assigning slot 609 to node 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45 () in shard 563ccff275e16852efeb96d6e139a3709b61f8a4
+92624:M 03 May 2025 23:04:52.084 - Accepted 127.0.0.1:51108
+92624:M 03 May 2025 23:04:52.085 * Assigning slot 609 to node 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45 () in shard 563ccff275e16852efeb96d6e139a3709b61f8a4
+92624:M 03 May 2025 23:04:52.092 - Client closed connection id=26 addr=127.0.0.1:51108 laddr=127.0.0.1:26134 fd=20 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|getkeysinslot user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=331 tot-net-out=6412 tot-cmds=8
+92624:M 03 May 2025 23:04:52.114 - Accepted 127.0.0.1:51114
+92624:M 03 May 2025 23:04:52.116 - Client closed connection id=27 addr=127.0.0.1:51114 laddr=127.0.0.1:26134 fd=20 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86 tot-net-out=6400 tot-cmds=4
+92624:M 03 May 2025 23:04:52.116 - Accepted 127.0.0.1:51121
+92624:M 03 May 2025 23:04:52.116 - Client closed connection id=28 addr=127.0.0.1:51121 laddr=127.0.0.1:26134 fd=20 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=28 tot-net-out=221 tot-cmds=1
+92624:M 03 May 2025 23:04:52.116 - Accepted 127.0.0.1:51123
+92624:M 03 May 2025 23:04:52.116 - Client closed connection id=23 addr=127.0.0.1:51105 laddr=127.0.0.1:26134 fd=18 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=28 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=311 tot-net-out=69 tot-cmds=3
+92624:M 03 May 2025 23:04:52.132 - Accepted 127.0.0.1:51126
+92624:M 03 May 2025 23:04:52.132 - Client closed connection id=30 addr=127.0.0.1:51126 laddr=127.0.0.1:26134 fd=18 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=28 tot-net-out=221 tot-cmds=1
+92624:M 03 May 2025 23:04:52.132 - Accepted 127.0.0.1:51128
+92624:M 03 May 2025 23:04:52.133 - Client closed connection id=29 addr=127.0.0.1:51123 laddr=127.0.0.1:26134 fd=20 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=0 tot-cmds=0
+### Starting test Move key back in tests/unit/cluster/half-migrated-slot.tcl
+92624:M 03 May 2025 23:04:52.154 * Importing slot 609 from node 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45 ()
+### Starting test Half-finish importing in tests/unit/cluster/half-migrated-slot.tcl
+92624:M 03 May 2025 23:04:52.155 * Assigning slot 609 to node dc792912f2c0ffacc9010ee5e114b89385445182 () in shard b847763aa4ed8999db78902946e2eea6f8312df4
+92624:M 03 May 2025 23:04:52.155 * New configEpoch set to 4
+92624:M 03 May 2025 23:04:52.155 * ConfigEpoch updated after importing slot 609
+92624:M 03 May 2025 23:04:52.165 - Accepted 127.0.0.1:51150
+92624:M 03 May 2025 23:04:52.166 - Client closed connection id=32 addr=127.0.0.1:51150 laddr=127.0.0.1:26134 fd=20 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=470 tot-cmds=3
+92624:M 03 May 2025 23:04:52.183 - Accepted 127.0.0.1:51161
+92624:M 03 May 2025 23:04:52.184 - Client closed connection id=33 addr=127.0.0.1:51161 laddr=127.0.0.1:26134 fd=20 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=470 tot-cmds=3
+92624:M 03 May 2025 23:04:52.185 - Accepted 127.0.0.1:51162
+92624:M 03 May 2025 23:04:52.185 - Client closed connection id=34 addr=127.0.0.1:51162 laddr=127.0.0.1:26134 fd=20 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=28 tot-net-out=233 tot-cmds=1
+92624:M 03 May 2025 23:04:52.186 - Accepted 127.0.0.1:51164
+92624:M 03 May 2025 23:04:52.186 - Client closed connection id=31 addr=127.0.0.1:51128 laddr=127.0.0.1:26134 fd=18 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|setslot user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=235 tot-net-out=24 tot-cmds=4
+### Starting test Check for memory leaks (pid 92678) in tests/unit/cluster/half-migrated-slot.tcl
+92624:M 03 May 2025 23:04:53.403 - Client closed connection id=16 addr=127.0.0.1:51071 laddr=127.0.0.1:26134 fd=17 name= age=1 idle=1 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=5 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=restore-asking user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=149 tot-net-out=15 tot-cmds=3
+92624:M 03 May 2025 23:04:53.411 - Connection with Node 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45 at 127.0.0.1:36135 failed: Connection refused
+92624:M 03 May 2025 23:04:53.449 - Client closed connection id=3 addr=127.0.0.1:50279 laddr=127.0.0.1:26134 fd=14 name= age=4 idle=1 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=518 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=940 tot-net-out=8677 tot-cmds=28
+92624:M 03 May 2025 23:04:53.511 - Connection with Node 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45 at 127.0.0.1:36135 failed: Connection refused
+92624:M 03 May 2025 23:04:53.613 - Connection with Node 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45 at 127.0.0.1:36135 failed: Connection refused
+92624:M 03 May 2025 23:04:53.714 - Connection with Node 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45 at 127.0.0.1:36135 failed: Connection refused
+92624:M 03 May 2025 23:04:54.653 - Connection with Node 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45 at 127.0.0.1:36135 failed: Connection refused
+92624:signal-handler (1746281094) Received SIGTERM scheduling shutdown...
+92624:M 03 May 2025 23:04:54.754 * User requested shutdown...
+92624:M 03 May 2025 23:04:54.754 * Removing the pid file.
+92624:M 03 May 2025 23:04:54.754 * Saving the cluster configuration file before exiting.
+92624:M 03 May 2025 23:04:54.760 * Removing the unix socket file.
+92624:M 03 May 2025 23:04:54.760 # Valkey is now ready to exit, bye bye...

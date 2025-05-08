@@ -1,0 +1,128 @@
+### Starting server for test 
+94757:M 03 May 2025 23:05:07.770 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+94757:M 03 May 2025 23:05:07.770 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+94757:M 03 May 2025 23:05:07.770 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=94757, just started
+94757:M 03 May 2025 23:05:07.770 * Configuration loaded
+94757:M 03 May 2025 23:05:07.770 * Increased maximum number of open files to 10032 (it was originally set to 256).
+94757:M 03 May 2025 23:05:07.773 * monotonic clock: POSIX clock_gettime
+94757:M 03 May 2025 23:05:07.774 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25136
+ |###|   .+###############+.   |###|    PID: 94757                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+94757:M 03 May 2025 23:05:07.776 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+94757:M 03 May 2025 23:05:07.776 * No cluster configuration found, I'm f6df331807cd72487c6a240a080fc7f1ac1c32ea
+94757:M 03 May 2025 23:05:07.803 * Server initialized
+94757:M 03 May 2025 23:05:07.805 * Ready to accept connections tcp
+94757:M 03 May 2025 23:05:07.811 * Ready to accept connections unix
+94757:M 03 May 2025 23:05:07.922 - Accepted 127.0.0.1:56904
+94757:M 03 May 2025 23:05:07.926 - Client closed connection id=2 addr=127.0.0.1:56904 laddr=127.0.0.1:25136 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+94757:M 03 May 2025 23:05:07.947 - Accepted 127.0.0.1:56928
+94757:M 03 May 2025 23:05:08.379 - Accepted 127.0.0.1:57339
+### Starting test Create 3 node cluster in tests/unit/cluster/cli.tcl
+94757:M 03 May 2025 23:05:08.425 - Accepted 127.0.0.1:57361
+94757:M 03 May 2025 23:05:08.426 # Missing implement of connection type tls
+94757:M 03 May 2025 23:05:08.449 * configEpoch set to 3 via CLUSTER SET-CONFIG-EPOCH
+94757:M 03 May 2025 23:05:08.450 * Cluster meet 127.0.0.1:25138 (user request from 'id=5 addr=127.0.0.1:57361 laddr=127.0.0.1:25136 fd=16 name= user=default lib-name= lib-ver=').
+94757:M 03 May 2025 23:05:08.575 - Accepting cluster node connection from 127.0.0.1:57507
+94757:M 03 May 2025 23:05:08.577 * IP address for this node updated to 127.0.0.1
+94757:M 03 May 2025 23:05:08.583 * Successfully completed handshake with a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 ()
+94757:M 03 May 2025 23:05:09.050 - Accepting cluster node connection from 127.0.0.1:57940
+94757:M 03 May 2025 23:05:09.454 - Client closed connection id=5 addr=127.0.0.1:57361 laddr=127.0.0.1:25136 fd=16 name= age=1 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=333 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=60316 tot-net-out=12577 tot-cmds=8
+94757:M 03 May 2025 23:05:09.461 - Accepted 127.0.0.1:58352
+94757:M 03 May 2025 23:05:09.461 - Client closed connection id=6 addr=127.0.0.1:58352 laddr=127.0.0.1:25136 fd=16 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56 tot-net-out=666 tot-cmds=2
+94757:M 03 May 2025 23:05:09.839 * Cluster state changed: ok
+### Starting test Run blocking command on cluster node3 in tests/unit/cluster/cli.tcl
+### Starting test Perform a Resharding in tests/unit/cluster/cli.tcl
+94757:M 03 May 2025 23:05:10.385 - Accepted 127.0.0.1:59234
+94757:M 03 May 2025 23:05:10.387 * Migrating slot 10923 to node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 ()
+94757:M 03 May 2025 23:05:10.393 * Slot 10923 is migrated from node f6df331807cd72487c6a240a080fc7f1ac1c32ea () in shard 2c1d7c83ddac68c5afa5c817fa13c343b08f4773 to node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 () in shard 0a22476a9f3b97b246c1342c569d4cd9cab86a94.
+94757:M 03 May 2025 23:05:10.393 * Slot 10923 is no longer being migrated to node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 () in shard 0a22476a9f3b97b246c1342c569d4cd9cab86a94.
+94757:M 03 May 2025 23:05:10.401 * Assigning slot 10923 to node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 () in shard 0a22476a9f3b97b246c1342c569d4cd9cab86a94
+94757:M 03 May 2025 23:05:10.403 - Client closed connection id=7 addr=127.0.0.1:59234 laddr=127.0.0.1:25136 fd=16 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|setslot user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=327 tot-net-out=6609 tot-cmds=6
+### Starting test Verify command got unblocked after resharding in tests/unit/cluster/cli.tcl
+### Starting test Wait for cluster to be stable in tests/unit/cluster/cli.tcl
+94757:M 03 May 2025 23:05:10.483 - Accepted 127.0.0.1:59328
+94757:M 03 May 2025 23:05:10.488 - Client closed connection id=8 addr=127.0.0.1:59328 laddr=127.0.0.1:25136 fd=16 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=682 tot-cmds=3
+94757:M 03 May 2025 23:05:10.497 - Accepted 127.0.0.1:59344
+94757:M 03 May 2025 23:05:10.509 - Client closed connection id=9 addr=127.0.0.1:59344 laddr=127.0.0.1:25136 fd=16 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=682 tot-cmds=3
+94757:M 03 May 2025 23:05:10.529 - Accepted 127.0.0.1:59377
+94757:M 03 May 2025 23:05:10.532 - Client closed connection id=10 addr=127.0.0.1:59377 laddr=127.0.0.1:25136 fd=16 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86 tot-net-out=6638 tot-cmds=4
+### Starting test use previous hostip in "cluster-preferred-endpoint-type unknown-endpoint" mode in tests/unit/cluster/cli.tcl
+94757:M 03 May 2025 23:05:10.554 - Accepted 127.0.0.1:59407
+94757:M 03 May 2025 23:05:10.555 - Client closed connection id=11 addr=127.0.0.1:59407 laddr=127.0.0.1:25136 fd=16 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=31 tot-net-out=5 tot-cmds=1
+94757:M 03 May 2025 23:05:10.577 - Accepted 127.0.0.1:59438
+94757:M 03 May 2025 23:05:10.579 - Client closed connection id=12 addr=127.0.0.1:59438 laddr=127.0.0.1:25136 fd=16 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=22 tot-net-out=9 tot-cmds=1
+### Starting test Sanity test push cmd after resharding in tests/unit/cluster/cli.tcl
+### Starting test Run blocking command again on cluster node1 in tests/unit/cluster/cli.tcl
+94757:M 03 May 2025 23:05:10.588 - Client closed connection id=4 addr=127.0.0.1:57339 laddr=127.0.0.1:25136 fd=15 name= age=2 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=30 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=brpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=53 tot-net-out=37 tot-cmds=2
+### Starting test Kill a cluster node and wait for fail state in tests/unit/cluster/cli.tcl
+### Starting test Verify command got unblocked after cluster failure in tests/unit/cluster/cli.tcl
+94757:M 03 May 2025 23:05:12.037 - Accepting cluster node connection from 127.0.0.1:60172
+94757:M 03 May 2025 23:05:12.039 - Accepting cluster node connection from 127.0.0.1:60189
+### Starting test Check for memory leaks (pid 94814) in tests/unit/cluster/cli.tcl
+### Starting test Check for memory leaks (pid 94781) in tests/unit/cluster/cli.tcl
+94757:M 03 May 2025 23:05:13.247 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:13.348 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:13.449 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:13.550 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:13.651 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:13.753 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:13.857 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:13.972 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:14.072 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:14.175 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:14.276 - DB 0: 1 keys (0 volatile) in 7 slots HT.
+94757:M 03 May 2025 23:05:14.276 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:14.379 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:14.480 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:14.582 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:14.683 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:14.685 - Connection with Node ca2b4e146fbe1e947c00c69acc669e5e14defcfb at 127.0.0.1:35137 failed: Connection refused
+94757:M 03 May 2025 23:05:14.701 - Client closed connection id=3 addr=127.0.0.1:56928 laddr=127.0.0.1:25136 fd=14 name= age=7 idle=4 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=lpush user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=149 tot-net-out=12981 tot-cmds=5
+94757:M 03 May 2025 23:05:14.784 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:14.785 - Connection with Node ca2b4e146fbe1e947c00c69acc669e5e14defcfb at 127.0.0.1:35137 failed: Connection refused
+94757:M 03 May 2025 23:05:14.888 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:14.888 - Connection with Node ca2b4e146fbe1e947c00c69acc669e5e14defcfb at 127.0.0.1:35137 failed: Connection refused
+94757:M 03 May 2025 23:05:14.989 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:14.991 - Connection with Node ca2b4e146fbe1e947c00c69acc669e5e14defcfb at 127.0.0.1:35137 failed: Connection refused
+94757:M 03 May 2025 23:05:15.089 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:15.094 - Connection with Node ca2b4e146fbe1e947c00c69acc669e5e14defcfb at 127.0.0.1:35137 failed: Connection refused
+94757:M 03 May 2025 23:05:15.191 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:15.196 - Connection with Node ca2b4e146fbe1e947c00c69acc669e5e14defcfb at 127.0.0.1:35137 failed: Connection refused
+94757:M 03 May 2025 23:05:15.292 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:15.295 - Connection with Node ca2b4e146fbe1e947c00c69acc669e5e14defcfb at 127.0.0.1:35137 failed: Connection refused
+94757:M 03 May 2025 23:05:15.393 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:15.394 - Connection with Node ca2b4e146fbe1e947c00c69acc669e5e14defcfb at 127.0.0.1:35137 failed: Connection refused
+94757:M 03 May 2025 23:05:15.494 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:15.494 - Connection with Node ca2b4e146fbe1e947c00c69acc669e5e14defcfb at 127.0.0.1:35137 failed: Connection refused
+94757:M 03 May 2025 23:05:15.596 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:15.596 - Connection with Node ca2b4e146fbe1e947c00c69acc669e5e14defcfb at 127.0.0.1:35137 failed: Connection refused
+94757:M 03 May 2025 23:05:15.697 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:15.699 - Connection with Node ca2b4e146fbe1e947c00c69acc669e5e14defcfb at 127.0.0.1:35137 failed: Connection refused
+94757:M 03 May 2025 23:05:16.846 # Cluster state changed: fail
+94757:M 03 May 2025 23:05:16.847 # Cluster is currently down: I am part of a minority partition.
+94757:M 03 May 2025 23:05:16.847 - Connection with Node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 at 127.0.0.1:35138 failed: Connection refused
+94757:M 03 May 2025 23:05:16.847 - Connection with Node ca2b4e146fbe1e947c00c69acc669e5e14defcfb at 127.0.0.1:35137 failed: Connection refused
+94757:signal-handler (1746281116) Received SIGTERM scheduling shutdown...
+94757:M 03 May 2025 23:05:16.948 * User requested shutdown...
+94757:M 03 May 2025 23:05:16.948 * Removing the pid file.
+94757:M 03 May 2025 23:05:16.950 * Saving the cluster configuration file before exiting.
+94757:M 03 May 2025 23:05:16.999 * Removing the unix socket file.
+94757:M 03 May 2025 23:05:17.002 # Valkey is now ready to exit, bye bye...

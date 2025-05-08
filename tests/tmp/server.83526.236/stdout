@@ -1,0 +1,119 @@
+### Starting server for test 
+9581:M 03 May 2025 23:07:21.544 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+9581:M 03 May 2025 23:07:21.544 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=9581, just started
+9581:M 03 May 2025 23:07:21.544 * Configuration loaded
+9581:M 03 May 2025 23:07:21.545 * Increased maximum number of open files to 10032 (it was originally set to 256).
+9581:M 03 May 2025 23:07:21.545 * monotonic clock: POSIX clock_gettime
+9581:M 03 May 2025 23:07:21.545 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21728
+ |###|   .+###############+.   |###|    PID: 9581                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+9581:M 03 May 2025 23:07:21.545 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+9581:M 03 May 2025 23:07:21.546 * Server initialized
+9581:M 03 May 2025 23:07:21.546 * Ready to accept connections tcp
+9581:M 03 May 2025 23:07:21.546 * Ready to accept connections unix
+9581:M 03 May 2025 23:07:21.674 - Accepted 127.0.0.1:55365
+9581:M 03 May 2025 23:07:21.675 - Client closed connection id=2 addr=127.0.0.1:55365 laddr=127.0.0.1:21728 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+9581:M 03 May 2025 23:07:21.695 - Accepted 127.0.0.1:55374
+9581:S 03 May 2025 23:07:22.015 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+9581:S 03 May 2025 23:07:22.015 * Connecting to PRIMARY 127.0.0.1:21730
+9581:S 03 May 2025 23:07:22.015 * PRIMARY <-> REPLICA sync started
+9581:S 03 May 2025 23:07:22.015 * REPLICAOF 127.0.0.1:21730 enabled (user request from 'id=3 addr=127.0.0.1:55374 laddr=127.0.0.1:21728 fd=12 name= user=default lib-name= lib-ver=')
+9581:S 03 May 2025 23:07:22.015 * Non blocking connect for SYNC fired the event.
+9581:S 03 May 2025 23:07:22.016 * Primary replied to PING, replication can continue...
+9581:S 03 May 2025 23:07:22.016 * Trying a partial resynchronization (request 3f7d148010ec04361d97d1d0d50a1f6db9fd57ce:1).
+9581:S 03 May 2025 23:07:22.016 * Full resync from primary: 3effe112f686d1a9ea53338bc00c37ce2d8975b0:0
+9581:S 03 May 2025 23:07:22.018 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+9581:S 03 May 2025 23:07:22.022 * Discarding previously cached primary state.
+9581:S 03 May 2025 23:07:22.022 * PRIMARY <-> REPLICA sync: Flushing old data
+9581:S 03 May 2025 23:07:22.022 * PRIMARY <-> REPLICA sync: Loading DB in memory
+9581:S 03 May 2025 23:07:22.023 * Loading RDB produced by Valkey version 255.255.255
+9581:S 03 May 2025 23:07:22.023 * RDB age 0 seconds
+9581:S 03 May 2025 23:07:22.023 * RDB memory usage when created 1.20 Mb
+9581:S 03 May 2025 23:07:22.023 * Done loading RDB, keys loaded: 0, keys expired: 0.
+9581:S 03 May 2025 23:07:22.023 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test Replication backlog size can outgrow the backlog limit config dualchannel no in tests/integration/replication-buffer.tcl
+9581:S 03 May 2025 23:07:26.569 - DB 9: 14532 keys (0 volatile) in 43008 slots HT.
+### Starting test Replica could use replication buffer (beyond backlog config) for partial resynchronization  dualchannel no in tests/integration/replication-buffer.tcl
+9581:M 03 May 2025 23:07:27.893 * Connection with primary lost.
+9581:M 03 May 2025 23:07:27.893 * Caching the disconnected primary state.
+9581:S 03 May 2025 23:07:27.893 * Connecting to PRIMARY 127.0.0.1:21729
+9581:S 03 May 2025 23:07:27.893 * PRIMARY <-> REPLICA sync started
+9581:S 03 May 2025 23:07:27.893 * REPLICAOF 127.0.0.1:21729 enabled (user request from 'id=3 addr=127.0.0.1:55374 laddr=127.0.0.1:21728 fd=12 name= user=default lib-name= lib-ver=')
+9581:S 03 May 2025 23:07:27.893 * Non blocking connect for SYNC fired the event.
+9581:S 03 May 2025 23:07:27.895 * Primary replied to PING, replication can continue...
+9581:S 03 May 2025 23:07:27.895 * Trying a partial resynchronization (request 3effe112f686d1a9ea53338bc00c37ce2d8975b0:210845827).
+9581:S 03 May 2025 23:07:27.895 * Primary is currently unable to PSYNC but should be in the future: -NOMASTERLINK Can't SYNC while not connected with my master
+9581:S 03 May 2025 23:07:28.581 * Connecting to PRIMARY 127.0.0.1:21729
+9581:S 03 May 2025 23:07:28.581 * PRIMARY <-> REPLICA sync started
+9581:S 03 May 2025 23:07:28.582 * Non blocking connect for SYNC fired the event.
+9581:S 03 May 2025 23:07:28.582 * Primary replied to PING, replication can continue...
+9581:S 03 May 2025 23:07:28.582 * Trying a partial resynchronization (request 3effe112f686d1a9ea53338bc00c37ce2d8975b0:210845827).
+9581:S 03 May 2025 23:07:28.582 * Primary is currently unable to PSYNC but should be in the future: -NOMASTERLINK Can't SYNC while not connected with my master
+9581:S 03 May 2025 23:07:29.590 * Connecting to PRIMARY 127.0.0.1:21729
+9581:S 03 May 2025 23:07:29.590 * PRIMARY <-> REPLICA sync started
+9581:S 03 May 2025 23:07:29.590 * Non blocking connect for SYNC fired the event.
+9581:S 03 May 2025 23:07:29.590 * Primary replied to PING, replication can continue...
+9581:S 03 May 2025 23:07:29.591 * Trying a partial resynchronization (request 3effe112f686d1a9ea53338bc00c37ce2d8975b0:210845827).
+9581:S 03 May 2025 23:07:29.591 * Primary is currently unable to PSYNC but should be in the future: -NOMASTERLINK Can't SYNC while not connected with my master
+9581:S 03 May 2025 23:07:29.778 * Connecting to PRIMARY 127.0.0.1:21730
+9581:S 03 May 2025 23:07:29.778 * PRIMARY <-> REPLICA sync started
+9581:S 03 May 2025 23:07:29.778 * REPLICAOF 127.0.0.1:21730 enabled (user request from 'id=3 addr=127.0.0.1:55374 laddr=127.0.0.1:21728 fd=12 name= user=default lib-name= lib-ver=')
+9581:S 03 May 2025 23:07:29.778 * Non blocking connect for SYNC fired the event.
+9581:S 03 May 2025 23:07:29.778 * Primary replied to PING, replication can continue...
+9581:S 03 May 2025 23:07:29.779 * Trying a partial resynchronization (request 3effe112f686d1a9ea53338bc00c37ce2d8975b0:210845827).
+9581:S 03 May 2025 23:07:29.779 * Successful partial resynchronization with primary.
+9581:S 03 May 2025 23:07:29.779 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test Replication backlog memory will become smaller if disconnecting with replica dualchannel no in tests/integration/replication-buffer.tcl
+9581:S 03 May 2025 23:07:30.895 - Client closed connection id=5 addr=127.0.0.1:21730 laddr=127.0.0.1:56131 fd=13 name= age=8 idle=1 flags=M capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=65530 argv-mem=0 multi-mem=0 rbs=1024 rbp=42 obl=0 oll=0 omem=0 tot-mem=67072 events=r cmd=set user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=311243716 tot-net-out=283 tot-cmds=31002
+9581:S 03 May 2025 23:07:30.896 * Connection with primary lost.
+9581:S 03 May 2025 23:07:30.896 * Caching the disconnected primary state.
+9581:S 03 May 2025 23:07:30.896 * Reconnecting to PRIMARY 127.0.0.1:21730
+9581:S 03 May 2025 23:07:30.896 * PRIMARY <-> REPLICA sync started
+9581:S 03 May 2025 23:07:30.896 * Non blocking connect for SYNC fired the event.
+9581:S 03 May 2025 23:07:30.897 * Primary replied to PING, replication can continue...
+9581:S 03 May 2025 23:07:30.897 * Trying a partial resynchronization (request 3effe112f686d1a9ea53338bc00c37ce2d8975b0:311243717).
+9581:S 03 May 2025 23:07:30.898 * Successful partial resynchronization with primary.
+9581:S 03 May 2025 23:07:30.898 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test Check for memory leaks (pid 9631) in tests/integration/replication-buffer.tcl
+9581:S 03 May 2025 23:07:32.087 - DB 9: 20001 keys (0 volatile) in 28672 slots HT.
+9581:S 03 May 2025 23:07:34.932 - Client closed connection id=5 addr=127.0.0.1:21730 laddr=127.0.0.1:56290 fd=13 name= age=12 idle=4 flags=M capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=65530 argv-mem=0 multi-mem=0 rbs=1024 rbp=42 obl=0 oll=0 omem=0 tot-mem=67072 events=r cmd=set user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=311374821 tot-net-out=451 tot-cmds=31003
+9581:S 03 May 2025 23:07:34.932 * Connection with primary lost.
+9581:S 03 May 2025 23:07:34.932 * Caching the disconnected primary state.
+9581:S 03 May 2025 23:07:34.932 * Reconnecting to PRIMARY 127.0.0.1:21730
+9581:S 03 May 2025 23:07:34.932 * PRIMARY <-> REPLICA sync started
+9581:S 03 May 2025 23:07:34.932 # Error condition on socket for SYNC: Connection refused
+### Starting test Check for memory leaks (pid 9609) in tests/integration/replication-buffer.tcl
+9581:S 03 May 2025 23:07:35.119 * Connecting to PRIMARY 127.0.0.1:21730
+9581:S 03 May 2025 23:07:35.119 * PRIMARY <-> REPLICA sync started
+9581:S 03 May 2025 23:07:35.119 # Error condition on socket for SYNC: Connection refused
+9581:S 03 May 2025 23:07:36.127 * Connecting to PRIMARY 127.0.0.1:21730
+9581:S 03 May 2025 23:07:36.127 * PRIMARY <-> REPLICA sync started
+9581:S 03 May 2025 23:07:36.128 # Error condition on socket for SYNC: Connection refused
+9581:S 03 May 2025 23:07:37.137 - DB 9: 20001 keys (0 volatile) in 28672 slots HT.
+9581:S 03 May 2025 23:07:37.137 * Connecting to PRIMARY 127.0.0.1:21730
+9581:S 03 May 2025 23:07:37.137 * PRIMARY <-> REPLICA sync started
+9581:S 03 May 2025 23:07:37.137 # Error condition on socket for SYNC: Connection refused
+9581:S 03 May 2025 23:07:37.507 - Client closed connection id=3 addr=127.0.0.1:55374 laddr=127.0.0.1:21728 fd=12 name= age=16 idle=7 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=476 tot-net-out=37568 tot-cmds=14
+9581:signal-handler (1746281261) Received SIGTERM scheduling shutdown...
+9581:S 03 May 2025 23:07:41.471 * User requested shutdown...
+9581:S 03 May 2025 23:07:41.471 * Removing the pid file.
+9581:S 03 May 2025 23:07:41.471 * Removing the unix socket file.
+9581:S 03 May 2025 23:07:41.471 # Valkey is now ready to exit, bye bye...

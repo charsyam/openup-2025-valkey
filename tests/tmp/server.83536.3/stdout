@@ -1,0 +1,68 @@
+### Starting server for test 
+84004:M 03 May 2025 23:03:46.475 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+84004:M 03 May 2025 23:03:46.475 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=84004, just started
+84004:M 03 May 2025 23:03:46.475 * Configuration loaded
+84004:M 03 May 2025 23:03:46.475 * Increased maximum number of open files to 10032 (it was originally set to 256).
+84004:M 03 May 2025 23:03:46.475 * monotonic clock: POSIX clock_gettime
+84004:M 03 May 2025 23:03:46.475 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26612
+ |###|   .+###############+.   |###|    PID: 84004                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+84004:M 03 May 2025 23:03:46.475 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+84004:M 03 May 2025 23:03:46.476 * Server initialized
+84004:M 03 May 2025 23:03:46.476 * Ready to accept connections tcp
+84004:M 03 May 2025 23:03:46.476 * Ready to accept connections unix
+84004:M 03 May 2025 23:03:46.607 - Accepted 127.0.0.1:58817
+84004:M 03 May 2025 23:03:46.607 - Client closed connection id=2 addr=127.0.0.1:58817 laddr=127.0.0.1:26612 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+84004:M 03 May 2025 23:03:46.625 - Accepted 127.0.0.1:58818
+### Starting test HyperLogLog self test passes in tests/unit/hyperloglog.tcl
+### Starting test PFADD without arguments creates an HLL value in tests/unit/hyperloglog.tcl
+### Starting test Approximated cardinality after creation is zero in tests/unit/hyperloglog.tcl
+### Starting test PFADD returns 1 when at least 1 reg was modified in tests/unit/hyperloglog.tcl
+### Starting test PFADD returns 0 when no reg was modified in tests/unit/hyperloglog.tcl
+### Starting test PFADD works with empty string (regression) in tests/unit/hyperloglog.tcl
+### Starting test PFCOUNT returns approximated cardinality of set in tests/unit/hyperloglog.tcl
+### Starting test HyperLogLogs are promote from sparse to dense in tests/unit/hyperloglog.tcl
+### Starting test Change hll-sparse-max-bytes in tests/unit/hyperloglog.tcl
+### Starting test Hyperloglog promote to dense well in different hll-sparse-max-bytes in tests/unit/hyperloglog.tcl
+### Starting test HyperLogLog sparse encoding stress test in tests/unit/hyperloglog.tcl
+### Starting test Corrupted sparse HyperLogLogs are detected: Additional at tail in tests/unit/hyperloglog.tcl
+### Starting test Corrupted sparse HyperLogLogs are detected: Broken magic in tests/unit/hyperloglog.tcl
+### Starting test Corrupted sparse HyperLogLogs are detected: Invalid encoding in tests/unit/hyperloglog.tcl
+### Starting test Corrupted dense HyperLogLogs are detected: Wrong length in tests/unit/hyperloglog.tcl
+### Starting test Fuzzing dense/sparse encoding: Server should always detect errors in tests/unit/hyperloglog.tcl
+84004:M 03 May 2025 23:03:51.629 - DB 9: 3 keys (0 volatile) in 7 slots HT.
+### Starting test PFADD, PFCOUNT, PFMERGE type checking works in tests/unit/hyperloglog.tcl
+### Starting test PFMERGE results on the cardinality of union of sets in tests/unit/hyperloglog.tcl
+### Starting test PFMERGE on missing source keys will create an empty destkey in tests/unit/hyperloglog.tcl
+### Starting test PFMERGE with one empty input key, create an empty destkey in tests/unit/hyperloglog.tcl
+### Starting test PFMERGE with one non-empty input key, dest key is actually one of the source keys in tests/unit/hyperloglog.tcl
+### Starting test PFMERGE results with simd in tests/unit/hyperloglog.tcl
+### Starting test PFCOUNT multiple-keys merge returns cardinality of union #1 in tests/unit/hyperloglog.tcl
+84004:M 03 May 2025 23:03:56.639 - DB 9: 13 keys (0 volatile) in 14 slots HT.
+### Starting test PFCOUNT multiple-keys merge returns cardinality of union #2 in tests/unit/hyperloglog.tcl
+### Starting test PFDEBUG GETREG returns the HyperLogLog raw registers in tests/unit/hyperloglog.tcl
+### Starting test PFADD / PFCOUNT cache invalidation works in tests/unit/hyperloglog.tcl
+84004:M 03 May 2025 23:03:59.391 - Client closed connection id=3 addr=127.0.0.1:58818 laddr=127.0.0.1:26612 fd=12 name= age=13 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=getrange user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=47387509 tot-net-out=600520 tot-cmds=104454
+84004:signal-handler (1746281040) Received SIGTERM scheduling shutdown...
+84004:M 03 May 2025 23:04:01.021 * User requested shutdown...
+84004:M 03 May 2025 23:04:01.021 * Removing the pid file.
+84004:M 03 May 2025 23:04:01.021 * Removing the unix socket file.
+84004:M 03 May 2025 23:04:01.021 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,119 @@
+### Starting server for test 
+86037:M 03 May 2025 23:04:03.799 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+86037:M 03 May 2025 23:04:03.800 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=86037, just started
+86037:M 03 May 2025 23:04:03.800 * Configuration loaded
+86037:M 03 May 2025 23:04:03.800 * Increased maximum number of open files to 10032 (it was originally set to 256).
+86037:M 03 May 2025 23:04:03.800 * monotonic clock: POSIX clock_gettime
+86037:M 03 May 2025 23:04:03.801 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27119
+ |###|   .+###############+.   |###|    PID: 86037                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+86037:M 03 May 2025 23:04:03.801 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+86037:M 03 May 2025 23:04:03.801 * Server initialized
+86037:M 03 May 2025 23:04:03.801 * Ready to accept connections tcp
+86037:M 03 May 2025 23:04:03.801 * Ready to accept connections unix
+86037:M 03 May 2025 23:04:03.926 - Accepted 127.0.0.1:59315
+86037:M 03 May 2025 23:04:03.926 - Client closed connection id=2 addr=127.0.0.1:59315 laddr=127.0.0.1:27119 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+86037:M 03 May 2025 23:04:03.940 - Accepted 127.0.0.1:59316
+### Starting test FUNCTION - Basic usage in tests/unit/functions.tcl
+### Starting test FUNCTION - Load with unknown argument in tests/unit/functions.tcl
+### Starting test FUNCTION - Create an already exiting library raise error in tests/unit/functions.tcl
+### Starting test FUNCTION - Create an already exiting library raise error (case insensitive) in tests/unit/functions.tcl
+### Starting test FUNCTION - Create a library with wrong name format in tests/unit/functions.tcl
+### Starting test FUNCTION - Create library with unexisting engine in tests/unit/functions.tcl
+### Starting test FUNCTION - Test uncompiled script in tests/unit/functions.tcl
+### Starting test FUNCTION - test replace argument in tests/unit/functions.tcl
+### Starting test FUNCTION - test function case insensitive in tests/unit/functions.tcl
+### Starting test FUNCTION - test replace argument with failure keeps old libraries in tests/unit/functions.tcl
+### Starting test FUNCTION - test function delete in tests/unit/functions.tcl
+### Starting test FUNCTION - test fcall bad arguments in tests/unit/functions.tcl
+### Starting test FUNCTION - test fcall bad number of keys arguments in tests/unit/functions.tcl
+### Starting test FUNCTION - test fcall negative number of keys in tests/unit/functions.tcl
+### Starting test FUNCTION - test delete on not exiting library in tests/unit/functions.tcl
+### Starting test FUNCTION - test function kill when function is not running in tests/unit/functions.tcl
+### Starting test FUNCTION - test wrong subcommand in tests/unit/functions.tcl
+### Starting test FUNCTION - test loading from rdb in tests/unit/functions.tcl
+86037:M 03 May 2025 23:04:03.950 * DB saved on disk
+86037:M 03 May 2025 23:04:03.950 * Loading RDB produced by Valkey version 255.255.255
+86037:M 03 May 2025 23:04:03.950 * RDB age 0 seconds
+86037:M 03 May 2025 23:04:03.950 * RDB memory usage when created 1.21 Mb
+86037:M 03 May 2025 23:04:03.950 * Done loading RDB, keys loaded: 0, keys expired: 0.
+86037:M 03 May 2025 23:04:03.950 * DB reloaded by DEBUG RELOAD
+### Starting test FUNCTION - test debug reload different options in tests/unit/functions.tcl
+86037:M 03 May 2025 23:04:03.953 * DB saved on disk
+86037:M 03 May 2025 23:04:03.953 * Loading RDB produced by Valkey version 255.255.255
+86037:M 03 May 2025 23:04:03.953 * RDB age 0 seconds
+86037:M 03 May 2025 23:04:03.953 * RDB memory usage when created 1.25 Mb
+86037:M 03 May 2025 23:04:03.953 # Failed loading library, Library 'test' already exists
+86037:M 03 May 2025 23:04:03.953 # Short read or OOM loading DB. Unrecoverable error, aborting now.
+86037:M 03 May 2025 23:04:03.953 - Internal error in RDB reading offset 0, function at rdb.c:3415 -> Unexpected EOF reading RDB file
+86037:M 03 May 2025 23:04:03.955 * DB saved on disk
+86037:M 03 May 2025 23:04:03.955 * Loading RDB produced by Valkey version 255.255.255
+86037:M 03 May 2025 23:04:03.955 * RDB age 0 seconds
+86037:M 03 May 2025 23:04:03.955 * RDB memory usage when created 1.25 Mb
+86037:M 03 May 2025 23:04:03.955 * Done loading RDB, keys loaded: 0, keys expired: 0.
+86037:M 03 May 2025 23:04:03.955 * DB reloaded by DEBUG RELOAD
+### Starting test FUNCTION - test debug reload with nosave and noflush in tests/unit/functions.tcl
+86037:M 03 May 2025 23:04:03.959 * DB saved on disk
+86037:M 03 May 2025 23:04:03.959 * Loading RDB produced by Valkey version 255.255.255
+86037:M 03 May 2025 23:04:03.959 * RDB age 0 seconds
+86037:M 03 May 2025 23:04:03.959 * RDB memory usage when created 1.29 Mb
+86037:M 03 May 2025 23:04:03.959 * Done loading RDB, keys loaded: 1, keys expired: 0.
+86037:M 03 May 2025 23:04:03.959 * DB reloaded by DEBUG RELOAD
+86037:M 03 May 2025 23:04:03.959 * Loading RDB produced by Valkey version 255.255.255
+86037:M 03 May 2025 23:04:03.959 * RDB age 0 seconds
+86037:M 03 May 2025 23:04:03.959 * RDB memory usage when created 1.29 Mb
+86037:M 03 May 2025 23:04:03.959 * Done loading RDB, keys loaded: 1, keys expired: 0.
+86037:M 03 May 2025 23:04:03.959 * DB reloaded by DEBUG RELOAD
+### Starting test FUNCTION - test flushall and flushdb do not clean functions in tests/unit/functions.tcl
+### Starting test FUNCTION - test function dump and restore in tests/unit/functions.tcl
+### Starting test FUNCTION - test function dump and restore with flush argument in tests/unit/functions.tcl
+### Starting test FUNCTION - test function dump and restore with append argument in tests/unit/functions.tcl
+### Starting test FUNCTION - test function dump and restore with replace argument in tests/unit/functions.tcl
+### Starting test FUNCTION - test function restore with bad payload do not drop existing functions in tests/unit/functions.tcl
+### Starting test FUNCTION - test function restore with wrong number of arguments in tests/unit/functions.tcl
+### Starting test FUNCTION - test fcall_ro with write command in tests/unit/functions.tcl
+### Starting test FUNCTION - test fcall_ro with read only commands in tests/unit/functions.tcl
+### Starting test FUNCTION - test keys and argv in tests/unit/functions.tcl
+### Starting test FUNCTION - test command get keys on fcall in tests/unit/functions.tcl
+### Starting test FUNCTION - test command get keys on fcall_ro in tests/unit/functions.tcl
+### Starting test FUNCTION - test function kill in tests/unit/functions.tcl
+86037:M 03 May 2025 23:04:03.964 - Accepted 127.0.0.1:59317
+86037:M 03 May 2025 23:04:03.975 # Slow script detected: still in execution after 10 milliseconds. You can try killing the script using the FUNCTION KILL command. Script name is: test.
+86037:M 03 May 2025 23:04:04.169 * Script killed by user with FUNCTION KILL.
+### Starting test FUNCTION - test script kill not working on function in tests/unit/functions.tcl
+86037:M 03 May 2025 23:04:04.373 - Client closed connection id=4 addr=127.0.0.1:59317 laddr=127.0.0.1:27119 fd=13 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=83 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=fcall user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=55 tot-net-out=88 tot-cmds=2
+86037:M 03 May 2025 23:04:04.373 - Accepted 127.0.0.1:59331
+86037:M 03 May 2025 23:04:04.384 # Slow script detected: still in execution after 10 milliseconds. You can try killing the script using the FUNCTION KILL command. Script name is: test.
+86037:M 03 May 2025 23:04:04.577 * Script killed by user with FUNCTION KILL.
+### Starting test FUNCTION - test function kill not working on eval in tests/unit/functions.tcl
+86037:M 03 May 2025 23:04:04.783 - Client closed connection id=5 addr=127.0.0.1:59331 laddr=127.0.0.1:27119 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=83 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=fcall user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=55 tot-net-out=88 tot-cmds=2
+86037:M 03 May 2025 23:04:04.783 - Accepted 127.0.0.1:59348
+86037:M 03 May 2025 23:04:04.794 # Slow script detected: still in execution after 10 milliseconds. You can try killing the script using the SCRIPT KILL command. Script name is: d5c92b6277b511f74344c146fc7a32268cc0428a.
+86037:M 03 May 2025 23:04:04.987 * Script killed by user with SCRIPT KILL.
+86037:M 03 May 2025 23:04:05.189 - Client closed connection id=6 addr=127.0.0.1:59348 laddr=127.0.0.1:27119 fd=13 name= age=1 idle=1 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=115 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=eval user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=90 tot-net-out=120 tot-cmds=2
+### Starting test FUNCTION - test function flush in tests/unit/functions.tcl
+### Starting test FUNCTION - test function wrong argument in tests/unit/functions.tcl
+86037:M 03 May 2025 23:04:05.190 - Client closed connection id=3 addr=127.0.0.1:59316 laddr=127.0.0.1:27119 fd=12 name= age=2 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=139 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=function|flush user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7531 tot-net-out=3957 tot-cmds=116
+86037:signal-handler (1746281046) Received SIGTERM scheduling shutdown...
+86037:M 03 May 2025 23:04:06.279 * User requested shutdown...
+86037:M 03 May 2025 23:04:06.279 * Removing the pid file.
+86037:M 03 May 2025 23:04:06.279 * Removing the unix socket file.
+86037:M 03 May 2025 23:04:06.279 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,112 @@
+### Starting server for test 
+84120:M 03 May 2025 23:03:46.660 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+84120:M 03 May 2025 23:03:46.660 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=84120, just started
+84120:M 03 May 2025 23:03:46.661 * Configuration loaded
+84120:M 03 May 2025 23:03:46.661 * Increased maximum number of open files to 10032 (it was originally set to 256).
+84120:M 03 May 2025 23:03:46.661 * monotonic clock: POSIX clock_gettime
+84120:M 03 May 2025 23:03:46.661 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 22112
+ |###|   .+###############+.   |###|    PID: 84120                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+84120:M 03 May 2025 23:03:46.661 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+84120:M 03 May 2025 23:03:46.662 * Server initialized
+84120:M 03 May 2025 23:03:46.662 * Ready to accept connections tcp
+84120:M 03 May 2025 23:03:46.662 * Ready to accept connections unix
+84120:M 03 May 2025 23:03:46.676 - Accepted 127.0.0.1:58822
+84120:M 03 May 2025 23:03:46.676 - Client closed connection id=2 addr=127.0.0.1:58822 laddr=127.0.0.1:22112 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+84120:M 03 May 2025 23:03:46.692 - Accepted 127.0.0.1:58823
+### Starting test Test check paused info in info clients in tests/unit/pause.tcl
+### Starting test Test read commands are not blocked by client pause in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:48.786 - Accepted 127.0.0.1:58871
+84120:M 03 May 2025 23:03:48.786 - Reading from client: Connection reset by peer
+### Starting test Test old pause-all takes precedence over new pause-write (less restrictive) in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:48.787 - Accepted 127.0.0.1:58872
+### Starting test Test new pause time is smaller than old one, then old time preserved in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:49.144 - Accepted 127.0.0.1:58884
+84120:M 03 May 2025 23:03:49.145 - Client closed connection id=6 addr=127.0.0.1:58884 laddr=127.0.0.1:22112 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=54 tot-net-out=10 tot-cmds=2
+### Starting test Test write commands are paused by RO in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:49.145 - Accepted 127.0.0.1:58885
+84120:M 03 May 2025 23:03:49.145 - Client closed connection id=7 addr=127.0.0.1:58885 laddr=127.0.0.1:22112 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=54 tot-net-out=10 tot-cmds=2
+### Starting test Test special commands are paused by RO in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:49.145 - Accepted 127.0.0.1:58886
+84120:M 03 May 2025 23:03:49.145 - Accepted 127.0.0.1:58887
+84120:M 03 May 2025 23:03:49.145 - Client closed connection id=8 addr=127.0.0.1:58886 laddr=127.0.0.1:22112 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=pfcount user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=55 tot-net-out=9 tot-cmds=2
+84120:M 03 May 2025 23:03:49.145 - Client closed connection id=9 addr=127.0.0.1:58887 laddr=127.0.0.1:22112 fd=15 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=publish user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=9 tot-cmds=2
+### Starting test Test read/admin multi-execs are not blocked by pause RO in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:49.146 - Accepted 127.0.0.1:58888
+84120:M 03 May 2025 23:03:49.146 - Client closed connection id=10 addr=127.0.0.1:58888 laddr=127.0.0.1:22112 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=exec user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=88 tot-net-out=48 tot-cmds=5
+### Starting test Test write multi-execs are blocked by pause RO in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:49.146 - Accepted 127.0.0.1:58889
+84120:M 03 May 2025 23:03:49.146 - Client closed connection id=11 addr=127.0.0.1:58889 laddr=127.0.0.1:22112 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=exec user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=83 tot-net-out=28 tot-cmds=4
+### Starting test Test scripts are blocked by pause RO in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:49.146 - Accepted 127.0.0.1:58890
+84120:M 03 May 2025 23:03:49.146 - Accepted 127.0.0.1:58891
+84120:M 03 May 2025 23:03:49.147 - Client closed connection id=12 addr=127.0.0.1:58890 laddr=127.0.0.1:22112 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=eval user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=9 tot-cmds=2
+84120:M 03 May 2025 23:03:49.147 - Client closed connection id=13 addr=127.0.0.1:58891 laddr=127.0.0.1:22112 fd=15 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=eval user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86 tot-net-out=9 tot-cmds=2
+### Starting test Test RO scripts are not blocked by pause RO in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:49.147 - Accepted 127.0.0.1:58892
+84120:M 03 May 2025 23:03:49.147 - Client closed connection id=14 addr=127.0.0.1:58892 laddr=127.0.0.1:22112 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=fcall user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=529 tot-net-out=129 tot-cmds=8
+### Starting test Test read-only scripts in multi-exec are not blocked by pause RO in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:49.147 - Accepted 127.0.0.1:58893
+84120:M 03 May 2025 23:03:49.147 - Client closed connection id=15 addr=127.0.0.1:58893 laddr=127.0.0.1:22112 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=exec user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=228 tot-net-out=42 tot-cmds=5
+### Starting test Test write scripts in multi-exec are blocked by pause RO in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:49.147 - Accepted 127.0.0.1:58894
+84120:M 03 May 2025 23:03:49.148 - Accepted 127.0.0.1:58895
+84120:M 03 May 2025 23:03:49.148 - Client closed connection id=16 addr=127.0.0.1:58894 laddr=127.0.0.1:22112 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=exec user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=124 tot-net-out=28 tot-cmds=4
+84120:M 03 May 2025 23:03:49.148 - Client closed connection id=17 addr=127.0.0.1:58895 laddr=127.0.0.1:22112 fd=15 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=exec user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=124 tot-net-out=28 tot-cmds=4
+### Starting test Test may-replicate commands are rejected in RO scripts in tests/unit/pause.tcl
+### Starting test Test multiple clients can be queued up and unblocked in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:49.148 - Accepted 127.0.0.1:58896
+84120:M 03 May 2025 23:03:49.148 - Accepted 127.0.0.1:58897
+84120:M 03 May 2025 23:03:49.148 - Accepted 127.0.0.1:58898
+84120:M 03 May 2025 23:03:49.149 - Client closed connection id=18 addr=127.0.0.1:58896 laddr=127.0.0.1:22112 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=54 tot-net-out=10 tot-cmds=2
+84120:M 03 May 2025 23:03:49.149 - Client closed connection id=19 addr=127.0.0.1:58897 laddr=127.0.0.1:22112 fd=15 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=54 tot-net-out=10 tot-cmds=2
+84120:M 03 May 2025 23:03:49.149 - Client closed connection id=20 addr=127.0.0.1:58898 laddr=127.0.0.1:22112 fd=16 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=54 tot-net-out=10 tot-cmds=2
+### Starting test Test clients with syntax errors will get responses immediately in tests/unit/pause.tcl
+### Starting test Test eviction is skipped during client pause in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:49.149 # WARNING: the new maxmemory value set via CONFIG SET (1) is smaller than the current memory usage (1612400). This will result in key eviction and/or the inability to accept new write commands depending on the maxmemory-policy.
+### Starting test Test both active and passive expires are skipped during client pause in tests/unit/pause.tcl
+### Starting test Test that client pause starts at the end of a transaction in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:49.253 - Accepted 127.0.0.1:58951
+84120:M 03 May 2025 23:03:49.253 - Client closed connection id=21 addr=127.0.0.1:58951 laddr=127.0.0.1:22112 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=10 tot-cmds=2
+84120:M 03 May 2025 23:03:49.452 - Accepted 127.0.0.1:58956
+84120:M 03 May 2025 23:03:49.452 * Replica 127.0.0.1:22113 asks for synchronization
+84120:M 03 May 2025 23:03:49.452 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '2a3d7a962b4af612e6f52ad7303b5e5fa0aa9867', my replication IDs are 'ea4dcdab27e7c4f92877fa0aa36ea844f3fe6c1f' and '0000000000000000000000000000000000000000')
+84120:M 03 May 2025 23:03:49.452 * Replication backlog created, my new replication IDs are '983c3ce449530f43801f471a24b77582875e0031' and '0000000000000000000000000000000000000000'
+84120:M 03 May 2025 23:03:49.452 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+84120:M 03 May 2025 23:03:49.453 * Background RDB transfer started by pid 84530 to pipe through parent process
+84530:C 03 May 2025 23:03:49.453 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+84120:M 03 May 2025 23:03:49.454 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+84120:M 03 May 2025 23:03:49.457 * Background RDB transfer terminated with success
+84120:M 03 May 2025 23:03:49.457 * Streamed RDB transfer with replica 127.0.0.1:22113 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+84120:M 03 May 2025 23:03:49.457 * Synchronization with replica 127.0.0.1:22113 succeeded
+### Starting test Test when replica paused, offset would not grow in tests/unit/pause.tcl
+### Starting test Test replica offset would grow after unpause in tests/unit/pause.tcl
+### Starting test Check for memory leaks (pid 84516) in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:51.708 - DB 9: 5 keys (0 volatile) in 7 slots HT.
+84120:M 03 May 2025 23:03:52.408 - Client closed connection id=22 addr=127.0.0.1:58956 laddr=127.0.0.1:22112 fd=14 name= age=3 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=345 tot-net-out=109 tot-cmds=8
+84120:M 03 May 2025 23:03:52.408 * Connection with replica 127.0.0.1:22113 lost.
+### Starting test Test the randomkey command will not cause the server to get into an infinite loop during the client pause write in tests/unit/pause.tcl
+84120:M 03 May 2025 23:03:52.450 - Client closed connection id=3 addr=127.0.0.1:58823 laddr=127.0.0.1:22112 fd=12 name= age=6 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=14 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=client|unpause user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=3753 tot-net-out=186390 tot-cmds=117
+84120:signal-handler (1746281035) Received SIGTERM scheduling shutdown...
+84120:M 03 May 2025 23:03:55.453 * User requested shutdown...
+84120:M 03 May 2025 23:03:55.453 * Removing the pid file.
+84120:M 03 May 2025 23:03:55.453 * Removing the unix socket file.
+84120:M 03 May 2025 23:03:55.453 # Valkey is now ready to exit, bye bye...

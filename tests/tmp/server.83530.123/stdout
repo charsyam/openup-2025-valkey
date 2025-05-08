@@ -1,0 +1,68 @@
+### Starting server for test 
+14536:M 03 May 2025 23:08:39.647 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+14536:M 03 May 2025 23:08:39.648 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=14536, just started
+14536:M 03 May 2025 23:08:39.648 * Configuration loaded
+14536:M 03 May 2025 23:08:39.648 * Increased maximum number of open files to 10032 (it was originally set to 256).
+14536:M 03 May 2025 23:08:39.648 * monotonic clock: POSIX clock_gettime
+14536:M 03 May 2025 23:08:39.648 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23674
+ |###|   .+###############+.   |###|    PID: 14536                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+14536:M 03 May 2025 23:08:39.648 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+14536:M 03 May 2025 23:08:39.649 * Server initialized
+14536:M 03 May 2025 23:08:39.649 * Ready to accept connections tcp
+14536:M 03 May 2025 23:08:39.649 * Ready to accept connections unix
+14536:M 03 May 2025 23:08:39.773 - Accepted 127.0.0.1:63783
+14536:M 03 May 2025 23:08:39.773 - Client closed connection id=2 addr=127.0.0.1:63783 laddr=127.0.0.1:23674 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+14536:M 03 May 2025 23:08:39.785 - Accepted 127.0.0.1:63785
+### Starting test Psync established after rdb load - within grace period in tests/integration/dual-channel-replication.tcl
+14536:S 03 May 2025 23:08:39.793 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+14536:S 03 May 2025 23:08:39.793 * Connecting to PRIMARY 127.0.0.1:23673
+14536:S 03 May 2025 23:08:39.793 * PRIMARY <-> REPLICA sync started
+14536:S 03 May 2025 23:08:39.793 * REPLICAOF 127.0.0.1:23673 enabled (user request from 'id=3 addr=127.0.0.1:63785 laddr=127.0.0.1:23674 fd=12 name= user=default lib-name= lib-ver=')
+14536:S 03 May 2025 23:08:39.793 * Non blocking connect for SYNC fired the event.
+14536:S 03 May 2025 23:08:39.793 * Primary replied to PING, replication can continue...
+14536:S 03 May 2025 23:08:39.793 * Trying a partial resynchronization (request c9ad22dac344d8f7729a2384e278af58b8d600e4:1).
+14536:S 03 May 2025 23:08:39.794 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+14536:S 03 May 2025 23:08:39.794 . Dual channel replication: Received first reply from primary using rdb connection.
+14536:S 03 May 2025 23:08:39.796 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+14536:S 03 May 2025 23:08:39.800 * Discarding previously cached primary state.
+14536:S 03 May 2025 23:08:39.801 * PRIMARY <-> REPLICA sync: Flushing old data
+14536:S 03 May 2025 23:08:39.801 * PRIMARY <-> REPLICA sync: Loading DB in memory
+14536:S 03 May 2025 23:08:39.801 * Loading RDB produced by Valkey version 255.255.255
+14536:S 03 May 2025 23:08:39.801 * RDB age 0 seconds
+14536:S 03 May 2025 23:08:39.801 * RDB memory usage when created 1.29 Mb
+14536:S 03 May 2025 23:08:39.801 * Done loading RDB, keys loaded: 10, keys expired: 0.
+14536:S 03 May 2025 23:08:39.801 * PRIMARY <-> REPLICA sync: Finished with success
+14536:S 03 May 2025 23:08:39.835 * Dual channel replication: Trying a partial resynchronization using main channel (request b927d5eebdc13439a79a5ea7f719f54406a81144:1).
+14536:S 03 May 2025 23:08:39.836 * Dual channel replication: PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+14536:S 03 May 2025 23:08:39.836 . Dual channel replication: Psync established after rdb load
+14536:S 03 May 2025 23:08:39.836 * Dual channel replication: Successfully streamed replication data into memory
+14536:M 03 May 2025 23:08:39.942 * Connection with primary lost.
+14536:M 03 May 2025 23:08:39.942 * Caching the disconnected primary state.
+14536:M 03 May 2025 23:08:39.942 * Discarding previously cached primary state.
+14536:M 03 May 2025 23:08:39.942 * Setting secondary replication ID to b927d5eebdc13439a79a5ea7f719f54406a81144, valid up to offset: 253325. New replication ID is 8cc48f152a10700d8b6eb4ed957d28bf0df4e088
+14536:M 03 May 2025 23:08:39.942 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:63785 laddr=127.0.0.1:23674 fd=12 name= user=default lib-name= lib-ver=')
+14536:M 03 May 2025 23:08:39.946 - Client closed connection id=3 addr=127.0.0.1:63785 laddr=127.0.0.1:23674 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=5 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=replicaof user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=279 tot-net-out=30 tot-cmds=6
+14536:signal-handler (1746281322) Received SIGTERM scheduling shutdown...
+14536:M 03 May 2025 23:08:42.284 * User requested shutdown...
+14536:M 03 May 2025 23:08:42.284 * Removing the pid file.
+14536:M 03 May 2025 23:08:42.284 * Removing the unix socket file.
+14536:M 03 May 2025 23:08:42.284 # Valkey is now ready to exit, bye bye...

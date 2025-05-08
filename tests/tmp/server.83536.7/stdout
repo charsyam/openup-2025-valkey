@@ -1,0 +1,307 @@
+### Starting server for test 
+85939:M 03 May 2025 23:04:02.988 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+85939:M 03 May 2025 23:04:02.988 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=85939, just started
+85939:M 03 May 2025 23:04:02.988 * Configuration loaded
+85939:M 03 May 2025 23:04:02.988 * Increased maximum number of open files to 10032 (it was originally set to 256).
+85939:M 03 May 2025 23:04:02.988 * monotonic clock: POSIX clock_gettime
+85939:M 03 May 2025 23:04:02.988 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26614
+ |###|   .+###############+.   |###|    PID: 85939                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+85939:M 03 May 2025 23:04:02.988 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+85939:M 03 May 2025 23:04:02.988 * Server initialized
+85939:M 03 May 2025 23:04:02.988 * Ready to accept connections tcp
+85939:M 03 May 2025 23:04:02.988 * Ready to accept connections unix
+85939:M 03 May 2025 23:04:03.001 - Accepted 127.0.0.1:59296
+85939:M 03 May 2025 23:04:03.002 - Client closed connection id=2 addr=127.0.0.1:59296 laddr=127.0.0.1:26614 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+85939:M 03 May 2025 23:04:03.010 - Accepted 127.0.0.1:59297
+### Starting test MULTI / EXEC basics in tests/unit/multi.tcl
+### Starting test DISCARD in tests/unit/multi.tcl
+### Starting test Nested MULTI are not allowed in tests/unit/multi.tcl
+### Starting test MULTI where commands alter argc/argv in tests/unit/multi.tcl
+### Starting test WATCH inside MULTI is not allowed in tests/unit/multi.tcl
+### Starting test EXEC fails if there are errors while queueing commands #1 in tests/unit/multi.tcl
+### Starting test EXEC fails if there are errors while queueing commands #2 in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:03.013 - Accepted 127.0.0.1:59298
+85939:M 03 May 2025 23:04:03.013 # WARNING: the new maxmemory value set via CONFIG SET (1) is smaller than the current memory usage (1411744). This will result in key eviction and/or the inability to accept new write commands depending on the maxmemory-policy.
+85939:M 03 May 2025 23:04:03.014 - Client closed connection id=4 addr=127.0.0.1:59298 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=117 tot-net-out=15 tot-cmds=3
+### Starting test If EXEC aborts, the client MULTI state is cleared in tests/unit/multi.tcl
+### Starting test EXEC works on WATCHed key not modified in tests/unit/multi.tcl
+### Starting test EXEC fail on WATCHed key modified (1 key of 1 watched) in tests/unit/multi.tcl
+### Starting test EXEC fail on WATCHed key modified (1 key of 5 watched) in tests/unit/multi.tcl
+### Starting test EXEC fail on WATCHed key modified by SORT with STORE even if the result is empty in tests/unit/multi.tcl
+### Starting test EXEC fail on lazy expired WATCHed key in tests/unit/multi.tcl
+### Starting test WATCH stale keys should not fail EXEC in tests/unit/multi.tcl
+### Starting test Delete WATCHed stale keys should not fail EXEC in tests/unit/multi.tcl
+### Starting test FLUSHDB while watching stale keys should not fail EXEC in tests/unit/multi.tcl
+### Starting test After successful EXEC key is no longer watched in tests/unit/multi.tcl
+### Starting test After failed EXEC key is no longer watched in tests/unit/multi.tcl
+### Starting test It is possible to UNWATCH in tests/unit/multi.tcl
+### Starting test UNWATCH when there is nothing watched works as expected in tests/unit/multi.tcl
+### Starting test FLUSHALL is able to touch the watched keys in tests/unit/multi.tcl
+### Starting test FLUSHALL does not touch non affected keys in tests/unit/multi.tcl
+### Starting test FLUSHDB is able to touch the watched keys in tests/unit/multi.tcl
+### Starting test FLUSHDB does not touch non affected keys in tests/unit/multi.tcl
+### Starting test SWAPDB is able to touch the watched keys that exist in tests/unit/multi.tcl
+### Starting test SWAPDB is able to touch the watched keys that do not exist in tests/unit/multi.tcl
+### Starting test SWAPDB does not touch watched stale keys in tests/unit/multi.tcl
+### Starting test SWAPDB does not touch non-existing key replaced with stale key in tests/unit/multi.tcl
+### Starting test SWAPDB does not touch stale key replaced with another stale key in tests/unit/multi.tcl
+### Starting test WATCH is able to remember the DB a key belongs to in tests/unit/multi.tcl
+### Starting test WATCH will consider touched keys target of EXPIRE in tests/unit/multi.tcl
+### Starting test WATCH will consider touched expired keys in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:03.153 - Accepted 127.0.0.1:59308
+85939:M 03 May 2025 23:04:04.296 - Client closed connection id=5 addr=127.0.0.1:59308 laddr=127.0.0.1:26614 fd=13 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=4 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=dbsize user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=215 tot-net-out=53 tot-cmds=13
+### Starting test DISCARD should clear the WATCH dirty flag on the client in tests/unit/multi.tcl
+### Starting test DISCARD should UNWATCH all the keys in tests/unit/multi.tcl
+### Starting test MULTI / EXEC is not propagated (single write command) in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:04.298 - Accepted 127.0.0.1:59330
+85939:M 03 May 2025 23:04:04.298 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+85939:M 03 May 2025 23:04:04.298 * Replication backlog created, my new replication IDs are '45713533a7962c58b9f39e4098aa609dc6678f1f' and '0000000000000000000000000000000000000000'
+85939:M 03 May 2025 23:04:04.298 * Starting BGSAVE for SYNC with target: disk using: normal sync
+85939:M 03 May 2025 23:04:04.298 * Background saving started by pid 86127
+86127:C 03 May 2025 23:04:04.302 * DB saved on disk
+86127:C 03 May 2025 23:04:04.303 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+85939:M 03 May 2025 23:04:04.403 * Background saving terminated with success
+85939:M 03 May 2025 23:04:04.403 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+85939:M 03 May 2025 23:04:04.404 - Client closed connection id=6 addr=127.0.0.1:59330 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=86 tot-cmds=1
+85939:M 03 May 2025 23:04:04.404 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test MULTI / EXEC is propagated correctly (multiple commands) in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:04.405 - Accepted 127.0.0.1:59332
+85939:M 03 May 2025 23:04:04.405 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+85939:M 03 May 2025 23:04:04.405 * Starting BGSAVE for SYNC with target: disk using: normal sync
+85939:M 03 May 2025 23:04:04.405 * Background saving started by pid 86142
+86142:C 03 May 2025 23:04:04.408 * DB saved on disk
+86142:C 03 May 2025 23:04:04.408 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+85939:M 03 May 2025 23:04:04.504 * Background saving terminated with success
+85939:M 03 May 2025 23:04:04.504 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+85939:M 03 May 2025 23:04:04.505 - Client closed connection id=7 addr=127.0.0.1:59332 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=158 tot-cmds=1
+85939:M 03 May 2025 23:04:04.505 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test MULTI / EXEC is propagated correctly (multiple commands with SELECT) in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:04.506 - Accepted 127.0.0.1:59334
+85939:M 03 May 2025 23:04:04.506 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+85939:M 03 May 2025 23:04:04.506 * Starting BGSAVE for SYNC with target: disk using: normal sync
+85939:M 03 May 2025 23:04:04.506 * Background saving started by pid 86147
+86147:C 03 May 2025 23:04:04.510 * DB saved on disk
+86147:C 03 May 2025 23:04:04.510 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+85939:M 03 May 2025 23:04:04.605 * Background saving terminated with success
+85939:M 03 May 2025 23:04:04.605 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+85939:M 03 May 2025 23:04:04.608 - Client closed connection id=8 addr=127.0.0.1:59334 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=204 tot-cmds=1
+85939:M 03 May 2025 23:04:04.608 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test MULTI / EXEC is propagated correctly (empty transaction) in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:04.609 - Accepted 127.0.0.1:59340
+85939:M 03 May 2025 23:04:04.609 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+85939:M 03 May 2025 23:04:04.609 * Starting BGSAVE for SYNC with target: disk using: normal sync
+85939:M 03 May 2025 23:04:04.609 * Background saving started by pid 86170
+86170:C 03 May 2025 23:04:04.614 * DB saved on disk
+86170:C 03 May 2025 23:04:04.614 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+85939:M 03 May 2025 23:04:04.706 * Background saving terminated with success
+85939:M 03 May 2025 23:04:04.706 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+85939:M 03 May 2025 23:04:04.707 - Client closed connection id=9 addr=127.0.0.1:59340 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=54 tot-cmds=1
+85939:M 03 May 2025 23:04:04.707 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test MULTI / EXEC is propagated correctly (read-only commands) in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:04.707 - Accepted 127.0.0.1:59344
+85939:M 03 May 2025 23:04:04.708 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+85939:M 03 May 2025 23:04:04.708 * Starting BGSAVE for SYNC with target: disk using: normal sync
+85939:M 03 May 2025 23:04:04.708 * Background saving started by pid 86184
+86184:C 03 May 2025 23:04:04.710 * DB saved on disk
+86184:C 03 May 2025 23:04:04.710 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+85939:M 03 May 2025 23:04:04.807 * Background saving terminated with success
+85939:M 03 May 2025 23:04:04.807 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+85939:M 03 May 2025 23:04:04.807 - Client closed connection id=10 addr=127.0.0.1:59344 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=57 tot-cmds=1
+85939:M 03 May 2025 23:04:04.808 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test MULTI / EXEC is propagated correctly (write command, no effect) in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:04.808 - Accepted 127.0.0.1:59350
+85939:M 03 May 2025 23:04:04.808 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+85939:M 03 May 2025 23:04:04.808 * Starting BGSAVE for SYNC with target: disk using: normal sync
+85939:M 03 May 2025 23:04:04.809 * Background saving started by pid 86198
+86198:C 03 May 2025 23:04:04.812 * DB saved on disk
+86198:C 03 May 2025 23:04:04.812 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+85939:M 03 May 2025 23:04:04.908 * Background saving terminated with success
+85939:M 03 May 2025 23:04:04.908 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+85939:M 03 May 2025 23:04:04.909 - Client closed connection id=11 addr=127.0.0.1:59350 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=46 tot-cmds=1
+85939:M 03 May 2025 23:04:04.909 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test MULTI / EXEC with REPLICAOF in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:04.910 - Accepted 127.0.0.1:59354
+85939:M 03 May 2025 23:04:04.910 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+85939:M 03 May 2025 23:04:04.910 * Starting BGSAVE for SYNC with target: disk using: normal sync
+85939:M 03 May 2025 23:04:04.910 * Background saving started by pid 86205
+86205:C 03 May 2025 23:04:04.913 * DB saved on disk
+86205:C 03 May 2025 23:04:04.913 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+85939:M 03 May 2025 23:04:05.009 * Background saving terminated with success
+85939:M 03 May 2025 23:04:05.009 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+85939:S 03 May 2025 23:04:05.009 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+85939:S 03 May 2025 23:04:05.010 * Connecting to PRIMARY localhost:9999
+85939:S 03 May 2025 23:04:05.011 * PRIMARY <-> REPLICA sync started
+85939:S 03 May 2025 23:04:05.011 * REPLICAOF localhost:9999 enabled (user request from 'id=3 addr=127.0.0.1:59297 laddr=127.0.0.1:26614 fd=12 name= user=default lib-name= lib-ver=')
+85939:S 03 May 2025 23:04:05.011 # Error condition on socket for SYNC: Connection refused
+85939:S 03 May 2025 23:04:05.011 - Client closed connection id=12 addr=127.0.0.1:59354 laddr=127.0.0.1:26614 fd=13 name= age=1 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=54 tot-cmds=1
+85939:S 03 May 2025 23:04:05.011 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+85939:M 03 May 2025 23:04:05.011 * Discarding previously cached primary state.
+85939:M 03 May 2025 23:04:05.011 * Setting secondary replication ID to 45713533a7962c58b9f39e4098aa609dc6678f1f, valid up to offset: 716. New replication ID is c17ab56797fb2ab7ade6596464651f90282f7f71
+85939:M 03 May 2025 23:04:05.011 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:59297 laddr=127.0.0.1:26614 fd=12 name= user=default lib-name= lib-ver=')
+### Starting test DISCARD should not fail during OOM in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:05.011 - Accepted 127.0.0.1:59362
+85939:M 03 May 2025 23:04:05.011 # WARNING: the new maxmemory value set via CONFIG SET (1) is smaller than the current memory usage (1811600). This will result in key eviction and/or the inability to accept new write commands depending on the maxmemory-policy.
+85939:M 03 May 2025 23:04:05.012 - Client closed connection id=14 addr=127.0.0.1:59362 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=117 tot-net-out=15 tot-cmds=3
+### Starting test MULTI and script timeout in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:05.012 - Accepted 127.0.0.1:59363
+85939:M 03 May 2025 23:04:05.012 - Accepted 127.0.0.1:59364
+85939:M 03 May 2025 23:04:05.023 # Slow script detected: still in execution after 10 milliseconds. You can try killing the script using the SCRIPT KILL command. Script name is: 694a5fe1ddb97a4c6a1bf299d9537c7d3d0f84e7.
+85939:M 03 May 2025 23:04:05.218 * Script killed by user with SCRIPT KILL.
+85939:M 03 May 2025 23:04:05.422 - Reading from client: Connection reset by peer
+85939:M 03 May 2025 23:04:05.422 - Client closed connection id=16 addr=127.0.0.1:59364 laddr=127.0.0.1:26614 fd=16 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=62 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=120 tot-net-out=181 tot-cmds=4
+### Starting test EXEC and script timeout in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:05.422 - Accepted 127.0.0.1:59369
+85939:M 03 May 2025 23:04:05.423 - Accepted 127.0.0.1:59370
+85939:M 03 May 2025 23:04:05.433 # Slow script detected: still in execution after 10 milliseconds. You can try killing the script using the SCRIPT KILL command. Script name is: 694a5fe1ddb97a4c6a1bf299d9537c7d3d0f84e7.
+85939:M 03 May 2025 23:04:05.628 * Script killed by user with SCRIPT KILL.
+85939:M 03 May 2025 23:04:05.833 - Reading from client: Connection reset by peer
+### Starting test MULTI-EXEC body and script timeout in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:05.834 - Client closed connection id=18 addr=127.0.0.1:59370 laddr=127.0.0.1:26614 fd=16 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=10 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=120 tot-net-out=253 tot-cmds=3
+85939:M 03 May 2025 23:04:05.835 - Accepted 127.0.0.1:59378
+85939:M 03 May 2025 23:04:05.835 - Accepted 127.0.0.1:59379
+85939:M 03 May 2025 23:04:05.846 # Slow script detected: still in execution after 10 milliseconds. You can try killing the script using the SCRIPT KILL command. Script name is: 694a5fe1ddb97a4c6a1bf299d9537c7d3d0f84e7.
+85939:M 03 May 2025 23:04:06.041 * Script killed by user with SCRIPT KILL.
+85939:M 03 May 2025 23:04:06.243 - Reading from client: Connection reset by peer
+85939:M 03 May 2025 23:04:06.243 - Client closed connection id=20 addr=127.0.0.1:59379 laddr=127.0.0.1:26614 fd=16 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=62 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=120 tot-net-out=181 tot-cmds=4
+### Starting test just EXEC and script timeout in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:06.243 - Accepted 127.0.0.1:59392
+85939:M 03 May 2025 23:04:06.243 - Accepted 127.0.0.1:59393
+85939:M 03 May 2025 23:04:06.254 # Slow script detected: still in execution after 10 milliseconds. You can try killing the script using the SCRIPT KILL command. Script name is: 694a5fe1ddb97a4c6a1bf299d9537c7d3d0f84e7.
+85939:M 03 May 2025 23:04:06.445 * Script killed by user with SCRIPT KILL.
+85939:M 03 May 2025 23:04:06.650 - Reading from client: Connection reset by peer
+85939:M 03 May 2025 23:04:06.650 - Client closed connection id=22 addr=127.0.0.1:59393 laddr=127.0.0.1:26614 fd=16 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=10 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=98 tot-net-out=163 tot-cmds=3
+### Starting test exec with write commands and state change in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:06.650 - Accepted 127.0.0.1:59418
+85939:M 03 May 2025 23:04:06.651 - Client closed connection id=23 addr=127.0.0.1:59418 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=143 tot-net-out=15 tot-cmds=3
+### Starting test exec with read commands and stale replica state change in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:06.651 - Accepted 127.0.0.1:59419
+85939:S 03 May 2025 23:04:06.654 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+85939:S 03 May 2025 23:04:06.654 * Connecting to PRIMARY localhsot:0
+85939:S 03 May 2025 23:04:06.672 # Unable to connect to PRIMARY: Undefined error: 0
+85939:S 03 May 2025 23:04:06.672 * REPLICAOF localhsot:0 enabled (user request from 'id=24 addr=127.0.0.1:59419 laddr=127.0.0.1:26614 fd=13 name= user=default lib-name= lib-ver=')
+85939:M 03 May 2025 23:04:06.672 * Discarding previously cached primary state.
+85939:M 03 May 2025 23:04:06.672 * Setting secondary replication ID to c17ab56797fb2ab7ade6596464651f90282f7f71, valid up to offset: 907. New replication ID is 26f55abd1fe6aa608f5aaf46d790c6d7ea6552cc
+85939:M 03 May 2025 23:04:06.672 * PRIMARY MODE enabled (user request from 'id=24 addr=127.0.0.1:59419 laddr=127.0.0.1:26614 fd=13 name= user=default lib-name= lib-ver=')
+85939:S 03 May 2025 23:04:06.672 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+85939:S 03 May 2025 23:04:06.672 * Connecting to PRIMARY localhsot:0
+85939:S 03 May 2025 23:04:06.674 # Unable to connect to PRIMARY: Undefined error: 0
+85939:S 03 May 2025 23:04:06.674 * REPLICAOF localhsot:0 enabled (user request from 'id=24 addr=127.0.0.1:59419 laddr=127.0.0.1:26614 fd=13 name= user=default lib-name= lib-ver=')
+85939:M 03 May 2025 23:04:06.674 * Discarding previously cached primary state.
+85939:M 03 May 2025 23:04:06.674 * Setting secondary replication ID to 26f55abd1fe6aa608f5aaf46d790c6d7ea6552cc, valid up to offset: 907. New replication ID is 180a7449d361c2a41ae3f942ea9e48ccbdfb1820
+85939:M 03 May 2025 23:04:06.674 * PRIMARY MODE enabled (user request from 'id=24 addr=127.0.0.1:59419 laddr=127.0.0.1:26614 fd=13 name= user=default lib-name= lib-ver=')
+85939:M 03 May 2025 23:04:06.675 - Client closed connection id=24 addr=127.0.0.1:59419 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=replicaof user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=177 tot-net-out=25 tot-cmds=5
+### Starting test EXEC with only read commands should not be rejected when OOM in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:06.675 - Accepted 127.0.0.1:59420
+85939:M 03 May 2025 23:04:06.675 # WARNING: the new maxmemory value set via CONFIG SET (1) is smaller than the current memory usage (1863056). This will result in key eviction and/or the inability to accept new write commands depending on the maxmemory-policy.
+85939:M 03 May 2025 23:04:06.676 - Client closed connection id=27 addr=127.0.0.1:59420 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=117 tot-net-out=15 tot-cmds=3
+### Starting test EXEC with at least one use-memory command should fail in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:06.676 - Accepted 127.0.0.1:59421
+85939:M 03 May 2025 23:04:06.677 # WARNING: the new maxmemory value set via CONFIG SET (1) is smaller than the current memory usage (1863136). This will result in key eviction and/or the inability to accept new write commands depending on the maxmemory-policy.
+85939:M 03 May 2025 23:04:06.677 - Client closed connection id=28 addr=127.0.0.1:59421 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=117 tot-net-out=15 tot-cmds=3
+### Starting test Blocking commands ignores the timeout in tests/unit/multi.tcl
+### Starting test MULTI propagation of PUBLISH in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:06.677 - Accepted 127.0.0.1:59422
+85939:M 03 May 2025 23:04:06.678 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+85939:M 03 May 2025 23:04:06.678 * Starting BGSAVE for SYNC with target: disk using: normal sync
+85939:M 03 May 2025 23:04:06.678 * Background saving started by pid 86479
+86479:C 03 May 2025 23:04:06.681 * DB saved on disk
+86479:C 03 May 2025 23:04:06.681 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+85939:M 03 May 2025 23:04:06.749 * Background saving terminated with success
+85939:M 03 May 2025 23:04:06.749 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+85939:M 03 May 2025 23:04:06.749 - Client closed connection id=29 addr=127.0.0.1:59422 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=58 tot-cmds=1
+85939:M 03 May 2025 23:04:06.749 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test MULTI propagation of SCRIPT LOAD in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:06.749 - Accepted 127.0.0.1:59427
+85939:M 03 May 2025 23:04:06.749 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+85939:M 03 May 2025 23:04:06.749 * Starting BGSAVE for SYNC with target: disk using: normal sync
+85939:M 03 May 2025 23:04:06.750 * Background saving started by pid 86494
+86494:C 03 May 2025 23:04:06.752 * DB saved on disk
+86494:C 03 May 2025 23:04:06.752 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+85939:M 03 May 2025 23:04:06.850 * Background saving terminated with success
+85939:M 03 May 2025 23:04:06.850 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+85939:M 03 May 2025 23:04:06.851 - Client closed connection id=30 addr=127.0.0.1:59427 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=54 tot-cmds=1
+85939:M 03 May 2025 23:04:06.851 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test MULTI propagation of EVAL in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:06.852 - Accepted 127.0.0.1:59429
+85939:M 03 May 2025 23:04:06.852 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+85939:M 03 May 2025 23:04:06.852 * Starting BGSAVE for SYNC with target: disk using: normal sync
+85939:M 03 May 2025 23:04:06.854 * Background saving started by pid 86508
+86508:C 03 May 2025 23:04:06.859 * DB saved on disk
+86508:C 03 May 2025 23:04:06.859 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+85939:M 03 May 2025 23:04:06.951 * Background saving terminated with success
+85939:M 03 May 2025 23:04:06.951 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+85939:M 03 May 2025 23:04:06.952 - Client closed connection id=31 addr=127.0.0.1:59429 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=54 tot-cmds=1
+85939:M 03 May 2025 23:04:06.952 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test MULTI propagation of SCRIPT FLUSH in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:06.953 - Accepted 127.0.0.1:59431
+85939:M 03 May 2025 23:04:06.953 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+85939:M 03 May 2025 23:04:06.953 * Starting BGSAVE for SYNC with target: disk using: normal sync
+85939:M 03 May 2025 23:04:06.953 * Background saving started by pid 86516
+86516:C 03 May 2025 23:04:06.957 * DB saved on disk
+86516:C 03 May 2025 23:04:06.957 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+85939:M 03 May 2025 23:04:07.052 * Background saving terminated with success
+85939:M 03 May 2025 23:04:07.052 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+85939:M 03 May 2025 23:04:07.053 - Client closed connection id=32 addr=127.0.0.1:59431 laddr=127.0.0.1:26614 fd=13 name= age=1 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=54 tot-cmds=1
+85939:M 03 May 2025 23:04:07.053 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test MULTI propagation of XREADGROUP in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:07.053 - Accepted 127.0.0.1:59434
+85939:M 03 May 2025 23:04:07.053 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+85939:M 03 May 2025 23:04:07.053 * Starting BGSAVE for SYNC with target: disk using: normal sync
+85939:M 03 May 2025 23:04:07.054 * Background saving started by pid 86519
+86519:C 03 May 2025 23:04:07.057 * DB saved on disk
+86519:C 03 May 2025 23:04:07.057 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+85939:M 03 May 2025 23:04:07.154 * Background saving terminated with success
+85939:M 03 May 2025 23:04:07.154 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+85939:M 03 May 2025 23:04:07.156 - Client closed connection id=33 addr=127.0.0.1:59434 laddr=127.0.0.1:26614 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=1121 tot-cmds=1
+85939:M 03 May 2025 23:04:07.156 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test MULTI with SAVE in tests/unit/multi.tcl
+### Starting test MULTI with SHUTDOWN in tests/unit/multi.tcl
+### Starting test MULTI with BGREWRITEAOF in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:07.158 * Background append only file rewriting scheduled.
+85939:M 03 May 2025 23:04:07.255 * Background append only file rewriting started by pid 86554
+86554:C 03 May 2025 23:04:07.255 * Successfully created the temporary AOF base file temp-rewriteaof-bg-86554.aof
+86554:C 03 May 2025 23:04:07.256 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85939:M 03 May 2025 23:04:07.355 * Background AOF rewrite terminated with success
+85939:M 03 May 2025 23:04:07.355 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-86554.aof into appendonly.aof.1.base.rdb
+85939:M 03 May 2025 23:04:07.361 * Background AOF rewrite finished successfully
+85939:M 03 May 2025 23:04:07.361 - Background AOF rewrite signal handler took 6387us
+### Starting test MULTI with config set appendonly in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:07.372 * AOF was enabled during a transaction. An AOF background was scheduled to start when possible.
+85939:M 03 May 2025 23:04:07.462 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+85939:M 03 May 2025 23:04:07.463 * Background append only file rewriting started by pid 86615
+86615:C 03 May 2025 23:04:07.464 * Successfully created the temporary AOF base file temp-rewriteaof-bg-86615.aof
+86615:C 03 May 2025 23:04:07.464 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+85939:M 03 May 2025 23:04:07.564 * Background AOF rewrite terminated with success
+85939:M 03 May 2025 23:04:07.564 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-86615.aof into appendonly.aof.2.base.rdb
+85939:M 03 May 2025 23:04:07.564 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.1.incr.aof
+85939:M 03 May 2025 23:04:07.567 * Removing the history file appendonly.aof.1.base.rdb in the background
+85939:M 03 May 2025 23:04:07.573 * Background AOF rewrite finished successfully
+85939:M 03 May 2025 23:04:07.573 - Background AOF rewrite signal handler took 9244us
+### Starting test MULTI with config error in tests/unit/multi.tcl
+### Starting test Flushall while watching several keys by one client in tests/unit/multi.tcl
+85939:M 03 May 2025 23:04:07.594 - Client closed connection id=3 addr=127.0.0.1:59297 laddr=127.0.0.1:26614 fd=12 name= age=4 idle=0 flags=d capa= db=3 sub=0 psub=0 ssub=0 multi=0 watch=2 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=8192 rbp=6362 obl=0 oll=0 omem=0 tot-mem=25744 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=11890 tot-net-out=79986 tot-cmds=402
+85939:signal-handler (1746281049) Received SIGTERM scheduling shutdown...
+85939:M 03 May 2025 23:04:09.405 * User requested shutdown...
+85939:M 03 May 2025 23:04:09.405 * Calling fsync() on the AOF file.
+85939:M 03 May 2025 23:04:09.407 * Removing the pid file.
+85939:M 03 May 2025 23:04:09.407 * Removing the unix socket file.
+85939:M 03 May 2025 23:04:09.407 # Valkey is now ready to exit, bye bye...

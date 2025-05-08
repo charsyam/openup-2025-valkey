@@ -1,0 +1,100 @@
+### Starting server for test WAITAOF when replica switches between masters, fsync: no in tests/unit/wait.tcl
+87072:M 03 May 2025 23:04:09.539 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+87072:M 03 May 2025 23:04:09.539 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=87072, just started
+87072:M 03 May 2025 23:04:09.539 * Configuration loaded
+87072:M 03 May 2025 23:04:09.540 * Increased maximum number of open files to 10032 (it was originally set to 256).
+87072:M 03 May 2025 23:04:09.540 * monotonic clock: POSIX clock_gettime
+87072:M 03 May 2025 23:04:09.540 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23617
+ |###|   .+###############+.   |###|    PID: 87072                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+87072:M 03 May 2025 23:04:09.540 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+87072:M 03 May 2025 23:04:09.540 * Server initialized
+87072:M 03 May 2025 23:04:09.541 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+87072:M 03 May 2025 23:04:09.545 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+87072:M 03 May 2025 23:04:09.545 * Ready to accept connections tcp
+87072:M 03 May 2025 23:04:09.545 * Ready to accept connections unix
+87072:M 03 May 2025 23:04:09.658 - Accepted 127.0.0.1:59502
+87072:M 03 May 2025 23:04:09.658 - Client closed connection id=2 addr=127.0.0.1:59502 laddr=127.0.0.1:23617 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+87072:M 03 May 2025 23:04:09.701 - Accepted 127.0.0.1:59506
+87072:S 03 May 2025 23:04:09.701 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+87072:S 03 May 2025 23:04:09.701 * Connecting to PRIMARY 127.0.0.1:23616
+87072:S 03 May 2025 23:04:09.701 * PRIMARY <-> REPLICA sync started
+87072:S 03 May 2025 23:04:09.701 * REPLICAOF 127.0.0.1:23616 enabled (user request from 'id=3 addr=127.0.0.1:59506 laddr=127.0.0.1:23617 fd=13 name= user=default lib-name= lib-ver=')
+87072:S 03 May 2025 23:04:09.701 * Non blocking connect for SYNC fired the event.
+87072:S 03 May 2025 23:04:09.701 * Primary replied to PING, replication can continue...
+87072:S 03 May 2025 23:04:09.701 * Trying a partial resynchronization (request cb67ac8d42d07a8a04941ca03a4b7c8789a39ec9:1).
+87072:S 03 May 2025 23:04:09.702 * Full resync from primary: 6e5b51fff924a57e8b42897f671ef4ff18d2b05e:0
+87072:S 03 May 2025 23:04:09.702 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+87072:S 03 May 2025 23:04:09.710 * Discarding previously cached primary state.
+87072:S 03 May 2025 23:04:09.710 * PRIMARY <-> REPLICA sync: Flushing old data
+87072:S 03 May 2025 23:04:09.710 * PRIMARY <-> REPLICA sync: Loading DB in memory
+87072:S 03 May 2025 23:04:09.710 * Loading RDB produced by Valkey version 255.255.255
+87072:S 03 May 2025 23:04:09.710 * RDB age 0 seconds
+87072:S 03 May 2025 23:04:09.710 * RDB memory usage when created 1.20 Mb
+87072:S 03 May 2025 23:04:09.710 * Done loading RDB, keys loaded: 0, keys expired: 0.
+87072:S 03 May 2025 23:04:09.710 * PRIMARY <-> REPLICA sync: Finished with success
+87072:S 03 May 2025 23:04:09.710 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+87072:S 03 May 2025 23:04:09.711 * Background append only file rewriting started by pid 87139
+87139:C 03 May 2025 23:04:09.711 * Successfully created the temporary AOF base file temp-rewriteaof-bg-87139.aof
+87139:C 03 May 2025 23:04:09.711 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+87072:S 03 May 2025 23:04:09.747 * Background AOF rewrite terminated with success
+87072:S 03 May 2025 23:04:09.747 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-87139.aof into appendonly.aof.2.base.rdb
+87072:S 03 May 2025 23:04:09.747 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.2.incr.aof
+87072:S 03 May 2025 23:04:09.753 * Removing the history file appendonly.aof.1.incr.aof in the background
+87072:S 03 May 2025 23:04:09.754 * Removing the history file appendonly.aof.1.base.rdb in the background
+87072:S 03 May 2025 23:04:09.759 * Background AOF rewrite finished successfully
+87072:S 03 May 2025 23:04:09.759 - Background AOF rewrite signal handler took 12387us
+87072:M 03 May 2025 23:04:11.711 * Connection with primary lost.
+87072:M 03 May 2025 23:04:11.711 * Caching the disconnected primary state.
+87072:S 03 May 2025 23:04:11.711 * Connecting to PRIMARY 127.0.0.1:23614
+87072:S 03 May 2025 23:04:11.711 * PRIMARY <-> REPLICA sync started
+87072:S 03 May 2025 23:04:11.711 * REPLICAOF 127.0.0.1:23614 enabled (user request from 'id=3 addr=127.0.0.1:59506 laddr=127.0.0.1:23617 fd=13 name= user=default lib-name= lib-ver=')
+87072:S 03 May 2025 23:04:11.711 * Non blocking connect for SYNC fired the event.
+87072:S 03 May 2025 23:04:11.711 * Primary replied to PING, replication can continue...
+87072:S 03 May 2025 23:04:11.711 * Trying a partial resynchronization (request 6e5b51fff924a57e8b42897f671ef4ff18d2b05e:91).
+87072:S 03 May 2025 23:04:11.712 * Full resync from primary: 08092edebf1d03a95bb7efb2ecec488ce5d29f5b:901
+87072:S 03 May 2025 23:04:11.712 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+87072:S 03 May 2025 23:04:11.717 * Discarding previously cached primary state.
+87072:S 03 May 2025 23:04:11.717 * PRIMARY <-> REPLICA sync: Flushing old data
+87072:S 03 May 2025 23:04:11.717 * PRIMARY <-> REPLICA sync: Loading DB in memory
+87072:S 03 May 2025 23:04:11.718 * Loading RDB produced by Valkey version 255.255.255
+87072:S 03 May 2025 23:04:11.718 * RDB age 0 seconds
+87072:S 03 May 2025 23:04:11.718 * RDB memory usage when created 1.39 Mb
+87072:S 03 May 2025 23:04:11.718 * Done loading RDB, keys loaded: 3, keys expired: 0.
+87072:S 03 May 2025 23:04:11.718 * PRIMARY <-> REPLICA sync: Finished with success
+87072:S 03 May 2025 23:04:11.718 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+87072:S 03 May 2025 23:04:11.718 * Background append only file rewriting started by pid 87497
+87497:C 03 May 2025 23:04:11.718 * Successfully created the temporary AOF base file temp-rewriteaof-bg-87497.aof
+87497:C 03 May 2025 23:04:11.718 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+87072:S 03 May 2025 23:04:11.778 * Background AOF rewrite terminated with success
+87072:S 03 May 2025 23:04:11.779 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-87497.aof into appendonly.aof.3.base.rdb
+87072:S 03 May 2025 23:04:11.779 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.3.incr.aof
+87072:S 03 May 2025 23:04:11.783 * Removing the history file appendonly.aof.2.incr.aof in the background
+87072:S 03 May 2025 23:04:11.783 * Removing the history file appendonly.aof.2.base.rdb in the background
+87072:S 03 May 2025 23:04:11.788 * Background AOF rewrite finished successfully
+87072:S 03 May 2025 23:04:11.788 - Background AOF rewrite signal handler took 9429us
+87072:S 03 May 2025 23:04:12.594 - Client closed connection id=3 addr=127.0.0.1:59506 laddr=127.0.0.1:23617 fd=13 name= age=3 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=8 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=200 tot-net-out=6387 tot-cmds=6
+87072:signal-handler (1746281052) Received SIGTERM scheduling shutdown...
+87072:S 03 May 2025 23:04:12.695 * User requested shutdown...
+87072:S 03 May 2025 23:04:12.695 * Calling fsync() on the AOF file.
+87072:S 03 May 2025 23:04:12.696 * Removing the pid file.
+87072:S 03 May 2025 23:04:12.696 * Removing the unix socket file.
+87072:S 03 May 2025 23:04:12.696 # Valkey is now ready to exit, bye bye...

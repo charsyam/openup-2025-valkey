@@ -1,0 +1,256 @@
+### Starting server for test 
+10482:M 03 May 2025 23:07:34.005 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+10482:M 03 May 2025 23:07:34.005 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=10482, just started
+10482:M 03 May 2025 23:07:34.005 * Configuration loaded
+10482:M 03 May 2025 23:07:34.006 * Increased maximum number of open files to 10032 (it was originally set to 256).
+10482:M 03 May 2025 23:07:34.006 * monotonic clock: POSIX clock_gettime
+10482:M 03 May 2025 23:07:34.006 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 24652
+ |###|   .+###############+.   |###|    PID: 10482                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+10482:M 03 May 2025 23:07:34.006 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+10482:M 03 May 2025 23:07:34.007 * Server initialized
+10482:M 03 May 2025 23:07:34.007 * Ready to accept connections tcp
+10482:M 03 May 2025 23:07:34.007 * Ready to accept connections unix
+10482:M 03 May 2025 23:07:34.023 - Accepted 127.0.0.1:56856
+10482:M 03 May 2025 23:07:34.023 - Client closed connection id=2 addr=127.0.0.1:56856 laddr=127.0.0.1:24652 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+10482:M 03 May 2025 23:07:34.047 - Accepted 127.0.0.1:56862
+### Starting test PSYNC2: --- CYCLE 1 --- in tests/integration/psync2.tcl
+### Starting test PSYNC2: [NEW LAYOUT] Set #2 as master in tests/integration/psync2.tcl
+### Starting test PSYNC2: Set #0 to replicate from #3 in tests/integration/psync2.tcl
+### Starting test PSYNC2: Set #4 to replicate from #1 in tests/integration/psync2.tcl
+### Starting test PSYNC2: Set #1 to replicate from #2 in tests/integration/psync2.tcl
+### Starting test PSYNC2: Set #3 to replicate from #2 in tests/integration/psync2.tcl
+10482:S 03 May 2025 23:07:37.641 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+10482:S 03 May 2025 23:07:37.641 * Connecting to PRIMARY 127.0.0.1:24653
+10482:S 03 May 2025 23:07:37.641 * PRIMARY <-> REPLICA sync started
+10482:S 03 May 2025 23:07:37.641 * REPLICAOF 127.0.0.1:24653 enabled (user request from 'id=3 addr=127.0.0.1:56862 laddr=127.0.0.1:24652 fd=12 name= user=default lib-name= lib-ver=')
+10482:S 03 May 2025 23:07:37.641 * Non blocking connect for SYNC fired the event.
+10482:S 03 May 2025 23:07:37.641 * Primary replied to PING, replication can continue...
+10482:S 03 May 2025 23:07:37.641 * Trying a partial resynchronization (request bca6ab31ba42639c21aeaca6fd2d20d8f86d3a9e:1).
+10482:S 03 May 2025 23:07:37.641 * Full resync from primary: 3a7c45ce69c5626d3d0a4afc2e33ab32ba4c1e21:42
+10482:S 03 May 2025 23:07:37.643 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+10482:S 03 May 2025 23:07:37.646 * Discarding previously cached primary state.
+10482:S 03 May 2025 23:07:37.646 * PRIMARY <-> REPLICA sync: Flushing old data
+10482:S 03 May 2025 23:07:37.646 * PRIMARY <-> REPLICA sync: Loading DB in memory
+10482:S 03 May 2025 23:07:37.646 * Loading RDB produced by Valkey version 255.255.255
+10482:S 03 May 2025 23:07:37.646 * RDB age 0 seconds
+10482:S 03 May 2025 23:07:37.646 * RDB memory usage when created 1.35 Mb
+10482:S 03 May 2025 23:07:37.646 * Done loading RDB, keys loaded: 1, keys expired: 0.
+10482:S 03 May 2025 23:07:37.647 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test PSYNC2: cluster is consistent after failover in tests/integration/psync2.tcl
+### Starting test PSYNC2: generate load while killing replication links in tests/integration/psync2.tcl
+10482:S 03 May 2025 23:07:39.052 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+10482:S 03 May 2025 23:07:39.648 * Connection with primary lost.
+10482:S 03 May 2025 23:07:39.648 * Caching the disconnected primary state.
+10482:S 03 May 2025 23:07:39.648 * Reconnecting to PRIMARY 127.0.0.1:24653
+10482:S 03 May 2025 23:07:39.648 * PRIMARY <-> REPLICA sync started
+10482:S 03 May 2025 23:07:39.648 * Non blocking connect for SYNC fired the event.
+10482:S 03 May 2025 23:07:39.648 * Primary replied to PING, replication can continue...
+10482:S 03 May 2025 23:07:39.648 * Trying a partial resynchronization (request 3a7c45ce69c5626d3d0a4afc2e33ab32ba4c1e21:117778).
+10482:S 03 May 2025 23:07:39.648 * Successful partial resynchronization with primary.
+10482:S 03 May 2025 23:07:39.648 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+10482:S 03 May 2025 23:07:42.648 * Connection with primary lost.
+10482:S 03 May 2025 23:07:42.648 * Caching the disconnected primary state.
+10482:S 03 May 2025 23:07:42.648 * Reconnecting to PRIMARY 127.0.0.1:24653
+10482:S 03 May 2025 23:07:42.648 * PRIMARY <-> REPLICA sync started
+10482:S 03 May 2025 23:07:42.648 * Non blocking connect for SYNC fired the event.
+10482:S 03 May 2025 23:07:42.648 * Primary replied to PING, replication can continue...
+10482:S 03 May 2025 23:07:42.648 * Trying a partial resynchronization (request 3a7c45ce69c5626d3d0a4afc2e33ab32ba4c1e21:494413).
+10482:S 03 May 2025 23:07:42.648 * Successful partial resynchronization with primary.
+10482:S 03 May 2025 23:07:42.648 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2: cluster is consistent after load (x = 32312) in tests/integration/psync2.tcl
+### Starting test PSYNC2: total sum of full synchronizations is exactly 4 in tests/integration/psync2.tcl
+### Starting test PSYNC2: --- CYCLE 2 --- in tests/integration/psync2.tcl
+### Starting test PSYNC2: [NEW LAYOUT] Set #0 as master in tests/integration/psync2.tcl
+### Starting test PSYNC2: Set #4 to replicate from #1 in tests/integration/psync2.tcl
+10482:S 03 May 2025 23:07:44.065 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+### Starting test PSYNC2: Set #1 to replicate from #0 in tests/integration/psync2.tcl
+### Starting test PSYNC2: Set #2 to replicate from #4 in tests/integration/psync2.tcl
+10482:S 03 May 2025 23:07:45.668 - Client closed connection id=5 addr=127.0.0.1:24653 laddr=127.0.0.1:58446 fd=13 name= age=8 idle=2 flags=M capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=39 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=678659 tot-net-out=342 tot-cmds=32319
+10482:S 03 May 2025 23:07:45.668 * Connection with primary lost.
+10482:S 03 May 2025 23:07:45.668 * Caching the disconnected primary state.
+10482:S 03 May 2025 23:07:45.668 * Reconnecting to PRIMARY 127.0.0.1:24653
+10482:S 03 May 2025 23:07:45.669 * PRIMARY <-> REPLICA sync started
+10482:S 03 May 2025 23:07:45.669 * Non blocking connect for SYNC fired the event.
+10482:S 03 May 2025 23:07:45.669 * Primary replied to PING, replication can continue...
+10482:S 03 May 2025 23:07:45.669 * Trying a partial resynchronization (request 3a7c45ce69c5626d3d0a4afc2e33ab32ba4c1e21:678702).
+10482:S 03 May 2025 23:07:45.669 * Successful partial resynchronization with primary.
+10482:S 03 May 2025 23:07:45.669 * Primary replication ID changed to 97d3d461d9e8fd856b6c2a491ed2a851c61b8a2c
+10482:S 03 May 2025 23:07:45.669 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2: Set #3 to replicate from #4 in tests/integration/psync2.tcl
+10482:M 03 May 2025 23:07:46.673 * Connection with primary lost.
+10482:M 03 May 2025 23:07:46.673 * Caching the disconnected primary state.
+10482:S 03 May 2025 23:07:46.673 * Connecting to PRIMARY 127.0.0.1:24655
+10482:S 03 May 2025 23:07:46.673 * PRIMARY <-> REPLICA sync started
+10482:S 03 May 2025 23:07:46.673 * REPLICAOF 127.0.0.1:24655 enabled (user request from 'id=3 addr=127.0.0.1:56862 laddr=127.0.0.1:24652 fd=12 name= user=default lib-name= lib-ver=')
+10482:S 03 May 2025 23:07:46.673 * Non blocking connect for SYNC fired the event.
+10482:S 03 May 2025 23:07:46.673 * Primary replied to PING, replication can continue...
+10482:S 03 May 2025 23:07:46.674 * Trying a partial resynchronization (request 97d3d461d9e8fd856b6c2a491ed2a851c61b8a2c:678744).
+10482:S 03 May 2025 23:07:46.674 * Successful partial resynchronization with primary.
+10482:S 03 May 2025 23:07:46.674 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2: cluster is consistent after failover in tests/integration/psync2.tcl
+### Starting test PSYNC2: generate load while killing replication links in tests/integration/psync2.tcl
+10482:S 03 May 2025 23:07:49.101 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+10482:S 03 May 2025 23:07:49.679 * Connection with primary lost.
+10482:S 03 May 2025 23:07:49.679 * Caching the disconnected primary state.
+10482:S 03 May 2025 23:07:49.679 * Reconnecting to PRIMARY 127.0.0.1:24655
+10482:S 03 May 2025 23:07:49.679 * PRIMARY <-> REPLICA sync started
+10482:S 03 May 2025 23:07:49.679 * Non blocking connect for SYNC fired the event.
+10482:S 03 May 2025 23:07:49.679 * Primary replied to PING, replication can continue...
+10482:S 03 May 2025 23:07:49.679 * Trying a partial resynchronization (request 97d3d461d9e8fd856b6c2a491ed2a851c61b8a2c:1009244).
+10482:S 03 May 2025 23:07:49.679 * Successful partial resynchronization with primary.
+10482:S 03 May 2025 23:07:49.679 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2: cluster is consistent after load (x = 71563) in tests/integration/psync2.tcl
+### Starting test PSYNC2: total sum of full synchronizations is exactly 4 in tests/integration/psync2.tcl
+### Starting test PSYNC2: --- CYCLE 3 --- in tests/integration/psync2.tcl
+### Starting test PSYNC2: [NEW LAYOUT] Set #0 as master in tests/integration/psync2.tcl
+### Starting test PSYNC2: Set #4 to replicate from #0 in tests/integration/psync2.tcl
+### Starting test PSYNC2: Set #1 to replicate from #4 in tests/integration/psync2.tcl
+### Starting test PSYNC2: Set #2 to replicate from #4 in tests/integration/psync2.tcl
+### Starting test PSYNC2: Set #3 to replicate from #4 in tests/integration/psync2.tcl
+10482:S 03 May 2025 23:07:52.696 * REPLICAOF would result into synchronization with the primary we are already connected with. No operation performed.
+### Starting test PSYNC2: cluster is consistent after failover in tests/integration/psync2.tcl
+### Starting test PSYNC2: generate load while killing replication links in tests/integration/psync2.tcl
+10482:S 03 May 2025 23:07:53.699 * Connection with primary lost.
+10482:S 03 May 2025 23:07:53.699 * Caching the disconnected primary state.
+10482:S 03 May 2025 23:07:53.699 * Reconnecting to PRIMARY 127.0.0.1:24655
+10482:S 03 May 2025 23:07:53.699 * PRIMARY <-> REPLICA sync started
+10482:S 03 May 2025 23:07:53.699 * Non blocking connect for SYNC fired the event.
+10482:S 03 May 2025 23:07:53.699 * Primary replied to PING, replication can continue...
+10482:S 03 May 2025 23:07:53.699 * Trying a partial resynchronization (request 97d3d461d9e8fd856b6c2a491ed2a851c61b8a2c:1639930).
+10482:S 03 May 2025 23:07:53.699 * Successful partial resynchronization with primary.
+10482:S 03 May 2025 23:07:53.700 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+10482:S 03 May 2025 23:07:54.107 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+### Starting test PSYNC2: cluster is consistent after load (x = 100807) in tests/integration/psync2.tcl
+### Starting test PSYNC2: total sum of full synchronizations is exactly 4 in tests/integration/psync2.tcl
+### Starting test PSYNC2: --- CYCLE 4 --- in tests/integration/psync2.tcl
+### Starting test PSYNC2: [NEW LAYOUT] Set #2 as master in tests/integration/psync2.tcl
+### Starting test PSYNC2: Set #0 to replicate from #4 in tests/integration/psync2.tcl
+10482:S 03 May 2025 23:07:57.714 - Client closed connection id=5 addr=127.0.0.1:24655 laddr=127.0.0.1:59431 fd=13 name= age=20 idle=0 flags=M capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=40 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=incr user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=2117273 tot-net-out=818 tot-cmds=100829
+10482:S 03 May 2025 23:07:57.714 * Connection with primary lost.
+10482:S 03 May 2025 23:07:57.714 * Caching the disconnected primary state.
+10482:S 03 May 2025 23:07:57.714 * Reconnecting to PRIMARY 127.0.0.1:24655
+10482:S 03 May 2025 23:07:57.714 * PRIMARY <-> REPLICA sync started
+10482:S 03 May 2025 23:07:57.714 * Non blocking connect for SYNC fired the event.
+10482:S 03 May 2025 23:07:57.714 * Primary replied to PING, replication can continue...
+10482:S 03 May 2025 23:07:57.714 * Trying a partial resynchronization (request 97d3d461d9e8fd856b6c2a491ed2a851c61b8a2c:2117316).
+10482:S 03 May 2025 23:07:57.714 * Successful partial resynchronization with primary.
+10482:S 03 May 2025 23:07:57.714 * Primary replication ID changed to a8270883e4c88690db31644e0d9fe00124a8ae28
+10482:S 03 May 2025 23:07:57.714 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2: Set #4 to replicate from #2 in tests/integration/psync2.tcl
+10482:S 03 May 2025 23:07:59.137 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+### Starting test PSYNC2: Set #1 to replicate from #2 in tests/integration/psync2.tcl
+### Starting test PSYNC2: Set #3 to replicate from #4 in tests/integration/psync2.tcl
+10482:M 03 May 2025 23:08:00.730 * Connection with primary lost.
+10482:M 03 May 2025 23:08:00.730 * Caching the disconnected primary state.
+10482:S 03 May 2025 23:08:00.730 * Connecting to PRIMARY 127.0.0.1:24653
+10482:S 03 May 2025 23:08:00.730 * PRIMARY <-> REPLICA sync started
+10482:S 03 May 2025 23:08:00.730 * REPLICAOF 127.0.0.1:24653 enabled (user request from 'id=3 addr=127.0.0.1:56862 laddr=127.0.0.1:24652 fd=12 name= user=default lib-name= lib-ver=')
+10482:S 03 May 2025 23:08:00.730 * Non blocking connect for SYNC fired the event.
+10482:S 03 May 2025 23:08:00.730 * Primary replied to PING, replication can continue...
+10482:S 03 May 2025 23:08:00.731 * Trying a partial resynchronization (request a8270883e4c88690db31644e0d9fe00124a8ae28:2117358).
+10482:S 03 May 2025 23:08:00.731 * Successful partial resynchronization with primary.
+10482:S 03 May 2025 23:08:00.731 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test PSYNC2: cluster is consistent after failover in tests/integration/psync2.tcl
+### Starting test PSYNC2: generate load while killing replication links in tests/integration/psync2.tcl
+10482:S 03 May 2025 23:08:04.163 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+### Starting test PSYNC2: cluster is consistent after load (x = 138231) in tests/integration/psync2.tcl
+### Starting test PSYNC2: total sum of full synchronizations is exactly 4 in tests/integration/psync2.tcl
+### Starting test PSYNC2: --- CYCLE 5 --- in tests/integration/psync2.tcl
+### Starting test PSYNC2: [NEW LAYOUT] Set #3 as master in tests/integration/psync2.tcl
+10482:M 03 May 2025 23:08:06.741 * Connection with primary lost.
+10482:M 03 May 2025 23:08:06.741 * Caching the disconnected primary state.
+10482:M 03 May 2025 23:08:06.741 * Discarding previously cached primary state.
+10482:M 03 May 2025 23:08:06.741 * Setting secondary replication ID to a8270883e4c88690db31644e0d9fe00124a8ae28, valid up to offset: 2903369. New replication ID is 7433f37c057ef30d67bcc483eb943bebb2536842
+10482:M 03 May 2025 23:08:06.742 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:56862 laddr=127.0.0.1:24652 fd=12 name= user=default lib-name= lib-ver=')
+### Starting test PSYNC2: Set #4 to replicate from #3 in tests/integration/psync2.tcl
+10482:M 03 May 2025 23:08:06.745 - Accepted 127.0.0.1:59858
+10482:M 03 May 2025 23:08:06.746 * Replica 127.0.0.1:24651 asks for synchronization
+10482:M 03 May 2025 23:08:06.746 * Partial resynchronization request from 127.0.0.1:24651 accepted. Sending 0 bytes of backlog starting from offset 2903369.
+### Starting test PSYNC2: Set #0 to replicate from #3 in tests/integration/psync2.tcl
+10482:M 03 May 2025 23:08:07.751 - Accepted 127.0.0.1:59944
+10482:M 03 May 2025 23:08:07.753 * Replica 127.0.0.1:24655 asks for synchronization
+10482:M 03 May 2025 23:08:07.753 * Partial resynchronization request from 127.0.0.1:24655 accepted. Sending 14 bytes of backlog starting from offset 2903369.
+### Starting test PSYNC2: Set #1 to replicate from #3 in tests/integration/psync2.tcl
+10482:M 03 May 2025 23:08:08.757 - Accepted 127.0.0.1:60067
+10482:M 03 May 2025 23:08:08.757 * Replica 127.0.0.1:24654 asks for synchronization
+10482:M 03 May 2025 23:08:08.757 * Partial resynchronization request from 127.0.0.1:24654 accepted. Sending 28 bytes of backlog starting from offset 2903369.
+10482:M 03 May 2025 23:08:09.192 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+### Starting test PSYNC2: Set #2 to replicate from #0 in tests/integration/psync2.tcl
+10482:M 03 May 2025 23:08:09.762 - Accepted 127.0.0.1:60185
+10482:M 03 May 2025 23:08:09.764 * Replica 127.0.0.1:24653 asks for synchronization
+10482:M 03 May 2025 23:08:09.764 * Partial resynchronization request from 127.0.0.1:24653 accepted. Sending 42 bytes of backlog starting from offset 2903369.
+### Starting test PSYNC2: cluster is consistent after failover in tests/integration/psync2.tcl
+### Starting test PSYNC2: generate load while killing replication links in tests/integration/psync2.tcl
+10482:M 03 May 2025 23:08:11.770 - Client closed connection id=7 addr=127.0.0.1:59944 laddr=127.0.0.1:24652 fd=14 name= age=4 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=407 tot-net-out=132856 tot-cmds=9
+10482:M 03 May 2025 23:08:11.770 * Connection with replica 127.0.0.1:24655 lost.
+10482:M 03 May 2025 23:08:11.770 - Accepted 127.0.0.1:60497
+10482:M 03 May 2025 23:08:11.770 * Replica 127.0.0.1:24655 asks for synchronization
+10482:M 03 May 2025 23:08:11.770 * Partial resynchronization request from 127.0.0.1:24655 accepted. Sending 63 bytes of backlog starting from offset 3036203.
+10482:M 03 May 2025 23:08:12.770 - Client closed connection id=8 addr=127.0.0.1:60067 laddr=127.0.0.1:24652 fd=15 name= age=4 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=407 tot-net-out=278190 tot-cmds=9
+10482:M 03 May 2025 23:08:12.770 * Connection with replica 127.0.0.1:24654 lost.
+10482:M 03 May 2025 23:08:12.770 - Accepted 127.0.0.1:60674
+10482:M 03 May 2025 23:08:12.770 * Replica 127.0.0.1:24654 asks for synchronization
+10482:M 03 May 2025 23:08:12.770 * Partial resynchronization request from 127.0.0.1:24654 accepted. Sending 84 bytes of backlog starting from offset 3181537.
+10482:M 03 May 2025 23:08:13.770 - Client closed connection id=6 addr=127.0.0.1:59858 laddr=127.0.0.1:24652 fd=13 name= age=7 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=527 tot-net-out=450047 tot-cmds=12
+10482:M 03 May 2025 23:08:13.770 * Connection with replica 127.0.0.1:24651 lost.
+10482:M 03 May 2025 23:08:13.770 - Accepted 127.0.0.1:61000
+10482:M 03 May 2025 23:08:13.770 * Replica 127.0.0.1:24651 asks for synchronization
+10482:M 03 May 2025 23:08:13.770 * Partial resynchronization request from 127.0.0.1:24651 accepted. Sending 42 bytes of backlog starting from offset 3353394.
+10482:M 03 May 2025 23:08:14.214 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+10482:M 03 May 2025 23:08:14.770 - Client closed connection id=12 addr=127.0.0.1:61000 laddr=127.0.0.1:24652 fd=13 name= age=1 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=287 tot-net-out=157053 tot-cmds=6
+10482:M 03 May 2025 23:08:14.770 * Connection with replica 127.0.0.1:24651 lost.
+10482:M 03 May 2025 23:08:14.770 - Accepted 127.0.0.1:61315
+10482:M 03 May 2025 23:08:14.770 * Replica 127.0.0.1:24651 asks for synchronization
+10482:M 03 May 2025 23:08:14.770 * Partial resynchronization request from 127.0.0.1:24651 accepted. Sending 84 bytes of backlog starting from offset 3510425.
+10482:M 03 May 2025 23:08:15.770 - Client closed connection id=10 addr=127.0.0.1:60497 laddr=127.0.0.1:24652 fd=14 name= age=4 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=407 tot-net-out=639633 tot-cmds=9
+10482:M 03 May 2025 23:08:15.770 * Connection with replica 127.0.0.1:24655 lost.
+10482:M 03 May 2025 23:08:15.770 - Accepted 127.0.0.1:61656
+10482:M 03 May 2025 23:08:15.770 * Replica 127.0.0.1:24655 asks for synchronization
+10482:M 03 May 2025 23:08:15.770 * Partial resynchronization request from 127.0.0.1:24655 accepted. Sending 0 bytes of backlog starting from offset 3675814.
+### Starting test PSYNC2: cluster is consistent after load (x = 175007) in tests/integration/psync2.tcl
+### Starting test PSYNC2: total sum of full synchronizations is exactly 4 in tests/integration/psync2.tcl
+### Starting test PSYNC2: Bring the master back again for next test in tests/integration/psync2.tcl
+### Starting test PSYNC2: Partial resync after restart using RDB aux fields in tests/integration/psync2.tcl
+### Starting test Check for memory leaks (pid 10418) in tests/integration/psync2.tcl
+10482:M 03 May 2025 23:08:18.036 - Client closed connection id=13 addr=127.0.0.1:61315 laddr=127.0.0.1:24652 fd=13 name= age=4 idle=2 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=327 tot-net-out=165411 tot-cmds=7
+10482:M 03 May 2025 23:08:18.036 * Connection with replica 127.0.0.1:24651 lost.
+10482:M 03 May 2025 23:08:18.090 - Accepted 127.0.0.1:62436
+10482:M 03 May 2025 23:08:18.090 * Replica 127.0.0.1:24651 asks for synchronization
+10482:M 03 May 2025 23:08:18.090 * Partial resynchronization request from 127.0.0.1:24651 accepted. Sending 0 bytes of backlog starting from offset 3675814.
+### Starting test Check for memory leaks (pid 10539) in tests/integration/psync2.tcl
+10482:M 03 May 2025 23:08:19.253 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+10482:M 03 May 2025 23:08:20.632 - Client closed connection id=14 addr=127.0.0.1:61656 laddr=127.0.0.1:24652 fd=14 name= age=5 idle=2 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=367 tot-net-out=22 tot-cmds=8
+10482:M 03 May 2025 23:08:20.632 * Connection with replica 127.0.0.1:24655 lost.
+### Starting test Check for memory leaks (pid 10517) in tests/integration/psync2.tcl
+10482:M 03 May 2025 23:08:22.134 - Client closed connection id=11 addr=127.0.0.1:60674 laddr=127.0.0.1:24652 fd=15 name= age=10 idle=2 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=567 tot-net-out=494299 tot-cmds=13
+10482:M 03 May 2025 23:08:22.134 * Connection with replica 127.0.0.1:24654 lost.
+### Starting test Check for memory leaks (pid 10500) in tests/integration/psync2.tcl
+10482:M 03 May 2025 23:08:23.609 - Client closed connection id=9 addr=127.0.0.1:60185 laddr=127.0.0.1:24652 fd=16 name= age=14 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=767 tot-net-out=772467 tot-cmds=18
+10482:M 03 May 2025 23:08:23.609 * Connection with replica 127.0.0.1:24653 lost.
+10482:M 03 May 2025 23:08:23.669 - Client closed connection id=3 addr=127.0.0.1:56862 laddr=127.0.0.1:24652 fd=12 name= age=49 idle=5 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=774020 tot-net-out=645558 tot-cmds=36854
+10482:M 03 May 2025 23:08:24.306 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+10482:signal-handler (1746281309) Received SIGTERM scheduling shutdown...
+10482:M 03 May 2025 23:08:29.876 * User requested shutdown...
+10482:M 03 May 2025 23:08:29.876 * 1 of 1 replicas are in sync when shutting down.
+10482:M 03 May 2025 23:08:29.876 * Removing the pid file.
+10482:M 03 May 2025 23:08:29.876 * Removing the unix socket file.
+10482:M 03 May 2025 23:08:29.876 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,49 @@
+### Starting server for test 
+85693:M 03 May 2025 23:04:01.576 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+85693:M 03 May 2025 23:04:01.576 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=85693, just started
+85693:M 03 May 2025 23:04:01.576 * Configuration loaded
+85693:M 03 May 2025 23:04:01.576 * Increased maximum number of open files to 10032 (it was originally set to 256).
+85693:M 03 May 2025 23:04:01.576 * monotonic clock: POSIX clock_gettime
+85693:M 03 May 2025 23:04:01.576 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25117
+ |###|   .+###############+.   |###|    PID: 85693                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+85693:M 03 May 2025 23:04:01.576 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+85693:M 03 May 2025 23:04:01.576 * Server initialized
+85693:M 03 May 2025 23:04:01.576 * Ready to accept connections tcp
+85693:M 03 May 2025 23:04:01.576 * Ready to accept connections unix
+85693:M 03 May 2025 23:04:01.702 - Accepted 127.0.0.1:59265
+85693:M 03 May 2025 23:04:01.702 - Client closed connection id=2 addr=127.0.0.1:59265 laddr=127.0.0.1:25117 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=34 tot-cmds=0
+85693:M 03 May 2025 23:04:01.723 - Accepted 127.0.0.1:59266
+### Starting test AUTH fails when a wrong password is given in tests/unit/auth.tcl
+### Starting test Arbitrary command gives an error when AUTH is required in tests/unit/auth.tcl
+### Starting test AUTH succeeds when the right password is given in tests/unit/auth.tcl
+### Starting test Once AUTH succeeded we can actually send commands to the server in tests/unit/auth.tcl
+### Starting test For unauthenticated clients multibulk and bulk length are limited in tests/unit/auth.tcl
+85693:M 03 May 2025 23:04:01.724 - Accepted 127.0.0.1:59267
+85693:M 03 May 2025 23:04:01.724 - Protocol error (unauth mbulk count) from client: id=4 addr=127.0.0.1:59267 laddr=127.0.0.1:25117 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=6 qbuf-free=16884 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=55 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=0 tot-cmds=0. Query buffer: '*100..'
+85693:M 03 May 2025 23:04:01.724 - Accepted 127.0.0.1:59268
+85693:M 03 May 2025 23:04:01.724 - Protocol error (unauth bulk length) from client: id=5 addr=127.0.0.1:59268 laddr=127.0.0.1:25117 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=16 qbuf-free=16874 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=50 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=16 tot-net-out=0 tot-cmds=0. Query buffer: '$100000000..'
+85693:M 03 May 2025 23:04:01.724 - Client closed connection id=3 addr=127.0.0.1:59266 laddr=127.0.0.1:25117 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=137 tot-net-out=114 tot-cmds=4
+85693:signal-handler (1746281042) Received SIGTERM scheduling shutdown...
+85693:M 03 May 2025 23:04:02.913 * User requested shutdown...
+85693:M 03 May 2025 23:04:02.913 * Removing the pid file.
+85693:M 03 May 2025 23:04:02.913 * Removing the unix socket file.
+85693:M 03 May 2025 23:04:02.913 # Valkey is now ready to exit, bye bye...

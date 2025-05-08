@@ -1,0 +1,48 @@
+### Starting server for test corrupt payload: load corrupted rdb with no CRC - #3505 in tests/integration/corrupt-dump.tcl
+3926:M 03 May 2025 23:06:29.963 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+3926:M 03 May 2025 23:06:29.963 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=3926, just started
+3926:M 03 May 2025 23:06:29.963 * Configuration loaded
+3926:M 03 May 2025 23:06:29.963 * Increased maximum number of open files to 10032 (it was originally set to 256).
+3926:M 03 May 2025 23:06:29.963 * monotonic clock: POSIX clock_gettime
+3926:M 03 May 2025 23:06:29.964 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21655
+ |###|   .+###############+.   |###|    PID: 3926                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+3926:M 03 May 2025 23:06:29.964 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+3926:M 03 May 2025 23:06:29.964 * Server initialized
+3926:M 03 May 2025 23:06:29.964 * Loading RDB produced by Redis version 999.999.999
+3926:M 03 May 2025 23:06:29.964 * RDB age 273228380 seconds
+3926:M 03 May 2025 23:06:29.964 * RDB memory usage when created 0.73 Mb
+3926:M 03 May 2025 23:06:29.964 # Internal error in RDB reading offset 0, function at rdb.c:2437 -> Hash ziplist integrity check failed.
+[offset 0] Checking RDB file corrupt_ziplist.rdb
+[offset 32] AUX FIELD redis-ver = '999.999.999'
+[offset 46] AUX FIELD redis-bits = '64'
+[offset 58] AUX FIELD ctime = '1473052809'
+[offset 73] AUX FIELD used-mem = '768992'
+[offset 75] Selecting DB ID 0
+--- RDB ERROR DETECTED ---
+[offset 494] Internal error in RDB reading offset 0, function at rdb.c:2437 -> Hash ziplist integrity check failed.
+[additional info] While doing: read-object-value
+[additional info] Reading key 'key:000000000091'
+[additional info] Reading type 13 (hash-ziplist)
+[info] 16 keys read
+[info] 0 expires
+[info] 0 already expired
+3926:M 03 May 2025 23:06:29.964 # Terminating server after rdb file reading failure.

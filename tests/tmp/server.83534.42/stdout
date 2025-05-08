@@ -1,0 +1,608 @@
+### Starting server for test 
+89352:M 03 May 2025 23:04:26.342 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+89352:M 03 May 2025 23:04:26.342 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+89352:M 03 May 2025 23:04:26.342 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=89352, just started
+89352:M 03 May 2025 23:04:26.342 * Configuration loaded
+89352:M 03 May 2025 23:04:26.342 * Increased maximum number of open files to 10032 (it was originally set to 256).
+89352:M 03 May 2025 23:04:26.342 * monotonic clock: POSIX clock_gettime
+89352:M 03 May 2025 23:04:26.342 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25629
+ |###|   .+###############+.   |###|    PID: 89352                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+89352:M 03 May 2025 23:04:26.342 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+89352:M 03 May 2025 23:04:26.342 * No cluster configuration found, I'm 49a6b2e00b53bcbb34b88b4d5b256badd9c9bf73
+89352:M 03 May 2025 23:04:26.348 * Server initialized
+89352:M 03 May 2025 23:04:26.349 * Ready to accept connections tcp
+89352:M 03 May 2025 23:04:26.349 * Ready to accept connections unix
+89352:M 03 May 2025 23:04:26.468 - Accepted 127.0.0.1:60217
+89352:M 03 May 2025 23:04:26.470 - Client closed connection id=2 addr=127.0.0.1:60217 laddr=127.0.0.1:25629 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+89352:M 03 May 2025 23:04:26.510 - Accepted 127.0.0.1:60221
+89352:M 03 May 2025 23:04:28.256 - Accepting cluster node connection from 127.0.0.1:60356
+89352:M 03 May 2025 23:04:28.256 * IP address for this node updated to 127.0.0.1
+89352:M 03 May 2025 23:04:28.368 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+89352:M 03 May 2025 23:04:28.372 * Successfully completed handshake with 298cbb5912fa1c49173b389864ea1d9e8949d312 ()
+89352:M 03 May 2025 23:04:28.397 * Successfully completed handshake with 830ac93a68bd546bc68f0d28099d68dec5e610e3 ()
+89352:M 03 May 2025 23:04:28.405 * configEpoch collision with node 830ac93a68bd546bc68f0d28099d68dec5e610e3 (). configEpoch set to 2
+89352:M 03 May 2025 23:04:28.445 - Accepting cluster node connection from 127.0.0.1:60400
+89352:M 03 May 2025 23:04:28.463 - Accepting cluster node connection from 127.0.0.1:60407
+89352:M 03 May 2025 23:04:28.556 - Accepting cluster node connection from 127.0.0.1:60427
+89352:M 03 May 2025 23:04:28.559 - Accepting cluster node connection from 127.0.0.1:60429
+89352:M 03 May 2025 23:04:28.574 - Accepting cluster node connection from 127.0.0.1:60435
+89352:M 03 May 2025 23:04:28.574 - Accepting cluster node connection from 127.0.0.1:60436
+89352:M 03 May 2025 23:04:28.620 - Accepting cluster node connection from 127.0.0.1:60444
+89352:M 03 May 2025 23:04:28.623 * configEpoch collision with node b5d2cb99493e03b95f5b4ceef666b6c146b8483f (). configEpoch set to 6
+89352:M 03 May 2025 23:04:28.708 - Accepting cluster node connection from 127.0.0.1:60446
+89352:M 03 May 2025 23:04:28.708 - Accepting cluster node connection from 127.0.0.1:60450
+89352:M 03 May 2025 23:04:28.810 * Cluster state changed: ok
+89352:M 03 May 2025 23:04:28.967 # Missing implement of connection type tls
+89352:M 03 May 2025 23:04:28.971 * Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 () is no longer primary of shard 9eb746c79cb1fc7bdec65de386ac6a3de8061dbb; removed all 0 slot(s) it used to own
+89352:M 03 May 2025 23:04:28.971 * Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 () is now part of shard ce1ce2d40fc11540b4d4fbf433a95aba39ce96d0
+89352:M 03 May 2025 23:04:28.971 * Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 () is now a replica of node d4a541da210418dce028e0274341a55c129fc825 () in shard ce1ce2d40fc11540b4d4fbf433a95aba39ce96d0
+89352:M 03 May 2025 23:04:28.974 * Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 () is no longer primary of shard 49d1c37e6da3c41dc6095f8ed615dffa0215d0b5; removed all 0 slot(s) it used to own
+89352:M 03 May 2025 23:04:28.974 * Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 () is now part of shard e1de41ffd5b22c7cef240a4331f5b9c2bd1ec141
+89352:M 03 May 2025 23:04:28.974 * Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 () is now a replica of node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 () in shard e1de41ffd5b22c7cef240a4331f5b9c2bd1ec141
+89352:M 03 May 2025 23:04:28.976 * Node b5d2cb99493e03b95f5b4ceef666b6c146b8483f () is no longer primary of shard 18e491ac0ebbc1c9eda07c64fb7b5e3da97db16f; removed all 0 slot(s) it used to own
+89352:M 03 May 2025 23:04:28.979 * Node b5d2cb99493e03b95f5b4ceef666b6c146b8483f () is now part of shard fb98a0ec1aacfb366246894eefaed2af2f7c4c4e
+89352:M 03 May 2025 23:04:28.979 * Node b5d2cb99493e03b95f5b4ceef666b6c146b8483f () is now a replica of node 830ac93a68bd546bc68f0d28099d68dec5e610e3 () in shard fb98a0ec1aacfb366246894eefaed2af2f7c4c4e
+89352:S 03 May 2025 23:04:28.979 * Connecting to PRIMARY 127.0.0.1:25634
+89352:S 03 May 2025 23:04:28.979 * PRIMARY <-> REPLICA sync started
+89352:S 03 May 2025 23:04:28.980 * Non blocking connect for SYNC fired the event.
+89352:S 03 May 2025 23:04:28.981 * Primary replied to PING, replication can continue...
+89352:S 03 May 2025 23:04:28.981 * Partial resynchronization not possible (no cached primary)
+89352:S 03 May 2025 23:04:28.982 * Full resync from primary: b1d65847ec23bcf8760c50b8597f4d4fdc25a71f:0
+89352:S 03 May 2025 23:04:28.987 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+89352:S 03 May 2025 23:04:28.995 * PRIMARY <-> REPLICA sync: Flushing old data
+89352:S 03 May 2025 23:04:28.995 * PRIMARY <-> REPLICA sync: Loading DB in memory
+89352:S 03 May 2025 23:04:28.997 * Loading RDB produced by Valkey version 255.255.255
+89352:S 03 May 2025 23:04:28.997 * RDB age 0 seconds
+89352:S 03 May 2025 23:04:28.998 * RDB memory usage when created 2.90 Mb
+89352:S 03 May 2025 23:04:28.998 * Done loading RDB, keys loaded: 0, keys expired: 0.
+89352:S 03 May 2025 23:04:28.998 * PRIMARY <-> REPLICA sync: Finished with success
+89352:S 03 May 2025 23:04:28.998 * Node 3a80752b0eb90f9593f1ca7c29a1cc73b38435b7 () is no longer primary of shard 34b9589abeb4712483c0fff534f6c42c6e0692e1; removed all 0 slot(s) it used to own
+89352:S 03 May 2025 23:04:28.998 * Node 3a80752b0eb90f9593f1ca7c29a1cc73b38435b7 () is now part of shard 13401c2fb3be710e34a5d8b768c60923088230ef
+89352:S 03 May 2025 23:04:28.998 * Node 3a80752b0eb90f9593f1ca7c29a1cc73b38435b7 () is now a replica of node 298cbb5912fa1c49173b389864ea1d9e8949d312 () in shard 13401c2fb3be710e34a5d8b768c60923088230ef
+89352:S 03 May 2025 23:04:29.011 # DEBUG LOG: ========== I am replica 8 ==========
+### Starting test Cluster is up in tests/unit/cluster/failover.tcl
+### Starting test Cluster is writable in tests/unit/cluster/failover.tcl
+89352:S 03 May 2025 23:04:38.560 - Accepted 127.0.0.1:62578
+89352:S 03 May 2025 23:04:38.589 - Client closed connection id=7 addr=127.0.0.1:62578 laddr=127.0.0.1:25629 fd=34 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=0 tot-cmds=0
+### Starting test Instance #5 is a slave in tests/unit/cluster/failover.tcl
+### Starting test Instance #5 synced with the master in tests/unit/cluster/failover.tcl
+### Starting test Killing one master node in tests/unit/cluster/failover.tcl
+### Starting test Wait for failover in tests/unit/cluster/failover.tcl
+89352:S 03 May 2025 23:04:41.553 - DB 0: 14 keys (0 volatile) in 98 slots HT.
+89352:S 03 May 2025 23:04:41.653 * NODE d4a541da210418dce028e0274341a55c129fc825 () possibly failing.
+89352:S 03 May 2025 23:04:41.754 * Node 298cbb5912fa1c49173b389864ea1d9e8949d312 () reported node d4a541da210418dce028e0274341a55c129fc825 () as not reachable.
+89352:S 03 May 2025 23:04:41.835 * Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 () reported node d4a541da210418dce028e0274341a55c129fc825 () as not reachable.
+89352:S 03 May 2025 23:04:41.836 * FAIL message received from b5d2cb99493e03b95f5b4ceef666b6c146b8483f () about d4a541da210418dce028e0274341a55c129fc825 ()
+89352:S 03 May 2025 23:04:41.836 # Cluster state changed: fail
+89352:S 03 May 2025 23:04:41.836 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+89352:S 03 May 2025 23:04:41.855 * Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 () reported node d4a541da210418dce028e0274341a55c129fc825 () as not reachable.
+89352:S 03 May 2025 23:04:41.905 * Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 () reported node d4a541da210418dce028e0274341a55c129fc825 () as not reachable.
+### Starting test Cluster should eventually be up again in tests/unit/cluster/failover.tcl
+89352:S 03 May 2025 23:04:42.890 * Cluster state changed: ok
+### Starting test Cluster is writable in tests/unit/cluster/failover.tcl
+89352:S 03 May 2025 23:04:42.990 - Accepted 127.0.0.1:63957
+89352:S 03 May 2025 23:04:43.019 - Client closed connection id=8 addr=127.0.0.1:63957 laddr=127.0.0.1:25629 fd=34 name= age=1 idle=1 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=0 tot-cmds=0
+### Starting test Instance #5 is now a master in tests/unit/cluster/failover.tcl
+### Starting test Restarting the previously killed master node in tests/unit/cluster/failover.tcl
+### Starting test Instance #0 gets converted into a slave in tests/unit/cluster/failover.tcl
+89352:S 03 May 2025 23:04:43.027 - Node d4a541da210418dce028e0274341a55c129fc825 has old slots configuration, sending an UPDATE message about e8f7d0ef9915c7d538829f6e3533c532bafa8a39
+89352:S 03 May 2025 23:04:43.032 * Clear FAIL state for node d4a541da210418dce028e0274341a55c129fc825 (): primary without slots is reachable again.
+89352:S 03 May 2025 23:04:43.032 - Node d4a541da210418dce028e0274341a55c129fc825 has old slots configuration, sending an UPDATE message about e8f7d0ef9915c7d538829f6e3533c532bafa8a39
+89352:S 03 May 2025 23:04:43.033 * A failover occurred in shard ce1ce2d40fc11540b4d4fbf433a95aba39ce96d0; node d4a541da210418dce028e0274341a55c129fc825 () failed over to node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 () with a config epoch of 10
+89352:S 03 May 2025 23:04:43.033 * Node d4a541da210418dce028e0274341a55c129fc825 () is now a replica of node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 () in shard ce1ce2d40fc11540b4d4fbf433a95aba39ce96d0
+### Starting test Check for memory leaks (pid 89538) in tests/unit/cluster/failover.tcl
+89352:S 03 May 2025 23:04:43.167 * Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 () reported node d4a541da210418dce028e0274341a55c129fc825 () is back online.
+89352:S 03 May 2025 23:04:43.267 * Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 () reported node d4a541da210418dce028e0274341a55c129fc825 () is back online.
+89352:S 03 May 2025 23:04:43.368 * Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 () reported node d4a541da210418dce028e0274341a55c129fc825 () is back online.
+89352:S 03 May 2025 23:04:43.688 * Node 298cbb5912fa1c49173b389864ea1d9e8949d312 () reported node d4a541da210418dce028e0274341a55c129fc825 () is back online.
+89352:S 03 May 2025 23:04:44.379 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+### Starting test Check for memory leaks (pid 89527) in tests/unit/cluster/failover.tcl
+89352:S 03 May 2025 23:04:44.482 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:44.582 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:44.683 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:44.784 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:44.884 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:44.985 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:45.086 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:45.187 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:45.287 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:45.387 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:45.489 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:45.590 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:45.691 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:45.792 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:45.892 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:45.993 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:45.993 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+### Starting test Check for memory leaks (pid 89516) in tests/unit/cluster/failover.tcl
+89352:S 03 May 2025 23:04:46.094 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:46.094 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:46.194 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:46.194 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:46.295 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:46.295 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:46.395 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:46.395 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:46.496 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:46.496 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:46.597 - DB 0: 14 keys (0 volatile) in 98 slots HT.
+89352:S 03 May 2025 23:04:46.597 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:46.597 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:46.698 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:46.698 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:46.798 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:46.798 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:46.898 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:46.898 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:46.999 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:46.999 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:47.099 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:47.099 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:47.200 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:47.200 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:47.300 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:47.300 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:47.400 * NODE d4a541da210418dce028e0274341a55c129fc825 () possibly failing.
+89352:S 03 May 2025 23:04:47.400 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:47.400 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:47.400 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+### Starting test Check for memory leaks (pid 89505) in tests/unit/cluster/failover.tcl
+89352:S 03 May 2025 23:04:47.502 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:47.502 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:47.502 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:47.504 * Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 () reported node d4a541da210418dce028e0274341a55c129fc825 () as not reachable.
+89352:S 03 May 2025 23:04:47.525 * Node 298cbb5912fa1c49173b389864ea1d9e8949d312 () reported node d4a541da210418dce028e0274341a55c129fc825 () as not reachable.
+89352:S 03 May 2025 23:04:47.560 * Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 () reported node d4a541da210418dce028e0274341a55c129fc825 () as not reachable.
+89352:S 03 May 2025 23:04:47.560 * Marking node d4a541da210418dce028e0274341a55c129fc825 () as failing (quorum reached).
+89352:S 03 May 2025 23:04:47.603 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:47.603 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:47.603 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:47.704 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:47.704 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:47.704 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:47.804 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:47.804 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:47.804 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:47.905 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:47.905 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:47.905 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:48.006 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:48.008 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:48.009 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:48.107 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:48.109 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:48.110 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:48.208 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:48.211 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:48.224 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:48.309 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:48.309 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:48.323 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:48.410 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:48.414 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:48.414 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:48.511 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:48.518 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:48.524 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:48.614 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:48.618 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:48.620 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:48.714 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:48.714 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:48.715 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:48.756 - Client closed connection id=5 addr=127.0.0.1:25634 laddr=127.0.0.1:60474 fd=33 name= age=20 idle=0 flags=M capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=65530 argv-mem=0 multi-mem=0 rbs=1024 rbp=37 obl=0 oll=0 omem=0 tot-mem=67072 events=r cmd=ping user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1591 tot-net-out=741 tot-cmds=31
+89352:S 03 May 2025 23:04:48.760 * Connection with primary lost.
+89352:S 03 May 2025 23:04:48.762 * Caching the disconnected primary state.
+89352:S 03 May 2025 23:04:48.765 * Reconnecting to PRIMARY 127.0.0.1:25634
+89352:S 03 May 2025 23:04:48.765 * PRIMARY <-> REPLICA sync started
+89352:S 03 May 2025 23:04:48.772 # Error condition on socket for SYNC: Connection refused
+89352:S 03 May 2025 23:04:48.814 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:48.814 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:48.814 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:48.814 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+### Starting test Check for memory leaks (pid 89491) in tests/unit/cluster/failover.tcl
+89352:S 03 May 2025 23:04:48.915 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:48.915 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:48.915 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:48.915 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:49.016 * NODE b783e43cd90a371c2a8bfb9381f7136b60cec8f3 () possibly failing.
+89352:S 03 May 2025 23:04:49.017 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:49.017 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:49.017 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:49.017 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:49.079 * Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 () reported node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 () as not reachable.
+89352:S 03 May 2025 23:04:49.117 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:49.117 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:49.117 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:49.117 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:49.219 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:49.219 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:49.219 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:49.219 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:49.221 * Node 298cbb5912fa1c49173b389864ea1d9e8949d312 () reported node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 () as not reachable.
+89352:S 03 May 2025 23:04:49.319 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:49.319 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:49.319 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:49.319 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:49.420 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:49.420 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:49.420 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:49.420 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:49.521 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:49.521 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:49.521 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:49.521 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:49.621 * Connecting to PRIMARY 127.0.0.1:25634
+89352:S 03 May 2025 23:04:49.621 * PRIMARY <-> REPLICA sync started
+89352:S 03 May 2025 23:04:49.622 # Error condition on socket for SYNC: Connection refused
+89352:S 03 May 2025 23:04:49.622 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:49.622 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:49.622 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:49.622 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:49.722 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:49.722 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:49.722 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:49.722 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:49.823 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:49.823 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:49.823 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:49.823 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:49.924 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:49.926 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:49.926 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:49.926 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:50.026 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:50.026 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:50.026 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:50.026 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+### Starting test Check for memory leaks (pid 89445) in tests/unit/cluster/failover.tcl
+89352:S 03 May 2025 23:04:50.127 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:50.127 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:50.127 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:50.127 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:50.127 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:50.228 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:50.228 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:50.228 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:50.228 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:50.228 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:50.329 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:50.329 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:50.329 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:50.329 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:50.329 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:50.430 * NODE 830ac93a68bd546bc68f0d28099d68dec5e610e3 () possibly failing.
+89352:S 03 May 2025 23:04:50.430 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:50.430 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:50.430 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:50.430 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:50.430 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:50.530 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:50.530 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:50.530 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:50.530 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:50.530 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:50.631 * Connecting to PRIMARY 127.0.0.1:25634
+89352:S 03 May 2025 23:04:50.631 * PRIMARY <-> REPLICA sync started
+89352:S 03 May 2025 23:04:50.631 # Error condition on socket for SYNC: Connection refused
+89352:S 03 May 2025 23:04:50.631 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:50.631 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:50.631 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:50.631 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:50.631 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:50.732 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:50.732 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:50.732 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:50.732 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:50.732 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:50.833 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:50.833 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:50.833 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:50.833 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:50.833 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:50.933 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:50.933 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:50.933 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:50.933 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:50.933 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:51.034 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:51.034 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:51.034 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:51.034 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:51.034 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:51.134 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:51.134 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:51.134 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:51.134 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:51.134 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:51.235 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:51.235 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:51.235 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:51.235 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:51.235 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:51.335 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:51.335 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:51.335 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:51.335 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:51.335 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:51.335 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+### Starting test Check for memory leaks (pid 89394) in tests/unit/cluster/failover.tcl
+89352:S 03 May 2025 23:04:51.436 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:51.436 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:51.436 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:51.436 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:51.436 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:51.436 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:51.537 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:51.537 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:51.537 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:51.537 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:51.537 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:51.537 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:51.638 - DB 0: 14 keys (0 volatile) in 98 slots HT.
+89352:S 03 May 2025 23:04:51.638 * Connecting to PRIMARY 127.0.0.1:25634
+89352:S 03 May 2025 23:04:51.638 * PRIMARY <-> REPLICA sync started
+89352:S 03 May 2025 23:04:51.638 # Error condition on socket for SYNC: Connection refused
+89352:S 03 May 2025 23:04:51.638 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:51.638 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:51.638 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:51.638 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:51.638 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:51.638 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:51.739 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:51.739 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:51.739 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:51.739 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:51.739 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:51.739 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:51.840 * NODE 117e239bcf937f1a7fd42246b67e12a4580dbdf1 () possibly failing.
+89352:S 03 May 2025 23:04:51.840 # Cluster state changed: fail
+89352:S 03 May 2025 23:04:51.840 # Cluster is currently down: I am part of a minority partition.
+89352:S 03 May 2025 23:04:51.840 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:51.840 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:51.840 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:51.840 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:51.840 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:51.840 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:51.940 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:51.940 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:51.940 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:51.940 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:51.940 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:51.940 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:52.041 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:52.041 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:52.041 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:52.041 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:52.041 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:52.041 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:52.142 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:52.142 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:52.142 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:52.142 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:52.142 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:52.142 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:52.243 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:52.243 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:52.243 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:52.243 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:52.243 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:52.243 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:52.344 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:52.344 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:52.344 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:52.344 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:52.344 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:52.344 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:52.445 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:52.445 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:52.445 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:52.445 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:52.445 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:52.445 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:52.547 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:52.547 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:52.547 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:52.547 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:52.547 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:52.547 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:52.648 * Connecting to PRIMARY 127.0.0.1:25634
+89352:S 03 May 2025 23:04:52.650 * PRIMARY <-> REPLICA sync started
+89352:S 03 May 2025 23:04:52.650 # Error condition on socket for SYNC: Connection refused
+89352:S 03 May 2025 23:04:52.650 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:52.650 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:52.650 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:52.650 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:52.650 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:52.650 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:52.750 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:52.751 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:52.758 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:52.763 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:52.766 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:52.767 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:52.850 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:52.853 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:52.857 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:52.860 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:52.863 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:52.868 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:52.872 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:52.950 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:52.956 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:52.960 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:52.965 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:52.968 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:52.971 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:52.974 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+### Starting test Check for memory leaks (pid 89363) in tests/unit/cluster/failover.tcl
+89352:S 03 May 2025 23:04:53.053 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:53.056 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:53.059 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:53.062 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:53.062 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:53.062 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:53.065 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:53.153 * NODE 298cbb5912fa1c49173b389864ea1d9e8949d312 () possibly failing.
+89352:S 03 May 2025 23:04:53.153 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:53.153 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:53.153 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:53.153 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:53.153 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:53.153 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:53.153 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:53.254 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:53.254 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:53.254 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:53.254 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:53.254 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:53.254 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:53.254 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:53.354 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:53.354 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:53.354 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:53.354 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:53.354 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:53.354 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:53.354 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:53.455 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:53.455 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:53.455 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:53.455 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:53.455 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:53.455 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:53.455 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:53.556 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:53.556 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:53.556 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:53.556 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:53.557 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:53.558 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:53.561 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:53.657 * Connecting to PRIMARY 127.0.0.1:25634
+89352:S 03 May 2025 23:04:53.657 * PRIMARY <-> REPLICA sync started
+89352:S 03 May 2025 23:04:53.657 # Error condition on socket for SYNC: Connection refused
+89352:S 03 May 2025 23:04:53.657 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:53.657 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:53.657 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:53.657 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:53.657 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:53.657 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:53.657 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:53.757 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:53.758 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:53.758 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:53.758 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:53.758 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:53.758 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:53.758 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:53.859 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:53.859 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:53.859 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:53.859 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:53.859 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:53.859 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:53.859 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:53.959 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:53.959 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:53.959 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:53.959 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:53.959 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:53.959 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:53.959 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:54.060 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:54.060 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:54.060 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:54.060 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:54.060 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:54.060 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:54.060 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:54.161 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:54.161 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:54.161 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:54.161 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:54.161 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:54.161 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:54.161 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:54.262 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:54.262 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:54.262 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:54.262 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:54.262 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:54.262 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:54.262 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:54.363 * NODE e8f7d0ef9915c7d538829f6e3533c532bafa8a39 () possibly failing.
+89352:S 03 May 2025 23:04:54.363 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:54.363 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:54.363 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:54.363 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:54.363 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:54.363 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:54.363 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:54.463 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:54.463 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:54.463 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:54.463 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:54.463 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:54.463 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:54.463 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:54.563 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:54.565 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:54.565 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:54.565 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:54.565 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:54.565 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:54.565 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:54.582 - Client closed connection id=3 addr=127.0.0.1:60221 laddr=127.0.0.1:25629 fd=14 name= age=28 idle=11 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|slots user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=398 tot-net-out=11118 tot-cmds=11
+89352:S 03 May 2025 23:04:54.664 * Connecting to PRIMARY 127.0.0.1:25634
+89352:S 03 May 2025 23:04:54.664 * PRIMARY <-> REPLICA sync started
+89352:S 03 May 2025 23:04:54.664 # Error condition on socket for SYNC: Connection refused
+89352:S 03 May 2025 23:04:54.665 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:54.665 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:54.665 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:54.665 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:54.665 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:54.665 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:54.665 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:54.665 - Connection with Node b5d2cb99493e03b95f5b4ceef666b6c146b8483f at 127.0.0.1:35630 failed: Connection refused
+89352:S 03 May 2025 23:04:54.765 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:54.766 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:54.766 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:54.766 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:54.766 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:54.766 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:54.766 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:54.766 - Connection with Node b5d2cb99493e03b95f5b4ceef666b6c146b8483f at 127.0.0.1:35630 failed: Connection refused
+89352:S 03 May 2025 23:04:55.473 - Connection with Node 830ac93a68bd546bc68f0d28099d68dec5e610e3 at 127.0.0.1:35635 failed: Connection refused
+89352:S 03 May 2025 23:04:55.473 - Connection with Node b783e43cd90a371c2a8bfb9381f7136b60cec8f3 at 127.0.0.1:35636 failed: Connection refused
+89352:S 03 May 2025 23:04:55.473 - Connection with Node 117e239bcf937f1a7fd42246b67e12a4580dbdf1 at 127.0.0.1:35634 failed: Connection refused
+89352:S 03 May 2025 23:04:55.473 - Connection with Node d4a541da210418dce028e0274341a55c129fc825 at 127.0.0.1:35637 failed: Connection refused
+89352:S 03 May 2025 23:04:55.473 - Connection with Node c9c069e00f372ad4e0c059a17b2fe3dd61352384 at 127.0.0.1:35631 failed: Connection refused
+89352:S 03 May 2025 23:04:55.473 - Connection with Node 298cbb5912fa1c49173b389864ea1d9e8949d312 at 127.0.0.1:35633 failed: Connection refused
+89352:S 03 May 2025 23:04:55.473 - Connection with Node e8f7d0ef9915c7d538829f6e3533c532bafa8a39 at 127.0.0.1:35632 failed: Connection refused
+89352:S 03 May 2025 23:04:55.473 - Connection with Node b5d2cb99493e03b95f5b4ceef666b6c146b8483f at 127.0.0.1:35630 failed: Connection refused
+89352:signal-handler (1746281095) Received SIGTERM scheduling shutdown...
+89352:S 03 May 2025 23:04:55.573 * User requested shutdown...
+89352:S 03 May 2025 23:04:55.573 * Removing the pid file.
+89352:S 03 May 2025 23:04:55.573 * Saving the cluster configuration file before exiting.
+89352:S 03 May 2025 23:04:55.579 * Removing the unix socket file.
+89352:S 03 May 2025 23:04:55.579 # Valkey is now ready to exit, bye bye...

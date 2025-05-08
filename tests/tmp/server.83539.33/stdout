@@ -1,0 +1,42 @@
+### Starting server for test 
+94359:M 03 May 2025 23:05:01.800 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+94359:M 03 May 2025 23:05:01.803 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=94359, just started
+94359:M 03 May 2025 23:05:01.805 * Configuration loaded
+94359:M 03 May 2025 23:05:01.810 * Increased maximum number of open files to 10032 (it was originally set to 256).
+94359:M 03 May 2025 23:05:01.813 * monotonic clock: POSIX clock_gettime
+94359:M 03 May 2025 23:05:01.816 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 28127
+ |###|   .+###############+.   |###|    PID: 94359                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+94359:M 03 May 2025 23:05:01.822 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+94359:M 03 May 2025 23:05:01.840 * Server initialized
+94359:M 03 May 2025 23:05:01.849 * Ready to accept connections tcp
+94359:M 03 May 2025 23:05:01.849 * Ready to accept connections unix
+94359:M 03 May 2025 23:05:01.928 - Accepted 127.0.0.1:53554
+94359:M 03 May 2025 23:05:01.938 - Client closed connection id=2 addr=127.0.0.1:53554 laddr=127.0.0.1:28127 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+94359:M 03 May 2025 23:05:01.958 - Accepted 127.0.0.1:53564
+### Starting test Import mode should forbid eviction in tests/unit/maxmemory.tcl
+94359:M 03 May 2025 23:05:01.959 # WARNING: the new maxmemory value set via CONFIG SET (1) is smaller than the current memory usage (1246352). This will result in key eviction and/or the inability to accept new write commands depending on the maxmemory-policy.
+94359:M 03 May 2025 23:05:01.959 - Client closed connection id=3 addr=127.0.0.1:53564 laddr=127.0.0.1:28127 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=dbsize user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=424 tot-net-out=106 tot-cmds=10
+94359:signal-handler (1746281102) Received SIGTERM scheduling shutdown...
+94359:M 03 May 2025 23:05:02.754 * User requested shutdown...
+94359:M 03 May 2025 23:05:02.754 * Removing the pid file.
+94359:M 03 May 2025 23:05:02.756 * Removing the unix socket file.
+94359:M 03 May 2025 23:05:02.762 # Valkey is now ready to exit, bye bye...

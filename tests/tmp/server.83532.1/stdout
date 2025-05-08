@@ -1,0 +1,107 @@
+### Starting server for test 
+83591:M 03 May 2025 23:03:40.913 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+83591:M 03 May 2025 23:03:40.913 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=83591, just started
+83591:M 03 May 2025 23:03:40.913 * Configuration loaded
+83591:M 03 May 2025 23:03:40.914 * Increased maximum number of open files to 10032 (it was originally set to 256).
+83591:M 03 May 2025 23:03:40.914 * monotonic clock: POSIX clock_gettime
+83591:M 03 May 2025 23:03:40.914 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 24611
+ |###|   .+###############+.   |###|    PID: 83591                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+83591:M 03 May 2025 23:03:40.914 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+83591:M 03 May 2025 23:03:40.916 * Server initialized
+83591:M 03 May 2025 23:03:40.916 * Ready to accept connections tcp
+83591:M 03 May 2025 23:03:40.916 * Ready to accept connections unix
+83591:M 03 May 2025 23:03:40.944 - Accepted 127.0.0.1:58709
+83591:M 03 May 2025 23:03:40.944 - Client closed connection id=2 addr=127.0.0.1:58709 laddr=127.0.0.1:24611 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+83591:M 03 May 2025 23:03:40.961 - Accepted 127.0.0.1:58719
+### Starting test GEO with wrong type src key in tests/unit/geo.tcl
+### Starting test GEO with non existing src key in tests/unit/geo.tcl
+### Starting test GEO BYLONLAT with empty search in tests/unit/geo.tcl
+### Starting test GEO BYMEMBER with non existing member in tests/unit/geo.tcl
+### Starting test GEOADD create in tests/unit/geo.tcl
+### Starting test GEOADD update in tests/unit/geo.tcl
+### Starting test GEOADD update with CH option in tests/unit/geo.tcl
+### Starting test GEOADD update with NX option in tests/unit/geo.tcl
+### Starting test GEOADD update with XX option in tests/unit/geo.tcl
+### Starting test GEOADD update with CH NX option in tests/unit/geo.tcl
+### Starting test GEOADD update with CH XX option in tests/unit/geo.tcl
+### Starting test GEOADD update with XX NX option will return syntax error in tests/unit/geo.tcl
+### Starting test GEOADD update with invalid option in tests/unit/geo.tcl
+### Starting test GEOADD invalid coordinates in tests/unit/geo.tcl
+### Starting test GEOADD multi add in tests/unit/geo.tcl
+### Starting test Check geoset values in tests/unit/geo.tcl
+### Starting test GEORADIUS simple (sorted) in tests/unit/geo.tcl
+### Starting test GEORADIUS_RO simple (sorted) in tests/unit/geo.tcl
+### Starting test GEOSEARCH simple (sorted) in tests/unit/geo.tcl
+### Starting test GEOSEARCH FROMLONLAT and FROMMEMBER cannot exist at the same time in tests/unit/geo.tcl
+### Starting test GEOSEARCH FROMLONLAT and FROMMEMBER one must exist in tests/unit/geo.tcl
+### Starting test GEOSEARCH BYRADIUS and BYBOX cannot exist at the same time in tests/unit/geo.tcl
+### Starting test GEOSEARCH BYRADIUS and BYBOX one must exist in tests/unit/geo.tcl
+### Starting test GEOSEARCH with STOREDIST option in tests/unit/geo.tcl
+### Starting test GEORADIUS withdist (sorted) in tests/unit/geo.tcl
+### Starting test GEOSEARCH withdist (sorted) in tests/unit/geo.tcl
+### Starting test GEORADIUS with COUNT in tests/unit/geo.tcl
+### Starting test GEORADIUS with multiple WITH* tokens in tests/unit/geo.tcl
+### Starting test GEORADIUS with ANY not sorted by default in tests/unit/geo.tcl
+### Starting test GEORADIUS with ANY sorted by ASC in tests/unit/geo.tcl
+### Starting test GEORADIUS with ANY but no COUNT in tests/unit/geo.tcl
+### Starting test GEORADIUS with COUNT but missing integer argument in tests/unit/geo.tcl
+### Starting test GEORADIUS with COUNT DESC in tests/unit/geo.tcl
+### Starting test GEORADIUS HUGE, issue #2767 in tests/unit/geo.tcl
+### Starting test GEORADIUSBYMEMBER simple (sorted) in tests/unit/geo.tcl
+### Starting test GEORADIUSBYMEMBER_RO simple (sorted) in tests/unit/geo.tcl
+### Starting test GEORADIUSBYMEMBER search areas contain satisfied points in oblique direction in tests/unit/geo.tcl
+### Starting test GEORADIUSBYMEMBER crossing pole search in tests/unit/geo.tcl
+### Starting test GEOSEARCH FROMMEMBER simple (sorted) in tests/unit/geo.tcl
+### Starting test GEOSEARCH vs GEORADIUS in tests/unit/geo.tcl
+### Starting test GEOSEARCH non square, long and narrow in tests/unit/geo.tcl
+### Starting test GEOSEARCH corner point test in tests/unit/geo.tcl
+### Starting test GEORADIUSBYMEMBER withdist (sorted) in tests/unit/geo.tcl
+### Starting test GEOHASH is able to return geohash strings in tests/unit/geo.tcl
+### Starting test GEOHASH with only key as argument in tests/unit/geo.tcl
+### Starting test GEOPOS simple in tests/unit/geo.tcl
+### Starting test GEOPOS missing element in tests/unit/geo.tcl
+### Starting test GEOPOS with only key as argument in tests/unit/geo.tcl
+### Starting test GEODIST simple & unit in tests/unit/geo.tcl
+### Starting test GEODIST missing elements in tests/unit/geo.tcl
+### Starting test GEORADIUS STORE option: syntax error in tests/unit/geo.tcl
+### Starting test GEOSEARCHSTORE STORE option: syntax error in tests/unit/geo.tcl
+### Starting test GEORANGE STORE option: incompatible options in tests/unit/geo.tcl
+### Starting test GEORANGE STORE option: plain usage in tests/unit/geo.tcl
+### Starting test GEORADIUSBYMEMBER STORE/STOREDIST option: plain usage in tests/unit/geo.tcl
+### Starting test GEOSEARCHSTORE STORE option: plain usage in tests/unit/geo.tcl
+### Starting test GEORANGE STOREDIST option: plain usage in tests/unit/geo.tcl
+### Starting test GEOSEARCHSTORE STOREDIST option: plain usage in tests/unit/geo.tcl
+### Starting test GEORANGE STOREDIST option: COUNT ASC and DESC in tests/unit/geo.tcl
+### Starting test GEOSEARCH the box spans -180° or 180° in tests/unit/geo.tcl
+### Starting test GEOSEARCH with small distance in tests/unit/geo.tcl
+### Starting test GEOSEARCH fuzzy test - byradius in tests/unit/geo.tcl
+83591:M 03 May 2025 23:03:45.968 - DB 9: 9 keys (0 volatile) in 14 slots HT.
+83591:M 03 May 2025 23:03:51.019 - DB 9: 8 keys (0 volatile) in 14 slots HT.
+### Starting test GEOSEARCH fuzzy test - bybox in tests/unit/geo.tcl
+83591:M 03 May 2025 23:03:56.100 - DB 9: 8 keys (0 volatile) in 14 slots HT.
+### Starting test GEOSEARCH box edges fuzzy test in tests/unit/geo.tcl
+83591:M 03 May 2025 23:04:00.419 - Client closed connection id=3 addr=127.0.0.1:58719 laddr=127.0.0.1:24611 fd=12 name= age=20 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=285 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=geosearch user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=79171573 tot-net-out=586247 tot-cmds=726
+83591:signal-handler (1746281041) Received SIGTERM scheduling shutdown...
+83591:M 03 May 2025 23:04:01.949 * User requested shutdown...
+83591:M 03 May 2025 23:04:01.949 * Removing the pid file.
+83591:M 03 May 2025 23:04:01.949 * Removing the unix socket file.
+83591:M 03 May 2025 23:04:01.949 # Valkey is now ready to exit, bye bye...

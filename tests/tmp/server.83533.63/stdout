@@ -1,0 +1,70 @@
+### Starting server for test 
+95734:M 03 May 2025 23:05:18.020 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+95734:M 03 May 2025 23:05:18.029 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+95734:M 03 May 2025 23:05:18.032 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=95734, just started
+95734:M 03 May 2025 23:05:18.035 * Configuration loaded
+95734:M 03 May 2025 23:05:18.038 * Increased maximum number of open files to 10032 (it was originally set to 256).
+95734:M 03 May 2025 23:05:18.038 * monotonic clock: POSIX clock_gettime
+95734:M 03 May 2025 23:05:18.039 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25142
+ |###|   .+###############+.   |###|    PID: 95734                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+95734:M 03 May 2025 23:05:18.039 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+95734:M 03 May 2025 23:05:18.042 * No cluster configuration found, I'm 709dff6a0036ae1357048ed3c48a892824fb9f8c
+95734:M 03 May 2025 23:05:18.050 * Server initialized
+95734:M 03 May 2025 23:05:18.050 * Ready to accept connections tcp
+95734:M 03 May 2025 23:05:18.050 * Ready to accept connections unix
+95734:M 03 May 2025 23:05:18.201 - Accepted 127.0.0.1:65261
+95734:M 03 May 2025 23:05:18.203 - Client closed connection id=2 addr=127.0.0.1:65261 laddr=127.0.0.1:25142 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+95734:M 03 May 2025 23:05:18.225 - Accepted 127.0.0.1:65284
+### Starting test Functions are added to new node on valkey-cli cluster add-node in tests/unit/cluster/cli.tcl
+95734:M 03 May 2025 23:05:18.592 - Accepted 127.0.0.1:65491
+95734:M 03 May 2025 23:05:18.610 # Missing implement of connection type tls
+95734:M 03 May 2025 23:05:18.645 * configEpoch set to 2 via CLUSTER SET-CONFIG-EPOCH
+95734:M 03 May 2025 23:05:18.647 * Cluster meet 127.0.0.1:25143 (user request from 'id=4 addr=127.0.0.1:65491 laddr=127.0.0.1:25142 fd=15 name= user=default lib-name= lib-ver=').
+95734:M 03 May 2025 23:05:18.751 - Accepting cluster node connection from 127.0.0.1:49187
+95734:M 03 May 2025 23:05:18.756 * IP address for this node updated to 127.0.0.1
+95734:M 03 May 2025 23:05:18.767 * Successfully completed handshake with 3cae7bdbf686f650f7c7a572b4df14ea092d0eee ()
+95734:M 03 May 2025 23:05:19.304 - Accepting cluster node connection from 127.0.0.1:49466
+95734:M 03 May 2025 23:05:19.656 - Client closed connection id=4 addr=127.0.0.1:65491 laddr=127.0.0.1:25142 fd=15 name= age=1 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=333 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=55788 tot-net-out=12573 tot-cmds=8
+95734:M 03 May 2025 23:05:19.672 - Accepted 127.0.0.1:49685
+95734:M 03 May 2025 23:05:19.676 - Client closed connection id=5 addr=127.0.0.1:49685 laddr=127.0.0.1:25142 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56 tot-net-out=666 tot-cmds=2
+95734:M 03 May 2025 23:05:20.096 * Cluster state changed: ok
+95734:M 03 May 2025 23:05:20.454 - Accepted 127.0.0.1:50312
+95734:M 03 May 2025 23:05:20.455 - Client closed connection id=6 addr=127.0.0.1:50312 laddr=127.0.0.1:25142 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=function|load user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=202 tot-net-out=343 tot-cmds=2
+95734:M 03 May 2025 23:05:20.493 - Accepted 127.0.0.1:50343
+95734:M 03 May 2025 23:05:20.516 - Client closed connection id=7 addr=127.0.0.1:50343 laddr=127.0.0.1:25142 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56 tot-net-out=666 tot-cmds=2
+95734:M 03 May 2025 23:05:20.789 - Accepting cluster node connection from 127.0.0.1:50548
+95734:M 03 May 2025 23:05:21.741 - Accepted 127.0.0.1:51244
+95734:M 03 May 2025 23:05:21.744 - Client closed connection id=8 addr=127.0.0.1:51244 laddr=127.0.0.1:25142 fd=21 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56 tot-net-out=866 tot-cmds=2
+### Starting test Check for memory leaks (pid 95808) in tests/unit/cluster/cli.tcl
+95734:M 03 May 2025 23:05:23.142 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95734:M 03 May 2025 23:05:23.243 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95734:M 03 May 2025 23:05:23.258 - Client closed connection id=3 addr=127.0.0.1:65284 laddr=127.0.0.1:25142 fd=14 name= age=5 idle=2 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=514 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=540 tot-net-out=10263 tot-cmds=20
+95734:M 03 May 2025 23:05:23.343 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95734:M 03 May 2025 23:05:23.446 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95734:M 03 May 2025 23:05:23.547 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95734:M 03 May 2025 23:05:24.355 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95734:signal-handler (1746281124) Received SIGTERM scheduling shutdown...
+95734:M 03 May 2025 23:05:24.458 * User requested shutdown...
+95734:M 03 May 2025 23:05:24.466 * Removing the pid file.
+95734:M 03 May 2025 23:05:24.475 * Saving the cluster configuration file before exiting.
+95734:M 03 May 2025 23:05:24.618 * Removing the unix socket file.
+95734:M 03 May 2025 23:05:24.631 # Valkey is now ready to exit, bye bye...

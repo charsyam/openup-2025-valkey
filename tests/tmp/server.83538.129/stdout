@@ -1,0 +1,114 @@
+### Starting server for test 
+16345:M 03 May 2025 23:09:15.682 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+16345:M 03 May 2025 23:09:15.682 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=16345, just started
+16345:M 03 May 2025 23:09:15.682 * Configuration loaded
+16345:M 03 May 2025 23:09:15.682 * Increased maximum number of open files to 10032 (it was originally set to 256).
+16345:M 03 May 2025 23:09:15.682 * monotonic clock: POSIX clock_gettime
+16345:M 03 May 2025 23:09:15.683 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27675
+ |###|   .+###############+.   |###|    PID: 16345                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+16345:M 03 May 2025 23:09:15.683 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+16345:M 03 May 2025 23:09:15.683 * Server initialized
+16345:M 03 May 2025 23:09:15.683 * Ready to accept connections tcp
+16345:M 03 May 2025 23:09:15.683 * Ready to accept connections unix
+16345:M 03 May 2025 23:09:15.808 - Accepted 127.0.0.1:49586
+16345:M 03 May 2025 23:09:15.808 - Client closed connection id=2 addr=127.0.0.1:49586 laddr=127.0.0.1:27675 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+16345:M 03 May 2025 23:09:15.821 - Accepted 127.0.0.1:49590
+16345:S 03 May 2025 23:09:15.990 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+16345:S 03 May 2025 23:09:15.990 * Connecting to PRIMARY 127.0.0.1:27676
+16345:S 03 May 2025 23:09:15.990 * PRIMARY <-> REPLICA sync started
+16345:S 03 May 2025 23:09:15.990 * REPLICAOF 127.0.0.1:27676 enabled (user request from 'id=3 addr=127.0.0.1:49590 laddr=127.0.0.1:27675 fd=12 name= user=default lib-name= lib-ver=')
+16345:S 03 May 2025 23:09:15.990 * Non blocking connect for SYNC fired the event.
+16345:S 03 May 2025 23:09:15.990 * Primary replied to PING, replication can continue...
+16345:S 03 May 2025 23:09:15.991 * Trying a partial resynchronization (request 85e3bd0d689cceaac4689c5d1fd7a0445dbc63e4:1).
+16345:S 03 May 2025 23:09:15.991 * Full resync from primary: afe4a563e595d34eed9b2a5413424678fcc10986:0
+16345:S 03 May 2025 23:09:15.992 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to parser
+16345:S 03 May 2025 23:09:15.992 * PRIMARY <-> REPLICA sync: Loading DB in memory
+16345:S 03 May 2025 23:09:15.992 * Loading RDB produced by Valkey version 255.255.255
+16345:S 03 May 2025 23:09:15.992 * RDB age 0 seconds
+16345:S 03 May 2025 23:09:15.992 * RDB memory usage when created 1.20 Mb
+16345:S 03 May 2025 23:09:15.992 * Done loading RDB, keys loaded: 0, keys expired: 0.
+16345:S 03 May 2025 23:09:15.992 * Discarding previously cached primary state.
+16345:S 03 May 2025 23:09:15.992 * PRIMARY <-> REPLICA sync: Swapping active DB with loaded DB
+16345:S 03 May 2025 23:09:15.992 * PRIMARY <-> REPLICA sync: Discarding old DB in background
+16345:S 03 May 2025 23:09:15.992 * PRIMARY <-> REPLICA sync: Finished with success
+16345:S 03 May 2025 23:09:16.120 # == CRITICAL == This replica is sending an error to its primary: 'Library 'test' already exists' after processing the command 'function|load'
+16345:S 03 May 2025 23:09:16.120 * Latest backlog is: '"*2\r\n$6\r\nSELECT\r\n$1\r\n9\r\n"'
+16345:S 03 May 2025 23:09:16.123 - Client closed connection id=5 addr=127.0.0.1:27676 laddr=127.0.0.1:49615 fd=13 name= age=1 idle=0 flags=M capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=function|load user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=168 tot-net-out=34 tot-cmds=2
+16345:S 03 May 2025 23:09:16.123 * Connection with primary lost.
+16345:S 03 May 2025 23:09:16.123 * Caching the disconnected primary state.
+16345:S 03 May 2025 23:09:16.123 * Reconnecting to PRIMARY 127.0.0.1:27676
+16345:S 03 May 2025 23:09:16.123 * PRIMARY <-> REPLICA sync started
+16345:S 03 May 2025 23:09:16.123 * Non blocking connect for SYNC fired the event.
+16345:S 03 May 2025 23:09:16.123 * Primary replied to PING, replication can continue...
+16345:S 03 May 2025 23:09:16.123 * Trying a partial resynchronization (request afe4a563e595d34eed9b2a5413424678fcc10986:169).
+16345:S 03 May 2025 23:09:16.124 * Full resync from primary: afe4a563e595d34eed9b2a5413424678fcc10986:164437
+16345:S 03 May 2025 23:09:16.135 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to parser
+16345:S 03 May 2025 23:09:16.135 * PRIMARY <-> REPLICA sync: Loading DB in memory
+16345:S 03 May 2025 23:09:16.135 * Loading RDB produced by Valkey version 255.255.255
+16345:S 03 May 2025 23:09:16.135 * RDB age 0 seconds
+16345:S 03 May 2025 23:09:16.135 * RDB memory usage when created 251.74 Mb
+### Starting test Diskless load swapdb (async_loading): replica enter async_loading in tests/integration/replication.tcl
+### Starting test Diskless load swapdb (async_loading): old database is exposed while async replication is in progress in tests/integration/replication.tcl
+### Starting test Busy script during async loading in tests/integration/replication.tcl
+16345:S 03 May 2025 23:09:17.758 - Accepted 127.0.0.1:49838
+16345:S 03 May 2025 23:09:18.234 # Slow script detected: still in execution after 10 milliseconds. You can try killing the script using the SCRIPT KILL command. Script name is: 694a5fe1ddb97a4c6a1bf299d9537c7d3d0f84e7.
+16345:S 03 May 2025 23:09:18.235 * Script killed by user with SCRIPT KILL.
+### Starting test Blocked commands and configs during async-loading in tests/integration/replication.tcl
+16345:S 03 May 2025 23:09:18.693 - Reading from client: Connection reset by peer
+16345:S 03 May 2025 23:09:18.928 # Short read or OOM loading DB. Unrecoverable error, aborting now.
+16345:S 03 May 2025 23:09:18.928 # Internal error in RDB reading offset 25137482, function at rdb.c:3415 -> Unexpected EOF reading RDB file. Failure loading rdb format from socket, assuming connection error, resuming operation.
+16345:S 03 May 2025 23:09:18.928 # Failed trying to load the PRIMARY synchronization DB from socket, check server logs.
+16345:S 03 May 2025 23:09:18.928 * PRIMARY <-> REPLICA sync: Discarding temporary DB in background
+16345:S 03 May 2025 23:09:18.928 * Reconnecting to PRIMARY 127.0.0.1:27676 after failure
+16345:S 03 May 2025 23:09:18.928 * PRIMARY <-> REPLICA sync started
+16345:S 03 May 2025 23:09:18.928 * Non blocking connect for SYNC fired the event.
+16345:S 03 May 2025 23:09:18.928 * Primary replied to PING, replication can continue...
+16345:S 03 May 2025 23:09:18.928 * Trying a partial resynchronization (request afe4a563e595d34eed9b2a5413424678fcc10986:169).
+### Starting test Diskless load swapdb (async_loading): old database is exposed after async replication fails in tests/integration/replication.tcl
+### Starting test Check for memory leaks (pid 16373) in tests/integration/replication.tcl
+16345:S 03 May 2025 23:09:20.643 - DB 9: 2001 keys (0 volatile) in 3584 slots HT.
+16345:S 03 May 2025 23:09:23.101 * Full resync from primary: afe4a563e595d34eed9b2a5413424678fcc10986:164474
+16345:S 03 May 2025 23:09:23.109 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to parser
+16345:S 03 May 2025 23:09:23.109 * PRIMARY <-> REPLICA sync: Loading DB in memory
+16345:S 03 May 2025 23:09:23.109 * Loading RDB produced by Valkey version 255.255.255
+16345:S 03 May 2025 23:09:23.109 * RDB age 0 seconds
+16345:S 03 May 2025 23:09:23.109 * RDB memory usage when created 251.63 Mb
+16345:S 03 May 2025 23:09:23.417 * Done loading RDB, keys loaded: 2010, keys expired: 0.
+16345:S 03 May 2025 23:09:23.417 * Discarding previously cached primary state.
+16345:S 03 May 2025 23:09:23.417 * PRIMARY <-> REPLICA sync: Swapping active DB with loaded DB
+16345:S 03 May 2025 23:09:23.417 * PRIMARY <-> REPLICA sync: Discarding old DB in background
+16345:S 03 May 2025 23:09:23.417 * PRIMARY <-> REPLICA sync: Finished with success
+16345:S 03 May 2025 23:09:23.517 - Client closed connection id=7 addr=127.0.0.1:27676 laddr=127.0.0.1:49983 fd=13 name= age=0 idle=0 flags=M capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=39 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=39 tot-cmds=0
+16345:S 03 May 2025 23:09:23.517 * Connection with primary lost.
+16345:S 03 May 2025 23:09:23.517 * Caching the disconnected primary state.
+16345:S 03 May 2025 23:09:23.517 * Reconnecting to PRIMARY 127.0.0.1:27676
+16345:S 03 May 2025 23:09:23.517 * PRIMARY <-> REPLICA sync started
+16345:S 03 May 2025 23:09:23.517 # Error condition on socket for SYNC: Connection refused
+16345:S 03 May 2025 23:09:23.517 * Connecting to PRIMARY 127.0.0.1:27676
+16345:S 03 May 2025 23:09:23.517 * PRIMARY <-> REPLICA sync started
+16345:S 03 May 2025 23:09:23.517 # Error condition on socket for SYNC: Connection refused
+16345:S 03 May 2025 23:09:23.536 - Client closed connection id=3 addr=127.0.0.1:49590 laddr=127.0.0.1:27675 fd=12 name= age=8 idle=5 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=dbsize user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=962 tot-net-out=39100 tot-cmds=25
+16345:signal-handler (1746281365) Received SIGTERM scheduling shutdown...
+16345:S 03 May 2025 23:09:25.731 * User requested shutdown...
+16345:S 03 May 2025 23:09:25.732 * Removing the pid file.
+16345:S 03 May 2025 23:09:25.732 * Removing the unix socket file.
+16345:S 03 May 2025 23:09:25.732 # Valkey is now ready to exit, bye bye...

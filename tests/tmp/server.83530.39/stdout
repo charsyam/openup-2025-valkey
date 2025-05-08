@@ -1,0 +1,80 @@
+### Starting server for test 
+91915:M 03 May 2025 23:04:43.333 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+91915:M 03 May 2025 23:04:43.333 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+91915:M 03 May 2025 23:04:43.333 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=91915, just started
+91915:M 03 May 2025 23:04:43.333 * Configuration loaded
+91915:M 03 May 2025 23:04:43.333 * Increased maximum number of open files to 10032 (it was originally set to 256).
+91915:M 03 May 2025 23:04:43.333 * monotonic clock: POSIX clock_gettime
+91915:M 03 May 2025 23:04:43.333 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 23630
+ |###|   .+###############+.   |###|    PID: 91915                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+91915:M 03 May 2025 23:04:43.333 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+91915:M 03 May 2025 23:04:43.333 * No cluster configuration found, I'm 1fa92d9c555156b78991e1bc110da199640e5dac
+91915:M 03 May 2025 23:04:43.340 * Server initialized
+91915:M 03 May 2025 23:04:43.340 * Ready to accept connections tcp
+91915:M 03 May 2025 23:04:43.340 * Ready to accept connections unix
+91915:M 03 May 2025 23:04:43.453 - Accepted 127.0.0.1:64083
+91915:M 03 May 2025 23:04:43.453 - Client closed connection id=2 addr=127.0.0.1:64083 laddr=127.0.0.1:23630 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+91915:M 03 May 2025 23:04:43.461 - Accepted 127.0.0.1:64086
+91915:M 03 May 2025 23:04:43.461 * Cluster meet 127.0.0.1:23629 (user request from 'id=3 addr=127.0.0.1:64086 laddr=127.0.0.1:23630 fd=14 name= user=default lib-name= lib-ver=').
+91915:M 03 May 2025 23:04:43.461 * Cluster meet 127.0.0.1:23628 (user request from 'id=3 addr=127.0.0.1:64086 laddr=127.0.0.1:23630 fd=14 name= user=default lib-name= lib-ver=').
+91915:M 03 May 2025 23:04:43.466 # Missing implement of connection type tls
+91915:M 03 May 2025 23:04:43.579 - Accepting cluster node connection from 127.0.0.1:64116
+91915:M 03 May 2025 23:04:43.579 * IP address for this node updated to 127.0.0.1
+91915:M 03 May 2025 23:04:43.579 * Successfully completed handshake with d4fda3b504f864c6ab4c0eca70adc807b03907c2 ()
+91915:M 03 May 2025 23:04:43.579 * configEpoch collision with node d4fda3b504f864c6ab4c0eca70adc807b03907c2 (). configEpoch set to 1
+91915:M 03 May 2025 23:04:43.613 - Accepting cluster node connection from 127.0.0.1:64127
+91915:M 03 May 2025 23:04:43.613 * Successfully completed handshake with 27304d97243d430e0beda9fe03805e06d7d4f24f ()
+91915:M 03 May 2025 23:04:43.721 # DEBUG LOG: ========== I am primary 0 ==========
+91915:M 03 May 2025 23:04:45.361 * Cluster state changed: ok
+### Starting test Each node has two links with each peer in tests/unit/cluster/links.tcl
+### Starting test Validate cluster links format in tests/unit/cluster/links.tcl
+### Starting test Disconnect link when send buffer limit reached in tests/unit/cluster/links.tcl
+91915:M 03 May 2025 23:04:48.491 # Freeing cluster link(to node 27304d97243d430e0beda9fe03805e06d7d4f24f, used memory: 262334) due to exceeding send buffer memory limit.
+91915:M 03 May 2025 23:04:48.552 * Node d4fda3b504f864c6ab4c0eca70adc807b03907c2 () reported node 27304d97243d430e0beda9fe03805e06d7d4f24f () as not reachable.
+91915:M 03 May 2025 23:04:48.996 # Freeing cluster link(to node d4fda3b504f864c6ab4c0eca70adc807b03907c2, used memory: 48) due to exceeding send buffer memory limit.
+91915:M 03 May 2025 23:04:48.996 # Freeing cluster link(from node d4fda3b504f864c6ab4c0eca70adc807b03907c2, used memory: 48) due to exceeding send buffer memory limit.
+91915:M 03 May 2025 23:04:48.996 # Freeing cluster link(to node 27304d97243d430e0beda9fe03805e06d7d4f24f, used memory: 48) due to exceeding send buffer memory limit.
+91915:M 03 May 2025 23:04:48.996 # Freeing cluster link(from node 27304d97243d430e0beda9fe03805e06d7d4f24f, used memory: 48) due to exceeding send buffer memory limit.
+91915:M 03 May 2025 23:04:48.996 * Node d4fda3b504f864c6ab4c0eca70adc807b03907c2 () reported node 27304d97243d430e0beda9fe03805e06d7d4f24f () is back online.
+91915:M 03 May 2025 23:04:49.057 - Accepting cluster node connection from 127.0.0.1:49996
+91915:M 03 May 2025 23:04:49.088 - Accepting cluster node connection from 127.0.0.1:50007
+91915:M 03 May 2025 23:04:49.100 # Freeing cluster link(to node d4fda3b504f864c6ab4c0eca70adc807b03907c2, used memory: 48) due to exceeding send buffer memory limit.
+91915:M 03 May 2025 23:04:49.100 # Freeing cluster link(from node d4fda3b504f864c6ab4c0eca70adc807b03907c2, used memory: 48) due to exceeding send buffer memory limit.
+91915:M 03 May 2025 23:04:49.100 # Freeing cluster link(to node 27304d97243d430e0beda9fe03805e06d7d4f24f, used memory: 48) due to exceeding send buffer memory limit.
+91915:M 03 May 2025 23:04:49.100 # Freeing cluster link(from node 27304d97243d430e0beda9fe03805e06d7d4f24f, used memory: 48) due to exceeding send buffer memory limit.
+91915:M 03 May 2025 23:04:49.158 - Accepting cluster node connection from 127.0.0.1:50043
+91915:M 03 May 2025 23:04:49.187 - Accepting cluster node connection from 127.0.0.1:50056
+### Starting test Link memory increases with publishes in tests/unit/cluster/links.tcl
+91915:M 03 May 2025 23:04:49.302 # Freeing cluster link(to node d4fda3b504f864c6ab4c0eca70adc807b03907c2, used memory: 48) due to exceeding send buffer memory limit.
+91915:M 03 May 2025 23:04:49.302 # Freeing cluster link(from node d4fda3b504f864c6ab4c0eca70adc807b03907c2, used memory: 48) due to exceeding send buffer memory limit.
+91915:M 03 May 2025 23:04:49.302 # Freeing cluster link(to node 27304d97243d430e0beda9fe03805e06d7d4f24f, used memory: 48) due to exceeding send buffer memory limit.
+91915:M 03 May 2025 23:04:49.302 # Freeing cluster link(from node 27304d97243d430e0beda9fe03805e06d7d4f24f, used memory: 48) due to exceeding send buffer memory limit.
+91915:M 03 May 2025 23:04:49.360 - Accepting cluster node connection from 127.0.0.1:50135
+91915:M 03 May 2025 23:04:49.389 - Accepting cluster node connection from 127.0.0.1:50156
+### Starting test Link memory resets after publish messages flush in tests/unit/cluster/links.tcl
+91915:M 03 May 2025 23:04:49.912 - Client closed connection id=3 addr=127.0.0.1:64086 laddr=127.0.0.1:23630 fd=14 name= age=6 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=8192 rbp=5947 obl=0 oll=0 omem=0 tot-mem=25600 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=2021523 tot-net-out=54375 tot-cmds=116
+91915:signal-handler (1746281090) Received SIGTERM scheduling shutdown...
+91915:M 03 May 2025 23:04:51.069 * User requested shutdown...
+91915:M 03 May 2025 23:04:51.069 * Removing the pid file.
+91915:M 03 May 2025 23:04:51.069 * Saving the cluster configuration file before exiting.
+91915:M 03 May 2025 23:04:51.075 * Removing the unix socket file.
+91915:M 03 May 2025 23:04:51.075 # Valkey is now ready to exit, bye bye...

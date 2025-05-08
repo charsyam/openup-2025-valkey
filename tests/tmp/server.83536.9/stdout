@@ -1,0 +1,44 @@
+### Starting server for test 
+87047:M 03 May 2025 23:04:09.498 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+87047:M 03 May 2025 23:04:09.498 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=87047, just started
+87047:M 03 May 2025 23:04:09.498 * Configuration loaded
+87047:M 03 May 2025 23:04:09.498 * Increased maximum number of open files to 10032 (it was originally set to 256).
+87047:M 03 May 2025 23:04:09.498 * monotonic clock: POSIX clock_gettime
+87047:M 03 May 2025 23:04:09.498 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26615
+ |###|   .+###############+.   |###|    PID: 87047                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+87047:M 03 May 2025 23:04:09.498 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+87047:M 03 May 2025 23:04:09.501 * Server initialized
+87047:M 03 May 2025 23:04:09.504 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+87047:M 03 May 2025 23:04:09.509 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+87047:M 03 May 2025 23:04:09.510 * Ready to accept connections tcp
+87047:M 03 May 2025 23:04:09.510 * Ready to accept connections unix
+87047:M 03 May 2025 23:04:09.649 - Accepted 127.0.0.1:59500
+87047:M 03 May 2025 23:04:09.649 - Client closed connection id=2 addr=127.0.0.1:59500 laddr=127.0.0.1:26615 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+87047:M 03 May 2025 23:04:09.701 - Accepted 127.0.0.1:59507
+### Starting test MULTI with FLUSHALL and AOF in tests/unit/multi.tcl
+87047:M 03 May 2025 23:04:09.707 - Client closed connection id=3 addr=127.0.0.1:59507 laddr=127.0.0.1:26615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=248 tot-net-out=212 tot-cmds=9
+87047:signal-handler (1746281051) Received SIGTERM scheduling shutdown...
+87047:M 03 May 2025 23:04:11.307 * User requested shutdown...
+87047:M 03 May 2025 23:04:11.307 * Calling fsync() on the AOF file.
+87047:M 03 May 2025 23:04:11.308 * Removing the pid file.
+87047:M 03 May 2025 23:04:11.308 * Removing the unix socket file.
+87047:M 03 May 2025 23:04:11.308 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,80 @@
+### Starting server for test 
+9020:M 03 May 2025 23:07:15.502 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+9020:M 03 May 2025 23:07:15.502 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=9020, just started
+9020:M 03 May 2025 23:07:15.502 * Configuration loaded
+9020:M 03 May 2025 23:07:15.502 * Increased maximum number of open files to 10032 (it was originally set to 256).
+9020:M 03 May 2025 23:07:15.502 * monotonic clock: POSIX clock_gettime
+9020:M 03 May 2025 23:07:15.502 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27164
+ |###|   .+###############+.   |###|    PID: 9020                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+9020:M 03 May 2025 23:07:15.502 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+9020:M 03 May 2025 23:07:15.503 * Server initialized
+9020:M 03 May 2025 23:07:15.503 * Ready to accept connections tcp
+9020:M 03 May 2025 23:07:15.503 * Ready to accept connections unix
+9020:M 03 May 2025 23:07:15.643 - Accepted 127.0.0.1:54587
+9020:M 03 May 2025 23:07:15.644 - Client closed connection id=2 addr=127.0.0.1:54587 laddr=127.0.0.1:27164 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+9020:M 03 May 2025 23:07:15.666 - Accepted 127.0.0.1:54598
+### Starting test write command inside MULTI is QUEUED, EXEC should be REDIRECT in tests/integration/replica-redirect.tcl
+9020:M 03 May 2025 23:07:15.667 - Accepted 127.0.0.1:54599
+9020:S 03 May 2025 23:07:15.667 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+9020:S 03 May 2025 23:07:15.668 * Connecting to PRIMARY 127.0.0.1:27163
+9020:S 03 May 2025 23:07:15.668 * PRIMARY <-> REPLICA sync started
+9020:S 03 May 2025 23:07:15.668 * REPLICAOF 127.0.0.1:27163 enabled (user request from 'id=3 addr=127.0.0.1:54598 laddr=127.0.0.1:27164 fd=12 name= user=default lib-name= lib-ver=')
+9020:S 03 May 2025 23:07:15.668 * Non blocking connect for SYNC fired the event.
+9020:S 03 May 2025 23:07:15.669 * Primary replied to PING, replication can continue...
+9020:S 03 May 2025 23:07:15.669 * Trying a partial resynchronization (request 34a4455be1141aad1555a4a2774314eda883e228:1).
+9020:S 03 May 2025 23:07:15.670 * Full resync from primary: 9e133ab7123cd0b133802d5b6bbefd7559dadf78:0
+9020:S 03 May 2025 23:07:15.672 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+9020:S 03 May 2025 23:07:15.676 * Discarding previously cached primary state.
+9020:S 03 May 2025 23:07:15.676 * PRIMARY <-> REPLICA sync: Flushing old data
+9020:S 03 May 2025 23:07:15.676 * PRIMARY <-> REPLICA sync: Loading DB in memory
+9020:S 03 May 2025 23:07:15.676 * Loading RDB produced by Valkey version 255.255.255
+9020:S 03 May 2025 23:07:15.676 * RDB age 0 seconds
+9020:S 03 May 2025 23:07:15.676 * RDB memory usage when created 1.18 Mb
+9020:S 03 May 2025 23:07:15.676 * Done loading RDB, keys loaded: 0, keys expired: 0.
+9020:S 03 May 2025 23:07:15.676 * PRIMARY <-> REPLICA sync: Finished with success
+9020:S 03 May 2025 23:07:15.773 - Client closed connection id=4 addr=127.0.0.1:54599 laddr=127.0.0.1:27164 fd=13 name= age=0 idle=0 flags=N capa=r db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=27 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=exec user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=123 tot-net-out=51 tot-cmds=3
+### Starting test write command inside MULTI is REDIRECT, EXEC should be EXECABORT in tests/integration/replica-redirect.tcl
+9020:S 03 May 2025 23:07:15.774 - Accepted 127.0.0.1:54629
+9020:S 03 May 2025 23:07:15.774 - Client closed connection id=7 addr=127.0.0.1:54629 laddr=127.0.0.1:27164 fd=13 name= age=0 idle=0 flags=N capa=r db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=exec user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=123 tot-net-out=104 tot-cmds=4
+### Starting test replica allow read command by default in tests/integration/replica-redirect.tcl
+### Starting test replica reply READONLY error for write command by default in tests/integration/replica-redirect.tcl
+### Starting test replica redirect read and write command after CLIENT CAPA REDIRECT in tests/integration/replica-redirect.tcl
+### Starting test CLIENT INFO in tests/integration/replica-redirect.tcl
+### Starting test non-data access commands are not redirected in tests/integration/replica-redirect.tcl
+### Starting test replica allow read command in READONLY mode in tests/integration/replica-redirect.tcl
+### Starting test client paused during failover-in-progress in tests/integration/replica-redirect.tcl
+9020:S 03 May 2025 23:07:16.098 - Accepted 127.0.0.1:54676
+9020:S 03 May 2025 23:07:16.110 * Failover request received for replid 9e133ab7123cd0b133802d5b6bbefd7559dadf78.
+9020:M 03 May 2025 23:07:16.110 * Connection with primary lost.
+9020:M 03 May 2025 23:07:16.110 * Caching the disconnected primary state.
+9020:M 03 May 2025 23:07:16.113 * Discarding previously cached primary state.
+9020:M 03 May 2025 23:07:16.113 * Setting secondary replication ID to 9e133ab7123cd0b133802d5b6bbefd7559dadf78, valid up to offset: 55. New replication ID is bbe76f0487d9f548e44ccdf5123d427402ac2bee
+9020:M 03 May 2025 23:07:16.113 * PRIMARY MODE enabled (failover request from 'id=8 addr=127.0.0.1:54676 laddr=127.0.0.1:27164 fd=13 name= user=default lib-name= lib-ver=')
+9020:M 03 May 2025 23:07:16.113 * Replica 127.0.0.1:27163 asks for synchronization
+9020:M 03 May 2025 23:07:16.113 * Partial resynchronization request from 127.0.0.1:27163 accepted. Sending 0 bytes of backlog starting from offset 55.
+9020:M 03 May 2025 23:07:16.208 - Client closed connection id=3 addr=127.0.0.1:54598 laddr=127.0.0.1:27164 fd=12 name= age=1 idle=0 flags=r capa=r db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=346 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=role user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=308 tot-net-out=555 tot-cmds=9
+9020:signal-handler (1746281238) Received SIGTERM scheduling shutdown...
+9020:M 03 May 2025 23:07:18.931 * User requested shutdown...
+9020:M 03 May 2025 23:07:18.931 * 1 of 1 replicas are in sync when shutting down.
+9020:M 03 May 2025 23:07:18.931 * Removing the pid file.
+9020:M 03 May 2025 23:07:18.931 * Removing the unix socket file.
+9020:M 03 May 2025 23:07:18.931 # Valkey is now ready to exit, bye bye...

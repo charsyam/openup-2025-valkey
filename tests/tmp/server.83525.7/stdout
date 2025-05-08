@@ -1,0 +1,58 @@
+### Starting server for test 
+84400:M 03 May 2025 23:03:48.559 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+84400:M 03 May 2025 23:03:48.559 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=84400, just started
+84400:M 03 May 2025 23:03:48.559 * Configuration loaded
+84400:M 03 May 2025 23:03:48.560 * Increased maximum number of open files to 10032 (it was originally set to 256).
+84400:M 03 May 2025 23:03:48.560 * monotonic clock: POSIX clock_gettime
+84400:M 03 May 2025 23:03:48.560 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21114
+ |###|   .+###############+.   |###|    PID: 84400                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+84400:M 03 May 2025 23:03:48.560 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+84400:M 03 May 2025 23:03:48.561 * Server initialized
+84400:M 03 May 2025 23:03:48.561 * Ready to accept connections tcp
+84400:M 03 May 2025 23:03:48.561 * Ready to accept connections unix
+84400:M 03 May 2025 23:03:48.701 - Accepted 127.0.0.1:58866
+84400:M 03 May 2025 23:03:48.701 - Client closed connection id=2 addr=127.0.0.1:58866 laddr=127.0.0.1:21114 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+84400:M 03 May 2025 23:03:48.710 - Accepted 127.0.0.1:58867
+### Starting test Before the replica connects we issue two EVAL commands in tests/unit/scripting.tcl
+### Starting test Connect a replica to the master instance in tests/unit/scripting.tcl
+84400:M 03 May 2025 23:03:48.712 - Accepted 127.0.0.1:58868
+84400:M 03 May 2025 23:03:48.712 * Replica 127.0.0.1:21113 asks for synchronization
+84400:M 03 May 2025 23:03:48.712 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '1c88a15aabce36ce9da1803945ab6c5005c4e08f', my replication IDs are '11418b7fcf4c1dcab055b2dddbc3278e624b1ec0' and '0000000000000000000000000000000000000000')
+84400:M 03 May 2025 23:03:48.712 * Replication backlog created, my new replication IDs are 'a822658efe78b12d0956ec62128ee09346aee1e1' and '0000000000000000000000000000000000000000'
+84400:M 03 May 2025 23:03:48.712 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+84400:M 03 May 2025 23:03:48.713 * Background RDB transfer started by pid 84435 to pipe through parent process
+84435:C 03 May 2025 23:03:48.713 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+84400:M 03 May 2025 23:03:48.713 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+84400:M 03 May 2025 23:03:48.716 * Background RDB transfer terminated with success
+84400:M 03 May 2025 23:03:48.716 * Streamed RDB transfer with replica 127.0.0.1:21113 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+84400:M 03 May 2025 23:03:48.716 * Synchronization with replica 127.0.0.1:21113 succeeded
+### Starting test Replication of script multiple pushes to list with BLPOP in tests/unit/scripting.tcl
+84400:M 03 May 2025 23:03:48.817 - Accepted 127.0.0.1:58876
+84400:M 03 May 2025 23:03:48.817 - Client closed connection id=5 addr=127.0.0.1:58876 laddr=127.0.0.1:21114 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=brpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=52 tot-net-out=23 tot-cmds=2
+### Starting test Lua scripts using SELECT are replicated correctly in tests/unit/scripting.tcl
+84400:M 03 May 2025 23:03:48.820 - Client closed connection id=3 addr=127.0.0.1:58867 laddr=127.0.0.1:21114 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=43 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1665 tot-net-out=204 tot-cmds=27
+84400:signal-handler (1746281031) Received SIGTERM scheduling shutdown...
+84400:M 03 May 2025 23:03:51.725 * User requested shutdown...
+84400:M 03 May 2025 23:03:51.725 * 1 of 1 replicas are in sync when shutting down.
+84400:M 03 May 2025 23:03:51.725 * Removing the pid file.
+84400:M 03 May 2025 23:03:51.725 * Removing the unix socket file.
+84400:M 03 May 2025 23:03:51.726 # Valkey is now ready to exit, bye bye...

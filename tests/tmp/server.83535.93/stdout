@@ -1,0 +1,165 @@
+### Starting server for test 
+785:M 03 May 2025 23:06:06.358 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+785:M 03 May 2025 23:06:06.360 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+785:M 03 May 2025 23:06:06.363 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=785, just started
+785:M 03 May 2025 23:06:06.363 * Configuration loaded
+785:M 03 May 2025 23:06:06.365 * Increased maximum number of open files to 10032 (it was originally set to 256).
+785:M 03 May 2025 23:06:06.372 * monotonic clock: POSIX clock_gettime
+785:M 03 May 2025 23:06:06.376 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 26158
+ |###|   .+###############+.   |###|    PID: 785                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+785:M 03 May 2025 23:06:06.381 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+785:M 03 May 2025 23:06:06.388 * No cluster configuration found, I'm 3a98f6372ec95371b772ad1cbfd8014d96c13782
+785:M 03 May 2025 23:06:06.408 * Server initialized
+785:M 03 May 2025 23:06:06.408 * Ready to accept connections tcp
+785:M 03 May 2025 23:06:06.408 * Ready to accept connections unix
+785:M 03 May 2025 23:06:06.483 - Accepted 127.0.0.1:50845
+785:M 03 May 2025 23:06:06.484 - Client closed connection id=2 addr=127.0.0.1:50845 laddr=127.0.0.1:26158 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+785:M 03 May 2025 23:06:06.498 - Accepted 127.0.0.1:50867
+785:M 03 May 2025 23:06:07.188 - Accepting cluster node connection from 127.0.0.1:51425
+785:M 03 May 2025 23:06:07.190 * IP address for this node updated to 127.0.0.1
+785:M 03 May 2025 23:06:07.347 - Accepting cluster node connection from 127.0.0.1:51546
+785:M 03 May 2025 23:06:07.392 - Accepting cluster node connection from 127.0.0.1:51603
+785:M 03 May 2025 23:06:07.392 * configEpoch collision with node f684b2c17fb02bca60471a7dd909dcd1499e44c2 (). configEpoch set to 2
+785:M 03 May 2025 23:06:07.411 - Accepting cluster node connection from 127.0.0.1:51606
+785:M 03 May 2025 23:06:07.486 - Accepting cluster node connection from 127.0.0.1:51650
+785:M 03 May 2025 23:06:07.593 # Missing implement of connection type tls
+785:S 03 May 2025 23:06:07.600 * Connecting to PRIMARY 127.0.0.1:26161
+785:S 03 May 2025 23:06:07.601 * PRIMARY <-> REPLICA sync started
+785:S 03 May 2025 23:06:07.604 * Cluster state changed: ok
+785:S 03 May 2025 23:06:07.625 * Non blocking connect for SYNC fired the event.
+785:S 03 May 2025 23:06:07.638 * Primary replied to PING, replication can continue...
+785:S 03 May 2025 23:06:07.638 * Partial resynchronization not possible (no cached primary)
+785:S 03 May 2025 23:06:07.638 * Full resync from primary: 5a82fd2dc7291d3c28b3c66bfae39c4cfb2688ce:0
+785:S 03 May 2025 23:06:07.638 * Node 081dfb3b5e9705216a195d6e86e0ead9bb0a8a50 () is no longer primary of shard 6447a7201e4cb15a858b2d4389ce50d67d80e4a5; removed all 0 slot(s) it used to own
+785:S 03 May 2025 23:06:07.638 * Node 081dfb3b5e9705216a195d6e86e0ead9bb0a8a50 () is now part of shard be988bbababf7704bc5be392db5c2aa56f35c835
+785:S 03 May 2025 23:06:07.638 * Node 081dfb3b5e9705216a195d6e86e0ead9bb0a8a50 () is now a replica of node f684b2c17fb02bca60471a7dd909dcd1499e44c2 () in shard be988bbababf7704bc5be392db5c2aa56f35c835
+785:S 03 May 2025 23:06:07.640 * Node a95b77e15031b2363f8b408bbe49fe3e33340883 () is no longer primary of shard 9bf3c742b9d5068bbccb574d861d05165d1c9867; removed all 0 slot(s) it used to own
+785:S 03 May 2025 23:06:07.641 * Node a95b77e15031b2363f8b408bbe49fe3e33340883 () is now part of shard 2a9c933f1745e84a96ac5f7486ac99ebdf1f1838
+785:S 03 May 2025 23:06:07.641 * Node a95b77e15031b2363f8b408bbe49fe3e33340883 () is now a replica of node 0684badf6c299642eba77dd3c0ae2616b1da389b () in shard 2a9c933f1745e84a96ac5f7486ac99ebdf1f1838
+785:S 03 May 2025 23:06:07.641 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+785:S 03 May 2025 23:06:07.645 * PRIMARY <-> REPLICA sync: Flushing old data
+785:S 03 May 2025 23:06:07.645 * PRIMARY <-> REPLICA sync: Loading DB in memory
+785:S 03 May 2025 23:06:07.645 * Loading RDB produced by Valkey version 255.255.255
+785:S 03 May 2025 23:06:07.645 * RDB age 0 seconds
+785:S 03 May 2025 23:06:07.645 * RDB memory usage when created 2.91 Mb
+785:S 03 May 2025 23:06:07.645 * Done loading RDB, keys loaded: 0, keys expired: 0.
+785:S 03 May 2025 23:06:07.645 * PRIMARY <-> REPLICA sync: Finished with success
+785:S 03 May 2025 23:06:07.648 # DEBUG LOG: ========== I am replica 3 ==========
+785:S 03 May 2025 23:06:17.257 - Accepted 127.0.0.1:62747
+### Starting test Pub/Sub shard basics in tests/unit/cluster/pubsubshard.tcl
+### Starting test client can't subscribe to multiple shard channels across different slots in same call in tests/unit/cluster/pubsubshard.tcl
+### Starting test client can subscribe to multiple shard channels across different slots in separate call in tests/unit/cluster/pubsubshard.tcl
+### Starting test sunsubscribe without specifying any channel would unsubscribe all shard channels subscribed in tests/unit/cluster/pubsubshard.tcl
+### Starting test Verify Pub/Sub and Pub/Sub shard no overlap in tests/unit/cluster/pubsubshard.tcl
+785:S 03 May 2025 23:06:17.280 - Client closed connection id=7 addr=127.0.0.1:62747 laddr=127.0.0.1:26158 fd=26 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=0 tot-cmds=0
+### Starting test PUBSUB channels/shardchannels in tests/unit/cluster/pubsubshard.tcl
+### Starting test Check for memory leaks (pid 860) in tests/unit/cluster/pubsubshard.tcl
+785:S 03 May 2025 23:06:19.029 - Client closed connection id=5 addr=127.0.0.1:26161 laddr=127.0.0.1:51788 fd=25 name= age=12 idle=2 flags=M capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=35 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=ping user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=14 tot-net-out=410 tot-cmds=1
+785:S 03 May 2025 23:06:19.029 * Connection with primary lost.
+785:S 03 May 2025 23:06:19.029 * Caching the disconnected primary state.
+785:S 03 May 2025 23:06:19.029 * Reconnecting to PRIMARY 127.0.0.1:26161
+785:S 03 May 2025 23:06:19.029 * PRIMARY <-> REPLICA sync started
+785:S 03 May 2025 23:06:19.030 # Error condition on socket for SYNC: Connection refused
+785:S 03 May 2025 23:06:19.059 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+### Starting test Check for memory leaks (pid 839) in tests/unit/cluster/pubsubshard.tcl
+785:S 03 May 2025 23:06:19.160 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:19.260 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:19.361 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:19.461 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:19.562 * Connecting to PRIMARY 127.0.0.1:26161
+785:S 03 May 2025 23:06:19.562 * PRIMARY <-> REPLICA sync started
+785:S 03 May 2025 23:06:19.562 # Error condition on socket for SYNC: Connection refused
+785:S 03 May 2025 23:06:19.562 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:19.663 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:19.763 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:19.864 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:19.965 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:20.066 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:20.167 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:20.268 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:20.369 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:20.469 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:20.571 * Connecting to PRIMARY 127.0.0.1:26161
+785:S 03 May 2025 23:06:20.571 * PRIMARY <-> REPLICA sync started
+785:S 03 May 2025 23:06:20.571 # Error condition on socket for SYNC: Connection refused
+785:S 03 May 2025 23:06:20.571 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:20.672 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:20.773 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:20.874 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:20.976 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:21.076 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:21.076 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+### Starting test Check for memory leaks (pid 805) in tests/unit/cluster/pubsubshard.tcl
+785:S 03 May 2025 23:06:21.177 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:21.177 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:21.278 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:21.278 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:21.379 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:21.380 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:21.480 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:21.480 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:21.581 * Connecting to PRIMARY 127.0.0.1:26161
+785:S 03 May 2025 23:06:21.581 * PRIMARY <-> REPLICA sync started
+785:S 03 May 2025 23:06:21.581 # Error condition on socket for SYNC: Connection refused
+785:S 03 May 2025 23:06:21.581 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:21.581 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:21.681 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:21.681 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:21.782 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:21.782 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:21.883 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:21.883 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:21.986 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:21.986 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:22.086 * NODE df37c888e729ad019a00fba40dcf24710c10b945 () possibly failing.
+785:S 03 May 2025 23:06:22.086 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:22.086 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:22.189 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:22.189 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:22.290 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:22.290 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:22.391 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:22.391 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:22.491 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:22.491 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:22.586 - Client closed connection id=3 addr=127.0.0.1:50867 laddr=127.0.0.1:26158 fd=14 name= age=16 idle=5 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=287 tot-net-out=4219 tot-cmds=7
+785:S 03 May 2025 23:06:22.592 * Connecting to PRIMARY 127.0.0.1:26161
+785:S 03 May 2025 23:06:22.592 * PRIMARY <-> REPLICA sync started
+785:S 03 May 2025 23:06:22.592 # Error condition on socket for SYNC: Connection refused
+785:S 03 May 2025 23:06:22.592 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:22.592 - Connection with Node 0684badf6c299642eba77dd3c0ae2616b1da389b at 127.0.0.1:36159 failed: Connection refused
+785:S 03 May 2025 23:06:22.592 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:22.693 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:22.693 - Connection with Node 0684badf6c299642eba77dd3c0ae2616b1da389b at 127.0.0.1:36159 failed: Connection refused
+785:S 03 May 2025 23:06:22.693 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:22.793 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:22.793 - Connection with Node 0684badf6c299642eba77dd3c0ae2616b1da389b at 127.0.0.1:36159 failed: Connection refused
+785:S 03 May 2025 23:06:22.793 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:S 03 May 2025 23:06:23.687 - Connection with Node df37c888e729ad019a00fba40dcf24710c10b945 at 127.0.0.1:36161 failed: Connection refused
+785:S 03 May 2025 23:06:23.687 - Connection with Node 0684badf6c299642eba77dd3c0ae2616b1da389b at 127.0.0.1:36159 failed: Connection refused
+785:S 03 May 2025 23:06:23.687 - Connection with Node f684b2c17fb02bca60471a7dd909dcd1499e44c2 at 127.0.0.1:36160 failed: Connection refused
+785:signal-handler (1746281183) Received SIGTERM scheduling shutdown...
+785:S 03 May 2025 23:06:23.788 * User requested shutdown...
+785:S 03 May 2025 23:06:23.788 * Removing the pid file.
+785:S 03 May 2025 23:06:23.788 * Saving the cluster configuration file before exiting.
+785:S 03 May 2025 23:06:23.795 * Removing the unix socket file.
+785:S 03 May 2025 23:06:23.795 # Valkey is now ready to exit, bye bye...

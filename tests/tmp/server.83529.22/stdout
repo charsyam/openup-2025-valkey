@@ -1,0 +1,114 @@
+### Starting server for test 
+87997:M 03 May 2025 23:04:16.868 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+87997:M 03 May 2025 23:04:16.868 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=87997, just started
+87997:M 03 May 2025 23:04:16.868 * Configuration loaded
+87997:M 03 May 2025 23:04:16.868 * Increased maximum number of open files to 10032 (it was originally set to 256).
+87997:M 03 May 2025 23:04:16.868 * monotonic clock: POSIX clock_gettime
+87997:M 03 May 2025 23:04:16.868 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23121
+ |###|   .+###############+.   |###|    PID: 87997                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+87997:M 03 May 2025 23:04:16.868 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+87997:M 03 May 2025 23:04:16.868 * Server initialized
+87997:M 03 May 2025 23:04:16.868 * Ready to accept connections tcp
+87997:M 03 May 2025 23:04:16.868 * Ready to accept connections unix
+87997:M 03 May 2025 23:04:16.992 - Accepted 127.0.0.1:59717
+87997:M 03 May 2025 23:04:16.993 - Client closed connection id=2 addr=127.0.0.1:59717 laddr=127.0.0.1:23121 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+87997:M 03 May 2025 23:04:17.001 - Accepted 127.0.0.1:59718
+### Starting test HSET/HLEN - Small hash creation in tests/unit/type/hash.tcl
+### Starting test Is the small hash encoded with a listpack? in tests/unit/type/hash.tcl
+### Starting test HRANDFIELD - listpack in tests/unit/type/hash.tcl
+### Starting test HRANDFIELD - hashtable in tests/unit/type/hash.tcl
+### Starting test HRANDFIELD with RESP3 in tests/unit/type/hash.tcl
+### Starting test HRANDFIELD count of 0 is handled correctly in tests/unit/type/hash.tcl
+### Starting test HRANDFIELD count overflow in tests/unit/type/hash.tcl
+### Starting test HRANDFIELD with <count> against non existing key in tests/unit/type/hash.tcl
+### Starting test HRANDFIELD count of 0 is handled correctly - emptyarray in tests/unit/type/hash.tcl
+### Starting test HRANDFIELD with <count> against non existing key - emptyarray in tests/unit/type/hash.tcl
+### Starting test HRANDFIELD with <count> - hashtable in tests/unit/type/hash.tcl
+### Starting test HRANDFIELD with <count> - listpack in tests/unit/type/hash.tcl
+### Starting test HSET/HLEN - Big hash creation in tests/unit/type/hash.tcl
+### Starting test Is the big hash encoded with an hash table? in tests/unit/type/hash.tcl
+### Starting test HGET against the small hash in tests/unit/type/hash.tcl
+### Starting test HGET against the big hash in tests/unit/type/hash.tcl
+### Starting test HGET against non existing key in tests/unit/type/hash.tcl
+### Starting test HSET in update and insert mode in tests/unit/type/hash.tcl
+### Starting test HSETNX target key missing - small hash in tests/unit/type/hash.tcl
+### Starting test HSETNX target key exists - small hash in tests/unit/type/hash.tcl
+### Starting test HSETNX target key missing - big hash in tests/unit/type/hash.tcl
+### Starting test HSETNX target key exists - big hash in tests/unit/type/hash.tcl
+### Starting test HSET/HMSET wrong number of args in tests/unit/type/hash.tcl
+### Starting test HMSET - small hash in tests/unit/type/hash.tcl
+### Starting test HMSET - big hash in tests/unit/type/hash.tcl
+### Starting test HMGET against non existing key and fields in tests/unit/type/hash.tcl
+### Starting test Hash commands against wrong type in tests/unit/type/hash.tcl
+### Starting test HMGET - small hash in tests/unit/type/hash.tcl
+### Starting test HMGET - big hash in tests/unit/type/hash.tcl
+### Starting test HKEYS - small hash in tests/unit/type/hash.tcl
+### Starting test HKEYS - big hash in tests/unit/type/hash.tcl
+### Starting test HVALS - small hash in tests/unit/type/hash.tcl
+### Starting test HVALS - big hash in tests/unit/type/hash.tcl
+### Starting test HGETALL - small hash in tests/unit/type/hash.tcl
+### Starting test HGETALL - big hash in tests/unit/type/hash.tcl
+### Starting test HGETALL against non-existing key in tests/unit/type/hash.tcl
+### Starting test HDEL and return value in tests/unit/type/hash.tcl
+### Starting test HDEL - more than a single value in tests/unit/type/hash.tcl
+### Starting test HDEL - hash becomes empty before deleting all specified fields in tests/unit/type/hash.tcl
+### Starting test HEXISTS in tests/unit/type/hash.tcl
+### Starting test Is a ziplist encoded Hash promoted on big payload? in tests/unit/type/hash.tcl
+### Starting test HINCRBY against non existing database key in tests/unit/type/hash.tcl
+### Starting test HINCRBY HINCRBYFLOAT against non-integer increment value in tests/unit/type/hash.tcl
+### Starting test HINCRBY against non existing hash key in tests/unit/type/hash.tcl
+### Starting test HINCRBY against hash key created by hincrby itself in tests/unit/type/hash.tcl
+### Starting test HINCRBY against hash key originally set with HSET in tests/unit/type/hash.tcl
+### Starting test HINCRBY over 32bit value in tests/unit/type/hash.tcl
+### Starting test HINCRBY over 32bit value with over 32bit increment in tests/unit/type/hash.tcl
+### Starting test HINCRBY fails against hash value with spaces (left) in tests/unit/type/hash.tcl
+### Starting test HINCRBY fails against hash value with spaces (right) in tests/unit/type/hash.tcl
+### Starting test HINCRBY can detect overflows in tests/unit/type/hash.tcl
+### Starting test HINCRBYFLOAT against non existing database key in tests/unit/type/hash.tcl
+### Starting test HINCRBYFLOAT against non existing hash key in tests/unit/type/hash.tcl
+### Starting test HINCRBYFLOAT against hash key created by hincrby itself in tests/unit/type/hash.tcl
+### Starting test HINCRBYFLOAT against hash key originally set with HSET in tests/unit/type/hash.tcl
+### Starting test HINCRBYFLOAT over 32bit value in tests/unit/type/hash.tcl
+### Starting test HINCRBYFLOAT over 32bit value with over 32bit increment in tests/unit/type/hash.tcl
+### Starting test HINCRBYFLOAT fails against hash value with spaces (left) in tests/unit/type/hash.tcl
+### Starting test HINCRBYFLOAT fails against hash value with spaces (right) in tests/unit/type/hash.tcl
+### Starting test HINCRBYFLOAT fails against hash value that contains a null-terminator in the middle in tests/unit/type/hash.tcl
+### Starting test HSTRLEN against the small hash in tests/unit/type/hash.tcl
+### Starting test HSTRLEN against the big hash in tests/unit/type/hash.tcl
+### Starting test HSTRLEN against non existing field in tests/unit/type/hash.tcl
+### Starting test HSTRLEN corner cases in tests/unit/type/hash.tcl
+### Starting test HINCRBYFLOAT over hash-max-listpack-value encoded with a listpack in tests/unit/type/hash.tcl
+### Starting test Hash ziplist regression test for large keys in tests/unit/type/hash.tcl
+### Starting test Hash fuzzing #1 - 10 fields in tests/unit/type/hash.tcl
+### Starting test Hash fuzzing #2 - 10 fields in tests/unit/type/hash.tcl
+### Starting test Hash fuzzing #1 - 512 fields in tests/unit/type/hash.tcl
+### Starting test Hash fuzzing #2 - 512 fields in tests/unit/type/hash.tcl
+### Starting test Stress test the hash ziplist -> hashtable encoding conversion in tests/unit/type/hash.tcl
+### Starting test Hash ziplist of various encodings in tests/unit/type/hash.tcl
+### Starting test Hash ziplist of various encodings - sanitize dump in tests/unit/type/hash.tcl
+### Starting test HINCRBYFLOAT does not allow NaN or Infinity in tests/unit/type/hash.tcl
+87997:M 03 May 2025 23:04:20.364 - Client closed connection id=3 addr=127.0.0.1:59718 laddr=127.0.0.1:23121 fd=12 name= age=3 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=98294 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=115200 events=r cmd=exists user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=2686423 tot-net-out=994766 tot-cmds=30367
+87997:signal-handler (1746281061) Received SIGTERM scheduling shutdown...
+87997:M 03 May 2025 23:04:22.061 * User requested shutdown...
+87997:M 03 May 2025 23:04:22.061 * Removing the pid file.
+87997:M 03 May 2025 23:04:22.061 * Removing the unix socket file.
+87997:M 03 May 2025 23:04:22.061 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,5 @@
+#define REDIS_GIT_SHA1 "06ac4d81"
+#define REDIS_GIT_DIRTY "      39"
+#define REDIS_BUILD_ID "Junyeongui-noteubug.local-1746712975"
+#include "version.h"
+#define REDIS_BUILD_ID_RAW SERVER_NAME VALKEY_VERSION REDIS_BUILD_ID REDIS_GIT_DIRTY REDIS_GIT_SHA1

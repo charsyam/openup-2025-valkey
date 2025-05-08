@@ -1,0 +1,66 @@
+### Starting server for test 
+1877:M 03 May 2025 23:06:17.187 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+1877:M 03 May 2025 23:06:17.187 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+1877:M 03 May 2025 23:06:17.187 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=1877, just started
+1877:M 03 May 2025 23:06:17.187 * Configuration loaded
+1877:M 03 May 2025 23:06:17.187 * Increased maximum number of open files to 10032 (it was originally set to 256).
+1877:M 03 May 2025 23:06:17.187 * monotonic clock: POSIX clock_gettime
+1877:M 03 May 2025 23:06:17.187 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 23654
+ |###|   .+###############+.   |###|    PID: 1877                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+1877:M 03 May 2025 23:06:17.187 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+1877:M 03 May 2025 23:06:17.187 * No cluster configuration found, I'm a51f368c78cd747935fe612047c244249a7effd4
+1877:M 03 May 2025 23:06:17.192 * Server initialized
+1877:M 03 May 2025 23:06:17.192 * Ready to accept connections tcp
+1877:M 03 May 2025 23:06:17.192 * Ready to accept connections unix
+1877:M 03 May 2025 23:06:17.312 - Accepted 127.0.0.1:62781
+1877:M 03 May 2025 23:06:17.313 - Client closed connection id=2 addr=127.0.0.1:62781 laddr=127.0.0.1:23654 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+1877:M 03 May 2025 23:06:17.324 - Accepted 127.0.0.1:62806
+1877:M 03 May 2025 23:06:17.325 * Cluster meet 127.0.0.1:23653 (user request from 'id=3 addr=127.0.0.1:62806 laddr=127.0.0.1:23654 fd=14 name= user=default lib-name= lib-ver=').
+1877:M 03 May 2025 23:06:17.326 # Missing implement of connection type tls
+1877:M 03 May 2025 23:06:17.474 - Accepting cluster node connection from 127.0.0.1:62952
+1877:M 03 May 2025 23:06:17.474 * IP address for this node updated to 127.0.0.1
+1877:M 03 May 2025 23:06:17.474 * Successfully completed handshake with 0afd1849bb7eef13675e9584439e767d3b67bbaf ()
+1877:M 03 May 2025 23:06:17.608 # DEBUG LOG: ========== I am primary 0 ==========
+1877:M 03 May 2025 23:06:19.211 * Cluster state changed: ok
+### Starting test Handshake eventually succeeds after node handshake timeout on one side with inconsistent view of the cluster in tests/unit/cluster/cluster-reliable-meet.tcl
+1877:M 03 May 2025 23:06:19.413 # Dropping packet of type pong that matches debug drop filter
+1877:M 03 May 2025 23:06:19.463 - Accepting cluster node connection from 127.0.0.1:65127
+1877:M 03 May 2025 23:06:19.524 # Dropping packet of type pong that matches debug drop filter
+1877:M 03 May 2025 23:06:19.524 # Dropping packet of type pong that matches debug drop filter
+1877:M 03 May 2025 23:06:23.554 # Clusterbus handshake timeout 127.0.0.1:23655
+1877:M 03 May 2025 23:06:23.606 - Accepting cluster node connection from 127.0.0.1:51832
+1877:M 03 May 2025 23:06:25.372 - Connection with Node 9fe20f2fd9cb7c0e9f23060fcd77290d0ad90832 at 127.0.0.1:23655 failed: Connection refused
+1877:M 03 May 2025 23:06:25.473 - Connection with Node 9fe20f2fd9cb7c0e9f23060fcd77290d0ad90832 at 127.0.0.1:23655 failed: Connection refused
+1877:M 03 May 2025 23:06:25.524 - Client closed connection id=3 addr=127.0.0.1:62806 laddr=127.0.0.1:23654 fd=14 name= age=8 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=358 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|links user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=4965 tot-net-out=64451 tot-cmds=173
+1877:M 03 May 2025 23:06:25.574 - Connection with Node 9fe20f2fd9cb7c0e9f23060fcd77290d0ad90832 at 127.0.0.1:23655 failed: Connection refused
+1877:M 03 May 2025 23:06:25.675 - Connection with Node 9fe20f2fd9cb7c0e9f23060fcd77290d0ad90832 at 127.0.0.1:23655 failed: Connection refused
+1877:M 03 May 2025 23:06:25.776 - Connection with Node 9fe20f2fd9cb7c0e9f23060fcd77290d0ad90832 at 127.0.0.1:23655 failed: Connection refused
+1877:M 03 May 2025 23:06:25.877 - Connection with Node 9fe20f2fd9cb7c0e9f23060fcd77290d0ad90832 at 127.0.0.1:23655 failed: Connection refused
+1877:M 03 May 2025 23:06:25.978 - Connection with Node 9fe20f2fd9cb7c0e9f23060fcd77290d0ad90832 at 127.0.0.1:23655 failed: Connection refused
+1877:M 03 May 2025 23:06:26.079 - Connection with Node 9fe20f2fd9cb7c0e9f23060fcd77290d0ad90832 at 127.0.0.1:23655 failed: Connection refused
+1877:M 03 May 2025 23:06:27.054 - Connection with Node 9fe20f2fd9cb7c0e9f23060fcd77290d0ad90832 at 127.0.0.1:23655 failed: Connection refused
+1877:signal-handler (1746281187) Received SIGTERM scheduling shutdown...
+1877:M 03 May 2025 23:06:27.155 * User requested shutdown...
+1877:M 03 May 2025 23:06:27.155 * Removing the pid file.
+1877:M 03 May 2025 23:06:27.155 * Saving the cluster configuration file before exiting.
+1877:M 03 May 2025 23:06:27.161 * Removing the unix socket file.
+1877:M 03 May 2025 23:06:27.161 # Valkey is now ready to exit, bye bye...

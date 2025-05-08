@@ -1,0 +1,98 @@
+### Starting server for test FUNCTION can processes create, delete and flush commands in AOF when doing "debug loadaof" in read-only slaves in tests/unit/functions.tcl
+87103:M 03 May 2025 23:04:09.637 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+87103:M 03 May 2025 23:04:09.637 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=87103, just started
+87103:M 03 May 2025 23:04:09.637 * Configuration loaded
+87103:M 03 May 2025 23:04:09.637 * Increased maximum number of open files to 10032 (it was originally set to 256).
+87103:M 03 May 2025 23:04:09.637 * monotonic clock: POSIX clock_gettime
+87103:M 03 May 2025 23:04:09.638 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27122
+ |###|   .+###############+.   |###|    PID: 87103                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+87103:M 03 May 2025 23:04:09.638 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+87103:M 03 May 2025 23:04:09.638 * Server initialized
+87103:M 03 May 2025 23:04:09.638 * Ready to accept connections tcp
+87103:M 03 May 2025 23:04:09.638 * Ready to accept connections unix
+87103:M 03 May 2025 23:04:09.809 - Accepted 127.0.0.1:59512
+87103:M 03 May 2025 23:04:09.809 - Client closed connection id=2 addr=127.0.0.1:59512 laddr=127.0.0.1:27122 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+87103:M 03 May 2025 23:04:09.827 - Accepted 127.0.0.1:59514
+87103:M 03 May 2025 23:04:09.828 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+87103:M 03 May 2025 23:04:09.828 * Background append only file rewriting started by pid 87183
+87183:C 03 May 2025 23:04:09.829 * Successfully created the temporary AOF base file temp-rewriteaof-bg-87183.aof
+87183:C 03 May 2025 23:04:09.830 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+87103:M 03 May 2025 23:04:09.840 * Background AOF rewrite terminated with success
+87103:M 03 May 2025 23:04:09.840 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-87183.aof into appendonly.aof.1.base.rdb
+87103:M 03 May 2025 23:04:09.840 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.1.incr.aof
+87103:M 03 May 2025 23:04:09.845 * Background AOF rewrite finished successfully
+87103:M 03 May 2025 23:04:09.845 - Background AOF rewrite signal handler took 5909us
+87103:S 03 May 2025 23:04:09.886 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+87103:S 03 May 2025 23:04:09.886 * Connecting to PRIMARY 127.0.0.1:0
+87103:S 03 May 2025 23:04:09.886 # Unable to connect to PRIMARY: Can't assign requested address
+87103:S 03 May 2025 23:04:09.886 * REPLICAOF 127.0.0.1:0 enabled (user request from 'id=3 addr=127.0.0.1:59514 laddr=127.0.0.1:27122 fd=12 name= user=default lib-name= lib-ver=')
+87103:S 03 May 2025 23:04:09.886 * Reading RDB base file on AOF loading...
+87103:S 03 May 2025 23:04:09.886 * Loading RDB produced by Valkey version 255.255.255
+87103:S 03 May 2025 23:04:09.886 * RDB age 0 seconds
+87103:S 03 May 2025 23:04:09.886 * RDB memory usage when created 1.12 Mb
+87103:S 03 May 2025 23:04:09.886 * RDB is base AOF
+87103:S 03 May 2025 23:04:09.886 * Done loading RDB, keys loaded: 0, keys expired: 0.
+87103:S 03 May 2025 23:04:09.886 * DB loaded from base file appendonly.aof.1.base.rdb: 0.000 seconds
+87103:S 03 May 2025 23:04:09.886 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.000 seconds
+87103:S 03 May 2025 23:04:09.886 * Append Only File loaded by DEBUG LOADAOF
+87103:M 03 May 2025 23:04:09.886 * Discarding previously cached primary state.
+87103:M 03 May 2025 23:04:09.886 * Setting secondary replication ID to 76ee2866b3d1a3d1d33a71716d091ce86c560543, valid up to offset: 2. New replication ID is 43fefd5d48acd49e1c5c2e76836a9d180adca220
+87103:M 03 May 2025 23:04:09.886 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:59514 laddr=127.0.0.1:27122 fd=12 name= user=default lib-name= lib-ver=')
+87103:S 03 May 2025 23:04:09.887 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+87103:S 03 May 2025 23:04:09.887 * Connecting to PRIMARY 127.0.0.1:0
+87103:S 03 May 2025 23:04:09.887 # Unable to connect to PRIMARY: Can't assign requested address
+87103:S 03 May 2025 23:04:09.887 * REPLICAOF 127.0.0.1:0 enabled (user request from 'id=3 addr=127.0.0.1:59514 laddr=127.0.0.1:27122 fd=12 name= user=default lib-name= lib-ver=')
+87103:S 03 May 2025 23:04:09.887 * Reading RDB base file on AOF loading...
+87103:S 03 May 2025 23:04:09.887 * Loading RDB produced by Valkey version 255.255.255
+87103:S 03 May 2025 23:04:09.887 * RDB age 0 seconds
+87103:S 03 May 2025 23:04:09.887 * RDB memory usage when created 1.12 Mb
+87103:S 03 May 2025 23:04:09.887 * RDB is base AOF
+87103:S 03 May 2025 23:04:09.887 * Done loading RDB, keys loaded: 0, keys expired: 0.
+87103:S 03 May 2025 23:04:09.887 * DB loaded from base file appendonly.aof.1.base.rdb: 0.000 seconds
+87103:S 03 May 2025 23:04:09.887 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.000 seconds
+87103:S 03 May 2025 23:04:09.887 * Append Only File loaded by DEBUG LOADAOF
+87103:M 03 May 2025 23:04:09.887 * Discarding previously cached primary state.
+87103:M 03 May 2025 23:04:09.887 * Setting secondary replication ID to 43fefd5d48acd49e1c5c2e76836a9d180adca220, valid up to offset: 3. New replication ID is 897842f37cd9f784bf33a5e4dc0fb3bd194f636e
+87103:M 03 May 2025 23:04:09.887 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:59514 laddr=127.0.0.1:27122 fd=12 name= user=default lib-name= lib-ver=')
+87103:S 03 May 2025 23:04:09.887 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+87103:S 03 May 2025 23:04:09.887 * Connecting to PRIMARY 127.0.0.1:0
+87103:S 03 May 2025 23:04:09.887 # Unable to connect to PRIMARY: Can't assign requested address
+87103:S 03 May 2025 23:04:09.887 * REPLICAOF 127.0.0.1:0 enabled (user request from 'id=3 addr=127.0.0.1:59514 laddr=127.0.0.1:27122 fd=12 name= user=default lib-name= lib-ver=')
+87103:S 03 May 2025 23:04:09.888 * Reading RDB base file on AOF loading...
+87103:S 03 May 2025 23:04:09.888 * Loading RDB produced by Valkey version 255.255.255
+87103:S 03 May 2025 23:04:09.888 * RDB age 0 seconds
+87103:S 03 May 2025 23:04:09.888 * RDB memory usage when created 1.12 Mb
+87103:S 03 May 2025 23:04:09.888 * RDB is base AOF
+87103:S 03 May 2025 23:04:09.888 * Done loading RDB, keys loaded: 0, keys expired: 0.
+87103:S 03 May 2025 23:04:09.888 * DB loaded from base file appendonly.aof.1.base.rdb: 0.000 seconds
+87103:S 03 May 2025 23:04:09.888 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.000 seconds
+87103:S 03 May 2025 23:04:09.888 * Append Only File loaded by DEBUG LOADAOF
+87103:M 03 May 2025 23:04:09.888 * Discarding previously cached primary state.
+87103:M 03 May 2025 23:04:09.888 * Setting secondary replication ID to 897842f37cd9f784bf33a5e4dc0fb3bd194f636e, valid up to offset: 5. New replication ID is 92353559fc940e5aa8fc60856b1f952ec9f63b22
+87103:M 03 May 2025 23:04:09.888 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:59514 laddr=127.0.0.1:27122 fd=12 name= user=default lib-name= lib-ver=')
+87103:M 03 May 2025 23:04:09.888 - Client closed connection id=3 addr=127.0.0.1:59514 laddr=127.0.0.1:27122 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=6049 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=function|list user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=842 tot-net-out=12322 tot-cmds=21
+87103:signal-handler (1746281049) Received SIGTERM scheduling shutdown...
+87103:M 03 May 2025 23:04:09.946 * User requested shutdown...
+87103:M 03 May 2025 23:04:09.946 * Calling fsync() on the AOF file.
+87103:M 03 May 2025 23:04:09.949 * Removing the pid file.
+87103:M 03 May 2025 23:04:09.950 * Removing the unix socket file.
+87103:M 03 May 2025 23:04:09.950 # Valkey is now ready to exit, bye bye...

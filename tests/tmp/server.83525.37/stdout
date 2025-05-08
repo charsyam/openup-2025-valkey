@@ -1,0 +1,71 @@
+### Starting server for test 
+89141:M 03 May 2025 23:04:25.015 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+89141:M 03 May 2025 23:04:25.015 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=89141, just started
+89141:M 03 May 2025 23:04:25.015 * Configuration loaded
+89141:M 03 May 2025 23:04:25.015 * Increased maximum number of open files to 10032 (it was originally set to 256).
+89141:M 03 May 2025 23:04:25.015 * monotonic clock: POSIX clock_gettime
+89141:M 03 May 2025 23:04:25.015 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21129
+ |###|   .+###############+.   |###|    PID: 89141                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+89141:M 03 May 2025 23:04:25.015 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+89141:M 03 May 2025 23:04:25.016 * Server initialized
+89141:M 03 May 2025 23:04:25.016 * Ready to accept connections tcp
+89141:M 03 May 2025 23:04:25.016 * Ready to accept connections unix
+89141:M 03 May 2025 23:04:25.142 - Accepted 127.0.0.1:60167
+89141:M 03 May 2025 23:04:25.143 - Client closed connection id=2 addr=127.0.0.1:60167 laddr=127.0.0.1:21129 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+89141:M 03 May 2025 23:04:25.152 - Accepted 127.0.0.1:60168
+### Starting test Connect a replica to the master instance in tests/unit/scripting.tcl
+89141:S 03 May 2025 23:04:25.345 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+89141:S 03 May 2025 23:04:25.345 * Connecting to PRIMARY 127.0.0.1:21130
+89141:S 03 May 2025 23:04:25.345 * PRIMARY <-> REPLICA sync started
+89141:S 03 May 2025 23:04:25.345 * REPLICAOF 127.0.0.1:21130 enabled (user request from 'id=3 addr=127.0.0.1:60168 laddr=127.0.0.1:21129 fd=12 name= user=default lib-name= lib-ver=')
+89141:S 03 May 2025 23:04:25.345 * Non blocking connect for SYNC fired the event.
+89141:S 03 May 2025 23:04:25.345 * Primary replied to PING, replication can continue...
+89141:S 03 May 2025 23:04:25.345 * Trying a partial resynchronization (request 9fbc980d73097e2c4ed5b170e09e5490a2e258fa:1).
+89141:S 03 May 2025 23:04:25.345 * Full resync from primary: 61fd16cff41733f147e17364427646cf45f8df9a:0
+89141:S 03 May 2025 23:04:25.346 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+89141:S 03 May 2025 23:04:25.349 * Discarding previously cached primary state.
+89141:S 03 May 2025 23:04:25.349 * PRIMARY <-> REPLICA sync: Flushing old data
+89141:S 03 May 2025 23:04:25.349 * PRIMARY <-> REPLICA sync: Loading DB in memory
+89141:S 03 May 2025 23:04:25.349 * Loading RDB produced by Valkey version 255.255.255
+89141:S 03 May 2025 23:04:25.349 * RDB age 0 seconds
+89141:S 03 May 2025 23:04:25.349 * RDB memory usage when created 1.17 Mb
+89141:S 03 May 2025 23:04:25.349 * Done loading RDB, keys loaded: 0, keys expired: 0.
+89141:S 03 May 2025 23:04:25.350 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test Redis.replicate_commands() can be issued anywhere now in tests/unit/scripting.tcl
+### Starting test Redis.set_repl() can be issued before replicate_commands() now in tests/unit/scripting.tcl
+### Starting test Redis.set_repl() don't accept invalid values in tests/unit/scripting.tcl
+### Starting test Test selective replication of certain commands from Lua in tests/unit/scripting.tcl
+### Starting test PRNG is seeded randomly for command replication in tests/unit/scripting.tcl
+### Starting test Using side effects is not a problem with command replication in tests/unit/scripting.tcl
+### Starting test Check for memory leaks (pid 89170) in tests/unit/scripting.tcl
+89141:S 03 May 2025 23:04:27.235 - Client closed connection id=5 addr=127.0.0.1:21130 laddr=127.0.0.1:60174 fd=13 name= age=2 idle=1 flags=M capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=36 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=set user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=177 tot-net-out=104 tot-cmds=7
+89141:S 03 May 2025 23:04:27.236 * Connection with primary lost.
+89141:S 03 May 2025 23:04:27.236 * Caching the disconnected primary state.
+89141:S 03 May 2025 23:04:27.236 * Reconnecting to PRIMARY 127.0.0.1:21130
+89141:S 03 May 2025 23:04:27.236 * PRIMARY <-> REPLICA sync started
+89141:S 03 May 2025 23:04:27.236 # Error condition on socket for SYNC: Connection refused
+89141:S 03 May 2025 23:04:27.265 - Client closed connection id=3 addr=127.0.0.1:60168 laddr=127.0.0.1:21129 fd=12 name= age=2 idle=1 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=4096 rbp=2048 obl=0 oll=0 omem=0 tot-mem=21504 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=475 tot-net-out=14014 tot-cmds=14
+89141:signal-handler (1746281068) Received SIGTERM scheduling shutdown...
+89141:S 03 May 2025 23:04:28.400 * User requested shutdown...
+89141:S 03 May 2025 23:04:28.405 * Removing the pid file.
+89141:S 03 May 2025 23:04:28.408 * Removing the unix socket file.
+89141:S 03 May 2025 23:04:28.420 # Valkey is now ready to exit, bye bye...

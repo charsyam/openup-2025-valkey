@@ -1,0 +1,69 @@
+### Starting server for test 
+91211:M 03 May 2025 23:04:39.343 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+91211:M 03 May 2025 23:04:39.343 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=91211, just started
+91211:M 03 May 2025 23:04:39.343 * Configuration loaded
+91211:M 03 May 2025 23:04:39.344 * Increased maximum number of open files to 10032 (it was originally set to 256).
+91211:M 03 May 2025 23:04:39.344 * monotonic clock: POSIX clock_gettime
+91211:M 03 May 2025 23:04:39.344 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 24626
+ |###|   .+###############+.   |###|    PID: 91211                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+91211:M 03 May 2025 23:04:39.344 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+91211:M 03 May 2025 23:04:39.344 * Server initialized
+91211:M 03 May 2025 23:04:39.345 * Creating AOF base file appendonly.aof.1.base.aof on server start
+91211:M 03 May 2025 23:04:39.349 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+91211:M 03 May 2025 23:04:39.349 * Ready to accept connections tcp
+91211:M 03 May 2025 23:04:39.349 * Ready to accept connections unix
+91211:M 03 May 2025 23:04:39.479 - Accepted 127.0.0.1:62953
+91211:M 03 May 2025 23:04:39.479 - Client closed connection id=2 addr=127.0.0.1:62953 laddr=127.0.0.1:24626 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+91211:M 03 May 2025 23:04:39.495 - Accepted 127.0.0.1:62958
+### Starting test Empty stream can be rewrite into AOF correctly in tests/unit/type/stream.tcl
+91211:M 03 May 2025 23:04:39.503 * Creating AOF incr file appendonly.aof.2.incr.aof on background rewrite
+91211:M 03 May 2025 23:04:39.503 * Background append only file rewriting started by pid 91259
+91259:C 03 May 2025 23:04:39.506 * Successfully created the temporary AOF base file temp-rewriteaof-bg-91259.aof
+91259:C 03 May 2025 23:04:39.506 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+91211:M 03 May 2025 23:04:39.551 * Background AOF rewrite terminated with success
+91211:M 03 May 2025 23:04:39.554 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-91259.aof into appendonly.aof.2.base.aof
+91211:M 03 May 2025 23:04:39.564 * Removing the history file appendonly.aof.1.incr.aof in the background
+91211:M 03 May 2025 23:04:39.567 * Removing the history file appendonly.aof.1.base.aof in the background
+91211:M 03 May 2025 23:04:39.571 * Background AOF rewrite finished successfully
+91211:M 03 May 2025 23:04:39.571 - Background AOF rewrite signal handler took 20519us
+91211:M 03 May 2025 23:04:39.572 * DB loaded from base file appendonly.aof.2.base.aof: 0.000 seconds
+91211:M 03 May 2025 23:04:39.572 * Append Only File loaded by DEBUG LOADAOF
+### Starting test Stream can be rewrite into AOF correctly after XDEL lastid in tests/unit/type/stream.tcl
+91211:M 03 May 2025 23:04:39.580 * Creating AOF incr file appendonly.aof.3.incr.aof on background rewrite
+91211:M 03 May 2025 23:04:39.580 * Background append only file rewriting started by pid 91271
+91271:C 03 May 2025 23:04:39.584 * Successfully created the temporary AOF base file temp-rewriteaof-bg-91271.aof
+91271:C 03 May 2025 23:04:39.584 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+91211:M 03 May 2025 23:04:39.673 * Background AOF rewrite terminated with success
+91211:M 03 May 2025 23:04:39.673 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-91271.aof into appendonly.aof.3.base.aof
+91211:M 03 May 2025 23:04:39.679 * Removing the history file appendonly.aof.2.incr.aof in the background
+91211:M 03 May 2025 23:04:39.679 * Removing the history file appendonly.aof.2.base.aof in the background
+91211:M 03 May 2025 23:04:39.683 * Background AOF rewrite finished successfully
+91211:M 03 May 2025 23:04:39.683 - Background AOF rewrite signal handler took 10785us
+91211:M 03 May 2025 23:04:39.689 * DB loaded from base file appendonly.aof.3.base.aof: 0.000 seconds
+91211:M 03 May 2025 23:04:39.689 * Append Only File loaded by DEBUG LOADAOF
+91211:M 03 May 2025 23:04:39.690 - Client closed connection id=3 addr=127.0.0.1:62958 laddr=127.0.0.1:24626 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6144 rbp=6092 obl=0 oll=0 omem=0 tot-mem=23552 events=r cmd=xinfo|stream user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=646 tot-net-out=32112 tot-cmds=20
+91211:signal-handler (1746281080) Received SIGTERM scheduling shutdown...
+91211:M 03 May 2025 23:04:40.942 * User requested shutdown...
+91211:M 03 May 2025 23:04:40.942 * Calling fsync() on the AOF file.
+91211:M 03 May 2025 23:04:40.946 * Removing the pid file.
+91211:M 03 May 2025 23:04:40.946 * Removing the unix socket file.
+91211:M 03 May 2025 23:04:40.946 # Valkey is now ready to exit, bye bye...

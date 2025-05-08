@@ -1,0 +1,86 @@
+### Starting server for test 
+88846:M 03 May 2025 23:04:22.920 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+88846:M 03 May 2025 23:04:22.920 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=88846, just started
+88846:M 03 May 2025 23:04:22.920 * Configuration loaded
+88846:M 03 May 2025 23:04:22.920 * Increased maximum number of open files to 10032 (it was originally set to 256).
+88846:M 03 May 2025 23:04:22.920 * monotonic clock: POSIX clock_gettime
+88846:M 03 May 2025 23:04:22.920 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26619
+ |###|   .+###############+.   |###|    PID: 88846                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+88846:M 03 May 2025 23:04:22.920 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+88846:M 03 May 2025 23:04:22.921 * Server initialized
+88846:M 03 May 2025 23:04:22.921 * Ready to accept connections tcp
+88846:M 03 May 2025 23:04:22.921 * Ready to accept connections unix
+88846:M 03 May 2025 23:04:23.043 - Accepted 127.0.0.1:60057
+88846:M 03 May 2025 23:04:23.043 - Client closed connection id=2 addr=127.0.0.1:60057 laddr=127.0.0.1:26619 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+88846:M 03 May 2025 23:04:23.052 - Accepted 127.0.0.1:60058
+### Starting test Consumer group last ID propagation to slave (NOACK=0) in tests/unit/type/stream-cgroups.tcl
+88846:S 03 May 2025 23:04:23.053 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+88846:S 03 May 2025 23:04:23.053 * Connecting to PRIMARY 127.0.0.1:26617
+88846:S 03 May 2025 23:04:23.053 * PRIMARY <-> REPLICA sync started
+88846:S 03 May 2025 23:04:23.053 * REPLICAOF 127.0.0.1:26617 enabled (user request from 'id=3 addr=127.0.0.1:60058 laddr=127.0.0.1:26619 fd=12 name= user=default lib-name= lib-ver=')
+88846:S 03 May 2025 23:04:23.053 * Non blocking connect for SYNC fired the event.
+88846:S 03 May 2025 23:04:23.053 * Primary replied to PING, replication can continue...
+88846:S 03 May 2025 23:04:23.053 * Trying a partial resynchronization (request 363376ac7065682405c5f213936f8cf965dca15a:1).
+88846:S 03 May 2025 23:04:23.054 * Full resync from primary: b15c2256d35344e199e75d4e4df3e91c4e140bb7:0
+88846:S 03 May 2025 23:04:23.055 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+88846:S 03 May 2025 23:04:23.058 * Discarding previously cached primary state.
+88846:S 03 May 2025 23:04:23.058 * PRIMARY <-> REPLICA sync: Flushing old data
+88846:S 03 May 2025 23:04:23.058 * PRIMARY <-> REPLICA sync: Loading DB in memory
+88846:S 03 May 2025 23:04:23.058 * Loading RDB produced by Valkey version 255.255.255
+88846:S 03 May 2025 23:04:23.058 * RDB age 0 seconds
+88846:S 03 May 2025 23:04:23.058 * RDB memory usage when created 1.65 Mb
+88846:S 03 May 2025 23:04:23.058 * Done loading RDB, keys loaded: 4, keys expired: 0.
+88846:S 03 May 2025 23:04:23.058 * PRIMARY <-> REPLICA sync: Finished with success
+88846:M 03 May 2025 23:04:23.159 * Connection with primary lost.
+88846:M 03 May 2025 23:04:23.159 * Caching the disconnected primary state.
+88846:M 03 May 2025 23:04:23.159 * Discarding previously cached primary state.
+88846:M 03 May 2025 23:04:23.159 * Setting secondary replication ID to b15c2256d35344e199e75d4e4df3e91c4e140bb7, valid up to offset: 1046. New replication ID is c42b7c01b0cd28eb759bd0fadd7b94eef7e15888
+88846:M 03 May 2025 23:04:23.159 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:60058 laddr=127.0.0.1:26619 fd=12 name= user=default lib-name= lib-ver=')
+### Starting test Consumer group last ID propagation to slave (NOACK=1) in tests/unit/type/stream-cgroups.tcl
+88846:S 03 May 2025 23:04:23.159 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+88846:S 03 May 2025 23:04:23.159 * Connecting to PRIMARY 127.0.0.1:26617
+88846:S 03 May 2025 23:04:23.159 * PRIMARY <-> REPLICA sync started
+88846:S 03 May 2025 23:04:23.159 * REPLICAOF 127.0.0.1:26617 enabled (user request from 'id=3 addr=127.0.0.1:60058 laddr=127.0.0.1:26619 fd=12 name= user=default lib-name= lib-ver=')
+88846:S 03 May 2025 23:04:23.159 * Non blocking connect for SYNC fired the event.
+88846:S 03 May 2025 23:04:23.159 * Primary replied to PING, replication can continue...
+88846:S 03 May 2025 23:04:23.159 * Trying a partial resynchronization (request c42b7c01b0cd28eb759bd0fadd7b94eef7e15888:1396).
+88846:S 03 May 2025 23:04:23.159 * Full resync from primary: b15c2256d35344e199e75d4e4df3e91c4e140bb7:1045
+88846:S 03 May 2025 23:04:23.160 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+88846:S 03 May 2025 23:04:23.163 * Discarding previously cached primary state.
+88846:S 03 May 2025 23:04:23.163 * PRIMARY <-> REPLICA sync: Flushing old data
+88846:S 03 May 2025 23:04:23.163 * PRIMARY <-> REPLICA sync: Loading DB in memory
+88846:S 03 May 2025 23:04:23.163 * Loading RDB produced by Valkey version 255.255.255
+88846:S 03 May 2025 23:04:23.163 * RDB age 0 seconds
+88846:S 03 May 2025 23:04:23.163 * RDB memory usage when created 1.72 Mb
+88846:S 03 May 2025 23:04:23.163 * Done loading RDB, keys loaded: 5, keys expired: 0.
+88846:S 03 May 2025 23:04:23.163 * PRIMARY <-> REPLICA sync: Finished with success
+88846:M 03 May 2025 23:04:23.262 * Connection with primary lost.
+88846:M 03 May 2025 23:04:23.262 * Caching the disconnected primary state.
+88846:M 03 May 2025 23:04:23.262 * Discarding previously cached primary state.
+88846:M 03 May 2025 23:04:23.262 * Setting secondary replication ID to b15c2256d35344e199e75d4e4df3e91c4e140bb7, valid up to offset: 1646. New replication ID is 693561ee3030da23bbae82c271900425e711f968
+88846:M 03 May 2025 23:04:23.262 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:60058 laddr=127.0.0.1:26619 fd=12 name= user=default lib-name= lib-ver=')
+88846:M 03 May 2025 23:04:23.263 - Client closed connection id=3 addr=127.0.0.1:60058 laddr=127.0.0.1:26619 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6656 rbp=6336 obl=0 oll=0 omem=0 tot-mem=24064 events=r cmd=xreadgroup user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=485 tot-net-out=37882 tot-cmds=13
+88846:signal-handler (1746281065) Received SIGTERM scheduling shutdown...
+88846:M 03 May 2025 23:04:25.211 * User requested shutdown...
+88846:M 03 May 2025 23:04:25.211 * Removing the pid file.
+88846:M 03 May 2025 23:04:25.211 * Removing the unix socket file.
+88846:M 03 May 2025 23:04:25.211 # Valkey is now ready to exit, bye bye...

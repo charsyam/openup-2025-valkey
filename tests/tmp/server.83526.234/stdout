@@ -1,0 +1,88 @@
+### Starting server for test 
+8084:M 03 May 2025 23:06:59.966 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+8084:M 03 May 2025 23:06:59.966 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=8084, just started
+8084:M 03 May 2025 23:06:59.966 * Configuration loaded
+8084:M 03 May 2025 23:06:59.967 * Increased maximum number of open files to 10032 (it was originally set to 256).
+8084:M 03 May 2025 23:06:59.967 * monotonic clock: POSIX clock_gettime
+8084:M 03 May 2025 23:06:59.967 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21727
+ |###|   .+###############+.   |###|    PID: 8084                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+8084:M 03 May 2025 23:06:59.967 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+8084:M 03 May 2025 23:06:59.971 * Server initialized
+8084:M 03 May 2025 23:06:59.971 * Ready to accept connections tcp
+8084:M 03 May 2025 23:06:59.971 * Ready to accept connections unix
+8084:M 03 May 2025 23:07:00.106 - Accepted 127.0.0.1:61751
+8084:M 03 May 2025 23:07:00.106 - Client closed connection id=2 addr=127.0.0.1:61751 laddr=127.0.0.1:21727 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+8084:M 03 May 2025 23:07:00.136 - Accepted 127.0.0.1:61772
+8084:M 03 May 2025 23:07:00.138 - Accepted 127.0.0.1:61773
+8084:M 03 May 2025 23:07:00.138 * Replica 127.0.0.1:21725 asks for synchronization
+8084:M 03 May 2025 23:07:00.138 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '4ad3667b588aee156c6eefff45a4adecbc9e9c98', my replication IDs are '564c2a9633c13301ce9e2bfb71fa67e2c24c2539' and '0000000000000000000000000000000000000000')
+8084:M 03 May 2025 23:07:00.138 * Dual channel replication: Replica 127.0.0.1:21725 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+8084:M 03 May 2025 23:07:00.139 - Accepted 127.0.0.1:61774
+8084:M 03 May 2025 23:07:00.139 * Replica 127.0.0.1:21725 asks for synchronization
+8084:M 03 May 2025 23:07:00.139 * Replication backlog created, my new replication IDs are '8b795fd3fd44253928f56ee4bf695b0d587b6944' and '0000000000000000000000000000000000000000'
+8084:M 03 May 2025 23:07:00.139 * Starting BGSAVE for SYNC with target: replicas sockets using: dual-channel
+8084:M 03 May 2025 23:07:00.139 * Dual channel replication: Sending to replica 127.0.0.1:21725 RDB end offset 0 and client-id 5
+8084:M 03 May 2025 23:07:00.140 * Background RDB transfer started by pid 8100 to direct socket to replica
+8084:M 03 May 2025 23:07:00.140 * Replica 127.0.0.1:21725 asks for synchronization
+8084:M 03 May 2025 23:07:00.140 * Partial resynchronization request from 127.0.0.1:21725 accepted. Sending 0 bytes of backlog starting from offset 1.
+8100:C 03 May 2025 23:07:00.140 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+8084:M 03 May 2025 23:07:00.146 - Client closed connection id=5 addr=127.0.0.1:61774 laddr=127.0.0.1:21727 fd=14 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=121 tot-net-out=5 tot-cmds=2
+8084:M 03 May 2025 23:07:00.146 * Dual channel replication: Replica 127.0.0.1:21725 rdb channel disconnected.
+8084:M 03 May 2025 23:07:00.146 * Synchronization with replica 127.0.0.1:21725 succeeded
+8084:M 03 May 2025 23:07:00.174 * Background RDB transfer terminated with success
+### Starting test Replication backlog size can outgrow the backlog limit config dualchannel yes in tests/integration/replication-buffer.tcl
+8084:M 03 May 2025 23:07:00.327 - Accepted 127.0.0.1:61888
+8084:M 03 May 2025 23:07:00.327 * Replica 127.0.0.1:21726 asks for synchronization
+8084:M 03 May 2025 23:07:00.327 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '80f0d8782db118a919f44b43d34f5b00e4690ffb', my replication IDs are '8b795fd3fd44253928f56ee4bf695b0d587b6944' and '0000000000000000000000000000000000000000')
+8084:M 03 May 2025 23:07:00.327 * Dual channel replication: Replica 127.0.0.1:21726 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+8084:M 03 May 2025 23:07:00.327 - Accepted 127.0.0.1:61889
+8084:M 03 May 2025 23:07:00.327 * Replica 127.0.0.1:21726 asks for synchronization
+8084:M 03 May 2025 23:07:00.327 * Starting BGSAVE for SYNC with target: replicas sockets using: dual-channel
+8084:M 03 May 2025 23:07:00.327 * Dual channel replication: Sending to replica 127.0.0.1:21726 RDB end offset 10037913 and client-id 7
+8084:M 03 May 2025 23:07:00.329 * Background RDB transfer started by pid 8109 to direct socket to replica
+8084:M 03 May 2025 23:07:00.329 * Replica 127.0.0.1:21726 asks for synchronization
+8084:M 03 May 2025 23:07:00.329 * Partial resynchronization request from 127.0.0.1:21726 accepted. Sending 0 bytes of backlog starting from offset 10037914.
+### Starting test Replica could use replication buffer (beyond backlog config) for partial resynchronization  dualchannel yes in tests/integration/replication-buffer.tcl
+8084:M 03 May 2025 23:07:02.583 - Client closed connection id=4 addr=127.0.0.1:61773 laddr=127.0.0.1:21727 fd=13 name= age=2 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=547 tot-net-out=210845853 tot-cmds=11
+8084:M 03 May 2025 23:07:02.583 * Connection with replica 127.0.0.1:21725 lost.
+8084:M 03 May 2025 23:07:03.772 - Accepted 127.0.0.1:64329
+8084:M 03 May 2025 23:07:03.772 * Replica 127.0.0.1:21725 asks for synchronization
+8084:M 03 May 2025 23:07:03.772 * Partial resynchronization request from 127.0.0.1:21725 accepted. Sending 100397890 bytes of backlog starting from offset 210845827.
+### Starting test Replication backlog memory will become smaller if disconnecting with replica dualchannel yes in tests/integration/replication-buffer.tcl
+8084:M 03 May 2025 23:07:05.098 * Connection with replica 127.0.0.1:21726 lost.
+8084:M 03 May 2025 23:07:05.098 # Client id=6 addr=127.0.0.1:61888 laddr=127.0.0.1:21727 fd=14 name= age=5 idle=5 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=0 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=17822 omem=301548240 tot-mem=301549776 events=rw cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=395 tot-net-out=815765 tot-cmds=7 closed for overcoming of output buffer limits.
+8084:M 03 May 2025 23:07:05.100 # Client id=8 addr=127.0.0.1:64329 laddr=127.0.0.1:21727 fd=13 name= age=2 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=8 omem=135360 tot-mem=153792 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=320 tot-net-out=100397912 tot-cmds=6 scheduled to be closed ASAP for overcoming of output buffer limits.
+8084:M 03 May 2025 23:07:05.100 * Connection with replica 127.0.0.1:21725 lost.
+8084:M 03 May 2025 23:07:05.101 - Accepted 127.0.0.1:65150
+8084:M 03 May 2025 23:07:05.103 * Replica 127.0.0.1:21725 asks for synchronization
+8084:M 03 May 2025 23:07:05.103 * Partial resynchronization request from 127.0.0.1:21725 accepted. Sending 131105 bytes of backlog starting from offset 311243717.
+8084:M 03 May 2025 23:07:05.401 - DB 9: 20001 keys (0 volatile) in 14336 slots HT.
+8084:M 03 May 2025 23:07:05.634 - Client closed connection id=3 addr=127.0.0.1:61772 laddr=127.0.0.1:21727 fd=12 name= age=5 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=8192 rbp=6264 obl=0 oll=0 omem=0 tot-mem=25600 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=311375568 tot-net-out=261931 tot-cmds=31028
+8084:signal-handler (1746281233) Received SIGTERM scheduling shutdown...
+8084:M 03 May 2025 23:07:13.639 * User requested shutdown...
+8084:M 03 May 2025 23:07:13.639 * Lagging replica 127.0.0.1:21726 reported offset 311374821 behind master, lag=0, state=wait_bgsave.
+8084:M 03 May 2025 23:07:13.639 * 1 of 2 replicas are in sync when shutting down.
+8084:M 03 May 2025 23:07:13.639 # There is a child saving an .rdb. Killing it!
+8084:M 03 May 2025 23:07:13.639 * Removing the pid file.
+8084:M 03 May 2025 23:07:13.639 * Removing the unix socket file.
+8084:M 03 May 2025 23:07:13.640 # Valkey is now ready to exit, bye bye...
+8109:signal-handler (1746281233) Received SIGUSR1 in child, exiting now.

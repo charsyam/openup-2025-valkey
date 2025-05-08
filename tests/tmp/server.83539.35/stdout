@@ -1,0 +1,196 @@
+### Starting server for test 
+94436:M 03 May 2025 23:05:02.876 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+94436:M 03 May 2025 23:05:02.876 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+94436:M 03 May 2025 23:05:02.876 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=94436, just started
+94436:M 03 May 2025 23:05:02.876 * Configuration loaded
+94436:M 03 May 2025 23:05:02.876 * Increased maximum number of open files to 10032 (it was originally set to 256).
+94436:M 03 May 2025 23:05:02.876 * monotonic clock: POSIX clock_gettime
+94436:M 03 May 2025 23:05:02.877 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 28128
+ |###|   .+###############+.   |###|    PID: 94436                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+94436:M 03 May 2025 23:05:02.877 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+94436:M 03 May 2025 23:05:02.877 * No cluster configuration found, I'm c4b845e23f1d67d7dfa732e2ac2f040beb76338e
+94436:M 03 May 2025 23:05:02.882 * Server initialized
+94436:M 03 May 2025 23:05:02.882 * Ready to accept connections tcp
+94436:M 03 May 2025 23:05:02.885 * Ready to accept connections unix
+94436:M 03 May 2025 23:05:03.010 - Accepted 127.0.0.1:53980
+94436:M 03 May 2025 23:05:03.013 - Client closed connection id=2 addr=127.0.0.1:53980 laddr=127.0.0.1:28128 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+94436:M 03 May 2025 23:05:03.027 - Accepted 127.0.0.1:53985
+94436:M 03 May 2025 23:05:03.255 # Missing implement of connection type tls
+94436:M 03 May 2025 23:05:03.297 - Accepting cluster node connection from 127.0.0.1:54124
+94436:M 03 May 2025 23:05:03.297 * IP address for this node updated to 127.0.0.1
+94436:S 03 May 2025 23:05:03.430 * Connecting to PRIMARY 127.0.0.1:28129
+94436:S 03 May 2025 23:05:03.430 * PRIMARY <-> REPLICA sync started
+94436:S 03 May 2025 23:05:03.430 * Cluster state changed: ok
+94436:S 03 May 2025 23:05:03.430 * Non blocking connect for SYNC fired the event.
+94436:S 03 May 2025 23:05:03.431 * Primary replied to PING, replication can continue...
+94436:S 03 May 2025 23:05:03.431 # DEBUG LOG: ========== I am replica 1 ==========
+94436:S 03 May 2025 23:05:03.431 * Partial resynchronization not possible (no cached primary)
+94436:S 03 May 2025 23:05:03.431 * Full resync from primary: ef489f5094ae157cbcbf1eefc45d68364f498cd6:0
+94436:S 03 May 2025 23:05:03.432 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+94436:S 03 May 2025 23:05:03.435 * PRIMARY <-> REPLICA sync: Flushing old data
+94436:S 03 May 2025 23:05:03.435 * PRIMARY <-> REPLICA sync: Loading DB in memory
+94436:S 03 May 2025 23:05:03.435 * Loading RDB produced by Valkey version 255.255.255
+94436:S 03 May 2025 23:05:03.435 * RDB age 0 seconds
+94436:S 03 May 2025 23:05:03.435 * RDB memory usage when created 2.91 Mb
+94436:S 03 May 2025 23:05:03.435 * Done loading RDB, keys loaded: 0, keys expired: 0.
+94436:S 03 May 2025 23:05:03.435 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test Cluster is up in tests/unit/cluster/replica-in-sync.tcl
+### Starting test Cluster is writable in tests/unit/cluster/replica-in-sync.tcl
+94436:S 03 May 2025 23:05:13.381 - Accepted 127.0.0.1:62208
+94436:S 03 May 2025 23:05:13.446 - Client closed connection id=10 addr=127.0.0.1:62208 laddr=127.0.0.1:28128 fd=18 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=0 tot-cmds=0
+### Starting test Fill up primary with data in tests/unit/cluster/replica-in-sync.tcl
+### Starting test Add new node as replica in tests/unit/cluster/replica-in-sync.tcl
+### Starting test Check digest and replica state in tests/unit/cluster/replica-in-sync.tcl
+### Starting test Replica in loading state is hidden in tests/unit/cluster/replica-in-sync.tcl
+94436:S 03 May 2025 23:05:13.481 - Client closed connection id=8 addr=127.0.0.1:28129 laddr=127.0.0.1:54181 fd=17 name= age=10 idle=0 flags=M capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=34 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=set user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=5517 tot-net-out=374 tot-cmds=102
+94436:S 03 May 2025 23:05:13.484 * Connection with primary lost.
+94436:S 03 May 2025 23:05:13.484 * Caching the disconnected primary state.
+94436:S 03 May 2025 23:05:13.484 * Reconnecting to PRIMARY 127.0.0.1:28129
+94436:S 03 May 2025 23:05:13.487 * PRIMARY <-> REPLICA sync started
+94436:S 03 May 2025 23:05:13.494 * Non blocking connect for SYNC fired the event.
+94436:S 03 May 2025 23:05:13.499 * Primary replied to PING, replication can continue...
+94436:S 03 May 2025 23:05:13.504 * Trying a partial resynchronization (request ef489f5094ae157cbcbf1eefc45d68364f498cd6:5518).
+94436:S 03 May 2025 23:05:13.509 * Full resync from primary: ef489f5094ae157cbcbf1eefc45d68364f498cd6:111236
+94436:S 03 May 2025 23:05:13.513 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+94436:S 03 May 2025 23:05:13.518 * Discarding previously cached primary state.
+94436:S 03 May 2025 23:05:13.518 * PRIMARY <-> REPLICA sync: Flushing old data
+94436:S 03 May 2025 23:05:13.518 * PRIMARY <-> REPLICA sync: Loading DB in memory
+94436:S 03 May 2025 23:05:13.518 * Loading RDB produced by Valkey version 255.255.255
+94436:S 03 May 2025 23:05:13.518 * RDB age 0 seconds
+94436:S 03 May 2025 23:05:13.518 * RDB memory usage when created 4.50 Mb
+94436:S 03 May 2025 23:05:19.890 * Done loading RDB, keys loaded: 1200, keys expired: 0.
+94436:S 03 May 2025 23:05:19.890 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test Check disconnected replica not hidden from slots in tests/unit/cluster/replica-in-sync.tcl
+94436:S 03 May 2025 23:05:19.891 - Client closed connection id=11 addr=127.0.0.1:28129 laddr=127.0.0.1:62286 fd=17 name= age=0 idle=0 flags=M capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=39 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=39 tot-cmds=0
+94436:S 03 May 2025 23:05:19.891 * Connection with primary lost.
+94436:S 03 May 2025 23:05:19.891 * Caching the disconnected primary state.
+94436:S 03 May 2025 23:05:19.891 * Reconnecting to PRIMARY 127.0.0.1:28129
+94436:S 03 May 2025 23:05:19.891 * PRIMARY <-> REPLICA sync started
+94436:S 03 May 2025 23:05:19.891 * Non blocking connect for SYNC fired the event.
+94436:S 03 May 2025 23:05:19.892 * Primary replied to PING, replication can continue...
+94436:S 03 May 2025 23:05:19.892 * (Non critical) Primary does not understand REPLCONF listening-port: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.892 * (Non critical) Primary does not understand REPLCONF capa: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.892 * (Non critical) Primary does not understand REPLCONF VERSION: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.892 * (Non critical) Primary does not understand REPLCONF SET-CLUSTER-NODE-ID: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.892 * Trying a partial resynchronization (request ef489f5094ae157cbcbf1eefc45d68364f498cd6:111237).
+94436:S 03 May 2025 23:05:19.892 # Unexpected reply to PSYNC from primary: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.892 * Retrying with SYNC...
+94436:S 03 May 2025 23:05:19.892 # PRIMARY aborted replication with an error: NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.892 * Reconnecting to PRIMARY 127.0.0.1:28129 after failure
+94436:S 03 May 2025 23:05:19.892 * PRIMARY <-> REPLICA sync started
+94436:S 03 May 2025 23:05:19.892 * Non blocking connect for SYNC fired the event.
+94436:S 03 May 2025 23:05:19.892 * Primary replied to PING, replication can continue...
+94436:S 03 May 2025 23:05:19.892 * (Non critical) Primary does not understand REPLCONF listening-port: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.892 * (Non critical) Primary does not understand REPLCONF capa: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.893 * (Non critical) Primary does not understand REPLCONF VERSION: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.893 * (Non critical) Primary does not understand REPLCONF SET-CLUSTER-NODE-ID: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.893 * Trying a partial resynchronization (request ef489f5094ae157cbcbf1eefc45d68364f498cd6:111237).
+94436:S 03 May 2025 23:05:19.893 # Unexpected reply to PSYNC from primary: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.893 * Retrying with SYNC...
+94436:S 03 May 2025 23:05:19.893 # PRIMARY aborted replication with an error: NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.893 * Reconnecting to PRIMARY 127.0.0.1:28129 after failure
+94436:S 03 May 2025 23:05:19.893 * PRIMARY <-> REPLICA sync started
+94436:S 03 May 2025 23:05:19.893 * Non blocking connect for SYNC fired the event.
+94436:S 03 May 2025 23:05:19.893 * Primary replied to PING, replication can continue...
+94436:S 03 May 2025 23:05:19.894 * (Non critical) Primary does not understand REPLCONF listening-port: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.894 * (Non critical) Primary does not understand REPLCONF capa: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.894 * (Non critical) Primary does not understand REPLCONF VERSION: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.894 * (Non critical) Primary does not understand REPLCONF SET-CLUSTER-NODE-ID: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.894 * Trying a partial resynchronization (request ef489f5094ae157cbcbf1eefc45d68364f498cd6:111237).
+94436:S 03 May 2025 23:05:19.894 # Unexpected reply to PSYNC from primary: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.894 * Retrying with SYNC...
+94436:S 03 May 2025 23:05:19.894 # PRIMARY aborted replication with an error: NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.894 * Reconnecting to PRIMARY 127.0.0.1:28129 after failure
+94436:S 03 May 2025 23:05:19.895 * PRIMARY <-> REPLICA sync started
+94436:S 03 May 2025 23:05:19.897 * Non blocking connect for SYNC fired the event.
+94436:S 03 May 2025 23:05:19.897 * Primary replied to PING, replication can continue...
+94436:S 03 May 2025 23:05:19.897 * (Non critical) Primary does not understand REPLCONF listening-port: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.900 * (Non critical) Primary does not understand REPLCONF capa: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.900 * (Non critical) Primary does not understand REPLCONF VERSION: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.900 * (Non critical) Primary does not understand REPLCONF SET-CLUSTER-NODE-ID: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.900 * Trying a partial resynchronization (request ef489f5094ae157cbcbf1eefc45d68364f498cd6:111237).
+94436:S 03 May 2025 23:05:19.900 # Unexpected reply to PSYNC from primary: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.903 * Retrying with SYNC...
+94436:S 03 May 2025 23:05:19.903 # PRIMARY aborted replication with an error: NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.903 * Reconnecting to PRIMARY 127.0.0.1:28129 after failure
+94436:S 03 May 2025 23:05:19.905 * PRIMARY <-> REPLICA sync started
+94436:S 03 May 2025 23:05:19.908 * Non blocking connect for SYNC fired the event.
+94436:S 03 May 2025 23:05:19.919 * Primary replied to PING, replication can continue...
+94436:S 03 May 2025 23:05:19.928 * (Non critical) Primary does not understand REPLCONF listening-port: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.929 * (Non critical) Primary does not understand REPLCONF capa: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.932 * (Non critical) Primary does not understand REPLCONF VERSION: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.932 * (Non critical) Primary does not understand REPLCONF SET-CLUSTER-NODE-ID: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.932 * Trying a partial resynchronization (request ef489f5094ae157cbcbf1eefc45d68364f498cd6:111237).
+94436:S 03 May 2025 23:05:19.933 # Unexpected reply to PSYNC from primary: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.935 * Retrying with SYNC...
+94436:S 03 May 2025 23:05:19.946 # PRIMARY aborted replication with an error: NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.946 * Reconnecting to PRIMARY 127.0.0.1:28129 after failure
+94436:S 03 May 2025 23:05:19.946 * PRIMARY <-> REPLICA sync started
+94436:S 03 May 2025 23:05:19.946 * Non blocking connect for SYNC fired the event.
+94436:S 03 May 2025 23:05:19.954 * Primary replied to PING, replication can continue...
+94436:S 03 May 2025 23:05:19.959 * (Non critical) Primary does not understand REPLCONF listening-port: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.961 * (Non critical) Primary does not understand REPLCONF capa: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.961 * (Non critical) Primary does not understand REPLCONF VERSION: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.961 * (Non critical) Primary does not understand REPLCONF SET-CLUSTER-NODE-ID: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.961 * Trying a partial resynchronization (request ef489f5094ae157cbcbf1eefc45d68364f498cd6:111237).
+94436:S 03 May 2025 23:05:19.961 # Unexpected reply to PSYNC from primary: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.964 * Retrying with SYNC...
+94436:S 03 May 2025 23:05:19.968 # PRIMARY aborted replication with an error: NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.971 * Reconnecting to PRIMARY 127.0.0.1:28129 after failure
+94436:S 03 May 2025 23:05:19.971 * PRIMARY <-> REPLICA sync started
+94436:S 03 May 2025 23:05:19.972 * Non blocking connect for SYNC fired the event.
+94436:S 03 May 2025 23:05:19.975 * Primary replied to PING, replication can continue...
+94436:S 03 May 2025 23:05:19.981 * (Non critical) Primary does not understand REPLCONF listening-port: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.983 * (Non critical) Primary does not understand REPLCONF capa: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.983 * (Non critical) Primary does not understand REPLCONF VERSION: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.983 * (Non critical) Primary does not understand REPLCONF SET-CLUSTER-NODE-ID: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.983 * Trying a partial resynchronization (request ef489f5094ae157cbcbf1eefc45d68364f498cd6:111237).
+94436:S 03 May 2025 23:05:19.985 # Unexpected reply to PSYNC from primary: -NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.989 * Retrying with SYNC...
+94436:S 03 May 2025 23:05:19.990 # PRIMARY aborted replication with an error: NOAUTH Authentication required.
+94436:S 03 May 2025 23:05:19.998 * Reconnecting to PRIMARY 127.0.0.1:28129 after failure
+94436:S 03 May 2025 23:05:20.004 * PRIMARY <-> REPLICA sync started
+94436:S 03 May 2025 23:05:20.004 * Non blocking connect for SYNC fired the event.
+94436:S 03 May 2025 23:05:20.004 * Primary replied to PING, replication can continue...
+94436:S 03 May 2025 23:05:20.013 * Trying a partial resynchronization (request ef489f5094ae157cbcbf1eefc45d68364f498cd6:111237).
+94436:S 03 May 2025 23:05:20.020 * Successful partial resynchronization with primary.
+94436:S 03 May 2025 23:05:20.020 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+### Starting test Check for memory leaks (pid 94467) in tests/unit/cluster/replica-in-sync.tcl
+94436:S 03 May 2025 23:05:21.402 - Client closed connection id=11 addr=127.0.0.1:28129 laddr=127.0.0.1:49918 fd=17 name= age=2 idle=1 flags=M capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=39 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=NULL user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=78 tot-cmds=0
+94436:S 03 May 2025 23:05:21.406 * Connection with primary lost.
+94436:S 03 May 2025 23:05:21.409 * Caching the disconnected primary state.
+94436:S 03 May 2025 23:05:21.409 * Reconnecting to PRIMARY 127.0.0.1:28129
+94436:S 03 May 2025 23:05:21.411 * PRIMARY <-> REPLICA sync started
+94436:S 03 May 2025 23:05:21.414 # Error condition on socket for SYNC: Connection refused
+94436:S 03 May 2025 23:05:21.417 - Connection with Node bbaaf57e0f87cb3972f3efdfdf5f010238516ae8 at 127.0.0.1:38129 failed: Connection refused
+94436:S 03 May 2025 23:05:21.519 - Connection with Node bbaaf57e0f87cb3972f3efdfdf5f010238516ae8 at 127.0.0.1:38129 failed: Connection refused
+94436:S 03 May 2025 23:05:21.536 - Client closed connection id=3 addr=127.0.0.1:53985 laddr=127.0.0.1:28128 fd=14 name= age=18 idle=2 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=4096 rbp=2048 obl=0 oll=0 omem=0 tot-mem=21504 events=r cmd=cluster|myid user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1839 tot-net-out=426593 tot-cmds=87
+94436:S 03 May 2025 23:05:21.620 - Connection with Node bbaaf57e0f87cb3972f3efdfdf5f010238516ae8 at 127.0.0.1:38129 failed: Connection refused
+94436:S 03 May 2025 23:05:21.721 - Connection with Node bbaaf57e0f87cb3972f3efdfdf5f010238516ae8 at 127.0.0.1:38129 failed: Connection refused
+94436:S 03 May 2025 23:05:21.822 - Connection with Node bbaaf57e0f87cb3972f3efdfdf5f010238516ae8 at 127.0.0.1:38129 failed: Connection refused
+94436:S 03 May 2025 23:05:22.743 - Connection with Node bbaaf57e0f87cb3972f3efdfdf5f010238516ae8 at 127.0.0.1:38129 failed: Connection refused
+94436:signal-handler (1746281122) Received SIGTERM scheduling shutdown...
+94436:S 03 May 2025 23:05:22.844 * User requested shutdown...
+94436:S 03 May 2025 23:05:22.845 * Removing the pid file.
+94436:S 03 May 2025 23:05:22.848 * Saving the cluster configuration file before exiting.
+94436:S 03 May 2025 23:05:22.869 * Removing the unix socket file.
+94436:S 03 May 2025 23:05:22.869 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,150 @@
+### Starting server for test 
+17707:M 03 May 2025 23:09:36.584 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+17707:M 03 May 2025 23:09:36.585 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=17707, just started
+17707:M 03 May 2025 23:09:36.585 * Configuration loaded
+17707:M 03 May 2025 23:09:36.585 * Increased maximum number of open files to 10032 (it was originally set to 256).
+17707:M 03 May 2025 23:09:36.585 * monotonic clock: POSIX clock_gettime
+17707:M 03 May 2025 23:09:36.585 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27679
+ |###|   .+###############+.   |###|    PID: 17707                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+17707:M 03 May 2025 23:09:36.585 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+17707:M 03 May 2025 23:09:36.586 * Server initialized
+17707:M 03 May 2025 23:09:36.586 * Ready to accept connections tcp
+17707:M 03 May 2025 23:09:36.586 * Ready to accept connections unix
+17707:M 03 May 2025 23:09:36.710 - Accepted 127.0.0.1:50320
+17707:M 03 May 2025 23:09:36.711 - Client closed connection id=2 addr=127.0.0.1:50320 laddr=127.0.0.1:27679 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+17707:M 03 May 2025 23:09:36.723 - Accepted 127.0.0.1:50321
+### Starting test diskless no replicas drop during rdb pipe in tests/integration/replication.tcl
+17707:M 03 May 2025 23:09:37.092 - Accepted 127.0.0.1:50326
+17707:M 03 May 2025 23:09:37.093 - Accepted 127.0.0.1:50327
+17707:M 03 May 2025 23:09:37.093 * Replica 127.0.0.1:27680 asks for synchronization
+17707:M 03 May 2025 23:09:37.093 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'eeee36d1b6853f81d30b59d65d96a504019d7965', my replication IDs are '2d6cdcfd9b97e4327dc4c6ca79f7a68f08fd7c44' and '0000000000000000000000000000000000000000')
+17707:M 03 May 2025 23:09:37.093 * Replication backlog created, my new replication IDs are '7a0724a28b93f872adc1cb910898abe9a7911fa4' and '0000000000000000000000000000000000000000'
+17707:M 03 May 2025 23:09:37.093 * Delay next BGSAVE for diskless SYNC
+17707:M 03 May 2025 23:09:37.093 * Replica 127.0.0.1:27681 asks for synchronization
+17707:M 03 May 2025 23:09:37.093 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'f84168b7d81cc45a210023e9d64844012110c854', my replication IDs are '7a0724a28b93f872adc1cb910898abe9a7911fa4' and '0000000000000000000000000000000000000000')
+17707:M 03 May 2025 23:09:37.093 * Delay next BGSAVE for diskless SYNC
+17707:M 03 May 2025 23:09:37.592 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+17707:M 03 May 2025 23:09:37.601 * Background RDB transfer started by pid 17771 to pipe through parent process
+17771:C 03 May 2025 23:09:40.911 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+17707:M 03 May 2025 23:09:40.912 * Diskless rdb transfer, done reading from pipe, 2 replicas still up.
+17707:M 03 May 2025 23:09:40.914 * Background RDB transfer terminated with success
+17707:M 03 May 2025 23:09:40.916 * Streamed RDB transfer with replica 127.0.0.1:27680 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+17707:M 03 May 2025 23:09:40.916 * Synchronization with replica 127.0.0.1:27680 succeeded
+17707:M 03 May 2025 23:09:40.916 * Streamed RDB transfer with replica 127.0.0.1:27681 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+17707:M 03 May 2025 23:09:40.916 * Synchronization with replica 127.0.0.1:27681 succeeded
+17707:M 03 May 2025 23:09:42.361 - DB 9: 20001 keys (0 volatile) in 28672 slots HT.
+17707:M 03 May 2025 23:09:42.787 - Client closed connection id=5 addr=127.0.0.1:50327 laddr=127.0.0.1:27679 fd=14 name= age=5 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=312 tot-net-out=67 tot-cmds=7
+17707:M 03 May 2025 23:09:42.787 * Connection with replica 127.0.0.1:27681 lost.
+17707:M 03 May 2025 23:09:42.859 - Client closed connection id=4 addr=127.0.0.1:50326 laddr=127.0.0.1:27679 fd=13 name= age=5 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=314 tot-net-out=67 tot-cmds=7
+17707:M 03 May 2025 23:09:42.859 * Connection with replica 127.0.0.1:27680 lost.
+### Starting test diskless slow replicas drop during rdb pipe in tests/integration/replication.tcl
+17707:M 03 May 2025 23:09:43.236 - Accepted 127.0.0.1:50338
+17707:M 03 May 2025 23:09:43.236 - Accepted 127.0.0.1:50339
+17707:M 03 May 2025 23:09:43.236 * Replica 127.0.0.1:27682 asks for synchronization
+17707:M 03 May 2025 23:09:43.236 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '922b36b5374f3d828d71314ef137669c4c86e7e8', my replication IDs are '7a0724a28b93f872adc1cb910898abe9a7911fa4' and '0000000000000000000000000000000000000000')
+17707:M 03 May 2025 23:09:43.236 * Delay next BGSAVE for diskless SYNC
+17707:M 03 May 2025 23:09:43.237 * Replica 127.0.0.1:27683 asks for synchronization
+17707:M 03 May 2025 23:09:43.237 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '9a8a2d2ecb000237fbfe6ca22a96b5c293df7f67', my replication IDs are '7a0724a28b93f872adc1cb910898abe9a7911fa4' and '0000000000000000000000000000000000000000')
+17707:M 03 May 2025 23:09:43.237 * Delay next BGSAVE for diskless SYNC
+17707:M 03 May 2025 23:09:43.371 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+17707:M 03 May 2025 23:09:43.377 * Background RDB transfer started by pid 17958 to pipe through parent process
+17707:M 03 May 2025 23:09:43.901 - Reading from client: Connection reset by peer
+17707:M 03 May 2025 23:09:43.901 * Connection with replica client id #6 lost.
+17958:C 03 May 2025 23:09:44.145 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+17707:M 03 May 2025 23:09:44.145 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+17707:M 03 May 2025 23:09:44.180 * Background RDB transfer terminated with success
+17707:M 03 May 2025 23:09:44.180 * Streamed RDB transfer with replica 127.0.0.1:27683 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+17707:M 03 May 2025 23:09:44.180 * Synchronization with replica 127.0.0.1:27683 succeeded
+17707:M 03 May 2025 23:09:45.435 - Client closed connection id=7 addr=127.0.0.1:50339 laddr=127.0.0.1:27679 fd=14 name= age=2 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=277 tot-net-out=69 tot-cmds=6
+17707:M 03 May 2025 23:09:45.435 * Connection with replica 127.0.0.1:27683 lost.
+### Starting test diskless fast replicas drop during rdb pipe in tests/integration/replication.tcl
+17707:M 03 May 2025 23:09:45.806 - Accepted 127.0.0.1:50362
+17707:M 03 May 2025 23:09:45.806 * Replica 127.0.0.1:27684 asks for synchronization
+17707:M 03 May 2025 23:09:45.806 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '67447da0389d9a545c7b60738e8a09b2568b2029', my replication IDs are '7a0724a28b93f872adc1cb910898abe9a7911fa4' and '0000000000000000000000000000000000000000')
+17707:M 03 May 2025 23:09:45.806 * Delay next BGSAVE for diskless SYNC
+17707:M 03 May 2025 23:09:45.807 - Accepted 127.0.0.1:50363
+17707:M 03 May 2025 23:09:45.807 * Replica 127.0.0.1:27685 asks for synchronization
+17707:M 03 May 2025 23:09:45.807 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '6d8274457636f96d97188faa7e767068cdc103f0', my replication IDs are '7a0724a28b93f872adc1cb910898abe9a7911fa4' and '0000000000000000000000000000000000000000')
+17707:M 03 May 2025 23:09:45.807 * Delay next BGSAVE for diskless SYNC
+17707:M 03 May 2025 23:09:46.774 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+17707:M 03 May 2025 23:09:46.779 * Background RDB transfer started by pid 18252 to pipe through parent process
+17707:M 03 May 2025 23:09:47.382 - Reading from client: Connection reset by peer
+17707:M 03 May 2025 23:09:47.382 * Connection with replica client id #9 lost.
+17707:M 03 May 2025 23:09:47.783 - DB 9: 20003 keys (0 volatile) in 28672 slots HT.
+18252:C 03 May 2025 23:09:49.888 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+17707:M 03 May 2025 23:09:49.888 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+17707:M 03 May 2025 23:09:49.890 * Background RDB transfer terminated with success
+17707:M 03 May 2025 23:09:49.890 * Streamed RDB transfer with replica 127.0.0.1:27684 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+17707:M 03 May 2025 23:09:49.890 * Synchronization with replica 127.0.0.1:27684 succeeded
+17707:M 03 May 2025 23:09:50.905 - Client closed connection id=8 addr=127.0.0.1:50362 laddr=127.0.0.1:27679 fd=13 name= age=5 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=316 tot-net-out=83 tot-cmds=7
+17707:M 03 May 2025 23:09:50.905 * Connection with replica 127.0.0.1:27684 lost.
+### Starting test diskless all replicas drop during rdb pipe in tests/integration/replication.tcl
+17707:M 03 May 2025 23:09:51.274 - Accepted 127.0.0.1:50375
+17707:M 03 May 2025 23:09:51.274 - Accepted 127.0.0.1:50376
+17707:M 03 May 2025 23:09:51.275 * Replica 127.0.0.1:27686 asks for synchronization
+17707:M 03 May 2025 23:09:51.275 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'b89f54055fd484adc553141d85c344bffbc393b0', my replication IDs are '7a0724a28b93f872adc1cb910898abe9a7911fa4' and '0000000000000000000000000000000000000000')
+17707:M 03 May 2025 23:09:51.275 * Delay next BGSAVE for diskless SYNC
+17707:M 03 May 2025 23:09:51.275 * Replica 127.0.0.1:27687 asks for synchronization
+17707:M 03 May 2025 23:09:51.275 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '2b49cc8ac385d902e7c1a8ff2325d342c0726bfd', my replication IDs are '7a0724a28b93f872adc1cb910898abe9a7911fa4' and '0000000000000000000000000000000000000000')
+17707:M 03 May 2025 23:09:51.275 * Delay next BGSAVE for diskless SYNC
+17707:M 03 May 2025 23:09:52.110 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+17707:M 03 May 2025 23:09:52.116 * Background RDB transfer started by pid 18354 to pipe through parent process
+17707:M 03 May 2025 23:09:52.643 - Reading from client: Connection reset by peer
+17707:M 03 May 2025 23:09:52.643 * Connection with replica client id #10 lost.
+17707:M 03 May 2025 23:09:52.646 - Reading from client: Connection reset by peer
+17707:M 03 May 2025 23:09:52.646 * Connection with replica client id #11 lost.
+17707:M 03 May 2025 23:09:52.646 * Diskless rdb transfer, last replica dropped, killing fork child.
+18354:signal-handler (1746281392) Received SIGUSR1 in child, exiting now.
+17707:M 03 May 2025 23:09:52.718 # Background RDB transfer terminated by signal 30
+### Starting test diskless timeout replicas drop during rdb pipe in tests/integration/replication.tcl
+17707:M 03 May 2025 23:09:53.091 - Accepted 127.0.0.1:50381
+17707:M 03 May 2025 23:09:53.091 - Accepted 127.0.0.1:50382
+17707:M 03 May 2025 23:09:53.091 * Replica 127.0.0.1:27688 asks for synchronization
+17707:M 03 May 2025 23:09:53.091 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '9508d57da452e378480fb34d673637e87d78f047', my replication IDs are '7a0724a28b93f872adc1cb910898abe9a7911fa4' and '0000000000000000000000000000000000000000')
+17707:M 03 May 2025 23:09:53.091 * Delay next BGSAVE for diskless SYNC
+17707:M 03 May 2025 23:09:53.092 * Replica 127.0.0.1:27689 asks for synchronization
+17707:M 03 May 2025 23:09:53.092 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '6d0fd12b8b02dddd83e7fed622311cdde20c772b', my replication IDs are '7a0724a28b93f872adc1cb910898abe9a7911fa4' and '0000000000000000000000000000000000000000')
+17707:M 03 May 2025 23:09:53.092 * Delay next BGSAVE for diskless SYNC
+17707:M 03 May 2025 23:09:53.120 - DB 9: 20004 keys (0 volatile) in 28672 slots HT.
+17707:M 03 May 2025 23:09:53.121 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+17707:M 03 May 2025 23:09:53.126 * Background RDB transfer started by pid 18414 to pipe through parent process
+17707:M 03 May 2025 23:09:56.153 # Disconnecting timedout replica (full sync): 127.0.0.1:27688
+17707:M 03 May 2025 23:09:56.153 * Connection with replica 127.0.0.1:27688 lost.
+18414:C 03 May 2025 23:09:56.472 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+17707:M 03 May 2025 23:09:56.473 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+17707:M 03 May 2025 23:09:56.554 * Background RDB transfer terminated with success
+17707:M 03 May 2025 23:09:56.554 * Streamed RDB transfer with replica 127.0.0.1:27689 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+17707:M 03 May 2025 23:09:56.554 * Synchronization with replica 127.0.0.1:27689 succeeded
+17707:M 03 May 2025 23:09:56.654 - Accepted 127.0.0.1:50392
+17707:M 03 May 2025 23:09:56.654 * Replica 127.0.0.1:27688 asks for synchronization
+17707:M 03 May 2025 23:09:56.654 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '9508d57da452e378480fb34d673637e87d78f047', my replication IDs are '7a0724a28b93f872adc1cb910898abe9a7911fa4' and '0000000000000000000000000000000000000000')
+17707:M 03 May 2025 23:09:56.654 * Delay next BGSAVE for diskless SYNC
+17707:M 03 May 2025 23:09:57.708 - Client closed connection id=13 addr=127.0.0.1:50382 laddr=127.0.0.1:27679 fd=14 name= age=4 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=314 tot-net-out=72 tot-cmds=7
+17707:M 03 May 2025 23:09:57.708 * Connection with replica 127.0.0.1:27689 lost.
+17707:M 03 May 2025 23:09:57.766 - Client closed connection id=14 addr=127.0.0.1:50392 laddr=127.0.0.1:27679 fd=13 name= age=1 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=241 tot-net-out=22 tot-cmds=5
+17707:M 03 May 2025 23:09:57.766 * Connection with replica 127.0.0.1:27688 lost.
+17707:M 03 May 2025 23:09:57.793 - Client closed connection id=3 addr=127.0.0.1:50321 laddr=127.0.0.1:27679 fd=12 name= age=21 idle=1 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=43 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1782 tot-net-out=437123 tot-cmds=94
+17707:signal-handler (1746281399) Received SIGTERM scheduling shutdown...
+17707:M 03 May 2025 23:09:59.486 * User requested shutdown...
+17707:M 03 May 2025 23:09:59.486 * Removing the pid file.
+17707:M 03 May 2025 23:09:59.486 * Removing the unix socket file.
+17707:M 03 May 2025 23:09:59.486 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,50 @@
+### Starting server for test 
+86327:M 03 May 2025 23:04:05.883 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+86327:M 03 May 2025 23:04:05.883 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=86327, just started
+86327:M 03 May 2025 23:04:05.883 * Configuration loaded
+86327:M 03 May 2025 23:04:05.883 * Increased maximum number of open files to 10032 (it was originally set to 256).
+86327:M 03 May 2025 23:04:05.883 * monotonic clock: POSIX clock_gettime
+86327:M 03 May 2025 23:04:05.883 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26118
+ |###|   .+###############+.   |###|    PID: 86327                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+86327:M 03 May 2025 23:04:05.883 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+86327:M 03 May 2025 23:04:05.884 * Server initialized
+86327:M 03 May 2025 23:04:05.884 * Ready to accept connections tcp
+86327:M 03 May 2025 23:04:05.884 * Ready to accept connections unix
+86327:M 03 May 2025 23:04:06.021 - Accepted 127.0.0.1:59381
+86327:M 03 May 2025 23:04:06.022 - Client closed connection id=2 addr=127.0.0.1:59381 laddr=127.0.0.1:26118 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+86327:M 03 May 2025 23:04:06.043 - Accepted 127.0.0.1:59382
+### Starting test QUIT returns OK in tests/unit/quit.tcl
+86327:M 03 May 2025 23:04:06.044 - Accepted 127.0.0.1:59383
+86327:M 03 May 2025 23:04:06.044 - Client closed connection id=3 addr=127.0.0.1:59382 laddr=127.0.0.1:26118 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+### Starting test Pipelined commands after QUIT must not be executed in tests/unit/quit.tcl
+86327:M 03 May 2025 23:04:06.045 - Accepted 127.0.0.1:59384
+86327:M 03 May 2025 23:04:06.045 - Accepted 127.0.0.1:59385
+### Starting test Pipelined commands after QUIT that exceed read buffer size in tests/unit/quit.tcl
+86327:M 03 May 2025 23:04:06.045 - Accepted 127.0.0.1:59386
+86327:M 03 May 2025 23:04:06.045 - Client closed connection id=6 addr=127.0.0.1:59385 laddr=127.0.0.1:26118 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=45 tot-net-out=10 tot-cmds=2
+86327:M 03 May 2025 23:04:06.046 - Accepted 127.0.0.1:59387
+86327:M 03 May 2025 23:04:06.046 - Client closed connection id=8 addr=127.0.0.1:59387 laddr=127.0.0.1:26118 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=45 tot-net-out=10 tot-cmds=2
+86327:signal-handler (1746281047) Received SIGTERM scheduling shutdown...
+86327:M 03 May 2025 23:04:07.129 * User requested shutdown...
+86327:M 03 May 2025 23:04:07.129 * Removing the pid file.
+86327:M 03 May 2025 23:04:07.129 * Removing the unix socket file.
+86327:M 03 May 2025 23:04:07.129 # Valkey is now ready to exit, bye bye...

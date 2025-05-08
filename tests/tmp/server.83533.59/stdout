@@ -1,0 +1,123 @@
+### Starting server for test 
+95642:M 03 May 2025 23:05:17.420 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+95642:M 03 May 2025 23:05:17.426 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+95642:M 03 May 2025 23:05:17.432 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=95642, just started
+95642:M 03 May 2025 23:05:17.435 * Configuration loaded
+95642:M 03 May 2025 23:05:17.436 * Increased maximum number of open files to 10032 (it was originally set to 256).
+95642:M 03 May 2025 23:05:17.438 * monotonic clock: POSIX clock_gettime
+95642:M 03 May 2025 23:05:17.439 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25140
+ |###|   .+###############+.   |###|    PID: 95642                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+95642:M 03 May 2025 23:05:17.439 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+95642:M 03 May 2025 23:05:17.439 * No cluster configuration found, I'm ad1d2a3c8b74d120397de05be19a96d6d5f84868
+95642:M 03 May 2025 23:05:17.443 * Server initialized
+95642:M 03 May 2025 23:05:17.444 * Ready to accept connections tcp
+95642:M 03 May 2025 23:05:17.444 * Ready to accept connections unix
+95642:M 03 May 2025 23:05:17.625 - Accepted 127.0.0.1:64954
+95642:M 03 May 2025 23:05:17.628 - Client closed connection id=2 addr=127.0.0.1:64954 laddr=127.0.0.1:25140 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+95642:M 03 May 2025 23:05:17.654 - Accepted 127.0.0.1:64964
+95642:M 03 May 2025 23:05:18.526 - Accepted 127.0.0.1:65454
+### Starting test Functions are added to new node on valkey-cli cluster add-node in tests/unit/cluster/cli.tcl
+95642:M 03 May 2025 23:05:19.468 # Cluster is currently down: I am part of a minority partition.
+95642:M 03 May 2025 23:05:20.497 - Accepted 127.0.0.1:50346
+95642:M 03 May 2025 23:05:20.501 # Missing implement of connection type tls
+95642:M 03 May 2025 23:05:20.508 * Cluster meet 127.0.0.1:25143 (user request from 'id=5 addr=127.0.0.1:50346 laddr=127.0.0.1:25140 fd=16 name= user=default lib-name= lib-ver=').
+95642:M 03 May 2025 23:05:20.516 - Client closed connection id=5 addr=127.0.0.1:50346 laddr=127.0.0.1:25140 fd=16 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|meet user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=306 tot-net-out=12241 tot-cmds=7
+95642:M 03 May 2025 23:05:20.671 - Accepting cluster node connection from 127.0.0.1:50480
+95642:M 03 May 2025 23:05:20.689 * IP address for this node updated to 127.0.0.1
+95642:M 03 May 2025 23:05:20.697 * Successfully completed handshake with 3cae7bdbf686f650f7c7a572b4df14ea092d0eee ()
+95642:M 03 May 2025 23:05:20.706 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+95642:M 03 May 2025 23:05:21.135 - Accepting cluster node connection from 127.0.0.1:50791
+95642:M 03 May 2025 23:05:21.422 - Accepting cluster node connection from 127.0.0.1:50971
+95642:M 03 May 2025 23:05:21.696 * Cluster state changed: ok
+95642:M 03 May 2025 23:05:21.734 - Accepted 127.0.0.1:51242
+95642:M 03 May 2025 23:05:21.743 - Client closed connection id=6 addr=127.0.0.1:51242 laddr=127.0.0.1:25140 fd=22 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56 tot-net-out=866 tot-cmds=2
+### Starting test Check for memory leaks (pid 95808) in tests/unit/cluster/cli.tcl
+95642:M 03 May 2025 23:05:23.115 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:23.216 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:23.317 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+### Starting test Check for memory leaks (pid 95734) in tests/unit/cluster/cli.tcl
+95642:M 03 May 2025 23:05:23.419 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:23.520 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:23.621 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:23.722 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:23.823 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:23.924 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:24.025 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:24.127 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:24.228 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:24.329 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:24.430 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:24.530 * NODE 3cae7bdbf686f650f7c7a572b4df14ea092d0eee () possibly failing.
+95642:M 03 May 2025 23:05:24.547 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:24.648 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:24.654 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:24.749 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:24.752 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:24.850 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:24.864 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+### Starting test Check for memory leaks (pid 95689) in tests/unit/cluster/cli.tcl
+95642:M 03 May 2025 23:05:24.951 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:24.962 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:24.972 * Node 33c51e4d601ffb3e4040c5994116b787c8c6a3e7 () reported node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee () as not reachable.
+95642:M 03 May 2025 23:05:25.052 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:25.060 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:25.153 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:25.155 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:25.254 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:25.257 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:25.357 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:25.357 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:25.458 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:25.467 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:25.559 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:25.561 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:25.661 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:25.663 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:25.762 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:25.765 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:25.863 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:25.867 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:25.895 * Node 33c51e4d601ffb3e4040c5994116b787c8c6a3e7 () reported node 709dff6a0036ae1357048ed3c48a892824fb9f8c () as not reachable.
+95642:M 03 May 2025 23:05:25.965 * NODE 709dff6a0036ae1357048ed3c48a892824fb9f8c () possibly failing.
+95642:M 03 May 2025 23:05:25.967 # Cluster state changed: fail
+95642:M 03 May 2025 23:05:25.975 # Cluster is currently down: I am part of a minority partition.
+95642:M 03 May 2025 23:05:25.978 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:25.978 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:26.078 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:26.079 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:26.079 - Connection with Node 33c51e4d601ffb3e4040c5994116b787c8c6a3e7 at 127.0.0.1:35141 failed: Connection refused
+95642:M 03 May 2025 23:05:26.079 - Client closed connection id=3 addr=127.0.0.1:64964 laddr=127.0.0.1:25140 fd=14 name= age=9 idle=5 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=189 tot-net-out=3578 tot-cmds=7
+95642:M 03 May 2025 23:05:26.179 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:26.188 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:26.194 - Connection with Node 33c51e4d601ffb3e4040c5994116b787c8c6a3e7 at 127.0.0.1:35141 failed: Connection refused
+95642:M 03 May 2025 23:05:26.280 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:27.073 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:27.074 - Connection with Node 33c51e4d601ffb3e4040c5994116b787c8c6a3e7 at 127.0.0.1:35141 failed: Connection refused
+95642:M 03 May 2025 23:05:27.077 - Connection with Node 709dff6a0036ae1357048ed3c48a892824fb9f8c at 127.0.0.1:35142 failed: Connection refused
+95642:M 03 May 2025 23:05:27.080 - Connection with Node 3cae7bdbf686f650f7c7a572b4df14ea092d0eee at 127.0.0.1:35143 failed: Connection refused
+95642:M 03 May 2025 23:05:27.084 - Connection with Node 33c51e4d601ffb3e4040c5994116b787c8c6a3e7 at 127.0.0.1:35141 failed: Connection refused
+95642:signal-handler (1746281127) Received SIGTERM scheduling shutdown...
+95642:M 03 May 2025 23:05:27.178 * User requested shutdown...
+95642:M 03 May 2025 23:05:27.182 * Removing the pid file.
+95642:M 03 May 2025 23:05:27.185 * Saving the cluster configuration file before exiting.
+95642:M 03 May 2025 23:05:27.194 * Removing the unix socket file.
+95642:M 03 May 2025 23:05:27.194 # Valkey is now ready to exit, bye bye...

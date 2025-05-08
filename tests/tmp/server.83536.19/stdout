@@ -1,0 +1,61 @@
+### Starting server for test 
+89189:M 03 May 2025 23:04:25.260 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+89189:M 03 May 2025 23:04:25.261 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=89189, just started
+89189:M 03 May 2025 23:04:25.261 * Configuration loaded
+89189:M 03 May 2025 23:04:25.261 * Increased maximum number of open files to 10032 (it was originally set to 256).
+89189:M 03 May 2025 23:04:25.261 * monotonic clock: POSIX clock_gettime
+89189:M 03 May 2025 23:04:25.261 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26620
+ |###|   .+###############+.   |###|    PID: 89189                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+89189:M 03 May 2025 23:04:25.261 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+89189:M 03 May 2025 23:04:25.261 * Server initialized
+89189:M 03 May 2025 23:04:25.261 * Ready to accept connections tcp
+89189:M 03 May 2025 23:04:25.261 * Ready to accept connections unix
+89189:M 03 May 2025 23:04:25.386 - Accepted 127.0.0.1:60176
+89189:M 03 May 2025 23:04:25.387 - Client closed connection id=2 addr=127.0.0.1:60176 laddr=127.0.0.1:26620 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+89189:M 03 May 2025 23:04:25.394 - Accepted 127.0.0.1:60177
+### Starting test Replication tests of XCLAIM with deleted entries (autoclaim=0) in tests/unit/type/stream-cgroups.tcl
+89189:S 03 May 2025 23:04:25.395 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+89189:S 03 May 2025 23:04:25.395 * Connecting to PRIMARY 127.0.0.1:26617
+89189:S 03 May 2025 23:04:25.395 * PRIMARY <-> REPLICA sync started
+89189:S 03 May 2025 23:04:25.395 * REPLICAOF 127.0.0.1:26617 enabled (user request from 'id=3 addr=127.0.0.1:60177 laddr=127.0.0.1:26620 fd=12 name= user=default lib-name= lib-ver=')
+89189:S 03 May 2025 23:04:25.395 * Non blocking connect for SYNC fired the event.
+89189:S 03 May 2025 23:04:25.395 * Primary replied to PING, replication can continue...
+89189:S 03 May 2025 23:04:25.395 * Trying a partial resynchronization (request 998eea56387662fd38dc552aba065ad37334520a:1).
+89189:S 03 May 2025 23:04:25.396 * Full resync from primary: b15c2256d35344e199e75d4e4df3e91c4e140bb7:1645
+89189:S 03 May 2025 23:04:25.396 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+89189:S 03 May 2025 23:04:25.399 * Discarding previously cached primary state.
+89189:S 03 May 2025 23:04:25.399 * PRIMARY <-> REPLICA sync: Flushing old data
+89189:S 03 May 2025 23:04:25.399 * PRIMARY <-> REPLICA sync: Loading DB in memory
+89189:S 03 May 2025 23:04:25.399 * Loading RDB produced by Valkey version 255.255.255
+89189:S 03 May 2025 23:04:25.399 * RDB age 0 seconds
+89189:S 03 May 2025 23:04:25.399 * RDB memory usage when created 1.72 Mb
+89189:S 03 May 2025 23:04:25.399 * Done loading RDB, keys loaded: 5, keys expired: 0.
+89189:S 03 May 2025 23:04:25.400 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test Replication tests of XCLAIM with deleted entries (autoclaim=1) in tests/unit/type/stream-cgroups.tcl
+89189:S 03 May 2025 23:04:25.506 * REPLICAOF would result into synchronization with the primary we are already connected with. No operation performed.
+### Starting test XREADGROUP ACK would propagate entries-read in tests/unit/type/stream-cgroups.tcl
+89189:S 03 May 2025 23:04:25.511 - Client closed connection id=3 addr=127.0.0.1:60177 laddr=127.0.0.1:26620 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=6299 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xinfo|stream user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=544 tot-net-out=51684 tot-cmds=16
+89189:signal-handler (1746281066) Received SIGTERM scheduling shutdown...
+89189:S 03 May 2025 23:04:26.658 * User requested shutdown...
+89189:S 03 May 2025 23:04:26.658 * Removing the pid file.
+89189:S 03 May 2025 23:04:26.663 * Removing the unix socket file.
+89189:S 03 May 2025 23:04:26.678 # Valkey is now ready to exit, bye bye...

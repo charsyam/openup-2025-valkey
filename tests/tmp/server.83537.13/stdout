@@ -1,0 +1,59 @@
+### Starting server for test 
+85552:M 03 May 2025 23:04:00.533 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+85552:M 03 May 2025 23:04:00.533 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=85552, just started
+85552:M 03 May 2025 23:04:00.533 * Configuration loaded
+85552:M 03 May 2025 23:04:00.533 * Increased maximum number of open files to 10032 (it was originally set to 256).
+85552:M 03 May 2025 23:04:00.533 * monotonic clock: POSIX clock_gettime
+85552:M 03 May 2025 23:04:00.534 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27117
+ |###|   .+###############+.   |###|    PID: 85552                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+85552:M 03 May 2025 23:04:00.534 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+85552:M 03 May 2025 23:04:00.534 * Server initialized
+85552:M 03 May 2025 23:04:00.534 * Ready to accept connections tcp
+85552:M 03 May 2025 23:04:00.534 * Ready to accept connections unix
+85552:M 03 May 2025 23:04:00.700 - Accepted 127.0.0.1:59242
+85552:M 03 May 2025 23:04:00.700 - Client closed connection id=2 addr=127.0.0.1:59242 laddr=127.0.0.1:27117 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+85552:M 03 May 2025 23:04:00.713 - Accepted 127.0.0.1:59243
+### Starting test evict clients in right order (large to small) in tests/unit/client-eviction.tcl
+85552:M 03 May 2025 23:04:00.715 - Accepted 127.0.0.1:59244
+85552:M 03 May 2025 23:04:00.716 - Accepted 127.0.0.1:59245
+85552:M 03 May 2025 23:04:00.717 - Accepted 127.0.0.1:59246
+85552:M 03 May 2025 23:04:00.718 - Accepted 127.0.0.1:59247
+85552:M 03 May 2025 23:04:00.722 - Accepted 127.0.0.1:59248
+85552:M 03 May 2025 23:04:00.726 - Accepted 127.0.0.1:59249
+85552:M 03 May 2025 23:04:00.730 - Accepted 127.0.0.1:59250
+85552:M 03 May 2025 23:04:00.743 - Accepted 127.0.0.1:59252
+85552:M 03 May 2025 23:04:00.756 - Accepted 127.0.0.1:59255
+85552:M 03 May 2025 23:04:00.772 * Evicting client: id=10 addr=127.0.0.1:59250 laddr=127.0.0.1:27117 fd=19 name=client-2 age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=3145728 qbuf-free=32758 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=3195392 events=r cmd=client|setname user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=3145808 tot-net-out=10 tot-cmds=2
+85552:M 03 May 2025 23:04:00.772 * Evicting client: id=11 addr=127.0.0.1:59252 laddr=127.0.0.1:27117 fd=20 name=client-2 age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=3145728 qbuf-free=32758 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=3195392 events=r cmd=client|setname user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=3145808 tot-net-out=10 tot-cmds=2
+85552:M 03 May 2025 23:04:00.772 * Evicting client: id=12 addr=127.0.0.1:59255 laddr=127.0.0.1:27117 fd=21 name=client-2 age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=3145728 qbuf-free=32758 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=3195392 events=r cmd=client|setname user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=3145808 tot-net-out=10 tot-cmds=2
+85552:M 03 May 2025 23:04:00.774 * Evicting client: id=8 addr=127.0.0.1:59248 laddr=127.0.0.1:27117 fd=17 name=client-1 age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=1048576 qbuf-free=32758 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=1098240 events=r cmd=client|setname user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1048656 tot-net-out=10 tot-cmds=2
+85552:M 03 May 2025 23:04:00.774 * Evicting client: id=9 addr=127.0.0.1:59249 laddr=127.0.0.1:27117 fd=18 name=client-1 age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=1048576 qbuf-free=32758 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=1098240 events=r cmd=client|setname user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1048656 tot-net-out=10 tot-cmds=2
+85552:M 03 May 2025 23:04:00.774 * Evicting client: id=7 addr=127.0.0.1:59247 laddr=127.0.0.1:27117 fd=16 name=client-1 age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=1048576 qbuf-free=32758 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=1098240 events=r cmd=client|setname user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1048656 tot-net-out=10 tot-cmds=2
+85552:M 03 May 2025 23:04:00.775 * Evicting client: id=4 addr=127.0.0.1:59244 laddr=127.0.0.1:27117 fd=13 name=client-0 age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=131072 qbuf-free=32758 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=180736 events=r cmd=client|setname user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=131151 tot-net-out=10 tot-cmds=2
+85552:M 03 May 2025 23:04:00.775 * Evicting client: id=5 addr=127.0.0.1:59245 laddr=127.0.0.1:27117 fd=14 name=client-0 age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=131072 qbuf-free=32758 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=180736 events=r cmd=client|setname user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=131151 tot-net-out=10 tot-cmds=2
+85552:M 03 May 2025 23:04:00.775 * Evicting client: id=6 addr=127.0.0.1:59246 laddr=127.0.0.1:27117 fd=15 name=client-0 age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=131072 qbuf-free=32758 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=180736 events=r cmd=client|setname user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=131151 tot-net-out=10 tot-cmds=2
+85552:M 03 May 2025 23:04:00.775 - Client closed connection id=3 addr=127.0.0.1:59243 laddr=127.0.0.1:27117 fd=12 name=control age=0 idle=0 flags=e capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=710 tot-net-out=23259 tot-cmds=19
+85552:signal-handler (1746281042) Received SIGTERM scheduling shutdown...
+85552:M 03 May 2025 23:04:02.372 * User requested shutdown...
+85552:M 03 May 2025 23:04:02.372 * Removing the pid file.
+85552:M 03 May 2025 23:04:02.372 * Removing the unix socket file.
+85552:M 03 May 2025 23:04:02.372 # Valkey is now ready to exit, bye bye...

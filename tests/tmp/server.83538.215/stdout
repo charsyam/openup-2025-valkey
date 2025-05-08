@@ -1,0 +1,63 @@
+### Starting server for test replica actually flushes db if use diskless load with flush-before-load dual-channel-replication-enabled=yes in tests/integration/replication.tcl
+19794:M 03 May 2025 23:10:21.508 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+19794:M 03 May 2025 23:10:21.508 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=19794, just started
+19794:M 03 May 2025 23:10:21.508 * Configuration loaded
+19794:M 03 May 2025 23:10:21.509 * Increased maximum number of open files to 10032 (it was originally set to 256).
+19794:M 03 May 2025 23:10:21.509 * monotonic clock: POSIX clock_gettime
+19794:M 03 May 2025 23:10:21.509 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27718
+ |###|   .+###############+.   |###|    PID: 19794                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+19794:M 03 May 2025 23:10:21.509 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+19794:M 03 May 2025 23:10:21.509 * Server initialized
+19794:M 03 May 2025 23:10:21.509 * Ready to accept connections tcp
+19794:M 03 May 2025 23:10:21.509 * Ready to accept connections unix
+19794:M 03 May 2025 23:10:21.631 - Accepted 127.0.0.1:50513
+19794:M 03 May 2025 23:10:21.631 - Client closed connection id=2 addr=127.0.0.1:50513 laddr=127.0.0.1:27718 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+19794:M 03 May 2025 23:10:21.637 - Accepted 127.0.0.1:50514
+19794:M 03 May 2025 23:10:21.641 - Accepted 127.0.0.1:50515
+19794:M 03 May 2025 23:10:21.641 * Replica 127.0.0.1:27717 asks for synchronization
+19794:M 03 May 2025 23:10:21.641 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '9d8f5e47843cd77bd576cf16968f07863fc08ffc', my replication IDs are 'eefe525b52471697ae8f2087b3a4fc74ca2c6934' and '0000000000000000000000000000000000000000')
+19794:M 03 May 2025 23:10:21.641 * Dual channel replication: Replica 127.0.0.1:27717 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+19794:M 03 May 2025 23:10:21.641 - Accepted 127.0.0.1:50516
+19794:M 03 May 2025 23:10:21.641 * Replica 127.0.0.1:27717 asks for synchronization
+19794:M 03 May 2025 23:10:21.641 * Replication backlog created, my new replication IDs are '82e6acd59d13c8bd92c4ad599dc7a85ea84ff035' and '0000000000000000000000000000000000000000'
+19794:M 03 May 2025 23:10:21.641 * Starting BGSAVE for SYNC with target: replicas sockets using: dual-channel
+19794:M 03 May 2025 23:10:21.641 * Dual channel replication: Sending to replica 127.0.0.1:27717 RDB end offset 0 and client-id 5
+19794:M 03 May 2025 23:10:21.642 * Background RDB transfer started by pid 19815 to direct socket to replica
+19794:M 03 May 2025 23:10:21.642 * Replica 127.0.0.1:27717 asks for synchronization
+19794:M 03 May 2025 23:10:21.642 * Partial resynchronization request from 127.0.0.1:27717 accepted. Sending 0 bytes of backlog starting from offset 1.
+19794:M 03 May 2025 23:10:21.862 * Connection with replica 127.0.0.1:27717 lost.
+19794:M 03 May 2025 23:10:21.862 * Dual channel replication: Replica 127.0.0.1:27717 rdb channel disconnected.
+19794:M 03 May 2025 23:10:21.863 - Accepted 127.0.0.1:50517
+19794:M 03 May 2025 23:10:21.863 * Replica 127.0.0.1:27717 asks for synchronization
+19794:M 03 May 2025 23:10:21.863 * Full resync requested by replica 127.0.0.1:27717
+19794:M 03 May 2025 23:10:21.863 * Dual channel replication: Replica 127.0.0.1:27717 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+19794:M 03 May 2025 23:10:21.863 - Client closed connection id=3 addr=127.0.0.1:50514 laddr=127.0.0.1:27718 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=5 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=605 tot-net-out=54 tot-cmds=11
+19794:M 03 May 2025 23:10:21.863 - Accepted 127.0.0.1:50518
+19794:M 03 May 2025 23:10:21.863 * Replica 127.0.0.1:27717 asks for synchronization
+19794:M 03 May 2025 23:10:21.863 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+19794:signal-handler (1746281421) Received SIGTERM scheduling shutdown...
+19794:M 03 May 2025 23:10:21.914 * User requested shutdown...
+19794:M 03 May 2025 23:10:21.914 * 1 of 1 replicas are in sync when shutting down.
+19794:M 03 May 2025 23:10:21.914 # There is a child saving an .rdb. Killing it!
+19794:M 03 May 2025 23:10:21.914 * Removing the pid file.
+19794:M 03 May 2025 23:10:21.914 * Removing the unix socket file.
+19794:M 03 May 2025 23:10:21.914 # Valkey is now ready to exit, bye bye...

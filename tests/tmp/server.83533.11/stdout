@@ -1,0 +1,42 @@
+### Starting server for test 
+85481:M 03 May 2025 23:04:00.133 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+85481:M 03 May 2025 23:04:00.133 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=85481, just started
+85481:M 03 May 2025 23:04:00.133 * Configuration loaded
+85481:M 03 May 2025 23:04:00.133 * Increased maximum number of open files to 10032 (it was originally set to 256).
+85481:M 03 May 2025 23:04:00.133 * monotonic clock: POSIX clock_gettime
+85481:M 03 May 2025 23:04:00.133 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25116
+ |###|   .+###############+.   |###|    PID: 85481                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+85481:M 03 May 2025 23:04:00.133 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+85481:M 03 May 2025 23:04:00.134 * Server initialized
+85481:M 03 May 2025 23:04:00.134 * Ready to accept connections tcp
+85481:M 03 May 2025 23:04:00.134 * Ready to accept connections unix
+85481:M 03 May 2025 23:04:00.269 - Accepted 127.0.0.1:59235
+85481:M 03 May 2025 23:04:00.269 - Client closed connection id=2 addr=127.0.0.1:59235 laddr=127.0.0.1:25116 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+85481:M 03 May 2025 23:04:00.293 - Accepted 127.0.0.1:59236
+### Starting test AUTH fails if there is no password configured server side in tests/unit/auth.tcl
+### Starting test Arity check for auth command in tests/unit/auth.tcl
+85481:M 03 May 2025 23:04:00.297 - Client closed connection id=3 addr=127.0.0.1:59236 laddr=127.0.0.1:25116 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=auth user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=81 tot-net-out=151 tot-cmds=3
+85481:signal-handler (1746281041) Received SIGTERM scheduling shutdown...
+85481:M 03 May 2025 23:04:01.501 * User requested shutdown...
+85481:M 03 May 2025 23:04:01.501 * Removing the pid file.
+85481:M 03 May 2025 23:04:01.501 * Removing the unix socket file.
+85481:M 03 May 2025 23:04:01.501 # Valkey is now ready to exit, bye bye...

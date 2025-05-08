@@ -1,0 +1,56 @@
+### Starting server for test 
+83616:M 03 May 2025 23:03:40.912 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+83616:M 03 May 2025 23:03:40.912 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=83616, just started
+83616:M 03 May 2025 23:03:40.912 * Configuration loaded
+83616:M 03 May 2025 23:03:40.913 * Increased maximum number of open files to 10032 (it was originally set to 256).
+83616:M 03 May 2025 23:03:40.913 * monotonic clock: POSIX clock_gettime
+83616:M 03 May 2025 23:03:40.914 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27611
+ |###|   .+###############+.   |###|    PID: 83616                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+83616:M 03 May 2025 23:03:40.914 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+83616:M 03 May 2025 23:03:40.915 * Server initialized
+83616:M 03 May 2025 23:03:40.916 * Ready to accept connections tcp
+83616:M 03 May 2025 23:03:40.916 * Ready to accept connections unix
+83616:M 03 May 2025 23:03:40.974 - Accepted 127.0.0.1:58738
+83616:M 03 May 2025 23:03:40.976 - Client closed connection id=2 addr=127.0.0.1:58738 laddr=127.0.0.1:27611 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+83616:M 03 May 2025 23:03:40.986 - Accepted 127.0.0.1:58750
+### Starting test LATENCY HISTOGRAM with empty histogram in tests/unit/latency-monitor.tcl
+### Starting test LATENCY HISTOGRAM all commands in tests/unit/latency-monitor.tcl
+### Starting test LATENCY HISTOGRAM sub commands in tests/unit/latency-monitor.tcl
+### Starting test LATENCY HISTOGRAM with a subset of commands in tests/unit/latency-monitor.tcl
+### Starting test LATENCY HISTOGRAM command in tests/unit/latency-monitor.tcl
+### Starting test LATENCY HISTOGRAM with wrong command name skips the invalid one in tests/unit/latency-monitor.tcl
+### Starting test Test latency events logging in tests/unit/latency-monitor.tcl
+### Starting test LATENCY HISTORY output is ok in tests/unit/latency-monitor.tcl
+### Starting test LATENCY LATEST output is ok in tests/unit/latency-monitor.tcl
+### Starting test LATENCY GRAPH can output the event graph in tests/unit/latency-monitor.tcl
+### Starting test LATENCY of expire events are correctly collected in tests/unit/latency-monitor.tcl
+### Starting test LATENCY GRAPH can output the expire event graph in tests/unit/latency-monitor.tcl
+### Starting test LATENCY HISTORY / RESET with wrong event name is fine in tests/unit/latency-monitor.tcl
+### Starting test LATENCY DOCTOR produces some output in tests/unit/latency-monitor.tcl
+### Starting test LATENCY RESET is able to reset events in tests/unit/latency-monitor.tcl
+### Starting test LATENCY HELP should not have unexpected options in tests/unit/latency-monitor.tcl
+83616:M 03 May 2025 23:03:46.455 - Client closed connection id=3 addr=127.0.0.1:58750 laddr=127.0.0.1:27611 fd=12 name= age=6 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=1024 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=latency|help user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=2666 tot-net-out=4379 tot-cmds=1000062
+83616:signal-handler (1746281028) Received SIGTERM scheduling shutdown...
+83616:M 03 May 2025 23:03:48.300 * User requested shutdown...
+83616:M 03 May 2025 23:03:48.300 * Removing the pid file.
+83616:M 03 May 2025 23:03:48.300 * Removing the unix socket file.
+83616:M 03 May 2025 23:03:48.300 # Valkey is now ready to exit, bye bye...

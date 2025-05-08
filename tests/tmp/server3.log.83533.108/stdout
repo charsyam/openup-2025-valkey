@@ -1,0 +1,64 @@
+### Starting server for test 
+2650:M 03 May 2025 23:06:22.970 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+2650:M 03 May 2025 23:06:22.970 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=2650, just started
+2650:M 03 May 2025 23:06:22.970 * Configuration loaded
+2650:M 03 May 2025 23:06:22.970 * Increased maximum number of open files to 10032 (it was originally set to 256).
+2650:M 03 May 2025 23:06:22.970 * monotonic clock: POSIX clock_gettime
+2650:M 03 May 2025 23:06:22.971 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25169
+ |###|   .+###############+.   |###|    PID: 2650                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+2650:M 03 May 2025 23:06:22.971 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+2650:M 03 May 2025 23:06:22.971 * Server initialized
+2650:M 03 May 2025 23:06:22.971 * Ready to accept connections tcp
+2650:M 03 May 2025 23:06:22.971 * Ready to accept connections unix
+2650:M 03 May 2025 23:06:23.097 - Accepted 127.0.0.1:51505
+2650:M 03 May 2025 23:06:23.101 - Client closed connection id=2 addr=127.0.0.1:51505 laddr=127.0.0.1:25169 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+2650:M 03 May 2025 23:06:23.115 - Accepted 127.0.0.1:51510
+### Starting test Stacktraces generated on SIGALRM in tests/integration/logging.tcl
+2650:signal-handler (1746281183) 
+Received SIGALRM
+
+------ STACK TRACE ------
+EIP:
+0   libsystem_kernel.dylib              0x000000018b58f1c8 __semwait_signal + 8
+
+Backtrace:
+0   libsystem_platform.dylib            0x000000018b607624 _sigtramp + 56
+1   libsystem_c.dylib                   0x000000018b46b6f4 nanosleep + 220
+2   valkey-server                       0x00000001041c7ab0 debugCommand + 5192
+3   valkey-server                       0x0000000104137640 call + 440
+4   valkey-server                       0x0000000104139428 processCommand + 3204
+5   valkey-server                       0x00000001041538a4 processInputBuffer + 524
+6   valkey-server                       0x0000000104152c84 readQueryFromClient + 92
+7   valkey-server                       0x000000010425def8 connSocketEventHandler + 180
+8   valkey-server                       0x000000010411ec58 aeProcessEvents + 356
+9   valkey-server                       0x0000000104147f4c main + 27000
+10  dyld                                0x000000018b22eb4c start + 6000
+
+------ STACK TRACE DONE ------
+2650:signal-handler (1746281183) --------
+
+2650:M 03 May 2025 23:06:23.287 - Client closed connection id=3 addr=127.0.0.1:51510 laddr=127.0.0.1:25169 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=7 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=85 tot-net-out=5922 tot-cmds=4
+2650:signal-handler (1746281184) Received SIGTERM scheduling shutdown...
+2650:M 03 May 2025 23:06:24.491 * User requested shutdown...
+2650:M 03 May 2025 23:06:24.492 * Removing the pid file.
+2650:M 03 May 2025 23:06:24.492 * Removing the unix socket file.
+2650:M 03 May 2025 23:06:24.492 # Valkey is now ready to exit, bye bye...

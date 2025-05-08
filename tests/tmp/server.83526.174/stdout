@@ -1,0 +1,41 @@
+### Starting server for test corrupt payload: fuzzer findings - huge string in tests/integration/corrupt-dump.tcl
+5713:M 03 May 2025 23:06:41.579 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+5713:M 03 May 2025 23:06:41.579 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=5713, just started
+5713:M 03 May 2025 23:06:41.579 * Configuration loaded
+5713:M 03 May 2025 23:06:41.579 * Increased maximum number of open files to 10032 (it was originally set to 256).
+5713:M 03 May 2025 23:06:41.579 * monotonic clock: POSIX clock_gettime
+5713:M 03 May 2025 23:06:41.580 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21697
+ |###|   .+###############+.   |###|    PID: 5713                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+5713:M 03 May 2025 23:06:41.580 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+5713:M 03 May 2025 23:06:41.580 * Server initialized
+5713:M 03 May 2025 23:06:41.580 * Ready to accept connections tcp
+5713:M 03 May 2025 23:06:41.580 * Ready to accept connections unix
+5713:M 03 May 2025 23:06:41.743 - Accepted 127.0.0.1:65235
+5713:M 03 May 2025 23:06:41.743 - Client closed connection id=2 addr=127.0.0.1:65235 laddr=127.0.0.1:21697 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+5713:M 03 May 2025 23:06:41.772 - Accepted 127.0.0.1:65252
+5713:M 03 May 2025 23:06:41.778 - rdbGenericLoadStringObject failed allocating 74591926123657861 bytes
+5713:M 03 May 2025 23:06:41.782 - Client closed connection id=3 addr=127.0.0.1:65252 laddr=127.0.0.1:21697 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=209 tot-net-out=44 tot-cmds=5
+5713:signal-handler (1746281201) Received SIGTERM scheduling shutdown...
+5713:M 03 May 2025 23:06:41.883 * User requested shutdown...
+5713:M 03 May 2025 23:06:41.883 * Removing the pid file.
+5713:M 03 May 2025 23:06:41.883 * Removing the unix socket file.
+5713:M 03 May 2025 23:06:41.883 # Valkey is now ready to exit, bye bye...

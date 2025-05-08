@@ -1,0 +1,183 @@
+### Starting server for test 
+84725:M 03 May 2025 23:03:53.961 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+84725:M 03 May 2025 23:03:53.961 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=84725, just started
+84725:M 03 May 2025 23:03:53.961 * Configuration loaded
+84725:M 03 May 2025 23:03:53.962 * Increased maximum number of open files to 10032 (it was originally set to 256).
+84725:M 03 May 2025 23:03:53.962 * monotonic clock: POSIX clock_gettime
+84725:M 03 May 2025 23:03:53.962 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23614
+ |###|   .+###############+.   |###|    PID: 84725                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+84725:M 03 May 2025 23:03:53.962 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+84725:M 03 May 2025 23:03:53.962 * Server initialized
+84725:M 03 May 2025 23:03:53.962 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+84725:M 03 May 2025 23:03:53.967 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+84725:M 03 May 2025 23:03:53.967 * Ready to accept connections tcp
+84725:M 03 May 2025 23:03:53.967 * Ready to accept connections unix
+84725:M 03 May 2025 23:03:54.083 - Accepted 127.0.0.1:59079
+84725:M 03 May 2025 23:03:54.083 - Client closed connection id=2 addr=127.0.0.1:59079 laddr=127.0.0.1:23614 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+84725:M 03 May 2025 23:03:54.099 - Accepted 127.0.0.1:59082
+### Starting test WAITAOF local copy before fsync in tests/unit/wait.tcl
+### Starting test WAITAOF local copy everysec in tests/unit/wait.tcl
+### Starting test WAITAOF local copy with appendfsync always in tests/unit/wait.tcl
+### Starting test WAITAOF local wait and then stop aof in tests/unit/wait.tcl
+84725:M 03 May 2025 23:03:54.277 - Accepted 127.0.0.1:59087
+84725:M 03 May 2025 23:03:54.279 - Client closed connection id=4 addr=127.0.0.1:59087 laddr=127.0.0.1:23614 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=waitaof user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=84 tot-net-out=87 tot-cmds=3
+### Starting test WAITAOF local on server with aof disabled in tests/unit/wait.tcl
+### Starting test WAITAOF local if AOFRW was postponed in tests/unit/wait.tcl
+84725:M 03 May 2025 23:03:54.280 * Background saving started by pid 84772
+84725:M 03 May 2025 23:03:54.281 * AOF was enabled but there is already another background operation. An AOF background was scheduled to start when possible.
+84725:M 03 May 2025 23:03:54.371 # Background saving terminated by signal 9
+84725:M 03 May 2025 23:03:54.472 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+84725:M 03 May 2025 23:03:54.473 * Background append only file rewriting started by pid 84775
+84775:C 03 May 2025 23:03:54.477 * Successfully created the temporary AOF base file temp-rewriteaof-bg-84775.aof
+84775:C 03 May 2025 23:03:54.477 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+84725:M 03 May 2025 23:03:54.573 * Background AOF rewrite terminated with success
+84725:M 03 May 2025 23:03:54.573 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-84775.aof into appendonly.aof.2.base.rdb
+84725:M 03 May 2025 23:03:54.573 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.2.incr.aof
+84725:M 03 May 2025 23:03:54.578 * Removing the history file appendonly.aof.1.incr.aof in the background
+84725:M 03 May 2025 23:03:54.578 * Removing the history file appendonly.aof.1.base.rdb in the background
+84725:M 03 May 2025 23:03:54.583 * Background AOF rewrite finished successfully
+84725:M 03 May 2025 23:03:54.583 - Background AOF rewrite signal handler took 9421us
+### Starting test WAITAOF on demoted master gets unblocked with an error in tests/unit/wait.tcl
+84725:M 03 May 2025 23:03:54.646 - Accepted 127.0.0.1:59091
+84725:M 03 May 2025 23:03:54.646 * Replica 127.0.0.1:23615 asks for synchronization
+84725:M 03 May 2025 23:03:54.646 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'b4865eddfeed3e2c90049b9fef6064aa77f01faa', my replication IDs are '8f1dade227455906411394dcae5f96fdbe344ce7' and '0000000000000000000000000000000000000000')
+84725:M 03 May 2025 23:03:54.646 * Replication backlog created, my new replication IDs are '478ec610bb5cc0c4a0ab0326a12938d84952b66b' and '0000000000000000000000000000000000000000'
+84725:M 03 May 2025 23:03:54.646 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+84725:M 03 May 2025 23:03:54.646 * Background RDB transfer started by pid 84784 to pipe through parent process
+84784:C 03 May 2025 23:03:54.647 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+84725:M 03 May 2025 23:03:54.647 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+84725:M 03 May 2025 23:03:54.652 * Background RDB transfer terminated with success
+84725:M 03 May 2025 23:03:54.652 * Streamed RDB transfer with replica 127.0.0.1:23615 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+84725:M 03 May 2025 23:03:54.652 * Synchronization with replica 127.0.0.1:23615 succeeded
+### Starting test WAITAOF replica copy before fsync in tests/unit/wait.tcl
+### Starting test WAITAOF replica copy everysec in tests/unit/wait.tcl
+### Starting test WAITAOF replica copy everysec with AOFRW in tests/unit/wait.tcl
+### Starting test WAITAOF replica copy everysec with slow AOFRW in tests/unit/wait.tcl
+### Starting test WAITAOF replica copy everysec->always with AOFRW in tests/unit/wait.tcl
+### Starting test WAITAOF replica copy appendfsync always in tests/unit/wait.tcl
+### Starting test WAITAOF replica copy if replica is blocked in tests/unit/wait.tcl
+84725:M 03 May 2025 23:03:59.031 - DB 9: 2 keys (0 volatile) in 7 slots HT.
+### Starting test WAITAOF replica multiple clients unblock - reuse last result in tests/unit/wait.tcl
+84725:M 03 May 2025 23:03:59.745 - Accepted 127.0.0.1:59227
+84725:M 03 May 2025 23:03:59.746 - Accepted 127.0.0.1:59228
+### Starting test WAITAOF on promoted replica in tests/unit/wait.tcl
+84725:M 03 May 2025 23:04:00.757 - Client closed connection id=6 addr=127.0.0.1:59227 laddr=127.0.0.1:23614 fd=15 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=12 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=98 tot-net-out=29 tot-cmds=4
+84725:M 03 May 2025 23:04:00.757 - Client closed connection id=7 addr=127.0.0.1:59228 laddr=127.0.0.1:23614 fd=16 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=12 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=98 tot-net-out=29 tot-cmds=4
+84725:M 03 May 2025 23:04:00.757 - Client closed connection id=5 addr=127.0.0.1:59091 laddr=127.0.0.1:23614 fd=14 name= age=6 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1096 tot-net-out=585 tot-cmds=21
+84725:M 03 May 2025 23:04:00.757 * Connection with replica 127.0.0.1:23615 lost.
+### Starting test WAITAOF master that loses a replica and backlog is dropped in tests/unit/wait.tcl
+84725:M 03 May 2025 23:04:02.066 * Replication backlog freed after 1 seconds without connected replicas.
+### Starting test WAITAOF master without backlog, wait is released when the replica finishes full-sync in tests/unit/wait.tcl
+84725:M 03 May 2025 23:04:02.767 - Accepted 127.0.0.1:59287
+84725:M 03 May 2025 23:04:02.771 - Accepted 127.0.0.1:59288
+84725:M 03 May 2025 23:04:02.771 * Replica 127.0.0.1:23615 asks for synchronization
+84725:M 03 May 2025 23:04:02.771 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '3c43d437c7746df83002c208412a60155eedec8f', my replication IDs are 'a994d78ae3ca312eced6577057b381779313caf5' and '0000000000000000000000000000000000000000')
+84725:M 03 May 2025 23:04:02.771 * Replication backlog created, my new replication IDs are '08092edebf1d03a95bb7efb2ecec488ce5d29f5b' and '0000000000000000000000000000000000000000'
+84725:M 03 May 2025 23:04:02.771 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+84725:M 03 May 2025 23:04:02.772 * Background RDB transfer started by pid 85859 to pipe through parent process
+85859:C 03 May 2025 23:04:02.772 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+84725:M 03 May 2025 23:04:02.772 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+84725:M 03 May 2025 23:04:02.773 * Background RDB transfer terminated with success
+84725:M 03 May 2025 23:04:02.775 * Streamed RDB transfer with replica 127.0.0.1:23615 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+84725:M 03 May 2025 23:04:02.775 * Synchronization with replica 127.0.0.1:23615 succeeded
+84725:M 03 May 2025 23:04:03.802 - Client closed connection id=8 addr=127.0.0.1:59287 laddr=127.0.0.1:23614 fd=14 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=12 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=waitaof user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=84 tot-net-out=22 tot-cmds=3
+### Starting test WAITAOF master isn't configured to do AOF in tests/unit/wait.tcl
+84725:M 03 May 2025 23:04:04.083 - DB 9: 2 keys (0 volatile) in 7 slots HT.
+### Starting test WAITAOF replica isn't configured to do AOF in tests/unit/wait.tcl
+84725:M 03 May 2025 23:04:04.812 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+84725:M 03 May 2025 23:04:04.813 * Background append only file rewriting started by pid 86199
+86199:C 03 May 2025 23:04:04.813 * Successfully created the temporary AOF base file temp-rewriteaof-bg-86199.aof
+86199:C 03 May 2025 23:04:04.813 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+84725:M 03 May 2025 23:04:04.891 * Background AOF rewrite terminated with success
+84725:M 03 May 2025 23:04:04.892 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-86199.aof into appendonly.aof.3.base.rdb
+84725:M 03 May 2025 23:04:04.892 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.3.incr.aof
+84725:M 03 May 2025 23:04:04.899 * Removing the history file appendonly.aof.2.incr.aof in the background
+84725:M 03 May 2025 23:04:04.899 * Removing the history file appendonly.aof.2.base.rdb in the background
+84725:M 03 May 2025 23:04:04.903 * Background AOF rewrite finished successfully
+84725:M 03 May 2025 23:04:04.903 - Background AOF rewrite signal handler took 11547us
+### Starting test WAITAOF both local and replica got AOF enabled at runtime in tests/unit/wait.tcl
+### Starting test WAITAOF master sends PING after last write in tests/unit/wait.tcl
+### Starting test WAITAOF master client didn't send any write command in tests/unit/wait.tcl
+84725:M 03 May 2025 23:04:07.043 - Accepted 127.0.0.1:59433
+84725:M 03 May 2025 23:04:08.246 - Client closed connection id=10 addr=127.0.0.1:59433 laddr=127.0.0.1:23614 fd=14 name= age=1 idle=1 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=select user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=23 tot-net-out=5 tot-cmds=1
+### Starting test WAITAOF master client didn't send any command in tests/unit/wait.tcl
+84725:M 03 May 2025 23:04:08.247 - Accepted 127.0.0.1:59476
+84725:M 03 May 2025 23:04:09.143 - DB 9: 2 keys (0 volatile) in 7 slots HT.
+84725:M 03 May 2025 23:04:09.454 - Client closed connection id=11 addr=127.0.0.1:59476 laddr=127.0.0.1:23614 fd=14 name= age=1 idle=1 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=0 tot-cmds=0
+### Starting test WAITAOF when replica switches between masters, fsync: no in tests/unit/wait.tcl
+84725:M 03 May 2025 23:04:11.704 - Accepted 127.0.0.1:59551
+84725:M 03 May 2025 23:04:11.711 - Accepted 127.0.0.1:59553
+84725:M 03 May 2025 23:04:11.711 - Client closed connection id=9 addr=127.0.0.1:59288 laddr=127.0.0.1:23614 fd=15 name= age=9 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=937 tot-net-out=348 tot-cmds=18
+84725:M 03 May 2025 23:04:11.711 * Connection with replica 127.0.0.1:23615 lost.
+84725:M 03 May 2025 23:04:11.711 * Replica 127.0.0.1:23617 asks for synchronization
+84725:M 03 May 2025 23:04:11.711 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '6e5b51fff924a57e8b42897f671ef4ff18d2b05e', my replication IDs are '08092edebf1d03a95bb7efb2ecec488ce5d29f5b' and '0000000000000000000000000000000000000000')
+84725:M 03 May 2025 23:04:11.711 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+84725:M 03 May 2025 23:04:11.712 * Background RDB transfer started by pid 87495 to pipe through parent process
+87495:C 03 May 2025 23:04:11.712 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+84725:M 03 May 2025 23:04:11.712 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+84725:M 03 May 2025 23:04:11.718 * Background RDB transfer terminated with success
+84725:M 03 May 2025 23:04:11.718 * Streamed RDB transfer with replica 127.0.0.1:23617 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+84725:M 03 May 2025 23:04:11.718 * Synchronization with replica 127.0.0.1:23617 succeeded
+84725:M 03 May 2025 23:04:12.594 - Client closed connection id=12 addr=127.0.0.1:59551 laddr=127.0.0.1:23614 fd=14 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=12 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=waitaof user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=91 tot-net-out=22 tot-cmds=3
+84725:M 03 May 2025 23:04:12.697 - Client closed connection id=13 addr=127.0.0.1:59553 laddr=127.0.0.1:23614 fd=16 name= age=1 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=333 tot-net-out=22 tot-cmds=7
+84725:M 03 May 2025 23:04:12.697 * Connection with replica 127.0.0.1:23617 lost.
+### Starting test WAITAOF when replica switches between masters, fsync: everysec in tests/unit/wait.tcl
+84725:M 03 May 2025 23:04:14.094 - Accepted 127.0.0.1:59600
+84725:M 03 May 2025 23:04:14.099 - Accepted 127.0.0.1:59602
+84725:M 03 May 2025 23:04:14.107 * Replica 127.0.0.1:23619 asks for synchronization
+84725:M 03 May 2025 23:04:14.107 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'ada904a24037ce50990b891f2d47675becbb949f', my replication IDs are '08092edebf1d03a95bb7efb2ecec488ce5d29f5b' and '0000000000000000000000000000000000000000')
+84725:M 03 May 2025 23:04:14.107 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+84725:M 03 May 2025 23:04:14.108 * Background RDB transfer started by pid 87820 to pipe through parent process
+87820:C 03 May 2025 23:04:14.108 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+84725:M 03 May 2025 23:04:14.108 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+84725:M 03 May 2025 23:04:14.120 * Background RDB transfer terminated with success
+84725:M 03 May 2025 23:04:14.120 * Streamed RDB transfer with replica 127.0.0.1:23619 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+84725:M 03 May 2025 23:04:14.120 * Synchronization with replica 127.0.0.1:23619 succeeded
+84725:M 03 May 2025 23:04:14.194 - DB 9: 3 keys (0 volatile) in 7 slots HT.
+84725:M 03 May 2025 23:04:14.982 - Client closed connection id=14 addr=127.0.0.1:59600 laddr=127.0.0.1:23614 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=12 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=waitaof user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=91 tot-net-out=22 tot-cmds=3
+84725:M 03 May 2025 23:04:15.085 - Client closed connection id=15 addr=127.0.0.1:59602 laddr=127.0.0.1:23614 fd=15 name= age=1 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=335 tot-net-out=36 tot-cmds=7
+84725:M 03 May 2025 23:04:15.085 * Connection with replica 127.0.0.1:23619 lost.
+### Starting test WAITAOF when replica switches between masters, fsync: always in tests/unit/wait.tcl
+84725:M 03 May 2025 23:04:15.561 - Accepted 127.0.0.1:59690
+84725:M 03 May 2025 23:04:15.567 - Accepted 127.0.0.1:59692
+84725:M 03 May 2025 23:04:15.567 * Replica 127.0.0.1:23621 asks for synchronization
+84725:M 03 May 2025 23:04:15.567 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'd7fea2a312bceb46582e03a09a66ab3a7fb8bbae', my replication IDs are '08092edebf1d03a95bb7efb2ecec488ce5d29f5b' and '0000000000000000000000000000000000000000')
+84725:M 03 May 2025 23:04:15.567 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+84725:M 03 May 2025 23:04:15.567 * Background RDB transfer started by pid 87916 to pipe through parent process
+87916:C 03 May 2025 23:04:15.568 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+84725:M 03 May 2025 23:04:15.568 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+84725:M 03 May 2025 23:04:15.580 * Background RDB transfer terminated with success
+84725:M 03 May 2025 23:04:15.580 * Streamed RDB transfer with replica 127.0.0.1:23621 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+84725:M 03 May 2025 23:04:15.580 * Synchronization with replica 127.0.0.1:23621 succeeded
+84725:M 03 May 2025 23:04:16.447 - Client closed connection id=16 addr=127.0.0.1:59690 laddr=127.0.0.1:23614 fd=14 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=12 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=waitaof user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=91 tot-net-out=22 tot-cmds=3
+84725:M 03 May 2025 23:04:16.551 - Client closed connection id=17 addr=127.0.0.1:59692 laddr=127.0.0.1:23614 fd=15 name= age=1 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=336 tot-net-out=22 tot-cmds=7
+84725:M 03 May 2025 23:04:16.551 * Connection with replica 127.0.0.1:23621 lost.
+### Starting test Check for memory leaks (pid 84779) in tests/unit/wait.tcl
+84725:M 03 May 2025 23:04:18.229 * Replication backlog freed after 1 seconds without connected replicas.
+84725:M 03 May 2025 23:04:19.239 - DB 9: 3 keys (0 volatile) in 7 slots HT.
+84725:M 03 May 2025 23:04:20.989 - Client closed connection id=3 addr=127.0.0.1:59082 laddr=127.0.0.1:23614 fd=13 name= age=26 idle=5 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=2837 tot-net-out=80421 tot-cmds=79
+84725:signal-handler (1746281062) Received SIGTERM scheduling shutdown...
+84725:M 03 May 2025 23:04:22.795 * User requested shutdown...
+84725:M 03 May 2025 23:04:22.795 * Calling fsync() on the AOF file.
+84725:M 03 May 2025 23:04:22.798 * Removing the pid file.
+84725:M 03 May 2025 23:04:22.798 * Removing the unix socket file.
+84725:M 03 May 2025 23:04:22.798 # Valkey is now ready to exit, bye bye...

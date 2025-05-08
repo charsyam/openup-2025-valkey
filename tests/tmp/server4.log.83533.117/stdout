@@ -1,0 +1,78 @@
+### Starting server for test 
+3615:M 03 May 2025 23:06:28.202 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+3615:M 03 May 2025 23:06:28.202 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=3615, just started
+3615:M 03 May 2025 23:06:28.202 * Configuration loaded
+3615:M 03 May 2025 23:06:28.203 * Increased maximum number of open files to 10032 (it was originally set to 256).
+3615:M 03 May 2025 23:06:28.203 * monotonic clock: POSIX clock_gettime
+3615:M 03 May 2025 23:06:28.203 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25172
+ |###|   .+###############+.   |###|    PID: 3615                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+3615:M 03 May 2025 23:06:28.203 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+3615:M 03 May 2025 23:06:28.203 * Server initialized
+3615:M 03 May 2025 23:06:28.203 * Ready to accept connections tcp
+3615:M 03 May 2025 23:06:28.203 * Ready to accept connections unix
+3615:M 03 May 2025 23:06:28.216 - Accepted 127.0.0.1:55206
+3615:M 03 May 2025 23:06:28.216 - Client closed connection id=2 addr=127.0.0.1:55206 laddr=127.0.0.1:25172 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+3615:M 03 May 2025 23:06:28.239 - Accepted 127.0.0.1:55215
+### Starting test Generate stacktrace on assertion in tests/integration/logging.tcl
+
+
+=== VALKEY BUG REPORT START: Cut & paste starting from here ===
+3615:M 03 May 2025 23:06:28.240 # === ASSERTION FAILED CLIENT CONTEXT ===
+3615:M 03 May 2025 23:06:28.240 # client->flags = 18014400656965632
+3615:M 03 May 2025 23:06:28.240 # client->conn = fd=12
+3615:M 03 May 2025 23:06:28.240 # client->argc = 2
+3615:M 03 May 2025 23:06:28.240 # client->argv[0] = "debug" (refcount: 1)
+3615:M 03 May 2025 23:06:28.240 # client->argv[1] = "assert" (refcount: 1)
+3615:M 03 May 2025 23:06:28.240 # === ASSERTION FAILED OBJECT CONTEXT ===
+3615:M 03 May 2025 23:06:28.240 # Object type: 0
+3615:M 03 May 2025 23:06:28.240 # Object encoding: 8
+3615:M 03 May 2025 23:06:28.240 # Object refcount: 1
+3615:M 03 May 2025 23:06:28.240 # === RECURSIVE ASSERTION FAILED ===
+3615:M 03 May 2025 23:06:28.240 # ==> debug.c:537 '1 == 2' is not true
+
+------ STACK TRACE ------
+
+Backtrace:
+0   valkey-server                       0x0000000100f70f30 sdsavail + 0
+1   valkey-server                       0x0000000100f7001c debugCommand + 6580
+2   valkey-server                       0x0000000100edf640 call + 440
+3   valkey-server                       0x0000000100ee1428 processCommand + 3204
+4   valkey-server                       0x0000000100efb8a4 processInputBuffer + 524
+5   valkey-server                       0x0000000100efac84 readQueryFromClient + 92
+6   valkey-server                       0x0000000101005ef8 connSocketEventHandler + 180
+7   valkey-server                       0x0000000100ec6c58 aeProcessEvents + 356
+8   valkey-server                       0x0000000100eeff4c main + 27000
+9   dyld                                0x000000018b22eb4c start + 6000
+
+------ STACK TRACE DONE ------
+
+=== VALKEY BUG REPORT END. Make sure to include from START to END. ===
+
+       Please report the crash by opening an issue on github:
+
+           https://github.com/valkey-io/valkey/issues
+
+  If a module was involved, please open in the module's repo instead.
+
+  Suspect RAM error? Use valkey-server --test-memory to verify it.
+
+  Some other issues could be detected by valkey-server --check-system

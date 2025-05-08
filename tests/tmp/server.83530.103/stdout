@@ -1,0 +1,114 @@
+### Starting server for test 
+11299:M 03 May 2025 23:07:46.189 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+11299:M 03 May 2025 23:07:46.189 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=11299, just started
+11299:M 03 May 2025 23:07:46.189 * Configuration loaded
+11299:M 03 May 2025 23:07:46.190 * Increased maximum number of open files to 10032 (it was originally set to 256).
+11299:M 03 May 2025 23:07:46.190 * monotonic clock: POSIX clock_gettime
+11299:M 03 May 2025 23:07:46.190 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23664
+ |###|   .+###############+.   |###|    PID: 11299                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+11299:M 03 May 2025 23:07:46.190 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+11299:M 03 May 2025 23:07:46.190 * Server initialized
+11299:M 03 May 2025 23:07:46.190 * Ready to accept connections tcp
+11299:M 03 May 2025 23:07:46.190 * Ready to accept connections unix
+11299:M 03 May 2025 23:07:46.315 - Accepted 127.0.0.1:58886
+11299:M 03 May 2025 23:07:46.315 - Client closed connection id=2 addr=127.0.0.1:58886 laddr=127.0.0.1:23664 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+11299:M 03 May 2025 23:07:46.338 - Accepted 127.0.0.1:58887
+### Starting test dual-channel-replication with multiple replicas in tests/integration/dual-channel-replication.tcl
+11299:S 03 May 2025 23:07:47.060 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+11299:S 03 May 2025 23:07:47.060 * Connecting to PRIMARY 127.0.0.1:23665
+11299:S 03 May 2025 23:07:47.060 * PRIMARY <-> REPLICA sync started
+11299:S 03 May 2025 23:07:47.060 * REPLICAOF 127.0.0.1:23665 enabled (user request from 'id=3 addr=127.0.0.1:58887 laddr=127.0.0.1:23664 fd=12 name= user=default lib-name= lib-ver=')
+11299:S 03 May 2025 23:07:47.060 * Non blocking connect for SYNC fired the event.
+11299:S 03 May 2025 23:07:47.060 * Primary replied to PING, replication can continue...
+11299:S 03 May 2025 23:07:47.060 * Trying a partial resynchronization (request 63e4d0fd17d3d41a020cc3511d6f2421b38c0465:1).
+11299:S 03 May 2025 23:07:47.060 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+11299:S 03 May 2025 23:07:47.060 . Dual channel replication: Received first reply from primary using rdb connection.
+11299:S 03 May 2025 23:07:47.373 . Dual channel replication: Received empty $ENDOFF response
+11299:S 03 May 2025 23:07:48.381 . Dual channel replication: Received empty $ENDOFF response
+11299:S 03 May 2025 23:07:49.391 . Dual channel replication: Received empty $ENDOFF response
+11299:S 03 May 2025 23:07:50.399 . Dual channel replication: Received empty $ENDOFF response
+11299:S 03 May 2025 23:07:51.236 . Total: 1 clients connected (0 replicas), 1223296 (1.17M) bytes in use
+11299:S 03 May 2025 23:07:51.408 . Dual channel replication: Received empty $ENDOFF response
+11299:S 03 May 2025 23:07:52.418 . Dual channel replication: Received empty $ENDOFF response
+11299:S 03 May 2025 23:07:52.420 * Dual channel replication: Trying a partial resynchronization using main channel (request 86d809a0d879782a3d591b2301fe9cdc44b567d7:1).
+11299:S 03 May 2025 23:07:52.420 * Dual channel replication: PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization, RDB load in background.
+11299:S 03 May 2025 23:07:52.420 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+11299:S 03 May 2025 23:07:52.428 * Discarding previously cached primary state.
+11299:S 03 May 2025 23:07:52.428 * PRIMARY <-> REPLICA sync: Flushing old data
+11299:S 03 May 2025 23:07:52.428 * PRIMARY <-> REPLICA sync: Loading DB in memory
+11299:S 03 May 2025 23:07:52.429 * Loading RDB produced by Valkey version 255.255.255
+11299:S 03 May 2025 23:07:52.429 * RDB age 0 seconds
+11299:S 03 May 2025 23:07:52.429 * RDB memory usage when created 1.87 Mb
+11299:S 03 May 2025 23:07:52.434 * Done loading RDB, keys loaded: 10001, keys expired: 0.
+11299:S 03 May 2025 23:07:52.434 * Dual channel replication: Successfully streamed replication data into memory
+11299:S 03 May 2025 23:07:52.434 * PRIMARY <-> REPLICA sync: Finished with success
+11299:M 03 May 2025 23:07:52.457 * Connection with primary lost.
+11299:M 03 May 2025 23:07:52.457 * Caching the disconnected primary state.
+11299:M 03 May 2025 23:07:52.457 * Discarding previously cached primary state.
+11299:M 03 May 2025 23:07:52.457 * Setting secondary replication ID to 86d809a0d879782a3d591b2301fe9cdc44b567d7, valid up to offset: 1. New replication ID is 6e5b3c414254bf372ea49590e439c25fbd1b7a1f
+11299:M 03 May 2025 23:07:52.457 * PRIMARY MODE enabled (user request from 'id=3 addr=127.0.0.1:58887 laddr=127.0.0.1:23664 fd=12 name= user=default lib-name= lib-ver=')
+### Starting test Test diverse replica sync: dual-channel on/off in tests/integration/dual-channel-replication.tcl
+11299:S 03 May 2025 23:07:52.458 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+11299:S 03 May 2025 23:07:52.458 * Connecting to PRIMARY 127.0.0.1:23665
+11299:S 03 May 2025 23:07:52.458 * PRIMARY <-> REPLICA sync started
+11299:S 03 May 2025 23:07:52.458 * REPLICAOF 127.0.0.1:23665 enabled (user request from 'id=3 addr=127.0.0.1:58887 laddr=127.0.0.1:23664 fd=12 name= user=default lib-name= lib-ver=')
+11299:S 03 May 2025 23:07:52.458 * Non blocking connect for SYNC fired the event.
+11299:S 03 May 2025 23:07:52.458 * Primary replied to PING, replication can continue...
+11299:S 03 May 2025 23:07:52.458 * Trying a partial resynchronization (request 6e5b3c414254bf372ea49590e439c25fbd1b7a1f:1).
+11299:S 03 May 2025 23:07:56.294 - DB 9: 10001 keys (0 volatile) in 14336 slots HT.
+11299:S 03 May 2025 23:07:56.294 . Total: 1 clients connected (0 replicas), 1874992 (1.79M) bytes in use
+11299:S 03 May 2025 23:07:57.465 * Full resync from primary: 86d809a0d879782a3d591b2301fe9cdc44b567d7:70
+11299:S 03 May 2025 23:07:57.466 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+11299:S 03 May 2025 23:07:57.472 * Discarding previously cached primary state.
+11299:S 03 May 2025 23:07:57.472 * PRIMARY <-> REPLICA sync: Flushing old data
+11299:S 03 May 2025 23:07:57.472 * PRIMARY <-> REPLICA sync: Loading DB in memory
+11299:S 03 May 2025 23:07:57.472 * Loading RDB produced by Valkey version 255.255.255
+11299:S 03 May 2025 23:07:57.472 * RDB age 0 seconds
+11299:S 03 May 2025 23:07:57.472 * RDB memory usage when created 1.91 Mb
+11299:S 03 May 2025 23:07:57.478 * Done loading RDB, keys loaded: 10002, keys expired: 0.
+11299:S 03 May 2025 23:07:57.478 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test Test replica's buffer limit reached in tests/integration/dual-channel-replication.tcl
+11299:S 03 May 2025 23:08:01.339 - DB 9: 10002 keys (0 volatile) in 14336 slots HT.
+11299:S 03 May 2025 23:08:01.339 . Total: 2 clients connected (0 replicas), 2376960 (2.27M) bytes in use
+11299:S 03 May 2025 23:08:06.387 - DB 9: 10002 keys (0 volatile) in 14336 slots HT.
+11299:S 03 May 2025 23:08:06.387 . Total: 2 clients connected (0 replicas), 2376960 (2.27M) bytes in use
+11299:S 03 May 2025 23:08:11.437 - DB 9: 10002 keys (0 volatile) in 14336 slots HT.
+11299:S 03 May 2025 23:08:11.437 . Total: 2 clients connected (0 replicas), 2376976 (2.27M) bytes in use
+### Starting test dual-channel-replication fails when primary diskless disabled in tests/integration/dual-channel-replication.tcl
+### Starting test Check for memory leaks (pid 11310) in tests/integration/dual-channel-replication.tcl
+11299:S 03 May 2025 23:08:16.486 - DB 9: 10003 keys (0 volatile) in 14336 slots HT.
+11299:S 03 May 2025 23:08:16.486 . Total: 2 clients connected (0 replicas), 2377024 (2.27M) bytes in use
+11299:S 03 May 2025 23:08:17.073 - Client closed connection id=7 addr=127.0.0.1:23665 laddr=127.0.0.1:59392 fd=13 name= age=20 idle=4 flags=M capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=65530 argv-mem=0 multi-mem=0 rbs=1024 rbp=39 obl=0 oll=0 omem=0 tot-mem=67072 events=r cmd=set user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=478860 tot-net-out=772 tot-cmds=10003
+11299:S 03 May 2025 23:08:17.073 * Connection with primary lost.
+11299:S 03 May 2025 23:08:17.073 * Caching the disconnected primary state.
+11299:S 03 May 2025 23:08:17.073 * Reconnecting to PRIMARY 127.0.0.1:23665
+11299:S 03 May 2025 23:08:17.073 * PRIMARY <-> REPLICA sync started
+11299:S 03 May 2025 23:08:17.073 # Error condition on socket for SYNC: Connection refused
+11299:S 03 May 2025 23:08:17.102 - Client closed connection id=3 addr=127.0.0.1:58887 laddr=127.0.0.1:23664 fd=12 name= age=31 idle=20 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=448 tot-net-out=60 tot-cmds=10
+11299:S 03 May 2025 23:08:17.496 * Connecting to PRIMARY 127.0.0.1:23665
+11299:S 03 May 2025 23:08:17.496 * PRIMARY <-> REPLICA sync started
+11299:S 03 May 2025 23:08:17.496 # Error condition on socket for SYNC: Connection refused
+11299:signal-handler (1746281299) Received SIGTERM scheduling shutdown...
+11299:S 03 May 2025 23:08:19.087 * User requested shutdown...
+11299:S 03 May 2025 23:08:19.087 * Removing the pid file.
+11299:S 03 May 2025 23:08:19.087 * Removing the unix socket file.
+11299:S 03 May 2025 23:08:19.088 # Valkey is now ready to exit, bye bye...

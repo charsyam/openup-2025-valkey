@@ -1,0 +1,43 @@
+### Starting server for test 
+85910:M 03 May 2025 23:04:02.941 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+85910:M 03 May 2025 23:04:02.941 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=85910, just started
+85910:M 03 May 2025 23:04:02.941 * Configuration loaded
+85910:M 03 May 2025 23:04:02.941 * Increased maximum number of open files to 10032 (it was originally set to 256).
+85910:M 03 May 2025 23:04:02.941 * monotonic clock: POSIX clock_gettime
+85910:M 03 May 2025 23:04:02.941 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25619
+ |###|   .+###############+.   |###|    PID: 85910                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+85910:M 03 May 2025 23:04:02.941 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+85910:M 03 May 2025 23:04:02.941 * Server initialized
+85910:M 03 May 2025 23:04:02.942 * Ready to accept connections tcp
+85910:M 03 May 2025 23:04:02.942 * Ready to accept connections unix
+85910:M 03 May 2025 23:04:03.046 - Accepted 127.0.0.1:59301
+85910:M 03 May 2025 23:04:03.046 - Client closed connection id=2 addr=127.0.0.1:59301 laddr=127.0.0.1:25619 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=57 tot-cmds=0
+85910:M 03 May 2025 23:04:03.068 - Accepted 127.0.0.1:59302
+### Starting test ACL still denies individual renamed commands in tests/unit/acl.tcl
+### Starting test ACL command classes aren't affected by command renaming in tests/unit/acl.tcl
+### Starting test ACL GETUSER provides correct results when commands renamed in tests/unit/acl.tcl
+85910:M 03 May 2025 23:04:03.070 - Client closed connection id=3 addr=127.0.0.1:59302 laddr=127.0.0.1:25619 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=acl|getuser user=newuser redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1609 tot-net-out=1567 tot-cmds=26
+85910:signal-handler (1746281043) Received SIGTERM scheduling shutdown...
+85910:M 03 May 2025 23:04:03.969 * User requested shutdown...
+85910:M 03 May 2025 23:04:03.969 * Removing the pid file.
+85910:M 03 May 2025 23:04:03.969 * Removing the unix socket file.
+85910:M 03 May 2025 23:04:03.969 # Valkey is now ready to exit, bye bye...

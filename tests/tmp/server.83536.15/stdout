@@ -1,0 +1,63 @@
+### Starting server for test 
+88572:M 03 May 2025 23:04:20.687 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+88572:M 03 May 2025 23:04:20.689 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=88572, just started
+88572:M 03 May 2025 23:04:20.689 * Configuration loaded
+88572:M 03 May 2025 23:04:20.690 * Increased maximum number of open files to 10032 (it was originally set to 256).
+88572:M 03 May 2025 23:04:20.691 * monotonic clock: POSIX clock_gettime
+88572:M 03 May 2025 23:04:20.691 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 26618
+ |###|   .+###############+.   |###|    PID: 88572                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+88572:M 03 May 2025 23:04:20.692 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+88572:M 03 May 2025 23:04:20.698 * Server initialized
+88572:M 03 May 2025 23:04:20.718 * Creating AOF base file appendonly.aof.1.base.aof on server start
+88572:M 03 May 2025 23:04:20.769 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+88572:M 03 May 2025 23:04:20.771 * Ready to accept connections tcp
+88572:M 03 May 2025 23:04:20.776 * Ready to accept connections unix
+88572:M 03 May 2025 23:04:20.851 - Accepted 127.0.0.1:59967
+88572:M 03 May 2025 23:04:20.853 - Client closed connection id=2 addr=127.0.0.1:59967 laddr=127.0.0.1:26618 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+88572:M 03 May 2025 23:04:20.869 - Accepted 127.0.0.1:59973
+### Starting test XREADGROUP with NOACK creates consumer in tests/unit/type/stream-cgroups.tcl
+88572:M 03 May 2025 23:04:20.931 - Accepted 127.0.0.1:60000
+88572:M 03 May 2025 23:04:20.965 * DB loaded from incr file appendonly.aof.1.incr.aof: 0.000 seconds
+88572:M 03 May 2025 23:04:20.968 * Append Only File loaded by DEBUG LOADAOF
+88572:M 03 May 2025 23:04:20.973 - Reading from client: Connection reset by peer
+### Starting test Consumer without PEL is present in AOF after AOFRW in tests/unit/type/stream-cgroups.tcl
+88572:M 03 May 2025 23:04:21.037 - Accepted 127.0.0.1:60007
+88572:M 03 May 2025 23:04:21.123 * Creating AOF incr file appendonly.aof.2.incr.aof on background rewrite
+88572:M 03 May 2025 23:04:21.127 * Background append only file rewriting started by pid 88622
+88622:C 03 May 2025 23:04:21.149 * Successfully created the temporary AOF base file temp-rewriteaof-bg-88622.aof
+88622:C 03 May 2025 23:04:21.159 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+88572:M 03 May 2025 23:04:21.229 * Background AOF rewrite terminated with success
+88572:M 03 May 2025 23:04:21.248 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-88622.aof into appendonly.aof.2.base.aof
+88572:M 03 May 2025 23:04:21.305 * Removing the history file appendonly.aof.1.incr.aof in the background
+88572:M 03 May 2025 23:04:21.306 * Removing the history file appendonly.aof.1.base.aof in the background
+88572:M 03 May 2025 23:04:21.356 * Background AOF rewrite finished successfully
+88572:M 03 May 2025 23:04:21.356 - Background AOF rewrite signal handler took 126658us
+88572:M 03 May 2025 23:04:21.357 * DB loaded from base file appendonly.aof.2.base.aof: 0.000 seconds
+88572:M 03 May 2025 23:04:21.357 * Append Only File loaded by DEBUG LOADAOF
+88572:M 03 May 2025 23:04:21.357 - Client closed connection id=6 addr=127.0.0.1:60007 laddr=127.0.0.1:26618 fd=14 name= age=0 idle=0 flags=b capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=52 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18564 events=r cmd=xreadgroup user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=141 tot-net-out=5 tot-cmds=1
+88572:M 03 May 2025 23:04:21.357 - Client closed connection id=3 addr=127.0.0.1:59973 laddr=127.0.0.1:26618 fd=13 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6144 rbp=6100 obl=0 oll=0 omem=0 tot-mem=23552 events=r cmd=xinfo|groups user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1029 tot-net-out=31515 tot-cmds=24
+88572:signal-handler (1746281062) Received SIGTERM scheduling shutdown...
+88572:M 03 May 2025 23:04:22.807 * User requested shutdown...
+88572:M 03 May 2025 23:04:22.807 * Calling fsync() on the AOF file.
+88572:M 03 May 2025 23:04:22.809 * Removing the pid file.
+88572:M 03 May 2025 23:04:22.809 * Removing the unix socket file.
+88572:M 03 May 2025 23:04:22.809 # Valkey is now ready to exit, bye bye...

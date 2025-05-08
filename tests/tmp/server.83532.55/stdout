@@ -1,0 +1,68 @@
+### Starting server for test 
+3690:M 03 May 2025 23:06:28.487 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+3690:M 03 May 2025 23:06:28.487 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=3690, just started
+3690:M 03 May 2025 23:06:28.487 * Configuration loaded
+3690:M 03 May 2025 23:06:28.487 * Increased maximum number of open files to 10032 (it was originally set to 256).
+3690:M 03 May 2025 23:06:28.488 * monotonic clock: POSIX clock_gettime
+3690:M 03 May 2025 23:06:28.488 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 24638
+ |###|   .+###############+.   |###|    PID: 3690                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+3690:M 03 May 2025 23:06:28.488 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+3690:M 03 May 2025 23:06:28.489 * Server initialized
+3690:M 03 May 2025 23:06:28.489 * Ready to accept connections tcp
+3690:M 03 May 2025 23:06:28.489 * Ready to accept connections unix
+3690:M 03 May 2025 23:06:28.633 - Accepted 127.0.0.1:55478
+3690:M 03 May 2025 23:06:28.635 - Client closed connection id=2 addr=127.0.0.1:55478 laddr=127.0.0.1:24638 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+3690:M 03 May 2025 23:06:28.648 - Accepted 127.0.0.1:55489
+### Starting test First server should have role slave after SLAVEOF in tests/integration/replication-4.tcl
+3690:M 03 May 2025 23:06:28.709 - Accepted 127.0.0.1:55541
+3690:M 03 May 2025 23:06:28.710 * Replica 127.0.0.1:24639 asks for synchronization
+3690:M 03 May 2025 23:06:28.710 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'b84cdd2e5219852835333faeb4bd1abe6edaef3f', my replication IDs are '1c3b08789e11a6e7fee65b89e7c423d10c18f8c1' and '0000000000000000000000000000000000000000')
+3690:M 03 May 2025 23:06:28.710 * Replication backlog created, my new replication IDs are '68b2929e65db0e0435ff3302afe18ea937c1c269' and '0000000000000000000000000000000000000000'
+3690:M 03 May 2025 23:06:28.710 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+### Starting test Test replication with parallel clients writing in different DBs in tests/integration/replication-4.tcl
+3690:M 03 May 2025 23:06:28.710 * Background RDB transfer started by pid 3774 to pipe through parent process
+3774:C 03 May 2025 23:06:28.711 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+3690:M 03 May 2025 23:06:28.711 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+3690:M 03 May 2025 23:06:28.715 * Background RDB transfer terminated with success
+3690:M 03 May 2025 23:06:28.715 * Streamed RDB transfer with replica 127.0.0.1:24639 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+3690:M 03 May 2025 23:06:28.715 * Synchronization with replica 127.0.0.1:24639 succeeded
+3690:M 03 May 2025 23:06:28.717 - Accepted 127.0.0.1:55554
+3690:M 03 May 2025 23:06:28.717 - Accepted 127.0.0.1:55556
+3690:M 03 May 2025 23:06:28.720 - Accepted 127.0.0.1:55557
+3690:M 03 May 2025 23:06:33.498 - DB 9: 4203 keys (0 volatile) in 7168 slots HT.
+3690:M 03 May 2025 23:06:33.498 - DB 11: 4098 keys (0 volatile) in 7168 slots HT.
+3690:M 03 May 2025 23:06:33.498 - DB 12: 4018 keys (0 volatile) in 7168 slots HT.
+3690:M 03 May 2025 23:06:33.725 - Reading from client: Connection reset by peer
+3690:M 03 May 2025 23:06:33.729 - Reading from client: Connection reset by peer
+3690:M 03 May 2025 23:06:33.772 - Reading from client: Connection reset by peer
+### Starting test Check for memory leaks (pid 3763) in tests/integration/replication-4.tcl
+3690:M 03 May 2025 23:06:36.336 - Client closed connection id=4 addr=127.0.0.1:55541 laddr=127.0.0.1:24638 fd=13 name= age=8 idle=2 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=514 tot-net-out=4163960 tot-cmds=12
+3690:M 03 May 2025 23:06:36.336 * Connection with replica 127.0.0.1:24639 lost.
+3690:M 03 May 2025 23:06:36.473 - Client closed connection id=3 addr=127.0.0.1:55489 laddr=127.0.0.1:24638 fd=12 name= age=8 idle=3 flags=N capa= db=12 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=43 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=169 tot-net-out=84 tot-cmds=8
+3690:M 03 May 2025 23:06:38.548 - DB 9: 4375 keys (0 volatile) in 7168 slots HT.
+3690:M 03 May 2025 23:06:38.548 - DB 11: 4360 keys (0 volatile) in 7168 slots HT.
+3690:M 03 May 2025 23:06:38.548 - DB 12: 4271 keys (0 volatile) in 7168 slots HT.
+3690:signal-handler (1746281199) Received SIGTERM scheduling shutdown...
+3690:M 03 May 2025 23:06:39.959 * User requested shutdown...
+3690:M 03 May 2025 23:06:39.959 * Removing the pid file.
+3690:M 03 May 2025 23:06:39.959 * Removing the unix socket file.
+3690:M 03 May 2025 23:06:39.959 # Valkey is now ready to exit, bye bye...

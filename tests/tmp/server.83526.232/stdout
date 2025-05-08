@@ -1,0 +1,70 @@
+### Starting server for test 
+8062:M 03 May 2025 23:06:59.756 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+8062:M 03 May 2025 23:06:59.756 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=8062, just started
+8062:M 03 May 2025 23:06:59.756 * Configuration loaded
+8062:M 03 May 2025 23:06:59.757 * Increased maximum number of open files to 10032 (it was originally set to 256).
+8062:M 03 May 2025 23:06:59.757 * monotonic clock: POSIX clock_gettime
+8062:M 03 May 2025 23:06:59.757 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21726
+ |###|   .+###############+.   |###|    PID: 8062                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+8062:M 03 May 2025 23:06:59.757 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+8062:M 03 May 2025 23:06:59.757 * Server initialized
+8062:M 03 May 2025 23:06:59.757 * Ready to accept connections tcp
+8062:M 03 May 2025 23:06:59.757 * Ready to accept connections unix
+8062:M 03 May 2025 23:06:59.885 - Accepted 127.0.0.1:61608
+8062:M 03 May 2025 23:06:59.885 - Client closed connection id=2 addr=127.0.0.1:61608 laddr=127.0.0.1:21726 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+8062:M 03 May 2025 23:06:59.915 - Accepted 127.0.0.1:61640
+### Starting test Replication backlog size can outgrow the backlog limit config dualchannel yes in tests/integration/replication-buffer.tcl
+8062:S 03 May 2025 23:07:00.327 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+8062:S 03 May 2025 23:07:00.327 * Connecting to PRIMARY 127.0.0.1:21727
+8062:S 03 May 2025 23:07:00.327 * PRIMARY <-> REPLICA sync started
+8062:S 03 May 2025 23:07:00.327 * REPLICAOF 127.0.0.1:21727 enabled (user request from 'id=3 addr=127.0.0.1:61640 laddr=127.0.0.1:21726 fd=12 name= user=default lib-name= lib-ver=')
+8062:S 03 May 2025 23:07:00.327 * Non blocking connect for SYNC fired the event.
+8062:S 03 May 2025 23:07:00.327 * Primary replied to PING, replication can continue...
+8062:S 03 May 2025 23:07:00.327 * Trying a partial resynchronization (request 80f0d8782db118a919f44b43d34f5b00e4690ffb:1).
+8062:S 03 May 2025 23:07:00.327 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+8062:S 03 May 2025 23:07:00.329 * Dual channel replication: Trying a partial resynchronization using main channel (request 8b795fd3fd44253928f56ee4bf695b0d587b6944:10037914).
+8062:S 03 May 2025 23:07:00.329 * Dual channel replication: PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization, RDB load in background.
+8062:S 03 May 2025 23:07:00.436 * Dual channel replication: Replication buffer limit reached, stopping buffering.
+### Starting test Replica could use replication buffer (beyond backlog config) for partial resynchronization  dualchannel yes in tests/integration/replication-buffer.tcl
+8062:S 03 May 2025 23:07:02.583 - Accepted 127.0.0.1:63510
+8062:S 03 May 2025 23:07:02.584 - Client closed connection id=5 addr=127.0.0.1:63510 laddr=127.0.0.1:21726 fd=16 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=278 tot-net-out=83 tot-cmds=5
+8062:S 03 May 2025 23:07:03.477 - Accepted 127.0.0.1:64138
+8062:S 03 May 2025 23:07:03.478 - Client closed connection id=6 addr=127.0.0.1:64138 laddr=127.0.0.1:21726 fd=16 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=278 tot-net-out=83 tot-cmds=5
+### Starting test Replication backlog memory will become smaller if disconnecting with replica dualchannel yes in tests/integration/replication-buffer.tcl
+### Starting test Check for memory leaks (pid 8084) in tests/integration/replication-buffer.tcl
+8062:S 03 May 2025 23:07:13.656 # I/O error reading bulk count from PRIMARY: Undefined error: 0
+8062:S 03 May 2025 23:07:13.656 * Dual channel replication: Aborting dual channel sync
+8062:S 03 May 2025 23:07:13.656 * Reconnecting to PRIMARY 127.0.0.1:21727 after failure
+8062:S 03 May 2025 23:07:13.656 * PRIMARY <-> REPLICA sync started
+8062:S 03 May 2025 23:07:13.657 # Error condition on socket for SYNC: Connection refused
+8062:S 03 May 2025 23:07:13.695 - Client closed connection id=3 addr=127.0.0.1:61640 laddr=127.0.0.1:21726 fd=12 name= age=14 idle=10 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=role user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=318 tot-net-out=6037 tot-cmds=8
+8062:S 03 May 2025 23:07:14.429 * Connecting to PRIMARY 127.0.0.1:21727
+8062:S 03 May 2025 23:07:14.429 * PRIMARY <-> REPLICA sync started
+8062:S 03 May 2025 23:07:14.429 # Error condition on socket for SYNC: Connection refused
+8062:S 03 May 2025 23:07:15.440 * Connecting to PRIMARY 127.0.0.1:21727
+8062:S 03 May 2025 23:07:15.440 * PRIMARY <-> REPLICA sync started
+8062:S 03 May 2025 23:07:15.440 # Error condition on socket for SYNC: Connection refused
+8062:signal-handler (1746281237) Received SIGTERM scheduling shutdown...
+8062:S 03 May 2025 23:07:17.080 * User requested shutdown...
+8062:S 03 May 2025 23:07:17.080 * Removing the pid file.
+8062:S 03 May 2025 23:07:17.080 * Removing the unix socket file.
+8062:S 03 May 2025 23:07:17.081 # Valkey is now ready to exit, bye bye...

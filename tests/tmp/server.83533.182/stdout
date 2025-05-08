@@ -1,0 +1,60 @@
+### Starting server for test 
+17178:M 03 May 2025 23:09:29.853 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+17178:M 03 May 2025 23:09:29.854 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=17178, just started
+17178:M 03 May 2025 23:09:29.854 * Configuration loaded
+17178:M 03 May 2025 23:09:29.854 * Increased maximum number of open files to 10032 (it was originally set to 256).
+17178:M 03 May 2025 23:09:29.854 * monotonic clock: POSIX clock_gettime
+17178:M 03 May 2025 23:09:29.854 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25204
+ |###|   .+###############+.   |###|    PID: 17178                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+17178:M 03 May 2025 23:09:29.854 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+17178:M 03 May 2025 23:09:29.855 * Server initialized
+17178:M 03 May 2025 23:09:29.855 * Ready to accept connections tcp
+17178:M 03 May 2025 23:09:29.855 * Ready to accept connections unix
+17178:M 03 May 2025 23:09:29.975 - Accepted 127.0.0.1:50178
+17178:M 03 May 2025 23:09:29.975 - Client closed connection id=2 addr=127.0.0.1:50178 laddr=127.0.0.1:25204 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+17178:M 03 May 2025 23:09:29.984 - Accepted 127.0.0.1:50179
+### Starting test Slave should be able to synchronize with the master in tests/integration/replication-psync.tcl
+17178:S 03 May 2025 23:09:29.990 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+17178:S 03 May 2025 23:09:29.990 * Connecting to PRIMARY 127.0.0.1:25203
+17178:S 03 May 2025 23:09:29.991 * PRIMARY <-> REPLICA sync started
+17178:S 03 May 2025 23:09:29.991 * REPLICAOF 127.0.0.1:25203 enabled (user request from 'id=3 addr=127.0.0.1:50179 laddr=127.0.0.1:25204 fd=12 name= user=default lib-name= lib-ver=')
+17178:S 03 May 2025 23:09:29.991 * Non blocking connect for SYNC fired the event.
+17178:S 03 May 2025 23:09:29.991 * Primary replied to PING, replication can continue...
+17178:S 03 May 2025 23:09:29.991 * Trying a partial resynchronization (request 0a43f313d2eb88909776c25996e1c3cbbe20a653:1).
+17178:S 03 May 2025 23:09:30.702 * Full resync from primary: 2f71095af7ffb6aaa3cce8b7ecd6e212fbc67efb:627496
+17178:S 03 May 2025 23:09:30.704 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+17178:S 03 May 2025 23:09:30.709 * Discarding previously cached primary state.
+17178:S 03 May 2025 23:09:30.709 * PRIMARY <-> REPLICA sync: Flushing old data
+17178:S 03 May 2025 23:09:30.709 * PRIMARY <-> REPLICA sync: Loading DB in memory
+17178:S 03 May 2025 23:09:30.709 * Loading RDB produced by Valkey version 255.255.255
+17178:S 03 May 2025 23:09:30.709 * RDB age 0 seconds
+17178:S 03 May 2025 23:09:30.709 * RDB memory usage when created 2.69 Mb
+17178:S 03 May 2025 23:09:30.711 * Done loading RDB, keys loaded: 2114, keys expired: 0.
+17178:S 03 May 2025 23:09:30.711 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test Detect write load to master in tests/integration/replication-psync.tcl
+### Starting test Test replication partial resync: no reconnection, just sync (diskless: yes, disabled, dual-channel: no, reconnect: 0) in tests/integration/replication-psync.tcl
+17178:S 03 May 2025 23:09:30.750 - Client closed connection id=3 addr=127.0.0.1:50179 laddr=127.0.0.1:25204 fd=12 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=62 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=debug user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=467 tot-net-out=1061 tot-cmds=22
+17178:signal-handler (1746281371) Received SIGTERM scheduling shutdown...
+17178:S 03 May 2025 23:09:31.860 * User requested shutdown...
+17178:S 03 May 2025 23:09:31.861 * Removing the pid file.
+17178:S 03 May 2025 23:09:31.861 * Removing the unix socket file.
+17178:S 03 May 2025 23:09:31.861 # Valkey is now ready to exit, bye bye...

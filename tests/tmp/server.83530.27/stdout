@@ -1,0 +1,79 @@
+### Starting server for test 
+88887:M 03 May 2025 23:04:23.178 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+88887:M 03 May 2025 23:04:23.178 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=88887, just started
+88887:M 03 May 2025 23:04:23.178 * Configuration loaded
+88887:M 03 May 2025 23:04:23.179 * Increased maximum number of open files to 10032 (it was originally set to 256).
+88887:M 03 May 2025 23:04:23.179 * monotonic clock: POSIX clock_gettime
+88887:M 03 May 2025 23:04:23.179 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23624
+ |###|   .+###############+.   |###|    PID: 88887                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+88887:M 03 May 2025 23:04:23.179 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+88887:M 03 May 2025 23:04:23.179 * Server initialized
+88887:M 03 May 2025 23:04:23.179 * Ready to accept connections tcp
+88887:M 03 May 2025 23:04:23.179 * Ready to accept connections unix
+88887:M 03 May 2025 23:04:23.310 - Accepted 127.0.0.1:60085
+88887:M 03 May 2025 23:04:23.311 - Client closed connection id=2 addr=127.0.0.1:60085 laddr=127.0.0.1:23624 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+88887:M 03 May 2025 23:04:23.337 - Accepted 127.0.0.1:60086
+### Starting test setup replication for following tests in tests/unit/wait.tcl
+88887:M 03 May 2025 23:04:23.347 - Accepted 127.0.0.1:60089
+88887:M 03 May 2025 23:04:23.356 - Accepted 127.0.0.1:60091
+88887:M 03 May 2025 23:04:23.361 * Replica 127.0.0.1:23623 asks for synchronization
+88887:M 03 May 2025 23:04:23.364 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'c2070febe6ad2ed65e29168bfd2547cf6253428c', my replication IDs are '3bcec19ace7d7ddb44d0fc5270a5f3009f8d0642' and '0000000000000000000000000000000000000000')
+88887:M 03 May 2025 23:04:23.370 * Replication backlog created, my new replication IDs are 'd193800589f8e7242ae437865ee9028e7cdda96e' and '0000000000000000000000000000000000000000'
+88887:M 03 May 2025 23:04:23.373 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+88887:M 03 May 2025 23:04:23.380 * Background RDB transfer started by pid 88915 to pipe through parent process
+88915:C 03 May 2025 23:04:23.380 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+88887:M 03 May 2025 23:04:23.386 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+88887:M 03 May 2025 23:04:23.393 * Replica 127.0.0.1:23622 asks for synchronization
+88887:M 03 May 2025 23:04:23.396 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'b7a69c60c3de1e61708ad5c0a4f36b3c1fcb6a45', my replication IDs are 'd193800589f8e7242ae437865ee9028e7cdda96e' and '0000000000000000000000000000000000000000')
+88887:M 03 May 2025 23:04:23.399 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+88887:M 03 May 2025 23:04:23.410 * Background RDB transfer terminated with success
+88887:M 03 May 2025 23:04:23.413 * Streamed RDB transfer with replica 127.0.0.1:23623 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+88887:M 03 May 2025 23:04:23.413 * Synchronization with replica 127.0.0.1:23623 succeeded
+88887:M 03 May 2025 23:04:23.413 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+88887:M 03 May 2025 23:04:23.413 * Background RDB transfer started by pid 88916 to pipe through parent process
+88916:C 03 May 2025 23:04:23.414 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+88887:M 03 May 2025 23:04:23.415 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+88887:M 03 May 2025 23:04:23.442 * Background RDB transfer terminated with success
+88887:M 03 May 2025 23:04:23.444 * Streamed RDB transfer with replica 127.0.0.1:23622 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+88887:M 03 May 2025 23:04:23.446 * Synchronization with replica 127.0.0.1:23622 succeeded
+### Starting test WAIT and WAITAOF replica multiple clients unblock - reuse last result in tests/unit/wait.tcl
+88887:M 03 May 2025 23:04:23.471 - Accepted 127.0.0.1:60105
+88887:M 03 May 2025 23:04:23.471 - Accepted 127.0.0.1:60106
+88887:M 03 May 2025 23:04:23.472 * Creating AOF incr file temp-appendonly.aof.incr on background rewrite
+88887:M 03 May 2025 23:04:23.472 * Background append only file rewriting started by pid 88924
+88924:C 03 May 2025 23:04:23.472 * Successfully created the temporary AOF base file temp-rewriteaof-bg-88924.aof
+88924:C 03 May 2025 23:04:23.473 * Fork CoW for AOF rewrite: current 0 MB, peak 0 MB, average 0 MB
+88887:M 03 May 2025 23:04:23.483 * Background AOF rewrite terminated with success
+88887:M 03 May 2025 23:04:23.483 * Successfully renamed the temporary AOF base file temp-rewriteaof-bg-88924.aof into appendonly.aof.1.base.rdb
+88887:M 03 May 2025 23:04:23.484 * Successfully renamed the temporary AOF incr file temp-appendonly.aof.incr into appendonly.aof.1.incr.aof
+88887:M 03 May 2025 23:04:23.490 * Background AOF rewrite finished successfully
+88887:M 03 May 2025 23:04:23.490 - Background AOF rewrite signal handler took 6735us
+88887:M 03 May 2025 23:04:24.043 - Client closed connection id=6 addr=127.0.0.1:60105 laddr=127.0.0.1:23624 fd=15 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=12 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=98 tot-net-out=28 tot-cmds=4
+88887:M 03 May 2025 23:04:24.043 - Client closed connection id=7 addr=127.0.0.1:60106 laddr=127.0.0.1:23624 fd=16 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=7 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=88 tot-net-out=20 tot-cmds=4
+88887:M 03 May 2025 23:04:24.043 - Client closed connection id=3 addr=127.0.0.1:60086 laddr=127.0.0.1:23624 fd=12 name= age=1 idle=1 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6656 rbp=6255 obl=0 oll=0 omem=0 tot-mem=24064 events=r cmd=incr user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=194 tot-net-out=18683 tot-cmds=7
+88887:signal-handler (1746281065) Received SIGTERM scheduling shutdown...
+88887:M 03 May 2025 23:04:25.666 * User requested shutdown...
+88887:M 03 May 2025 23:04:25.666 * 2 of 2 replicas are in sync when shutting down.
+88887:M 03 May 2025 23:04:25.666 * Calling fsync() on the AOF file.
+88887:M 03 May 2025 23:04:25.669 * Removing the pid file.
+88887:M 03 May 2025 23:04:25.669 * Removing the unix socket file.
+88887:M 03 May 2025 23:04:25.669 # Valkey is now ready to exit, bye bye...

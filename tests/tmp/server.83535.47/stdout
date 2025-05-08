@@ -1,0 +1,112 @@
+### Starting server for test 
+92678:M 03 May 2025 23:04:49.793 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+92678:M 03 May 2025 23:04:49.793 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+92678:M 03 May 2025 23:04:49.793 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=92678, just started
+92678:M 03 May 2025 23:04:49.793 * Configuration loaded
+92678:M 03 May 2025 23:04:49.793 * Increased maximum number of open files to 10032 (it was originally set to 256).
+92678:M 03 May 2025 23:04:49.793 * monotonic clock: POSIX clock_gettime
+92678:M 03 May 2025 23:04:49.794 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 26135
+ |###|   .+###############+.   |###|    PID: 92678                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+92678:M 03 May 2025 23:04:49.794 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+92678:M 03 May 2025 23:04:49.794 * No cluster configuration found, I'm 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45
+92678:M 03 May 2025 23:04:49.799 * Server initialized
+92678:M 03 May 2025 23:04:49.799 * Ready to accept connections tcp
+92678:M 03 May 2025 23:04:49.799 * Ready to accept connections unix
+92678:M 03 May 2025 23:04:49.921 - Accepted 127.0.0.1:50332
+92678:M 03 May 2025 23:04:49.923 - Client closed connection id=2 addr=127.0.0.1:50332 laddr=127.0.0.1:26135 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+92678:M 03 May 2025 23:04:49.943 - Accepted 127.0.0.1:50354
+92678:M 03 May 2025 23:04:49.943 * Cluster meet 127.0.0.1:26134 (user request from 'id=3 addr=127.0.0.1:50354 laddr=127.0.0.1:26135 fd=14 name= user=default lib-name= lib-ver=').
+92678:M 03 May 2025 23:04:49.946 # Missing implement of connection type tls
+92678:M 03 May 2025 23:04:50.083 - Accepting cluster node connection from 127.0.0.1:50401
+92678:M 03 May 2025 23:04:50.083 * IP address for this node updated to 127.0.0.1
+92678:M 03 May 2025 23:04:50.083 * Successfully completed handshake with dc792912f2c0ffacc9010ee5e114b89385445182 ()
+92678:M 03 May 2025 23:04:50.084 * configEpoch collision with node dc792912f2c0ffacc9010ee5e114b89385445182 (). configEpoch set to 1
+92678:M 03 May 2025 23:04:50.109 # DEBUG LOG: ========== I am primary 0 ==========
+92678:M 03 May 2025 23:04:51.814 * Cluster state changed: ok
+### Starting test Cluster is up in tests/unit/cluster/half-migrated-slot.tcl
+92678:M 03 May 2025 23:04:51.893 - Accepted 127.0.0.1:51030
+92678:M 03 May 2025 23:04:51.893 - Client closed connection id=9 addr=127.0.0.1:51030 laddr=127.0.0.1:26135 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=28 tot-net-out=221 tot-cmds=1
+92678:M 03 May 2025 23:04:51.893 - Accepted 127.0.0.1:51031
+92678:M 03 May 2025 23:04:51.912 - Accepted 127.0.0.1:51035
+92678:M 03 May 2025 23:04:51.912 - Client closed connection id=10 addr=127.0.0.1:51031 laddr=127.0.0.1:26135 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=0 tot-cmds=0
+### Starting test Half init migration in 'migrating' is fixable in tests/unit/cluster/half-migrated-slot.tcl
+92678:M 03 May 2025 23:04:51.927 * Migrating slot 609 to node dc792912f2c0ffacc9010ee5e114b89385445182 ()
+92678:M 03 May 2025 23:04:51.933 - Accepted 127.0.0.1:51043
+92678:M 03 May 2025 23:04:51.934 * Marking slot 609 stable
+92678:M 03 May 2025 23:04:51.934 - Client closed connection id=12 addr=127.0.0.1:51043 laddr=127.0.0.1:26135 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|setslot user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=137 tot-net-out=6510 tot-cmds=5
+92678:M 03 May 2025 23:04:51.968 - Accepted 127.0.0.1:51064
+92678:M 03 May 2025 23:04:51.968 - Client closed connection id=13 addr=127.0.0.1:51064 laddr=127.0.0.1:26135 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86 tot-net-out=6408 tot-cmds=4
+### Starting test Half init migration in 'importing' is fixable in tests/unit/cluster/half-migrated-slot.tcl
+92678:M 03 May 2025 23:04:51.975 - Accepted 127.0.0.1:51066
+92678:M 03 May 2025 23:04:51.978 - Client closed connection id=14 addr=127.0.0.1:51066 laddr=127.0.0.1:26135 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86 tot-net-out=6408 tot-cmds=4
+92678:M 03 May 2025 23:04:52.002 - Accepted 127.0.0.1:51069
+92678:M 03 May 2025 23:04:52.003 - Client closed connection id=15 addr=127.0.0.1:51069 laddr=127.0.0.1:26135 fd=17 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86 tot-net-out=6408 tot-cmds=4
+### Starting test Init migration and move key in tests/unit/cluster/half-migrated-slot.tcl
+92678:M 03 May 2025 23:04:52.003 * Migrating slot 609 to node dc792912f2c0ffacc9010ee5e114b89385445182 ()
+92678:M 03 May 2025 23:04:52.009 - Accepted 127.0.0.1:51072
+92678:M 03 May 2025 23:04:52.016 * Slot 609 is migrated from node 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45 () in shard 563ccff275e16852efeb96d6e139a3709b61f8a4 to node dc792912f2c0ffacc9010ee5e114b89385445182 () in shard b847763aa4ed8999db78902946e2eea6f8312df4.
+92678:M 03 May 2025 23:04:52.016 * Slot 609 is no longer being migrated to node dc792912f2c0ffacc9010ee5e114b89385445182 () in shard b847763aa4ed8999db78902946e2eea6f8312df4.
+92678:M 03 May 2025 23:04:52.020 # Cluster state changed: fail
+92678:M 03 May 2025 23:04:52.020 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+92678:M 03 May 2025 23:04:52.021 * Assigning slot 609 to node dc792912f2c0ffacc9010ee5e114b89385445182 () in shard b847763aa4ed8999db78902946e2eea6f8312df4
+92678:M 03 May 2025 23:04:52.021 * Cluster state changed: ok
+92678:M 03 May 2025 23:04:52.021 * Importing slot 609 from node dc792912f2c0ffacc9010ee5e114b89385445182 ()
+92678:M 03 May 2025 23:04:52.021 * Marking slot 609 stable
+92678:M 03 May 2025 23:04:52.022 * Assigning slot 609 to node dc792912f2c0ffacc9010ee5e114b89385445182 () in shard b847763aa4ed8999db78902946e2eea6f8312df4
+92678:M 03 May 2025 23:04:52.022 - Client closed connection id=17 addr=127.0.0.1:51072 laddr=127.0.0.1:26135 fd=19 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=5 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|setslot user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=572 tot-net-out=6531 tot-cmds=11
+92678:M 03 May 2025 23:04:52.040 - Accepted 127.0.0.1:51080
+92678:M 03 May 2025 23:04:52.040 - Client closed connection id=18 addr=127.0.0.1:51080 laddr=127.0.0.1:26135 fd=19 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86 tot-net-out=6425 tot-cmds=4
+92678:M 03 May 2025 23:04:52.041 - Accepted 127.0.0.1:51095
+92678:M 03 May 2025 23:04:52.041 - Client closed connection id=11 addr=127.0.0.1:51035 laddr=127.0.0.1:26135 fd=18 name= age=1 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=28 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=391 tot-net-out=92 tot-cmds=6
+92678:M 03 May 2025 23:04:52.057 - Accepted 127.0.0.1:51104
+92678:M 03 May 2025 23:04:52.057 - Client closed connection id=19 addr=127.0.0.1:51095 laddr=127.0.0.1:26135 fd=19 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=0 tot-cmds=0
+### Starting test Move key again in tests/unit/cluster/half-migrated-slot.tcl
+92678:M 03 May 2025 23:04:52.076 * Importing slot 609 from node dc792912f2c0ffacc9010ee5e114b89385445182 ()
+92678:M 03 May 2025 23:04:52.077 - Accepted 127.0.0.1:51107
+### Starting test Half-finish migration in tests/unit/cluster/half-migrated-slot.tcl
+92678:M 03 May 2025 23:04:52.084 - Accepted 127.0.0.1:51109
+92678:M 03 May 2025 23:04:52.085 * New configEpoch set to 3
+92678:M 03 May 2025 23:04:52.092 - Client closed connection id=24 addr=127.0.0.1:51109 laddr=127.0.0.1:26135 fd=20 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=exec user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=314 tot-net-out=642 tot-cmds=10
+92678:M 03 May 2025 23:04:52.114 - Accepted 127.0.0.1:51115
+92678:M 03 May 2025 23:04:52.116 - Client closed connection id=25 addr=127.0.0.1:51115 laddr=127.0.0.1:26135 fd=20 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=221 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=446 tot-cmds=3
+92678:M 03 May 2025 23:04:52.116 - Accepted 127.0.0.1:51122
+92678:M 03 May 2025 23:04:52.116 - Client closed connection id=20 addr=127.0.0.1:51104 laddr=127.0.0.1:26135 fd=18 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=139 tot-net-out=19 tot-cmds=3
+92678:M 03 May 2025 23:04:52.132 - Accepted 127.0.0.1:51127
+92678:M 03 May 2025 23:04:52.133 - Client closed connection id=26 addr=127.0.0.1:51122 laddr=127.0.0.1:26135 fd=20 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=22 tot-net-out=9 tot-cmds=1
+### Starting test Move key back in tests/unit/cluster/half-migrated-slot.tcl
+92678:M 03 May 2025 23:04:52.154 * Migrating slot 609 to node dc792912f2c0ffacc9010ee5e114b89385445182 ()
+### Starting test Half-finish importing in tests/unit/cluster/half-migrated-slot.tcl
+92678:M 03 May 2025 23:04:52.160 * Slot 609 is migrated from node 1ab2fda4bacbbfae52d0479bcb25c0840ce3dc45 () in shard 563ccff275e16852efeb96d6e139a3709b61f8a4 to node dc792912f2c0ffacc9010ee5e114b89385445182 () in shard b847763aa4ed8999db78902946e2eea6f8312df4.
+92678:M 03 May 2025 23:04:52.160 * Slot 609 is no longer being migrated to node dc792912f2c0ffacc9010ee5e114b89385445182 () in shard b847763aa4ed8999db78902946e2eea6f8312df4.
+92678:M 03 May 2025 23:04:52.165 - Accepted 127.0.0.1:51149
+92678:M 03 May 2025 23:04:52.166 - Client closed connection id=28 addr=127.0.0.1:51149 laddr=127.0.0.1:26135 fd=20 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86 tot-net-out=6457 tot-cmds=4
+92678:M 03 May 2025 23:04:52.183 - Accepted 127.0.0.1:51160
+92678:M 03 May 2025 23:04:52.184 - Client closed connection id=29 addr=127.0.0.1:51160 laddr=127.0.0.1:26135 fd=20 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86 tot-net-out=6457 tot-cmds=4
+92678:M 03 May 2025 23:04:52.185 - Accepted 127.0.0.1:51163
+92678:M 03 May 2025 23:04:52.186 - Client closed connection id=27 addr=127.0.0.1:51127 laddr=127.0.0.1:26135 fd=18 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=215 tot-net-out=64 tot-cmds=2
+92678:M 03 May 2025 23:04:52.201 - Client closed connection id=3 addr=127.0.0.1:50354 laddr=127.0.0.1:26135 fd=14 name= age=3 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=516 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1853 tot-net-out=25137 tot-cmds=61
+92678:signal-handler (1746281093) Received SIGTERM scheduling shutdown...
+92678:M 03 May 2025 23:04:53.399 * User requested shutdown...
+92678:M 03 May 2025 23:04:53.399 * Removing the pid file.
+92678:M 03 May 2025 23:04:53.399 * Saving the cluster configuration file before exiting.
+92678:M 03 May 2025 23:04:53.402 * Removing the unix socket file.
+92678:M 03 May 2025 23:04:53.403 # Valkey is now ready to exit, bye bye...

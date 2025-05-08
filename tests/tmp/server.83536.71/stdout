@@ -1,0 +1,57 @@
+### Starting server for test 
+8550:M 03 May 2025 23:07:07.601 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+8550:M 03 May 2025 23:07:07.601 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+8550:M 03 May 2025 23:07:07.601 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=8550, just started
+8550:M 03 May 2025 23:07:07.601 * Configuration loaded
+8550:M 03 May 2025 23:07:07.601 * Increased maximum number of open files to 10032 (it was originally set to 256).
+8550:M 03 May 2025 23:07:07.601 * monotonic clock: POSIX clock_gettime
+8550:M 03 May 2025 23:07:07.602 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 26646
+ |###|   .+###############+.   |###|    PID: 8550                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+8550:M 03 May 2025 23:07:07.602 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+8550:M 03 May 2025 23:07:07.602 * No cluster configuration found, I'm eab1934444937f18b89c7e88ed0877591c907162
+8550:M 03 May 2025 23:07:07.610 * Server initialized
+8550:M 03 May 2025 23:07:07.610 * Ready to accept connections tcp
+8550:M 03 May 2025 23:07:07.610 * Ready to accept connections unix
+8550:M 03 May 2025 23:07:07.740 - Accepted 127.0.0.1:50497
+8550:M 03 May 2025 23:07:07.740 - Client closed connection id=2 addr=127.0.0.1:50497 laddr=127.0.0.1:26646 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+8550:M 03 May 2025 23:07:07.757 - Accepted 127.0.0.1:50510
+8550:M 03 May 2025 23:07:07.758 # Missing implement of connection type tls
+8550:M 03 May 2025 23:07:07.758 # DEBUG LOG: ========== I am primary 0 ==========
+8550:M 03 May 2025 23:07:09.628 * Cluster state changed: ok
+### Starting test CLUSTER SLOT-STATS ORDERBY DESC correct ordering in tests/unit/cluster/slot-stats.tcl
+8550:M 03 May 2025 23:07:12.662 - DB 0: 976 keys (0 volatile) in 6531 slots HT.
+8550:M 03 May 2025 23:07:17.722 - DB 0: 976 keys (0 volatile) in 6531 slots HT.
+### Starting test CLUSTER SLOT-STATS ORDERBY ASC correct ordering in tests/unit/cluster/slot-stats.tcl
+8550:M 03 May 2025 23:07:22.773 - DB 0: 976 keys (0 volatile) in 6531 slots HT.
+8550:M 03 May 2025 23:07:27.818 - DB 0: 976 keys (0 volatile) in 6531 slots HT.
+### Starting test CLUSTER SLOT-STATS ORDERBY LIMIT correct response pagination, where limit is less than number of assigned slots in tests/unit/cluster/slot-stats.tcl
+### Starting test CLUSTER SLOT-STATS ORDERBY LIMIT correct response pagination, where limit is greater than number of assigned slots in tests/unit/cluster/slot-stats.tcl
+8550:M 03 May 2025 23:07:31.386 # Cluster state changed: fail
+8550:M 03 May 2025 23:07:31.386 # Cluster is currently down: I am part of a minority partition.
+### Starting test CLUSTER SLOT-STATS ORDERBY arg sanity check. in tests/unit/cluster/slot-stats.tcl
+8550:M 03 May 2025 23:07:31.393 - Client closed connection id=3 addr=127.0.0.1:50510 laddr=127.0.0.1:26646 fd=14 name= age=24 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=cluster|slot-stats user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=38936 tot-net-out=14098725 tot-cmds=1095
+8550:signal-handler (1746281253) Received SIGTERM scheduling shutdown...
+8550:M 03 May 2025 23:07:33.535 * User requested shutdown...
+8550:M 03 May 2025 23:07:33.535 * Removing the pid file.
+8550:M 03 May 2025 23:07:33.535 * Saving the cluster configuration file before exiting.
+8550:M 03 May 2025 23:07:33.548 * Removing the unix socket file.
+8550:M 03 May 2025 23:07:33.548 # Valkey is now ready to exit, bye bye...

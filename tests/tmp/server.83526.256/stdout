@@ -1,0 +1,71 @@
+### Starting server for test Replica client-output-buffer size is limited to backlog_limit/16 when no replication data is pending. dualchannel no in tests/integration/replication-buffer.tcl
+12044:M 03 May 2025 23:07:56.913 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+12044:M 03 May 2025 23:07:56.913 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=12044, just started
+12044:M 03 May 2025 23:07:56.913 * Configuration loaded
+12044:M 03 May 2025 23:07:56.913 * Increased maximum number of open files to 10032 (it was originally set to 256).
+12044:M 03 May 2025 23:07:56.913 * monotonic clock: POSIX clock_gettime
+12044:M 03 May 2025 23:07:56.914 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21738
+ |###|   .+###############+.   |###|    PID: 12044                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+12044:M 03 May 2025 23:07:56.914 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+12044:M 03 May 2025 23:07:56.914 * Server initialized
+12044:M 03 May 2025 23:07:56.914 * Ready to accept connections tcp
+12044:M 03 May 2025 23:07:56.914 * Ready to accept connections unix
+12044:M 03 May 2025 23:07:56.927 - Accepted 127.0.0.1:59492
+12044:M 03 May 2025 23:07:56.929 - Client closed connection id=2 addr=127.0.0.1:59492 laddr=127.0.0.1:21738 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+12044:M 03 May 2025 23:07:56.947 - Accepted 127.0.0.1:59495
+12044:M 03 May 2025 23:07:56.953 - Accepted 127.0.0.1:59496
+12044:M 03 May 2025 23:07:56.957 * Replica 127.0.0.1:21737 asks for synchronization
+12044:M 03 May 2025 23:07:56.957 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '29cc97cffe48c5a331d0a42feb0710ae2247292b', my replication IDs are '3116c0d7aa1a72efa9e8c2c51e045f0c095a5d7f' and '0000000000000000000000000000000000000000')
+12044:M 03 May 2025 23:07:56.957 * Replication backlog created, my new replication IDs are 'bf4656f8eb0de06a91a2fbc21289c83200a9e126' and '0000000000000000000000000000000000000000'
+12044:M 03 May 2025 23:07:56.957 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+12044:M 03 May 2025 23:07:56.959 * Background RDB transfer started by pid 12049 to pipe through parent process
+12049:C 03 May 2025 23:07:56.959 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+12044:M 03 May 2025 23:07:56.959 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+12044:M 03 May 2025 23:07:56.964 * Background RDB transfer terminated with success
+12044:M 03 May 2025 23:07:56.964 * Streamed RDB transfer with replica 127.0.0.1:21737 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+12044:M 03 May 2025 23:07:56.964 * Synchronization with replica 127.0.0.1:21737 succeeded
+12044:M 03 May 2025 23:07:57.081 # Client id=4 addr=127.0.0.1:59496 laddr=127.0.0.1:21738 fd=13 name= age=1 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=2 omem=33840 tot-mem=67632 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=275 tot-net-out=22 tot-cmds=6 scheduled to be closed ASAP for overcoming of output buffer limits.
+12044:M 03 May 2025 23:07:57.081 # WARNING: the new maxmemory value set via CONFIG SET (1) is smaller than the current memory usage (1916336). This will result in key eviction and/or the inability to accept new write commands depending on the maxmemory-policy.
+12044:M 03 May 2025 23:07:57.082 * Connection with replica 127.0.0.1:21737 lost.
+12044:M 03 May 2025 23:07:57.082 - Accepted 127.0.0.1:59501
+12044:M 03 May 2025 23:07:57.083 * Replica 127.0.0.1:21737 asks for synchronization
+12044:M 03 May 2025 23:07:57.083 * Unable to partial resync with replica 127.0.0.1:21737 for lack of backlog (Replica request was: 1).
+12044:M 03 May 2025 23:07:57.083 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+12044:M 03 May 2025 23:07:57.083 * Background RDB transfer started by pid 12050 to pipe through parent process
+12050:C 03 May 2025 23:07:57.084 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+12044:M 03 May 2025 23:07:57.084 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+12044:M 03 May 2025 23:07:57.087 * Background RDB transfer terminated with success
+12044:M 03 May 2025 23:07:57.087 * Streamed RDB transfer with replica 127.0.0.1:21737 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+12044:M 03 May 2025 23:07:57.087 * Synchronization with replica 127.0.0.1:21737 succeeded
+### Starting test The update of replBufBlock's repl_offset is ok - Regression test for #11666 in tests/integration/replication-buffer.tcl
+12044:M 03 May 2025 23:07:57.190 - Accepted 127.0.0.1:59502
+12044:M 03 May 2025 23:07:57.191 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+12044:M 03 May 2025 23:07:57.191 * Partial resynchronization request from 127.0.0.1:<unknown-replica-port> accepted. Sending 26959 bytes of backlog starting from offset 235985.
+12044:M 03 May 2025 23:07:57.191 - Reading from client: Connection reset by peer
+12044:M 03 May 2025 23:07:57.191 * Connection with replica client id #6 lost.
+12044:M 03 May 2025 23:07:57.191 - Client closed connection id=3 addr=127.0.0.1:59495 laddr=127.0.0.1:21738 fd=12 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=294902 argv-mem=0 multi-mem=0 rbs=6144 rbp=6082 obl=0 oll=0 omem=0 tot-mem=301568 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=263010 tot-net-out=42822 tot-cmds=19
+12044:signal-handler (1746281279) Received SIGTERM scheduling shutdown...
+12044:M 03 May 2025 23:07:59.622 * User requested shutdown...
+12044:M 03 May 2025 23:07:59.622 * 1 of 1 replicas are in sync when shutting down.
+12044:M 03 May 2025 23:07:59.622 * Removing the pid file.
+12044:M 03 May 2025 23:07:59.622 * Removing the unix socket file.
+12044:M 03 May 2025 23:07:59.622 # Valkey is now ready to exit, bye bye...

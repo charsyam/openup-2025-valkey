@@ -1,0 +1,54 @@
+### Starting server for test Handshake eventually succeeds after node handshake timeout on one side with inconsistent view of the cluster in tests/unit/cluster/cluster-reliable-meet.tcl
+2113:M 03 May 2025 23:06:19.254 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+2113:M 03 May 2025 23:06:19.254 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+2113:M 03 May 2025 23:06:19.254 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=2113, just started
+2113:M 03 May 2025 23:06:19.254 * Configuration loaded
+2113:M 03 May 2025 23:06:19.255 * Increased maximum number of open files to 10032 (it was originally set to 256).
+2113:M 03 May 2025 23:06:19.255 * monotonic clock: POSIX clock_gettime
+2113:M 03 May 2025 23:06:19.255 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 23656
+ |###|   .+###############+.   |###|    PID: 2113                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+2113:M 03 May 2025 23:06:19.255 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+2113:M 03 May 2025 23:06:19.255 * No cluster configuration found, I'm 9fe20f2fd9cb7c0e9f23060fcd77290d0ad90832
+2113:M 03 May 2025 23:06:19.261 * Server initialized
+2113:M 03 May 2025 23:06:19.261 * Ready to accept connections tcp
+2113:M 03 May 2025 23:06:19.262 * Ready to accept connections unix
+2113:M 03 May 2025 23:06:19.385 - Accepted 127.0.0.1:65076
+2113:M 03 May 2025 23:06:19.385 - Client closed connection id=2 addr=127.0.0.1:65076 laddr=127.0.0.1:23656 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+2113:M 03 May 2025 23:06:19.398 - Accepted 127.0.0.1:65084
+2113:M 03 May 2025 23:06:19.399 # Missing implement of connection type tls
+2113:M 03 May 2025 23:06:19.400 * Cluster meet 127.0.0.1:23654 (user request from 'id=3 addr=127.0.0.1:65084 laddr=127.0.0.1:23656 fd=14 name= user=default lib-name= lib-ver=').
+2113:M 03 May 2025 23:06:19.513 - Accepting cluster node connection from 127.0.0.1:65208
+2113:M 03 May 2025 23:06:19.514 * IP address for this node updated to 127.0.0.1
+2113:M 03 May 2025 23:06:19.514 * Successfully completed handshake with a51f368c78cd747935fe612047c244249a7effd4 ()
+2113:M 03 May 2025 23:06:19.514 * configEpoch collision with node a51f368c78cd747935fe612047c244249a7effd4 (). configEpoch set to 2
+2113:M 03 May 2025 23:06:21.280 * Cluster state changed: ok
+2113:M 03 May 2025 23:06:23.606 * Sending MEET packet to node 0afd1849bb7eef13675e9584439e767d3b67bbaf () because there is no inbound link for it
+2113:M 03 May 2025 23:06:23.607 * Successfully completed handshake with 0afd1849bb7eef13675e9584439e767d3b67bbaf ()
+2113:M 03 May 2025 23:06:23.640 - Accepting cluster node connection from 127.0.0.1:51881
+2113:M 03 May 2025 23:06:23.857 - Accepting cluster node connection from 127.0.0.1:52034
+2113:M 03 May 2025 23:06:25.275 - Client closed connection id=3 addr=127.0.0.1:65084 laddr=127.0.0.1:23656 fd=14 name= age=6 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=343 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|links user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=2433 tot-net-out=31690 tot-cmds=86
+2113:signal-handler (1746281185) Received SIGTERM scheduling shutdown...
+2113:M 03 May 2025 23:06:25.325 * User requested shutdown...
+2113:M 03 May 2025 23:06:25.325 * Removing the pid file.
+2113:M 03 May 2025 23:06:25.325 * Saving the cluster configuration file before exiting.
+2113:M 03 May 2025 23:06:25.332 * Removing the unix socket file.
+2113:M 03 May 2025 23:06:25.332 # Valkey is now ready to exit, bye bye...

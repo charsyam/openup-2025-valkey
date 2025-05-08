@@ -1,0 +1,92 @@
+### Starting server for test 
+9006:M 03 May 2025 23:07:15.301 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+9006:M 03 May 2025 23:07:15.302 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=9006, just started
+9006:M 03 May 2025 23:07:15.302 * Configuration loaded
+9006:M 03 May 2025 23:07:15.302 * Increased maximum number of open files to 10032 (it was originally set to 256).
+9006:M 03 May 2025 23:07:15.302 * monotonic clock: POSIX clock_gettime
+9006:M 03 May 2025 23:07:15.303 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27163
+ |###|   .+###############+.   |###|    PID: 9006                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+9006:M 03 May 2025 23:07:15.303 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+9006:M 03 May 2025 23:07:15.303 * Server initialized
+9006:M 03 May 2025 23:07:15.304 * Ready to accept connections tcp
+9006:M 03 May 2025 23:07:15.304 * Ready to accept connections unix
+9006:M 03 May 2025 23:07:15.453 - Accepted 127.0.0.1:54537
+9006:M 03 May 2025 23:07:15.453 - Client closed connection id=2 addr=127.0.0.1:54537 laddr=127.0.0.1:27163 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+9006:M 03 May 2025 23:07:15.480 - Accepted 127.0.0.1:54559
+### Starting test write command inside MULTI is QUEUED, EXEC should be REDIRECT in tests/integration/replica-redirect.tcl
+9006:M 03 May 2025 23:07:15.668 - Accepted 127.0.0.1:54600
+9006:M 03 May 2025 23:07:15.669 * Replica 127.0.0.1:27164 asks for synchronization
+9006:M 03 May 2025 23:07:15.669 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '34a4455be1141aad1555a4a2774314eda883e228', my replication IDs are '4e3029ff806b426be2f15fcadc7822385bcedd0f' and '0000000000000000000000000000000000000000')
+9006:M 03 May 2025 23:07:15.669 * Replication backlog created, my new replication IDs are '9e133ab7123cd0b133802d5b6bbefd7559dadf78' and '0000000000000000000000000000000000000000'
+9006:M 03 May 2025 23:07:15.669 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+9006:M 03 May 2025 23:07:15.670 * Background RDB transfer started by pid 9041 to pipe through parent process
+9041:C 03 May 2025 23:07:15.671 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+9006:M 03 May 2025 23:07:15.671 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+9006:M 03 May 2025 23:07:15.676 * Background RDB transfer terminated with success
+9006:M 03 May 2025 23:07:15.676 * Streamed RDB transfer with replica 127.0.0.1:27164 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+9006:M 03 May 2025 23:07:15.676 * Synchronization with replica 127.0.0.1:27164 succeeded
+### Starting test write command inside MULTI is REDIRECT, EXEC should be EXECABORT in tests/integration/replica-redirect.tcl
+### Starting test replica allow read command by default in tests/integration/replica-redirect.tcl
+### Starting test replica reply READONLY error for write command by default in tests/integration/replica-redirect.tcl
+### Starting test replica redirect read and write command after CLIENT CAPA REDIRECT in tests/integration/replica-redirect.tcl
+### Starting test CLIENT INFO in tests/integration/replica-redirect.tcl
+### Starting test non-data access commands are not redirected in tests/integration/replica-redirect.tcl
+### Starting test replica allow read command in READONLY mode in tests/integration/replica-redirect.tcl
+### Starting test client paused during failover-in-progress in tests/integration/replica-redirect.tcl
+9006:M 03 May 2025 23:07:15.855 * FAILOVER requested to 127.0.0.1:27164.
+9006:M 03 May 2025 23:07:15.958 * FAILOVER to 127.0.0.1:27164 time out exceeded, failing over.
+9006:S 03 May 2025 23:07:15.958 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+9006:S 03 May 2025 23:07:15.958 * Connecting to PRIMARY 127.0.0.1:27164
+9006:S 03 May 2025 23:07:15.958 * PRIMARY <-> REPLICA sync started
+9006:S 03 May 2025 23:07:15.959 * Non blocking connect for SYNC fired the event.
+9006:S 03 May 2025 23:07:16.064 - Accepted 127.0.0.1:54709
+9006:S 03 May 2025 23:07:16.101 * Primary replied to PING, replication can continue...
+9006:S 03 May 2025 23:07:16.108 * Trying a partial resynchronization (request 9e133ab7123cd0b133802d5b6bbefd7559dadf78:55).
+9006:S 03 May 2025 23:07:16.113 - Client closed connection id=4 addr=127.0.0.1:54600 laddr=127.0.0.1:27163 fd=13 name= age=1 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=275 tot-net-out=76 tot-cmds=6
+9006:S 03 May 2025 23:07:16.113 * Connection with replica 127.0.0.1:27164 lost.
+9006:S 03 May 2025 23:07:16.113 * Successful partial resynchronization with primary.
+9006:S 03 May 2025 23:07:16.113 * Primary replication ID changed to bbe76f0487d9f548e44ccdf5123d427402ac2bee
+9006:S 03 May 2025 23:07:16.113 * PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+9006:S 03 May 2025 23:07:16.207 - Client closed connection id=6 addr=127.0.0.1:54709 laddr=127.0.0.1:27163 fd=15 name= age=0 idle=0 flags=N capa=r db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=27 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=94 tot-net-out=37 tot-cmds=2
+### Starting test Check for memory leaks (pid 9020) in tests/integration/replica-redirect.tcl
+9006:S 03 May 2025 23:07:18.932 - Client closed connection id=5 addr=127.0.0.1:27164 laddr=127.0.0.1:54676 fd=14 name= age=3 idle=2 flags=M capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=35 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=NULL user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=105 tot-cmds=0
+9006:S 03 May 2025 23:07:18.932 * Connection with primary lost.
+9006:S 03 May 2025 23:07:18.932 * Caching the disconnected primary state.
+9006:S 03 May 2025 23:07:18.932 * Reconnecting to PRIMARY 127.0.0.1:27164
+9006:S 03 May 2025 23:07:18.932 * PRIMARY <-> REPLICA sync started
+9006:S 03 May 2025 23:07:18.932 # Error condition on socket for SYNC: Connection refused
+9006:S 03 May 2025 23:07:19.012 - Client closed connection id=3 addr=127.0.0.1:54559 laddr=127.0.0.1:27163 fd=12 name= age=4 idle=3 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=8192 rbp=6293 obl=0 oll=0 omem=0 tot-mem=25600 events=r cmd=role user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=301 tot-net-out=38628 tot-cmds=12
+9006:S 03 May 2025 23:07:19.347 * Connecting to PRIMARY 127.0.0.1:27164
+9006:S 03 May 2025 23:07:19.347 * PRIMARY <-> REPLICA sync started
+9006:S 03 May 2025 23:07:19.348 # Error condition on socket for SYNC: Connection refused
+9006:S 03 May 2025 23:07:20.356 - DB 9: 1 keys (0 volatile) in 7 slots HT.
+9006:S 03 May 2025 23:07:20.356 * Connecting to PRIMARY 127.0.0.1:27164
+9006:S 03 May 2025 23:07:20.356 * PRIMARY <-> REPLICA sync started
+9006:S 03 May 2025 23:07:20.357 # Error condition on socket for SYNC: Connection refused
+9006:S 03 May 2025 23:07:23.084 * Connecting to PRIMARY 127.0.0.1:27164
+9006:S 03 May 2025 23:07:23.084 * PRIMARY <-> REPLICA sync started
+9006:S 03 May 2025 23:07:23.084 # Error condition on socket for SYNC: Connection refused
+9006:signal-handler (1746281243) Received SIGTERM scheduling shutdown...
+9006:S 03 May 2025 23:07:23.185 * User requested shutdown...
+9006:S 03 May 2025 23:07:23.185 * Removing the pid file.
+9006:S 03 May 2025 23:07:23.185 * Removing the unix socket file.
+9006:S 03 May 2025 23:07:23.185 # Valkey is now ready to exit, bye bye...

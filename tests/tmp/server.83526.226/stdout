@@ -1,0 +1,73 @@
+### Starting server for test 
+7492:M 03 May 2025 23:06:52.718 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+7492:M 03 May 2025 23:06:52.718 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=7492, just started
+7492:M 03 May 2025 23:06:52.718 * Configuration loaded
+7492:M 03 May 2025 23:06:52.719 * Increased maximum number of open files to 10032 (it was originally set to 256).
+7492:M 03 May 2025 23:06:52.719 * monotonic clock: POSIX clock_gettime
+7492:M 03 May 2025 23:06:52.719 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21723
+ |###|   .+###############+.   |###|    PID: 7492                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+7492:M 03 May 2025 23:06:52.719 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+7492:M 03 May 2025 23:06:52.720 * Server initialized
+7492:M 03 May 2025 23:06:52.720 * Ready to accept connections tcp
+7492:M 03 May 2025 23:06:52.720 * Ready to accept connections unix
+7492:M 03 May 2025 23:06:52.732 - Accepted 127.0.0.1:57156
+7492:M 03 May 2025 23:06:52.732 - Client closed connection id=2 addr=127.0.0.1:57156 laddr=127.0.0.1:21723 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+7492:M 03 May 2025 23:06:52.752 - Accepted 127.0.0.1:57157
+7492:S 03 May 2025 23:06:52.823 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+7492:S 03 May 2025 23:06:52.823 * Connecting to PRIMARY 127.0.0.1:21724
+7492:S 03 May 2025 23:06:52.823 * PRIMARY <-> REPLICA sync started
+7492:S 03 May 2025 23:06:52.823 * REPLICAOF 127.0.0.1:21724 enabled (user request from 'id=3 addr=127.0.0.1:57157 laddr=127.0.0.1:21723 fd=12 name= user=default lib-name= lib-ver=')
+7492:S 03 May 2025 23:06:52.823 * Non blocking connect for SYNC fired the event.
+7492:S 03 May 2025 23:06:52.823 * Primary replied to PING, replication can continue...
+7492:S 03 May 2025 23:06:52.823 * Trying a partial resynchronization (request c57343b15dcbf78d00e37c736923579f9a3b0be3:1).
+7492:S 03 May 2025 23:06:53.791 * Full resync from primary: 8082dc41354cb8788030daae9b6e68921ce23599:0
+7492:S 03 May 2025 23:06:53.792 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+7492:S 03 May 2025 23:06:53.796 * Discarding previously cached primary state.
+7492:S 03 May 2025 23:06:53.796 * PRIMARY <-> REPLICA sync: Flushing old data
+7492:S 03 May 2025 23:06:53.796 * PRIMARY <-> REPLICA sync: Loading DB in memory
+7492:S 03 May 2025 23:06:53.796 * Loading RDB produced by Valkey version 255.255.255
+7492:S 03 May 2025 23:06:53.796 * RDB age 0 seconds
+7492:S 03 May 2025 23:06:53.796 * RDB memory usage when created 1.19 Mb
+7492:S 03 May 2025 23:06:53.796 * Done loading RDB, keys loaded: 0, keys expired: 0.
+7492:S 03 May 2025 23:06:53.796 * PRIMARY <-> REPLICA sync: Finished with success
+### Starting test All replicas share one global replication buffer dualchannel no in tests/integration/replication-buffer.tcl
+### Starting test Replication buffer will become smaller when no replica uses dualchannel no in tests/integration/replication-buffer.tcl
+### Starting test Check for memory leaks (pid 7506) in tests/integration/replication-buffer.tcl
+7492:S 03 May 2025 23:06:56.562 - Client closed connection id=5 addr=127.0.0.1:21724 laddr=127.0.0.1:57214 fd=13 name= age=3 idle=2 flags=M capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=40 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=set user=(superuser) redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1084670 tot-net-out=111 tot-cmds=1126
+7492:S 03 May 2025 23:06:56.562 * Connection with primary lost.
+7492:S 03 May 2025 23:06:56.562 * Caching the disconnected primary state.
+7492:S 03 May 2025 23:06:56.562 * Reconnecting to PRIMARY 127.0.0.1:21724
+7492:S 03 May 2025 23:06:56.562 * PRIMARY <-> REPLICA sync started
+7492:S 03 May 2025 23:06:56.562 # Error condition on socket for SYNC: Connection refused
+7492:S 03 May 2025 23:06:56.616 - Client closed connection id=3 addr=127.0.0.1:57157 laddr=127.0.0.1:21723 fd=12 name= age=4 idle=2 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6656 rbp=6307 obl=0 oll=0 omem=0 tot-mem=24064 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=308 tot-net-out=74949 tot-cmds=15
+7492:S 03 May 2025 23:06:56.757 * Connecting to PRIMARY 127.0.0.1:21724
+7492:S 03 May 2025 23:06:56.757 * PRIMARY <-> REPLICA sync started
+7492:S 03 May 2025 23:06:56.757 # Error condition on socket for SYNC: Connection refused
+7492:S 03 May 2025 23:06:57.766 - DB 9: 1024 keys (0 volatile) in 1792 slots HT.
+7492:S 03 May 2025 23:06:57.766 * Connecting to PRIMARY 127.0.0.1:21724
+7492:S 03 May 2025 23:06:57.766 * PRIMARY <-> REPLICA sync started
+7492:S 03 May 2025 23:06:57.766 # Error condition on socket for SYNC: Connection refused
+7492:signal-handler (1746281219) Received SIGTERM scheduling shutdown...
+7492:S 03 May 2025 23:06:59.261 * User requested shutdown...
+7492:S 03 May 2025 23:06:59.261 * Removing the pid file.
+7492:S 03 May 2025 23:06:59.261 * Removing the unix socket file.
+7492:S 03 May 2025 23:06:59.261 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,497 @@
+### Starting server for test 
+86982:M 03 May 2025 23:04:09.225 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+86982:M 03 May 2025 23:04:09.225 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=86982, just started
+86982:M 03 May 2025 23:04:09.225 * Configuration loaded
+86982:M 03 May 2025 23:04:09.225 * Increased maximum number of open files to 10032 (it was originally set to 256).
+86982:M 03 May 2025 23:04:09.225 * monotonic clock: POSIX clock_gettime
+86982:M 03 May 2025 23:04:09.226 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27615
+ |###|   .+###############+.   |###|    PID: 86982                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+86982:M 03 May 2025 23:04:09.226 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+86982:M 03 May 2025 23:04:09.226 * Server initialized
+86982:M 03 May 2025 23:04:09.226 * Ready to accept connections tcp
+86982:M 03 May 2025 23:04:09.226 * Ready to accept connections unix
+86982:M 03 May 2025 23:04:09.368 - Accepted 127.0.0.1:59490
+86982:M 03 May 2025 23:04:09.368 - Client closed connection id=2 addr=127.0.0.1:59490 laddr=127.0.0.1:27615 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+86982:M 03 May 2025 23:04:09.391 - Accepted 127.0.0.1:59493
+### Starting test Check encoding - listpack in tests/unit/type/zset.tcl
+### Starting test ZSET basic ZADD and score update - listpack in tests/unit/type/zset.tcl
+### Starting test ZSET element can't be set to NaN with ZADD - listpack in tests/unit/type/zset.tcl
+### Starting test ZSET element can't be set to NaN with ZINCRBY - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD with options syntax error with incomplete pair - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD XX option without key - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD XX existing key - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD XX returns the number of elements actually added - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD XX updates existing elements score - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD GT updates existing elements when new scores are greater - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD LT updates existing elements when new scores are lower - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD GT XX updates existing elements when new scores are greater and skips new elements - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD LT XX updates existing elements when new scores are lower and skips new elements - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD XX and NX are not compatible - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD NX with non existing key - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD NX only add new elements without updating old ones - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD GT and NX are not compatible - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD LT and NX are not compatible - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD LT and GT are not compatible - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD INCR LT/GT replies with nill if score not updated - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD INCR LT/GT with inf - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD INCR works like ZINCRBY - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD INCR works with a single score-element pair - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD CH option changes return value to all changed elements - listpack in tests/unit/type/zset.tcl
+### Starting test ZINCRBY calls leading to NaN result in error - listpack in tests/unit/type/zset.tcl
+### Starting test ZINCRBY against invalid incr value - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD - Variadic version base case - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD - Return value is the number of actually added items - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD - Variadic version does not add nothing on single parsing err - listpack in tests/unit/type/zset.tcl
+### Starting test ZADD - Variadic version will raise error on missing arg - listpack in tests/unit/type/zset.tcl
+### Starting test ZINCRBY does not work variadic even if shares ZADD implementation - listpack in tests/unit/type/zset.tcl
+### Starting test ZCARD basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZREM removes key after last element is removed - listpack in tests/unit/type/zset.tcl
+### Starting test ZREM variadic version - listpack in tests/unit/type/zset.tcl
+### Starting test ZREM variadic version -- remove elements after key deletion - listpack in tests/unit/type/zset.tcl
+### Starting test ZRANGE basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZREVRANGE basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZRANK/ZREVRANK basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZRANK - after deletion - listpack in tests/unit/type/zset.tcl
+### Starting test ZINCRBY - can create a new sorted set - listpack in tests/unit/type/zset.tcl
+### Starting test ZINCRBY - increment and decrement - listpack in tests/unit/type/zset.tcl
+### Starting test ZINCRBY return value - listpack in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYSCORE/ZREVRANGEBYSCORE/ZCOUNT basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYSCORE with WITHSCORES - listpack in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYSCORE with LIMIT - listpack in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYSCORE with LIMIT and WITHSCORES - listpack in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYSCORE with non-value min or max - listpack in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYLEX/ZREVRANGEBYLEX/ZLEXCOUNT basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZLEXCOUNT advanced - listpack in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYLEX with LIMIT - listpack in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYLEX with invalid lex range specifiers - listpack in tests/unit/type/zset.tcl
+### Starting test ZREMRANGEBYSCORE basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZREMRANGEBYSCORE with non-value min or max - listpack in tests/unit/type/zset.tcl
+### Starting test ZREMRANGEBYRANK basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZREMRANGEBYLEX basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE against non-existing key doesn't set destination - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNION/ZINTER/ZINTERCARD/ZDIFF against non-existing key - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE with empty set - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNION/ZINTER/ZINTERCARD/ZDIFF with empty set - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNION/ZINTER/ZINTERCARD/ZDIFF with integer members - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE with weights - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNION with weights - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE with a regular set and weights - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE with AGGREGATE MIN - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNION/ZINTER with AGGREGATE MIN - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE with AGGREGATE MAX - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNION/ZINTER with AGGREGATE MAX - listpack in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZINTER basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZINTERCARD with illegal arguments in tests/unit/type/zset.tcl
+### Starting test ZINTERCARD basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZINTER RESP3 - listpack in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE with weights - listpack in tests/unit/type/zset.tcl
+### Starting test ZINTER with weights - listpack in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE with a regular set and weights - listpack in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE with AGGREGATE MIN - listpack in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE with AGGREGATE MAX - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE with +inf/-inf scores - listpack in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE with NaN weights - listpack in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE with +inf/-inf scores - listpack in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE with NaN weights - listpack in tests/unit/type/zset.tcl
+### Starting test ZDIFFSTORE basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZDIFF basics - listpack in tests/unit/type/zset.tcl
+### Starting test ZDIFFSTORE with a regular set - listpack in tests/unit/type/zset.tcl
+### Starting test ZDIFF subtracting set from itself - listpack in tests/unit/type/zset.tcl
+### Starting test ZDIFF algorithm 1 - listpack in tests/unit/type/zset.tcl
+### Starting test ZDIFF algorithm 2 - listpack in tests/unit/type/zset.tcl
+### Starting test ZDIFF fuzzing - listpack in tests/unit/type/zset.tcl
+### Starting test ZPOPMIN with the count 0 returns an empty array in tests/unit/type/zset.tcl
+### Starting test ZPOPMIN with negative count in tests/unit/type/zset.tcl
+### Starting test ZPOPMAX with the count 0 returns an empty array in tests/unit/type/zset.tcl
+### Starting test ZPOPMAX with negative count in tests/unit/type/zset.tcl
+### Starting test Basic ZPOPMIN/ZPOPMAX with a single key - listpack in tests/unit/type/zset.tcl
+### Starting test ZPOPMIN/ZPOPMAX with count - listpack in tests/unit/type/zset.tcl
+### Starting test Basic ZMPOP_MIN/ZMPOP_MAX with a single key - listpack in tests/unit/type/zset.tcl
+### Starting test ZMPOP_MIN/ZMPOP_MAX with count - listpack in tests/unit/type/zset.tcl
+### Starting test BZPOPMIN/BZPOPMAX with a single existing sorted set - listpack in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:12.770 - Accepted 127.0.0.1:59568
+86982:M 03 May 2025 23:04:12.771 - Client closed connection id=4 addr=127.0.0.1:59568 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmax user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=163 tot-net-out=117 tot-cmds=5
+### Starting test BZPOPMIN/BZPOPMAX with multiple existing sorted sets - listpack in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:12.772 - Accepted 127.0.0.1:59569
+86982:M 03 May 2025 23:04:12.773 - Client closed connection id=5 addr=127.0.0.1:59569 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=211 tot-net-out=121 tot-cmds=5
+### Starting test BZPOPMIN/BZPOPMAX second sorted set has members - listpack in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:12.774 - Accepted 127.0.0.1:59570
+86982:M 03 May 2025 23:04:12.775 - Client closed connection id=6 addr=127.0.0.1:59570 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=117 tot-net-out=63 tot-cmds=3
+### Starting test BZMPOP_MIN/BZMPOP_MAX with a single existing sorted set - listpack in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:12.775 - Accepted 127.0.0.1:59571
+86982:M 03 May 2025 23:04:12.776 - Client closed connection id=7 addr=127.0.0.1:59571 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=219 tot-net-out=149 tot-cmds=5
+### Starting test BZMPOP_MIN/BZMPOP_MAX with multiple existing sorted sets - listpack in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:12.776 - Accepted 127.0.0.1:59572
+86982:M 03 May 2025 23:04:12.777 - Client closed connection id=8 addr=127.0.0.1:59572 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=267 tot-net-out=153 tot-cmds=5
+### Starting test BZMPOP_MIN/BZMPOP_MAX second sorted set has members - listpack in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:12.778 - Accepted 127.0.0.1:59573
+86982:M 03 May 2025 23:04:12.778 - Client closed connection id=9 addr=127.0.0.1:59573 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=145 tot-net-out=79 tot-cmds=3
+### Starting test Basic ZPOPMIN/ZPOPMAX - listpack RESP3 in tests/unit/type/zset.tcl
+### Starting test ZPOPMIN/ZPOPMAX with count - listpack RESP3 in tests/unit/type/zset.tcl
+### Starting test Basic ZMPOP_MIN/ZMPOP_MAX - listpack RESP3 in tests/unit/type/zset.tcl
+### Starting test ZMPOP_MIN/ZMPOP_MAX with count - listpack RESP3 in tests/unit/type/zset.tcl
+### Starting test BZPOPMIN/BZPOPMAX - listpack RESP3 in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:12.783 - Accepted 127.0.0.1:59574
+86982:M 03 May 2025 23:04:12.783 - Client closed connection id=10 addr=127.0.0.1:59574 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmax user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=163 tot-net-out=117 tot-cmds=5
+### Starting test BZMPOP_MIN/BZMPOP_MAX - listpack RESP3 in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:12.784 - Accepted 127.0.0.1:59575
+86982:M 03 May 2025 23:04:12.785 - Client closed connection id=11 addr=127.0.0.1:59575 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=219 tot-net-out=149 tot-cmds=5
+### Starting test Check encoding - skiplist in tests/unit/type/zset.tcl
+### Starting test ZSET basic ZADD and score update - skiplist in tests/unit/type/zset.tcl
+### Starting test ZSET element can't be set to NaN with ZADD - skiplist in tests/unit/type/zset.tcl
+### Starting test ZSET element can't be set to NaN with ZINCRBY - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD with options syntax error with incomplete pair - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD XX option without key - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD XX existing key - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD XX returns the number of elements actually added - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD XX updates existing elements score - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD GT updates existing elements when new scores are greater - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD LT updates existing elements when new scores are lower - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD GT XX updates existing elements when new scores are greater and skips new elements - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD LT XX updates existing elements when new scores are lower and skips new elements - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD XX and NX are not compatible - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD NX with non existing key - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD NX only add new elements without updating old ones - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD GT and NX are not compatible - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD LT and NX are not compatible - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD LT and GT are not compatible - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD INCR LT/GT replies with nill if score not updated - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD INCR LT/GT with inf - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD INCR works like ZINCRBY - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD INCR works with a single score-element pair - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD CH option changes return value to all changed elements - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINCRBY calls leading to NaN result in error - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINCRBY against invalid incr value - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD - Variadic version base case - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD - Return value is the number of actually added items - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD - Variadic version does not add nothing on single parsing err - skiplist in tests/unit/type/zset.tcl
+### Starting test ZADD - Variadic version will raise error on missing arg - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINCRBY does not work variadic even if shares ZADD implementation - skiplist in tests/unit/type/zset.tcl
+### Starting test ZCARD basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZREM removes key after last element is removed - skiplist in tests/unit/type/zset.tcl
+### Starting test ZREM variadic version - skiplist in tests/unit/type/zset.tcl
+### Starting test ZREM variadic version -- remove elements after key deletion - skiplist in tests/unit/type/zset.tcl
+### Starting test ZRANGE basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZREVRANGE basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZRANK/ZREVRANK basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZRANK - after deletion - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINCRBY - can create a new sorted set - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINCRBY - increment and decrement - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINCRBY return value - skiplist in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYSCORE/ZREVRANGEBYSCORE/ZCOUNT basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYSCORE with WITHSCORES - skiplist in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYSCORE with LIMIT - skiplist in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYSCORE with LIMIT and WITHSCORES - skiplist in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYSCORE with non-value min or max - skiplist in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYLEX/ZREVRANGEBYLEX/ZLEXCOUNT basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZLEXCOUNT advanced - skiplist in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYLEX with LIMIT - skiplist in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYLEX with invalid lex range specifiers - skiplist in tests/unit/type/zset.tcl
+### Starting test ZREMRANGEBYSCORE basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZREMRANGEBYSCORE with non-value min or max - skiplist in tests/unit/type/zset.tcl
+### Starting test ZREMRANGEBYRANK basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZREMRANGEBYLEX basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE against non-existing key doesn't set destination - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNION/ZINTER/ZINTERCARD/ZDIFF against non-existing key - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE with empty set - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNION/ZINTER/ZINTERCARD/ZDIFF with empty set - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNION/ZINTER/ZINTERCARD/ZDIFF with integer members - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE with weights - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNION with weights - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE with a regular set and weights - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE with AGGREGATE MIN - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNION/ZINTER with AGGREGATE MIN - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE with AGGREGATE MAX - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNION/ZINTER with AGGREGATE MAX - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINTER basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINTERCARD with illegal arguments in tests/unit/type/zset.tcl
+### Starting test ZINTERCARD basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINTER RESP3 - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE with weights - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINTER with weights - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE with a regular set and weights - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE with AGGREGATE MIN - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE with AGGREGATE MAX - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE with +inf/-inf scores - skiplist in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE with NaN weights - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE with +inf/-inf scores - skiplist in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE with NaN weights - skiplist in tests/unit/type/zset.tcl
+### Starting test ZDIFFSTORE basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZDIFF basics - skiplist in tests/unit/type/zset.tcl
+### Starting test ZDIFFSTORE with a regular set - skiplist in tests/unit/type/zset.tcl
+### Starting test ZDIFF subtracting set from itself - skiplist in tests/unit/type/zset.tcl
+### Starting test ZDIFF algorithm 1 - skiplist in tests/unit/type/zset.tcl
+### Starting test ZDIFF algorithm 2 - skiplist in tests/unit/type/zset.tcl
+### Starting test ZDIFF fuzzing - skiplist in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:14.236 - DB 9: 23 keys (0 volatile) in 28 slots HT.
+### Starting test ZPOPMIN with the count 0 returns an empty array in tests/unit/type/zset.tcl
+### Starting test ZPOPMIN with negative count in tests/unit/type/zset.tcl
+### Starting test ZPOPMAX with the count 0 returns an empty array in tests/unit/type/zset.tcl
+### Starting test ZPOPMAX with negative count in tests/unit/type/zset.tcl
+### Starting test Basic ZPOPMIN/ZPOPMAX with a single key - skiplist in tests/unit/type/zset.tcl
+### Starting test ZPOPMIN/ZPOPMAX with count - skiplist in tests/unit/type/zset.tcl
+### Starting test Basic ZMPOP_MIN/ZMPOP_MAX with a single key - skiplist in tests/unit/type/zset.tcl
+### Starting test ZMPOP_MIN/ZMPOP_MAX with count - skiplist in tests/unit/type/zset.tcl
+### Starting test BZPOPMIN/BZPOPMAX with a single existing sorted set - skiplist in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:16.206 - Accepted 127.0.0.1:59696
+86982:M 03 May 2025 23:04:16.207 - Client closed connection id=12 addr=127.0.0.1:59696 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmax user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=163 tot-net-out=117 tot-cmds=5
+### Starting test BZPOPMIN/BZPOPMAX with multiple existing sorted sets - skiplist in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:16.207 - Accepted 127.0.0.1:59697
+### Starting test BZPOPMIN/BZPOPMAX second sorted set has members - skiplist in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:16.211 - Client closed connection id=13 addr=127.0.0.1:59697 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=211 tot-net-out=121 tot-cmds=5
+86982:M 03 May 2025 23:04:16.211 - Accepted 127.0.0.1:59698
+### Starting test BZMPOP_MIN/BZMPOP_MAX with a single existing sorted set - skiplist in tests/unit/type/zset.tcl
+3 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=117 tot-net-out=63 tot-cmds=3
+86982:M 03 May 2025 23:04:16.214 - Accepted 127.0.0.1:59699
+86982:M 03 May 2025 23:04:16.214 - Client closed connection id=15 addr=127.0.0.1:59699 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=219 tot-net-out=149 tot-cmds=5
+### Starting test BZMPOP_MIN/BZMPOP_MAX with multiple existing sorted sets - skiplist in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:16.215 - Accepted 127.0.0.1:59700
+86982:M 03 May 2025 23:04:16.216 - Client closed connection id=16 addr=127.0.0.1:59700 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=267 tot-net-out=153 tot-cmds=5
+### Starting test BZMPOP_MIN/BZMPOP_MAX second sorted set has members - skiplist in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:16.216 - Accepted 127.0.0.1:59701
+### Starting test Basic ZPOPMIN/ZPOPMAX - skiplist RESP3 in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:16.217 - Client closed connection id=17 addr=127.0.0.1:59701 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=145 tot-net-out=79 tot-cmds=3
+### Starting test ZPOPMIN/ZPOPMAX with count - skiplist RESP3 in tests/unit/type/zset.tcl
+### Starting test Basic ZMPOP_MIN/ZMPOP_MAX - skiplist RESP3 in tests/unit/type/zset.tcl
+### Starting test ZMPOP_MIN/ZMPOP_MAX with count - skiplist RESP3 in tests/unit/type/zset.tcl
+### Starting test BZPOPMIN/BZPOPMAX - skiplist RESP3 in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:16.222 - Accepted 127.0.0.1:59702
+### Starting test BZMPOP_MIN/BZMPOP_MAX - skiplist RESP3 in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:16.223 - Client closed connection id=18 addr=127.0.0.1:59702 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmax user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=163 tot-net-out=117 tot-cmds=5
+86982:M 03 May 2025 23:04:16.223 - Accepted 127.0.0.1:59703
+86982:M 03 May 2025 23:04:16.224 - Client closed connection id=19 addr=127.0.0.1:59703 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=219 tot-net-out=149 tot-cmds=5
+### Starting test ZPOP/ZMPOP against wrong type in tests/unit/type/zset.tcl
+### Starting test ZMPOP with illegal argument in tests/unit/type/zset.tcl
+### Starting test ZMPOP propagate as pop with count command to replica in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:16.226 - Accepted 127.0.0.1:59704
+86982:M 03 May 2025 23:04:16.226 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+86982:M 03 May 2025 23:04:16.226 * Replication backlog created, my new replication IDs are '5b2f704d24339253fcc59b2a94952d843a2347b0' and '0000000000000000000000000000000000000000'
+86982:M 03 May 2025 23:04:16.226 * Starting BGSAVE for SYNC with target: disk using: normal sync
+86982:M 03 May 2025 23:04:16.227 * Background saving started by pid 87927
+87927:C 03 May 2025 23:04:16.231 * DB saved on disk
+87927:C 03 May 2025 23:04:16.231 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+86982:M 03 May 2025 23:04:16.238 * Background saving terminated with success
+86982:M 03 May 2025 23:04:16.238 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+86982:M 03 May 2025 23:04:16.240 - Client closed connection id=20 addr=127.0.0.1:59704 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=622 tot-cmds=1
+86982:M 03 May 2025 23:04:16.240 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+86982:M 03 May 2025 23:04:16.240 - Accepted 127.0.0.1:59705
+### Starting test ZPOPMIN/ZPOPMAX readraw in RESP3 in tests/unit/type/zset.tcl
+### Starting test BZPOPMIN/BZPOPMAX readraw in RESP3 in tests/unit/type/zset.tcl
+### Starting test ZMPOP readraw in RESP3 in tests/unit/type/zset.tcl
+### Starting test BZMPOP readraw in RESP3 in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:16.641 - Client closed connection id=21 addr=127.0.0.1:59705 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=52 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=bzmpop user=default redir=-1 resp=3 lib-name= lib-ver= tot-net-in=497 tot-net-out=316 tot-cmds=10
+86982:M 03 May 2025 23:04:16.641 - Accepted 127.0.0.1:59712
+### Starting test ZPOPMIN/ZPOPMAX readraw in RESP2 in tests/unit/type/zset.tcl
+### Starting test BZPOPMIN/BZPOPMAX readraw in RESP2 in tests/unit/type/zset.tcl
+### Starting test ZMPOP readraw in RESP2 in tests/unit/type/zset.tcl
+### Starting test BZMPOP readraw in RESP2 in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:17.044 - Client closed connection id=22 addr=127.0.0.1:59712 laddr=127.0.0.1:27615 fd=13 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=58 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=497 tot-net-out=340 tot-cmds=10
+### Starting test ZINTERSTORE regression with two sets, intset+hashtable in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE regression, should not create NaN in scores in tests/unit/type/zset.tcl
+### Starting test ZINTERSTORE #516 regression, mixed sets and ziplist zsets in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE result is sorted in tests/unit/type/zset.tcl
+### Starting test ZUNIONSTORE/ZINTERSTORE/ZDIFFSTORE error if using WITHSCORES  in tests/unit/type/zset.tcl
+### Starting test ZMSCORE retrieve in tests/unit/type/zset.tcl
+### Starting test ZMSCORE retrieve from empty set in tests/unit/type/zset.tcl
+### Starting test ZMSCORE retrieve with missing member in tests/unit/type/zset.tcl
+### Starting test ZMSCORE retrieve single member in tests/unit/type/zset.tcl
+### Starting test ZMSCORE retrieve requires one or more members in tests/unit/type/zset.tcl
+### Starting test ZSET commands don't accept the empty strings as valid score in tests/unit/type/zset.tcl
+### Starting test zunionInterDiffGenericCommand at least 1 input key in tests/unit/type/zset.tcl
+### Starting test ZSCORE - listpack in tests/unit/type/zset.tcl
+### Starting test ZMSCORE - listpack in tests/unit/type/zset.tcl
+### Starting test ZSCORE after a DEBUG RELOAD - listpack in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:17.095 * DB saved on disk
+86982:M 03 May 2025 23:04:17.095 * Loading RDB produced by Valkey version 255.255.255
+86982:M 03 May 2025 23:04:17.095 * RDB age 0 seconds
+86982:M 03 May 2025 23:04:17.095 * RDB memory usage when created 2.50 Mb
+86982:M 03 May 2025 23:04:17.096 * Done loading RDB, keys loaded: 38, keys expired: 0.
+86982:M 03 May 2025 23:04:17.096 * DB reloaded by DEBUG RELOAD
+### Starting test ZSET sorting stresser - listpack in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYSCORE fuzzy test, 100 ranges in 128 element sorted set - listpack in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYLEX fuzzy test, 100 ranges in 128 element sorted set - listpack in tests/unit/type/zset.tcl
+### Starting test ZREMRANGEBYLEX fuzzy test, 100 ranges in 128 element sorted set - listpack in tests/unit/type/zset.tcl
+### Starting test ZSETs skiplist implementation backlink consistency test - listpack in tests/unit/type/zset.tcl
+### Starting test ZSETs ZRANK augmented skip list stress testing - listpack in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:19.245 - DB 9: 42 keys (0 volatile) in 56 slots HT.
+### Starting test BZPOPMIN, ZADD + DEL should not awake blocked client in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:19.833 - Accepted 127.0.0.1:59866
+86982:M 03 May 2025 23:04:19.833 - Client closed connection id=23 addr=127.0.0.1:59866 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=35 tot-cmds=2
+### Starting test BZPOPMIN, ZADD + DEL + SET should not awake blocked client in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:19.833 - Accepted 127.0.0.1:59867
+### Starting test BZMPOP_MIN, ZADD + DEL should not awake blocked client in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:19.834 - Client closed connection id=24 addr=127.0.0.1:59867 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=35 tot-cmds=2
+86982:M 03 May 2025 23:04:19.834 - Accepted 127.0.0.1:59868
+86982:M 03 May 2025 23:04:19.834 - Client closed connection id=25 addr=127.0.0.1:59868 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=90 tot-net-out=43 tot-cmds=2
+### Starting test BZMPOP_MIN, ZADD + DEL + SET should not awake blocked client in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:19.834 - Accepted 127.0.0.1:59869
+86982:M 03 May 2025 23:04:19.835 - Client closed connection id=26 addr=127.0.0.1:59869 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=90 tot-net-out=43 tot-cmds=2
+### Starting test BZPOPMIN unblock but the key is expired and then block again - reprocessing command in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:19.835 - Accepted 127.0.0.1:59870
+86982:M 03 May 2025 23:04:20.845 - Client closed connection id=27 addr=127.0.0.1:59870 laddr=127.0.0.1:27615 fd=13 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=5 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=61 tot-net-out=10 tot-cmds=2
+### Starting test BZPOPMIN with same key multiple times should work in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:20.853 - Accepted 127.0.0.1:59968
+86982:M 03 May 2025 23:04:20.860 - Client closed connection id=28 addr=127.0.0.1:59968 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=299 tot-net-out=121 tot-cmds=5
+### Starting test MULTI/EXEC is isolated from the point of view of BZPOPMIN in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:20.872 - Accepted 127.0.0.1:59974
+### Starting test BZPOPMIN with variadic ZADD in tests/unit/type/zset.tcl
+.0.0.1:59974 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=33 tot-cmds=2
+86982:M 03 May 2025 23:04:20.883 - Accepted 127.0.0.1:59980
+### Starting test BZPOPMIN with zero timeout should block indefinitely in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:20.886 - Client closed connection id=30 addr=127.0.0.1:59980 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=36 tot-cmds=2
+86982:M 03 May 2025 23:04:20.889 - Accepted 127.0.0.1:59986
+86982:M 03 May 2025 23:04:21.899 - Client closed connection id=31 addr=127.0.0.1:59986 laddr=127.0.0.1:27615 fd=13 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=30 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=35 tot-cmds=2
+### Starting test MULTI/EXEC is isolated from the point of view of BZMPOP_MIN in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:21.900 - Accepted 127.0.0.1:60036
+### Starting test BZMPOP_MIN with variadic ZADD in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:21.902 - Client closed connection id=32 addr=127.0.0.1:60036 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=90 tot-net-out=41 tot-cmds=2
+86982:M 03 May 2025 23:04:21.902 - Accepted 127.0.0.1:60037
+86982:M 03 May 2025 23:04:21.904 - Client closed connection id=33 addr=127.0.0.1:60037 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=90 tot-net-out=44 tot-cmds=2
+### Starting test BZMPOP_MIN with zero timeout should block indefinitely in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:21.905 - Accepted 127.0.0.1:60038
+86982:M 03 May 2025 23:04:22.909 - Client closed connection id=34 addr=127.0.0.1:60038 laddr=127.0.0.1:27615 fd=13 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=38 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=90 tot-net-out=43 tot-cmds=2
+### Starting test ZSCORE - skiplist in tests/unit/type/zset.tcl
+### Starting test ZMSCORE - skiplist in tests/unit/type/zset.tcl
+### Starting test ZSCORE after a DEBUG RELOAD - skiplist in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:22.967 * DB saved on disk
+86982:M 03 May 2025 23:04:22.967 * Loading RDB produced by Valkey version 255.255.255
+86982:M 03 May 2025 23:04:22.967 * RDB age 0 seconds
+86982:M 03 May 2025 23:04:22.967 * RDB memory usage when created 2.55 Mb
+86982:M 03 May 2025 23:04:22.967 * Done loading RDB, keys loaded: 1, keys expired: 0.
+86982:M 03 May 2025 23:04:22.967 * DB reloaded by DEBUG RELOAD
+### Starting test ZSET sorting stresser - skiplist in tests/unit/type/zset.tcl
+### Starting test ZRANGEBYSCORE fuzzy test, 100 ranges in 100 element sorted set - skiplist in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:24.468 - DB 9: 3 keys (0 volatile) in 7 slots HT.
+### Starting test ZRANGEBYLEX fuzzy test, 100 ranges in 100 element sorted set - skiplist in tests/unit/type/zset.tcl
+### Starting test ZREMRANGEBYLEX fuzzy test, 100 ranges in 100 element sorted set - skiplist in tests/unit/type/zset.tcl
+### Starting test ZSETs skiplist implementation backlink consistency test - skiplist in tests/unit/type/zset.tcl
+### Starting test ZSETs ZRANK augmented skip list stress testing - skiplist in tests/unit/type/zset.tcl
+### Starting test BZPOPMIN, ZADD + DEL should not awake blocked client in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:25.958 - Accepted 127.0.0.1:60190
+86982:M 03 May 2025 23:04:25.960 - Client closed connection id=35 addr=127.0.0.1:60190 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=35 tot-cmds=2
+### Starting test BZPOPMIN, ZADD + DEL + SET should not awake blocked client in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:25.960 - Accepted 127.0.0.1:60191
+### Starting test BZMPOP_MIN, ZADD + DEL should not awake blocked client in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:25.961 - Client closed connection id=36 addr=127.0.0.1:60191 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=35 tot-cmds=2
+86982:M 03 May 2025 23:04:25.961 - Accepted 127.0.0.1:60192
+86982:M 03 May 2025 23:04:25.962 - Client closed connection id=37 addr=127.0.0.1:60192 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=90 tot-net-out=43 tot-cmds=2
+### Starting test BZMPOP_MIN, ZADD + DEL + SET should not awake blocked client in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:25.963 - Accepted 127.0.0.1:60193
+86982:M 03 May 2025 23:04:25.964 - Client closed connection id=38 addr=127.0.0.1:60193 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=90 tot-net-out=43 tot-cmds=2
+### Starting test BZPOPMIN unblock but the key is expired and then block again - reprocessing command in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:25.965 - Accepted 127.0.0.1:60194
+86982:M 03 May 2025 23:04:26.977 - Client closed connection id=39 addr=127.0.0.1:60194 laddr=127.0.0.1:27615 fd=13 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=5 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=61 tot-net-out=10 tot-cmds=2
+### Starting test BZPOPMIN with same key multiple times should work in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:26.992 - Accepted 127.0.0.1:60314
+86982:M 03 May 2025 23:04:26.999 - Client closed connection id=40 addr=127.0.0.1:60314 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=299 tot-net-out=121 tot-cmds=5
+### Starting test MULTI/EXEC is isolated from the point of view of BZPOPMIN in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:27.007 - Accepted 127.0.0.1:60317
+86982:M 03 May 2025 23:04:27.019 - Client closed connection id=41 addr=127.0.0.1:60317 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=33 tot-cmds=2
+### Starting test BZPOPMIN with variadic ZADD in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:27.030 - Accepted 127.0.0.1:60318
+86982:M 03 May 2025 23:04:27.032 - Client closed connection id=42 addr=127.0.0.1:60318 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=36 tot-cmds=2
+### Starting test BZPOPMIN with zero timeout should block indefinitely in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:27.037 - Accepted 127.0.0.1:60319
+86982:M 03 May 2025 23:04:28.045 - Client closed connection id=43 addr=127.0.0.1:60319 laddr=127.0.0.1:27615 fd=13 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=30 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=bzpopmin user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=58 tot-net-out=35 tot-cmds=2
+### Starting test MULTI/EXEC is isolated from the point of view of BZMPOP_MIN in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:28.045 - Accepted 127.0.0.1:60344
+86982:M 03 May 2025 23:04:28.045 - Client closed connection id=44 addr=127.0.0.1:60344 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=90 tot-net-out=41 tot-cmds=2
+### Starting test BZMPOP_MIN with variadic ZADD in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:28.046 - Accepted 127.0.0.1:60345
+86982:M 03 May 2025 23:04:28.046 - Client closed connection id=45 addr=127.0.0.1:60345 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=90 tot-net-out=44 tot-cmds=2
+### Starting test BZMPOP_MIN with zero timeout should block indefinitely in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:28.046 - Accepted 127.0.0.1:60346
+86982:M 03 May 2025 23:04:29.052 - Client closed connection id=46 addr=127.0.0.1:60346 laddr=127.0.0.1:27615 fd=13 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=38 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=90 tot-net-out=43 tot-cmds=2
+### Starting test BZPOP/BZMPOP against wrong type in tests/unit/type/zset.tcl
+### Starting test BZMPOP with illegal argument in tests/unit/type/zset.tcl
+### Starting test BZMPOP with multiple blocked clients in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:29.107 - Accepted 127.0.0.1:60477
+86982:M 03 May 2025 23:04:29.107 - Accepted 127.0.0.1:60478
+86982:M 03 May 2025 23:04:29.108 - Accepted 127.0.0.1:60479
+86982:M 03 May 2025 23:04:29.108 - Accepted 127.0.0.1:60480
+### Starting test BZMPOP propagate as pop with count command to replica in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:29.117 - Client closed connection id=47 addr=127.0.0.1:60477 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=112 tot-net-out=46 tot-cmds=2
+86982:M 03 May 2025 23:04:29.117 - Client closed connection id=48 addr=127.0.0.1:60478 laddr=127.0.0.1:27615 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=113 tot-net-out=100 tot-cmds=2
+86982:M 03 May 2025 23:04:29.117 - Client closed connection id=49 addr=127.0.0.1:60479 laddr=127.0.0.1:27615 fd=15 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=113 tot-net-out=120 tot-cmds=2
+86982:M 03 May 2025 23:04:29.117 - Client closed connection id=50 addr=127.0.0.1:60480 laddr=127.0.0.1:27615 fd=16 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=112 tot-net-out=48 tot-cmds=2
+86982:M 03 May 2025 23:04:29.117 - Accepted 127.0.0.1:60481
+86982:M 03 May 2025 23:04:29.118 - Accepted 127.0.0.1:60482
+86982:M 03 May 2025 23:04:29.118 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+86982:M 03 May 2025 23:04:29.118 * Starting BGSAVE for SYNC with target: disk using: normal sync
+86982:M 03 May 2025 23:04:29.120 * Background saving started by pid 89756
+89756:C 03 May 2025 23:04:29.123 * DB saved on disk
+89756:C 03 May 2025 23:04:29.124 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+86982:M 03 May 2025 23:04:29.198 * Background saving terminated with success
+86982:M 03 May 2025 23:04:29.198 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+86982:M 03 May 2025 23:04:29.300 - Reading from client: Connection reset by peer
+86982:M 03 May 2025 23:04:29.300 - Client closed connection id=52 addr=127.0.0.1:60482 laddr=127.0.0.1:27615 fd=14 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=660 tot-cmds=1
+86982:M 03 May 2025 23:04:29.300 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test BZMPOP should not blocks on non key arguments - #10762 in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:29.301 - Accepted 127.0.0.1:60489
+86982:M 03 May 2025 23:04:29.303 - Accepted 127.0.0.1:60490
+86982:M 03 May 2025 23:04:29.314 - Client closed connection id=53 addr=127.0.0.1:60489 laddr=127.0.0.1:27615 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=93 tot-net-out=46 tot-cmds=2
+86982:M 03 May 2025 23:04:29.314 - Client closed connection id=54 addr=127.0.0.1:60490 laddr=127.0.0.1:27615 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=bzmpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=107 tot-net-out=48 tot-cmds=2
+### Starting test ZSET skiplist order consistency when elements are moved in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:29.700 - DB 9: 9 keys (0 volatile) in 14 slots HT.
+### Starting test ZRANGESTORE basic in tests/unit/type/zset.tcl
+### Starting test ZRANGESTORE RESP3 in tests/unit/type/zset.tcl
+### Starting test ZRANGESTORE range in tests/unit/type/zset.tcl
+### Starting test ZRANGESTORE BYLEX in tests/unit/type/zset.tcl
+### Starting test ZRANGESTORE BYSCORE in tests/unit/type/zset.tcl
+### Starting test ZRANGESTORE BYSCORE LIMIT in tests/unit/type/zset.tcl
+### Starting test ZRANGESTORE BYSCORE REV LIMIT in tests/unit/type/zset.tcl
+### Starting test ZRANGE BYSCORE REV LIMIT in tests/unit/type/zset.tcl
+### Starting test ZRANGESTORE - src key missing in tests/unit/type/zset.tcl
+### Starting test ZRANGESTORE - src key wrong type in tests/unit/type/zset.tcl
+### Starting test ZRANGESTORE - empty range in tests/unit/type/zset.tcl
+### Starting test ZRANGESTORE BYLEX - empty range in tests/unit/type/zset.tcl
+### Starting test ZRANGESTORE BYSCORE - empty range in tests/unit/type/zset.tcl
+### Starting test ZRANGE BYLEX in tests/unit/type/zset.tcl
+### Starting test ZRANGESTORE invalid syntax in tests/unit/type/zset.tcl
+### Starting test ZRANGESTORE with zset-max-listpack-entries 0 #10767 case in tests/unit/type/zset.tcl
+### Starting test ZRANGESTORE with zset-max-listpack-entries 1 dst key should use skiplist encoding in tests/unit/type/zset.tcl
+### Starting test ZRANGE invalid syntax in tests/unit/type/zset.tcl
+### Starting test ZRANDMEMBER - listpack in tests/unit/type/zset.tcl
+### Starting test ZRANDMEMBER - skiplist in tests/unit/type/zset.tcl
+### Starting test ZRANDMEMBER with RESP3 in tests/unit/type/zset.tcl
+### Starting test ZRANDMEMBER count of 0 is handled correctly in tests/unit/type/zset.tcl
+### Starting test ZRANDMEMBER with <count> against non existing key in tests/unit/type/zset.tcl
+### Starting test ZRANDMEMBER count overflow in tests/unit/type/zset.tcl
+### Starting test ZRANDMEMBER count of 0 is handled correctly - emptyarray in tests/unit/type/zset.tcl
+### Starting test ZRANDMEMBER with <count> against non existing key - emptyarray in tests/unit/type/zset.tcl
+### Starting test ZRANDMEMBER with <count> - skiplist in tests/unit/type/zset.tcl
+### Starting test ZRANDMEMBER with <count> - listpack in tests/unit/type/zset.tcl
+### Starting test zset score double range in tests/unit/type/zset.tcl
+### Starting test zunionInterDiffGenericCommand acts on SET and ZSET in tests/unit/type/zset.tcl
+### Starting test ZADD overflows the maximum allowed elements in a listpack - single in tests/unit/type/zset.tcl
+### Starting test ZADD overflows the maximum allowed elements in a listpack - multiple in tests/unit/type/zset.tcl
+### Starting test ZADD overflows the maximum allowed elements in a listpack - single_multiple in tests/unit/type/zset.tcl
+86982:M 03 May 2025 23:04:30.745 - Client closed connection id=3 addr=127.0.0.1:59493 laddr=127.0.0.1:27615 fd=12 name= age=21 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=8192 rbp=7007 obl=0 oll=0 omem=0 tot-mem=25600 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7996959 tot-net-out=4592516 tot-cmds=142886
+86982:signal-handler (1746281071) Received SIGTERM scheduling shutdown...
+86982:M 03 May 2025 23:04:31.889 * User requested shutdown...
+86982:M 03 May 2025 23:04:31.890 * Removing the pid file.
+86982:M 03 May 2025 23:04:31.890 * Removing the unix socket file.
+86982:M 03 May 2025 23:04:31.890 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,91 @@
+### Starting server for test 
+84512:M 03 May 2025 23:03:49.268 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+84512:M 03 May 2025 23:03:49.268 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=84512, just started
+84512:M 03 May 2025 23:03:49.268 * Configuration loaded
+84512:M 03 May 2025 23:03:49.268 * Increased maximum number of open files to 10032 (it was originally set to 256).
+84512:M 03 May 2025 23:03:49.268 * monotonic clock: POSIX clock_gettime
+84512:M 03 May 2025 23:03:49.268 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21613
+ |###|   .+###############+.   |###|    PID: 84512                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+84512:M 03 May 2025 23:03:49.268 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+84512:M 03 May 2025 23:03:49.268 * Server initialized
+84512:M 03 May 2025 23:03:49.268 * Ready to accept connections tcp
+84512:M 03 May 2025 23:03:49.268 * Ready to accept connections unix
+84512:M 03 May 2025 23:03:49.412 - Accepted 127.0.0.1:58952
+84512:M 03 May 2025 23:03:49.412 - Client closed connection id=2 addr=127.0.0.1:58952 laddr=127.0.0.1:21613 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+84512:M 03 May 2025 23:03:49.420 - Accepted 127.0.0.1:58953
+### Starting test BITCOUNT against wrong type in tests/unit/bitops.tcl
+### Starting test BITCOUNT returns 0 against non existing key in tests/unit/bitops.tcl
+### Starting test BITCOUNT returns 0 with out of range indexes in tests/unit/bitops.tcl
+### Starting test BITCOUNT returns 0 with negative indexes where start > end in tests/unit/bitops.tcl
+### Starting test BITCOUNT against test vector #1 in tests/unit/bitops.tcl
+### Starting test BITCOUNT against test vector #2 in tests/unit/bitops.tcl
+### Starting test BITCOUNT against test vector #3 in tests/unit/bitops.tcl
+### Starting test BITCOUNT against test vector #4 in tests/unit/bitops.tcl
+### Starting test BITCOUNT against test vector #5 in tests/unit/bitops.tcl
+### Starting test BITCOUNT fuzzing without start/end in tests/unit/bitops.tcl
+### Starting test BITCOUNT fuzzing with start/end in tests/unit/bitops.tcl
+### Starting test BITCOUNT with just start in tests/unit/bitops.tcl
+### Starting test BITCOUNT with start, end in tests/unit/bitops.tcl
+### Starting test BITCOUNT with illegal arguments in tests/unit/bitops.tcl
+### Starting test BITCOUNT against non-integer value in tests/unit/bitops.tcl
+### Starting test BITCOUNT regression test for github issue #582 in tests/unit/bitops.tcl
+### Starting test BITCOUNT misaligned prefix in tests/unit/bitops.tcl
+### Starting test BITCOUNT misaligned prefix + full words + remainder in tests/unit/bitops.tcl
+### Starting test BITOP NOT (empty string) in tests/unit/bitops.tcl
+### Starting test BITOP NOT (known string) in tests/unit/bitops.tcl
+### Starting test BITOP where dest and target are the same key in tests/unit/bitops.tcl
+### Starting test BITOP AND|OR|XOR don't change the string with single input key in tests/unit/bitops.tcl
+### Starting test BITOP missing key is considered a stream of zero in tests/unit/bitops.tcl
+### Starting test BITOP shorter keys are zero-padded to the key with max length in tests/unit/bitops.tcl
+### Starting test BITOP and fuzzing in tests/unit/bitops.tcl
+### Starting test BITOP or fuzzing in tests/unit/bitops.tcl
+### Starting test BITOP xor fuzzing in tests/unit/bitops.tcl
+### Starting test BITOP NOT fuzzing in tests/unit/bitops.tcl
+### Starting test BITOP with integer encoded source objects in tests/unit/bitops.tcl
+### Starting test BITOP with non string source key in tests/unit/bitops.tcl
+### Starting test BITOP with empty string after non empty string (issue #529) in tests/unit/bitops.tcl
+### Starting test BITPOS against wrong type in tests/unit/bitops.tcl
+### Starting test BITPOS will illegal arguments in tests/unit/bitops.tcl
+### Starting test BITPOS against non-integer value in tests/unit/bitops.tcl
+### Starting test BITPOS bit=0 with empty key returns 0 in tests/unit/bitops.tcl
+### Starting test BITPOS bit=1 with empty key returns -1 in tests/unit/bitops.tcl
+### Starting test BITPOS bit=0 with string less than 1 word works in tests/unit/bitops.tcl
+### Starting test BITPOS bit=1 with string less than 1 word works in tests/unit/bitops.tcl
+### Starting test BITPOS bit=0 starting at unaligned address in tests/unit/bitops.tcl
+### Starting test BITPOS bit=1 starting at unaligned address in tests/unit/bitops.tcl
+### Starting test BITPOS bit=0 unaligned+full word+reminder in tests/unit/bitops.tcl
+### Starting test BITPOS bit=1 unaligned+full word+reminder in tests/unit/bitops.tcl
+### Starting test BITPOS bit=1 returns -1 if string is all 0 bits in tests/unit/bitops.tcl
+### Starting test BITPOS bit=0 works with intervals in tests/unit/bitops.tcl
+### Starting test BITPOS bit=1 works with intervals in tests/unit/bitops.tcl
+### Starting test BITPOS bit=0 changes behavior if end is given in tests/unit/bitops.tcl
+### Starting test SETBIT/BITFIELD only increase dirty when the value changed in tests/unit/bitops.tcl
+### Starting test BITPOS bit=1 fuzzy testing using SETBIT in tests/unit/bitops.tcl
+### Starting test BITPOS bit=0 fuzzy testing using SETBIT in tests/unit/bitops.tcl
+### Starting test BITPOS/BITCOUNT fuzzy testing using SETBIT in tests/unit/bitops.tcl
+84512:M 03 May 2025 23:03:51.494 - Client closed connection id=3 addr=127.0.0.1:58953 laddr=127.0.0.1:21613 fd=12 name= age=2 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=setbit user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1069959 tot-net-out=123372 tot-cmds=10058
+84512:M 03 May 2025 23:03:54.306 - DB 9: 8 keys (0 volatile) in 14 slots HT.
+84512:signal-handler (1746281035) Received SIGTERM scheduling shutdown...
+84512:M 03 May 2025 23:03:55.346 * User requested shutdown...
+84512:M 03 May 2025 23:03:55.346 * Removing the pid file.
+84512:M 03 May 2025 23:03:55.346 * Removing the unix socket file.
+84512:M 03 May 2025 23:03:55.346 # Valkey is now ready to exit, bye bye...

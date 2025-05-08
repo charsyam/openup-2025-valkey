@@ -1,0 +1,53 @@
+### Starting server for test 
+95603:M 03 May 2025 23:05:17.146 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+95603:M 03 May 2025 23:05:17.150 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+95603:M 03 May 2025 23:05:17.164 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=95603, just started
+95603:M 03 May 2025 23:05:17.164 * Configuration loaded
+95603:M 03 May 2025 23:05:17.164 * Increased maximum number of open files to 10032 (it was originally set to 256).
+95603:M 03 May 2025 23:05:17.167 * monotonic clock: POSIX clock_gettime
+95603:M 03 May 2025 23:05:17.167 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25139
+ |###|   .+###############+.   |###|    PID: 95603                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+95603:M 03 May 2025 23:05:17.167 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+95603:M 03 May 2025 23:05:17.168 * No cluster configuration found, I'm a02de95b1b415077e65c47292bf3bfbad1b557df
+95603:M 03 May 2025 23:05:17.174 * Server initialized
+95603:M 03 May 2025 23:05:17.174 * Ready to accept connections tcp
+95603:M 03 May 2025 23:05:17.174 * Ready to accept connections unix
+95603:M 03 May 2025 23:05:17.304 - Accepted 127.0.0.1:64824
+95603:M 03 May 2025 23:05:17.310 - Client closed connection id=2 addr=127.0.0.1:64824 laddr=127.0.0.1:25139 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+95603:M 03 May 2025 23:05:17.340 - Accepted 127.0.0.1:64836
+95603:M 03 May 2025 23:05:18.535 - Accepted 127.0.0.1:65467
+### Starting test Functions are added to new node on valkey-cli cluster add-node in tests/unit/cluster/cli.tcl
+95603:M 03 May 2025 23:05:19.199 # Cluster is currently down: I am part of a minority partition.
+95603:M 03 May 2025 23:05:21.742 - Accepted 127.0.0.1:51245
+95603:M 03 May 2025 23:05:21.743 # Missing implement of connection type tls
+95603:M 03 May 2025 23:05:21.744 - Client closed connection id=5 addr=127.0.0.1:51245 laddr=127.0.0.1:25139 fd=16 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=function|list user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=111 tot-net-out=12371 tot-cmds=5
+### Starting test Check for memory leaks (pid 95808) in tests/unit/cluster/cli.tcl
+### Starting test Check for memory leaks (pid 95734) in tests/unit/cluster/cli.tcl
+### Starting test Check for memory leaks (pid 95689) in tests/unit/cluster/cli.tcl
+### Starting test Check for memory leaks (pid 95642) in tests/unit/cluster/cli.tcl
+95603:M 03 May 2025 23:05:27.319 - Client closed connection id=3 addr=127.0.0.1:64836 laddr=127.0.0.1:25139 fd=14 name= age=10 idle=10 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=NULL user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=0 tot-net-out=0 tot-cmds=0
+95603:signal-handler (1746281128) Received SIGTERM scheduling shutdown...
+95603:M 03 May 2025 23:05:28.384 * User requested shutdown...
+95603:M 03 May 2025 23:05:28.385 * Removing the pid file.
+95603:M 03 May 2025 23:05:28.385 * Saving the cluster configuration file before exiting.
+95603:M 03 May 2025 23:05:28.402 * Removing the unix socket file.
+95603:M 03 May 2025 23:05:28.417 # Valkey is now ready to exit, bye bye...

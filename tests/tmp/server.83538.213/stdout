@@ -1,0 +1,70 @@
+### Starting server for test replica actually flushes db if use diskless load with flush-before-load dual-channel-replication-enabled=yes in tests/integration/replication.tcl
+19780:M 03 May 2025 23:10:21.368 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+19780:M 03 May 2025 23:10:21.368 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=19780, just started
+19780:M 03 May 2025 23:10:21.368 * Configuration loaded
+19780:M 03 May 2025 23:10:21.368 * Increased maximum number of open files to 10032 (it was originally set to 256).
+19780:M 03 May 2025 23:10:21.368 * monotonic clock: POSIX clock_gettime
+19780:M 03 May 2025 23:10:21.368 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27717
+ |###|   .+###############+.   |###|    PID: 19780                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+19780:M 03 May 2025 23:10:21.368 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+19780:M 03 May 2025 23:10:21.369 * Server initialized
+19780:M 03 May 2025 23:10:21.369 * Ready to accept connections tcp
+19780:M 03 May 2025 23:10:21.369 * Ready to accept connections unix
+19780:M 03 May 2025 23:10:21.489 - Accepted 127.0.0.1:50511
+19780:M 03 May 2025 23:10:21.489 - Client closed connection id=2 addr=127.0.0.1:50511 laddr=127.0.0.1:27717 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+19780:M 03 May 2025 23:10:21.496 - Accepted 127.0.0.1:50512
+19780:S 03 May 2025 23:10:21.641 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+19780:S 03 May 2025 23:10:21.641 * Connecting to PRIMARY 127.0.0.1:27718
+19780:S 03 May 2025 23:10:21.641 * PRIMARY <-> REPLICA sync started
+19780:S 03 May 2025 23:10:21.641 * REPLICAOF 127.0.0.1:27718 enabled (user request from 'id=3 addr=127.0.0.1:50512 laddr=127.0.0.1:27717 fd=12 name= user=default lib-name= lib-ver=')
+19780:S 03 May 2025 23:10:21.641 * Non blocking connect for SYNC fired the event.
+19780:S 03 May 2025 23:10:21.641 * Primary replied to PING, replication can continue...
+19780:S 03 May 2025 23:10:21.641 * Trying a partial resynchronization (request 9d8f5e47843cd77bd576cf16968f07863fc08ffc:1).
+19780:S 03 May 2025 23:10:21.641 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+19780:S 03 May 2025 23:10:21.642 * Dual channel replication: Trying a partial resynchronization using main channel (request 82e6acd59d13c8bd92c4ad599dc7a85ea84ff035:1).
+19780:S 03 May 2025 23:10:21.642 * Dual channel replication: PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization, RDB load in background.
+19780:S 03 May 2025 23:10:21.642 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to parser
+19780:S 03 May 2025 23:10:21.642 * Discarding previously cached primary state.
+19780:S 03 May 2025 23:10:21.642 * PRIMARY <-> REPLICA sync: Flushing old data
+19780:S 03 May 2025 23:10:21.643 * PRIMARY <-> REPLICA sync: Loading DB in memory
+19780:S 03 May 2025 23:10:21.643 * Loading RDB produced by Valkey version 255.255.255
+19780:S 03 May 2025 23:10:21.643 * RDB age 0 seconds
+19780:S 03 May 2025 23:10:21.643 * RDB memory usage when created 13.77 Mb
+19780:S 03 May 2025 23:10:21.862 # Short read or OOM loading DB. Unrecoverable error, aborting now.
+19780:S 03 May 2025 23:10:21.862 # Internal error in RDB reading offset 2000508, function at rdb.c:3415 -> Unexpected EOF reading RDB file. Failure loading rdb format from socket, assuming connection error, resuming operation.
+19780:S 03 May 2025 23:10:21.862 # Failed trying to load the PRIMARY synchronization DB from socket, check server logs.
+19780:S 03 May 2025 23:10:21.863 * PRIMARY <-> REPLICA sync: Discarding the half-loaded data
+19780:S 03 May 2025 23:10:21.863 * Dual channel replication: Aborting dual channel sync
+19780:S 03 May 2025 23:10:21.863 * Reconnecting to PRIMARY 127.0.0.1:27718 after failure
+19780:S 03 May 2025 23:10:21.863 * PRIMARY <-> REPLICA sync started
+19780:S 03 May 2025 23:10:21.863 * Non blocking connect for SYNC fired the event.
+19780:S 03 May 2025 23:10:21.863 * Primary replied to PING, replication can continue...
+19780:S 03 May 2025 23:10:21.863 * Partial resynchronization not possible (no cached primary)
+19780:S 03 May 2025 23:10:21.863 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+19780:S 03 May 2025 23:10:21.914 # Failed to read response from the server: Undefined error: 0
+19780:S 03 May 2025 23:10:21.914 * Dual channel replication: Aborting dual channel sync
+19780:S 03 May 2025 23:10:21.924 - Client closed connection id=3 addr=127.0.0.1:50512 laddr=127.0.0.1:27717 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6656 rbp=6593 obl=0 oll=0 omem=0 tot-mem=24064 events=r cmd=dbsize user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=393 tot-net-out=19184 tot-cmds=11
+19780:signal-handler (1746281421) Received SIGTERM scheduling shutdown...
+19780:S 03 May 2025 23:10:21.964 * User requested shutdown...
+19780:S 03 May 2025 23:10:21.964 * Removing the pid file.
+19780:S 03 May 2025 23:10:21.964 * Removing the unix socket file.
+19780:S 03 May 2025 23:10:21.964 # Valkey is now ready to exit, bye bye...

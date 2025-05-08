@@ -1,0 +1,69 @@
+### Starting server for test WAITAOF when replica switches between masters, fsync: everysec in tests/unit/wait.tcl
+87643:M 03 May 2025 23:04:12.787 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+87643:M 03 May 2025 23:04:12.787 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=87643, just started
+87643:M 03 May 2025 23:04:12.787 * Configuration loaded
+87643:M 03 May 2025 23:04:12.788 * Increased maximum number of open files to 10032 (it was originally set to 256).
+87643:M 03 May 2025 23:04:12.788 * monotonic clock: POSIX clock_gettime
+87643:M 03 May 2025 23:04:12.788 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23618
+ |###|   .+###############+.   |###|    PID: 87643                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+87643:M 03 May 2025 23:04:12.788 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+87643:M 03 May 2025 23:04:12.788 * Server initialized
+87643:M 03 May 2025 23:04:12.788 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+87643:M 03 May 2025 23:04:12.794 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+87643:M 03 May 2025 23:04:12.795 * Ready to accept connections tcp
+87643:M 03 May 2025 23:04:12.795 * Ready to accept connections unix
+87643:M 03 May 2025 23:04:12.909 - Accepted 127.0.0.1:59579
+87643:M 03 May 2025 23:04:12.909 - Client closed connection id=2 addr=127.0.0.1:59579 laddr=127.0.0.1:23618 fd=13 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+87643:M 03 May 2025 23:04:12.918 - Accepted 127.0.0.1:59581
+87643:M 03 May 2025 23:04:13.093 - Accepted 127.0.0.1:59588
+87643:M 03 May 2025 23:04:13.093 * Replica 127.0.0.1:23619 asks for synchronization
+87643:M 03 May 2025 23:04:13.093 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '3dd410f0631c349170fe1c5396af0cc63aeffead', my replication IDs are '7ada4c880d776ee6de59558d2fc22746e3348226' and '0000000000000000000000000000000000000000')
+87643:M 03 May 2025 23:04:13.093 * Replication backlog created, my new replication IDs are 'ada904a24037ce50990b891f2d47675becbb949f' and '0000000000000000000000000000000000000000'
+87643:M 03 May 2025 23:04:13.093 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+87643:M 03 May 2025 23:04:13.094 * Background RDB transfer started by pid 87731 to pipe through parent process
+87731:C 03 May 2025 23:04:13.094 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+87643:M 03 May 2025 23:04:13.094 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+87643:M 03 May 2025 23:04:13.097 * Background RDB transfer terminated with success
+87643:M 03 May 2025 23:04:13.097 * Streamed RDB transfer with replica 127.0.0.1:23619 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+87643:M 03 May 2025 23:04:13.097 * Synchronization with replica 127.0.0.1:23619 succeeded
+87643:M 03 May 2025 23:04:14.094 - Accepted 127.0.0.1:59601
+87643:M 03 May 2025 23:04:14.099 - Client closed connection id=4 addr=127.0.0.1:59588 laddr=127.0.0.1:23618 fd=14 name= age=1 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=326 tot-net-out=112 tot-cmds=7
+87643:M 03 May 2025 23:04:14.104 * Connection with replica 127.0.0.1:23619 lost.
+87643:M 03 May 2025 23:04:14.107 - Accepted 127.0.0.1:59603
+87643:M 03 May 2025 23:04:14.107 * Replica 127.0.0.1:23615 asks for synchronization
+87643:M 03 May 2025 23:04:14.107 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '6e5b51fff924a57e8b42897f671ef4ff18d2b05e', my replication IDs are 'ada904a24037ce50990b891f2d47675becbb949f' and '0000000000000000000000000000000000000000')
+87643:M 03 May 2025 23:04:14.107 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+87643:M 03 May 2025 23:04:14.108 * Background RDB transfer started by pid 87821 to pipe through parent process
+87821:C 03 May 2025 23:04:14.108 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+87643:M 03 May 2025 23:04:14.109 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+87643:M 03 May 2025 23:04:14.120 * Background RDB transfer terminated with success
+87643:M 03 May 2025 23:04:14.120 * Streamed RDB transfer with replica 127.0.0.1:23615 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+87643:M 03 May 2025 23:04:14.120 * Synchronization with replica 127.0.0.1:23615 succeeded
+87643:M 03 May 2025 23:04:14.982 - Client closed connection id=5 addr=127.0.0.1:59601 laddr=127.0.0.1:23618 fd=15 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=12 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=waitaof user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=91 tot-net-out=22 tot-cmds=3
+87643:M 03 May 2025 23:04:15.112 - Client closed connection id=3 addr=127.0.0.1:59581 laddr=127.0.0.1:23618 fd=13 name= age=3 idle=2 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6144 rbp=6037 obl=0 oll=0 omem=0 tot-mem=23552 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=94 tot-net-out=6047 tot-cmds=3
+87643:signal-handler (1746281055) Received SIGTERM scheduling shutdown...
+87643:M 03 May 2025 23:04:15.217 * User requested shutdown...
+87643:M 03 May 2025 23:04:15.218 * 1 of 1 replicas are in sync when shutting down.
+87643:M 03 May 2025 23:04:15.218 * Calling fsync() on the AOF file.
+87643:M 03 May 2025 23:04:15.219 * Removing the pid file.
+87643:M 03 May 2025 23:04:15.220 * Removing the unix socket file.
+87643:M 03 May 2025 23:04:15.220 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,66 @@
+### Starting server for test 
+85983:M 03 May 2025 23:04:03.195 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+85983:M 03 May 2025 23:04:03.195 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=85983, just started
+85983:M 03 May 2025 23:04:03.195 * Configuration loaded
+85983:M 03 May 2025 23:04:03.195 * Increased maximum number of open files to 10032 (it was originally set to 256).
+85983:M 03 May 2025 23:04:03.195 * monotonic clock: POSIX clock_gettime
+85983:M 03 May 2025 23:04:03.196 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25119
+ |###|   .+###############+.   |###|    PID: 85983                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+85983:M 03 May 2025 23:04:03.196 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+85983:M 03 May 2025 23:04:03.196 * Server initialized
+85983:M 03 May 2025 23:04:03.196 * Ready to accept connections tcp
+85983:M 03 May 2025 23:04:03.196 * Ready to accept connections unix
+85983:M 03 May 2025 23:04:03.330 - Accepted 127.0.0.1:59309
+85983:M 03 May 2025 23:04:03.330 - Client closed connection id=2 addr=127.0.0.1:59309 laddr=127.0.0.1:25119 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+85983:M 03 May 2025 23:04:03.346 - Accepted 127.0.0.1:59310
+### Starting test primaryauth test with binary password dualchannel = yes in tests/unit/auth.tcl
+85983:S 03 May 2025 23:04:03.351 * Before turning into a replica, using my own primary parameters to synthesize a cached primary: I may be able to synchronize with the new primary with just a partial transfer.
+85983:S 03 May 2025 23:04:03.351 * Connecting to PRIMARY 127.0.0.1:25118
+85983:S 03 May 2025 23:04:03.351 * PRIMARY <-> REPLICA sync started
+85983:S 03 May 2025 23:04:03.351 * REPLICAOF 127.0.0.1:25118 enabled (user request from 'id=3 addr=127.0.0.1:59310 laddr=127.0.0.1:25119 fd=12 name= user=default lib-name= lib-ver=')
+85983:S 03 May 2025 23:04:03.351 * Non blocking connect for SYNC fired the event.
+85983:S 03 May 2025 23:04:03.352 * Primary replied to PING, replication can continue...
+85983:S 03 May 2025 23:04:03.352 # Unable to AUTH to PRIMARY: -WRONGPASS invalid username-password pair or user is disabled.
+85983:S 03 May 2025 23:04:04.205 * Connecting to PRIMARY 127.0.0.1:25118
+85983:S 03 May 2025 23:04:04.205 * PRIMARY <-> REPLICA sync started
+85983:S 03 May 2025 23:04:04.205 * Non blocking connect for SYNC fired the event.
+85983:S 03 May 2025 23:04:04.205 * Primary replied to PING, replication can continue...
+85983:S 03 May 2025 23:04:04.205 * Trying a partial resynchronization (request 8adc93c0516648047665896236fb2f25ab10ddaa:1).
+85983:S 03 May 2025 23:04:04.205 * Dual channel replication: PSYNC is not possible, initialize RDB channel.
+85983:S 03 May 2025 23:04:04.206 * PRIMARY <-> REPLICA sync: receiving streamed RDB from primary with EOF to disk
+85983:S 03 May 2025 23:04:04.206 * Dual channel replication: Trying a partial resynchronization using main channel (request 0fa0ae5b2f30ef2e263e75f1366a3d07290f0889:1).
+85983:S 03 May 2025 23:04:04.209 * Discarding previously cached primary state.
+85983:S 03 May 2025 23:04:04.210 * PRIMARY <-> REPLICA sync: Flushing old data
+85983:S 03 May 2025 23:04:04.210 * PRIMARY <-> REPLICA sync: Loading DB in memory
+85983:S 03 May 2025 23:04:04.210 * Loading RDB produced by Valkey version 255.255.255
+85983:S 03 May 2025 23:04:04.210 * RDB age 0 seconds
+85983:S 03 May 2025 23:04:04.210 * RDB memory usage when created 1.27 Mb
+85983:S 03 May 2025 23:04:04.210 * Done loading RDB, keys loaded: 0, keys expired: 0.
+85983:S 03 May 2025 23:04:04.210 * PRIMARY <-> REPLICA sync: Finished with success
+85983:S 03 May 2025 23:04:04.210 * Dual channel replication: PRIMARY <-> REPLICA sync: Primary accepted a Partial Resynchronization.
+85983:S 03 May 2025 23:04:04.210 * Dual channel replication: Successfully streamed replication data into memory
+85983:S 03 May 2025 23:04:04.284 - Client closed connection id=3 addr=127.0.0.1:59310 laddr=127.0.0.1:25119 fd=12 name= age=1 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=6656 rbp=6244 obl=0 oll=0 omem=0 tot-mem=24064 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=398 tot-net-out=68642 tot-cmds=16
+85983:signal-handler (1746281045) Received SIGTERM scheduling shutdown...
+85983:S 03 May 2025 23:04:05.149 * User requested shutdown...
+85983:S 03 May 2025 23:04:05.149 * Removing the pid file.
+85983:S 03 May 2025 23:04:05.149 * Removing the unix socket file.
+85983:S 03 May 2025 23:04:05.149 # Valkey is now ready to exit, bye bye...

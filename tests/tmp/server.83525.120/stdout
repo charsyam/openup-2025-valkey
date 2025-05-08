@@ -1,0 +1,50 @@
+### Starting server for test Fuzzer corrupt restore payloads - sanitize_dump: yes in tests/integration/corrupt-dump-fuzzer.tcl
+10939:M 03 May 2025 23:07:38.273 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+10939:M 03 May 2025 23:07:38.273 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=10939, just started
+10939:M 03 May 2025 23:07:38.273 * Configuration loaded
+10939:M 03 May 2025 23:07:38.274 * Increased maximum number of open files to 10032 (it was originally set to 256).
+10939:M 03 May 2025 23:07:38.274 * monotonic clock: POSIX clock_gettime
+10939:M 03 May 2025 23:07:38.274 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21170
+ |###|   .+###############+.   |###|    PID: 10939                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+10939:M 03 May 2025 23:07:38.274 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+10939:M 03 May 2025 23:07:38.275 * Server initialized
+10939:M 03 May 2025 23:07:38.275 * Ready to accept connections tcp
+10939:M 03 May 2025 23:07:38.275 * Ready to accept connections unix
+10939:M 03 May 2025 23:07:38.290 - Accepted 127.0.0.1:57772
+10939:M 03 May 2025 23:07:38.290 - Client closed connection id=2 addr=127.0.0.1:57772 laddr=127.0.0.1:21170 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+10939:M 03 May 2025 23:07:38.338 - Accepted 127.0.0.1:57782
+10939:M 03 May 2025 23:07:38.340 - Accepted 127.0.0.1:57783
+10939:M 03 May 2025 23:07:38.341 - Client closed connection id=4 addr=127.0.0.1:57783 laddr=127.0.0.1:21170 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xadd user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=646 tot-net-out=119 tot-cmds=16
+10939:M 03 May 2025 23:07:38.343 - Accepted 127.0.0.1:57784
+10939:M 03 May 2025 23:07:38.344 - Client closed connection id=5 addr=127.0.0.1:57784 laddr=127.0.0.1:21170 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=xadd user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=2258 tot-net-out=386 tot-cmds=51
+10939:M 03 May 2025 23:07:38.348 * DB saved on disk
+10939:M 03 May 2025 23:07:40.030 - Internal error in RDB reading offset 0, function at rdb.c:2373 -> Set listpack integrity check failed.
+10939:M 03 May 2025 23:07:43.395 - DB 9: 13 keys (0 volatile) in 14 slots HT.
+10939:M 03 May 2025 23:07:46.021 - Internal error in RDB reading offset 0, function at rdb.c:2373 -> Set listpack integrity check failed.
+10939:M 03 May 2025 23:07:46.070 - Internal error in RDB reading offset 0, function at rdb.c:2463 -> Hash listpack integrity check failed.
+10939:M 03 May 2025 23:07:46.124 - Internal error in RDB reading offset 0, function at rdb.c:2229 -> Listpack integrity check failed.
+10939:M 03 May 2025 23:07:48.017 - Client closed connection id=3 addr=127.0.0.1:57782 laddr=127.0.0.1:21170 fd=12 name= age=10 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=dbsize user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1476868 tot-net-out=6911528 tot-cmds=23766
+10939:signal-handler (1746281268) Received SIGTERM scheduling shutdown...
+10939:M 03 May 2025 23:07:48.105 * User requested shutdown...
+10939:M 03 May 2025 23:07:48.105 * Removing the pid file.
+10939:M 03 May 2025 23:07:48.105 * Removing the unix socket file.
+10939:M 03 May 2025 23:07:48.105 # Valkey is now ready to exit, bye bye...

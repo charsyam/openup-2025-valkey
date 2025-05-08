@@ -1,0 +1,58 @@
+### Starting server for test 
+84732:M 03 May 2025 23:03:53.973 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+84732:M 03 May 2025 23:03:53.973 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=84732, just started
+84732:M 03 May 2025 23:03:53.973 * Configuration loaded
+84732:M 03 May 2025 23:03:53.973 * Increased maximum number of open files to 10032 (it was originally set to 256).
+84732:M 03 May 2025 23:03:53.973 * monotonic clock: POSIX clock_gettime
+84732:M 03 May 2025 23:03:53.973 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25113
+ |###|   .+###############+.   |###|    PID: 84732                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+84732:M 03 May 2025 23:03:53.973 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+84732:M 03 May 2025 23:03:53.973 * Server initialized
+84732:M 03 May 2025 23:03:53.973 * Ready to accept connections tcp
+84732:M 03 May 2025 23:03:53.973 * Ready to accept connections unix
+84732:M 03 May 2025 23:03:54.093 - Accepted 127.0.0.1:59080
+84732:M 03 May 2025 23:03:54.093 - Client closed connection id=2 addr=127.0.0.1:59080 laddr=127.0.0.1:25113 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+84732:M 03 May 2025 23:03:54.110 - Accepted 127.0.0.1:59083
+### Starting test BITFIELD signed SET and GET basics in tests/unit/bitfield.tcl
+### Starting test BITFIELD unsigned SET and GET basics in tests/unit/bitfield.tcl
+### Starting test BITFIELD signed SET and GET together in tests/unit/bitfield.tcl
+### Starting test BITFIELD unsigned with SET, GET and INCRBY arguments in tests/unit/bitfield.tcl
+### Starting test BITFIELD with only key as argument in tests/unit/bitfield.tcl
+### Starting test BITFIELD #<idx> form in tests/unit/bitfield.tcl
+### Starting test BITFIELD basic INCRBY form in tests/unit/bitfield.tcl
+### Starting test BITFIELD chaining of multiple commands in tests/unit/bitfield.tcl
+### Starting test BITFIELD unsigned overflow wrap in tests/unit/bitfield.tcl
+### Starting test BITFIELD unsigned overflow sat in tests/unit/bitfield.tcl
+### Starting test BITFIELD signed overflow wrap in tests/unit/bitfield.tcl
+### Starting test BITFIELD signed overflow sat in tests/unit/bitfield.tcl
+### Starting test BITFIELD overflow detection fuzzing in tests/unit/bitfield.tcl
+### Starting test BITFIELD overflow wrap fuzzing in tests/unit/bitfield.tcl
+### Starting test BITFIELD regression for #3221 in tests/unit/bitfield.tcl
+### Starting test BITFIELD regression for #3564 in tests/unit/bitfield.tcl
+### Starting test BITFIELD_RO with only key as argument in tests/unit/bitfield.tcl
+### Starting test BITFIELD_RO fails when write option is used in tests/unit/bitfield.tcl
+84732:M 03 May 2025 23:03:54.690 - Client closed connection id=3 addr=127.0.0.1:59083 laddr=127.0.0.1:25113 fd=12 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=51 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=bitfield_ro user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=485365 tot-net-out=71103 tot-cmds=7076
+84732:signal-handler (1746281036) Received SIGTERM scheduling shutdown...
+84732:M 03 May 2025 23:03:56.795 * User requested shutdown...
+84732:M 03 May 2025 23:03:56.795 * Removing the pid file.
+84732:M 03 May 2025 23:03:56.795 * Removing the unix socket file.
+84732:M 03 May 2025 23:03:56.795 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,94 @@
+### Starting server for test 
+9346:M 03 May 2025 23:07:18.571 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+9346:M 03 May 2025 23:07:18.571 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=9346, just started
+9346:M 03 May 2025 23:07:18.571 * Configuration loaded
+9346:M 03 May 2025 23:07:18.571 * Increased maximum number of open files to 10032 (it was originally set to 256).
+9346:M 03 May 2025 23:07:18.571 * monotonic clock: POSIX clock_gettime
+9346:M 03 May 2025 23:07:18.572 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25181
+ |###|   .+###############+.   |###|    PID: 9346                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+9346:M 03 May 2025 23:07:18.572 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+9346:M 03 May 2025 23:07:18.574 * Server initialized
+9346:M 03 May 2025 23:07:18.574 * Ready to accept connections tcp
+9346:M 03 May 2025 23:07:18.574 * Ready to accept connections unix
+9346:M 03 May 2025 23:07:18.746 - Accepted 127.0.0.1:55053
+9346:M 03 May 2025 23:07:18.755 - Client closed connection id=2 addr=127.0.0.1:55053 laddr=127.0.0.1:25181 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+9346:M 03 May 2025 23:07:18.795 - Accepted 127.0.0.1:55064
+### Starting test Slave should be able to synchronize with the master in tests/integration/replication-psync.tcl
+9346:M 03 May 2025 23:07:19.229 - Accepted 127.0.0.1:55106
+9346:M 03 May 2025 23:07:19.230 * Replica 127.0.0.1:25182 asks for synchronization
+9346:M 03 May 2025 23:07:19.230 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '2f9c3ae9b72a37c0c42ea7e298aa1cdec21611bf', my replication IDs are '416e051d2516a8a9bbda6ac79a7c8ca56ca8c58c' and '0000000000000000000000000000000000000000')
+9346:M 03 May 2025 23:07:19.230 * Replication backlog created, my new replication IDs are 'a4d4f76cf616b871f86e260b42caa00c66a2fce1' and '0000000000000000000000000000000000000000'
+9346:M 03 May 2025 23:07:19.230 * Starting BGSAVE for SYNC with target: disk using: normal sync
+9346:M 03 May 2025 23:07:19.231 * Background saving started by pid 9412
+9412:C 03 May 2025 23:07:19.236 * DB saved on disk
+9412:C 03 May 2025 23:07:19.236 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+9346:M 03 May 2025 23:07:19.264 - Accepted 127.0.0.1:55107
+9346:M 03 May 2025 23:07:19.282 * Background saving terminated with success
+9346:M 03 May 2025 23:07:19.282 * Synchronization with replica 127.0.0.1:25182 succeeded
+9346:M 03 May 2025 23:07:19.286 - Accepted 127.0.0.1:55111
+9346:M 03 May 2025 23:07:19.289 - Accepted 127.0.0.1:55112
+### Starting test Detect write load to master in tests/integration/replication-psync.tcl
+### Starting test Test replication partial resync: backlog expired (diskless: no, disabled, dual-channel: no, reconnect: 1) in tests/integration/replication-psync.tcl
+9346:M 03 May 2025 23:07:20.441 - Client closed connection id=4 addr=127.0.0.1:55106 laddr=127.0.0.1:25181 fd=13 name= age=1 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=314 tot-net-out=905503 tot-cmds=7
+9346:M 03 May 2025 23:07:20.441 * Connection with replica 127.0.0.1:25182 lost.
+9346:M 03 May 2025 23:07:20.442 - Accepted 127.0.0.1:55206
+9346:M 03 May 2025 23:07:22.585 * Replication backlog freed after 1 seconds without connected replicas.
+9346:M 03 May 2025 23:07:23.443 * Replica 127.0.0.1:25182 asks for synchronization
+9346:M 03 May 2025 23:07:23.443 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'a4d4f76cf616b871f86e260b42caa00c66a2fce1', my replication IDs are 'f2c644f3f907fe1dde92ca0849c678892f9775f6' and '0000000000000000000000000000000000000000')
+9346:M 03 May 2025 23:07:23.443 * Replication backlog created, my new replication IDs are 'e2c1704b8e1ac1ef5498ac086aa538b574beb68f' and '0000000000000000000000000000000000000000'
+9346:M 03 May 2025 23:07:23.443 * Starting BGSAVE for SYNC with target: disk using: normal sync
+9346:M 03 May 2025 23:07:23.445 * Background saving started by pid 9672
+9672:C 03 May 2025 23:07:23.464 * DB saved on disk
+9672:C 03 May 2025 23:07:23.464 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+9346:M 03 May 2025 23:07:23.486 * Background saving terminated with success
+9346:M 03 May 2025 23:07:23.487 * Synchronization with replica 127.0.0.1:25182 succeeded
+9346:M 03 May 2025 23:07:23.586 - DB 9: 3017 keys (0 volatile) in 3584 slots HT.
+9346:M 03 May 2025 23:07:23.586 - DB 11: 3251 keys (0 volatile) in 3584 slots HT.
+9346:M 03 May 2025 23:07:23.586 - DB 12: 3079 keys (0 volatile) in 3584 slots HT.
+9346:M 03 May 2025 23:07:25.510 - Reading from client: Connection reset by peer
+9346:M 03 May 2025 23:07:25.513 * Connection with replica client id #8 lost.
+9346:M 03 May 2025 23:07:25.516 - Accepted 127.0.0.1:55743
+9346:M 03 May 2025 23:07:27.603 * Replication backlog freed after 1 seconds without connected replicas.
+9346:M 03 May 2025 23:07:28.521 * Replica 127.0.0.1:25182 asks for synchronization
+9346:M 03 May 2025 23:07:28.521 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'e2c1704b8e1ac1ef5498ac086aa538b574beb68f', my replication IDs are '751a62c7112f831706f4b9b13a4dec5d68728013' and '0000000000000000000000000000000000000000')
+9346:M 03 May 2025 23:07:28.521 * Replication backlog created, my new replication IDs are 'f8b55f43a8766c9ec37e753d22f738dd15b754db' and '0000000000000000000000000000000000000000'
+9346:M 03 May 2025 23:07:28.521 * Starting BGSAVE for SYNC with target: disk using: normal sync
+9346:M 03 May 2025 23:07:28.523 * Background saving started by pid 10021
+10021:C 03 May 2025 23:07:28.555 * DB saved on disk
+10021:C 03 May 2025 23:07:28.555 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+9346:M 03 May 2025 23:07:28.604 - DB 9: 5705 keys (0 volatile) in 7168 slots HT.
+9346:M 03 May 2025 23:07:28.604 - DB 11: 5895 keys (0 volatile) in 7168 slots HT.
+9346:M 03 May 2025 23:07:28.604 - DB 12: 5830 keys (0 volatile) in 7168 slots HT.
+9346:M 03 May 2025 23:07:28.604 * Background saving terminated with success
+9346:M 03 May 2025 23:07:28.606 * Synchronization with replica 127.0.0.1:25182 succeeded
+9346:M 03 May 2025 23:07:29.461 - Reading from client: Connection reset by peer
+9346:M 03 May 2025 23:07:29.466 - Reading from client: Connection reset by peer
+9346:M 03 May 2025 23:07:29.472 - Reading from client: Connection reset by peer
+### Starting test Check for memory leaks (pid 9365) in tests/integration/replication-psync.tcl
+9346:M 03 May 2025 23:07:32.550 - Client closed connection id=9 addr=127.0.0.1:55743 laddr=127.0.0.1:25181 fd=13 name= age=7 idle=2 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=407 tot-net-out=629850 tot-cmds=9
+9346:M 03 May 2025 23:07:32.550 * Connection with replica 127.0.0.1:25182 lost.
+9346:M 03 May 2025 23:07:32.615 - Client closed connection id=3 addr=127.0.0.1:55064 laddr=127.0.0.1:25181 fd=12 name= age=14 idle=3 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=4096 rbp=2048 obl=0 oll=0 omem=0 tot-mem=21504 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=438 tot-net-out=12519 tot-cmds=12
+9346:signal-handler (1746281254) Received SIGTERM scheduling shutdown...
+9346:M 03 May 2025 23:07:34.936 * User requested shutdown...
+9346:M 03 May 2025 23:07:34.936 * Removing the pid file.
+9346:M 03 May 2025 23:07:34.936 * Removing the unix socket file.
+9346:M 03 May 2025 23:07:34.936 # Valkey is now ready to exit, bye bye...

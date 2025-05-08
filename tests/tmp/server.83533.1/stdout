@@ -1,0 +1,95 @@
+### Starting server for test 
+83598:M 03 May 2025 23:03:40.914 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+83598:M 03 May 2025 23:03:40.914 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=83598, just started
+83598:M 03 May 2025 23:03:40.914 * Configuration loaded
+83598:M 03 May 2025 23:03:40.915 * Increased maximum number of open files to 10032 (it was originally set to 256).
+83598:M 03 May 2025 23:03:40.915 * monotonic clock: POSIX clock_gettime
+83598:M 03 May 2025 23:03:40.915 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 25111
+ |###|   .+###############+.   |###|    PID: 83598                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+83598:M 03 May 2025 23:03:40.915 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+83598:M 03 May 2025 23:03:40.916 * Server initialized
+83598:M 03 May 2025 23:03:40.916 * Ready to accept connections tcp
+83598:M 03 May 2025 23:03:40.916 * Ready to accept connections unix
+83598:M 03 May 2025 23:03:40.964 - Accepted 127.0.0.1:58726
+83598:M 03 May 2025 23:03:40.964 - Client closed connection id=2 addr=127.0.0.1:58726 laddr=127.0.0.1:25111 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+83598:M 03 May 2025 23:03:40.981 - Accepted 127.0.0.1:58742
+### Starting test Listpack: SORT BY key in tests/unit/sort.tcl
+### Starting test Listpack: SORT BY key with limit in tests/unit/sort.tcl
+### Starting test Listpack: SORT BY hash field in tests/unit/sort.tcl
+### Starting test Quicklist: SORT BY key in tests/unit/sort.tcl
+### Starting test Quicklist: SORT BY key with limit in tests/unit/sort.tcl
+### Starting test Quicklist: SORT BY hash field in tests/unit/sort.tcl
+### Starting test Big Quicklist: SORT BY key in tests/unit/sort.tcl
+### Starting test Big Quicklist: SORT BY key with limit in tests/unit/sort.tcl
+### Starting test Big Quicklist: SORT BY hash field in tests/unit/sort.tcl
+### Starting test Intset: SORT BY key in tests/unit/sort.tcl
+### Starting test Intset: SORT BY key with limit in tests/unit/sort.tcl
+### Starting test Intset: SORT BY hash field in tests/unit/sort.tcl
+### Starting test Hash table: SORT BY key in tests/unit/sort.tcl
+### Starting test Hash table: SORT BY key with limit in tests/unit/sort.tcl
+### Starting test Hash table: SORT BY hash field in tests/unit/sort.tcl
+### Starting test Big Hash table: SORT BY key in tests/unit/sort.tcl
+### Starting test Big Hash table: SORT BY key with limit in tests/unit/sort.tcl
+### Starting test Big Hash table: SORT BY hash field in tests/unit/sort.tcl
+### Starting test SORT GET # in tests/unit/sort.tcl
+### Starting test SORT GET <const> in tests/unit/sort.tcl
+### Starting test SORT_RO GET <const> in tests/unit/sort.tcl
+### Starting test SORT GET (key and hash) with sanity check in tests/unit/sort.tcl
+### Starting test SORT BY key STORE in tests/unit/sort.tcl
+### Starting test SORT BY hash field STORE in tests/unit/sort.tcl
+### Starting test SORT extracts STORE correctly in tests/unit/sort.tcl
+### Starting test SORT_RO get keys in tests/unit/sort.tcl
+### Starting test SORT extracts multiple STORE correctly in tests/unit/sort.tcl
+### Starting test SORT DESC in tests/unit/sort.tcl
+### Starting test SORT ALPHA against integer encoded strings in tests/unit/sort.tcl
+### Starting test SORT sorted set in tests/unit/sort.tcl
+### Starting test SORT sorted set BY nosort should retain ordering in tests/unit/sort.tcl
+### Starting test SORT sorted set BY nosort + LIMIT in tests/unit/sort.tcl
+### Starting test SORT sorted set BY nosort works as expected from scripts in tests/unit/sort.tcl
+### Starting test SORT sorted set: +inf and -inf handling in tests/unit/sort.tcl
+### Starting test SORT regression for issue #19, sorting floats in tests/unit/sort.tcl
+### Starting test SORT with STORE returns zero if result is empty (github issue 224) in tests/unit/sort.tcl
+### Starting test SORT with STORE does not create empty lists (github issue 224) in tests/unit/sort.tcl
+### Starting test SORT with STORE removes key if result is empty (github issue 227) in tests/unit/sort.tcl
+### Starting test SORT with BY <constant> and STORE should still order output in tests/unit/sort.tcl
+### Starting test SORT will complain with numerical sorting and bad doubles (1) in tests/unit/sort.tcl
+### Starting test SORT will complain with numerical sorting and bad doubles (2) in tests/unit/sort.tcl
+### Starting test SORT BY sub-sorts lexicographically if score is the same in tests/unit/sort.tcl
+### Starting test SORT GET with pattern ending with just -> does not get hash field in tests/unit/sort.tcl
+### Starting test SORT by nosort retains native order for lists in tests/unit/sort.tcl
+### Starting test SORT by nosort plus store retains native order for lists in tests/unit/sort.tcl
+### Starting test SORT by nosort with limit returns based on original list order in tests/unit/sort.tcl
+### Starting test SORT_RO - Successful case in tests/unit/sort.tcl
+### Starting test SORT_RO - Cannot run with STORE arg in tests/unit/sort.tcl
+### Starting test SORT speed, 100 element list BY key, 100 times in tests/unit/sort.tcl
+### Starting test SORT speed, 100 element list BY hash field, 100 times in tests/unit/sort.tcl
+### Starting test SORT speed, 100 element list directly, 100 times in tests/unit/sort.tcl
+### Starting test SORT speed, 100 element list BY <const>, 100 times in tests/unit/sort.tcl
+### Starting test SETRANGE with huge offset in tests/unit/sort.tcl
+### Starting test SORT STORE quicklist with the right options in tests/unit/sort.tcl
+83598:M 03 May 2025 23:03:45.313 - Client closed connection id=3 addr=127.0.0.1:58742 laddr=127.0.0.1:25111 fd=12 name= age=5 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=3305735 tot-net-out=787769 tot-cmds=67050
+83598:M 03 May 2025 23:03:45.935 - DB 9: 214 keys (0 volatile) in 224 slots HT.
+83598:signal-handler (1746281028) Received SIGTERM scheduling shutdown...
+83598:M 03 May 2025 23:03:48.258 * User requested shutdown...
+83598:M 03 May 2025 23:03:48.258 * Removing the pid file.
+83598:M 03 May 2025 23:03:48.258 * Removing the unix socket file.
+83598:M 03 May 2025 23:03:48.258 # Valkey is now ready to exit, bye bye...

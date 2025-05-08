@@ -1,0 +1,62 @@
+### Starting server for test 
+99318:M 03 May 2025 23:05:54.978 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+99318:M 03 May 2025 23:05:54.980 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+99318:M 03 May 2025 23:05:54.980 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=99318, just started
+99318:M 03 May 2025 23:05:54.983 * Configuration loaded
+99318:M 03 May 2025 23:05:54.988 * Increased maximum number of open files to 10032 (it was originally set to 256).
+99318:M 03 May 2025 23:05:54.990 * monotonic clock: POSIX clock_gettime
+99318:M 03 May 2025 23:05:54.991 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 23648
+ |###|   .+###############+.   |###|    PID: 99318                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+99318:M 03 May 2025 23:05:54.993 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+99318:M 03 May 2025 23:05:55.001 * No cluster configuration found, I'm 37dbf35e38b507a3eeedef17ab5a6e7c4455d4be
+99318:M 03 May 2025 23:05:55.018 * Server initialized
+99318:M 03 May 2025 23:05:55.018 * Ready to accept connections tcp
+99318:M 03 May 2025 23:05:55.018 * Ready to accept connections unix
+99318:M 03 May 2025 23:05:55.108 - Accepted 127.0.0.1:61629
+99318:M 03 May 2025 23:05:55.115 - Client closed connection id=2 addr=127.0.0.1:61629 laddr=127.0.0.1:23648 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+### Starting test Cluster nodes are reachable in tests/unit/cluster/cluster-reliable-meet.tcl
+99318:M 03 May 2025 23:05:55.136 - Accepted 127.0.0.1:61631
+### Starting test Before slots allocation, all nodes report cluster failure in tests/unit/cluster/cluster-reliable-meet.tcl
+### Starting test Cluster nodes haven't met each other in tests/unit/cluster/cluster-reliable-meet.tcl
+99318:M 03 May 2025 23:05:55.193 # Missing implement of connection type tls
+### Starting test Allocate slots in tests/unit/cluster/cluster-reliable-meet.tcl
+### Starting test MEET is reliable when target drops the initial MEETs in tests/unit/cluster/cluster-reliable-meet.tcl
+99318:M 03 May 2025 23:05:55.239 - Accepting cluster node connection from 127.0.0.1:61667
+99318:M 03 May 2025 23:05:55.241 # Dropping packet of type meet that matches debug drop filter
+99318:M 03 May 2025 23:05:55.241 # Closing link for matching packet type meet
+99318:M 03 May 2025 23:05:55.338 - Accepting cluster node connection from 127.0.0.1:61698
+99318:M 03 May 2025 23:05:55.344 # Dropping packet of type meet that matches debug drop filter
+99318:M 03 May 2025 23:05:55.349 # Closing link for matching packet type meet
+99318:M 03 May 2025 23:05:55.439 - Accepting cluster node connection from 127.0.0.1:61732
+99318:M 03 May 2025 23:05:55.444 # Dropping packet of type meet that matches debug drop filter
+99318:M 03 May 2025 23:05:55.448 # Closing link for matching packet type meet
+99318:M 03 May 2025 23:05:55.541 - Accepting cluster node connection from 127.0.0.1:61764
+99318:M 03 May 2025 23:05:55.543 * IP address for this node updated to 127.0.0.1
+99318:M 03 May 2025 23:05:55.671 * configEpoch collision with node a31685f2aaaa07058daff7262df09b0eaedfc76b (). configEpoch set to 1
+99318:M 03 May 2025 23:05:57.044 * Cluster state changed: ok
+99318:M 03 May 2025 23:05:57.081 - Client closed connection id=3 addr=127.0.0.1:61631 laddr=127.0.0.1:23648 fd=14 name= age=2 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=2048 rbp=1024 obl=0 oll=0 omem=0 tot-mem=19456 events=r cmd=cluster|info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=85154 tot-net-out=39178 tot-cmds=21
+99318:signal-handler (1746281158) Received SIGTERM scheduling shutdown...
+99318:M 03 May 2025 23:05:58.373 * User requested shutdown...
+99318:M 03 May 2025 23:05:58.374 * Removing the pid file.
+99318:M 03 May 2025 23:05:58.377 * Saving the cluster configuration file before exiting.
+99318:M 03 May 2025 23:05:58.404 * Removing the unix socket file.
+99318:M 03 May 2025 23:05:58.405 # Valkey is now ready to exit, bye bye...

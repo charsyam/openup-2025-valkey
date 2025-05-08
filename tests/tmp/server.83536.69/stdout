@@ -1,0 +1,50 @@
+### Starting server for test 
+7997:M 03 May 2025 23:06:59.045 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+7997:M 03 May 2025 23:06:59.045 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+7997:M 03 May 2025 23:06:59.045 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=7997, just started
+7997:M 03 May 2025 23:06:59.045 * Configuration loaded
+7997:M 03 May 2025 23:06:59.045 * Increased maximum number of open files to 10032 (it was originally set to 256).
+7997:M 03 May 2025 23:06:59.045 * monotonic clock: POSIX clock_gettime
+7997:M 03 May 2025 23:06:59.046 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 26645
+ |###|   .+###############+.   |###|    PID: 7997                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+7997:M 03 May 2025 23:06:59.046 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+7997:M 03 May 2025 23:06:59.046 * No cluster configuration found, I'm 409fc25fcacfe53007d416bc2073eb434fef7cf8
+7997:M 03 May 2025 23:06:59.055 * Server initialized
+7997:M 03 May 2025 23:06:59.055 * Ready to accept connections tcp
+7997:M 03 May 2025 23:06:59.055 * Ready to accept connections unix
+7997:M 03 May 2025 23:06:59.178 - Accepted 127.0.0.1:61201
+7997:M 03 May 2025 23:06:59.179 - Client closed connection id=2 addr=127.0.0.1:61201 laddr=127.0.0.1:26645 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+7997:M 03 May 2025 23:06:59.197 - Accepted 127.0.0.1:61214
+7997:M 03 May 2025 23:06:59.198 # Missing implement of connection type tls
+7997:M 03 May 2025 23:06:59.198 # DEBUG LOG: ========== I am primary 0 ==========
+7997:M 03 May 2025 23:07:01.075 * Cluster state changed: ok
+### Starting test CLUSTER SLOT-STATS SLOTSRANGE all slots present in tests/unit/cluster/slot-stats.tcl
+### Starting test CLUSTER SLOT-STATS SLOTSRANGE some slots missing in tests/unit/cluster/slot-stats.tcl
+7997:M 03 May 2025 23:07:01.101 # Cluster state changed: fail
+7997:M 03 May 2025 23:07:01.101 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+7997:M 03 May 2025 23:07:01.102 - Client closed connection id=3 addr=127.0.0.1:61214 laddr=127.0.0.1:26645 fd=14 name= age=2 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=322 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|slot-stats user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1386 tot-net-out=12155 tot-cmds=45
+7997:signal-handler (1746281227) Received SIGTERM scheduling shutdown...
+7997:M 03 May 2025 23:07:07.515 * User requested shutdown...
+7997:M 03 May 2025 23:07:07.515 * Removing the pid file.
+7997:M 03 May 2025 23:07:07.515 * Saving the cluster configuration file before exiting.
+7997:M 03 May 2025 23:07:07.524 * Removing the unix socket file.
+7997:M 03 May 2025 23:07:07.524 # Valkey is now ready to exit, bye bye...

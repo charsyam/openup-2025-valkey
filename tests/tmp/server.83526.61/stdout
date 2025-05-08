@@ -1,0 +1,107 @@
+### Starting server for test 
+90931:M 03 May 2025 23:04:38.140 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+90931:M 03 May 2025 23:04:38.140 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+90931:M 03 May 2025 23:04:38.140 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=90931, just started
+90931:M 03 May 2025 23:04:38.140 * Configuration loaded
+90931:M 03 May 2025 23:04:38.140 * Increased maximum number of open files to 10032 (it was originally set to 256).
+90931:M 03 May 2025 23:04:38.140 * monotonic clock: POSIX clock_gettime
+90931:M 03 May 2025 23:04:38.141 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 21642
+ |###|   .+###############+.   |###|    PID: 90931                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+90931:M 03 May 2025 23:04:38.141 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+90931:M 03 May 2025 23:04:38.141 * No cluster configuration found, I'm 9193e9d26a2a40ae652d79ff50f144c07542f397
+90931:M 03 May 2025 23:04:38.147 * Server initialized
+90931:M 03 May 2025 23:04:38.147 * Ready to accept connections tcp
+90931:M 03 May 2025 23:04:38.147 * Ready to accept connections unix
+90931:M 03 May 2025 23:04:38.270 - Accepted 127.0.0.1:62478
+90931:M 03 May 2025 23:04:38.270 - Client closed connection id=2 addr=127.0.0.1:62478 laddr=127.0.0.1:21642 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+90931:M 03 May 2025 23:04:38.282 - Accepted 127.0.0.1:62485
+90931:M 03 May 2025 23:04:38.283 * Cluster meet 127.0.0.1:21641 (user request from 'id=3 addr=127.0.0.1:62485 laddr=127.0.0.1:21642 fd=14 name= user=default lib-name= lib-ver=').
+90931:M 03 May 2025 23:04:38.283 # Missing implement of connection type tls
+90931:M 03 May 2025 23:04:38.428 - Accepting cluster node connection from 127.0.0.1:62521
+90931:M 03 May 2025 23:04:38.428 * IP address for this node updated to 127.0.0.1
+90931:M 03 May 2025 23:04:38.428 * Successfully completed handshake with 6446ac906db3193e8d92368c67f202e98d4bb858 ()
+90931:M 03 May 2025 23:04:38.563 - Accepted 127.0.0.1:62596
+90931:M 03 May 2025 23:04:38.565 # DEBUG LOG: ========== I am primary 0 ==========
+90931:M 03 May 2025 23:04:38.565 * Node 6446ac906db3193e8d92368c67f202e98d4bb858 () is no longer primary of shard 95cb6510349525d25a9966ffe6b82398c8fb1b04; removed all 0 slot(s) it used to own
+90931:M 03 May 2025 23:04:38.565 * Node 6446ac906db3193e8d92368c67f202e98d4bb858 () is now part of shard d83bc7a9a04a7f06cbb00d82fb958767db7b5425
+90931:M 03 May 2025 23:04:38.565 * Node 6446ac906db3193e8d92368c67f202e98d4bb858 () is now a replica of node 9193e9d26a2a40ae652d79ff50f144c07542f397 () in shard d83bc7a9a04a7f06cbb00d82fb958767db7b5425
+90931:M 03 May 2025 23:04:38.565 * Replica 127.0.0.1:21641 asks for synchronization
+90931:M 03 May 2025 23:04:38.565 * Full resync requested by replica 127.0.0.1:21641
+90931:M 03 May 2025 23:04:38.565 * Replication backlog created, my new replication IDs are 'fe401358da67566cfa623e35278b0e53412c3339' and '0000000000000000000000000000000000000000'
+90931:M 03 May 2025 23:04:38.565 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+90931:M 03 May 2025 23:04:38.566 * Background RDB transfer started by pid 91029 to pipe through parent process
+91029:C 03 May 2025 23:04:38.566 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+90931:M 03 May 2025 23:04:38.567 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+90931:M 03 May 2025 23:04:38.570 * Background RDB transfer terminated with success
+90931:M 03 May 2025 23:04:38.570 * Streamed RDB transfer with replica 127.0.0.1:21641 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+90931:M 03 May 2025 23:04:38.570 * Synchronization with replica 127.0.0.1:21641 succeeded
+90931:M 03 May 2025 23:04:40.163 * Cluster state changed: ok
+### Starting test Cluster should start ok in tests/unit/cluster/diskless-load-swapdb.tcl
+### Starting test Cluster is writable in tests/unit/cluster/diskless-load-swapdb.tcl
+90931:M 03 May 2025 23:04:48.511 - Accepted 127.0.0.1:49739
+90931:M 03 May 2025 23:04:48.513 - Client closed connection id=12 addr=127.0.0.1:49739 laddr=127.0.0.1:21642 fd=18 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=28 tot-net-out=249 tot-cmds=1
+90931:M 03 May 2025 23:04:48.521 - Accepted 127.0.0.1:49746
+90931:M 03 May 2025 23:04:48.555 - Client closed connection id=13 addr=127.0.0.1:49746 laddr=127.0.0.1:21642 fd=18 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=30 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7970 tot-net-out=3490 tot-cmds=200
+### Starting test Main db not affected when fail to diskless load in tests/unit/cluster/diskless-load-swapdb.tcl
+90931:M 03 May 2025 23:04:48.681 - Accepted 127.0.0.1:49812
+### Starting test Check for memory leaks (pid 90879) in tests/unit/cluster/diskless-load-swapdb.tcl
+90931:M 03 May 2025 23:04:50.303 - Client closed connection id=10 addr=127.0.0.1:62596 laddr=127.0.0.1:21642 fd=17 name= age=12 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=replconf user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=708 tot-net-out=10564485 tot-cmds=18
+90931:M 03 May 2025 23:04:50.304 * Connection with replica 127.0.0.1:21641 lost.
+90931:M 03 May 2025 23:04:50.358 - Connection with Node 6446ac906db3193e8d92368c67f202e98d4bb858 at 127.0.0.1:31641 failed: Connection refused
+90931:M 03 May 2025 23:04:50.400 - Accepting cluster node connection from 127.0.0.1:50538
+90931:M 03 May 2025 23:04:50.400 - Accepted 127.0.0.1:50539
+90931:M 03 May 2025 23:04:50.401 * Replica 127.0.0.1:21641 asks for synchronization
+90931:M 03 May 2025 23:04:50.401 * Unable to partial resync with replica 127.0.0.1:21641 for lack of backlog (Replica request was: 5547).
+90931:M 03 May 2025 23:04:50.401 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+90931:M 03 May 2025 23:04:50.403 * Background RDB transfer started by pid 92790 to pipe through parent process
+90931:M 03 May 2025 23:04:53.285 - DB 0: 10100 keys (0 volatile) in 54845 slots HT.
+90931:M 03 May 2025 23:04:53.688 * Marking node 6446ac906db3193e8d92368c67f202e98d4bb858 () as failing (quorum reached).
+90931:M 03 May 2025 23:04:58.327 - DB 0: 10100 keys (0 volatile) in 54845 slots HT.
+90931:M 03 May 2025 23:05:03.391 - DB 0: 10100 keys (0 volatile) in 54845 slots HT.
+90931:M 03 May 2025 23:05:08.440 - DB 0: 10100 keys (0 volatile) in 54845 slots HT.
+90931:M 03 May 2025 23:05:12.819 * Clear FAIL state for node 6446ac906db3193e8d92368c67f202e98d4bb858 (): replica is reachable again.
+90931:M 03 May 2025 23:06:12.855 - Client closed connection id=15 addr=127.0.0.1:50539 laddr=127.0.0.1:21642 fd=16 name= age=82 idle=60 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=1 omem=16920 tot-mem=35352 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=336 tot-net-out=27 tot-cmds=6
+90931:M 03 May 2025 23:06:12.856 * Connection with replica client id #15 lost.
+90931:M 03 May 2025 23:06:12.856 * Diskless rdb transfer, last replica dropped, killing fork child.
+90931:M 03 May 2025 23:06:12.856 - Accepted 127.0.0.1:57900
+92790:signal-handler (1746281172) Received SIGUSR1 in child, exiting now.
+90931:M 03 May 2025 23:06:12.856 - Client closed connection id=3 addr=127.0.0.1:62485 laddr=127.0.0.1:21642 fd=14 name= age=94 idle=84 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=del user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6327 tot-net-out=94002 tot-cmds=210
+90931:M 03 May 2025 23:06:12.856 * Replica 127.0.0.1:21641 asks for synchronization
+90931:M 03 May 2025 23:06:12.856 * Unable to partial resync with replica 127.0.0.1:21641 for lack of backlog (Replica request was: 5547).
+90931:M 03 May 2025 23:06:12.856 * Current BGSAVE has socket target. Waiting for next BGSAVE for SYNC
+90931:M 03 May 2025 23:06:12.960 # Background RDB transfer terminated by signal 30
+90931:M 03 May 2025 23:06:12.961 * Starting BGSAVE for SYNC with target: replicas sockets using: normal sync
+90931:M 03 May 2025 23:06:12.961 * Background RDB transfer started by pid 1419 to pipe through parent process
+90931:signal-handler (1746281174) Received SIGTERM scheduling shutdown...
+90931:M 03 May 2025 23:06:14.635 * User requested shutdown...
+90931:M 03 May 2025 23:06:14.636 * Waiting for replicas before shutting down.
+90931:M 03 May 2025 23:06:14.636 - DB 0: 10100 keys (0 volatile) in 54845 slots HT.
+90931:M 03 May 2025 23:06:16.165 * Marking node 6446ac906db3193e8d92368c67f202e98d4bb858 () as failing (quorum reached).
+90931:M 03 May 2025 23:06:19.703 - DB 0: 10100 keys (0 volatile) in 54845 slots HT.
+90931:M 03 May 2025 23:06:24.649 * Lagging replica 127.0.0.1:21641 reported offset 10564537 behind master, lag=0, state=wait_bgsave.
+90931:M 03 May 2025 23:06:24.650 * 0 of 1 replicas are in sync when shutting down.
+90931:M 03 May 2025 23:06:24.650 # There is a child saving an .rdb. Killing it!
+90931:M 03 May 2025 23:06:24.650 * Removing the pid file.
+90931:M 03 May 2025 23:06:24.650 * Saving the cluster configuration file before exiting.
+1419:signal-handler (1746281184) Received SIGUSR1 in child, exiting now.
+90931:M 03 May 2025 23:06:24.654 * Removing the unix socket file.
+90931:M 03 May 2025 23:06:24.654 # Valkey is now ready to exit, bye bye...

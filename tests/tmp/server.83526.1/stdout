@@ -1,0 +1,140 @@
+### Starting server for test 
+83573:M 03 May 2025 23:03:40.913 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+83573:M 03 May 2025 23:03:40.913 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=83573, just started
+83573:M 03 May 2025 23:03:40.913 * Configuration loaded
+83573:M 03 May 2025 23:03:40.913 * Increased maximum number of open files to 10032 (it was originally set to 256).
+83573:M 03 May 2025 23:03:40.913 * monotonic clock: POSIX clock_gettime
+83573:M 03 May 2025 23:03:40.914 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21611
+ |###|   .+###############+.   |###|    PID: 83573                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+83573:M 03 May 2025 23:03:40.914 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+83573:M 03 May 2025 23:03:40.915 * Server initialized
+83573:M 03 May 2025 23:03:40.916 * Ready to accept connections tcp
+83573:M 03 May 2025 23:03:40.916 * Ready to accept connections unix
+83573:M 03 May 2025 23:03:40.939 - Accepted 127.0.0.1:58705
+83573:M 03 May 2025 23:03:40.939 - Client closed connection id=2 addr=127.0.0.1:58705 laddr=127.0.0.1:21611 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+83573:M 03 May 2025 23:03:40.955 - Accepted 127.0.0.1:58713
+83573:M 03 May 2025 23:03:40.955 - Accepted 127.0.0.1:58714
+### Starting test Pub/Sub PING on RESP2 in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.958 - Client closed connection id=4 addr=127.0.0.1:58714 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33824 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=173 tot-net-out=293 tot-cmds=7
+83573:M 03 May 2025 23:03:40.958 - Accepted 127.0.0.1:58715
+### Starting test Pub/Sub PING on RESP3 in tests/unit/pubsub.tcl
+### Starting test PUBLISH/SUBSCRIBE basics in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.961 - Client closed connection id=5 addr=127.0.0.1:58715 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33824 events=r cmd=ping user=default redir=-1 resp=3 lib-name= lib-ver= tot-net-in=173 tot-net-out=265 tot-cmds=7
+83573:M 03 May 2025 23:03:40.961 - Accepted 127.0.0.1:58721
+### Starting test PUBLISH/SUBSCRIBE with two clients in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.963 - Client closed connection id=6 addr=127.0.0.1:58721 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33824 events=r cmd=unsubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=130 tot-net-out=264 tot-cmds=4
+83573:M 03 May 2025 23:03:40.963 - Accepted 127.0.0.1:58723
+83573:M 03 May 2025 23:03:40.963 - Accepted 127.0.0.1:58724
+### Starting test PUBLISH/SUBSCRIBE after UNSUBSCRIBE without arguments in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.964 - Client closed connection id=7 addr=127.0.0.1:58723 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=1 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=subscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=53 tot-net-out=78 tot-cmds=2
+83573:M 03 May 2025 23:03:40.964 - Client closed connection id=8 addr=127.0.0.1:58724 laddr=127.0.0.1:21611 fd=14 name= age=0 idle=0 flags=P capa= db=9 sub=1 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=subscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=53 tot-net-out=78 tot-cmds=2
+83573:M 03 May 2025 23:03:40.964 - Accepted 127.0.0.1:58725
+83573:M 03 May 2025 23:03:40.964 - Reading from client: Connection reset by peer
+### Starting test SUBSCRIBE to one channel more than once in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.965 - Accepted 127.0.0.1:58728
+### Starting test UNSUBSCRIBE from non-subscribed channels in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.966 - Client closed connection id=10 addr=127.0.0.1:58728 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=1 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=subscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=75 tot-net-out=146 tot-cmds=2
+83573:M 03 May 2025 23:03:40.966 - Accepted 127.0.0.1:58729
+### Starting test PUBLISH/PSUBSCRIBE basics in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.967 - Client closed connection id=11 addr=127.0.0.1:58729 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=unsubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=73 tot-net-out=111 tot-cmds=2
+83573:M 03 May 2025 23:03:40.967 - Accepted 127.0.0.1:58730
+### Starting test PUBLISH/PSUBSCRIBE with two clients in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.971 - Client closed connection id=12 addr=127.0.0.1:58730 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33824 events=r cmd=punsubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=134 tot-net-out=306 tot-cmds=4
+83573:M 03 May 2025 23:03:40.971 - Accepted 127.0.0.1:58733
+83573:M 03 May 2025 23:03:40.971 - Accepted 127.0.0.1:58735
+### Starting test PUBLISH/PSUBSCRIBE after PUNSUBSCRIBE without arguments in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.973 - Client closed connection id=13 addr=127.0.0.1:58733 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56 tot-net-out=97 tot-cmds=2
+83573:M 03 May 2025 23:03:40.973 - Client closed connection id=14 addr=127.0.0.1:58735 laddr=127.0.0.1:21611 fd=14 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56 tot-net-out=97 tot-cmds=2
+83573:M 03 May 2025 23:03:40.973 - Accepted 127.0.0.1:58737
+83573:M 03 May 2025 23:03:40.979 - Reading from client: Connection reset by peer
+### Starting test PubSub messages with CLIENT REPLY OFF in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.979 - Accepted 127.0.0.1:58741
+### Starting test PUNSUBSCRIBE from non-subscribed channels in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.983 - Client closed connection id=16 addr=127.0.0.1:58741 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33856 events=r cmd=punsubscribe user=default redir=-1 resp=3 lib-name= lib-ver= tot-net-in=282 tot-net-out=395 tot-cmds=9
+83573:M 03 May 2025 23:03:40.983 - Accepted 127.0.0.1:58743
+### Starting test NUMSUB returns numbers, not strings (#1561) in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.984 - Client closed connection id=17 addr=127.0.0.1:58743 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=punsubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=80 tot-net-out=120 tot-cmds=2
+### Starting test NUMPATs returns the number of unique patterns in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.985 - Accepted 127.0.0.1:58747
+83573:M 03 May 2025 23:03:40.985 - Accepted 127.0.0.1:58748
+### Starting test Mix SUBSCRIBE and PSUBSCRIBE in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.987 - Accepted 127.0.0.1:58751
+83573:M 03 May 2025 23:03:40.987 - Client closed connection id=18 addr=127.0.0.1:58747 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33824 events=r cmd=punsubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=108 tot-net-out=149 tot-cmds=4
+83573:M 03 May 2025 23:03:40.987 - Client closed connection id=19 addr=127.0.0.1:58748 laddr=127.0.0.1:21611 fd=14 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33824 events=r cmd=punsubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=108 tot-net-out=149 tot-cmds=4
+### Starting test PUNSUBSCRIBE and UNSUBSCRIBE should always reply in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.988 - Client closed connection id=20 addr=127.0.0.1:58751 laddr=127.0.0.1:21611 fd=15 name= age=0 idle=0 flags=P capa= db=9 sub=1 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33904 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=87 tot-net-out=171 tot-cmds=3
+### Starting test Keyspace notifications: we receive keyspace notifications in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.989 - Accepted 127.0.0.1:58752
+83573:M 03 May 2025 23:03:40.989 - Client closed connection id=21 addr=127.0.0.1:58752 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=87 tot-net-out=96 tot-cmds=3
+### Starting test Keyspace notifications: we receive keyevent notifications in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.990 - Accepted 127.0.0.1:58753
+### Starting test Keyspace notifications: we can receive both kind of events in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.991 - Client closed connection id=22 addr=127.0.0.1:58753 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=88 tot-net-out=96 tot-cmds=3
+83573:M 03 May 2025 23:03:40.991 - Accepted 127.0.0.1:58754
+### Starting test Keyspace notifications: we are able to mask events in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.992 - Client closed connection id=23 addr=127.0.0.1:58754 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86 tot-net-out=160 tot-cmds=3
+83573:M 03 May 2025 23:03:40.992 - Accepted 127.0.0.1:58755
+### Starting test Keyspace notifications: general events test in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.993 - Client closed connection id=24 addr=127.0.0.1:58755 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=51 tot-net-out=165 tot-cmds=2
+83573:M 03 May 2025 23:03:40.993 - Accepted 127.0.0.1:58756
+83573:M 03 May 2025 23:03:40.994 - Client closed connection id=25 addr=127.0.0.1:58756 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=51 tot-net-out=279 tot-cmds=2
+### Starting test Keyspace notifications: list events test in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.994 - Accepted 127.0.0.1:58757
+83573:M 03 May 2025 23:03:40.995 - Client closed connection id=26 addr=127.0.0.1:58757 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=51 tot-net-out=419 tot-cmds=2
+### Starting test Keyspace notifications: set events test in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.996 - Accepted 127.0.0.1:58759
+### Starting test Keyspace notifications: zset events test in tests/unit/pubsub.tcl
+59 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=51 tot-net-out=223 tot-cmds=2
+83573:M 03 May 2025 23:03:40.997 - Accepted 127.0.0.1:58762
+### Starting test Keyspace notifications: hash events test in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:40.998 - Client closed connection id=28 addr=127.0.0.1:58762 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=51 tot-net-out=226 tot-cmds=2
+83573:M 03 May 2025 23:03:40.999 - Accepted 127.0.0.1:58763
+83573:M 03 May 2025 23:03:41.000 - Client closed connection id=29 addr=127.0.0.1:58763 laddr=127.0.0.1:21611 fd=13 name= age=1 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=51 tot-net-out=166 tot-cmds=2
+### Starting test Keyspace notifications: stream events test in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:41.001 - Accepted 127.0.0.1:58764
+### Starting test Keyspace notifications: expired events (triggered expire) in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:41.002 - Client closed connection id=30 addr=127.0.0.1:58764 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=51 tot-net-out=506 tot-cmds=2
+83573:M 03 May 2025 23:03:41.003 - Accepted 127.0.0.1:58766
+### Starting test Keyspace notifications: expired events (background expire) in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:41.110 - Client closed connection id=31 addr=127.0.0.1:58766 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=63 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=51 tot-net-out=100 tot-cmds=2
+83573:M 03 May 2025 23:03:41.110 - Accepted 127.0.0.1:58783
+83573:M 03 May 2025 23:03:41.218 - Client closed connection id=32 addr=127.0.0.1:58783 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=63 obl=0 oll=0 omem=0 tot-mem=18488 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=51 tot-net-out=100 tot-cmds=2
+### Starting test Keyspace notification: expired event (Expiration time is already expired) in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:41.218 - Accepted 127.0.0.1:58787
+83573:M 03 May 2025 23:03:41.218 - Client closed connection id=33 addr=127.0.0.1:58787 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=51 tot-net-out=100 tot-cmds=2
+### Starting test Keyspace notifications: evicted events in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:41.219 - Accepted 127.0.0.1:58788
+83573:M 03 May 2025 23:03:41.219 # WARNING: the new maxmemory value set via CONFIG SET (1) is smaller than the current memory usage (1965136). This will result in key eviction and/or the inability to accept new write commands depending on the maxmemory-policy.
+83573:M 03 May 2025 23:03:41.219 - Client closed connection id=34 addr=127.0.0.1:58788 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=51 tot-net-out=100 tot-cmds=2
+### Starting test Keyspace notifications: test CONFIG GET/SET of event flags in tests/unit/pubsub.tcl
+### Starting test Keyspace notifications: new key test in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:41.219 - Accepted 127.0.0.1:58789
+83573:M 03 May 2025 23:03:41.220 - Client closed connection id=35 addr=127.0.0.1:58789 laddr=127.0.0.1:21611 fd=13 name= age=0 idle=0 flags=P capa= db=9 sub=0 psub=1 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33848 events=r cmd=psubscribe user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=51 tot-net-out=155 tot-cmds=2
+### Starting test publish to self inside multi in tests/unit/pubsub.tcl
+### Starting test publish to self inside script in tests/unit/pubsub.tcl
+### Starting test unsubscribe inside multi, and publish to self in tests/unit/pubsub.tcl
+83573:M 03 May 2025 23:03:41.221 - Client closed connection id=3 addr=127.0.0.1:58713 laddr=127.0.0.1:21611 fd=12 name= age=1 idle=0 flags=P capa= db=9 sub=1 psub=0 ssub=0 multi=0 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=152 obl=0 oll=0 omem=0 tot-mem=18488 events=r cmd=publish user=default redir=-1 resp=3 lib-name= lib-ver= tot-net-in=5586 tot-net-out=1939 tot-cmds=135
+83573:signal-handler (1746281026) Received SIGTERM scheduling shutdown...
+83573:M 03 May 2025 23:03:46.454 * User requested shutdown...
+83573:M 03 May 2025 23:03:46.454 * Removing the pid file.
+83573:M 03 May 2025 23:03:46.454 * Removing the unix socket file.
+83573:M 03 May 2025 23:03:46.454 # Valkey is now ready to exit, bye bye...

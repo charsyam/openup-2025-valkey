@@ -1,0 +1,182 @@
+### Starting server for test 
+90034:M 03 May 2025 23:04:31.502 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+90034:M 03 May 2025 23:04:31.502 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=90034, just started
+90034:M 03 May 2025 23:04:31.502 * Configuration loaded
+90034:M 03 May 2025 23:04:31.503 * Increased maximum number of open files to 10032 (it was originally set to 256).
+90034:M 03 May 2025 23:04:31.503 * monotonic clock: POSIX clock_gettime
+90034:M 03 May 2025 23:04:31.503 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21132
+ |###|   .+###############+.   |###|    PID: 90034                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+90034:M 03 May 2025 23:04:31.503 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+90034:M 03 May 2025 23:04:31.509 * Server initialized
+90034:M 03 May 2025 23:04:31.509 * Ready to accept connections tcp
+90034:M 03 May 2025 23:04:31.509 * Ready to accept connections unix
+90034:M 03 May 2025 23:04:31.652 - Accepted 127.0.0.1:60546
+90034:M 03 May 2025 23:04:31.652 - Client closed connection id=2 addr=127.0.0.1:60546 laddr=127.0.0.1:21132 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+90034:M 03 May 2025 23:04:31.671 - Accepted 127.0.0.1:60547
+### Starting test Script - disallow write on OOM in tests/unit/scripting.tcl
+90034:M 03 May 2025 23:04:31.673 # WARNING: the new maxmemory value set via CONFIG SET (1) is smaller than the current memory usage (1172352). This will result in key eviction and/or the inability to accept new write commands depending on the maxmemory-policy.
+### Starting test EVAL - Does Lua interpreter replies to our requests? in tests/unit/scripting.tcl
+### Starting test EVAL - Return _G in tests/unit/scripting.tcl
+### Starting test EVAL - Return table with a metatable that raise error in tests/unit/scripting.tcl
+### Starting test EVAL - Return table with a metatable that call server in tests/unit/scripting.tcl
+### Starting test EVAL - Lua integer -> Redis protocol type conversion in tests/unit/scripting.tcl
+### Starting test EVAL - Lua string -> Redis protocol type conversion in tests/unit/scripting.tcl
+### Starting test EVAL - Lua true boolean -> Redis protocol type conversion in tests/unit/scripting.tcl
+### Starting test EVAL - Lua false boolean -> Redis protocol type conversion in tests/unit/scripting.tcl
+### Starting test EVAL - Lua status code reply -> Redis protocol type conversion in tests/unit/scripting.tcl
+### Starting test EVAL - Lua error reply -> Redis protocol type conversion in tests/unit/scripting.tcl
+### Starting test EVAL - Lua table -> Redis protocol type conversion in tests/unit/scripting.tcl
+### Starting test EVAL - Are the KEYS and ARGV arrays populated correctly? in tests/unit/scripting.tcl
+### Starting test EVAL - is Lua able to call Redis API? in tests/unit/scripting.tcl
+### Starting test EVALSHA - Can we call a SHA1 if already defined? in tests/unit/scripting.tcl
+### Starting test EVALSHA_RO - Can we call a SHA1 if already defined? in tests/unit/scripting.tcl
+### Starting test EVALSHA - Can we call a SHA1 in uppercase? in tests/unit/scripting.tcl
+### Starting test EVALSHA - Do we get an error on invalid SHA1? in tests/unit/scripting.tcl
+### Starting test EVALSHA - Do we get an error on non defined SHA1? in tests/unit/scripting.tcl
+### Starting test EVAL - Redis integer -> Lua type conversion in tests/unit/scripting.tcl
+### Starting test EVAL - Lua number -> Redis integer conversion in tests/unit/scripting.tcl
+### Starting test EVAL - Redis bulk -> Lua type conversion in tests/unit/scripting.tcl
+### Starting test EVAL - Redis multi bulk -> Lua type conversion in tests/unit/scripting.tcl
+### Starting test EVAL - Redis status reply -> Lua type conversion in tests/unit/scripting.tcl
+### Starting test EVAL - Redis error reply -> Lua type conversion in tests/unit/scripting.tcl
+### Starting test EVAL - Redis nil bulk reply -> Lua type conversion in tests/unit/scripting.tcl
+### Starting test EVAL - Is the Lua client using the currently selected DB? in tests/unit/scripting.tcl
+### Starting test EVAL - SELECT inside Lua should not affect the caller in tests/unit/scripting.tcl
+### Starting test EVAL - Scripts do not block on blpop command in tests/unit/scripting.tcl
+### Starting test EVAL - Scripts do not block on brpop command in tests/unit/scripting.tcl
+### Starting test EVAL - Scripts do not block on brpoplpush command in tests/unit/scripting.tcl
+### Starting test EVAL - Scripts do not block on blmove command in tests/unit/scripting.tcl
+### Starting test EVAL - Scripts do not block on bzpopmin command in tests/unit/scripting.tcl
+### Starting test EVAL - Scripts do not block on bzpopmax command in tests/unit/scripting.tcl
+### Starting test EVAL - Scripts do not block on wait in tests/unit/scripting.tcl
+### Starting test EVAL - Scripts do not block on waitaof in tests/unit/scripting.tcl
+### Starting test EVAL - Scripts do not block on XREAD with BLOCK option in tests/unit/scripting.tcl
+### Starting test EVAL - Scripts do not block on XREADGROUP with BLOCK option in tests/unit/scripting.tcl
+### Starting test EVAL - Scripts do not block on XREAD with BLOCK option -- non empty stream in tests/unit/scripting.tcl
+### Starting test EVAL - Scripts do not block on XREADGROUP with BLOCK option -- non empty stream in tests/unit/scripting.tcl
+### Starting test EVAL - Scripts can run non-deterministic commands in tests/unit/scripting.tcl
+### Starting test EVAL - No arguments to redis.call/pcall is considered an error in tests/unit/scripting.tcl
+### Starting test EVAL - redis.call variant raises a Lua error on Redis cmd error (1) in tests/unit/scripting.tcl
+### Starting test EVAL - redis.call variant raises a Lua error on Redis cmd error (1) in tests/unit/scripting.tcl
+### Starting test EVAL - redis.call variant raises a Lua error on Redis cmd error (1) in tests/unit/scripting.tcl
+### Starting test EVAL - JSON numeric decoding in tests/unit/scripting.tcl
+### Starting test EVAL - JSON string decoding in tests/unit/scripting.tcl
+### Starting test EVAL - JSON smoke test in tests/unit/scripting.tcl
+### Starting test EVAL - cmsgpack can pack double? in tests/unit/scripting.tcl
+### Starting test EVAL - cmsgpack can pack negative int64? in tests/unit/scripting.tcl
+### Starting test EVAL - cmsgpack pack/unpack smoke test in tests/unit/scripting.tcl
+### Starting test EVAL - cmsgpack can pack and unpack circular references? in tests/unit/scripting.tcl
+### Starting test EVAL - Numerical sanity check from bitop in tests/unit/scripting.tcl
+### Starting test EVAL - Verify minimal bitop functionality in tests/unit/scripting.tcl
+### Starting test EVAL - Able to parse trailing comments in tests/unit/scripting.tcl
+### Starting test EVAL_RO - Successful case in tests/unit/scripting.tcl
+### Starting test EVAL_RO - Cannot run write commands in tests/unit/scripting.tcl
+### Starting test SCRIPTING FLUSH - is able to clear the scripts cache? in tests/unit/scripting.tcl
+### Starting test SCRIPTING FLUSH ASYNC in tests/unit/scripting.tcl
+### Starting test SCRIPT EXISTS - can detect already defined scripts? in tests/unit/scripting.tcl
+### Starting test SCRIPT LOAD - is able to register scripts in the scripting cache in tests/unit/scripting.tcl
+### Starting test SCRIPT SHOW - is able to dump scripts from the scripting cache in tests/unit/scripting.tcl
+### Starting test SCRIPT SHOW - wrong sha1 length or invalid sha1 char return noscript error in tests/unit/scripting.tcl
+### Starting test SCRIPT SHOW - script not exist return noscript error in tests/unit/scripting.tcl
+### Starting test SORT is normally not alpha re-ordered for the scripting engine in tests/unit/scripting.tcl
+### Starting test SORT BY <constant> output gets ordered for scripting in tests/unit/scripting.tcl
+### Starting test SORT BY <constant> with GET gets ordered for scripting in tests/unit/scripting.tcl
+### Starting test redis.sha1hex() implementation in tests/unit/scripting.tcl
+### Starting test Measures elapsed time os.clock() in tests/unit/scripting.tcl
+### Starting test Prohibit dangerous lua methods in sandbox in tests/unit/scripting.tcl
+### Starting test Verify execution of prohibit dangerous Lua methods will fail in tests/unit/scripting.tcl
+### Starting test Globals protection reading an undeclared global variable in tests/unit/scripting.tcl
+### Starting test Globals protection setting an undeclared global* in tests/unit/scripting.tcl
+### Starting test lua bit.tohex bug in tests/unit/scripting.tcl
+### Starting test Test an example script DECR_IF_GT in tests/unit/scripting.tcl
+### Starting test random numbers are random now in tests/unit/scripting.tcl
+### Starting test Scripting engine PRNG can be seeded correctly in tests/unit/scripting.tcl
+### Starting test EVAL does not leak in the Lua stack in tests/unit/scripting.tcl
+90034:M 03 May 2025 23:04:33.117 - Accepted 127.0.0.1:60688
+90034:M 03 May 2025 23:04:33.321 - Client closed connection id=4 addr=127.0.0.1:60688 laddr=127.0.0.1:21132 fd=13 name= age=0 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=140 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=eval user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=680023 tot-net-out=68899 tot-cmds=20001
+### Starting test SPOP: We can call scripts rewriting client->argv from Lua in tests/unit/scripting.tcl
+90034:M 03 May 2025 23:04:33.326 - Accepted 127.0.0.1:60743
+90034:M 03 May 2025 23:04:33.327 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+90034:M 03 May 2025 23:04:33.327 * Replication backlog created, my new replication IDs are '0e67527ef352a0dbb14d8f8c5a1d1e4e7c155e56' and '0000000000000000000000000000000000000000'
+90034:M 03 May 2025 23:04:33.327 * Starting BGSAVE for SYNC with target: disk using: normal sync
+90034:M 03 May 2025 23:04:33.329 * Background saving started by pid 90343
+90343:C 03 May 2025 23:04:33.359 * DB saved on disk
+90343:C 03 May 2025 23:04:33.360 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+90034:M 03 May 2025 23:04:33.414 * Background saving terminated with success
+90034:M 03 May 2025 23:04:33.414 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+90034:M 03 May 2025 23:04:33.416 - Client closed connection id=5 addr=127.0.0.1:60743 laddr=127.0.0.1:21132 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=261 tot-cmds=1
+90034:M 03 May 2025 23:04:33.416 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test MGET: mget shouldn't be propagated in Lua in tests/unit/scripting.tcl
+90034:M 03 May 2025 23:04:33.422 - Accepted 127.0.0.1:60773
+90034:M 03 May 2025 23:04:33.423 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+90034:M 03 May 2025 23:04:33.426 * Starting BGSAVE for SYNC with target: disk using: normal sync
+90034:M 03 May 2025 23:04:33.427 * Background saving started by pid 90352
+90352:C 03 May 2025 23:04:33.450 * DB saved on disk
+90352:C 03 May 2025 23:04:33.450 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+90034:M 03 May 2025 23:04:33.515 * Background saving terminated with success
+90034:M 03 May 2025 23:04:33.515 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+90034:M 03 May 2025 23:04:33.516 - Client closed connection id=6 addr=127.0.0.1:60773 laddr=127.0.0.1:21132 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=143 tot-cmds=1
+90034:M 03 May 2025 23:04:33.516 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test EXPIRE: We can call scripts rewriting client->argv from Lua in tests/unit/scripting.tcl
+90034:M 03 May 2025 23:04:33.516 - Accepted 127.0.0.1:60804
+90034:M 03 May 2025 23:04:33.516 * Replica 127.0.0.1:<unknown-replica-port> asks for synchronization
+90034:M 03 May 2025 23:04:33.516 * Starting BGSAVE for SYNC with target: disk using: normal sync
+90034:M 03 May 2025 23:04:33.518 * Background saving started by pid 90366
+90366:C 03 May 2025 23:04:33.523 * DB saved on disk
+90366:C 03 May 2025 23:04:33.524 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+90034:M 03 May 2025 23:04:33.616 * Background saving terminated with success
+90034:M 03 May 2025 23:04:33.616 * Synchronization with replica 127.0.0.1:<unknown-replica-port> succeeded
+90034:M 03 May 2025 23:04:33.619 - Client closed connection id=7 addr=127.0.0.1:60804 laddr=127.0.0.1:21132 fd=13 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=1 omem=16920 tot-mem=50712 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=6 tot-net-out=112 tot-cmds=1
+90034:M 03 May 2025 23:04:33.622 * Connection with replica 127.0.0.1:<unknown-replica-port> lost.
+### Starting test INCRBYFLOAT: We can call scripts expanding client->argv from Lua in tests/unit/scripting.tcl
+### Starting test Call Redis command with many args from Lua (issue #1764) in tests/unit/scripting.tcl
+### Starting test Number conversion precision test (issue #1118) in tests/unit/scripting.tcl
+### Starting test String containing number precision test (regression of issue #1118) in tests/unit/scripting.tcl
+### Starting test Verify negative arg count is error instead of crash (issue #1842) in tests/unit/scripting.tcl
+### Starting test Scripts can handle commands with incorrect arity in tests/unit/scripting.tcl
+### Starting test Correct handling of reused argv (issue #1939) in tests/unit/scripting.tcl
+### Starting test Functions in the Redis namespace are able to report errors in tests/unit/scripting.tcl
+### Starting test CLUSTER RESET can not be invoke from within a script in tests/unit/scripting.tcl
+### Starting test Script with RESP3 map in tests/unit/scripting.tcl
+### Starting test Script return recursive object in tests/unit/scripting.tcl
+### Starting test Script check unpack with massive arguments in tests/unit/scripting.tcl
+### Starting test Script read key with expiration set in tests/unit/scripting.tcl
+### Starting test Script del key with expiration set in tests/unit/scripting.tcl
+### Starting test Script ACL check in tests/unit/scripting.tcl
+### Starting test Binary code loading failed in tests/unit/scripting.tcl
+### Starting test Try trick global protection 1 in tests/unit/scripting.tcl
+### Starting test Try trick global protection 2 in tests/unit/scripting.tcl
+### Starting test Try trick global protection 3 in tests/unit/scripting.tcl
+### Starting test Try trick global protection 4 in tests/unit/scripting.tcl
+### Starting test Try trick readonly table on valkey table in tests/unit/scripting.tcl
+### Starting test Try trick readonly table on json table in tests/unit/scripting.tcl
+### Starting test Try trick readonly table on cmsgpack table in tests/unit/scripting.tcl
+### Starting test Try trick readonly table on bit table in tests/unit/scripting.tcl
+### Starting test Test loadfile are not available in tests/unit/scripting.tcl
+### Starting test Test dofile are not available in tests/unit/scripting.tcl
+### Starting test Test print are not available in tests/unit/scripting.tcl
+90034:M 03 May 2025 23:04:34.453 - Client closed connection id=3 addr=127.0.0.1:60547 laddr=127.0.0.1:21132 fd=12 name= age=3 idle=0 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=3072 rbp=1536 obl=0 oll=0 omem=0 tot-mem=20480 events=r cmd=eval user=bob redir=-1 resp=2 lib-name= lib-ver= tot-net-in=28599 tot-net-out=53820 tot-cmds=446
+90034:signal-handler (1746281075) Received SIGTERM scheduling shutdown...
+90034:M 03 May 2025 23:04:35.578 * User requested shutdown...
+90034:M 03 May 2025 23:04:35.578 * Removing the pid file.
+90034:M 03 May 2025 23:04:35.578 * Removing the unix socket file.
+90034:M 03 May 2025 23:04:35.578 # Valkey is now ready to exit, bye bye...

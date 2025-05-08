@@ -1,0 +1,100 @@
+### Starting server for test 
+83606:M 03 May 2025 23:03:40.916 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+83606:M 03 May 2025 23:03:40.916 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=83606, just started
+83606:M 03 May 2025 23:03:40.916 * Configuration loaded
+83606:M 03 May 2025 23:03:40.916 * Increased maximum number of open files to 10032 (it was originally set to 256).
+83606:M 03 May 2025 23:03:40.916 * monotonic clock: POSIX clock_gettime
+83606:M 03 May 2025 23:03:40.917 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 27111
+ |###|   .+###############+.   |###|    PID: 83606                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+83606:M 03 May 2025 23:03:40.917 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+83606:M 03 May 2025 23:03:40.917 * Server initialized
+83606:M 03 May 2025 23:03:40.917 * Ready to accept connections tcp
+83606:M 03 May 2025 23:03:40.917 * Ready to accept connections unix
+83606:M 03 May 2025 23:03:40.963 - Accepted 127.0.0.1:58722
+83606:M 03 May 2025 23:03:40.963 - Client closed connection id=2 addr=127.0.0.1:58722 laddr=127.0.0.1:27111 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+83606:M 03 May 2025 23:03:40.971 - Accepted 127.0.0.1:58734
+### Starting test DEL against a single item in tests/unit/keyspace.tcl
+### Starting test Vararg DEL in tests/unit/keyspace.tcl
+### Starting test Untagged multi-key commands in tests/unit/keyspace.tcl
+### Starting test KEYS with pattern in tests/unit/keyspace.tcl
+### Starting test KEYS to get all keys in tests/unit/keyspace.tcl
+### Starting test DBSIZE in tests/unit/keyspace.tcl
+### Starting test KEYS with hashtag in tests/unit/keyspace.tcl
+### Starting test DEL all keys in tests/unit/keyspace.tcl
+### Starting test KEYS with empty DB in tests/unit/keyspace.tcl
+### Starting test DEL against expired key in tests/unit/keyspace.tcl
+### Starting test EXISTS in tests/unit/keyspace.tcl
+### Starting test Zero length value in key. SET/GET/EXISTS in tests/unit/keyspace.tcl
+### Starting test Commands pipelining in tests/unit/keyspace.tcl
+### Starting test Non existing command in tests/unit/keyspace.tcl
+### Starting test RENAME basic usage in tests/unit/keyspace.tcl
+### Starting test RENAME source key should no longer exist in tests/unit/keyspace.tcl
+### Starting test RENAME against already existing key in tests/unit/keyspace.tcl
+### Starting test RENAMENX basic usage in tests/unit/keyspace.tcl
+### Starting test RENAMENX against already existing key in tests/unit/keyspace.tcl
+### Starting test RENAMENX against already existing key (2) in tests/unit/keyspace.tcl
+### Starting test RENAME against non existing source key in tests/unit/keyspace.tcl
+### Starting test RENAME where source and dest key are the same (existing) in tests/unit/keyspace.tcl
+### Starting test RENAMENX where source and dest key are the same (existing) in tests/unit/keyspace.tcl
+### Starting test RENAME where source and dest key are the same (non existing) in tests/unit/keyspace.tcl
+### Starting test RENAME with volatile key, should move the TTL as well in tests/unit/keyspace.tcl
+### Starting test RENAME with volatile key, should not inherit TTL of target key in tests/unit/keyspace.tcl
+### Starting test DEL all keys again (DB 0) in tests/unit/keyspace.tcl
+### Starting test DEL all keys again (DB 1) in tests/unit/keyspace.tcl
+### Starting test COPY basic usage for string in tests/unit/keyspace.tcl
+### Starting test COPY for string does not replace an existing key without REPLACE option in tests/unit/keyspace.tcl
+### Starting test COPY for string can replace an existing key with REPLACE option in tests/unit/keyspace.tcl
+### Starting test COPY for string ensures that copied data is independent of copying data in tests/unit/keyspace.tcl
+### Starting test COPY for string does not copy data to no-integer DB in tests/unit/keyspace.tcl
+### Starting test COPY can copy key expire metadata as well in tests/unit/keyspace.tcl
+### Starting test COPY does not create an expire if it does not exist in tests/unit/keyspace.tcl
+### Starting test COPY basic usage for list - quicklist in tests/unit/keyspace.tcl
+### Starting test COPY basic usage for list - listpack in tests/unit/keyspace.tcl
+### Starting test COPY basic usage for $type set in tests/unit/keyspace.tcl
+### Starting test COPY basic usage for $type set in tests/unit/keyspace.tcl
+### Starting test COPY basic usage for $type set in tests/unit/keyspace.tcl
+### Starting test COPY basic usage for listpack sorted set in tests/unit/keyspace.tcl
+### Starting test COPY basic usage for skiplist sorted set in tests/unit/keyspace.tcl
+### Starting test COPY basic usage for listpack hash in tests/unit/keyspace.tcl
+### Starting test COPY basic usage for hashtable hash in tests/unit/keyspace.tcl
+### Starting test COPY basic usage for stream in tests/unit/keyspace.tcl
+### Starting test COPY basic usage for stream-cgroups in tests/unit/keyspace.tcl
+### Starting test MOVE basic usage in tests/unit/keyspace.tcl
+### Starting test MOVE against key existing in the target DB in tests/unit/keyspace.tcl
+### Starting test MOVE against non-integer DB (#1428) in tests/unit/keyspace.tcl
+### Starting test MOVE can move key expire metadata as well in tests/unit/keyspace.tcl
+### Starting test MOVE does not create an expire if it does not exist in tests/unit/keyspace.tcl
+### Starting test SET/GET keys in different DBs in tests/unit/keyspace.tcl
+### Starting test RANDOMKEY in tests/unit/keyspace.tcl
+### Starting test RANDOMKEY against empty DB in tests/unit/keyspace.tcl
+### Starting test RANDOMKEY regression 1 in tests/unit/keyspace.tcl
+### Starting test KEYS * two times with long key, Github issue #1208 in tests/unit/keyspace.tcl
+### Starting test Regression for pattern matching long nested loops in tests/unit/keyspace.tcl
+### Starting test Coverage: basic SWAPDB test and unhappy path in tests/unit/keyspace.tcl
+### Starting test Coverage: SWAPDB and FLUSHDB in tests/unit/keyspace.tcl
+### Starting test Regression for pattern matching very long nested loops in tests/unit/keyspace.tcl
+83606:M 03 May 2025 23:03:42.167 - Client closed connection id=3 addr=127.0.0.1:58734 laddr=127.0.0.1:27111 fd=12 name= age=2 idle=0 flags=N capa= db=2 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=131062 argv-mem=0 multi-mem=0 rbs=1024 rbp=225 obl=0 oll=0 omem=0 tot-mem=132608 events=r cmd=keys user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=268483 tot-net-out=35854 tot-cmds=1874
+83606:signal-handler (1746281026) Received SIGTERM scheduling shutdown...
+83606:M 03 May 2025 23:03:46.527 * User requested shutdown...
+83606:M 03 May 2025 23:03:46.527 * Removing the pid file.
+83606:M 03 May 2025 23:03:46.527 * Removing the unix socket file.
+83606:M 03 May 2025 23:03:46.527 # Valkey is now ready to exit, bye bye...

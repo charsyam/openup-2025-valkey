@@ -1,0 +1,78 @@
+### Starting server for test 
+15636:M 03 May 2025 23:08:54.767 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+15636:M 03 May 2025 23:08:54.767 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=15636, just started
+15636:M 03 May 2025 23:08:54.767 * Configuration loaded
+15636:M 03 May 2025 23:08:54.768 * Increased maximum number of open files to 10032 (it was originally set to 256).
+15636:M 03 May 2025 23:08:54.768 * monotonic clock: POSIX clock_gettime
+15636:M 03 May 2025 23:08:54.768 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 23679
+ |###|   .+###############+.   |###|    PID: 15636                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+15636:M 03 May 2025 23:08:54.768 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+15636:M 03 May 2025 23:08:54.769 * Server initialized
+15636:M 03 May 2025 23:08:54.769 * Ready to accept connections tcp
+15636:M 03 May 2025 23:08:54.769 * Ready to accept connections unix
+15636:M 03 May 2025 23:08:54.895 - Accepted 127.0.0.1:65270
+15636:M 03 May 2025 23:08:54.895 - Client closed connection id=2 addr=127.0.0.1:65270 laddr=127.0.0.1:23679 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+15636:M 03 May 2025 23:08:54.903 - Accepted 127.0.0.1:65271
+15636:M 03 May 2025 23:08:55.074 - Accepted 127.0.0.1:65275
+15636:M 03 May 2025 23:08:55.074 - Accepted 127.0.0.1:65274
+15636:M 03 May 2025 23:08:55.074 - Accepted 127.0.0.1:65276
+### Starting test Test dual-channel-replication primary gets cob overrun during replica rdb load in tests/integration/dual-channel-replication.tcl
+15636:M 03 May 2025 23:08:55.077 - Accepted 127.0.0.1:65277
+15636:M 03 May 2025 23:08:55.077 * Replica 127.0.0.1:23680 asks for synchronization
+15636:M 03 May 2025 23:08:55.077 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'cdc17ba8951876f6018953d119c6daa217c4b269', my replication IDs are 'e3557cf3c4168c977de20cea1ebb278261739c60' and '0000000000000000000000000000000000000000')
+15636:M 03 May 2025 23:08:55.077 * Dual channel replication: Replica 127.0.0.1:23680 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+15636:M 03 May 2025 23:08:55.078 - Accepted 127.0.0.1:65278
+15636:M 03 May 2025 23:08:55.078 * Replica 127.0.0.1:23680 asks for synchronization
+15636:M 03 May 2025 23:08:55.078 * Replication backlog created, my new replication IDs are 'ec35e68d0954aa84c29c6466b785b9a936750184' and '0000000000000000000000000000000000000000'
+15636:M 03 May 2025 23:08:55.078 * Starting BGSAVE for SYNC with target: replicas sockets using: dual-channel
+15636:M 03 May 2025 23:08:55.078 * Dual channel replication: Sending to replica 127.0.0.1:23680 RDB end offset 0 and client-id 8
+15636:M 03 May 2025 23:08:55.078 . Dual channel replication: Add rdb replica 127.0.0.1:23680 to waiting psync, with cid 8, no repl-backlog to track 
+15636:M 03 May 2025 23:08:55.083 * Background RDB transfer started by pid 15663 to direct socket to replica
+15636:M 03 May 2025 23:08:55.083 . Dual channel replication: Attach replica rdb client 8 to repl buf block
+15636:M 03 May 2025 23:08:55.269 # Client id=8 addr=127.0.0.1:65278 laddr=127.0.0.1:23679 fd=17 name= age=0 idle=0 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=0 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=66 omem=1116720 tot-mem=1133616 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=121 tot-net-out=5 tot-cmds=2 scheduled to be closed ASAP for overcoming of output buffer limits.
+15636:M 03 May 2025 23:08:55.269 * Dual channel replication: Replica 127.0.0.1:23680 rdb channel disconnected.
+15636:M 03 May 2025 23:08:55.270 . Dual channel replication: Remove psync waiting replica client id #8 with cid 8 from replicas rax.
+15636:M 03 May 2025 23:08:55.375 # Background RDB transfer error
+15636:M 03 May 2025 23:08:56.093 * Replica 127.0.0.1:23680 asks for synchronization
+15636:M 03 May 2025 23:08:56.093 * Unable to partial resync with replica 127.0.0.1:23680 for lack of backlog (Replica request was: 1).
+15636:M 03 May 2025 23:08:56.093 * Dual channel replication: Replica 127.0.0.1:23680 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+15636:M 03 May 2025 23:08:56.093 - Reading from client: Connection reset by peer
+15636:M 03 May 2025 23:08:56.094 - Accepted 127.0.0.1:65279
+15636:M 03 May 2025 23:08:56.094 * Replica 127.0.0.1:23680 asks for synchronization
+15636:M 03 May 2025 23:08:56.094 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'cdc17ba8951876f6018953d119c6daa217c4b269', my replication IDs are 'ec35e68d0954aa84c29c6466b785b9a936750184' and '0000000000000000000000000000000000000000')
+15636:M 03 May 2025 23:08:56.094 * Dual channel replication: Replica 127.0.0.1:23680 is capable of dual channel synchronization, and partial sync isn't possible. Full sync will continue with dedicated RDB channel.
+15636:M 03 May 2025 23:08:56.094 - Accepted 127.0.0.1:65280
+15636:M 03 May 2025 23:08:56.094 * Replica 127.0.0.1:23680 asks for synchronization
+15636:M 03 May 2025 23:08:56.094 * Delay next BGSAVE for diskless SYNC
+15636:M 03 May 2025 23:08:56.113 - Reading from client: Connection reset by peer
+15636:M 03 May 2025 23:08:56.120 - Reading from client: Connection reset by peer
+15636:M 03 May 2025 23:08:56.124 - Reading from client: Connection reset by peer
+### Starting test Check for memory leaks (pid 15652) in tests/integration/dual-channel-replication.tcl
+15636:M 03 May 2025 23:08:57.553 - Client closed connection id=10 addr=127.0.0.1:65280 laddr=127.0.0.1:23679 fd=17 name= age=1 idle=1 flags=S capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=sync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=121 tot-net-out=5 tot-cmds=2
+15636:M 03 May 2025 23:08:57.553 * Dual channel replication: Replica 127.0.0.1:23680 rdb channel disconnected.
+15636:M 03 May 2025 23:08:57.553 - Client closed connection id=9 addr=127.0.0.1:65279 laddr=127.0.0.1:23679 fd=16 name= age=1 idle=1 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=psync user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=270 tot-net-out=22 tot-cmds=5
+15636:M 03 May 2025 23:08:57.580 - Client closed connection id=3 addr=127.0.0.1:65271 laddr=127.0.0.1:23679 fd=12 name= age=3 idle=1 flags=N capa= db=9 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=4096 rbp=2048 obl=0 oll=0 omem=0 tot-mem=21504 events=r cmd=config|set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=609 tot-net-out=18473 tot-cmds=13
+15636:signal-handler (1746281339) Received SIGTERM scheduling shutdown...
+15636:M 03 May 2025 23:08:59.302 * User requested shutdown...
+15636:M 03 May 2025 23:08:59.302 * Removing the pid file.
+15636:M 03 May 2025 23:08:59.302 * Removing the unix socket file.
+15636:M 03 May 2025 23:08:59.302 # Valkey is now ready to exit, bye bye...

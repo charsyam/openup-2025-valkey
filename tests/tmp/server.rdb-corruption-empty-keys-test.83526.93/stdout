@@ -1,0 +1,54 @@
+### Starting server for test corrupt payload: load corrupted rdb with empty keys in tests/integration/corrupt-dump.tcl
+3994:M 03 May 2025 23:06:30.413 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+3994:M 03 May 2025 23:06:30.413 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=3994, just started
+3994:M 03 May 2025 23:06:30.413 * Configuration loaded
+3994:M 03 May 2025 23:06:30.414 * Increased maximum number of open files to 10032 (it was originally set to 256).
+3994:M 03 May 2025 23:06:30.414 * monotonic clock: POSIX clock_gettime
+3994:M 03 May 2025 23:06:30.414 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in standalone mode
+ |####+'     .+#######+.     '+####|    Port: 21657
+ |###|   .+###############+.   |###|    PID: 3994                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+3994:M 03 May 2025 23:06:30.414 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+3994:M 03 May 2025 23:06:30.415 * Server initialized
+3994:M 03 May 2025 23:06:30.415 * Loading RDB produced by Redis version 255.255.255
+3994:M 03 May 2025 23:06:30.415 * RDB age 117508716 seconds
+3994:M 03 May 2025 23:06:30.415 * RDB memory usage when created 1.01 Mb
+3994:M 03 May 2025 23:06:30.415 * rdbLoadObject skipping empty key: set
+3994:M 03 May 2025 23:06:30.415 * rdbLoadObject skipping empty key: hash
+3994:M 03 May 2025 23:06:30.415 * rdbLoadObject skipping empty key: list_ziplist
+3994:M 03 May 2025 23:06:30.415 * rdbLoadObject skipping empty key: zset
+3994:M 03 May 2025 23:06:30.415 * rdbLoadObject skipping empty key: zset_listpack
+3994:M 03 May 2025 23:06:30.415 * rdbLoadObject skipping empty key: hash_ziplist
+3994:M 03 May 2025 23:06:30.415 * rdbLoadObject skipping empty key: list_quicklist
+3994:M 03 May 2025 23:06:30.415 * rdbLoadObject skipping empty key: zset_ziplist
+3994:M 03 May 2025 23:06:30.415 * rdbLoadObject skipping empty key: list_quicklist_empty_ziplist
+3994:M 03 May 2025 23:06:30.415 * Done loading RDB, keys loaded: 0, keys expired: 0, empty keys skipped: 9.
+3994:M 03 May 2025 23:06:30.415 * DB loaded from disk: 0.000 seconds
+3994:M 03 May 2025 23:06:30.415 * Ready to accept connections tcp
+3994:M 03 May 2025 23:06:30.415 * Ready to accept connections unix
+3994:M 03 May 2025 23:06:30.431 - Accepted 127.0.0.1:56822
+3994:M 03 May 2025 23:06:30.431 - Client closed connection id=2 addr=127.0.0.1:56822 laddr=127.0.0.1:21657 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+3994:M 03 May 2025 23:06:30.456 - Accepted 127.0.0.1:56833
+3994:M 03 May 2025 23:06:30.521 - Client closed connection id=3 addr=127.0.0.1:56833 laddr=127.0.0.1:21657 fd=12 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=dbsize user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=62 tot-net-out=14 tot-cmds=3
+3994:signal-handler (1746281190) Received SIGTERM scheduling shutdown...
+3994:M 03 May 2025 23:06:30.616 * User requested shutdown...
+3994:M 03 May 2025 23:06:30.616 * Removing the pid file.
+3994:M 03 May 2025 23:06:30.616 * Removing the unix socket file.
+3994:M 03 May 2025 23:06:30.617 # Valkey is now ready to exit, bye bye...

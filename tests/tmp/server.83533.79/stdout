@@ -1,0 +1,110 @@
+### Starting server for test 
+97984:M 03 May 2025 23:05:40.374 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+97984:M 03 May 2025 23:05:40.374 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+97984:M 03 May 2025 23:05:40.374 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=97984, just started
+97984:M 03 May 2025 23:05:40.374 * Configuration loaded
+97984:M 03 May 2025 23:05:40.375 * Increased maximum number of open files to 10032 (it was originally set to 256).
+97984:M 03 May 2025 23:05:40.375 * monotonic clock: POSIX clock_gettime
+97984:M 03 May 2025 23:05:40.375 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25152
+ |###|   .+###############+.   |###|    PID: 97984                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+97984:M 03 May 2025 23:05:40.386 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+97984:M 03 May 2025 23:05:40.396 * No cluster configuration found, I'm f99568e6efd27a18b8e21a2aa05b6763d3957799
+97984:M 03 May 2025 23:05:40.428 * Server initialized
+97984:M 03 May 2025 23:05:40.428 * Ready to accept connections tcp
+97984:M 03 May 2025 23:05:40.428 * Ready to accept connections unix
+97984:M 03 May 2025 23:05:40.510 - Accepted 127.0.0.1:57062
+97984:M 03 May 2025 23:05:40.517 - Client closed connection id=2 addr=127.0.0.1:57062 laddr=127.0.0.1:25152 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+97984:M 03 May 2025 23:05:40.538 - Accepted 127.0.0.1:57066
+### Starting test valkey-cli -4 --cluster create using 127.0.0.1 with cluster-port in tests/unit/cluster/cli.tcl
+97984:M 03 May 2025 23:05:40.897 - Accepted 127.0.0.1:57097
+97984:M 03 May 2025 23:05:40.900 # Missing implement of connection type tls
+97984:M 03 May 2025 23:05:40.914 * configEpoch set to 3 via CLUSTER SET-CONFIG-EPOCH
+97984:M 03 May 2025 23:05:40.914 * Cluster meet 127.0.0.1:25155 (user request from 'id=4 addr=127.0.0.1:57097 laddr=127.0.0.1:25152 fd=15 name= user=default lib-name= lib-ver=').
+97984:M 03 May 2025 23:05:40.962 - Accepting cluster node connection from 127.0.0.1:57105
+97984:M 03 May 2025 23:05:40.962 * IP address for this node updated to 127.0.0.1
+97984:M 03 May 2025 23:05:40.962 * Successfully completed handshake with bae1551817cc174c3f08b498b09f48c615da3335 ()
+97984:M 03 May 2025 23:05:41.208 - Accepting cluster node connection from 127.0.0.1:57108
+97984:M 03 May 2025 23:05:41.918 - Client closed connection id=4 addr=127.0.0.1:57097 laddr=127.0.0.1:25152 fd=15 name= age=1 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=333 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=60327 tot-net-out=12572 tot-cmds=8
+97984:M 03 May 2025 23:05:41.921 - Accepted 127.0.0.1:57132
+97984:M 03 May 2025 23:05:41.923 - Client closed connection id=5 addr=127.0.0.1:57132 laddr=127.0.0.1:25152 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56 tot-net-out=666 tot-cmds=2
+97984:M 03 May 2025 23:05:42.446 * Cluster state changed: ok
+### Starting test valkey-cli -4 --cluster add-node using 127.0.0.1 with cluster-port in tests/unit/cluster/cli.tcl
+97984:M 03 May 2025 23:05:42.800 - Accepted 127.0.0.1:57183
+97984:M 03 May 2025 23:05:42.806 - Client closed connection id=6 addr=127.0.0.1:57183 laddr=127.0.0.1:25152 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56 tot-net-out=666 tot-cmds=2
+97984:M 03 May 2025 23:05:43.079 - Accepting cluster node connection from 127.0.0.1:57195
+97984:M 03 May 2025 23:05:43.541 - Accepted 127.0.0.1:57265
+97984:M 03 May 2025 23:05:43.551 - Client closed connection id=7 addr=127.0.0.1:57265 laddr=127.0.0.1:25152 fd=21 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=56 tot-net-out=866 tot-cmds=2
+97984:M 03 May 2025 23:05:43.746 - Accepting cluster node connection from 127.0.0.1:57310
+### Starting test Check for memory leaks (pid 98011) in tests/unit/cluster/cli.tcl
+97984:M 03 May 2025 23:05:45.053 * Node fd2f4d1605af94fff7278f8ea701205e69d1ae4d () reported node bae1551817cc174c3f08b498b09f48c615da3335 () as not reachable.
+97984:M 03 May 2025 23:05:45.070 - Accepting cluster node connection from 127.0.0.1:57592
+97984:M 03 May 2025 23:05:45.085 * Node fd2f4d1605af94fff7278f8ea701205e69d1ae4d () reported node bae1551817cc174c3f08b498b09f48c615da3335 () as not reachable.
+97984:M 03 May 2025 23:05:45.085 * Marking node bae1551817cc174c3f08b498b09f48c615da3335 () as failing (quorum reached).
+97984:M 03 May 2025 23:05:45.088 # Cluster state changed: fail
+97984:M 03 May 2025 23:05:45.088 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+97984:M 03 May 2025 23:05:45.649 * Clear FAIL state for node bae1551817cc174c3f08b498b09f48c615da3335 (): is reachable again and nobody is serving its slots after some time.
+97984:M 03 May 2025 23:05:45.651 * Cluster state changed: ok
+97984:M 03 May 2025 23:05:45.790 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+### Starting test Check for memory leaks (pid 97995) in tests/unit/cluster/cli.tcl
+97984:M 03 May 2025 23:05:45.891 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:45.961 * Node fd2f4d1605af94fff7278f8ea701205e69d1ae4d () reported node bae1551817cc174c3f08b498b09f48c615da3335 () as not reachable.
+97984:M 03 May 2025 23:05:45.961 * Marking node bae1551817cc174c3f08b498b09f48c615da3335 () as failing (quorum reached).
+97984:M 03 May 2025 23:05:45.961 # Cluster state changed: fail
+97984:M 03 May 2025 23:05:45.961 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+97984:M 03 May 2025 23:05:45.992 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:46.093 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:46.196 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:46.296 # Cluster is currently down: I am part of a minority partition.
+97984:M 03 May 2025 23:05:46.297 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:46.398 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:46.498 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:46.598 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:46.699 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:46.799 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:46.900 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:47.000 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:47.056 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+97984:M 03 May 2025 23:05:47.102 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:47.203 - Connection with Node fd2f4d1605af94fff7278f8ea701205e69d1ae4d at 127.0.0.1:35153 failed: Connection refused
+97984:M 03 May 2025 23:05:47.208 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:47.232 - Client closed connection id=3 addr=127.0.0.1:57066 laddr=127.0.0.1:25152 fd=14 name= age=7 idle=3 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=513 tot-net-out=9790 tot-cmds=19
+97984:M 03 May 2025 23:05:47.304 # Cluster is currently down: I am part of a minority partition.
+97984:M 03 May 2025 23:05:47.304 - Connection with Node fd2f4d1605af94fff7278f8ea701205e69d1ae4d at 127.0.0.1:35153 failed: Connection refused
+97984:M 03 May 2025 23:05:47.304 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:47.405 - Connection with Node fd2f4d1605af94fff7278f8ea701205e69d1ae4d at 127.0.0.1:35153 failed: Connection refused
+97984:M 03 May 2025 23:05:47.406 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:48.345 - Accepting cluster node connection from 127.0.0.1:58475
+97984:M 03 May 2025 23:05:48.346 - Accepting cluster node connection from 127.0.0.1:58495
+97984:M 03 May 2025 23:05:48.346 - Accepting cluster node connection from 127.0.0.1:58567
+97984:M 03 May 2025 23:05:48.346 - Accepting cluster node connection from 127.0.0.1:58579
+97984:M 03 May 2025 23:05:48.346 - Accepting cluster node connection from 127.0.0.1:58648
+97984:M 03 May 2025 23:05:48.347 - Accepting cluster node connection from 127.0.0.1:58663
+97984:M 03 May 2025 23:05:48.353 - Accepting cluster node connection from 127.0.0.1:58755
+97984:M 03 May 2025 23:05:48.363 - Connection with Node fd2f4d1605af94fff7278f8ea701205e69d1ae4d at 127.0.0.1:35153 failed: Connection refused
+97984:M 03 May 2025 23:05:48.366 - Connection with Node bae1551817cc174c3f08b498b09f48c615da3335 at 127.0.0.1:25154 failed: Connection refused
+97984:M 03 May 2025 23:05:48.376 - Accepting cluster node connection from 127.0.0.1:58776
+97984:signal-handler (1746281148) Received SIGTERM scheduling shutdown...
+97984:M 03 May 2025 23:05:48.446 * User requested shutdown...
+97984:M 03 May 2025 23:05:48.446 * Removing the pid file.
+97984:M 03 May 2025 23:05:48.446 * Saving the cluster configuration file before exiting.
+97984:M 03 May 2025 23:05:48.454 * Removing the unix socket file.
+97984:M 03 May 2025 23:05:48.454 # Valkey is now ready to exit, bye bye...

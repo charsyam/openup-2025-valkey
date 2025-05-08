@@ -1,0 +1,84 @@
+### Starting server for test 
+94814:M 03 May 2025 23:05:08.226 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+94814:M 03 May 2025 23:05:08.228 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+94814:M 03 May 2025 23:05:08.235 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=94814, just started
+94814:M 03 May 2025 23:05:08.243 * Configuration loaded
+94814:M 03 May 2025 23:05:08.247 * Increased maximum number of open files to 10032 (it was originally set to 256).
+94814:M 03 May 2025 23:05:08.248 * monotonic clock: POSIX clock_gettime
+94814:M 03 May 2025 23:05:08.256 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 25138
+ |###|   .+###############+.   |###|    PID: 94814                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+94814:M 03 May 2025 23:05:08.262 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+94814:M 03 May 2025 23:05:08.262 * No cluster configuration found, I'm a9e8181a3d088bd82ead84fe2051d5f36ed9cc47
+94814:M 03 May 2025 23:05:08.272 * Server initialized
+94814:M 03 May 2025 23:05:08.272 * Ready to accept connections tcp
+94814:M 03 May 2025 23:05:08.272 * Ready to accept connections unix
+94814:M 03 May 2025 23:05:08.358 - Accepted 127.0.0.1:57293
+94814:M 03 May 2025 23:05:08.359 - Client closed connection id=2 addr=127.0.0.1:57293 laddr=127.0.0.1:25138 fd=14 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+94814:M 03 May 2025 23:05:08.378 - Accepted 127.0.0.1:57338
+### Starting test Create 3 node cluster in tests/unit/cluster/cli.tcl
+94814:M 03 May 2025 23:05:08.404 - Accepted 127.0.0.1:57355
+94814:M 03 May 2025 23:05:08.412 # Missing implement of connection type tls
+94814:M 03 May 2025 23:05:08.448 * configEpoch set to 1 via CLUSTER SET-CONFIG-EPOCH
+94814:M 03 May 2025 23:05:08.525 - Accepting cluster node connection from 127.0.0.1:57444
+94814:M 03 May 2025 23:05:08.533 * IP address for this node updated to 127.0.0.1
+94814:M 03 May 2025 23:05:08.558 - Accepting cluster node connection from 127.0.0.1:57466
+94814:M 03 May 2025 23:05:09.461 - Client closed connection id=4 addr=127.0.0.1:57355 laddr=127.0.0.1:25138 fd=15 name= age=1 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=1024 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=53762 tot-net-out=19153 tot-cmds=10
+94814:M 03 May 2025 23:05:10.295 * Cluster state changed: ok
+### Starting test Run blocking command on cluster node3 in tests/unit/cluster/cli.tcl
+### Starting test Perform a Resharding in tests/unit/cluster/cli.tcl
+94814:M 03 May 2025 23:05:10.385 - Accepted 127.0.0.1:59235
+94814:M 03 May 2025 23:05:10.386 * Importing slot 10923 from node f6df331807cd72487c6a240a080fc7f1ac1c32ea ()
+94814:M 03 May 2025 23:05:10.387 * Assigning slot 10923 to node a9e8181a3d088bd82ead84fe2051d5f36ed9cc47 () in shard 0a22476a9f3b97b246c1342c569d4cd9cab86a94
+94814:M 03 May 2025 23:05:10.387 * New configEpoch set to 4
+94814:M 03 May 2025 23:05:10.387 * ConfigEpoch updated after importing slot 10923
+94814:M 03 May 2025 23:05:10.403 - Client closed connection id=5 addr=127.0.0.1:59235 laddr=127.0.0.1:25138 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=0 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|setslot user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=257 tot-net-out=676 tot-cmds=4
+### Starting test Verify command got unblocked after resharding in tests/unit/cluster/cli.tcl
+### Starting test Wait for cluster to be stable in tests/unit/cluster/cli.tcl
+94814:M 03 May 2025 23:05:10.480 - Accepted 127.0.0.1:59325
+94814:M 03 May 2025 23:05:10.488 - Client closed connection id=6 addr=127.0.0.1:59325 laddr=127.0.0.1:25138 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=86 tot-net-out=6613 tot-cmds=4
+94814:M 03 May 2025 23:05:10.505 - Accepted 127.0.0.1:59372
+94814:M 03 May 2025 23:05:10.509 - Client closed connection id=7 addr=127.0.0.1:59372 laddr=127.0.0.1:25138 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=682 tot-cmds=3
+94814:M 03 May 2025 23:05:10.530 - Accepted 127.0.0.1:59378
+94814:M 03 May 2025 23:05:10.532 - Client closed connection id=8 addr=127.0.0.1:59378 laddr=127.0.0.1:25138 fd=15 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=cluster|nodes user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=72 tot-net-out=682 tot-cmds=3
+94814:M 03 May 2025 23:05:10.538 - Accepted 127.0.0.1:59391
+### Starting test use previous hostip in "cluster-preferred-endpoint-type unknown-endpoint" mode in tests/unit/cluster/cli.tcl
+94814:M 03 May 2025 23:05:10.551 - Accepted 127.0.0.1:59406
+94814:M 03 May 2025 23:05:10.554 - Client closed connection id=10 addr=127.0.0.1:59406 laddr=127.0.0.1:25138 fd=20 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=set user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=31 tot-net-out=21 tot-cmds=0
+94814:M 03 May 2025 23:05:10.574 - Accepted 127.0.0.1:59436
+94814:M 03 May 2025 23:05:10.577 - Client closed connection id=11 addr=127.0.0.1:59436 laddr=127.0.0.1:25138 fd=20 name= age=0 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=get user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=22 tot-net-out=21 tot-cmds=0
+### Starting test Sanity test push cmd after resharding in tests/unit/cluster/cli.tcl
+### Starting test Run blocking command again on cluster node1 in tests/unit/cluster/cli.tcl
+### Starting test Kill a cluster node and wait for fail state in tests/unit/cluster/cli.tcl
+94814:M 03 May 2025 23:05:11.980 * Node ca2b4e146fbe1e947c00c69acc669e5e14defcfb () reported node f6df331807cd72487c6a240a080fc7f1ac1c32ea () as not reachable.
+94814:M 03 May 2025 23:05:11.986 * Marking node f6df331807cd72487c6a240a080fc7f1ac1c32ea () as failing (quorum reached).
+94814:M 03 May 2025 23:05:11.993 # Cluster state changed: fail
+94814:M 03 May 2025 23:05:12.001 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+### Starting test Verify command got unblocked after cluster failure in tests/unit/cluster/cli.tcl
+94814:M 03 May 2025 23:05:12.038 - Client closed connection id=9 addr=127.0.0.1:59391 laddr=127.0.0.1:25138 fd=15 name= age=2 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=34 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=brpop user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=92 tot-net-out=70 tot-cmds=3
+94814:M 03 May 2025 23:05:12.038 - Client closed connection id=3 addr=127.0.0.1:57338 laddr=127.0.0.1:25138 fd=14 name= age=4 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=4096 rbp=4096 obl=0 oll=0 omem=0 tot-mem=21504 events=r cmd=info user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=1631 tot-net-out=46751 tot-cmds=55
+94814:signal-handler (1746281113) Received SIGTERM scheduling shutdown...
+94814:M 03 May 2025 23:05:13.147 - Accepting cluster node connection from 127.0.0.1:62033
+94814:M 03 May 2025 23:05:13.150 * User requested shutdown...
+94814:M 03 May 2025 23:05:13.153 * Removing the pid file.
+94814:M 03 May 2025 23:05:13.153 * Saving the cluster configuration file before exiting.
+94814:M 03 May 2025 23:05:13.171 * Removing the unix socket file.
+94814:M 03 May 2025 23:05:13.189 # Valkey is now ready to exit, bye bye...

@@ -1,0 +1,61 @@
+### Starting server for test 
+96069:M 03 May 2025 23:05:19.837 # WARNING: Changing databases number from 16 to 1 since we are in cluster mode
+96069:M 03 May 2025 23:05:19.841 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+96069:M 03 May 2025 23:05:19.844 * Valkey version=255.255.255, bits=64, commit=06ac4d81, modified=0, pid=96069, just started
+96069:M 03 May 2025 23:05:19.849 * Configuration loaded
+96069:M 03 May 2025 23:05:19.851 * Increased maximum number of open files to 10032 (it was originally set to 256).
+96069:M 03 May 2025 23:05:19.859 * monotonic clock: POSIX clock_gettime
+96069:M 03 May 2025 23:05:19.862 # Failed to write PID file: Permission denied
+                .+^+.                                                
+            .+#########+.                                            
+        .+########+########+.           Valkey 255.255.255 (06ac4d81/0) 64 bit
+    .+########+'     '+########+.                                    
+ .########+'     .+.     '+########.    Running in cluster mode
+ |####+'     .+#######+.     '+####|    Port: 26143
+ |###|   .+###############+.   |###|    PID: 96069                     
+ |###|   |#####*'' ''*#####|   |###|                                 
+ |###|   |####'  .-.  '####|   |###|                                 
+ |###|   |###(  (@@@)  )###|   |###|          https://valkey.io      
+ |###|   |####.  '-'  .####|   |###|                                 
+ |###|   |#####*.   .*#####|   |###|                                 
+ |###|   '+#####|   |#####+'   |###|                                 
+ |####+.     +##|   |#+'     .+####|                                 
+ '#######+   |##|        .+########'                                 
+    '+###|   |##|    .+########+'                                    
+        '|   |####+########+'                                        
+             +#########+'                                            
+                '+v+'                                                
+
+96069:M 03 May 2025 23:05:19.874 # WARNING: The TCP backlog setting of 511 cannot be enforced because kern.ipc.somaxconn is set to the lower value of 128.
+96069:M 03 May 2025 23:05:19.874 * No cluster configuration found, I'm ff4a2c5f305f8e6f644d4776ff7ab578c871ecab
+96069:M 03 May 2025 23:05:19.887 * Server initialized
+96069:M 03 May 2025 23:05:19.887 * Ready to accept connections tcp
+96069:M 03 May 2025 23:05:19.887 * Ready to accept connections unix
+96069:M 03 May 2025 23:05:19.995 - Accepted 127.0.0.1:49905
+96069:M 03 May 2025 23:05:20.003 - Client closed connection id=2 addr=127.0.0.1:49905 laddr=127.0.0.1:26143 fd=14 name= age=1 idle=0 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=16384 rbp=16384 obl=0 oll=0 omem=0 tot-mem=33792 events=r cmd=ping user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=7 tot-net-out=7 tot-cmds=1
+96069:M 03 May 2025 23:05:20.034 - Accepted 127.0.0.1:49938
+96069:M 03 May 2025 23:05:20.480 - Accepting cluster node connection from 127.0.0.1:50304
+96069:M 03 May 2025 23:05:20.493 * IP address for this node updated to 127.0.0.1
+96069:M 03 May 2025 23:05:20.839 # Missing implement of connection type tls
+96069:M 03 May 2025 23:05:20.871 - Accepting cluster node connection from 127.0.0.1:50607
+96069:M 03 May 2025 23:05:21.035 # DEBUG LOG: ========== I am primary 1 ==========
+96069:M 03 May 2025 23:05:21.971 * Cluster state changed: ok
+### Starting test Set cluster human announced nodename and let it propagate in tests/unit/cluster/human-announced-nodename.tcl
+### Starting test Human nodenames are visible in log messages in tests/unit/cluster/human-announced-nodename.tcl
+96069:M 03 May 2025 23:05:25.757 * FAIL message received from b8bdcf243975fa5ad21a9bba3dfb5a382b8fdcd4 (nodename-2) about 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e (nodename-0)
+96069:M 03 May 2025 23:05:25.761 # Cluster state changed: fail
+96069:M 03 May 2025 23:05:25.764 # Cluster is currently down: At least one hash slot is not served by any available node. Please check the 'cluster-require-full-coverage' configuration.
+96069:M 03 May 2025 23:05:25.934 * Node b8bdcf243975fa5ad21a9bba3dfb5a382b8fdcd4 (nodename-2) reported node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e (nodename-0) as not reachable.
+### Starting test Check for memory leaks (pid 96124) in tests/unit/cluster/human-announced-nodename.tcl
+96069:M 03 May 2025 23:05:27.542 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96069:M 03 May 2025 23:05:27.605 - Client closed connection id=3 addr=127.0.0.1:49938 laddr=127.0.0.1:26143 fd=14 name= age=7 idle=5 flags=N capa= db=0 sub=0 psub=0 ssub=0 multi=-1 watch=0 qbuf=0 qbuf-free=16890 argv-mem=0 multi-mem=0 rbs=1024 rbp=0 obl=0 oll=0 omem=0 tot-mem=18432 events=r cmd=cluster|slots user=default redir=-1 resp=2 lib-name= lib-ver= tot-net-in=532 tot-net-out=4021 tot-cmds=13
+96069:M 03 May 2025 23:05:27.643 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96069:M 03 May 2025 23:05:27.744 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96069:M 03 May 2025 23:05:27.845 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96069:M 03 May 2025 23:05:28.759 - Connection with Node 9fe20b7ccc992a122d94c780c8e0a00c7db3d66e at 127.0.0.1:36144 failed: Connection refused
+96069:signal-handler (1746281128) Received SIGTERM scheduling shutdown...
+96069:M 03 May 2025 23:05:28.859 * User requested shutdown...
+96069:M 03 May 2025 23:05:28.861 * Removing the pid file.
+96069:M 03 May 2025 23:05:28.864 * Saving the cluster configuration file before exiting.
+96069:M 03 May 2025 23:05:28.902 * Removing the unix socket file.
+96069:M 03 May 2025 23:05:28.905 # Valkey is now ready to exit, bye bye...
