@@ -3595,6 +3595,7 @@ char *serverBuildIdString(void);
 void authCommand(client *c);
 void pingCommand(client *c);
 void echoCommand(client *c);
+void echoCommandSeHyeon(client *c);
 void commandCommand(client *c);
 void commandCountCommand(client *c);
 void commandListCommand(client *c);
