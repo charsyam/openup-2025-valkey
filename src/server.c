@@ -4693,6 +4693,10 @@ void pingCommand(client *c) {
     }
 }
 
+void echoKmulariseCommand(client *c) {
+    addReplyBulk(c, c->argv[1]);
+}
+
 void echoCommand(client *c) {
     addReplyBulk(c, c->argv[1]);
 }
