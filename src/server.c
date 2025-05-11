@@ -4697,6 +4697,10 @@ void echoCommand(client *c) {
     addReplyBulk(c, c->argv[1]);
 }
 
+void echoJinhyeokCommand(client *c) {
+    addReplyBulk(c, c->argv[1]);
+}
+
 void timeCommand(client *c) {
     addReplyArrayLen(c, 2);
     addReplyBulkLongLong(c, server.unixtime);
@@ -4708,7 +4712,9 @@ typedef struct replyFlagNames {
     const char *name;
 } replyFlagNames;
 
-/* Helper function to output flags. */
+
+/*
+ Helper function to output flags. */
 void addReplyCommandFlags(client *c, uint64_t flags, replyFlagNames *replyFlags) {
     int count = 0, j = 0;
     /* Count them so we don't have to use deferred reply. */
