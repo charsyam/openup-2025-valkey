@@ -4697,6 +4697,21 @@ void echoCommand(client *c) {
     addReplyBulk(c, c->argv[1]);
 }
 
+/* my custom command */
+void echoX3Command(client *c) {
+    if (c->argc != 2) {
+        addReplyError(c, "Wrong number of arguments for 'echoX3' command");
+        return;
+    }
+
+    sds input = c->argv[1]->ptr;
+
+    // "input input input" 형식의 문자열 생성
+    sds result = sdscatfmt(sdsempty(), "%S %S %S", input, input, input);
+
+    addReplyBulkSds(c, result);
+}
+
 void timeCommand(client *c) {
     addReplyArrayLen(c, 2);
     addReplyBulkLongLong(c, server.unixtime);
