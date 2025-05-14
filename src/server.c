@@ -4697,6 +4697,11 @@ void echoCommand(client *c) {
     addReplyBulk(c, c->argv[1]);
 }
 
+void echoCustomCommand(client *c) {
+    sds reply = sdscatfmt(sdsempty(), "seokho says: %s", (char*)c->argv[1]->ptr);
+    addReplyBulkSds(c, reply);
+}
+
 void timeCommand(client *c) {
     addReplyArrayLen(c, 2);
     addReplyBulkLongLong(c, server.unixtime);
