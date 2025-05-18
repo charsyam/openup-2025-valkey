@@ -4697,7 +4697,7 @@ void echoCommand(client *c) {
     addReplyBulk(c, c->argv[1]);
 }
 
-void echoByeongdooCommand(client *c) {
+void echoDewCommand(client *c) {
     addReplyBulk(c, c->argv[1]);
 }
 

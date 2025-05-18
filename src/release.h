@@ -1,5 +1,5 @@
-#define REDIS_GIT_SHA1 "c180fafc"
-#define REDIS_GIT_DIRTY "      39"
-#define REDIS_BUILD_ID "hanbyeongduui-MacBookPro.local-1746719966"
+#define REDIS_GIT_SHA1 "d1f85775"
+#define REDIS_GIT_DIRTY "    1718"
+#define REDIS_BUILD_ID "hanbyeongduui-MacBookPro.local-1747481599"
 #include "version.h"
 #define REDIS_BUILD_ID_RAW SERVER_NAME VALKEY_VERSION REDIS_BUILD_ID REDIS_GIT_DIRTY REDIS_GIT_SHA1
