@@ -4697,6 +4697,14 @@ void echoCommand(client *c) {
     addReplyBulk(c, c->argv[1]);
 }
 
+void echo2Command(client *c) {
+    sds join = sdsempty();
+    
+    join = sdscatfmt(join, "%s_%s", (sds)c->argv[0]->ptr, (sds)c->argv[1]->ptr);
+
+    addReplyBulkSds(c, join);
+}
+
 void timeCommand(client *c) {
     addReplyArrayLen(c, 2);
     addReplyBulkLongLong(c, server.unixtime);
