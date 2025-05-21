@@ -4697,7 +4697,7 @@ void echoCommand(client *c) {
     addReplyBulk(c, c->argv[1]);
 }
 
-void echoCommandHyoJu(client *c) {
+void echoHyojuCommand(client *c) {
     addReplyBulk(c, c->argv[1]);
 }
 
