@@ -1,17 +1,26 @@
 {
     "ECHO2": {
-        "summary": "Returns text user passed by argv",
-        "complexity": "O(1)",
-        "group": "string",
-        "since": "5.0.0",
-        "arity": 2,
-        "function": "echo2Command",
-        "reply_schema": {
-            "type": "string",
-            "description": "Helpful text about subcommands.",
-            "items": {
-                "type": "string"
-            }
+      "summary": "Returns text passed by argv prefixed with 'echo2_argv:'.",
+      "complexity": "O(1)",
+      "group": "string",
+      "since": "7.2.0",
+      "arity": 2,
+      "function": "echo2Command",
+      "history": [
+        ["7.2.0", "Added"]
+      ],
+      "command_flags": [
+        "fast"
+      ],
+      "arguments": [
+        {
+          "name": "message",
+          "type": "string"
         }
+      ],
+      "reply_schema": {
+        "type": "string",
+        "description": "Echoed back string with echo2_argv: prefix."
+      }
     }
-}
+  }
