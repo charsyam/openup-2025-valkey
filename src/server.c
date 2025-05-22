@@ -4697,6 +4697,25 @@ void echoCommand(client *c) {
     addReplyBulk(c, c->argv[1]);
 }
 
+void echoChangyeobLeeCommand(client *c){
+    addReplyBulk(c, c->argv[1]);
+}
+
+void echoChangyeobLeeCommand2(client *c){
+    // 문자열 - 디코딩 (타입 -> string 변환)
+    robj *decoded = getDecodedObject(c->argv[1]);
+    sds arg = decoded->ptr;
+
+    // 문자열 생성 
+    sds result = sdsempty();
+    result = sdscatfmt(result, "echo_ChangyeobLee_%s", arg);
+    addReplyBulkCString(c, result);
+
+    // 메모리 정리
+    sdsfree(result);
+    decrRefCount(decoded);
+}
+
 void timeCommand(client *c) {
     addReplyArrayLen(c, 2);
     addReplyBulkLongLong(c, server.unixtime);
