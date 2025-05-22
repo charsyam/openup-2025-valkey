@@ -4697,6 +4697,17 @@ void echoCommand(client *c) {
     addReplyBulk(c, c->argv[1]);
 }
 
+void echoMinWooCommand(client *c) {
+    // 빈 SDS 문자열 생성
+    sds result = sdsempty();
+
+    // prefix와 입력 문자열을 결합
+    result = sdscatfmt(result, "echoMinWoo_%s", (char*)c->argv[1]->ptr);
+
+    // 클라이언트에게 결과 전송
+    addReplyBulkSds(c, result);
+}
+
 void timeCommand(client *c) {
     addReplyArrayLen(c, 2);
     addReplyBulkLongLong(c, server.unixtime);
